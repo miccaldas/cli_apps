@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xwd
+Version         : 1.0.8-1
+Description     : X Window System image dumping utility
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libxkbfile
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 18.48 KiB
+Installed Size  : 38.13 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Mon 02 Aug 2021 05:26:13 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

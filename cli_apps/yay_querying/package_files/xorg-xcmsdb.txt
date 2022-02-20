@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xcmsdb
+Version         : 1.0.5-3
+Description     : Device Color Characterization utility for X Color Management System
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libx11
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 17.29 KiB
+Installed Size  : 42.42 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Sat 16 May 2020 02:53:25 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

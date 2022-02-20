@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-iceauth
+Version         : 1.0.8-2
+Description     : ICE authority file utility
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libice
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 17.59 KiB
+Installed Size  : 40.68 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Thu 07 May 2020 04:10:33 AM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

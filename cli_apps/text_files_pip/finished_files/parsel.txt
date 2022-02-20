@@ -1,0 +1,1 @@
+Parsel is a BSD-licensed  library to extract and remove data from and  using  and  selectors, optionally combined with.

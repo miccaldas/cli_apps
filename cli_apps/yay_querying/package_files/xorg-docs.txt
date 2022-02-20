@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-docs
+Version         : 1.7.1-3
+Description     : X.org documentations
+Architecture    : any
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg
+Provides        : None
+Depends On      : man-db
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 198.66 KiB
+Installed Size  : 838.29 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Sat 16 May 2020 02:23:30 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

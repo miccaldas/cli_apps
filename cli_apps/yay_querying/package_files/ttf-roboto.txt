@@ -1,0 +1,19 @@
+Repository      : community
+Name            : ttf-roboto
+Version         : 2.138-4
+Description     : Google's signature family of fonts
+Architecture    : any
+URL             : https://material.google.com/style/typography.html
+Licenses        : Apache
+Groups          : None
+Provides        : None
+Depends On      : None
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 2.36 MiB
+Installed Size  : 5.16 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Mon 29 Jun 2020 12:05:38 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

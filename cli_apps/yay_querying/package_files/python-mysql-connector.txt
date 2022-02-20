@@ -1,0 +1,19 @@
+Repository      : community
+Name            : python-mysql-connector
+Version         : 8.0.28-1
+Description     : A standardized database driver for Python platforms and development
+Architecture    : any
+URL             : https://dev.mysql.com/downloads/connector/python/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : python  python-dnspython
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 397.80 KiB
+Installed Size  : 3122.25 KiB
+Packager        : Leonidas Spyropoulos <artafinde@archlinux.org>
+Build Date      : Tue 15 Feb 2022 09:43:42 AM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

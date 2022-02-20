@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xkbevd
+Version         : 1.1.4-3
+Description     : XKB event daemon
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libxkbfile
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 18.63 KiB
+Installed Size  : 44.79 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Sat 16 May 2020 02:34:58 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

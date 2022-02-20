@@ -1,0 +1,19 @@
+Repository      : community
+Name            : lnav
+Version         : 0.10.1-1
+Description     : A curses-based tool for viewing and analyzing log files
+Architecture    : x86_64
+URL             : http://lnav.org/
+Licenses        : custom:BSD
+Groups          : None
+Provides        : None
+Depends On      : ncurses  curl  pcre  sqlite3  libarchive
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 1512.58 KiB
+Installed Size  : 4616.13 KiB
+Packager        : Orhun Parmaksız <orhun@archlinux.org>
+Build Date      : Thu 28 Oct 2021 05:35:26 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

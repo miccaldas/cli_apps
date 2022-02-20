@@ -1,0 +1,19 @@
+Repository      : community
+Name            : mupdf
+Version         : 1.19.0-2
+Description     : Lightweight PDF and XPS viewer
+Architecture    : x86_64
+URL             : https://mupdf.com/
+Licenses        : AGPL3
+Groups          : None
+Provides        : None
+Depends On      : desktop-file-utils  freetype2  harfbuzz  jbig2dec  libjpeg  openjpeg2  openssl  libxext  gumbo-parser
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 21.60 MiB
+Installed Size  : 35.14 MiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Sat 25 Dec 2021 09:18:13 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

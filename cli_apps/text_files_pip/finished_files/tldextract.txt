@@ -1,0 +1,1 @@
+ accurately separates the gTLD or ccTLD (generic or country codetop-level domain) from the registered domain and subdomains of a URL.

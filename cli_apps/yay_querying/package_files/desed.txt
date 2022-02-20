@@ -1,0 +1,23 @@
+:: [1mQuerying AUR...[0m
+Repository      : aur
+Name            : desed
+Keywords        : debugger  sed
+Version         : 1.2.0-1
+Description     : Debugger for sed, written in rust. Step through code and observe sed inner state.
+URL             : https://github.com/soptikha2/desed
+AUR URL         : https://aur.archlinux.org/packages/desed
+Groups          : None
+Licenses        : GPL3
+Provides        : None
+Depends On      : None
+Make Deps       : cargo
+Check Deps      : None
+Optional Deps   : None
+Conflicts With  : desed-git
+Maintainer      : Soptik
+Votes           : 2
+Popularity      : 0.000003
+First Submitted : Tue 21 Apr 2020 10:28:42 PM WEST
+Last Modified   : Sat 19 Dec 2020 02:37:07 PM WET
+Out-of-date     : No
+

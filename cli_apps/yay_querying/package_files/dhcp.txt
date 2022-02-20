@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : dhcp
+Version         : 4.4.2.P1-4
+Description     : A DHCP server, client, and relay agent
+Architecture    : x86_64
+URL             : https://www.isc.org/dhcp/
+Licenses        : custom:isc-dhcp
+Groups          : None
+Provides        : None
+Depends On      : glibc  libldap
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 1802.67 KiB
+Installed Size  : 9790.44 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Sun 26 Dec 2021 07:01:25 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

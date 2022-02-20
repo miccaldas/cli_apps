@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : python-systemd
+Version         : 234-11
+Description     : Python bindings for systemd
+Architecture    : x86_64
+URL             : https://github.com/systemd/python-systemd
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : python3  libsystemd
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 50.39 KiB
+Installed Size  : 255.41 KiB
+Packager        : Evangelos Foutras <foutrelis@archlinux.org>
+Build Date      : Sat 04 Dec 2021 01:05:56 AM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

@@ -1,1 +1,0 @@
- is a package which provides cryptographic recipes andprimitives to Python developers.  Our goal is for it to be your “cryptographic

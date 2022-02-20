@@ -1,1 +1,0 @@
-Leather is the Python charting library for those who need charts  and don’t care if they’re perfect.

@@ -1,1 +1,0 @@
-ResolveLib at the highest level provides a  class that includesdependency resolution logic. You give it some things, and a little information

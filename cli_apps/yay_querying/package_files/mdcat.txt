@@ -1,0 +1,19 @@
+Repository      : community
+Name            : mdcat
+Version         : 0.26.1-1
+Description     : Sophisticated Markdown rendering for the terminal
+Architecture    : x86_64
+URL             : https://codeberg.org/flausch/mdcat
+Licenses        : MPL2
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  openssl
+Optional Deps   : librsvg: used to render SVG images in kitty
+Conflicts With  : None
+Replaces        : None
+Download Size   : 2.22 MiB
+Installed Size  : 5.88 MiB
+Packager        : Justin Kromlinger <hashworks@archlinux.org>
+Build Date      : Sun 13 Feb 2022 01:15:23 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

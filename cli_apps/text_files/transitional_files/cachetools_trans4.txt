@@ -1,1 +1,0 @@
-This module provides various memoizing collections and decorators,including variants of the Python Standard Library’s function decorator.

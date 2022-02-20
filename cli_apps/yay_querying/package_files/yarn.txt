@@ -1,0 +1,19 @@
+Repository      : community
+Name            : yarn
+Version         : 1.22.17-1
+Description     : Fast, reliable, and secure dependency management
+Architecture    : any
+URL             : https://classic.yarnpkg.com/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : nodejs
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 938.96 KiB
+Installed Size  : 5205.75 KiB
+Packager        : Sven-Hendrik Haase <svenstaro@gmail.com>
+Build Date      : Mon 18 Oct 2021 05:35:24 AM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

@@ -1,1 +1,0 @@
-This repository contains a pure-Python implementation of a WebSocket protocolstack. It’s written from the ground up to be embeddable in whatever program you

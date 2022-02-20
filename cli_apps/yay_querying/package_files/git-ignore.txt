@@ -1,0 +1,23 @@
+:: [1mQuerying AUR...[0m
+Repository      : aur
+Name            : git-ignore
+Keywords        : None
+Version         : 1.2.0-0
+Description     : Quickly and easily list and fetch .gitignore templates from gitignore.io
+URL             : https://github.com/sondr3/git-ignore
+AUR URL         : https://aur.archlinux.org/packages/git-ignore
+Groups          : None
+Licenses        : GPL3
+Provides        : None
+Depends On      : gcc-libs
+Make Deps       : cargo  git
+Check Deps      : None
+Optional Deps   : None
+Conflicts With  : None
+Maintainer      : lmartinez-mirror
+Votes           : 0
+Popularity      : 0.000000
+First Submitted : Sat 10 Jul 2021 11:36:24 PM WEST
+Last Modified   : Thu 09 Dec 2021 02:56:38 PM WET
+Out-of-date     : No
+

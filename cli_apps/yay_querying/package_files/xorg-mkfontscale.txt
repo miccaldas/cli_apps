@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-mkfontscale
+Version         : 1.2.1-2
+Description     : Create an index of scalable font files for X
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : xorg-mkfontdir
+Depends On      : freetype2  libfontenc
+Optional Deps   : None
+Conflicts With  : xorg-mkfontdir
+Replaces        : xorg-mkfontdir
+Download Size   : 24.32 KiB
+Installed Size  : 51.58 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sun 19 Jan 2020 10:35:53 AM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

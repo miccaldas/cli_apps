@@ -1,0 +1,23 @@
+:: [1mQuerying AUR...[0m
+Repository      : aur
+Name            : python-schedule
+Keywords        : None
+Version         : 1.1.0-3
+Description     : Python job scheduling for humans.
+URL             : https://github.com/dbader/schedule
+AUR URL         : https://aur.archlinux.org/packages/python-schedule
+Groups          : None
+Licenses        : MIT
+Provides        : None
+Depends On      : python
+Make Deps       : python-setuptools
+Check Deps      : python-pytest  python-mock
+Optional Deps   : None
+Conflicts With  : None
+Maintainer      : fryfrog
+Votes           : 17
+Popularity      : 0.004963
+First Submitted : Tue 04 Aug 2015 10:01:25 PM WEST
+Last Modified   : Mon 13 Dec 2021 07:41:58 AM WET
+Out-of-date     : No
+

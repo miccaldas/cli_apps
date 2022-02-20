@@ -1,0 +1,1 @@
+ Black is the uncompromising Python code formatter. By using it, you agree to cede

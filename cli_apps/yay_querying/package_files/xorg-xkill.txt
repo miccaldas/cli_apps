@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xkill
+Version         : 1.0.5-2
+Description     : Kill a client by its X resource
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libx11  libxmu
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 9.46 KiB
+Installed Size  : 16.64 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Thu 07 May 2020 03:55:34 AM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

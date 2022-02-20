@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-sessreg
+Version         : 1.1.2-2
+Description     : Register X sessions in system utmp/utmpx databases
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : glibc
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 8.91 KiB
+Installed Size  : 17.73 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Sat 16 May 2020 03:32:56 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

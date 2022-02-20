@@ -1,0 +1,19 @@
+Repository      : core
+Name            : s-nail
+Version         : 14.9.23-1
+Description     : Environment for sending and receiving mail
+Architecture    : x86_64
+URL             : https://www.sdaoden.eu/code.html#s-nail
+Licenses        : custom:BSD
+Groups          : None
+Provides        : mailx  mailx-heirloom  heirloom-mailx
+Depends On      : openssl  krb5  libidn2
+Optional Deps   : smtp-forwarder: for sending mail
+Conflicts With  : mailx  mailx-heirloom  heirloom-mailx
+Replaces        : mailx  mailx-heirloom  heirloom-mailx
+Download Size   : 523.97 KiB
+Installed Size  : 995.63 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Wed 24 Nov 2021 10:01:21 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

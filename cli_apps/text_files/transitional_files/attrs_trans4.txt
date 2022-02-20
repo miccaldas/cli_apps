@@ -1,1 +1,0 @@
- is the Python package that will bring back the  of  by relieving you from the drudgery of implementing object protocols (aka ).

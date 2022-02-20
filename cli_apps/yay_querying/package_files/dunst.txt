@@ -1,0 +1,19 @@
+Repository      : community
+Name            : dunst
+Version         : 1.7.3-2
+Description     : Customizable and lightweight notification-daemon
+Architecture    : x86_64
+URL             : https://dunst-project.org/
+Licenses        : BSD
+Groups          : None
+Provides        : notification-daemon
+Depends On      : libxinerama  dbus  systemd  wayland  libxss  pango  gdk-pixbuf2  libxrandr  glib2
+Optional Deps   : libnotify: dunstify
+Conflicts With  : None
+Replaces        : None
+Download Size   : 97.19 KiB
+Installed Size  : 243.01 KiB
+Packager        : Leonidas Spyropoulos <artafinde@archlinux.org>
+Build Date      : Sun 13 Feb 2022 12:32:06 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xpr
+Version         : 1.0.5-2
+Description     : Print an X window dump from xwd
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libx11  libxmu  sh
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 33.25 KiB
+Installed Size  : 64.84 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Thu 07 May 2020 03:53:44 AM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

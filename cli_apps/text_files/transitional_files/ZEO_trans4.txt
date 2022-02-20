@@ -1,1 +1,0 @@
-ZEO is a client-server storage for  forsharing a single storage among many clients. When you use ZEO, a

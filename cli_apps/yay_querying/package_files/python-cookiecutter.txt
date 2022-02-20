@@ -1,0 +1,19 @@
+Repository      : community
+Name            : python-cookiecutter
+Version         : 1.7.3-3
+Description     : A command-line utility that creates projects from project templates
+Architecture    : any
+URL             : https://github.com/cookiecutter/cookiecutter
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : python-binaryornot  python-click  python-jinja  python-jinja-time  python-poyo  python-requests  python-six  python-slugify
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 47.96 KiB
+Installed Size  : 212.77 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Thu 02 Dec 2021 09:46:13 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

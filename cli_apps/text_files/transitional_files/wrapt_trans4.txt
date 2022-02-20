@@ -1,1 +1,0 @@
- The aim of the  module is to provide a transparent object proxyfor Python, which can be used as the basis for the construction of functionwrappers and decorator functions.

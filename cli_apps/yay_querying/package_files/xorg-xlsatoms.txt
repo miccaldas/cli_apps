@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xlsatoms
+Version         : 1.1.3-2
+Description     : List interned atoms defined on server
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libxcb
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 8.29 KiB
+Installed Size  : 16.24 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Wed 06 May 2020 04:13:27 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

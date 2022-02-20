@@ -1,0 +1,33 @@
+Repository      : community
+Name            : ranger
+Version         : 1.9.3-4
+Description     : Simple, vim-like file manager
+Architecture    : any
+URL             : https://ranger.github.io
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : atool: for previews of archives
+                  elinks: for previews of html pages
+                  ffmpegthumbnailer: for video previews
+                  highlight: for syntax highlighting of code
+                  libcaca: for ASCII-art image previews
+                  lynx: for previews of html pages
+                  mediainfo: for viewing information about media files
+                  odt2txt: for OpenDocument texts
+                  perl-image-exiftool: for viewing information about media files
+                  poppler: for pdf previews
+                  python-chardet: in case of encoding detection problems
+                  sudo: to use the "run as root"-feature
+                  transmission-cli: for viewing bittorrent information
+                  ueberzug: for previews of images
+                  w3m: for previews of images and html pages
+Conflicts With  : None
+Replaces        : None
+Download Size   : 380.35 KiB
+Installed Size  : 1861.82 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 03 Dec 2021 01:00:52 AM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

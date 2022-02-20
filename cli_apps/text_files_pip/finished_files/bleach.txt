@@ -1,0 +1,1 @@
+Bleach is an allowed-list-based HTML sanitizing library that escapes or stripsmarkup and attributes.

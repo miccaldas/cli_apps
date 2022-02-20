@@ -1,0 +1,24 @@
+:: [1mQuerying AUR...[0m
+Repository      : aur
+Name            : exodus
+Keywords        : bitcoin  blockchain  cardano  crypto  eos  ethereum  lisk
+                  monero  nano  neo  ontology  ripple  stellar  tron  wallet
+Version         : 22.2.11-1
+Description     : Send, receive & exchange cryptocurrency with ease on the world's leading Desktop, Mobile and Hardware wallets. Bitcoin wallet
+URL             : https://exodus.com
+AUR URL         : https://aur.archlinux.org/packages/exodus
+Groups          : None
+Licenses        : custom
+Provides        : None
+Depends On      : libxss
+Make Deps       : None
+Check Deps      : None
+Optional Deps   : None
+Conflicts With  : None
+Maintainer      : GutenYe
+Votes           : 49
+Popularity      : 0.892406
+First Submitted : Sat 19 Nov 2016 09:39:30 PM WET
+Last Modified   : Mon 14 Feb 2022 12:34:48 PM WET
+Out-of-date     : No
+

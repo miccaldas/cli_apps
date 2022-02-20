@@ -1,0 +1,1 @@
+ provides information about theOS distribution it runs on, such as a reliable machine-readable ID, orversion information.

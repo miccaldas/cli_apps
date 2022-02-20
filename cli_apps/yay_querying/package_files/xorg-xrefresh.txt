@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xrefresh
+Version         : 1.0.6-2
+Description     : Refresh all or part of an X screen
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libx11
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 8.94 KiB
+Installed Size  : 17.55 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Thu 07 May 2020 03:52:34 AM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

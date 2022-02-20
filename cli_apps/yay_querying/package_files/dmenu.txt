@@ -1,0 +1,19 @@
+Repository      : community
+Name            : dmenu
+Version         : 5.0-1
+Description     : Generic menu for X
+Architecture    : x86_64
+URL             : https://tools.suckless.org/dmenu/
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : sh  glibc  coreutils  libx11  libxinerama  libxft  freetype2  fontconfig  libfontconfig.so=1-64
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 20.52 KiB
+Installed Size  : 51.20 KiB
+Packager        : Levente Polyak <anthraxx@archlinux.org>
+Build Date      : Mon 21 Sep 2020 08:58:01 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

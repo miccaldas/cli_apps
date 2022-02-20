@@ -1,0 +1,19 @@
+Repository      : community
+Name            : duf
+Version         : 0.8.1-1
+Description     : Disk Usage/Free Utility
+Architecture    : x86_64
+URL             : https://github.com/muesli/duf
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : glibc
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 849.29 KiB
+Installed Size  : 2591.91 KiB
+Packager        : Caleb Maclennan <alerque@archlinux.org>
+Build Date      : Tue 08 Feb 2022 08:21:27 AM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

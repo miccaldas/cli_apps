@@ -1,0 +1,1 @@
+Waitress is a production-quality pure-Python WSGI server with very acceptableperformance. It has no dependencies except ones which live in the Python

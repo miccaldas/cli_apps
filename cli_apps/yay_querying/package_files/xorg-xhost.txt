@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xhost
+Version         : 1.0.8-2
+Description     : Server access control program for X
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libx11  libxmu
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 11.70 KiB
+Installed Size  : 23.56 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Sat 16 May 2020 02:56:54 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

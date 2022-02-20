@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xvinfo
+Version         : 1.1.4-2
+Description     : Prints out the capabilities of any video adaptors associated with the display that are accessible through the X-Video extension
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : libx11  libxv
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 8.83 KiB
+Installed Size  : 19.59 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Fri 15 May 2020 03:47:20 AM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

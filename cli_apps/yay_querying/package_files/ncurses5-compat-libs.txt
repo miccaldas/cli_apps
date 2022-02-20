@@ -1,0 +1,23 @@
+:: [1mQuerying AUR...[0m
+Repository      : aur
+Name            : ncurses5-compat-libs
+Keywords        : None
+Version         : 6.3-1
+Description     : System V Release 4.0 curses emulation library, ABI 5
+URL             : http://invisible-island.net/ncurses/ncurses.html
+AUR URL         : https://aur.archlinux.org/packages/ncurses5-compat-libs
+Groups          : None
+Licenses        : MIT
+Provides        : libtinfo5
+Depends On      : glibc  gcc-libs  sh
+Make Deps       : None
+Check Deps      : None
+Optional Deps   : None
+Conflicts With  : libtinfo5
+Maintainer      : tapajos
+Votes           : 552
+Popularity      : 2.981397
+First Submitted : Fri 18 Sep 2015 10:03:12 PM WEST
+Last Modified   : Sat 05 Feb 2022 10:52:50 PM WET
+Out-of-date     : No
+

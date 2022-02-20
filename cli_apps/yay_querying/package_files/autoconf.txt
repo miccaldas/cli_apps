@@ -1,0 +1,19 @@
+Repository      : core
+Name            : autoconf
+Version         : 2.71-1
+Description     : A GNU tool for automatically configuring source code
+Architecture    : any
+URL             : https://www.gnu.org/software/autoconf
+Licenses        : GPL2  GPL3  custom
+Groups          : base-devel
+Provides        : None
+Depends On      : awk  m4  diffutils  perl  sh
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 645.21 KiB
+Installed Size  : 2256.03 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Wed 03 Feb 2021 04:03:39 AM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

@@ -1,0 +1,23 @@
+:: [1mQuerying AUR...[0m
+Repository      : aur
+Name            : python-rq-scheduler
+Keywords        : None
+Version         : 0.10.0-2
+Description     : Small package that adds job scheduling capabilities to RQ
+URL             : https://github.com/rq/rq-scheduler
+AUR URL         : https://aur.archlinux.org/packages/python-rq-scheduler
+Groups          : None
+Licenses        : MIT
+Provides        : None
+Depends On      : python-rq>=0.13  python-croniter>=0.3.9  python-dateutil
+Make Deps       : python-setuptools
+Check Deps      : None
+Optional Deps   : None
+Conflicts With  : None
+Maintainer      : lmartinez-mirror
+Votes           : 0
+Popularity      : 0.000000
+First Submitted : Tue 11 Jun 2019 04:01:56 PM WEST
+Last Modified   : Sun 03 Oct 2021 03:27:44 AM WEST
+Out-of-date     : No
+

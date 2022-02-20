@@ -1,0 +1,22 @@
+Repository      : community
+Name            : fzf
+Version         : 0.29.0-1
+Description     : Command-line fuzzy finder
+Architecture    : x86_64
+URL             : https://github.com/junegunn/fzf
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : bash
+Optional Deps   : fish: fish keybindings
+                  tmux: fzf-tmux script for launching fzf in a tmux pane
+                  vim: plugin
+                  zsh: zsh keybindings
+Conflicts With  : None
+Replaces        : None
+Download Size   : 975.44 KiB
+Installed Size  : 2944.06 KiB
+Packager        : Morten Linderud <foxboron@archlinux.org>
+Build Date      : Sat 25 Dec 2021 11:10:31 AM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

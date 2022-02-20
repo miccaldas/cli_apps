@@ -1,0 +1,19 @@
+Repository      : extra
+Name            : xorg-xbacklight
+Version         : 1.2.3-2
+Description     : RandR-based backlight control application
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-apps  xorg
+Provides        : None
+Depends On      : xcb-util
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 8.92 KiB
+Installed Size  : 16.06 KiB
+Packager        : Allan McRae <allan@archlinux.org>
+Build Date      : Wed 06 May 2020 04:15:21 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

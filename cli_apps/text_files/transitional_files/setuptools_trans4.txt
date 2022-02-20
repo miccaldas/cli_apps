@@ -1,1 +1,0 @@
-See the  in the Python PackagingUser’s Guide for instructions on installing, upgrading, and uninstallingSetuptools.

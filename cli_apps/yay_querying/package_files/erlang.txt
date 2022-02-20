@@ -1,0 +1,21 @@
+Repository      : community
+Name            : erlang
+Version         : 24.2.1-1
+Description     : General-purpose concurrent functional programming language developed by Ericsson
+Architecture    : x86_64
+URL             : https://erlang.org
+Licenses        : Apache
+Groups          : None
+Provides        : erlang-nox
+Depends On      : glu  ncurses  openssl  webkit2gtk  wxgtk3
+Optional Deps   : erlang-unixodbc: database support
+                  java-environment: for Java support
+                  lksctp-tools: for SCTP support
+Conflicts With  : erlang-nox
+Replaces        : None
+Download Size   : 40.48 MiB
+Installed Size  : 104.21 MiB
+Packager        : Alexander Rødseth <rodseth@gmail.com>
+Build Date      : Sun 13 Feb 2022 07:18:21 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

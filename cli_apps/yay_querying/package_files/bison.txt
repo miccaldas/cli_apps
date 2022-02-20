@@ -1,0 +1,19 @@
+Repository      : core
+Name            : bison
+Version         : 3.8.2-1
+Description     : The GNU general-purpose parser generator
+Architecture    : x86_64
+URL             : https://www.gnu.org/software/bison/bison.html
+Licenses        : GPL3
+Groups          : base-devel
+Provides        : None
+Depends On      : glibc  m4  sh  gettext
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 784.66 KiB
+Installed Size  : 2634.62 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Thu 30 Sep 2021 01:33:15 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

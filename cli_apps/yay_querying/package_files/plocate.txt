@@ -1,0 +1,19 @@
+Repository      : community
+Name            : plocate
+Version         : 1.1.15-2
+Description     : Alternative to locate, faster and compatible with mlocate's database.
+Architecture    : x86_64
+URL             : https://plocate.sesse.net
+Licenses        : GPL2
+Groups          : None
+Provides        : mlocate  locate
+Depends On      : zstd  liburing  systemd
+Optional Deps   : None
+Conflicts With  : mlocate
+Replaces        : None
+Download Size   : 128.30 KiB
+Installed Size  : 470.76 KiB
+Packager        : Morten Linderud <foxboron@archlinux.org>
+Build Date      : Mon 07 Feb 2022 06:02:28 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

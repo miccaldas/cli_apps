@@ -1,0 +1,19 @@
+Repository      : community
+Name            : virt-manager
+Version         : 3.2.0-4
+Description     : Desktop user interface for managing virtual machines
+Architecture    : any
+URL             : https://virt-manager.org/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : virt-install=3.2.0  gtk-vnc  libvirt-glib  spice-gtk  vte3  python-cairo  gtksourceview4
+Optional Deps   : x11-ssh-askpass: provide password for remote machines connected via ssh tunnel
+Conflicts With  : None
+Replaces        : None
+Download Size   : 506.20 KiB
+Installed Size  : 3738.54 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Thu 02 Dec 2021 11:44:47 PM WET
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

@@ -1,0 +1,19 @@
+Repository      : community
+Name            : jq
+Version         : 1.6-4
+Description     : Command-line JSON processor
+Architecture    : x86_64
+URL             : https://stedolan.github.io/jq/
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : glibc  oniguruma
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 226.41 KiB
+Installed Size  : 690.21 KiB
+Packager        : Morten Linderud <foxboron@archlinux.org>
+Build Date      : Thu 03 Sep 2020 04:44:29 PM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

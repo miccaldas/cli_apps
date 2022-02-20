@@ -1,0 +1,20 @@
+Repository      : community
+Name            : micro
+Version         : 2.0.10-2
+Description     : Modern and intuitive terminal-based text editor
+Architecture    : x86_64
+URL             : https://micro-editor.github.io/
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : None
+Optional Deps   : wl-clipboard: for copying/pasting text using Wayland
+                  xclip: for copying/pasting text using X
+Conflicts With  : None
+Replaces        : None
+Download Size   : 3.93 MiB
+Installed Size  : 13.25 MiB
+Packager        : Alexander Rødseth <rodseth@gmail.com>
+Build Date      : Fri 27 Aug 2021 11:32:16 AM WEST
+Validated By    : MD5 Sum  SHA-256 Sum  Signature
+

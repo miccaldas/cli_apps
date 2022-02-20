@@ -1,1 +1,0 @@
-This is a Python package containing -compiled binaries for the IANA timezone database. It is intended to be a fallback for systems that do not have

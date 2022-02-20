@@ -1,0 +1,1 @@
+Specifications for callback functions passed in to an APIIf your code lets other people supply callback functions, it’s important tospecify the function signature you expect, and check that functions support that.
