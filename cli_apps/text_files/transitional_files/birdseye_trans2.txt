@@ -1,5 +1,5 @@
 
 
  
-birdseye is a Python debugger which records the values of expressions in a
+"birdseye is a Python debugger which records the values of expressions in a
 function call and lets you easily view them after the function exits.

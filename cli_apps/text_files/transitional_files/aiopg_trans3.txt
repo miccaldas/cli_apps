@@ -1,0 +1,3 @@
+
+
+ Aiopg is a library for accessing a database from the (PEP-3156/tulip) framework. It wraps asynchronous features of the Psycopg database driver.

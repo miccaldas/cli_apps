@@ -1,0 +1,5 @@
+
+
+"Ultra-lightweight pure Python package to guess whether a file is binary or text,
+using a heuristic similar to Perl’s "
+ and its analysis by @eliben.

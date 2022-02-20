@@ -1,4 +1,5 @@
-description
+
+
 "
 "
 "
@@ -18,3 +19,420 @@ description
 "
 "
 " is the uncompromising Python code formatter. By using it, you agree to cede
+control over minutiae of hand-formatting. In return, "
+" gives you speed,
+determinism, and freedom from "
+" nagging about formatting. You will save time
+and mental energy for more important matters."
+"Blackened code looks the same regardless of the project you're reading. Formatting
+becomes transparent after a while and you can focus on the content instead."
+ makes code review faster by producing the smallest diffs possible.
+Try it out now using the 
+". Watch the
+"
+ to learn more.
+ can be installed by running 
+". It requires Python 3.6.2+ to
+run. If you want to format Jupyter Notebooks, install with "
+.
+If you can't wait for the latest 
+" and want to install from GitHub, use:"
+To get started right away with sensible defaults:
+You can run 
+ as a package if running it as a script doesn't work:
+Further information can be found in our docs:
+ is already 
+" by many
+projects, small and big. "
+" has a comprehensive test suite, with efficient parallel
+tests, and our own auto formatting and parallel Continuous Integration runner. Now that
+we have become stable, you should not expect large formatting to changes in the future.
+Stylistic changes will mostly be responses to bug reports and support for new Python
+syntax. For more information please refer to the
+"
+.
+"Also, as a safety measure which slows down processing, "
+" will check that the
+reformatted code still produces a valid AST that is effectively equivalent to the
+original (see the
+"
+"
+section for details). If you're feeling confident, use "
+.
+ is a PEP 8 compliant opinionated formatter. 
+" reformats entire files in
+place. Style configuration options are deliberately limited and rarely added. It doesn't
+take previous formatting into account (see "
+ for exceptions).
+Our documentation covers the current 
+" code style, but planned changes to it are
+also documented. They're both worth taking a look:"
+"Please refer to this document before submitting an issue. What seems like a bug might be
+intended behaviour."
+Early versions of 
+" used to be absolutist in some respects. They took after its
+initial author. This was fine at the time as it made the implementation simpler and
+there were not many users anyway. Not many edge cases were reported. As a mature tool,
+"
+ does make some exceptions to rules it otherwise holds.
+"Please refer to this document before submitting an issue just like with the document
+above. What seems like a bug might be intended behaviour."
+" is able to read project-specific default values for its command line options
+from a "
+" file. This is especially useful for specifying custom
+"
+ and 
+/
+/
+" patterns for your
+project."
+You can find more details in our documentation:
+And if you're looking for more general configuration documentation:
+": If you're asking yourself ""Do I need to configure anything?"" the answer is
+""No"". "
+" is all about sensible defaults. Applying those defaults will have your
+code in compliance with many other "
+ formatted projects.
+The following notable open-source projects trust 
+" with enforcing a consistent
+code style: pytest, tox, Pyramid, Django Channels, Hypothesis, attrs, SQLAlchemy,
+Poetry, PyPA applications (Warehouse, Bandersnatch, Pipenv, virtualenv), pandas, Pillow,
+Twisted, LocalStack, every Datadog Agent Integration, Home Assistant, Zulip, Kedro,
+OpenOA, FLORIS, ORBIT, WOMBAT, and many more."
+The following organizations use 
+": Facebook, Dropbox, KeepTruckin, Mozilla, Quora,
+Duolingo, QuantumBlack, Tesla."
+Are we missing anyone? Let us know.
+", "
+:
+",
+"
+:
+", "
+", core developer of
+Twisted and CPython:"
+", "
+ core developer:
+", creator of "
+" and
+"
+:
+Use the badge in your project's README.md:
+Using the badge in README.rst:
+"Looks like this:
+"
+MIT
+"Welcome! Happy to see you willing to make the project better. You can get started by
+reading this:"
+"You can also take a look at the rest of the contributing docs or talk with the
+developers:"
+The log has become rather long. It moved to its own file.
+See 
+.
+"The author list is quite long nowadays, so it lives in its own file."
+See 
+Everyone participating in the 
+" project, and in particular in the issue tracker,
+pull requests, and social media activity, is expected to treat other people with respect
+and more generally to follow the guidelines articulated in the
+"
+.
+"At the same time, humor is encouraged. In fact, basic familiarity with Monty Python's
+Flying Circus is expected. We are not savages."
+And if you 
+" need to slap somebody, do it with a fish while dancing."
+"At long last, "
+" is no longer a beta product! This is the first non-beta release
+and the first release covered by our new stability policy."
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+" is the uncompromising Python code formatter. By using it, you agree to cede
+control over minutiae of hand-formatting. In return, "
+" gives you speed,
+determinism, and freedom from "
+" nagging about formatting. You will save time
+and mental energy for more important matters."
+"Blackened code looks the same regardless of the project you're reading. Formatting
+becomes transparent after a while and you can focus on the content instead."
+ makes code review faster by producing the smallest diffs possible.
+Try it out now using the 
+". Watch the
+"
+ to learn more.
+ can be installed by running 
+". It requires Python 3.6.2+ to
+run. If you want to format Jupyter Notebooks, install with "
+.
+If you can't wait for the latest 
+" and want to install from GitHub, use:"
+To get started right away with sensible defaults:
+You can run 
+ as a package if running it as a script doesn't work:
+Further information can be found in our docs:
+ is already 
+" by many
+projects, small and big. "
+" has a comprehensive test suite, with efficient parallel
+tests, and our own auto formatting and parallel Continuous Integration runner. Now that
+we have become stable, you should not expect large formatting to changes in the future.
+Stylistic changes will mostly be responses to bug reports and support for new Python
+syntax. For more information please refer to the
+"
+.
+"Also, as a safety measure which slows down processing, "
+" will check that the
+reformatted code still produces a valid AST that is effectively equivalent to the
+original (see the
+"
+"
+section for details). If you're feeling confident, use "
+.
+ is a PEP 8 compliant opinionated formatter. 
+" reformats entire files in
+place. Style configuration options are deliberately limited and rarely added. It doesn't
+take previous formatting into account (see "
+ for exceptions).
+Our documentation covers the current 
+" code style, but planned changes to it are
+also documented. They're both worth taking a look:"
+"Please refer to this document before submitting an issue. What seems like a bug might be
+intended behaviour."
+Early versions of 
+" used to be absolutist in some respects. They took after its
+initial author. This was fine at the time as it made the implementation simpler and
+there were not many users anyway. Not many edge cases were reported. As a mature tool,
+"
+ does make some exceptions to rules it otherwise holds.
+"Please refer to this document before submitting an issue just like with the document
+above. What seems like a bug might be intended behaviour."
+" is able to read project-specific default values for its command line options
+from a "
+" file. This is especially useful for specifying custom
+"
+ and 
+/
+/
+" patterns for your
+project."
+You can find more details in our documentation:
+And if you're looking for more general configuration documentation:
+": If you're asking yourself ""Do I need to configure anything?"" the answer is
+""No"". "
+" is all about sensible defaults. Applying those defaults will have your
+code in compliance with many other "
+ formatted projects.
+The following notable open-source projects trust 
+" with enforcing a consistent
+code style: pytest, tox, Pyramid, Django Channels, Hypothesis, attrs, SQLAlchemy,
+Poetry, PyPA applications (Warehouse, Bandersnatch, Pipenv, virtualenv), pandas, Pillow,
+Twisted, LocalStack, every Datadog Agent Integration, Home Assistant, Zulip, Kedro,
+OpenOA, FLORIS, ORBIT, WOMBAT, and many more."
+The following organizations use 
+": Facebook, Dropbox, KeepTruckin, Mozilla, Quora,
+Duolingo, QuantumBlack, Tesla."
+Are we missing anyone? Let us know.
+", "
+:
+",
+"
+:
+", "
+", core developer of
+Twisted and CPython:"
+", "
+ core developer:
+", creator of "
+" and
+"
+:
+Use the badge in your project's README.md:
+Using the badge in README.rst:
+"Looks like this:
+"
+MIT
+"Welcome! Happy to see you willing to make the project better. You can get started by
+reading this:"
+"You can also take a look at the rest of the contributing docs or talk with the
+developers:"
+The log has become rather long. It moved to its own file.
+See 
+.
+"The author list is quite long nowadays, so it lives in its own file."
+See 
+Everyone participating in the 
+" project, and in particular in the issue tracker,
+pull requests, and social media activity, is expected to treat other people with respect
+and more generally to follow the guidelines articulated in the
+"
+.
+"At the same time, humor is encouraged. In fact, basic familiarity with Monty Python's
+Flying Circus is expected. We are not savages."
+And if you 
+" need to slap somebody, do it with a fish while dancing."
+"At long last, "
+" is no longer a beta product! This is the first non-beta release
+and the first release covered by our new stability policy."
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+" is the uncompromising Python code formatter. By using it, you agree to cede
+control over minutiae of hand-formatting. In return, "
+" gives you speed,
+determinism, and freedom from "
+" nagging about formatting. You will save time
+and mental energy for more important matters."
+"Blackened code looks the same regardless of the project you're reading. Formatting
+becomes transparent after a while and you can focus on the content instead."
+ makes code review faster by producing the smallest diffs possible.
+Try it out now using the 
+". Watch the
+"
+ to learn more.
+ can be installed by running 
+". It requires Python 3.6.2+ to
+run. If you want to format Jupyter Notebooks, install with "
+.
+If you can't wait for the latest 
+" and want to install from GitHub, use:"
+To get started right away with sensible defaults:
+You can run 
+ as a package if running it as a script doesn't work:
+Further information can be found in our docs:
+ is already 
+" by many
+projects, small and big. "
+" has a comprehensive test suite, with efficient parallel
+tests, and our own auto formatting and parallel Continuous Integration runner. Now that
+we have become stable, you should not expect large formatting to changes in the future.
+Stylistic changes will mostly be responses to bug reports and support for new Python
+syntax. For more information please refer to the
+"
+.
+"Also, as a safety measure which slows down processing, "
+" will check that the
+reformatted code still produces a valid AST that is effectively equivalent to the
+original (see the
+"
+"
+section for details). If you're feeling confident, use "
+.
+ is a PEP 8 compliant opinionated formatter. 
+" reformats entire files in
+place. Style configuration options are deliberately limited and rarely added. It doesn't
+take previous formatting into account (see "
+ for exceptions).
+Our documentation covers the current 
+" code style, but planned changes to it are
+also documented. They're both worth taking a look:"
+"Please refer to this document before submitting an issue. What seems like a bug might be
+intended behaviour."
+Early versions of 
+" used to be absolutist in some respects. They took after its
+initial author. This was fine at the time as it made the implementation simpler and
+there were not many users anyway. Not many edge cases were reported. As a mature tool,
+"
+ does make some exceptions to rules it otherwise holds.
+"Please refer to this document before submitting an issue just like with the document
+above. What seems like a bug might be intended behaviour."
+" is able to read project-specific default values for its command line options
+from a "
+" file. This is especially useful for specifying custom
+"
+ and 
+/
+/
+" patterns for your
+project."
+You can find more details in our documentation:
+And if you're looking for more general configuration documentation:
+": If you're asking yourself ""Do I need to configure anything?"" the answer is
+""No"". "
+" is all about sensible defaults. Applying those defaults will have your
+code in compliance with many other "
+ formatted projects.
+The following notable open-source projects trust 
+" with enforcing a consistent
+code style: pytest, tox, Pyramid, Django Channels, Hypothesis, attrs, SQLAlchemy,
+Poetry, PyPA applications (Warehouse, Bandersnatch, Pipenv, virtualenv), pandas, Pillow,
+Twisted, LocalStack, every Datadog Agent Integration, Home Assistant, Zulip, Kedro,
+OpenOA, FLORIS, ORBIT, WOMBAT, and many more."
+The following organizations use 
+": Facebook, Dropbox, KeepTruckin, Mozilla, Quora,
+Duolingo, QuantumBlack, Tesla."
+Are we missing anyone? Let us know.
+", "
+:
+",
+"
+:
+", "
+", core developer of
+Twisted and CPython:"
+", "
+ core developer:
+", creator of "
+" and
+"
+:
+Use the badge in your project's README.md:
+Using the badge in README.rst:
+"Looks like this:
+"
+MIT
+"Welcome! Happy to see you willing to make the project better. You can get started by
+reading this:"
+"You can also take a look at the rest of the contributing docs or talk with the
+developers:"
+The log has become rather long. It moved to its own file.
+See 
+.
+"The author list is quite long nowadays, so it lives in its own file."
+See 
+Everyone participating in the 
+" project, and in particular in the issue tracker,
+pull requests, and social media activity, is expected to treat other people with respect
+and more generally to follow the guidelines articulated in the
+"
+.
+"At the same time, humor is encouraged. In fact, basic familiarity with Monty Python's
+Flying Circus is expected. We are not savages."
+And if you 
+" need to slap somebody, do it with a fish while dancing."
+"At long last, "
+" is no longer a beta product! This is the first non-beta release
+and the first release covered by our new stability policy."
