@@ -14,6 +14,7 @@ texts=/home/mic/python/cli_apps/cli_apps/text_files/*
 trans=/home/mic/python/cli_apps/cli_apps/text_files/transitional_files/
 
 for file in ${texts}; do
+    echo "$file"
     read -r firstline < $file
     trunc_file=${file:46:-18}
     ftrans0="${trans}${trunc_file}trans0.txt"
@@ -21,11 +22,6 @@ for file in ${texts}; do
     ftrans2="${trans}${trunc_file}trans2.txt"
     ftrans3="${trans}${trunc_file}trans3.txt"
     ftrans4="${trans}${trunc_file}trans4.txt"
-    echo $ftrans0
-    echo $ftrans1
-    echo $ftrans2
-    echo $ftrans3
-    echo $ftrans4
     # 1 - Remove the "description" lines.
     sed -re "s/description//p" "$file" > "$ftrans0"
     # 2 - Remove blank lines.
@@ -36,5 +32,4 @@ for file in ${texts}; do
     sed -re 's/"//g1' "$file" > "$ftrans3"
     # 5 - Removes line breaks.
     sed -z "s/\n//g" "$file" > "$ftrans4"
-    
 done
