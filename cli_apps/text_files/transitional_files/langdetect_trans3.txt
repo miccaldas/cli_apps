@@ -1,0 +1,96 @@
+description
+Port of Nakatani Shuyo's 
+ library (version from 03/03/2014) to Python.
+Supported Python versions 2.7, 3.4+.
+ supports 55 languages out of the box (
+):
+To detect the language of the text:
+To find out the probabilities for the top languages:
+Language detection algorithm is non-deterministic, which means that if you try to run it on a text which is either too short or too ambiguous, you might get different results everytime you run it.
+To enforce consistent results, call following code before the first language detection:
+You need to create a new language profile. The easiest way to do it is to use the 
+ tool, which can generate language profiles from Wikipedia abstract database files or plain text.
+Wikipedia abstract database files can be retrieved from Wikipedia Downloads (
+). They form '(language code)wiki-(version)-abstract.xml' (e.g. 'enwiki-20101004-abstract.xml' ).
+usage: 
+Remark: The database filename in Chinese is like 'zhwiki-(version)-abstract-zh-cn.xml' or zhwiki-(version)-abstract-zh-tw.xml', so that it must be modified 'zh-cnwiki-(version)-abstract.xml' or 'zh-twwiki-(version)-abstract.xml'.
+To generate language profile from a plain text, use the genprofile-text command.
+usage: 
+For more details see 
+.
+This library is a direct port of Google's 
+ library from Java to Python. All the classes and methods are unchanged, so for more information see the project's website or wiki.
+Presentation of the language detection algorithm: 
+.
+description
+Port of Nakatani Shuyo's 
+ library (version from 03/03/2014) to Python.
+Supported Python versions 2.7, 3.4+.
+ supports 55 languages out of the box (
+):
+To detect the language of the text:
+To find out the probabilities for the top languages:
+Language detection algorithm is non-deterministic, which means that if you try to run it on a text which is either too short or too ambiguous, you might get different results everytime you run it.
+To enforce consistent results, call following code before the first language detection:
+You need to create a new language profile. The easiest way to do it is to use the 
+ tool, which can generate language profiles from Wikipedia abstract database files or plain text.
+Wikipedia abstract database files can be retrieved from Wikipedia Downloads (
+). They form '(language code)wiki-(version)-abstract.xml' (e.g. 'enwiki-20101004-abstract.xml' ).
+usage: 
+Remark: The database filename in Chinese is like 'zhwiki-(version)-abstract-zh-cn.xml' or zhwiki-(version)-abstract-zh-tw.xml', so that it must be modified 'zh-cnwiki-(version)-abstract.xml' or 'zh-twwiki-(version)-abstract.xml'.
+To generate language profile from a plain text, use the genprofile-text command.
+usage: 
+For more details see 
+.
+This library is a direct port of Google's 
+ library from Java to Python. All the classes and methods are unchanged, so for more information see the project's website or wiki.
+Presentation of the language detection algorithm: 
+.
+description
+Port of Nakatani Shuyo's 
+ library (version from 03/03/2014) to Python.
+Supported Python versions 2.7, 3.4+.
+ supports 55 languages out of the box (
+):
+To detect the language of the text:
+To find out the probabilities for the top languages:
+Language detection algorithm is non-deterministic, which means that if you try to run it on a text which is either too short or too ambiguous, you might get different results everytime you run it.
+To enforce consistent results, call following code before the first language detection:
+You need to create a new language profile. The easiest way to do it is to use the 
+ tool, which can generate language profiles from Wikipedia abstract database files or plain text.
+Wikipedia abstract database files can be retrieved from Wikipedia Downloads (
+). They form '(language code)wiki-(version)-abstract.xml' (e.g. 'enwiki-20101004-abstract.xml' ).
+usage: 
+Remark: The database filename in Chinese is like 'zhwiki-(version)-abstract-zh-cn.xml' or zhwiki-(version)-abstract-zh-tw.xml', so that it must be modified 'zh-cnwiki-(version)-abstract.xml' or 'zh-twwiki-(version)-abstract.xml'.
+To generate language profile from a plain text, use the genprofile-text command.
+usage: 
+For more details see 
+.
+This library is a direct port of Google's 
+ library from Java to Python. All the classes and methods are unchanged, so for more information see the project's website or wiki.
+Presentation of the language detection algorithm: 
+.
+description
+Port of Nakatani Shuyo's 
+ library (version from 03/03/2014) to Python.
+Supported Python versions 2.7, 3.4+.
+ supports 55 languages out of the box (
+):
+To detect the language of the text:
+To find out the probabilities for the top languages:
+Language detection algorithm is non-deterministic, which means that if you try to run it on a text which is either too short or too ambiguous, you might get different results everytime you run it.
+To enforce consistent results, call following code before the first language detection:
+You need to create a new language profile. The easiest way to do it is to use the 
+ tool, which can generate language profiles from Wikipedia abstract database files or plain text.
+Wikipedia abstract database files can be retrieved from Wikipedia Downloads (
+). They form '(language code)wiki-(version)-abstract.xml' (e.g. 'enwiki-20101004-abstract.xml' ).
+usage: 
+Remark: The database filename in Chinese is like 'zhwiki-(version)-abstract-zh-cn.xml' or zhwiki-(version)-abstract-zh-tw.xml', so that it must be modified 'zh-cnwiki-(version)-abstract.xml' or 'zh-twwiki-(version)-abstract.xml'.
+To generate language profile from a plain text, use the genprofile-text command.
+usage: 
+For more details see 
+.
+This library is a direct port of Google's 
+ library from Java to Python. All the classes and methods are unchanged, so for more information see the project's website or wiki.
+Presentation of the language detection algorithm: 
+.

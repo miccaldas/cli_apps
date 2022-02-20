@@ -1,0 +1,2 @@
+description
+"lxml is a Pythonic, mature binding for the libxml2 and libxslt libraries.  It

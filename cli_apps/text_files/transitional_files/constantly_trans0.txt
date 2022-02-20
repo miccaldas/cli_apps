@@ -1,0 +1,28 @@
+
+
+"A library that provides symbolic constant support.
+It includes collections and constants with text, numeric, and bit flag values.
+Originally "
+ from the 
+ project.
+
+
+"A library that provides symbolic constant support.
+It includes collections and constants with text, numeric, and bit flag values.
+Originally "
+ from the 
+ project.
+
+
+"A library that provides symbolic constant support.
+It includes collections and constants with text, numeric, and bit flag values.
+Originally "
+ from the 
+ project.
+
+
+"A library that provides symbolic constant support.
+It includes collections and constants with text, numeric, and bit flag values.
+Originally "
+ from the 
+ project.

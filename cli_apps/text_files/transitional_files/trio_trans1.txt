@@ -1,0 +1,4 @@
+description
+"The Trio project’s goal is to produce a production-quality, "
+",
+async/await-native I/O library for Python. Like all async libraries,

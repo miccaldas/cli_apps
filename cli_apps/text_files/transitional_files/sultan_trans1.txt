@@ -1,0 +1,2 @@
+description
+Sultan now supports Python 2.7+ and 3.0+

@@ -1,0 +1,336 @@
+
+
+"
+"
+" is an efficient binary serialization format.
+It lets you exchange data among multiple languages like JSON.
+But it's faster and smaller.
+This package provides CPython bindings for reading and writing MessagePack data."
+Package name on PyPI was changed from 
+ to 
+ from 0.5.
+"When upgrading from msgpack-0.4 or earlier, do "
+" before
+"
+.
+You can use 
+ option to pack 
+"
+object into raw type in the old msgpack spec, instead of bin type in new msgpack spec."
+You can unpack old msgpack format using 
+" option.
+It unpacks str (raw) type in msgpack into Python bytes."
+See note below for detail.
+The extension module in msgpack (
+") does not support
+Python 2 and PyPy."
+But msgpack provides a pure Python implementation (
+")
+for PyPy and Python 2."
+"When you can't use a binary distribution, you need to install Visual Studio
+or Windows SDK on Windows.
+Without extension, using pure Python implementation on CPython runs slowly."
+"NOTE: In examples below, I use "
+ and 
+" for users
+using msgpack < 1.0. These options are default from msgpack 1.0 so you can omit them."
+Use 
+ for packing and 
+" for unpacking.
+msgpack provides "
+ and 
+" as an alias for compatibility with
+"
+ and 
+.
+ and 
+" packs to a file-like object.
+"
+ and 
+ unpacks from a file-like object.
+" unpacks msgpack's array to Python's list, but can also unpack to tuple:"
+You should always specify the 
+" keyword argument for backward compatibility.
+See performance issues relating to "
+_ below.
+Read the docstring for other options.
+" is a ""streaming unpacker"". It unpacks multiple objects from one
+stream (or from bytes provided through its "
+ method).
+"It is also possible to pack/unpack custom data types. Here is an example for
+"
+.
+'s 
+" callback receives a dict; the
+"
+" callback may instead be used to receive a list of
+key-value pairs."
+It is also possible to pack/unpack custom data types using the 
+ type.
+"As an alternative to iteration, "
+ objects provide 
+",
+"
+", "
+ and 
+" methods. The former two
+read an entire message from the stream, respectively de-serialising and returning
+the result, or ignoring it. The latter two methods return the number of elements
+in the upcoming container, so that each element in an array, or key-value pair
+in a map, can be unpacked or skipped individually."
+"Early versions of msgpack didn't distinguish string and binary types.
+The type for representing both string and binary types was named "
+.
+You can pack into and unpack from this old spec using 
+"
+and "
+ options.
+To use the 
+" type, pass "
+ object to packer.
+You can use it with 
+ and 
+. See below.
+"To unpacking data received from unreliable source, msgpack provides
+two security options."
+ (default: 
+") limits the internal buffer size.
+It is used to limit the preallocated list size too."
+ (default: 
+") limits the type of map keys to bytes and str.
+While msgpack spec doesn't limit the types of the map keys,
+there is a risk of the hashdos.
+If you need to support other types for map keys, use "
+.
+"CPython's GC starts when growing allocated object.
+This means unpacking may cause useless GC.
+You can use "
+ when unpacking large message.
+"List is the default sequence type of Python.
+But tuple is lighter than list.
+You can use "
+ while unpacking when performance is important.
+
+
+"
+"
+" is an efficient binary serialization format.
+It lets you exchange data among multiple languages like JSON.
+But it's faster and smaller.
+This package provides CPython bindings for reading and writing MessagePack data."
+Package name on PyPI was changed from 
+ to 
+ from 0.5.
+"When upgrading from msgpack-0.4 or earlier, do "
+" before
+"
+.
+You can use 
+ option to pack 
+"
+object into raw type in the old msgpack spec, instead of bin type in new msgpack spec."
+You can unpack old msgpack format using 
+" option.
+It unpacks str (raw) type in msgpack into Python bytes."
+See note below for detail.
+The extension module in msgpack (
+") does not support
+Python 2 and PyPy."
+But msgpack provides a pure Python implementation (
+")
+for PyPy and Python 2."
+"When you can't use a binary distribution, you need to install Visual Studio
+or Windows SDK on Windows.
+Without extension, using pure Python implementation on CPython runs slowly."
+"NOTE: In examples below, I use "
+ and 
+" for users
+using msgpack < 1.0. These options are default from msgpack 1.0 so you can omit them."
+Use 
+ for packing and 
+" for unpacking.
+msgpack provides "
+ and 
+" as an alias for compatibility with
+"
+ and 
+.
+ and 
+" packs to a file-like object.
+"
+ and 
+ unpacks from a file-like object.
+" unpacks msgpack's array to Python's list, but can also unpack to tuple:"
+You should always specify the 
+" keyword argument for backward compatibility.
+See performance issues relating to "
+_ below.
+Read the docstring for other options.
+" is a ""streaming unpacker"". It unpacks multiple objects from one
+stream (or from bytes provided through its "
+ method).
+"It is also possible to pack/unpack custom data types. Here is an example for
+"
+.
+'s 
+" callback receives a dict; the
+"
+" callback may instead be used to receive a list of
+key-value pairs."
+It is also possible to pack/unpack custom data types using the 
+ type.
+"As an alternative to iteration, "
+ objects provide 
+",
+"
+", "
+ and 
+" methods. The former two
+read an entire message from the stream, respectively de-serialising and returning
+the result, or ignoring it. The latter two methods return the number of elements
+in the upcoming container, so that each element in an array, or key-value pair
+in a map, can be unpacked or skipped individually."
+"Early versions of msgpack didn't distinguish string and binary types.
+The type for representing both string and binary types was named "
+.
+You can pack into and unpack from this old spec using 
+"
+and "
+ options.
+To use the 
+" type, pass "
+ object to packer.
+You can use it with 
+ and 
+. See below.
+"To unpacking data received from unreliable source, msgpack provides
+two security options."
+ (default: 
+") limits the internal buffer size.
+It is used to limit the preallocated list size too."
+ (default: 
+") limits the type of map keys to bytes and str.
+While msgpack spec doesn't limit the types of the map keys,
+there is a risk of the hashdos.
+If you need to support other types for map keys, use "
+.
+"CPython's GC starts when growing allocated object.
+This means unpacking may cause useless GC.
+You can use "
+ when unpacking large message.
+"List is the default sequence type of Python.
+But tuple is lighter than list.
+You can use "
+ while unpacking when performance is important.
+
+
+"
+"
+" is an efficient binary serialization format.
+It lets you exchange data among multiple languages like JSON.
+But it's faster and smaller.
+This package provides CPython bindings for reading and writing MessagePack data."
+Package name on PyPI was changed from 
+ to 
+ from 0.5.
+"When upgrading from msgpack-0.4 or earlier, do "
+" before
+"
+.
+You can use 
+ option to pack 
+"
+object into raw type in the old msgpack spec, instead of bin type in new msgpack spec."
+You can unpack old msgpack format using 
+" option.
+It unpacks str (raw) type in msgpack into Python bytes."
+See note below for detail.
+The extension module in msgpack (
+") does not support
+Python 2 and PyPy."
+But msgpack provides a pure Python implementation (
+")
+for PyPy and Python 2."
+"When you can't use a binary distribution, you need to install Visual Studio
+or Windows SDK on Windows.
+Without extension, using pure Python implementation on CPython runs slowly."
+"NOTE: In examples below, I use "
+ and 
+" for users
+using msgpack < 1.0. These options are default from msgpack 1.0 so you can omit them."
+Use 
+ for packing and 
+" for unpacking.
+msgpack provides "
+ and 
+" as an alias for compatibility with
+"
+ and 
+.
+ and 
+" packs to a file-like object.
+"
+ and 
+ unpacks from a file-like object.
+" unpacks msgpack's array to Python's list, but can also unpack to tuple:"
+You should always specify the 
+" keyword argument for backward compatibility.
+See performance issues relating to "
+_ below.
+Read the docstring for other options.
+" is a ""streaming unpacker"". It unpacks multiple objects from one
+stream (or from bytes provided through its "
+ method).
+"It is also possible to pack/unpack custom data types. Here is an example for
+"
+.
+'s 
+" callback receives a dict; the
+"
+" callback may instead be used to receive a list of
+key-value pairs."
+It is also possible to pack/unpack custom data types using the 
+ type.
+"As an alternative to iteration, "
+ objects provide 
+",
+"
+", "
+ and 
+" methods. The former two
+read an entire message from the stream, respectively de-serialising and returning
+the result, or ignoring it. The latter two methods return the number of elements
+in the upcoming container, so that each element in an array, or key-value pair
+in a map, can be unpacked or skipped individually."
+"Early versions of msgpack didn't distinguish string and binary types.
+The type for representing both string and binary types was named "
+.
+You can pack into and unpack from this old spec using 
+"
+and "
+ options.
+To use the 
+" type, pass "
+ object to packer.
+You can use it with 
+ and 
+. See below.
+"To unpacking data received from unreliable source, msgpack provides
+two security options."
+ (default: 
+") limits the internal buffer size.
+It is used to limit the preallocated list size too."
+ (default: 
+") limits the type of map keys to bytes and str.
+While msgpack spec doesn't limit the types of the map keys,
+there is a risk of the hashdos.
+If you need to support other types for map keys, use "
+.
+"CPython's GC starts when growing allocated object.
+This means unpacking may cause useless GC.
+You can use "
+ when unpacking large message.
+"List is the default sequence type of Python.
+But tuple is lighter than list.
+You can use "
+ while unpacking when performance is important.

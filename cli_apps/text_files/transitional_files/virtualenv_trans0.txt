@@ -1,0 +1,115 @@
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A tool for creating isolated 
+ python environments.
+"Everyone interacting in the virtualenv project's codebases, issue trackers, chat rooms, and mailing lists is expected to
+follow the "
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A tool for creating isolated 
+ python environments.
+"Everyone interacting in the virtualenv project's codebases, issue trackers, chat rooms, and mailing lists is expected to
+follow the "
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A tool for creating isolated 
+ python environments.
+"Everyone interacting in the virtualenv project's codebases, issue trackers, chat rooms, and mailing lists is expected to
+follow the "
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A tool for creating isolated 
+ python environments.
+"Everyone interacting in the virtualenv project's codebases, issue trackers, chat rooms, and mailing lists is expected to
+follow the "
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A tool for creating isolated 
+ python environments.
+"Everyone interacting in the virtualenv project's codebases, issue trackers, chat rooms, and mailing lists is expected to
+follow the "
+.

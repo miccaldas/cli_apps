@@ -1,0 +1,2 @@
+description
+A translation from C to Python of GNU sed's parser for sed scripts.

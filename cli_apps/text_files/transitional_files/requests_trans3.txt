@@ -1,0 +1,92 @@
+description
+ is a simple, yet elegant, HTTP library.
+Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your 
+ & 
+ data — but nowadays, just use the 
+ method!
+Requests is one of the most downloaded Python packages today, pulling in around 
+— according to GitHub, Requests is currently 
+ by 
+ repositories. You may certainly put your trust in this code.
+
+
+
+
+Requests is available on PyPI:
+Requests officially supports Python 2.7 & 3.6+.
+Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+When cloning the Requests repository, you may need to add the 
+ flag to avoid an error about a bad commit (see
+
+ for more background):
+You can also apply this setting to your global Git config:
+ 
+description
+ is a simple, yet elegant, HTTP library.
+Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your 
+ & 
+ data — but nowadays, just use the 
+ method!
+Requests is one of the most downloaded Python packages today, pulling in around 
+— according to GitHub, Requests is currently 
+ by 
+ repositories. You may certainly put your trust in this code.
+
+
+
+
+Requests is available on PyPI:
+Requests officially supports Python 2.7 & 3.6+.
+Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+When cloning the Requests repository, you may need to add the 
+ flag to avoid an error about a bad commit (see
+
+ for more background):
+You can also apply this setting to your global Git config:
+ 
+description
+ is a simple, yet elegant, HTTP library.
+Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your 
+ & 
+ data — but nowadays, just use the 
+ method!
+Requests is one of the most downloaded Python packages today, pulling in around 
+— according to GitHub, Requests is currently 
+ by 
+ repositories. You may certainly put your trust in this code.
+
+
+
+
+Requests is available on PyPI:
+Requests officially supports Python 2.7 & 3.6+.
+Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+When cloning the Requests repository, you may need to add the 
+ flag to avoid an error about a bad commit (see
+
+ for more background):
+You can also apply this setting to your global Git config:
+ 
+description
+ is a simple, yet elegant, HTTP library.
+Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your 
+ & 
+ data — but nowadays, just use the 
+ method!
+Requests is one of the most downloaded Python packages today, pulling in around 
+— according to GitHub, Requests is currently 
+ by 
+ repositories. You may certainly put your trust in this code.
+
+
+
+
+Requests is available on PyPI:
+Requests officially supports Python 2.7 & 3.6+.
+Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+When cloning the Requests repository, you may need to add the 
+ flag to avoid an error about a bad commit (see
+
+ for more background):
+You can also apply this setting to your global Git config:
+ 
