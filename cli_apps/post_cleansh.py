@@ -24,19 +24,18 @@ def type_watch(source, value):
 
 snoop.install(watch_extras=[type_watch])
 
+cwd = os.getcwd()
+dir = f"{cwd}/text_files/transitional_files/"
+
 
 @logger.catch
 @snoop
-def post_cleansh():
+def del_trans_files():
     """
-    We'll delete most of the transitional files but
-    we'll keep each last iteration, for further
-    operations. It will be a mix of python and shell
-    methods.
+    We'll delete all transitional files,
+    numbered 0 to 3.
     """
 
-    cwd = os.getcwd()
-    dir = f"{cwd}/text_files/transitional_files/"
     file0 = f"{dir}*_trans0.txt"
     files0 = glob.glob(file0)
     file1 = f"{dir}*_trans1.txt"
@@ -54,4 +53,21 @@ def post_cleansh():
 
 
 if __name__ == "__main__":
-    post_cleansh()
+    del_trans_files()
+
+
+@logger.catch
+@snoop
+def remove_linebreaks():
+    """
+    We'll remove line breaks
+    with python's replace
+    method.
+    """
+
+    lst = os.listdir(dir)
+    for file in lst:
+        with open(file, "r") as f:
+            data = f.readlines()
+    new_data = [i.replace("\n", "") for i in data]
+    print(new_data)
