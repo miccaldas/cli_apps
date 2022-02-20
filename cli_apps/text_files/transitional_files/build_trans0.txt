@@ -1,0 +1,100 @@
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"A simple, correct PEP517 package builder."
+See the 
+ for more information.
+ can be installed via 
+ or an equivalent via:
+"This will build the package in an isolated environment, generating a
+source-distribution and wheel in the directory "
+".
+See the "
+ for full information.
+"Everyone interacting in the build's codebase, issue trackers, chat rooms, and mailing lists is expected to follow
+the "
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"A simple, correct PEP517 package builder."
+See the 
+ for more information.
+ can be installed via 
+ or an equivalent via:
+"This will build the package in an isolated environment, generating a
+source-distribution and wheel in the directory "
+".
+See the "
+ for full information.
+"Everyone interacting in the build's codebase, issue trackers, chat rooms, and mailing lists is expected to follow
+the "
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"A simple, correct PEP517 package builder."
+See the 
+ for more information.
+ can be installed via 
+ or an equivalent via:
+"This will build the package in an isolated environment, generating a
+source-distribution and wheel in the directory "
+".
+See the "
+ for full information.
+"Everyone interacting in the build's codebase, issue trackers, chat rooms, and mailing lists is expected to follow
+the "
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"A simple, correct PEP517 package builder."
+See the 
+ for more information.
+ can be installed via 
+ or an equivalent via:
+"This will build the package in an isolated environment, generating a
+source-distribution and wheel in the directory "
+".
+See the "
+ for full information.
+"Everyone interacting in the build's codebase, issue trackers, chat rooms, and mailing lists is expected to follow
+the "
+.

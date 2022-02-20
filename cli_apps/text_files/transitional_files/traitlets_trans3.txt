@@ -1,0 +1,270 @@
+description
+
+
+
+
+Traitlets is a pure Python library enabling:
+Its implementation relies on the 
+
+pattern, and it is a lightweight pure-python alternative of the
+
+.
+Traitlets powers the configuration system of IPython and Jupyter
+and the declarative API of IPython interactive widgets.
+For a local installation, make sure you have
+
+ and run:
+For a 
+, clone this repository, change into the
+
+ root directory, and run pip:
+Any class with trait attributes must inherit from 
+.
+For the list of available trait types and their properties, see the
+
+
+section of the documentation.
+To calculate a default value dynamically, decorate a method of your class with
+
+. This method will be called on the instance, and
+should return the default value. In this example, the 
+
+method is decorated with 
+:
+When a trait changes, an application can follow this trait change with
+additional actions.
+To do something when a trait attribute is changed, decorate a method with
+
+.
+The method will be called with a single argument, a dictionary which contains
+an owner, new value, old value, name of the changed trait, and the event type.
+In this example, the 
+ method is decorated with 
+:
+and is passed the following dictionary when called:
+Each trait type (
+, 
+, 
+ etc.) may have its own validation or
+coercion logic. In addition, we can register custom cross-validators
+that may depend on the state of other attributes. For example:
+However, we 
+ that custom cross-validators don't modify the state
+of the HasTraits instance.
+Releases should be automatically build and pushed to Pypi when a tag is marked and pushed to GitHub.
+description
+
+
+
+
+Traitlets is a pure Python library enabling:
+Its implementation relies on the 
+
+pattern, and it is a lightweight pure-python alternative of the
+
+.
+Traitlets powers the configuration system of IPython and Jupyter
+and the declarative API of IPython interactive widgets.
+For a local installation, make sure you have
+
+ and run:
+For a 
+, clone this repository, change into the
+
+ root directory, and run pip:
+Any class with trait attributes must inherit from 
+.
+For the list of available trait types and their properties, see the
+
+
+section of the documentation.
+To calculate a default value dynamically, decorate a method of your class with
+
+. This method will be called on the instance, and
+should return the default value. In this example, the 
+
+method is decorated with 
+:
+When a trait changes, an application can follow this trait change with
+additional actions.
+To do something when a trait attribute is changed, decorate a method with
+
+.
+The method will be called with a single argument, a dictionary which contains
+an owner, new value, old value, name of the changed trait, and the event type.
+In this example, the 
+ method is decorated with 
+:
+and is passed the following dictionary when called:
+Each trait type (
+, 
+, 
+ etc.) may have its own validation or
+coercion logic. In addition, we can register custom cross-validators
+that may depend on the state of other attributes. For example:
+However, we 
+ that custom cross-validators don't modify the state
+of the HasTraits instance.
+Releases should be automatically build and pushed to Pypi when a tag is marked and pushed to GitHub.
+description
+
+
+
+
+Traitlets is a pure Python library enabling:
+Its implementation relies on the 
+
+pattern, and it is a lightweight pure-python alternative of the
+
+.
+Traitlets powers the configuration system of IPython and Jupyter
+and the declarative API of IPython interactive widgets.
+For a local installation, make sure you have
+
+ and run:
+For a 
+, clone this repository, change into the
+
+ root directory, and run pip:
+Any class with trait attributes must inherit from 
+.
+For the list of available trait types and their properties, see the
+
+
+section of the documentation.
+To calculate a default value dynamically, decorate a method of your class with
+
+. This method will be called on the instance, and
+should return the default value. In this example, the 
+
+method is decorated with 
+:
+When a trait changes, an application can follow this trait change with
+additional actions.
+To do something when a trait attribute is changed, decorate a method with
+
+.
+The method will be called with a single argument, a dictionary which contains
+an owner, new value, old value, name of the changed trait, and the event type.
+In this example, the 
+ method is decorated with 
+:
+and is passed the following dictionary when called:
+Each trait type (
+, 
+, 
+ etc.) may have its own validation or
+coercion logic. In addition, we can register custom cross-validators
+that may depend on the state of other attributes. For example:
+However, we 
+ that custom cross-validators don't modify the state
+of the HasTraits instance.
+Releases should be automatically build and pushed to Pypi when a tag is marked and pushed to GitHub.
+description
+
+
+
+
+Traitlets is a pure Python library enabling:
+Its implementation relies on the 
+
+pattern, and it is a lightweight pure-python alternative of the
+
+.
+Traitlets powers the configuration system of IPython and Jupyter
+and the declarative API of IPython interactive widgets.
+For a local installation, make sure you have
+
+ and run:
+For a 
+, clone this repository, change into the
+
+ root directory, and run pip:
+Any class with trait attributes must inherit from 
+.
+For the list of available trait types and their properties, see the
+
+
+section of the documentation.
+To calculate a default value dynamically, decorate a method of your class with
+
+. This method will be called on the instance, and
+should return the default value. In this example, the 
+
+method is decorated with 
+:
+When a trait changes, an application can follow this trait change with
+additional actions.
+To do something when a trait attribute is changed, decorate a method with
+
+.
+The method will be called with a single argument, a dictionary which contains
+an owner, new value, old value, name of the changed trait, and the event type.
+In this example, the 
+ method is decorated with 
+:
+and is passed the following dictionary when called:
+Each trait type (
+, 
+, 
+ etc.) may have its own validation or
+coercion logic. In addition, we can register custom cross-validators
+that may depend on the state of other attributes. For example:
+However, we 
+ that custom cross-validators don't modify the state
+of the HasTraits instance.
+Releases should be automatically build and pushed to Pypi when a tag is marked and pushed to GitHub.
+description
+
+
+
+
+Traitlets is a pure Python library enabling:
+Its implementation relies on the 
+
+pattern, and it is a lightweight pure-python alternative of the
+
+.
+Traitlets powers the configuration system of IPython and Jupyter
+and the declarative API of IPython interactive widgets.
+For a local installation, make sure you have
+
+ and run:
+For a 
+, clone this repository, change into the
+
+ root directory, and run pip:
+Any class with trait attributes must inherit from 
+.
+For the list of available trait types and their properties, see the
+
+
+section of the documentation.
+To calculate a default value dynamically, decorate a method of your class with
+
+. This method will be called on the instance, and
+should return the default value. In this example, the 
+
+method is decorated with 
+:
+When a trait changes, an application can follow this trait change with
+additional actions.
+To do something when a trait attribute is changed, decorate a method with
+
+.
+The method will be called with a single argument, a dictionary which contains
+an owner, new value, old value, name of the changed trait, and the event type.
+In this example, the 
+ method is decorated with 
+:
+and is passed the following dictionary when called:
+Each trait type (
+, 
+, 
+ etc.) may have its own validation or
+coercion logic. In addition, we can register custom cross-validators
+that may depend on the state of other attributes. For example:
+However, we 
+ that custom cross-validators don't modify the state
+of the HasTraits instance.
+Releases should be automatically build and pushed to Pypi when a tag is marked and pushed to GitHub.

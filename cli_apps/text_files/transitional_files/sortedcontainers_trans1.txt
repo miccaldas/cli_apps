@@ -1,0 +1,4 @@
+description
+ is an Apache2 licensed 
+",
+written in pure-Python, and fast as C-extensions."

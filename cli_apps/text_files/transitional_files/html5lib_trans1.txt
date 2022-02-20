@@ -1,0 +1,2 @@
+description
+"html5lib is a pure-python library for parsing HTML. It is designed to

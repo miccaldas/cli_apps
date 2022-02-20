@@ -1,0 +1,3 @@
+description
+"Pexpect is a pure Python module for spawning child applications; controlling
+them; and responding to expected patterns in their output. Pexpect works like

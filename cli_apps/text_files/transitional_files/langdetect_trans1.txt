@@ -1,0 +1,3 @@
+description
+Port of Nakatani Shuyo's 
+ library (version from 03/03/2014) to Python.

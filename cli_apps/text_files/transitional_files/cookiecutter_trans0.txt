@@ -1,0 +1,244 @@
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A command-line utility that creates projects from 
+" (project
+templates), e.g. creating a Python package project from a Python package project
+template."
+"We are proud to be an open source sponsor of
+"
+.
+Did someone say features?
+"Making great cookies takes a lot of cookiecutters and contributors. We're so
+pleased that there are many Cookiecutter project templates to choose from. We
+hope you find a cookiecutter that is just right for your needs."
+"The best place to start searching for specific and ready to use cookiecutter
+template is "
+".
+Just type "
+ and you will discover over 4000 related repositories.
+"We also recommend you to check related GitHub topics. For general search use
+"
+".
+For specific topics try to use "
+", like
+"
+ or 
+". This is new GitHub feature,
+so not all active repositories use it at the moment."
+"If you are template developer please add related
+"
+"
+with "
+" prefix to you repository. We believe it will make it more
+discoverable. You are almost not limited in topics amount, use it!"
+These Cookiecutters are maintained by the cookiecutter team:
+The core committer team can be found in 
+".
+We are always welcome and invite you to participate."
+Stuck? Try one of the following:
+Development on Cookiecutter is community-driven:
+"Encouragement is unbelievably motivating. If you want more work done on
+Cookiecutter, show support:"
+Got criticism or complaints?
+Waiting for a response to an issue/question?
+"This project is run by volunteers. Shortly we will be providing means for
+organizations and individuals to support the project."
+"Everyone interacting in the Cookiecutter project's codebases, issue trackers,
+chat rooms, and mailing lists is expected to follow the
+"
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A command-line utility that creates projects from 
+" (project
+templates), e.g. creating a Python package project from a Python package project
+template."
+"We are proud to be an open source sponsor of
+"
+.
+Did someone say features?
+"Making great cookies takes a lot of cookiecutters and contributors. We're so
+pleased that there are many Cookiecutter project templates to choose from. We
+hope you find a cookiecutter that is just right for your needs."
+"The best place to start searching for specific and ready to use cookiecutter
+template is "
+".
+Just type "
+ and you will discover over 4000 related repositories.
+"We also recommend you to check related GitHub topics. For general search use
+"
+".
+For specific topics try to use "
+", like
+"
+ or 
+". This is new GitHub feature,
+so not all active repositories use it at the moment."
+"If you are template developer please add related
+"
+"
+with "
+" prefix to you repository. We believe it will make it more
+discoverable. You are almost not limited in topics amount, use it!"
+These Cookiecutters are maintained by the cookiecutter team:
+The core committer team can be found in 
+".
+We are always welcome and invite you to participate."
+Stuck? Try one of the following:
+Development on Cookiecutter is community-driven:
+"Encouragement is unbelievably motivating. If you want more work done on
+Cookiecutter, show support:"
+Got criticism or complaints?
+Waiting for a response to an issue/question?
+"This project is run by volunteers. Shortly we will be providing means for
+organizations and individuals to support the project."
+"Everyone interacting in the Cookiecutter project's codebases, issue trackers,
+chat rooms, and mailing lists is expected to follow the
+"
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A command-line utility that creates projects from 
+" (project
+templates), e.g. creating a Python package project from a Python package project
+template."
+"We are proud to be an open source sponsor of
+"
+.
+Did someone say features?
+"Making great cookies takes a lot of cookiecutters and contributors. We're so
+pleased that there are many Cookiecutter project templates to choose from. We
+hope you find a cookiecutter that is just right for your needs."
+"The best place to start searching for specific and ready to use cookiecutter
+template is "
+".
+Just type "
+ and you will discover over 4000 related repositories.
+"We also recommend you to check related GitHub topics. For general search use
+"
+".
+For specific topics try to use "
+", like
+"
+ or 
+". This is new GitHub feature,
+so not all active repositories use it at the moment."
+"If you are template developer please add related
+"
+"
+with "
+" prefix to you repository. We believe it will make it more
+discoverable. You are almost not limited in topics amount, use it!"
+These Cookiecutters are maintained by the cookiecutter team:
+The core committer team can be found in 
+".
+We are always welcome and invite you to participate."
+Stuck? Try one of the following:
+Development on Cookiecutter is community-driven:
+"Encouragement is unbelievably motivating. If you want more work done on
+Cookiecutter, show support:"
+Got criticism or complaints?
+Waiting for a response to an issue/question?
+"This project is run by volunteers. Shortly we will be providing means for
+organizations and individuals to support the project."
+"Everyone interacting in the Cookiecutter project's codebases, issue trackers,
+chat rooms, and mailing lists is expected to follow the
+"
+.
+
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+A command-line utility that creates projects from 
+" (project
+templates), e.g. creating a Python package project from a Python package project
+template."
+"We are proud to be an open source sponsor of
+"
+.
+Did someone say features?
+"Making great cookies takes a lot of cookiecutters and contributors. We're so
+pleased that there are many Cookiecutter project templates to choose from. We
+hope you find a cookiecutter that is just right for your needs."
+"The best place to start searching for specific and ready to use cookiecutter
+template is "
+".
+Just type "
+ and you will discover over 4000 related repositories.
+"We also recommend you to check related GitHub topics. For general search use
+"
+".
+For specific topics try to use "
+", like
+"
+ or 
+". This is new GitHub feature,
+so not all active repositories use it at the moment."
+"If you are template developer please add related
+"
+"
+with "
+" prefix to you repository. We believe it will make it more
+discoverable. You are almost not limited in topics amount, use it!"
+These Cookiecutters are maintained by the cookiecutter team:
+The core committer team can be found in 
+".
+We are always welcome and invite you to participate."
+Stuck? Try one of the following:
+Development on Cookiecutter is community-driven:
+"Encouragement is unbelievably motivating. If you want more work done on
+Cookiecutter, show support:"
+Got criticism or complaints?
+Waiting for a response to an issue/question?
+"This project is run by volunteers. Shortly we will be providing means for
+organizations and individuals to support the project."
+"Everyone interacting in the Cookiecutter project's codebases, issue trackers,
+chat rooms, and mailing lists is expected to follow the
+"
+.

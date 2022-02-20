@@ -1,0 +1,60 @@
+description
+ is a package which provides cryptographic recipes and
+primitives to Python developers.  Our goal is for it to be your “cryptographic
+standard library”. It supports Python 3.6+ and PyPy3 7.2+.
+ includes both high level recipes and low level interfaces to
+common cryptographic algorithms such as symmetric ciphers, message digests, and
+key derivation functions. For example, to encrypt something with
+
+’s high level symmetric encryption recipe:
+You can find more information in the 
+.
+You can install 
+ with:
+For full details see 
+.
+description
+ is a package which provides cryptographic recipes and
+primitives to Python developers.  Our goal is for it to be your “cryptographic
+standard library”. It supports Python 3.6+ and PyPy3 7.2+.
+ includes both high level recipes and low level interfaces to
+common cryptographic algorithms such as symmetric ciphers, message digests, and
+key derivation functions. For example, to encrypt something with
+
+’s high level symmetric encryption recipe:
+You can find more information in the 
+.
+You can install 
+ with:
+For full details see 
+.
+description
+ is a package which provides cryptographic recipes and
+primitives to Python developers.  Our goal is for it to be your “cryptographic
+standard library”. It supports Python 3.6+ and PyPy3 7.2+.
+ includes both high level recipes and low level interfaces to
+common cryptographic algorithms such as symmetric ciphers, message digests, and
+key derivation functions. For example, to encrypt something with
+
+’s high level symmetric encryption recipe:
+You can find more information in the 
+.
+You can install 
+ with:
+For full details see 
+.
+description
+ is a package which provides cryptographic recipes and
+primitives to Python developers.  Our goal is for it to be your “cryptographic
+standard library”. It supports Python 3.6+ and PyPy3 7.2+.
+ includes both high level recipes and low level interfaces to
+common cryptographic algorithms such as symmetric ciphers, message digests, and
+key derivation functions. For example, to encrypt something with
+
+’s high level symmetric encryption recipe:
+You can find more information in the 
+.
+You can install 
+ with:
+For full details see 
+.

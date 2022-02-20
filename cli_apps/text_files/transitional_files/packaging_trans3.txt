@@ -1,0 +1,48 @@
+description
+Reusable core utilities for various Python Packaging
+
+.
+This library provides utilities that implement the interoperability
+specifications which have clearly one correct behaviour (eg: 
+)
+or benefit greatly from having a single shared implementation (eg: 
+).
+The 
+ project includes the following: version handling, specifiers,
+markers, requirements, tags, utilities.
+description
+Reusable core utilities for various Python Packaging
+
+.
+This library provides utilities that implement the interoperability
+specifications which have clearly one correct behaviour (eg: 
+)
+or benefit greatly from having a single shared implementation (eg: 
+).
+The 
+ project includes the following: version handling, specifiers,
+markers, requirements, tags, utilities.
+description
+Reusable core utilities for various Python Packaging
+
+.
+This library provides utilities that implement the interoperability
+specifications which have clearly one correct behaviour (eg: 
+)
+or benefit greatly from having a single shared implementation (eg: 
+).
+The 
+ project includes the following: version handling, specifiers,
+markers, requirements, tags, utilities.
+description
+Reusable core utilities for various Python Packaging
+
+.
+This library provides utilities that implement the interoperability
+specifications which have clearly one correct behaviour (eg: 
+)
+or benefit greatly from having a single shared implementation (eg: 
+).
+The 
+ project includes the following: version handling, specifiers,
+markers, requirements, tags, utilities.

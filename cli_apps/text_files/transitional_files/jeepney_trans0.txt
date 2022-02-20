@@ -1,0 +1,28 @@
+
+
+Jeepney is a pure Python implementation of D-Bus messaging. It has an 
+" core, and integration modules for different
+event loops."
+"D-Bus is an inter-process communication system, mainly used in Linux."
+To install Jeepney:
+
+
+Jeepney is a pure Python implementation of D-Bus messaging. It has an 
+" core, and integration modules for different
+event loops."
+"D-Bus is an inter-process communication system, mainly used in Linux."
+To install Jeepney:
+
+
+Jeepney is a pure Python implementation of D-Bus messaging. It has an 
+" core, and integration modules for different
+event loops."
+"D-Bus is an inter-process communication system, mainly used in Linux."
+To install Jeepney:
+
+
+Jeepney is a pure Python implementation of D-Bus messaging. It has an 
+" core, and integration modules for different
+event loops."
+"D-Bus is an inter-process communication system, mainly used in Linux."
+To install Jeepney:

@@ -1,0 +1,24 @@
+description
+ accurately separates the gTLD or ccTLD (generic or country code
+top-level domain) from the registered domain and subdomains of a URL.
+ is a namedtuple, so it's simple to access the parts you want.
+By default, this package supports the public ICANN TLDs and their exceptions.
+You can optionally support the Public Suffix List's private domains as well.
+description
+ accurately separates the gTLD or ccTLD (generic or country code
+top-level domain) from the registered domain and subdomains of a URL.
+ is a namedtuple, so it's simple to access the parts you want.
+By default, this package supports the public ICANN TLDs and their exceptions.
+You can optionally support the Public Suffix List's private domains as well.
+description
+ accurately separates the gTLD or ccTLD (generic or country code
+top-level domain) from the registered domain and subdomains of a URL.
+ is a namedtuple, so it's simple to access the parts you want.
+By default, this package supports the public ICANN TLDs and their exceptions.
+You can optionally support the Public Suffix List's private domains as well.
+description
+ accurately separates the gTLD or ccTLD (generic or country code
+top-level domain) from the registered domain and subdomains of a URL.
+ is a namedtuple, so it's simple to access the parts you want.
+By default, this package supports the public ICANN TLDs and their exceptions.
+You can optionally support the Public Suffix List's private domains as well.

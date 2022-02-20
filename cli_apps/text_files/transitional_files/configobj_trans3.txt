@@ -1,0 +1,20 @@
+description
+ is a simple but powerful config file reader and writer: an 
+. Its main feature is that it is very easy to use, with a
+straightforward programmer’s interface and a simple syntax for config files.
+It has lots of other features though :
+description
+ is a simple but powerful config file reader and writer: an 
+. Its main feature is that it is very easy to use, with a
+straightforward programmer’s interface and a simple syntax for config files.
+It has lots of other features though :
+description
+ is a simple but powerful config file reader and writer: an 
+. Its main feature is that it is very easy to use, with a
+straightforward programmer’s interface and a simple syntax for config files.
+It has lots of other features though :
+description
+ is a simple but powerful config file reader and writer: an 
+. Its main feature is that it is very easy to use, with a
+straightforward programmer’s interface and a simple syntax for config files.
+It has lots of other features though :

@@ -1,0 +1,162 @@
+
+
+:version: 3.6.4.0
+|build-status-lin| |build-status-win| |license| |wheel| |pyversion| |pyimp|
+.. |build-status-lin| image:: 
+"
+:alt: Build status on Linux
+:target: "
+.. |build-status-win| image:: 
+"
+:alt: Build status on Windows
+:target: "
+.. |license| image:: 
+"
+:alt: BSD License
+:target: "
+.. |wheel| image:: 
+"
+:alt: Billiard can be installed via wheel
+:target: "
+.. |pyversion| image:: 
+"
+:alt: Supported Python versions.
+:target: "
+.. |pyimp| image:: 
+"
+:alt: Support Python implementations.
+:target: "
+ is a fork of the Python 2.7 
+"_
+package. The multiprocessing package itself is a renamed and updated version of
+R Oudkerk's "
+"_ package.
+This standalone variant draws its fixes/improvements from python-trunk and provides
+additional bug fixes and improvements."
+.. _
+: 
+The documentation for 
+ is available on 
+_.
+"Please report bugs related to multiprocessing at the
+"
+"_. Issues related to billiard
+should be reported at "
+.
+The maintainers of 
+" and thousands of other packages are working
+with Tidelift to deliver commercial support and maintenance for the open source
+dependencies you use to build your applications. Save time, reduce risk, and
+improve code health, while paying the maintainers of the exact dependencies you
+use. "
+_.
+.. _
+: 
+
+
+:version: 3.6.4.0
+|build-status-lin| |build-status-win| |license| |wheel| |pyversion| |pyimp|
+.. |build-status-lin| image:: 
+"
+:alt: Build status on Linux
+:target: "
+.. |build-status-win| image:: 
+"
+:alt: Build status on Windows
+:target: "
+.. |license| image:: 
+"
+:alt: BSD License
+:target: "
+.. |wheel| image:: 
+"
+:alt: Billiard can be installed via wheel
+:target: "
+.. |pyversion| image:: 
+"
+:alt: Supported Python versions.
+:target: "
+.. |pyimp| image:: 
+"
+:alt: Support Python implementations.
+:target: "
+ is a fork of the Python 2.7 
+"_
+package. The multiprocessing package itself is a renamed and updated version of
+R Oudkerk's "
+"_ package.
+This standalone variant draws its fixes/improvements from python-trunk and provides
+additional bug fixes and improvements."
+.. _
+: 
+The documentation for 
+ is available on 
+_.
+"Please report bugs related to multiprocessing at the
+"
+"_. Issues related to billiard
+should be reported at "
+.
+The maintainers of 
+" and thousands of other packages are working
+with Tidelift to deliver commercial support and maintenance for the open source
+dependencies you use to build your applications. Save time, reduce risk, and
+improve code health, while paying the maintainers of the exact dependencies you
+use. "
+_.
+.. _
+: 
+
+
+:version: 3.6.4.0
+|build-status-lin| |build-status-win| |license| |wheel| |pyversion| |pyimp|
+.. |build-status-lin| image:: 
+"
+:alt: Build status on Linux
+:target: "
+.. |build-status-win| image:: 
+"
+:alt: Build status on Windows
+:target: "
+.. |license| image:: 
+"
+:alt: BSD License
+:target: "
+.. |wheel| image:: 
+"
+:alt: Billiard can be installed via wheel
+:target: "
+.. |pyversion| image:: 
+"
+:alt: Supported Python versions.
+:target: "
+.. |pyimp| image:: 
+"
+:alt: Support Python implementations.
+:target: "
+ is a fork of the Python 2.7 
+"_
+package. The multiprocessing package itself is a renamed and updated version of
+R Oudkerk's "
+"_ package.
+This standalone variant draws its fixes/improvements from python-trunk and provides
+additional bug fixes and improvements."
+.. _
+: 
+The documentation for 
+ is available on 
+_.
+"Please report bugs related to multiprocessing at the
+"
+"_. Issues related to billiard
+should be reported at "
+.
+The maintainers of 
+" and thousands of other packages are working
+with Tidelift to deliver commercial support and maintenance for the open source
+dependencies you use to build your applications. Save time, reduce risk, and
+improve code health, while paying the maintainers of the exact dependencies you
+use. "
+_.
+.. _
+: 
