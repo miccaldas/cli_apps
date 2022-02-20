@@ -3,13 +3,14 @@ import snoop
 import isort   # noqa: F401
 from itertools import zip_longest
 
-class MRQ_SCRAPY_SPIDER.PY(scrapy.Spider):
-    name = 'mrq_scrapy_spider.py'
 
-    start_urls = ['https://pypi.org/project/mrq/
-']
+class Mrq_scrapy_spider(scrapy.Spider):
+    name = 'mrq_scrapy_spider'
+    start_urls = ['https://pypi.org/project/mrq/']
 
-    srch_descriptions = response.xpath('//h1/text()').getall()
-
-    results = {src_descriptions}
-    yield results)
+    @snoop
+    def parse(self, response):
+        srch_descriptions = response.xpath('//*[@id="description"]/div/p/text()').getall()
+        for item in srch_descriptions:
+            results = {'description': item}
+            yield results

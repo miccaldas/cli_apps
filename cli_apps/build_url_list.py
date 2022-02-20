@@ -28,7 +28,7 @@ def build_url_list():
     where the names usually go in the url.
     """
 
-    with open("lists/names.txt", "r") as f:
+    with open("lists/existing.txt", "r") as f:
         names = f.readlines()
 
     urls = []

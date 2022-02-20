@@ -1,0 +1,12 @@
+description
+"This module contains a pure-Python HTTP/2 header encoding (HPACK) logic for use
+in Python programs that implement HTTP/2."
+description
+"This module contains a pure-Python HTTP/2 header encoding (HPACK) logic for use
+in Python programs that implement HTTP/2."
+description
+"This module contains a pure-Python HTTP/2 header encoding (HPACK) logic for use
+in Python programs that implement HTTP/2."
+description
+"This module contains a pure-Python HTTP/2 header encoding (HPACK) logic for use
+in Python programs that implement HTTP/2."

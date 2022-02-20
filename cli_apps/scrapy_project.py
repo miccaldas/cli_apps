@@ -40,35 +40,33 @@ class ScrapyProject:
         with open(f"{self.project_name}/{self.project_name}/settings.py", "a") as d:
             d.write('FEED_EXPORT_FIELDS = ["description"]')
             d.write("\n")
+            d.write('FEED_FORMAT = "csv"')
+            d.write("\n")
+            d.write('FEED_URI = "results.csv"')
 
     @logger.catch
     @snoop
     def spider(self):
         """Creation of the file that defines the spider."""
 
-        class_name = f"{self.spider_name}".upper()
+        class_name = f"{self.spider_name[:-3]}".capitalize()  # Capitalizes only the first character in string.
         with open(f"{self.project_name}/{self.project_name}/spiders/{self.spider_name}", "w") as f:
             f.write("import scrapy   # noqa: F401\n")
             f.write("import snoop\n")
             f.write("import isort   # noqa: F401\n")
             f.write("from itertools import zip_longest")
-            f.write("\n\n")
+            f.write("\n\n\n")
             f.write(f"class {class_name}(scrapy.Spider):\n")
-            f.write(f"    name = '{self.spider_name}'\n")
+            f.write(f"    name = '{self.spider_name[:-3]}'\n")
+            f.write(f"    start_urls = ['{self.domain_name}']\n")
             f.write("\n")
-            f.write(f"    start_urls = ['{self.domain_name}']")
-            f.write("\n")
-            f.write("\n")
-            f.write("    srch_descriptions = response.xpath('//h1/text()').getall()")
-            f.write("\n")
-            f.write("\n")
-            f.write("    results = {src_descriptions}")
-            f.write("\n")
-            f.write("    yield results)")
+            f.write("    @snoop\n")
+            f.write("    def parse(self, response):\n")
+            f.write("""        srch_descriptions = response.xpath('//*[@id="description"]/div/p/text()').getall()\n""")
+            f.write("        for item in srch_descriptions:\n")
+            f.write("            results = {'description': item}\n")
+            f.write("            yield results")
 
 
 if __name__ == "__main__":
     (ScrapyProject)
-
-
-scr = ScrapyProject("zope_deprecated_scrapy", "zope_deprecated_spider.py", "")

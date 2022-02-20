@@ -3,13 +3,14 @@ import snoop
 import isort   # noqa: F401
 from itertools import zip_longest
 
-class PYTHON_DATEUTIL_SCRAPY_SPIDER.PY(scrapy.Spider):
-    name = 'python_dateutil_scrapy_spider.py'
 
-    start_urls = ['https://pypi.org/project/python-dateutil/
-']
+class Python_dateutil_scrapy_spider(scrapy.Spider):
+    name = 'python_dateutil_scrapy_spider'
+    start_urls = ['https://pypi.org/project/python.dateutil/']
 
-    srch_descriptions = response.xpath('//h1/text()').getall()
-
-    results = {src_descriptions}
-    yield results)
+    @snoop
+    def parse(self, response):
+        srch_descriptions = response.xpath('//*[@id="description"]/div/p/text()').getall()
+        for item in srch_descriptions:
+            results = {'description': item}
+            yield results

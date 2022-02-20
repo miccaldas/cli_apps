@@ -1,0 +1,105 @@
+description
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"This modest package contains various common humanization utilities, like turning
+a number into a fuzzy human-readable duration (""3 minutes ago"") or into a
+human-readable size or throughput. It is localized to:"
+"If seconds are too large, set "
+ to milliseconds or microseconds:
+How to change locale at runtime:
+You can pass additional parameter 
+ to 
+" to specify a path to search
+locales in."
+How to add new phrases to existing locale files:
+How to add a new locale:
+Where 
+" is a locale abbreviation, eg. "
+", "
+ or just 
+", "
+"
+etc."
+List the language at the top of this README.
+description
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"This modest package contains various common humanization utilities, like turning
+a number into a fuzzy human-readable duration (""3 minutes ago"") or into a
+human-readable size or throughput. It is localized to:"
+"If seconds are too large, set "
+ to milliseconds or microseconds:
+How to change locale at runtime:
+You can pass additional parameter 
+ to 
+" to specify a path to search
+locales in."
+How to add new phrases to existing locale files:
+How to add a new locale:
+Where 
+" is a locale abbreviation, eg. "
+", "
+ or just 
+", "
+"
+etc."
+List the language at the top of this README.
+description
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"This modest package contains various common humanization utilities, like turning
+a number into a fuzzy human-readable duration (""3 minutes ago"") or into a
+human-readable size or throughput. It is localized to:"
+"If seconds are too large, set "
+ to milliseconds or microseconds:
+How to change locale at runtime:
+You can pass additional parameter 
+ to 
+" to specify a path to search
+locales in."
+How to add new phrases to existing locale files:
+How to add a new locale:
+Where 
+" is a locale abbreviation, eg. "
+", "
+ or just 
+", "
+"
+etc."
+List the language at the top of this README.

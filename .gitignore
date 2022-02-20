@@ -156,3 +156,6 @@ cython_debug/
 # Logs
 logs/
 *.log
+
+# This folder is enormous and only contains transitory folders.
+spider_folders/

@@ -34,15 +34,17 @@ def main_scrapy():
     os.chdir(f"{cwd}/spider_folders/")
 
     names = []
-    with open("../lists/names.txt", "r") as f:
+    with open("../lists/existing.txt", "r") as f:
         nam = f.readlines()
         for na in nam:
             nam = na.strip()
-            name = nam.replace("-", "_")
-            names.append(name)
+            n = nam.replace("-", "_")
+            names.append(n)
 
     with open("../lists/urls.txt", "r") as f:
-        urls = f.readlines()
+        urlsss = f.readlines()
+        urlss = [i.strip() for i in urlsss]
+        urls = [i.replace("-", ".") for i in urlss]
 
     name_urls = list(zip(names, urls))
 

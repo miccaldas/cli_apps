@@ -87,3 +87,5 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 FEED_EXPORT_FIELDS = ["description"]
+FEED_FORMAT = "csv"
+FEED_URI = "results.csv"
