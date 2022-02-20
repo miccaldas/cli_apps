@@ -16,7 +16,10 @@ trans=/home/mic/python/cli_apps/cli_apps/text_files/transitional_files/*
 for file in $texts; do
     read -r firstline < $file
     trunc_file=${file:46:-18}
-    echo $trunc_file
+    ftrans0="${trunc_file}trans0.txt"
+    ftrans1="${trunc_file}trans1.txt"
+    echo $ftrans0
+    echo $ftrans1
     : '$file0=$trans/"${file}_trans0.txt"
     $file1="${file}_trans1.txt"
     $file2="${file}_trans2.txt"    
