@@ -22,15 +22,15 @@ for file in $texts; do
     $file2="${file}_trans2.txt"    
     $file3="${file}_trans3.txt"
     $file4="${file}_trans4.txt"
-    # 1 - Remove the 'description' lines.
-    sed -re 's/description//p' "$texts"/"$file" > "$file0"
+    # 1 - Remove the "description" lines.
+    sed -re "s/description//p" "$texts"/"$file" > "$file0"
     # 2 - Remove blank lines.
     sed "/^$/d" $trans/$file_trans0.txt > $file1
     # 3 - Selects only the first occurrence of a complete phrase up to a '.'.
-    sed -re '/^"$firstline"*/,/\./{p}; /\./{q}' $trans/$file_trans1.txt > $file2
+    sed -re "/^"$firstline"*/,/\./{p}; /\./{q}" $trans/$file_trans1.txt > $file2
     # 4 - Removes double quotes.
     sed -re "s/"//g1" $trans/$file_trans2.txt > $file3
     # 5 - Removes line breaks.
-    sed -z 's/\n//g' $trans/$file_trans3.txt > $file4
+    sed -z "s/\n//g" $trans/$file_trans3.txt > $file4
     '
 done
