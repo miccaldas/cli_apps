@@ -1,3 +1,0 @@
-
-
- is a library which aims to bring enjoyable logging in Python.

@@ -39,7 +39,18 @@ def post_cleansh():
     dir = f"{cwd}/text_files/transitional_files/"
     file0 = f"{dir}*_trans0.txt"
     files0 = glob.glob(file0)
-    print(files0)
+    file1 = f"{dir}*_trans1.txt"
+    files1 = glob.glob(file1)
+    file2 = f"{dir}*_trans2.txt"
+    files2 = glob.glob(file2)
+    file3 = f"{dir}*_trans3.txt"
+    files3 = glob.glob(file3)
+
+    files = [files0, files1, files2, files3]
+    for lst in files:
+        for file in lst:
+            if os.path.exists(file):
+                os.remove(file)
 
 
 if __name__ == "__main__":

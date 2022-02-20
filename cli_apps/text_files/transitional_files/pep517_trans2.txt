@@ -1,4 +1,0 @@
-
-
-" specifies a standard
-API for systems which build Python packages."

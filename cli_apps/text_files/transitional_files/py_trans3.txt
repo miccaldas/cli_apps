@@ -1,4 +1,0 @@
-
-
-: this library is in 
- and should not be used in new code.

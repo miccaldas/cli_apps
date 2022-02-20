@@ -1,3 +1,0 @@
-
-
-"Eventlet is a concurrent networking library for Python that allows you to change how you run your code, not how you write it."

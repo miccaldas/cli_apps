@@ -1,4 +1,0 @@
-
-
-This library contains the HTTP/2 framing code used in the 
- project. It

@@ -1,4 +1,0 @@
-
-
-An extensible package which can be used to:
-It is tested on Python 2.7, 3.5, 3.6, 3.7, and 3.8, and PyPy and PyPy3.
