@@ -24,17 +24,13 @@ for file in ${texts}; do
     ftrans4="${trans}${trunc_file}trans4.txt"
     # 1 - Remove the "description" lines.
     sed -re "s/description//p" "$file" > "$ftrans0"
-    sleep 2
     # 2 - Remove blank lines.
-    sed "/^$/d" "$file" > "$ftrans1"
-    sleep 2
+    sed "/^$/d" "$ftrans0" > "$ftrans1"
     # 3 - Selects only the first occurrence of a complete phrase up to a '.'.
-    sed -re '/^"$firstline"*/,/\./{p}; /\./{q}' "$file" > "$ftrans1"
-    sleep 2
+    sed -re '/^"$firstline"*/,/\./{p}; /\./{q}' "$trans1" > "$ftrans2"
     # 4 - Removes double quotes.
-    sed -re 's/"//g1' "$file" > "$ftrans3"
-    sleep 2
+    sed -re 's/"//g1' "$ftrans2" > "$ftrans3"
     # 5 - Removes line breaks.
-    sed -z "s/\n//g" "$file" > "$ftrans4"
+    sed -z "s/\n//g" "$ftrans3" > "$ftrans4"
     sleep 2
 done
