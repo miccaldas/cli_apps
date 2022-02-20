@@ -15,8 +15,7 @@ trans=/home/mic/python/cli_apps/cli_apps/text_files/transitional_files/*
 
 for file in $texts; do
     read -r firstline < $file
-    $file0="${file}_trans0.txt"
-    touch "$file0"
+    touch $file0="${file}_trans0.txt"
     $file1="${file}_trans1.txt"
     $file2="${file}_trans2.txt"    
     $file3="${file}_trans3.txt"
