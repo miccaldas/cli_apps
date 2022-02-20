@@ -10,12 +10,19 @@
 #                scripts I'll need to clean the original csv files.
 ######################################################################
 
+texts=/home/mic/python/cli_apps/cli_apps/text_files/*
+trans=/home/mic/python/cli_apps/cli_apps/text_files/transitional_files/*
 
-# 1 - Remove the 'description' lines.
-sed -re 's/description//p' asttokens_scrapy_results.txt > ./transitional_files/asttokens_trans0.txt
-
-# 2 - Remove blank lines.
-sed "/^$/d" ./transitional_files/asttokens_trans0.txt > ./transitional_files/asttokens_trans1.txt
-
-# 3 - Selects only the first occurrence of a complete phrase up to a '.'.
-sed -re '/^The aim of the*/,/\./{p}; /\./{q}' ./transitional_files/asttokens_trans1.txt > ./transitional_files/asttokens_trans2.txt
+for file in $texts; do
+    read -r firstline < $file
+    # 1 - Remove the 'description' lines.
+    sed -re 's/description//p' $texts/$file > $trans/$file_trans0.txt
+    # 2 - Remove blank lines.
+    sed "/^$/d" $trans/$file_trans0.txt > $trans/$file_trans1.txt
+    # 3 - Selects only the first occurrence of a complete phrase up to a '.'.
+    sed -re '/^"$firstline"*/,/\./{p}; /\./{q}' $trans/$file_trans1.txt > $trans/$file_trans2.txt
+    # 4 - Removes double quotes.
+    sed -re 's/"//g1' $trans/$file_trans2.txt > $trans/$file_trans3.txt
+    # 5 - Removes line breaks.
+    sed -z 's/\n//g' $trans/$file_trans3.txt > $trans/$file_trans4.txt
+done
