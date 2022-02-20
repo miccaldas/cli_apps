@@ -10,12 +10,12 @@
 #                scripts I'll need to clean the original csv files.
 ######################################################################
 
-texts=/home/mic/python/cli_apps/cli_apps/text_files/
+texts=/home/mic/python/cli_apps/cli_apps/text_files/*
 trans=/home/mic/python/cli_apps/cli_apps/text_files/transitional_files/
 
-for file in $texts; do
+for file in ${texts}; do
     read -r firstline < $file
-    trunc_file=${file:45:-18}
+    trunc_file=${file:46:-18}
     ftrans0="${trans}${trunc_file}trans0.txt"
     ftrans1="${trans}${trunc_file}trans1.txt"
     ftrans2="${trans}${trunc_file}trans2.txt"
