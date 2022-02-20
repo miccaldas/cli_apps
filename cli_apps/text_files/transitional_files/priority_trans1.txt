@@ -1,4 +1,0 @@
-description
-"Priority is a pure-Python implementation of the priority logic for HTTP/2, set
-out in "
-". This logic allows for clients

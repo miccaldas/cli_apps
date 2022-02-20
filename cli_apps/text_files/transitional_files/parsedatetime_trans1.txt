@@ -1,2 +1,0 @@
-description
-Parse human-readable date/time strings.

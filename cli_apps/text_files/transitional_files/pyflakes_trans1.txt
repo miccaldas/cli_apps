@@ -1,2 +1,0 @@
-description
-A simple program which checks Python source files for errors.

@@ -1,3 +1,0 @@
-description
-pip is the 
- for Python. You can use pip to install packages from the 

@@ -1,3 +1,0 @@
-description
-Pycairo is a Python module providing bindings for the 
-. It depends on 

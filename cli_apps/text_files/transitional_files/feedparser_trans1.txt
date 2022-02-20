@@ -1,2 +1,0 @@
-description
-feedparser - Parse Atom and RSS feeds in Python.

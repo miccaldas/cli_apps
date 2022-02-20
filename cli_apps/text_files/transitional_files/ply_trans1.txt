@@ -1,2 +1,0 @@
-description
-"PLY is yet another implementation of lex and yacc for Python. Some notable

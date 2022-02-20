@@ -1,5 +1,0 @@
-description
-See the 
-" in the Python Packaging
-User’s Guide for instructions on installing, upgrading, and uninstalling
-Setuptools."

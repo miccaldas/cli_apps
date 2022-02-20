@@ -1,4 +1,0 @@
-description
-"
-"
-" is an efficient binary serialization format.

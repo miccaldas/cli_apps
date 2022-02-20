@@ -1,6 +1,0 @@
-description
-"
-"
-"
-"
-"sqlparse is a non-validating SQL parser for Python.

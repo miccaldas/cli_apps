@@ -1,3 +1,0 @@
-description
-"Queuelib is a Python library that implements object collections which are stored
-in memory or persisted to disk, provide a simple API, and run fast."

@@ -1,2 +1,0 @@
-description
-Simple yet flexible natural sorting in Python.

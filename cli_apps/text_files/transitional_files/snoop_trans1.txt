@@ -1,3 +1,0 @@
-description
- 
-snoop is a powerful set of Python debugging tools. It's primarily meant to be a 

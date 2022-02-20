@@ -1,6 +1,0 @@
-description
-" is a general purpose, lightweight,
-"
-"-based web front-end to monitor your
-"
-" queues, jobs, and workers in realtime."

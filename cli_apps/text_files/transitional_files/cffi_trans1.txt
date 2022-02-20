@@ -1,2 +1,0 @@
-description
-"Foreign Function Interface for Python calling C code.

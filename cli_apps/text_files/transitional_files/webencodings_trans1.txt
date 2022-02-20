@@ -1,3 +1,0 @@
-description
-This is a Python implementation of the 
-.
