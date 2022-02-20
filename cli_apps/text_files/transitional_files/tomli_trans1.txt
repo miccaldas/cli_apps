@@ -1,4 +1,5 @@
-description
+
+
 "
 "
 "
@@ -6,3 +7,190 @@ description
   
 Tomli is a Python library for parsing 
 ".
+Tomli is fully compatible with "
+.
+The file must be opened in binary mode (with the 
+" flag).
+Binary mode will enforce decoding the file as UTF-8 with universal newlines disabled,
+both of which are required to correctly parse TOML."
+"Note that error messages are considered informational only.
+They should not be assumed to stay constant across Tomli versions."
+Note that 
+" can be replaced with another callable that converts a TOML float from string to a Python type.
+The "
+" is, however, a practical choice for use cases where float inaccuracies can not be tolerated."
+Illegal types are 
+ and 
+", and their subtypes.
+A "
+ will be raised if 
+ produces illegal types.
+No.
+The 
+ function returns a plain 
+" that is populated with builtin types and types from the standard library only.
+Preserving comments requires a custom type to be returned so will not be supported,
+at least not by the "
+ and 
+ functions.
+Look into 
+ if preservation of style is what you need.
+" is the write-only counterpart of Tomli, providing "
+ and 
+ functions.
+"The core library does not include write capability, as most TOML use cases are read-only, and Tomli intends to be minimal."
+The 
+" folder in this repository contains a performance benchmark for comparing the various Python TOML parsers.
+The benchmark can be run with "
+".
+Running the benchmark on my personal computer output the following:"
+"The parsers are ordered from fastest to slowest, using the fastest parser as baseline.
+Tomli performed the best out of all pure Python TOML parsers,
+losing only to pytomlpp (wraps C++) and rtoml (wraps Rust)."
+
+
+"
+"
+"
+"
+  
+Tomli is a Python library for parsing 
+".
+Tomli is fully compatible with "
+.
+The file must be opened in binary mode (with the 
+" flag).
+Binary mode will enforce decoding the file as UTF-8 with universal newlines disabled,
+both of which are required to correctly parse TOML."
+"Note that error messages are considered informational only.
+They should not be assumed to stay constant across Tomli versions."
+Note that 
+" can be replaced with another callable that converts a TOML float from string to a Python type.
+The "
+" is, however, a practical choice for use cases where float inaccuracies can not be tolerated."
+Illegal types are 
+ and 
+", and their subtypes.
+A "
+ will be raised if 
+ produces illegal types.
+No.
+The 
+ function returns a plain 
+" that is populated with builtin types and types from the standard library only.
+Preserving comments requires a custom type to be returned so will not be supported,
+at least not by the "
+ and 
+ functions.
+Look into 
+ if preservation of style is what you need.
+" is the write-only counterpart of Tomli, providing "
+ and 
+ functions.
+"The core library does not include write capability, as most TOML use cases are read-only, and Tomli intends to be minimal."
+The 
+" folder in this repository contains a performance benchmark for comparing the various Python TOML parsers.
+The benchmark can be run with "
+".
+Running the benchmark on my personal computer output the following:"
+"The parsers are ordered from fastest to slowest, using the fastest parser as baseline.
+Tomli performed the best out of all pure Python TOML parsers,
+losing only to pytomlpp (wraps C++) and rtoml (wraps Rust)."
+
+
+"
+"
+"
+"
+  
+Tomli is a Python library for parsing 
+".
+Tomli is fully compatible with "
+.
+The file must be opened in binary mode (with the 
+" flag).
+Binary mode will enforce decoding the file as UTF-8 with universal newlines disabled,
+both of which are required to correctly parse TOML."
+"Note that error messages are considered informational only.
+They should not be assumed to stay constant across Tomli versions."
+Note that 
+" can be replaced with another callable that converts a TOML float from string to a Python type.
+The "
+" is, however, a practical choice for use cases where float inaccuracies can not be tolerated."
+Illegal types are 
+ and 
+", and their subtypes.
+A "
+ will be raised if 
+ produces illegal types.
+No.
+The 
+ function returns a plain 
+" that is populated with builtin types and types from the standard library only.
+Preserving comments requires a custom type to be returned so will not be supported,
+at least not by the "
+ and 
+ functions.
+Look into 
+ if preservation of style is what you need.
+" is the write-only counterpart of Tomli, providing "
+ and 
+ functions.
+"The core library does not include write capability, as most TOML use cases are read-only, and Tomli intends to be minimal."
+The 
+" folder in this repository contains a performance benchmark for comparing the various Python TOML parsers.
+The benchmark can be run with "
+".
+Running the benchmark on my personal computer output the following:"
+"The parsers are ordered from fastest to slowest, using the fastest parser as baseline.
+Tomli performed the best out of all pure Python TOML parsers,
+losing only to pytomlpp (wraps C++) and rtoml (wraps Rust)."
+
+
+"
+"
+"
+"
+  
+Tomli is a Python library for parsing 
+".
+Tomli is fully compatible with "
+.
+The file must be opened in binary mode (with the 
+" flag).
+Binary mode will enforce decoding the file as UTF-8 with universal newlines disabled,
+both of which are required to correctly parse TOML."
+"Note that error messages are considered informational only.
+They should not be assumed to stay constant across Tomli versions."
+Note that 
+" can be replaced with another callable that converts a TOML float from string to a Python type.
+The "
+" is, however, a practical choice for use cases where float inaccuracies can not be tolerated."
+Illegal types are 
+ and 
+", and their subtypes.
+A "
+ will be raised if 
+ produces illegal types.
+No.
+The 
+ function returns a plain 
+" that is populated with builtin types and types from the standard library only.
+Preserving comments requires a custom type to be returned so will not be supported,
+at least not by the "
+ and 
+ functions.
+Look into 
+ if preservation of style is what you need.
+" is the write-only counterpart of Tomli, providing "
+ and 
+ functions.
+"The core library does not include write capability, as most TOML use cases are read-only, and Tomli intends to be minimal."
+The 
+" folder in this repository contains a performance benchmark for comparing the various Python TOML parsers.
+The benchmark can be run with "
+".
+Running the benchmark on my personal computer output the following:"
+"The parsers are ordered from fastest to slowest, using the fastest parser as baseline.
+Tomli performed the best out of all pure Python TOML parsers,
+losing only to pytomlpp (wraps C++) and rtoml (wraps Rust)."

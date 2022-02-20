@@ -1,3 +1,48 @@
-description
+
+
 " specifies a standard
 API for systems which build Python packages."
+" extends it with a build
+mode that leads to editable installs."
+"This package contains wrappers around the hooks specified by PEP 517 and
+PEP 660. It provides:"
+Run the tests with 
+ or 
+.
+Usage—you are responsible for ensuring build requirements are available:
+
+
+" specifies a standard
+API for systems which build Python packages."
+" extends it with a build
+mode that leads to editable installs."
+"This package contains wrappers around the hooks specified by PEP 517 and
+PEP 660. It provides:"
+Run the tests with 
+ or 
+.
+Usage—you are responsible for ensuring build requirements are available:
+
+
+" specifies a standard
+API for systems which build Python packages."
+" extends it with a build
+mode that leads to editable installs."
+"This package contains wrappers around the hooks specified by PEP 517 and
+PEP 660. It provides:"
+Run the tests with 
+ or 
+.
+Usage—you are responsible for ensuring build requirements are available:
+
+
+" specifies a standard
+API for systems which build Python packages."
+" extends it with a build
+mode that leads to editable installs."
+"This package contains wrappers around the hooks specified by PEP 517 and
+PEP 660. It provides:"
+Run the tests with 
+ or 
+.
+Usage—you are responsible for ensuring build requirements are available:

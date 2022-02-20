@@ -1,1 +1,1 @@
-descriptionPika is a RabbitMQ (AMQP 0-9-1) client library for Python.      descriptionPika is a RabbitMQ (AMQP 0-9-1) client library for Python.      descriptionPika is a RabbitMQ (AMQP 0-9-1) client library for Python.      descriptionPika is a RabbitMQ (AMQP 0-9-1) client library for Python.      
+Pika is a RabbitMQ (AMQP 0-9-1) client library for Python.

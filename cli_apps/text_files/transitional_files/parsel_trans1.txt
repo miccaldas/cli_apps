@@ -1,4 +1,5 @@
-description
+
+
 Parsel is a BSD-licensed 
  library to extract and remove data from 
 "
@@ -8,3 +9,37 @@ and "
 " selectors, optionally combined with
 "
 .
+Find the Parsel online documentation at 
+.
+Example (
+):
+
+
+Parsel is a BSD-licensed 
+ library to extract and remove data from 
+"
+and "
+ using 
+ and 
+" selectors, optionally combined with
+"
+.
+Find the Parsel online documentation at 
+.
+Example (
+):
+
+
+Parsel is a BSD-licensed 
+ library to extract and remove data from 
+"
+and "
+ using 
+ and 
+" selectors, optionally combined with
+"
+.
+Find the Parsel online documentation at 
+.
+Example (
+):

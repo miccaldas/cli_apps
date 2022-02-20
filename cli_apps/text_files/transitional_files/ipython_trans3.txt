@@ -1,24 +1,4 @@
-description
+
+
 IPython provides a rich toolkit to help you make the most out of using Python
 interactively.  Its main components are:
-The enhanced interactive Python shells have the following main features:
-The latest development version is always available from IPython’s 
-.
-description
-IPython provides a rich toolkit to help you make the most out of using Python
-interactively.  Its main components are:
-The enhanced interactive Python shells have the following main features:
-The latest development version is always available from IPython’s 
-.
-description
-IPython provides a rich toolkit to help you make the most out of using Python
-interactively.  Its main components are:
-The enhanced interactive Python shells have the following main features:
-The latest development version is always available from IPython’s 
-.
-description
-IPython provides a rich toolkit to help you make the most out of using Python
-interactively.  Its main components are:
-The enhanced interactive Python shells have the following main features:
-The latest development version is always available from IPython’s 
-.

@@ -32,5 +32,4 @@ for file in ${texts}; do
     sed -re 's/"//g1' "$ftrans2" > "$ftrans3"
     # 5 - Removes line breaks.
     sed -z "s/\n//g" "$ftrans3" > "$ftrans4"
-    sleep 2
 done

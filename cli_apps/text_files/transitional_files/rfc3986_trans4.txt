@@ -1,1 +1,1 @@
-descriptionA Python implementation of " including validation and authorityparsing."descriptionA Python implementation of " including validation and authorityparsing."descriptionA Python implementation of " including validation and authorityparsing."descriptionA Python implementation of " including validation and authorityparsing."
+A Python implementation of  including validation and authorityparsing.

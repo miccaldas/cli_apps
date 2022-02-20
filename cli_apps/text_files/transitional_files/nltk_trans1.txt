@@ -1,3 +1,16 @@
-description
+
+
+"The Natural Language Toolkit (NLTK) is a Python package for
+natural language processing.  NLTK requires Python 3.7, 3.8, 3.9 or 3.10."
+
+
+"The Natural Language Toolkit (NLTK) is a Python package for
+natural language processing.  NLTK requires Python 3.7, 3.8, 3.9 or 3.10."
+
+
+"The Natural Language Toolkit (NLTK) is a Python package for
+natural language processing.  NLTK requires Python 3.7, 3.8, 3.9 or 3.10."
+
+
 "The Natural Language Toolkit (NLTK) is a Python package for
 natural language processing.  NLTK requires Python 3.7, 3.8, 3.9 or 3.10."

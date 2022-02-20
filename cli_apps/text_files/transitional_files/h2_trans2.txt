@@ -1,0 +1,4 @@
+
+
+"This repository contains a pure-Python implementation of a HTTP/2 protocol
+stack. It’s written from the ground up to be embeddable in whatever program you

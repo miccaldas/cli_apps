@@ -1,2 +1,240 @@
-description
+
+
 A lightweight YAML Parser for Python. 🐓
+" does not allow deserialization of arbitrary Python objects. Supported
+types are "
+", "
+", "
+", "
+", "
+ as well as 
+" and
+"
+ values.
+"⚠️ Please note that poyo supports only a chosen subset of the YAML format
+that is required to parse "
+". poyo does not have support for serializing into YAML
+and is not compatible with JSON."
+poyo is available on 
+" for Python versions 2.7 and newer and can
+be installed with "
+:
+This package does not have any additional requirements. 📦
+poyo comes with a 
+" function, to load utf-8 encoded string
+data into a Python dict."
+poyo follows the recommendations for 
+", which
+means it does not configure logging itself. Its root logger is named "
+"
+and the names of all its children loggers track the package/module hierarchy.
+poyo logs to a "
+ and solely on 
+ level.
+"If your application configures logging and allows debug messages to be shown,
+you will see logging when using poyo. The log messages indicate which parser
+method is used for a given string as the parser deseralizes the config. You
+can remove all logging from poyo in your application by setting the log level
+of the "
+ logger to a value higher than 
+.
+"We created this project to work around installation issues with a
+"
+" version that depended on existing YAML parsers
+for Python. For more information please check out this "
+.
+Would you like to contribute to 
+? You're awesome! 😃
+Please check out the 
+" label for tasks,
+that are good candidates for your first contribution to poyo. Your
+contributions are greatly appreciated! Every little bit helps and credit will
+always be given."
+"Everyone interacting in the poyo project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the "
+.
+Join the poyo 
+! 🌍🌏🌎
+Distributed under the terms of the 
+" license, poyo is free and open source
+software."
+
+
+A lightweight YAML Parser for Python. 🐓
+" does not allow deserialization of arbitrary Python objects. Supported
+types are "
+", "
+", "
+", "
+", "
+ as well as 
+" and
+"
+ values.
+"⚠️ Please note that poyo supports only a chosen subset of the YAML format
+that is required to parse "
+". poyo does not have support for serializing into YAML
+and is not compatible with JSON."
+poyo is available on 
+" for Python versions 2.7 and newer and can
+be installed with "
+:
+This package does not have any additional requirements. 📦
+poyo comes with a 
+" function, to load utf-8 encoded string
+data into a Python dict."
+poyo follows the recommendations for 
+", which
+means it does not configure logging itself. Its root logger is named "
+"
+and the names of all its children loggers track the package/module hierarchy.
+poyo logs to a "
+ and solely on 
+ level.
+"If your application configures logging and allows debug messages to be shown,
+you will see logging when using poyo. The log messages indicate which parser
+method is used for a given string as the parser deseralizes the config. You
+can remove all logging from poyo in your application by setting the log level
+of the "
+ logger to a value higher than 
+.
+"We created this project to work around installation issues with a
+"
+" version that depended on existing YAML parsers
+for Python. For more information please check out this "
+.
+Would you like to contribute to 
+? You're awesome! 😃
+Please check out the 
+" label for tasks,
+that are good candidates for your first contribution to poyo. Your
+contributions are greatly appreciated! Every little bit helps and credit will
+always be given."
+"Everyone interacting in the poyo project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the "
+.
+Join the poyo 
+! 🌍🌏🌎
+Distributed under the terms of the 
+" license, poyo is free and open source
+software."
+
+
+A lightweight YAML Parser for Python. 🐓
+" does not allow deserialization of arbitrary Python objects. Supported
+types are "
+", "
+", "
+", "
+", "
+ as well as 
+" and
+"
+ values.
+"⚠️ Please note that poyo supports only a chosen subset of the YAML format
+that is required to parse "
+". poyo does not have support for serializing into YAML
+and is not compatible with JSON."
+poyo is available on 
+" for Python versions 2.7 and newer and can
+be installed with "
+:
+This package does not have any additional requirements. 📦
+poyo comes with a 
+" function, to load utf-8 encoded string
+data into a Python dict."
+poyo follows the recommendations for 
+", which
+means it does not configure logging itself. Its root logger is named "
+"
+and the names of all its children loggers track the package/module hierarchy.
+poyo logs to a "
+ and solely on 
+ level.
+"If your application configures logging and allows debug messages to be shown,
+you will see logging when using poyo. The log messages indicate which parser
+method is used for a given string as the parser deseralizes the config. You
+can remove all logging from poyo in your application by setting the log level
+of the "
+ logger to a value higher than 
+.
+"We created this project to work around installation issues with a
+"
+" version that depended on existing YAML parsers
+for Python. For more information please check out this "
+.
+Would you like to contribute to 
+? You're awesome! 😃
+Please check out the 
+" label for tasks,
+that are good candidates for your first contribution to poyo. Your
+contributions are greatly appreciated! Every little bit helps and credit will
+always be given."
+"Everyone interacting in the poyo project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the "
+.
+Join the poyo 
+! 🌍🌏🌎
+Distributed under the terms of the 
+" license, poyo is free and open source
+software."
+
+
+A lightweight YAML Parser for Python. 🐓
+" does not allow deserialization of arbitrary Python objects. Supported
+types are "
+", "
+", "
+", "
+", "
+ as well as 
+" and
+"
+ values.
+"⚠️ Please note that poyo supports only a chosen subset of the YAML format
+that is required to parse "
+". poyo does not have support for serializing into YAML
+and is not compatible with JSON."
+poyo is available on 
+" for Python versions 2.7 and newer and can
+be installed with "
+:
+This package does not have any additional requirements. 📦
+poyo comes with a 
+" function, to load utf-8 encoded string
+data into a Python dict."
+poyo follows the recommendations for 
+", which
+means it does not configure logging itself. Its root logger is named "
+"
+and the names of all its children loggers track the package/module hierarchy.
+poyo logs to a "
+ and solely on 
+ level.
+"If your application configures logging and allows debug messages to be shown,
+you will see logging when using poyo. The log messages indicate which parser
+method is used for a given string as the parser deseralizes the config. You
+can remove all logging from poyo in your application by setting the log level
+of the "
+ logger to a value higher than 
+.
+"We created this project to work around installation issues with a
+"
+" version that depended on existing YAML parsers
+for Python. For more information please check out this "
+.
+Would you like to contribute to 
+? You're awesome! 😃
+Please check out the 
+" label for tasks,
+that are good candidates for your first contribution to poyo. Your
+contributions are greatly appreciated! Every little bit helps and credit will
+always be given."
+"Everyone interacting in the poyo project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the "
+.
+Join the poyo 
+! 🌍🌏🌎
+Distributed under the terms of the 
+" license, poyo is free and open source
+software."

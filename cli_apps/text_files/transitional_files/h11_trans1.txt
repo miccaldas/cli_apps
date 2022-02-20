@@ -1,2 +1,184 @@
-description
+
+
 "This is a little HTTP/1.1 library written from scratch in Python,
+heavily inspired by "
+.
+"It’s a “bring-your-own-I/O” library; h11 contains no IO code
+whatsoever. This means you can hook h11 up to your favorite network
+API, and that could be anything you want: synchronous, threaded,
+asynchronous, or your own implementation of "
+" – h11 won’t judge you.
+(Compare this to the current state of the art, where every time a "
+" comes along then someone
+gets to start over reimplementing the entire HTTP protocol from
+scratch.) Cory Benfield made an "
+", or if you like video
+then here’s his "
+.
+"This also means that h11 is not immediately useful out of the box:
+it’s a toolkit for building programs that speak HTTP, not something
+that could directly replace "
+ or 
+" or
+whatever. But h11 makes it much easier to implement something like
+"
+ or 
+.
+"At a high level, working with h11 goes like this:"
+"For example, a client might instantiate and then send a
+"
+" object, then zero or more "
+" objects for the
+request body (e.g., if this is a POST), and then a
+"
+" to indicate the end of the message. Then the
+server would then send back a "
+", some "
+", and
+its own "
+". If either side violates the protocol,
+you’ll get a "
+ exception.
+"h11 is suitable for implementing both servers and clients, and has a
+pleasantly symmetric API: the events you send as a client are exactly
+the ones that you receive as a server and vice-versa."
+It also has 
+.
+
+
+"This is a little HTTP/1.1 library written from scratch in Python,
+heavily inspired by "
+.
+"It’s a “bring-your-own-I/O” library; h11 contains no IO code
+whatsoever. This means you can hook h11 up to your favorite network
+API, and that could be anything you want: synchronous, threaded,
+asynchronous, or your own implementation of "
+" – h11 won’t judge you.
+(Compare this to the current state of the art, where every time a "
+" comes along then someone
+gets to start over reimplementing the entire HTTP protocol from
+scratch.) Cory Benfield made an "
+", or if you like video
+then here’s his "
+.
+"This also means that h11 is not immediately useful out of the box:
+it’s a toolkit for building programs that speak HTTP, not something
+that could directly replace "
+ or 
+" or
+whatever. But h11 makes it much easier to implement something like
+"
+ or 
+.
+"At a high level, working with h11 goes like this:"
+"For example, a client might instantiate and then send a
+"
+" object, then zero or more "
+" objects for the
+request body (e.g., if this is a POST), and then a
+"
+" to indicate the end of the message. Then the
+server would then send back a "
+", some "
+", and
+its own "
+". If either side violates the protocol,
+you’ll get a "
+ exception.
+"h11 is suitable for implementing both servers and clients, and has a
+pleasantly symmetric API: the events you send as a client are exactly
+the ones that you receive as a server and vice-versa."
+It also has 
+.
+
+
+"This is a little HTTP/1.1 library written from scratch in Python,
+heavily inspired by "
+.
+"It’s a “bring-your-own-I/O” library; h11 contains no IO code
+whatsoever. This means you can hook h11 up to your favorite network
+API, and that could be anything you want: synchronous, threaded,
+asynchronous, or your own implementation of "
+" – h11 won’t judge you.
+(Compare this to the current state of the art, where every time a "
+" comes along then someone
+gets to start over reimplementing the entire HTTP protocol from
+scratch.) Cory Benfield made an "
+", or if you like video
+then here’s his "
+.
+"This also means that h11 is not immediately useful out of the box:
+it’s a toolkit for building programs that speak HTTP, not something
+that could directly replace "
+ or 
+" or
+whatever. But h11 makes it much easier to implement something like
+"
+ or 
+.
+"At a high level, working with h11 goes like this:"
+"For example, a client might instantiate and then send a
+"
+" object, then zero or more "
+" objects for the
+request body (e.g., if this is a POST), and then a
+"
+" to indicate the end of the message. Then the
+server would then send back a "
+", some "
+", and
+its own "
+". If either side violates the protocol,
+you’ll get a "
+ exception.
+"h11 is suitable for implementing both servers and clients, and has a
+pleasantly symmetric API: the events you send as a client are exactly
+the ones that you receive as a server and vice-versa."
+It also has 
+.
+
+
+"This is a little HTTP/1.1 library written from scratch in Python,
+heavily inspired by "
+.
+"It’s a “bring-your-own-I/O” library; h11 contains no IO code
+whatsoever. This means you can hook h11 up to your favorite network
+API, and that could be anything you want: synchronous, threaded,
+asynchronous, or your own implementation of "
+" – h11 won’t judge you.
+(Compare this to the current state of the art, where every time a "
+" comes along then someone
+gets to start over reimplementing the entire HTTP protocol from
+scratch.) Cory Benfield made an "
+", or if you like video
+then here’s his "
+.
+"This also means that h11 is not immediately useful out of the box:
+it’s a toolkit for building programs that speak HTTP, not something
+that could directly replace "
+ or 
+" or
+whatever. But h11 makes it much easier to implement something like
+"
+ or 
+.
+"At a high level, working with h11 goes like this:"
+"For example, a client might instantiate and then send a
+"
+" object, then zero or more "
+" objects for the
+request body (e.g., if this is a POST), and then a
+"
+" to indicate the end of the message. Then the
+server would then send back a "
+", some "
+", and
+its own "
+". If either side violates the protocol,
+you’ll get a "
+ exception.
+"h11 is suitable for implementing both servers and clients, and has a
+pleasantly symmetric API: the events you send as a client are exactly
+the ones that you receive as a server and vice-versa."
+It also has 
+.

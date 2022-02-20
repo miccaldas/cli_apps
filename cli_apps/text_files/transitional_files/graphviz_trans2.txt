@@ -1,0 +1,16 @@
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+"This package facilitates the creation and rendering of graph s in
+"This package facilitates the creation and rendering of graph s in
+the "
+ language of the 
+ graph drawing software (
+")
+from Python."

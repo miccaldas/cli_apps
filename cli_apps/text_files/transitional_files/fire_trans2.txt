@@ -1,0 +1,4 @@
+
+
+"Python Fire is a library for automatically generating command line interfaces
+(CLIs) with a single line of code."

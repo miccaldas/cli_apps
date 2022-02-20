@@ -1,56 +1,5 @@
-description
+
+
 Support for the Internationalised Domain Names in Applications
 (IDNA) protocol as specified in 
 .
-This is the latest version of the protocol and is sometimes referred to as
-“IDNA 2008”.
-This library also provides support for Unicode Technical Standard 46,
-
-.
-This acts as a suitable replacement for the “encodings.idna” module that
-comes with the Python standard library, but which only supports the
-older superseded IDNA specification (
-).
-Basic functions are simply executed:
-description
-Support for the Internationalised Domain Names in Applications
-(IDNA) protocol as specified in 
-.
-This is the latest version of the protocol and is sometimes referred to as
-“IDNA 2008”.
-This library also provides support for Unicode Technical Standard 46,
-
-.
-This acts as a suitable replacement for the “encodings.idna” module that
-comes with the Python standard library, but which only supports the
-older superseded IDNA specification (
-).
-Basic functions are simply executed:
-description
-Support for the Internationalised Domain Names in Applications
-(IDNA) protocol as specified in 
-.
-This is the latest version of the protocol and is sometimes referred to as
-“IDNA 2008”.
-This library also provides support for Unicode Technical Standard 46,
-
-.
-This acts as a suitable replacement for the “encodings.idna” module that
-comes with the Python standard library, but which only supports the
-older superseded IDNA specification (
-).
-Basic functions are simply executed:
-description
-Support for the Internationalised Domain Names in Applications
-(IDNA) protocol as specified in 
-.
-This is the latest version of the protocol and is sometimes referred to as
-“IDNA 2008”.
-This library also provides support for Unicode Technical Standard 46,
-
-.
-This acts as a suitable replacement for the “encodings.idna” module that
-comes with the Python standard library, but which only supports the
-older superseded IDNA specification (
-).
-Basic functions are simply executed:

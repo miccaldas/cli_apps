@@ -1,24 +1,4 @@
-description
+
+
 Python Fire is a library for automatically generating command line interfaces
 (CLIs) with a single line of code.
-It will turn any Python module, class, object, function, etc. (any Python
-component will work!) into a CLI. It’s called Fire because when you call Fire(),
-it fires off your command.
-description
-Python Fire is a library for automatically generating command line interfaces
-(CLIs) with a single line of code.
-It will turn any Python module, class, object, function, etc. (any Python
-component will work!) into a CLI. It’s called Fire because when you call Fire(),
-it fires off your command.
-description
-Python Fire is a library for automatically generating command line interfaces
-(CLIs) with a single line of code.
-It will turn any Python module, class, object, function, etc. (any Python
-component will work!) into a CLI. It’s called Fire because when you call Fire(),
-it fires off your command.
-description
-Python Fire is a library for automatically generating command line interfaces
-(CLIs) with a single line of code.
-It will turn any Python module, class, object, function, etc. (any Python
-component will work!) into a CLI. It’s called Fire because when you call Fire(),
-it fires off your command.

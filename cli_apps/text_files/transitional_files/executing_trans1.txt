@@ -1,4 +1,176 @@
-description
+
+
  
  
 "This mini-package lets you get information about what a frame is currently doing, particularly the AST node being executed."
+Then 
+ will be an AST node (from the 
+ standard library module) or None if the node couldn't be identified (which may happen often and should always be checked).
+ will always be the same instance for multiple calls with frames at the same point of execution.
+"If you have a traceback object, pass it directly to "
+ rather than the 
+ attribute to get the correct node.
+For this you will need to separately install the 
+" library, then obtain an "
+ object:
+or:
+or use one of the convenience methods:
+or:
+Everything goes through the 
+ class. Only one instance of the class is created for each filename. Subclassing it to add more attributes on creation or methods is recommended. The classmethods such as 
+ will respect this. See the source code and docstrings for more detail.
+If you don't like that you can just copy the file 
+", there are no dependencies (but of course you won't get updates)."
+Suppose the frame is executing this line:
+and in particular it's currently obtaining the attribute 
+". Looking at the bytecode, specifically "
+", we can tell that it's loading an attribute, but it's not obvious which one. We can narrow down the statement being executed using "
+ and find the two 
+ nodes representing 
+ and 
+". How do we find out which one it is, without recreating the entire compiler in Python?"
+The trick is to modify the AST slightly for each candidate expression and observe the changes in the bytecode instructions. We change the AST to this:
+"and compile it, and the bytecode will be almost the same but there will be two new instructions:"
+and just before that will be a 
+ instruction corresponding to 
+. Seeing that it's in the same position as the original instruction lets us know we've found our match.
+"Yes - if it identifies a node, you can trust that it's identified the correct one. The tests are very thorough - in addition to unit tests which check various situations directly, there are property tests against a large number of files (see the filenames printed in "
+") with real code. Specifically, for each file, the tests:"
+"In other words, it shows that there is a one-to-one mapping between the nodes and the instructions that can be handled. This leaves very little room for a bug to creep in."
+"Furthermore, "
+ checks that the instructions compiled from the modified AST exactly match the original code save for a few small known exceptions. This accounts for all the quirks and optimisations in the interpreter.
+Currently it works in almost all cases for the following 
+ nodes:
+The plan is to extend to more operations in the future.
+
+
+ 
+ 
+"This mini-package lets you get information about what a frame is currently doing, particularly the AST node being executed."
+Then 
+ will be an AST node (from the 
+ standard library module) or None if the node couldn't be identified (which may happen often and should always be checked).
+ will always be the same instance for multiple calls with frames at the same point of execution.
+"If you have a traceback object, pass it directly to "
+ rather than the 
+ attribute to get the correct node.
+For this you will need to separately install the 
+" library, then obtain an "
+ object:
+or:
+or use one of the convenience methods:
+or:
+Everything goes through the 
+ class. Only one instance of the class is created for each filename. Subclassing it to add more attributes on creation or methods is recommended. The classmethods such as 
+ will respect this. See the source code and docstrings for more detail.
+If you don't like that you can just copy the file 
+", there are no dependencies (but of course you won't get updates)."
+Suppose the frame is executing this line:
+and in particular it's currently obtaining the attribute 
+". Looking at the bytecode, specifically "
+", we can tell that it's loading an attribute, but it's not obvious which one. We can narrow down the statement being executed using "
+ and find the two 
+ nodes representing 
+ and 
+". How do we find out which one it is, without recreating the entire compiler in Python?"
+The trick is to modify the AST slightly for each candidate expression and observe the changes in the bytecode instructions. We change the AST to this:
+"and compile it, and the bytecode will be almost the same but there will be two new instructions:"
+and just before that will be a 
+ instruction corresponding to 
+. Seeing that it's in the same position as the original instruction lets us know we've found our match.
+"Yes - if it identifies a node, you can trust that it's identified the correct one. The tests are very thorough - in addition to unit tests which check various situations directly, there are property tests against a large number of files (see the filenames printed in "
+") with real code. Specifically, for each file, the tests:"
+"In other words, it shows that there is a one-to-one mapping between the nodes and the instructions that can be handled. This leaves very little room for a bug to creep in."
+"Furthermore, "
+ checks that the instructions compiled from the modified AST exactly match the original code save for a few small known exceptions. This accounts for all the quirks and optimisations in the interpreter.
+Currently it works in almost all cases for the following 
+ nodes:
+The plan is to extend to more operations in the future.
+
+
+ 
+ 
+"This mini-package lets you get information about what a frame is currently doing, particularly the AST node being executed."
+Then 
+ will be an AST node (from the 
+ standard library module) or None if the node couldn't be identified (which may happen often and should always be checked).
+ will always be the same instance for multiple calls with frames at the same point of execution.
+"If you have a traceback object, pass it directly to "
+ rather than the 
+ attribute to get the correct node.
+For this you will need to separately install the 
+" library, then obtain an "
+ object:
+or:
+or use one of the convenience methods:
+or:
+Everything goes through the 
+ class. Only one instance of the class is created for each filename. Subclassing it to add more attributes on creation or methods is recommended. The classmethods such as 
+ will respect this. See the source code and docstrings for more detail.
+If you don't like that you can just copy the file 
+", there are no dependencies (but of course you won't get updates)."
+Suppose the frame is executing this line:
+and in particular it's currently obtaining the attribute 
+". Looking at the bytecode, specifically "
+", we can tell that it's loading an attribute, but it's not obvious which one. We can narrow down the statement being executed using "
+ and find the two 
+ nodes representing 
+ and 
+". How do we find out which one it is, without recreating the entire compiler in Python?"
+The trick is to modify the AST slightly for each candidate expression and observe the changes in the bytecode instructions. We change the AST to this:
+"and compile it, and the bytecode will be almost the same but there will be two new instructions:"
+and just before that will be a 
+ instruction corresponding to 
+. Seeing that it's in the same position as the original instruction lets us know we've found our match.
+"Yes - if it identifies a node, you can trust that it's identified the correct one. The tests are very thorough - in addition to unit tests which check various situations directly, there are property tests against a large number of files (see the filenames printed in "
+") with real code. Specifically, for each file, the tests:"
+"In other words, it shows that there is a one-to-one mapping between the nodes and the instructions that can be handled. This leaves very little room for a bug to creep in."
+"Furthermore, "
+ checks that the instructions compiled from the modified AST exactly match the original code save for a few small known exceptions. This accounts for all the quirks and optimisations in the interpreter.
+Currently it works in almost all cases for the following 
+ nodes:
+The plan is to extend to more operations in the future.
+
+
+ 
+ 
+"This mini-package lets you get information about what a frame is currently doing, particularly the AST node being executed."
+Then 
+ will be an AST node (from the 
+ standard library module) or None if the node couldn't be identified (which may happen often and should always be checked).
+ will always be the same instance for multiple calls with frames at the same point of execution.
+"If you have a traceback object, pass it directly to "
+ rather than the 
+ attribute to get the correct node.
+For this you will need to separately install the 
+" library, then obtain an "
+ object:
+or:
+or use one of the convenience methods:
+or:
+Everything goes through the 
+ class. Only one instance of the class is created for each filename. Subclassing it to add more attributes on creation or methods is recommended. The classmethods such as 
+ will respect this. See the source code and docstrings for more detail.
+If you don't like that you can just copy the file 
+", there are no dependencies (but of course you won't get updates)."
+Suppose the frame is executing this line:
+and in particular it's currently obtaining the attribute 
+". Looking at the bytecode, specifically "
+", we can tell that it's loading an attribute, but it's not obvious which one. We can narrow down the statement being executed using "
+ and find the two 
+ nodes representing 
+ and 
+". How do we find out which one it is, without recreating the entire compiler in Python?"
+The trick is to modify the AST slightly for each candidate expression and observe the changes in the bytecode instructions. We change the AST to this:
+"and compile it, and the bytecode will be almost the same but there will be two new instructions:"
+and just before that will be a 
+ instruction corresponding to 
+. Seeing that it's in the same position as the original instruction lets us know we've found our match.
+"Yes - if it identifies a node, you can trust that it's identified the correct one. The tests are very thorough - in addition to unit tests which check various situations directly, there are property tests against a large number of files (see the filenames printed in "
+") with real code. Specifically, for each file, the tests:"
+"In other words, it shows that there is a one-to-one mapping between the nodes and the instructions that can be handled. This leaves very little room for a bug to creep in."
+"Furthermore, "
+ checks that the instructions compiled from the modified AST exactly match the original code save for a few small known exceptions. This accounts for all the quirks and optimisations in the interpreter.
+Currently it works in almost all cases for the following 
+ nodes:
+The plan is to extend to more operations in the future.

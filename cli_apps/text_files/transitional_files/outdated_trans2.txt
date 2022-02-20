@@ -1,0 +1,5 @@
+
+
+ 
+ 
+"This is a mini-library which, given a package name and a version, checks if it's the latest version available on PyPI."

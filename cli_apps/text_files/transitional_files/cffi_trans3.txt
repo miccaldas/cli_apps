@@ -1,16 +1,3 @@
-description
+
+
 Foreign Function Interface for Python calling C code.
-Please see the 
-.
-description
-Foreign Function Interface for Python calling C code.
-Please see the 
-.
-description
-Foreign Function Interface for Python calling C code.
-Please see the 
-.
-description
-Foreign Function Interface for Python calling C code.
-Please see the 
-.

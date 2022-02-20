@@ -1,4 +1,5 @@
-description
+
+
 "
 "
 "
@@ -9,3 +10,491 @@ The
 " class is a wrapper for data container objects, providing a
 common interface to handle objects of different types in an uniform manner,
 regardless of their underlying implementation."
+Currently supported types are:
+"Additionally, interaction with arbitrary types is supported, by implementing
+a pre-defined interface (see "
+).
+ is available on 
+", it can be installed with "
+:
+ is distributed under a 
+ license.
+The following is a simple example using a 
+" object.
+Consider the following type definition:"
+An 
+ object can be treated much like a dictionary:
+The wrapped object is modified in-place:
+The 
+ class provides the 
+" method, which converts
+nested items recursively. Consider the following example:"
+Note that just passing an adapter object to the 
+" built-in also works,
+but it doesn't traverse the object recursively converting nested items:"
+The following adapters are included by default:
+"This is the main entrypoint for the package. Tipically, user code
+wraps an item using this class, and proceeds to handle it with the provided interface.
+"
+" implements the
+"
+"
+interface, providing a "
+"-like API to manipulate data for the object it wraps
+(which is modified in-place)."
+"Stores the currently registered adapter classes. Being a
+"
+",
+it supports efficient addition/deletion of adapters classes to both ends."
+The order in which the adapters are registered is important. When an 
+" object is
+created for a specific item, the registered adapters are traversed in order and the first
+adapter class to return "
+ for the 
+" class method is used for all subsequent
+operations. The default order is the one defined in the
+"
+ section.
+See the section on 
+ for additional information.
+Return 
+" if any of the registed adapters can handle the item
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return 
+" if any of the registered adapters can handle the item class
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return a 
+"
+object, which is a read-only mapping with metadata about the given field. If the item class does not
+support field metadata, or there is no metadata for the given field, an empty object is returned."
+"The returned value is taken from the following sources, depending on the item type:"
+"Return metadata for the given field, if available. Unless overriden in a custom adapter class, by default
+this method calls the adapter's "
+" method, passing the wrapped item's class."
+Return a 
+"
+with the names of all the defined fields for the item."
+Return a 
+" object with the contents of the adapter. This works slightly different than
+calling "
+", because it's applied recursively to nested items (if there are any)."
+Return 
+" if the given object belongs to (at least) one of the supported types,
+"
+ otherwise. This is an alias for 
+.
+Alias for 
+", "
+", "
+", and "
+" objects allow the definition of
+arbitrary field metadata. This can be accessed through a
+"
+"
+object, which can be retrieved from an item instance with
+"
+", or from an item class
+with the "
+"
+method (or its alias "
+").
+The source of the data depends on the underlying type (see the docs for
+"
+).
+"This package allows to handle arbitrary item classes, by implementing an adapter interface:"
+"Abstract Base Class for adapters. An adapter that handles a specific type of item must
+inherit from this class and implement the abstract methods defined on it. "
+"
+inherits from "
+",
+so all methods from the "
+ interface must be implemented as well.
+Add your custom adapter class to the 
+"
+class attribute in order to handle custom item classes:"
+See the 
+
+
+"
+"
+"
+"
+"
+"
+The 
+" class is a wrapper for data container objects, providing a
+common interface to handle objects of different types in an uniform manner,
+regardless of their underlying implementation."
+Currently supported types are:
+"Additionally, interaction with arbitrary types is supported, by implementing
+a pre-defined interface (see "
+).
+ is available on 
+", it can be installed with "
+:
+ is distributed under a 
+ license.
+The following is a simple example using a 
+" object.
+Consider the following type definition:"
+An 
+ object can be treated much like a dictionary:
+The wrapped object is modified in-place:
+The 
+ class provides the 
+" method, which converts
+nested items recursively. Consider the following example:"
+Note that just passing an adapter object to the 
+" built-in also works,
+but it doesn't traverse the object recursively converting nested items:"
+The following adapters are included by default:
+"This is the main entrypoint for the package. Tipically, user code
+wraps an item using this class, and proceeds to handle it with the provided interface.
+"
+" implements the
+"
+"
+interface, providing a "
+"-like API to manipulate data for the object it wraps
+(which is modified in-place)."
+"Stores the currently registered adapter classes. Being a
+"
+",
+it supports efficient addition/deletion of adapters classes to both ends."
+The order in which the adapters are registered is important. When an 
+" object is
+created for a specific item, the registered adapters are traversed in order and the first
+adapter class to return "
+ for the 
+" class method is used for all subsequent
+operations. The default order is the one defined in the
+"
+ section.
+See the section on 
+ for additional information.
+Return 
+" if any of the registed adapters can handle the item
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return 
+" if any of the registered adapters can handle the item class
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return a 
+"
+object, which is a read-only mapping with metadata about the given field. If the item class does not
+support field metadata, or there is no metadata for the given field, an empty object is returned."
+"The returned value is taken from the following sources, depending on the item type:"
+"Return metadata for the given field, if available. Unless overriden in a custom adapter class, by default
+this method calls the adapter's "
+" method, passing the wrapped item's class."
+Return a 
+"
+with the names of all the defined fields for the item."
+Return a 
+" object with the contents of the adapter. This works slightly different than
+calling "
+", because it's applied recursively to nested items (if there are any)."
+Return 
+" if the given object belongs to (at least) one of the supported types,
+"
+ otherwise. This is an alias for 
+.
+Alias for 
+", "
+", "
+", and "
+" objects allow the definition of
+arbitrary field metadata. This can be accessed through a
+"
+"
+object, which can be retrieved from an item instance with
+"
+", or from an item class
+with the "
+"
+method (or its alias "
+").
+The source of the data depends on the underlying type (see the docs for
+"
+).
+"This package allows to handle arbitrary item classes, by implementing an adapter interface:"
+"Abstract Base Class for adapters. An adapter that handles a specific type of item must
+inherit from this class and implement the abstract methods defined on it. "
+"
+inherits from "
+",
+so all methods from the "
+ interface must be implemented as well.
+Add your custom adapter class to the 
+"
+class attribute in order to handle custom item classes:"
+See the 
+
+
+"
+"
+"
+"
+"
+"
+The 
+" class is a wrapper for data container objects, providing a
+common interface to handle objects of different types in an uniform manner,
+regardless of their underlying implementation."
+Currently supported types are:
+"Additionally, interaction with arbitrary types is supported, by implementing
+a pre-defined interface (see "
+).
+ is available on 
+", it can be installed with "
+:
+ is distributed under a 
+ license.
+The following is a simple example using a 
+" object.
+Consider the following type definition:"
+An 
+ object can be treated much like a dictionary:
+The wrapped object is modified in-place:
+The 
+ class provides the 
+" method, which converts
+nested items recursively. Consider the following example:"
+Note that just passing an adapter object to the 
+" built-in also works,
+but it doesn't traverse the object recursively converting nested items:"
+The following adapters are included by default:
+"This is the main entrypoint for the package. Tipically, user code
+wraps an item using this class, and proceeds to handle it with the provided interface.
+"
+" implements the
+"
+"
+interface, providing a "
+"-like API to manipulate data for the object it wraps
+(which is modified in-place)."
+"Stores the currently registered adapter classes. Being a
+"
+",
+it supports efficient addition/deletion of adapters classes to both ends."
+The order in which the adapters are registered is important. When an 
+" object is
+created for a specific item, the registered adapters are traversed in order and the first
+adapter class to return "
+ for the 
+" class method is used for all subsequent
+operations. The default order is the one defined in the
+"
+ section.
+See the section on 
+ for additional information.
+Return 
+" if any of the registed adapters can handle the item
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return 
+" if any of the registered adapters can handle the item class
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return a 
+"
+object, which is a read-only mapping with metadata about the given field. If the item class does not
+support field metadata, or there is no metadata for the given field, an empty object is returned."
+"The returned value is taken from the following sources, depending on the item type:"
+"Return metadata for the given field, if available. Unless overriden in a custom adapter class, by default
+this method calls the adapter's "
+" method, passing the wrapped item's class."
+Return a 
+"
+with the names of all the defined fields for the item."
+Return a 
+" object with the contents of the adapter. This works slightly different than
+calling "
+", because it's applied recursively to nested items (if there are any)."
+Return 
+" if the given object belongs to (at least) one of the supported types,
+"
+ otherwise. This is an alias for 
+.
+Alias for 
+", "
+", "
+", and "
+" objects allow the definition of
+arbitrary field metadata. This can be accessed through a
+"
+"
+object, which can be retrieved from an item instance with
+"
+", or from an item class
+with the "
+"
+method (or its alias "
+").
+The source of the data depends on the underlying type (see the docs for
+"
+).
+"This package allows to handle arbitrary item classes, by implementing an adapter interface:"
+"Abstract Base Class for adapters. An adapter that handles a specific type of item must
+inherit from this class and implement the abstract methods defined on it. "
+"
+inherits from "
+",
+so all methods from the "
+ interface must be implemented as well.
+Add your custom adapter class to the 
+"
+class attribute in order to handle custom item classes:"
+See the 
+
+
+"
+"
+"
+"
+"
+"
+The 
+" class is a wrapper for data container objects, providing a
+common interface to handle objects of different types in an uniform manner,
+regardless of their underlying implementation."
+Currently supported types are:
+"Additionally, interaction with arbitrary types is supported, by implementing
+a pre-defined interface (see "
+).
+ is available on 
+", it can be installed with "
+:
+ is distributed under a 
+ license.
+The following is a simple example using a 
+" object.
+Consider the following type definition:"
+An 
+ object can be treated much like a dictionary:
+The wrapped object is modified in-place:
+The 
+ class provides the 
+" method, which converts
+nested items recursively. Consider the following example:"
+Note that just passing an adapter object to the 
+" built-in also works,
+but it doesn't traverse the object recursively converting nested items:"
+The following adapters are included by default:
+"This is the main entrypoint for the package. Tipically, user code
+wraps an item using this class, and proceeds to handle it with the provided interface.
+"
+" implements the
+"
+"
+interface, providing a "
+"-like API to manipulate data for the object it wraps
+(which is modified in-place)."
+"Stores the currently registered adapter classes. Being a
+"
+",
+it supports efficient addition/deletion of adapters classes to both ends."
+The order in which the adapters are registered is important. When an 
+" object is
+created for a specific item, the registered adapters are traversed in order and the first
+adapter class to return "
+ for the 
+" class method is used for all subsequent
+operations. The default order is the one defined in the
+"
+ section.
+See the section on 
+ for additional information.
+Return 
+" if any of the registed adapters can handle the item
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return 
+" if any of the registered adapters can handle the item class
+(i.e. if any of them returns "
+ for its 
+" method with
+"
+" as argument), "
+ otherwise.
+Return a 
+"
+object, which is a read-only mapping with metadata about the given field. If the item class does not
+support field metadata, or there is no metadata for the given field, an empty object is returned."
+"The returned value is taken from the following sources, depending on the item type:"
+"Return metadata for the given field, if available. Unless overriden in a custom adapter class, by default
+this method calls the adapter's "
+" method, passing the wrapped item's class."
+Return a 
+"
+with the names of all the defined fields for the item."
+Return a 
+" object with the contents of the adapter. This works slightly different than
+calling "
+", because it's applied recursively to nested items (if there are any)."
+Return 
+" if the given object belongs to (at least) one of the supported types,
+"
+ otherwise. This is an alias for 
+.
+Alias for 
+", "
+", "
+", and "
+" objects allow the definition of
+arbitrary field metadata. This can be accessed through a
+"
+"
+object, which can be retrieved from an item instance with
+"
+", or from an item class
+with the "
+"
+method (or its alias "
+").
+The source of the data depends on the underlying type (see the docs for
+"
+).
+"This package allows to handle arbitrary item classes, by implementing an adapter interface:"
+"Abstract Base Class for adapters. An adapter that handles a specific type of item must
+inherit from this class and implement the abstract methods defined on it. "
+"
+inherits from "
+",
+so all methods from the "
+ interface must be implemented as well.
+Add your custom adapter class to the 
+"
+class attribute in order to handle custom item classes:"
+See the 

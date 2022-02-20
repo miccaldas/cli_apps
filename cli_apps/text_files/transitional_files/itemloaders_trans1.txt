@@ -1,2 +1,44 @@
-description
+
+
  is a library that helps you collect data from HTML and XML sources.
+"It comes in handy to extract data from web pages, as it supports
+data extraction using CSS and XPath Selectors."
+"It’s specially useful when you need to standardize the data from many sources.
+For example, it allows you to have all your casting and parsing rules in a
+single place."
+Here is an example to get you started:
+"For more information, check out the "
+.
+
+
+ is a library that helps you collect data from HTML and XML sources.
+"It comes in handy to extract data from web pages, as it supports
+data extraction using CSS and XPath Selectors."
+"It’s specially useful when you need to standardize the data from many sources.
+For example, it allows you to have all your casting and parsing rules in a
+single place."
+Here is an example to get you started:
+"For more information, check out the "
+.
+
+
+ is a library that helps you collect data from HTML and XML sources.
+"It comes in handy to extract data from web pages, as it supports
+data extraction using CSS and XPath Selectors."
+"It’s specially useful when you need to standardize the data from many sources.
+For example, it allows you to have all your casting and parsing rules in a
+single place."
+Here is an example to get you started:
+"For more information, check out the "
+.
+
+
+ is a library that helps you collect data from HTML and XML sources.
+"It comes in handy to extract data from web pages, as it supports
+data extraction using CSS and XPath Selectors."
+"It’s specially useful when you need to standardize the data from many sources.
+For example, it allows you to have all your casting and parsing rules in a
+single place."
+Here is an example to get you started:
+"For more information, check out the "
+.
