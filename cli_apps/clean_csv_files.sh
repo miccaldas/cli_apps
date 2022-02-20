@@ -16,7 +16,7 @@ trans=/home/mic/python/cli_apps/cli_apps/text_files/transitional_files/*
 for file in $texts; do
     echo $file
 
-    : ' read -r firstline < $file
+    read -r firstline < $file
     touch $file0=$trans/"${file}_trans0.txt"
     $file1="${file}_trans1.txt"
     $file2="${file}_trans2.txt"    
@@ -29,8 +29,7 @@ for file in $texts; do
     # 3 - Selects only the first occurrence of a complete phrase up to a '.'.
     sed -re "/^"$firstline"*/,/\./{p}; /\./{q}" $trans/$file_trans1.txt > $file2
     # 4 - Removes double quotes.
-    sed -re "s/"//g1" $trans/$file_trans2.txt > $file3
+    sed -re 's/"//g1' $trans/$file_trans2.txt > $file3
     # 5 - Removes line breaks.
-    sed -z "s/\n//g" $trans/$file_trans3.txt > $file4
-    '
+    sed -z "s/\n//g" $trans/$file_trans3.txt > $file4 
 done
