@@ -27,13 +27,13 @@ snoop.install(watch_extras=[type_watch])
 @snoop
 def query_builder():
     """
-    We'll instantiate the 'names_linux' list
+    We'll instantiate the lists
     here, and then we'll pass its entries
     through a subprocess command, that will
     link to yay.
     """
 
-    name_path = "/home/mic/python/cli_apps/cli_apps/lists/names_linux.txt"
+    name_path = "/home/mic/python/cli_apps/cli_apps/lists/arch/names_linux.txt"
 
     with open(name_path, "r") as f:
         names = f.readlines()

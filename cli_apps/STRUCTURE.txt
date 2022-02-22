@@ -1,0 +1,71 @@
+Much more for my sake than anyone else's, I'll try here to draw the internal  
+structure of the project; specifically, what has to exist and happen for the  
+updates of information to happen serenely and without much human intervention.  
+We have two great sources of information:  
+1. Scraping the PyPi site, that gives us the data for the python packages,  
+2. The 'yay -Si command', that brings us data from what was installed through  
+Arch.  
+Let's start with PyPi:  
+Be one or the or the other, they both start with the creation of lists.  
+We start by getting a list of updated pip packages through the command:  
+------------------------------------------------------------------------------
+ ++ - 1 - pip list,  Once a week, it starts this process.  
+ -----------------------------------------------------------------------------
+ Then we should get a list of python installed packages from the console with:
+ -----------------------------------------------------------------------------
+ ++ 2 - console list. After pip.  
+        import pkg_resources   
+        installed_packages = pkg_resources.working_set  
+        installed_packages_list = sorted(["%s==%s" % (i.key, i.version)  
+           for i in installed_packages])  
+        print(installed_packages_list)  
+ ----------------------------------------------------------------------------
+ There's bound to have a lot of overlap between these lists, so a third step
+ would be:  
+ ----------------------------------------------------------------------------
+ ++ 3 - Build python/sed script to weed out repeats, so we get a clean list.  
+ ----------------------------------------------------------------------------
+ After this is done, we'll compare it with the old list that we have stored,  
+ so we just concern ourselves with new entries:  
+ ----------------------------------------------------------------------------
+ ++ 4 - Compare new and old list, create another with updates.  
+ ----------------------------------------------------------------------------
+ We'll have to run the 'build_url_list.py' again for these packages;  
+ ----------------------------------------------------------------------------
+ ++ 5 - Update PyPi url list.  
+ ----------------------------------------------------------------------------
+ With a list of names and urls, we're all ready to launch again the scrapy  
+ spiders, through mainly 'main_scrapy.py', as 'scrapy_project' doesn't have so  
+ much material that has to be updated from run to run.  
+ ----------------------------------------------------------------------------
+ ++ 6 - Update 'main_scrapy.py' with the new lists names.  
+ ----------------------------------------------------------------------------
+ I think that would be best to create a systemd service to monitor this task.
+ ----------------------------------------------------------------------------
+ ++ 7 - Create Systemd service.  
+ ----------------------------------------------------------------------------
+ And with this we're done! The service we'll take care to activate the Huey
+ task queue, all we have to do is monitor.
+ ----------------------------------------------------------------------------
+ SUMMARY:
+ ++ - 1 - pip list,  Once a week, it starts this process,
+ ++ - 2 - console list. After pip.  
+          import pkg_resources  
+          installed_packages = pkg_resources.working_set  
+          installed_packages_list = sorted(["%s==%s" % (i.key, i.version)  
+              for i in installed_packages])  
+          print(installed_packages_list)  
+ ++ - 3 - Build python/sed script to weed out repeats, so we get a clean list. 
+ ++ - 4 - Compare new and old list, create another with updates. 
+ ++ - 5 - Update PyPi url list.  
+ ++ - 6 - Update 'main_scrapy.py' with the new lists names.  
+ ++ - 7 - Create Systemd service.  
+ ++ - 8 - Upload new information to the database.  
+
+ The Arch project is much more simple. To update it we only need:
+ ---------------------------------------------------------------------------
+ ++ - A - Run 'query_builder.py' for updates.  
+ ++ - B - Compare it with the old list and see what's new.  
+ ++ - C - Insert new entries on the database.  
+
+

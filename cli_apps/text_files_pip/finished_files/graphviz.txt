@@ -1,1 +1,0 @@
-       This package facilitates the creation and rendering of graph s inThis package facilitates the creation and rendering of graph s inthe  language of the  graph drawing software ()from Python.

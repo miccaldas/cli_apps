@@ -1,1 +1,0 @@
-Greenlets are lightweight coroutines for in-process concurrentprogramming.

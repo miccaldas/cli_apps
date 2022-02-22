@@ -1,1 +1,0 @@
- provides Mozilla’s carefully curated collection of Root Certificates forvalidating the trustworthiness of SSL certificates while verifying the identityof TLS hosts. It has been extracted from the 

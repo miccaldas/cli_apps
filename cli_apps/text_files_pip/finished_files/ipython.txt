@@ -1,1 +1,0 @@
-IPython provides a rich toolkit to help you make the most out of using Pythoninteractively.  Its main components are:

@@ -1,1 +1,0 @@
- is amodule for validating values against a specification. It can be used

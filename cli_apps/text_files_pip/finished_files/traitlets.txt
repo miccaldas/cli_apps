@@ -1,1 +1,0 @@
-Traitlets is a pure Python library enabling:Its implementation relies on the pattern, and it is a lightweight pure-python alternative of the.

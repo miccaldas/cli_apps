@@ -1,1 +1,0 @@
-Priority is a pure-Python implementation of the priority logic for HTTP/2, setout in . This logic allows for clients

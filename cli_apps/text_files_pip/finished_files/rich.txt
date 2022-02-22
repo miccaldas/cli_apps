@@ -1,1 +1,0 @@
- • • • • • • • • • • • • • Rich is a Python library for  text and beautiful formatting in the terminal.
