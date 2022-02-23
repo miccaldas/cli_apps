@@ -1,9 +1,8 @@
 """
-I completely forgot to add the packages urls to
-the information sent when we were dealing with
-pypi. We're here to remedy this situation.
+We'll read the last file of the transient files in
+'clean_files', turn it into a list of tuples
+and send it to a MySQL database.
 """
-import os
 import subprocess
 
 import isort  # noqa: F401
@@ -27,36 +26,6 @@ snoop.install(watch_extras=[type_watch])
 
 @logger.catch
 @snoop
-def pip_links_upld():
-    """
-    We'll prepare the information to
-    to be sent to the db. We're going
-    to get a list of links, extract
-    from them the package name, and
-    then we'll build a mysql query
-    where we upload the url to the
-    package.
-    """
-
-    with open("/home/mic/python/cli_apps/cli_apps/lists/urls_pip.txt", "r") as f:
-        urls = f.readlines()
-
-    clean = [i.strip() for i in urls]
-
-    db_lst = []
-    for i in clean:
-        name = os.path.basename(os.path.normpath(f"{i}"))
-        db_lst.append((name, i))
-
-    return db_lst
-
-
-if __name__ == "__main__":
-    pip_links_upld()
-
-
-@logger.catch
-@snoop
 def db_upload():
     """
     The database was previously created.
@@ -66,15 +35,23 @@ def db_upload():
     complete.
     """
 
-    data = pip_links_upld()
+    with open("/home/mic/python/cli_apps/cli_apps/clean_files/final_text.txt", "r") as f:
+        data = f.readlines()
+    print(data)
+    print(type(data))
+    print(data[0])
+    print(type(data[0]))
+    print(data[0][0])
+    print(type(data[0][0]))
+
     for i in data:
         name = i[0]
-        url = i[1]
-        answers = [url, name]
+        presentation = i[1]
+        answers = [name, presentation]
         try:
             conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
             cur = conn.cursor()
-            query = "UPDATE cli_apps SET url = %s WHERE name = %s"
+            query = "INSERT INTO cli_apps (name, presentation) VALUES (%s, %s)"
             cur.execute(query, answers)
             conn.commit()
         except Error as e:

@@ -10,6 +10,5 @@
 ######################################################################
 
 
-sed -re "s/ \[' / /g" apagar.txt > ap1.txt
+sed -re "s/ \[' / /g" final_text.txt > ap1.txt
 sed -re "s/\]']/\]/g" ap1.txt > ap2.txt
-mv ap2.txt upload

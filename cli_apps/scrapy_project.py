@@ -66,10 +66,14 @@ class ScrapyProject:
             f.write("\n")
             f.write("    @snoop\n")
             f.write("    def parse(self, response):\n")
-            f.write("""        srch_descriptions = response.xpath('//*[@id="description"]/div/p/text()').getall()\n""")
-            f.write("        for item in srch_descriptions:\n")
-            f.write("            results = {'description': item}\n")
-            f.write("            yield results")
+            f.write("""        srch_descriptions = response.xpath('//*[@id="description"]/div/p/text()').getall()""")
+            f.write("\n")
+            f.write("        results = {'description': srch_descriptions}\n")
+            f.write("        print(results)\n")
+            f.write("        with open('results.txt', 'a') as f:\n")
+            f.write("""           f.write(f"{results}")\n""")
+            f.write("\n")
+            f.write("        return results\n")
 
 
 if __name__ == "__main__":

@@ -28,7 +28,7 @@ def build_url_list():
     where the names usually go in the url.
     """
 
-    with open("pip_names.txt", "r") as f:
+    with open("/home/mic/python/cli_apps/cli_apps/lists/pypi/only_names.txt", "r") as f:
         names = f.readlines()
 
     urls = []
@@ -37,11 +37,15 @@ def build_url_list():
         lname = name.lower()
         gname = lname.replace("-", "_")
         rname = gname.strip()
+        fname = sorted(lname)
+        with open("/home/mic/python/cli_apps/cli_apps/lists/pypi/sorted_lowercase_names.txt", "a") as f:
+            f.write(f"{fname}")
+            f.write("\n")
         url = f"https://pypi.org/project/{rname}"
         urls.append(url)
 
     for url in urls:
-        with open("urls_pip.txt", "a") as f:
+        with open("/home/mic/python/cli_apps/cli_apps/lists/pypi/urls.txt", "a") as f:
             f.write(url)
             f.write("\n")
 

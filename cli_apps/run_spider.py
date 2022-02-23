@@ -46,6 +46,8 @@ def apps_cli():
         cmd = f"scrapy crawl {spider}"
         subprocess.run(cmd, shell=True)
 
+    os.chdir("/home/mic/python/cli_apps/cli_apps/")
+
 
 if __name__ == "__main__":
     apps_cli()

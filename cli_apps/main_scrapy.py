@@ -34,19 +34,21 @@ def main_scrapy():
     os.chdir(f"{cwd}/spider_folders/")
 
     names = []
-    with open(f"{cwd}/pip_names.txt", "r") as f:
+    with open(f"{cwd}/lists/pypi/only_names.txt", "r") as f:
         nam = f.readlines()
         for na in nam:
             nam = na.strip()
             n = nam.replace("-", "_")
-            names.append(n)
+            nb = n.lower()
+            names.append(nb)
 
-    with open(f"{cwd}/urls_pip.txt", "r") as f:
+    with open(f"{cwd}/lists/pypi/urls.txt", "r") as f:
         urlsss = f.readlines()
         urlss = [i.strip() for i in urlsss]
         urls = [i.replace("-", ".") for i in urlss]
 
-    name_urls = list(zip(names, urls))
+    name_url = list(zip(names, urls))
+    name_urls = sorted(name_url)
 
     for name, url in name_urls:
         project_name = f"{name}_scrapy"
