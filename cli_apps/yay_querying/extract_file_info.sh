@@ -10,20 +10,19 @@
 #                scripts I'll need to clean the original csv files.
 ######################################################################
 
-results=/home/mic/python/cli_apps/cli_apps/yat_querying/results/*
+results=/home/mic/python/cli_apps/cli_apps/yay_querying/results/
 texts=/home/mic/python/cli_apps/cli_apps/yay_querying/package_files/*
 
 for file in ${texts}; do
     echo "$file"
     trunc_file=${file:61:-4}
-    echo "$trunc_file"
-    : '
+    echo "$trunc_file" 
     ftrans0="${results}${trunc_file}"
     echo "$ftrans"
-    '
+    
     # 1 - Write to file name, description and url..
-    sed -nre 's/Description     : (.*$)/\1/p' "$file"
-    sed -nre 's/URL             : (.*$)/\1/p' "$file"
-    sed -nre 's/Name            : (.*$)/\1/p' "$file"
+    sed -nre 's/Description     : (.*$)/\1/p' "$file" >> "$ftrans0"
+    sed -nre 's/URL             : (.*$)/\1/p' "$file" >> "$ftrans0"
+    sed -nre 's/Name            : (.*$)/\1/p' "$file" >> "$ftrans0"
 
 done

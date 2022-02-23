@@ -1,7 +1,9 @@
 """
-We'll get the results information from the file, and
-prepare it to be able to be uploaded to the db.
+We'll read the last file of the transient files in
+'clean_files', turn it into a list of tuples
+and send it to a MySQL database.
 """
+import os
 import subprocess
 
 import isort  # noqa: F401
@@ -25,51 +27,27 @@ snoop.install(watch_extras=[type_watch])
 
 @logger.catch
 @snoop
-def organize_results():
+def db_upload():
     """
-    Where we'll use the last function to
-    organize our text output.
-    """
-
-    with open("res3.txt", "r") as f:
-        data = f.readlines()
-
-    clean_data = [i.strip() for i in data]
-    print(clean_data)
-
-    upld_lst = []
-    batch_size = 3
-    for i in range(0, len(clean_data), batch_size):
-        package = clean_data[i : i + batch_size]  # noqa: E203
-        upld_lst.append(package)
-    print(upld_lst)
-
-    return upld_lst
-
-
-if __name__ == "__main__":
-    organize_results()
-
-
-@logger.catch
-@snoop
-def upload():
-    """
-    Where we uupload the content
-    to the db.
+    The database was previously created.
+    So its just the case of iterating
+    through the tuples, assign to each a
+    to a column and the upload is
+    complete.
     """
 
-    lst = organize_results()
+    folders = "/home/mic/python/cli_apps/cli_apps/yay_querying/results/"
+    paths = [os.path.join(folders, file) for file in os.listdir(folders)]
 
-    for i in lst:
-        name = i[2]
-        url = i[1]
-        presentation = i[0]
+    for file in paths:
+        name = file[2]
+        presentation = file[0]
+        url = file[1]
         answers = [name, presentation, url]
         try:
             conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
             cur = conn.cursor()
-            query = """ INSERT INTO cli_apps (name, presentation, url) VALUES (%s, %s, %s) """
+            query = "INSERT INTO cli_apps (name, presentation, url) VALUES (%s, %s, %s)"
             cur.execute(query, answers)
             conn.commit()
         except Error as e:
@@ -80,4 +58,4 @@ def upload():
 
 
 if __name__ == "__main__":
-    upload()
+    db_upload()
