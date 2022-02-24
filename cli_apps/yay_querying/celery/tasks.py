@@ -9,7 +9,7 @@ import snoop
 from crontab import CronTab
 from loguru import logger
 
-from app import app
+from app import app, crontab
 from db_upload import db_upload
 from query_builder import query_builder
 
@@ -44,3 +44,5 @@ def run():
     job = cron.new(command=f'{dunst} "cli_apps yay has updated and waits inspection."')
     job.minute.every(59)
     cron.write()
+
+    app.conf.beat_schedule = {"yay_cron": {"task": "tasks.run", "schedule": crontab(day_of_week=3)}}
