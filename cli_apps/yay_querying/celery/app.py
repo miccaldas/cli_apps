@@ -6,6 +6,7 @@ as the module to launch, when called.
 """
 from celery import Celery
 from celery.schedules import crontab
+from redisbeat import RedBeatSchedulerEntry, interval
 
 app = Celery(
     "celery",
@@ -13,7 +14,7 @@ app = Celery(
     broker="redis://localhost:6379/0",
     include=["main"],
     interval=crontab(day_of_week=3),
-    entry=RedBeatSchedulerEntry("yay_cron", "tasks.run", interval, app="celery"),  # noqa: F821
+    entry=RedBeatSchedulerEntry("yay_cron", "tasks.run", interval, app="celery"),
 )
 
 if __name__ == "__main__":
