@@ -12,8 +12,8 @@ app = Celery(
     backend="redis://localhost:6379/0",
     broker="redis://localhost:6379/0",
     include=["main"],
-    interval=crontab(date_of_week=3),
-    entry=RedBeatSvhedulerEntry("yay_cron", "tasks.run", interval, app="celery"),
+    interval=crontab(day_of_week=3),
+    entry=RedBeatSchedulerEntry("yay_cron", "tasks.run", interval, app="celery"),  # noqa: F821
 )
 
 if __name__ == "__main__":
