@@ -7,7 +7,14 @@ as the module to launch, when called.
 from celery import Celery
 from celery.schedules import crontab
 
-app = Celery("celery", backend="redis://localhost:6379/0", broker="redis://localhost:6379/0", include=["main"], redbeat_redis_url="redis://localhost:6379/0")
+app = Celery(
+    "celery",
+    backend="redis://localhost:6379/0",
+    broker="redis://localhost:6379/0",
+    include=["main"],
+    interval=crontab(date_of_week=3),
+    entry=RedBeatSvhedulerEntry("yay_cron", "tasks.run", interval, app="celery"),
+)
 
 if __name__ == "__main__":
     app.start()
