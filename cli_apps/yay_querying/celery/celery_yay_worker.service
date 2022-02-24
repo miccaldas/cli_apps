@@ -1,0 +1,13 @@
+[Unit]
+Description=Celery Task for Yay Updating.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mic/python/cli_apps/cli_apps/yay_querying/celery
+ExecStart=/usr/bin/celery -A celery worker -E --loglevel=INFO
+User=mic
+Group=mic
+Type=forking
+
+[Install]
+WantedBy=multi-user.target

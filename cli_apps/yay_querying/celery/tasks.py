@@ -9,7 +9,7 @@ import snoop
 from crontab import CronTab
 from loguru import logger
 
-import app
+from app import app
 from db_upload import db_upload
 from query_builder import query_builder
 
@@ -44,7 +44,3 @@ def run():
     job = cron.new(command=f'{dunst} "cli_apps yay has updated and waits inspection."')
     job.minute.every(59)
     cron.write()
-
-
-if __name__ == "__main__":
-    run()

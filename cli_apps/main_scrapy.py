@@ -5,7 +5,6 @@ import subprocess
 import isort  # noqa: F401
 import snoop
 from loguru import logger
-
 from scrapy_project import ScrapyProject
 
 fmt = "{time} - {name} - {level} - {message}"
