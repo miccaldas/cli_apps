@@ -1,5 +1,5 @@
 """
-We'll use yay's package information system
+We'll use pip's package information system
 to get information on installed packages.
 """
 import os
@@ -28,22 +28,32 @@ snoop.install(watch_extras=[type_watch])
 def query_builder():
     """
     We'll instantiate the lists
-    here, and then we'll pass its entries
-    through a subprocess command, that will
-    link to yay.
+    here, compare it to the old
+    name list, and keep only
+    new entries. Then we'll pass
+    these entries through a
+    subprocess command, that will
+    link to pip.
     """
 
-    name_path = "/home/mic/python/cli_apps/cli_apps/lists/arch/names_linux.txt"
+    cwd = os.getcwd()
+    name_path = f"{cwd}/lists/names_linux.txt"
+    old_name_path = f"{cwd}/lists/old_names_linux.txt"
 
     with open(name_path, "r") as f:
         names = f.readlines()
 
+    with open(old_name_path, "r") as f:
+        old_names = f.readlines()
+
     clean = [i.strip() for i in names]
     print(clean)
+    old_clean = [v.strip() for v in old_names]
 
     for name in clean:
-        cmd = f"yay -Si {name} > package_files/{name}.txt"
-        subprocess.run(cmd, shell=True)
+        if name not in old_clean:
+            cmd = f"pip show {name} > package_files/{name}.txt"
+            subprocess.run(cmd, shell=True)
 
 
 if __name__ == "__main__":

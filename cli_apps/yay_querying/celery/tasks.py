@@ -1,6 +1,8 @@
 """
-Main module of the yay update process.
+Module where we define the tasks
+of the yay update process.
 """
+
 import subprocess
 
 import click

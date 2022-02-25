@@ -1,6 +1,6 @@
 """
-We'll read the last file of the transient files in
-'clean_files', turn it into a list of tuples
+We'll read the files in 'results',
+turn it into a list of tuples
 and send it to a MySQL database.
 """
 import os
@@ -36,25 +36,30 @@ def db_upload():
     complete.
     """
 
-    folders = "/home/mic/python/cli_apps/cli_apps/yay_querying/results/"
+    folders = "/home/mic/python/cli_apps/cli_apps/results/"
     paths = [os.path.join(folders, file) for file in os.listdir(folders)]
 
     for file in paths:
-        name = file[2]
-        presentation = file[0]
-        url = file[1]
-        answers = [name, presentation, url]
-        try:
-            conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
-            cur = conn.cursor()
-            query = "INSERT INTO cli_apps (name, presentation, url) VALUES (%s, %s, %s)"
-            cur.execute(query, answers)
-            conn.commit()
-        except Error as e:
-            print("Error while connecting to db", e)
-        finally:
-            if conn:
-                conn.close()
+        with open(file, "r") as f:
+            fdata = f.readlines()
+            name = fdata[0].strip()
+            presentation = fdata[1].strip()
+            url = fdata[2].strip()
+            answers = [presentation, name]
+            print(answers)
+            try:
+                conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+                cur = conn.cursor()
+                query = "INSERT INTO cli_apps (name, presentation, url) VALUES ('%s', '%s', '%s')"
+                cur.execute(query)
+                print(query, answers)
+                print()
+                conn.commit()
+            except Error as e:
+                print("Error while connecting to db", e)
+            finally:
+                if conn:
+                    conn.close()
 
 
 if __name__ == "__main__":

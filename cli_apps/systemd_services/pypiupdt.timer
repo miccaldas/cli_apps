@@ -1,0 +1,10 @@
+[Unit]
+Description=Updating the scraped Pypi list.
+Requires=pypi_updt.service
+
+[Timer]
+Unit=pypi_updt.service
+OnCalendar=weekly
+
+[Install]
+WantedBy=timers.target

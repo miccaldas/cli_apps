@@ -1,0 +1,13 @@
+[Unit]
+Description=Updating the scraped Pypi list.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mic/python/cli_apps/cli_apps/
+ExecStart=/usr/bin/python3.10 main.py
+User=mic
+Group=mic
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

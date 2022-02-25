@@ -5,9 +5,11 @@ After=network.target
 [Service]
 WorkingDirectory=/home/mic/python/cli_apps/cli_apps/yay_querying/celery
 ExecStart=/usr/bin/celery -A celery worker -E --loglevel=INFO
+TimeOutStartSec=10200min
 User=mic
 Group=mic
-Type=forking
+Type=simple
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
