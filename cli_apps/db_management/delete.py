@@ -39,9 +39,10 @@ def delete():
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
         cur = conn.cursor()
-        query = " DELETE FROM bkmks WHERE id = " + ident
+        query = " DELETE FROM cli_apps WHERE id = " + ident
         cur.execute(query)
         conn.commit()
+        print(click.style(f" ID #{ident} was deleted.", fg="bright_green", bold=True))
 
     except Error as e:
         print("Error while connecting to db", e)

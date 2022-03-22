@@ -8,11 +8,10 @@ import subprocess
 import click
 import isort  # noqa: F401
 import snoop
-from crontab import CronTab
-from loguru import logger
-
 from app import app
+from crontab import CronTab
 from db_upload import db_upload
+from loguru import logger
 from query_builder import query_builder
 
 fmt = "{time} - {name} - {level} - {message}"

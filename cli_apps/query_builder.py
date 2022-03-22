@@ -8,6 +8,7 @@ import subprocess
 import isort  # noqa: F401
 import snoop
 from loguru import logger
+from snoop import pp
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
@@ -24,7 +25,7 @@ snoop.install(watch_extras=[type_watch])
 
 
 @logger.catch
-@snoop
+@snoop()
 def query_builder():
     """
     We'll instantiate the lists
@@ -51,7 +52,7 @@ def query_builder():
     old_clean = [v.strip() for v in old_names]
 
     for name in clean:
-        if name not in old_clean:
+        if pp(name not in old_clean):
             cmd = f"pip show {name} > package_files/{name}.txt"
             subprocess.run(cmd, shell=True)
 

@@ -43,8 +43,8 @@ def see():
             print(click.style(" [*] ID » ", fg="bright_red", bold=True), click.style(str(row[0]), fg="bright_yellow", bold=True))
             print(click.style(" [*] NAME » ", fg="bright_red", bold=True), click.style(str(row[1]), fg="bright_yellow", bold=True))
             print(click.style(" [*] PRESENTATION » ", fg="bright_red", bold=True), click.style(str(row[2]), fg="bright_yellow", bold=True))
-            print(click.style(" [*] URL ", fg="bright_red", bold=True), click.style(str(row[3]), fg="bright_yellow", bold=True))
-            print(click.style(" [*] TIME » ", fg="bright_red", bold=True), click.style(str(row[4]), fg="bright_yellow", bold=True))
+            print(click.style(" [*] URL ", fg="bright_red", bold=True), click.style(str(row[4]), fg="bright_yellow", bold=True))
+            print(click.style(" [*] TIME » ", fg="bright_red", bold=True), click.style(str(row[3]), fg="bright_yellow", bold=True))
             print("\n")
             conn.close()
     except Error as e:

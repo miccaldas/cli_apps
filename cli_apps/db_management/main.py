@@ -11,9 +11,10 @@ import sys
 import isort  # noqa: F401
 import questionary
 import snoop
+from loguru import logger
+
 from add import add
 from delete import delete
-from loguru import logger
 from search import search
 from see import see
 from update import update
