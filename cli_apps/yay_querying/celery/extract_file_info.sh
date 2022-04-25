@@ -13,12 +13,12 @@
 #                value as its filename.
 ######################################################################
 
-results=/home/mic/python/cli_apps/cli_apps/yay_querying/results/
-texts=/home/mic/python/cli_apps/cli_apps/yay_querying/package_files/*
+results=/home/mic/python/cli_apps/cli_apps/yay_querying/celery/results/
+texts=/home/mic/python/cli_apps/cli_apps/yay_querying/celery/package_files/*
 
 for file in ${texts}; do
     echo "$file"
-    trunc_file=${file:61:-4}
+    trunc_file=${file:69:-4}
     echo "$trunc_file" 
     ftrans0="${results}${trunc_file}"
     echo "$ftrans"

@@ -35,13 +35,14 @@ def add():
     name = input(click.style(" ++ Name? ++ ", fg="bright_yellow", bold=True))
     presentation = input(click.style(" ++ Presentation? ++ ", fg="bright_yellow", bold=True))
     url = input(click.style(" ++ URL? ++ ", fg="bright_yellow", bold=True))
+    tag = input(click.style(" ++ Tag? ++ ", fg="bright_yellow", bold=True))
 
-    answers = [name, presentation, url]
+    answers = [name, presentation, url, tag]
 
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
         cur = conn.cursor()
-        query = "INSERT INTO bkmks (name, presentation, url) VALUES (%s, %s, %s)"
+        query = "INSERT INTO bkmks (name, presentation, url, tag) VALUES (%s, %s, %s, %s)"
         cur.execute(query, answers)
         conn.commit()
 

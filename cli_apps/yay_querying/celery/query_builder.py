@@ -8,6 +8,7 @@ import subprocess
 import isort  # noqa: F401
 import snoop
 from loguru import logger
+from mysql.connector import Error, connect
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
@@ -27,21 +28,35 @@ snoop.install(watch_extras=[type_watch])
 @snoop
 def query_builder():
     """
-    We'll instantiate the lists
-    here, and then we'll pass its entries
-    through a subprocess command, that will
-    link to yay.
+    We'll open the list of packages installled
+    by pacman and the AUR and compare it to the
+    list of package names already in the db. We
+    take into account only the new entries, and
+    create the the corresponding package files.
     """
 
-    name_path = "/home/mic/python/cli_apps/cli_apps/lists/arch/names_linux.txt"
-
-    with open(name_path, "r") as f:
+    with open("yay_lst.txt", "r") as f:
         names = f.readlines()
 
     clean = [i.strip() for i in names]
-    print(clean)
+    print(f"clean is {clean}")
 
-    for name in clean:
+    try:
+        conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+        cur = conn.cursor()
+        query = "SELECT DISTINCT name FROM cli_apps"
+        cur.execute(query)
+        record = cur.fetchall()
+        records = [i for t in record for i in t]
+    except Error as e:
+        print("Error while connecting to db", e)
+    finally:
+        if conn:
+            conn.close()
+
+    new_lst = [v for v in clean if v not in records]
+
+    for name in new_lst:
         cmd = f"yay -Si {name} > package_files/{name}.txt"
         subprocess.run(cmd, shell=True)
 

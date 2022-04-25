@@ -8,10 +8,12 @@ import subprocess
 import click
 import isort  # noqa: F401
 import snoop
-from app import app
-from crontab import CronTab
-from db_upload import db_upload
 from loguru import logger
+
+from app import app
+from cron import cron
+from db_upload import db_upload
+from delete_transient_files import delete_transient_files
 from query_builder import query_builder
 
 fmt = "{time} - {name} - {level} - {message}"
@@ -31,17 +33,22 @@ snoop.install(watch_extras=[type_watch])
 @app.task
 def run():
     """
-    We call all the functions and send
-    a dunst warning, telling that the
-    process has ran.
+    We call all the functions and scripts that
+    source, treat, store and clean, the information
+    regarding the packages installed by pacman and AUR.
+    Aditionally it's created a notification to warn the
+    user that the update has ran.
     """
+    cmd = "/home/mic/python/cli_apps/cli_apps/yay_querying/celery/yay_lst.sh"
+    subprocess.run(cmd, shell=True)
 
     query_builder()
-    cmd = "/home/mic/python/cli_apps/cli_apps/yay_querying/extract_file_info.sh"
-    subprocess.run(cmd, shell=True)
+
+    cmd1 = "/home/mic/python/cli_apps/cli_apps/yay_querying/celery/extract_file_info.sh"
+    subprocess.run(cmd1, shell=True)
+
     db_upload()
-    cron = CronTab("mic")
-    dunst = "/usr/bin/dunstify"
-    job = cron.new(command=f'{dunst} "cli_apps yay has updated and waits inspection."')
-    job.minute.every(59)
-    cron.write()
+
+    delete_transient_files()
+
+    cron()

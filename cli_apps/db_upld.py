@@ -45,15 +45,12 @@ def db_upload():
             name = fdata[0].strip()
             presentation = fdata[1].strip()
             url = fdata[2].strip()
-            answers = [presentation, name]
-            print(answers)
+            answers = [name, presentation, url]
             try:
                 conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
                 cur = conn.cursor()
-                query = "INSERT INTO cli_apps (name, presentation, url) VALUES ('%s', '%s', '%s')"
-                cur.execute(query)
-                print(query, answers)
-                print()
+                query = "INSERT INTO cli_apps (name, presentation, url) VALUES (%s, %s, %s)"
+                cur.execute(query, answers)
                 conn.commit()
             except Error as e:
                 print("Error while connecting to db", e)

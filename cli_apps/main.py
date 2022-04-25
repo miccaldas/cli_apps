@@ -12,6 +12,7 @@ import snoop
 from crontab import CronTab
 from loguru import logger
 
+from cron import cron
 from db_upld import db_upload
 from delete import delete
 from query_builder import query_builder
@@ -58,7 +59,7 @@ def run():
     iterates through the names and puts them in
     command 'pip show'. The output is kept in
     files. the 'extract_file_info', takes the
-    three fields we're inteersted in, name,
+    three fields we're interested in, name,
     summary and location, and puts them in new
     files.
     'db_upload' will iterate through this files
@@ -75,7 +76,9 @@ def run():
 
     db_upload()
 
-    # delete()
+    delete()
+
+    cron()
 
 
 if __name__ == "__main__":

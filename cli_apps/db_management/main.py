@@ -12,6 +12,7 @@ import isort  # noqa: F401
 import questionary
 import snoop
 from loguru import logger
+from questionary import Style
 
 from add import add
 from delete import delete
@@ -43,8 +44,26 @@ def main():
     the request to the other
     functions.
     """
+
+    custom_style_package = Style(
+        [
+            ("qmark", "fg:#E4BAD4 bold"),
+            ("question", "fg:#F5E8C7 bold"),
+            ("answer", "fg:#F4C7AB bold"),
+            ("pointer", "fg:#F6D7A7 bold"),
+            ("highlighted", "fg:#E0C097 bold"),
+            ("selected", "fg:#D3E4CD bold"),
+            ("text", "fg:#F8F0DF bold"),
+        ]
+    )
+
     resposta = questionary.select(
-        "What do you want to do?", choices=["Add a Package", "Search for a Package", "See Packages", "Update a Package", "Delete a Package", "Exit"]
+        "What do you want to do?",
+        qmark="[++]",
+        pointer="»»",
+        use_indicator=True,
+        style=custom_style_package,
+        choices=["Add a Package", "Search for a Package", "See Packages", "Update a Package", "Delete a Package", "Exit"],
     ).ask()
 
     if resposta == "Add a Package":

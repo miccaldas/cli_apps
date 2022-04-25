@@ -36,15 +36,17 @@ def see():
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
         cur = conn.cursor()
-        query = """ SELECT * FROM cli_apps"""
+        query = """ SELECT * FROM cli_apps ORDER BY rand()"""
         cur.execute(query)
         records = cur.fetchall()
         for row in records:
-            print(click.style(" [*] ID » ", fg="bright_red", bold=True), click.style(str(row[0]), fg="bright_yellow", bold=True))
-            print(click.style(" [*] NAME » ", fg="bright_red", bold=True), click.style(str(row[1]), fg="bright_yellow", bold=True))
-            print(click.style(" [*] PRESENTATION » ", fg="bright_red", bold=True), click.style(str(row[2]), fg="bright_yellow", bold=True))
-            print(click.style(" [*] URL ", fg="bright_red", bold=True), click.style(str(row[4]), fg="bright_yellow", bold=True))
-            print(click.style(" [*] TIME » ", fg="bright_red", bold=True), click.style(str(row[3]), fg="bright_yellow", bold=True))
+            print(click.style(" [*] ID » ", fg="bright_green", bold=True), click.style(str(row[0]), fg="bright_white", bold=True))
+            print(click.style(" [*] NAME » ", fg="bright_green", bold=True), click.style(str(row[1]), fg="bright_white", bold=True))
+            print(click.style(" [*] PRESENTATION » ", fg="bright_green", bold=True), click.style(str(row[2]), fg="bright_white", bold=True))
+            print(click.style(" [*] URL ", fg="bright_green", bold=True), click.style(str(row[4]), fg="bright_white", bold=True))
+            print(click.style(" [*] TIME » ", fg="bright_green", bold=True), click.style(str(row[3]), fg="bright_white", bold=True))
+            print(click.style(" [*] TAG » ", fg="bright_green", bold=True), click.style(str(row[5]), fg="bright_white", bold=True))
+            print(click.style(" ------------------------------------------------------------ ", fg="bright_white", bold=True))
             print("\n")
             conn.close()
     except Error as e:

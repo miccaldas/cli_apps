@@ -1,7 +1,5 @@
 """
-We'll read the last file of the transient files in
-'clean_files', turn it into a list of tuples
-and send it to a MySQL database.
+We'll read the 'results' files, and send their content to the db.
 """
 import os
 import subprocess
@@ -31,30 +29,33 @@ def db_upload():
     """
     The database was previously created.
     So its just the case of iterating
-    through the tuples, assign to each a
-    to a column and the upload is
-    complete.
+    through the content lists and send
+    them to the db.
     """
 
-    folders = "/home/mic/python/cli_apps/cli_apps/yay_querying/results/"
+    folders = "/home/mic/python/cli_apps/cli_apps/yay_querying/celery/results/"
     paths = [os.path.join(folders, file) for file in os.listdir(folders)]
 
     for file in paths:
-        name = file[2]
-        presentation = file[0]
-        url = file[1]
-        answers = [name, presentation, url]
-        try:
-            conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
-            cur = conn.cursor()
-            query = "INSERT INTO cli_apps (name, presentation, url) VALUES (%s, %s, %s)"
-            cur.execute(query, answers)
-            conn.commit()
-        except Error as e:
-            print("Error while connecting to db", e)
-        finally:
-            if conn:
-                conn.close()
+        with open(file, "r") as f:
+            dat = f.readlines()
+            data = [i.strip() for i in dat]
+            if data != []:
+                name = data[2]
+                presentation = data[0]
+                url = data[1]
+                answers = [name, presentation, url]
+                try:
+                    conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+                    cur = conn.cursor()
+                    query = "INSERT INTO cli_apps (name, presentation, url) VALUES (%s, %s, %s)"
+                    cur.execute(query, answers)
+                    conn.commit()
+                except Error as e:
+                    print("Error while connecting to db", e)
+                finally:
+                    if conn:
+                        conn.close()
 
 
 if __name__ == "__main__":

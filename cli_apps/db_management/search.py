@@ -35,18 +35,20 @@ def search():
     """
 
     try:
-        busca = input(click.style(" What are you searching for? ", fg="bright_red", bold=True))
+        busca = input(click.style(" What are you searching for? ", fg="bright_white", bold=True))
         conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
         cur = conn.cursor()
-        query = " SELECT id, name, presentation, url, time FROM cli_apps WHERE MATCH(name, presentation) AGAINST('" + busca + "') "
+        query = " SELECT id, name, presentation, url, time, tag FROM cli_apps WHERE MATCH(name, presentation, tag) AGAINST('" + busca + "') "
         cur.execute(query)
         records = cur.fetchall()
         for row in records:
-            print(click.style(" [*] ID » ", fg="bright_yellow", bold=True), click.style(str(row[0]), fg="bright_red", bold=True))
-            print(click.style(" [*] NAME » ", fg="bright_yellow", bold=True), click.style(str(row[1]), fg="bright_red", bold=True))
-            print(click.style(" [*] PRESENTATION » ", fg="bright_yellow", bold=True), click.style(str(row[2]), fg="bright_red", bold=True))
-            print(click.style(" [*] URL » ", fg="bright_yellow", bold=True), click.style(str(row[3]), fg="bright_red", bold=True))
-            print(click.style(" [*] TIME » ", fg="bright_yellow", bold=True), click.style(str(row[4]), fg="bright_red", bold=True))
+            print(click.style(" [*] ID » ", fg="bright_white", bold=True), click.style(str(row[0]), fg="bright_green", bold=True))
+            print(click.style(" [*] NAME » ", fg="bright_white", bold=True), click.style(str(row[1]), fg="bright_green", bold=True))
+            print(click.style(" [*] PRESENTATION » ", fg="bright_white", bold=True), click.style(str(row[2]), fg="bright_green", bold=True))
+            print(click.style(" [*] URL » ", fg="bright_white", bold=True), click.style(str(row[3]), fg="bright_green", bold=True))
+            print(click.style(" [*] TIME » ", fg="bright_white", bold=True), click.style(str(row[4]), fg="bright_green", bold=True))
+            print(click.style(" [*] TAG » ", fg="bright_white", bold=True), click.style(str(row[5]), fg="bright_green", bold=True))
+            print(click.style(" ------------------------------------------------------ ", fg="bright_green", bold=True))
             print("\n")
     except Error as e:
         print("Error while connecting to db", e)
