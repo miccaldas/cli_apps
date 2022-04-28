@@ -21,7 +21,7 @@ for file in ${texts}; do
     trunc_file=${file:69:-4}
     echo "$trunc_file" 
     ftrans0="${results}${trunc_file}"
-    echo "$ftrans"
+    echo "$ftrans0"
     
     # 1 - Write to file name, description and url..
     sed -nre 's/Description     : (.*$)/\1/p' "$file" >> "$ftrans0"

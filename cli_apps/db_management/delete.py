@@ -35,7 +35,7 @@ def delete():
     the row id value.
     """
 
-    ident = input(click.style(" ID to delete? » ", fg="bright_red", bold=True))
+    ident = input(click.style(" ID to delete? » ", fg="bright_white", bold=True))
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
         cur = conn.cursor()

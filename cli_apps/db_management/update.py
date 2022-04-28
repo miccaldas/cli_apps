@@ -36,14 +36,14 @@ def update():
     right content.
     """
 
-    coluna = input(click.style(" Column? » ", fg="bright_red", bold=True))
-    ident = input(click.style(" ID? » ", fg="bright_red", bold=True))
-    print(click.style(" Write your update", fg="bright_red", bold=True))
+    coluna = input(click.style(" Column? » ", fg="bright_green", bold=True))
+    ident = input(click.style(" ID? » ", fg="bright_green", bold=True))
+    print(click.style(" Write your update", fg="bright_green", bold=True))
     time.sleep(0.3)
     update = click.edit()
 
     try:
-        conn = connect(host="localhost", user="mic", password="xxxx", database="ci_apps")
+        conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
         cur = conn.cursor()
         query = " UPDATE cli_apps SET " + coluna + " = '" + update + "' WHERE id = " + ident
         print(query)
