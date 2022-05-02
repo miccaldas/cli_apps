@@ -22,7 +22,7 @@ def cron():
 
     cron = CronTab("mic")
     dunst = "/usr/bin/dunstify"
-    job = cron.new(command=f'{dunst} "cli_apps yay has updated and waits inspection."')
+    job = cron.new(command=f'{dunst} "cli_apps yay has updated."')
     job.minute.every(59)
     cron.write()
 

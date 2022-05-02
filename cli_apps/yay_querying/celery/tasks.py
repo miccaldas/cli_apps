@@ -52,3 +52,7 @@ def run():
     delete_transient_files()
 
     cron()
+
+
+if __name__ == "__main__":
+    run()
