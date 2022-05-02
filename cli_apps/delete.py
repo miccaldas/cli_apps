@@ -39,19 +39,12 @@ def delete():
     cwd = os.getcwd()
     results = f"{cwd}/results"
     packs = f"{cwd}/package_files"
-    lsts = f"{cwd}/lists"
 
-    fldrs = [results, packs, lsts]
+    fldrs = [results, packs]
     for fld in fldrs:
-        if fld == lsts:
-            urls = [os.path.join(fld, fil) for fil in os.listdir(fld)]
-            for url in urls:
-                if url != "old_names_linux.txt\n":
-                    os.remove(url)
-        else:
-            paths = [os.path.join(fld, file) for file in os.listdir(fld)]
-            for path in paths:
-                os.remove(path)
+        paths = [os.path.join(fld, file) for file in os.listdir(fld)]
+        for path in paths:
+            os.remove(path)
 
 
 if __name__ == "__main__":

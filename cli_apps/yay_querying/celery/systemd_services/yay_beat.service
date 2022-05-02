@@ -1,5 +1,5 @@
 [Unit]
-Description=Celery Task for Yay Updating.
+Description=Runs backups of my folders.
 After=network.target
 
 [Service]

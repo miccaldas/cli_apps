@@ -92,7 +92,7 @@ def dunst():
     We'll use the code of the todo's
     app, to send a message, saying
     that pip update was done and
-    iinputed to the db.
+    inputed to the db.
     """
 
     cron = CronTab("mic")

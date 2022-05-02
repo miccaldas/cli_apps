@@ -8,11 +8,12 @@ import subprocess
 import click
 import isort  # noqa: F401
 import snoop
+from loguru import logger
+
 from app import app
 from cron import cron
 from db_upload import db_upload
 from delete_transient_files import delete_transient_files
-from loguru import logger
 from query_builder import query_builder
 
 fmt = "{time} - {name} - {level} - {message}"

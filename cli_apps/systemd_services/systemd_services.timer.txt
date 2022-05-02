@@ -1,0 +1,14 @@
+○ systemd_services.timer - Updating the scraped Pypi list.
+     Loaded: loaded (/usr/lib/systemd/system/systemd_services.timer; disabled; vendor preset: disabled)
+     Active: inactive (dead)
+    Trigger: n/a
+   Triggers: ● systemd_services.service
+
+Apr 30 18:28:20 micaldas-host systemd[1]: /usr/lib/systemd/system/systemd_services.timer:3: Failed to add dependency on <name_of_service>.service, ignoring: Invalid argument
+Apr 30 18:28:20 micaldas-host systemd[1]: /usr/lib/systemd/system/systemd_services.timer:6: Unit type not valid, ignoring: >name_of_service>.service
+Apr 30 18:28:20 micaldas-host systemd[1]: systemd_services.timer: Refusing to start, unit systemd_services.service to trigger not loaded.
+Apr 30 18:28:20 micaldas-host systemd[1]: Failed to start Updating the scraped Pypi list..
+Apr 30 18:28:20 micaldas-host systemd[1]: /usr/lib/systemd/system/systemd_services.timer:3: Failed to add dependency on <name_of_service>.service, ignoring: Invalid argument
+Apr 30 18:28:20 micaldas-host systemd[1]: /usr/lib/systemd/system/systemd_services.timer:6: Unit type not valid, ignoring: >name_of_service>.service
+Apr 30 18:28:20 micaldas-host systemd[1]: /usr/lib/systemd/system/systemd_services.timer:3: Failed to add dependency on <name_of_service>.service, ignoring: Invalid argument
+Apr 30 18:28:20 micaldas-host systemd[1]: /usr/lib/systemd/system/systemd_services.timer:6: Unit type not valid, ignoring: >name_of_service>.service
