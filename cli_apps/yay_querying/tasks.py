@@ -10,7 +10,6 @@ import isort  # noqa: F401
 import snoop
 from loguru import logger
 
-from app import app
 from cron import cron
 from db_upload import db_upload
 from delete_transient_files import delete_transient_files
@@ -30,7 +29,6 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-@app.task
 def run():
     """
     We call all the functions and scripts that

@@ -1,0 +1,13 @@
+[Unit]
+Description=Updates Yay app list.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mic/python/cli_apps/cli_aps/yay_querying
+ExecStart=/usr/bin/python3.10 tasks.py
+User=mic
+Group=mic
+
+[Install]
+WantedBy=multi-user.target
+

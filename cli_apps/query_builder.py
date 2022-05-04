@@ -48,7 +48,6 @@ def query_builder():
         old_names = f.readlines()
 
     clean = [i.strip() for i in names]
-    print(clean)
     old_clean = [v.strip() for v in old_names]
 
     for name in clean:

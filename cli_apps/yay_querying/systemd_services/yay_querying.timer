@@ -1,0 +1,11 @@
+[Unit]
+Description=Updating the Yay app list.
+Requires=yay_querying.service
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
