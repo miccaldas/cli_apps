@@ -10,9 +10,10 @@ import isort  # noqa: F401
 import snoop
 from loguru import logger
 
-from cron import cron
+from cront import crons
 from db_upload import db_upload
 from delete_transient_files import delete_transient_files
+from natural_language import natural_language
 from query_builder import query_builder
 
 fmt = "{time} - {name} - {level} - {message}"
@@ -29,7 +30,8 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-def run():
+@snoop
+def tasks():
     """
     We call all the functions and scripts that
     source, treat, store and clean, the information
@@ -37,20 +39,22 @@ def run():
     Aditionally it's created a notification to warn the
     user that the update has ran.
     """
-    cmd = "/home/mic/python/cli_apps/cli_apps/yay_querying/celery/yay_lst.sh"
+    cmd = "/home/mic/python/cli_apps/cli_apps/yay_querying/yay_lst.sh"
     subprocess.run(cmd, shell=True)
 
     query_builder()
 
-    cmd1 = "/home/mic/python/cli_apps/cli_apps/yay_querying/celery/extract_file_info.sh"
+    cmd1 = "/home/mic/python/cli_apps/cli_apps/yay_querying/extract_file_info.sh"
     subprocess.run(cmd1, shell=True)
 
     db_upload()
 
+    natural_language()
+
     delete_transient_files()
 
-    cron()
+    crons()
 
 
 if __name__ == "__main__":
-    run()
+    tasks()

@@ -33,7 +33,7 @@ def db_upload():
     them to the db.
     """
 
-    folders = "/home/mic/python/cli_apps/cli_apps/yay_querying/celery/results/"
+    folders = "/home/mic/python/cli_apps/cli_apps/yay_querying/results/"
     paths = [os.path.join(folders, file) for file in os.listdir(folders)]
 
     for file in paths:
