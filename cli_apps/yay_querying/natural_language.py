@@ -13,10 +13,6 @@ import snoop
 from loguru import logger
 from mysql.connector import Error, connect
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
-logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
-
 
 def type_watch(source, value):
     return "type({})".format(source), type(value)
@@ -25,7 +21,6 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-@logger.catch
 @snoop
 def natural_language():
     """
@@ -50,7 +45,11 @@ def natural_language():
                 fi = [i.strip() for i in files]
                 fil = str(fi)  # needed as nltk accepts only strings.
                 badchars = ".!?,'\":<>"
-                words = [word.strip(badchars) for word in fil.strip().split() if len(word) > 4]
+                words = [
+                    word.strip(badchars)
+                    for word in fil.strip().split()
+                    if len(word) > 4
+                ]
                 word_freq = {}
                 for word in words:
                     word_freq[word] = word_freq.get(word, 0) + 1
@@ -58,18 +57,27 @@ def natural_language():
                 tx.sort(reverse=True)
                 word_freq_sorted = [(k, v) for (v, k) in tx]
 
-                new_freq = [i for i in word_freq_sorted if i[0] != "None"]  # Shedding some of the words that are frequent but uninformative.
+                new_freq = [
+                    i for i in word_freq_sorted if i[0] != "None"
+                ]  # Shedding some of the words that are frequent but uninformative.
                 nnew_freq = [i for i in new_freq if i[0] != "KiB"]
                 nnnew_freq = [i for i in nnew_freq if i[0] != "MiB"]
 
                 tags = []
                 tag_id = []
-                tags.append(nnnew_freq[0][0])  # We use the two most frequent words as tags.
+                tags.append(
+                    nnnew_freq[0][0]
+                )  # We use the two most frequent words as tags.
                 tags.append(nnnew_freq[1][0])
                 tag_id.append((f"{file}", tags))
 
                 try:
-                    conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+                    conn = connect(
+                        host="localhost",
+                        user="mic",
+                        password="xxxx",
+                        database="cli_apps",
+                    )
                     cur = conn.cursor()
                     nam = tag_id[0][0][:-4]
                     tags = " ".join(map(str, tag_id[0][1]))

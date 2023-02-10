@@ -4,14 +4,17 @@ We'll read the 'results' files, and send their content to the db.
 import os
 import subprocess
 
-import isort  # noqa: F401
 import snoop
 from loguru import logger
 from mysql.connector import Error, connect
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
-logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
+logger.add(
+    "../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True
+)  # noqa: E501
+logger.add(
+    "../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True
+)  # noqa: E501
 
 subprocess.run(["isort", __file__])
 
@@ -46,7 +49,12 @@ def db_upload():
                 url = data[1]
                 answers = [name, presentation, url]
                 try:
-                    conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+                    conn = connect(
+                        host="localhost",
+                        user="mic",
+                        password="xxxx",
+                        database="cli_apps",
+                    )
                     cur = conn.cursor()
                     query = "INSERT INTO cli_apps (name, presentation, url) VALUES (%s, %s, %s)"
                     cur.execute(query, answers)
