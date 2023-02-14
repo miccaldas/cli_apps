@@ -2,7 +2,6 @@
 Module where we define the tasks
 of the yay update process.
 """
-
 import subprocess
 
 import click
@@ -17,8 +16,12 @@ from natural_language import natural_language
 from query_builder import query_builder
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
-logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
+logger.add(
+    "../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True
+)  # noqa: E501
+logger.add(
+    "../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True
+)  # noqa: E501
 
 subprocess.run(["isort", __file__])
 
@@ -30,7 +33,7 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def tasks():
     """
     We call all the functions and scripts that
@@ -52,7 +55,6 @@ def tasks():
     natural_language()
 
     delete_transient_files()
-
     crons()
 
 
