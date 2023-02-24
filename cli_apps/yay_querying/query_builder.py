@@ -7,12 +7,8 @@ import subprocess
 
 import isort  # noqa: F401
 import snoop
-from loguru import logger
+from db_decorator.db_information import db_information
 from mysql.connector import Error, connect
-
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
-logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
 
 subprocess.run(["isort", __file__])
 
@@ -24,8 +20,8 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-@logger.catch
 @snoop
+@db_information
 def query_builder():
     """
     We'll open the list of packages installled
@@ -42,7 +38,9 @@ def query_builder():
     print(f"clean is {clean}")
 
     try:
-        conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+        conn = connect(
+            host="localhost", user="mic", password="xxxx", database="cli_apps"
+        )
         cur = conn.cursor()
         query = "SELECT DISTINCT name FROM cli_apps"
         cur.execute(query)

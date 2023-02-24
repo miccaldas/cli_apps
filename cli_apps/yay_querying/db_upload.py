@@ -3,18 +3,11 @@ We'll read the 'results' files, and send their content to the db.
 """
 import os
 import subprocess
-
+from db_decorator.db_information import db_information
 import snoop
-from loguru import logger
+
 from mysql.connector import Error, connect
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add(
-    "../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True
-)  # noqa: E501
-logger.add(
-    "../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True
-)  # noqa: E501
 
 subprocess.run(["isort", __file__])
 
@@ -26,8 +19,8 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-@logger.catch
 @snoop
+@db_information
 def db_upload():
     """
     The database was previously created.
