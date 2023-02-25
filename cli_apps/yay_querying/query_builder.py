@@ -20,7 +20,7 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 @db_information
 def query_builder():
     """
@@ -47,10 +47,15 @@ def query_builder():
         record = cur.fetchall()
         records = [i for t in record for i in t]
     except Error as e:
+        err_msg = "Error while connecting to db", e
         print("Error while connecting to db", e)
+        if err_msg:
+            return query, e
     finally:
         if conn:
             conn.close()
+
+        return query
 
     new_lst = [v for v in clean if v not in records]
 
