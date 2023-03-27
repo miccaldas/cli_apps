@@ -5,10 +5,9 @@ take a random entry from the database and show its
 webpage in a browser window.
 """
 import webbrowser
-from db_decorator.db_information import db_information
 from mysql.connector import Error, connect
 
-@db_information
+
 def app_reminder():
     """
     Opens automatically the url.

@@ -3,24 +3,20 @@ We'll read the 'results' files, and send their content to the db.
 """
 import os
 import subprocess
-from db_decorator.db_information import db_information
-import snoop
+#import snoop
 
 from mysql.connector import Error, connect
 
 
-subprocess.run(["isort", __file__])
+
+# def type_watch(source, value):
+    # return "type({})".format(source), type(value)
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# snoop.install(watch_extras=[type_watch])
 
 
-snoop.install(watch_extras=[type_watch])
-
-
-@snoop
-@db_information
+# @snoop
 def db_upload():
     """
     The database was previously created.

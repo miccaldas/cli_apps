@@ -5,25 +5,13 @@ of the yay update process.
 import subprocess
 
 import click
-import isort  # noqa: F401
 import snoop
-from loguru import logger
 
 from cront import crons
 from db_upload import db_upload
 from delete_transient_files import delete_transient_files
 from natural_language import natural_language
 from query_builder import query_builder
-
-fmt = "{time} - {name} - {level} - {message}"
-logger.add(
-    "../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True
-)  # noqa: E501
-logger.add(
-    "../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True
-)  # noqa: E501
-
-subprocess.run(["isort", __file__])
 
 
 def type_watch(source, value):
@@ -33,7 +21,7 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-# @snoop
+@snoop
 def tasks():
     """
     We call all the functions and scripts that

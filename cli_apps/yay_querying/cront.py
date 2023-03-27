@@ -1,17 +1,17 @@
 """Creates cron notification saying that yay update was ran."""
 import requests
-import snoop
+#import snoop
 from crontab import CronTab
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def crons():
     """We'll use dunst for the notification."""
 

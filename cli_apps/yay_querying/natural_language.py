@@ -9,19 +9,18 @@ in the package's presentation, and use them as tags.
 import os
 
 import nltk
-import snoop
-from loguru import logger
+
+# import snoop
 from mysql.connector import Error, connect
 
-
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
-
-
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
 
-@snoop
+# snoop.install(watch_extras=[type_watch])
+
+
+# @snoop
 def natural_language():
     """
     We use the text on the 'package_files' files, as the
@@ -93,7 +92,7 @@ def natural_language():
                 finally:
                     if conn:
                         conn.close()
-                    
+
                     return query
 
 

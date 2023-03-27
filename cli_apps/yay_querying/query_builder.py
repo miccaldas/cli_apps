@@ -5,23 +5,18 @@ to get information on installed packages.
 import os
 import subprocess
 
-import isort  # noqa: F401
-import snoop
-from db_decorator.db_information import db_information
+#import snoop
 from mysql.connector import Error, connect
 
-subprocess.run(["isort", __file__])
+
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
-
-
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
 # @snoop
-@db_information
 def query_builder():
     """
     We'll open the list of packages installled

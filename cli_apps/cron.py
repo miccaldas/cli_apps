@@ -1,22 +1,16 @@
 """Creates cron notification saying that pip update was ran."""
-import snoop
-from loguru import logger
+#import snoop
 from crontab import CronTab
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
-logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)  # noqa: E501
+
+#def type_watch(source, value):
+ #   return "type({})".format(source), type(value)
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+#snoop.install(watch_extras=[type_watch])
 
 
-snoop.install(watch_extras=[type_watch])
-
-
-@logger.catch
-@snoop
+#@snoop
 def cron():
     """We'll use dunst for the notification."""
 
