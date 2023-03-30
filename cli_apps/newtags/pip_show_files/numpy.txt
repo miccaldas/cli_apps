@@ -1,0 +1,49 @@
+Name: numpy
+Version: 1.24.2
+Summary: Fundamental package for array computing in Python
+Home-page: https://www.numpy.org
+Author: Travis E. Oliphant et al.
+Author-email: 
+License: BSD-3-Clause
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: blis, multi-rake, pandas, scipy, thinc, yake
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Science/Research
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Programming Language :: C
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+  Topic :: Software Development
+  Topic :: Scientific/Engineering
+  Typing :: Typed
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX
+  Operating System :: Unix
+  Operating System :: MacOS
+Entry-points:
+  [array_api]
+  numpy = numpy.array_api
+  
+  [console_scripts]
+  f2py = numpy.f2py.f2py2e:main
+  f2py3 = numpy.f2py.f2py2e:main
+  f2py3.10 = numpy.f2py.f2py2e:main
+  
+  [pyinstaller40]
+  hook-dirs = numpy:_pyinstaller_hooks_dir
+  
+Project-URLs:
+  Bug Tracker, https://github.com/numpy/numpy/issues
+  Documentation, https://numpy.org/doc/1.24
+  Source Code, https://github.com/numpy/numpy

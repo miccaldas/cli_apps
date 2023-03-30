@@ -1,0 +1,41 @@
+Name: twine
+Version: 4.0.2
+Summary: Collection of utilities for publishing packages on PyPI
+Home-page: https://twine.readthedocs.io/
+Author: Donald Stufft and individual contributors
+Author-email: donald@stufft.io
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: importlib-metadata, keyring, pkginfo, readme-renderer, requests, requests-toolbelt, rfc3986, rich, urllib3
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Natural Language :: English
+  Operating System :: MacOS :: MacOS X
+  Operating System :: POSIX
+  Operating System :: POSIX :: BSD
+  Operating System :: POSIX :: Linux
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+Entry-points:
+  [console_scripts]
+  twine = twine.__main__:main
+  
+  [twine.registered_commands]
+  check = twine.commands.check:main
+  register = twine.commands.register:main
+  upload = twine.commands.upload:main
+Project-URLs:
+  Source, https://github.com/pypa/twine/
+  Documentation, https://twine.readthedocs.io/en/latest/
+  Packaging tutorial, https://packaging.python.org/tutorials/packaging-projects/

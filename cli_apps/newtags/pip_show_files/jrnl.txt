@@ -1,0 +1,31 @@
+Name: jrnl
+Version: 2.8.4
+Summary: Collect your thoughts and notes without leaving the command line.
+Home-page: https://jrnl.sh
+Author: jrnl contributors
+Author-email: jrnl-sh@googlegroups.com
+License: GPL-3.0-only
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: ansiwrap, asteval, colorama, cryptography, keyring, parsedatetime, python-dateutil, pytz, pyxdg, pyyaml, tzlocal
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: Console
+  License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Topic :: Office/Business :: News/Diary
+Entry-points:
+  [console_scripts]
+  jrnl=jrnl.cli:cli
+  
+Project-URLs:
+  Documentation, https://jrnl.sh
+  Funding, https://opencollective.com/jrnl
+  Issue Tracker, https://github.com/jrnl-org/jrnl/issues
+  Repository, https://github.com/jrnl-org/jrnl

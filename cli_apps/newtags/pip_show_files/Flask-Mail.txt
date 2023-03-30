@@ -1,0 +1,23 @@
+Name: Flask-Mail
+Version: 0.9.1
+Summary: Flask extension for sending email
+Home-page: https://github.com/rduplain/flask-mail
+Author: Dan Jacob
+Author-email: danjac354@gmail.com
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: blinker, Flask
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Environment :: Web Environment
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Topic :: Internet :: WWW/HTTP :: Dynamic Content
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

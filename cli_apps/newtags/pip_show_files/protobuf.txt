@@ -1,0 +1,21 @@
+Name: protobuf
+Version: 3.20.3
+Summary: Protocol Buffers
+Home-page: https://developers.google.com/protocol-buffers/
+Author: 
+Author-email: 
+License: BSD-3-Clause
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: mysql-connector-python
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+Entry-points:
+Project-URLs:

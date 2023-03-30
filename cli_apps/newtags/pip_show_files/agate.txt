@@ -1,0 +1,33 @@
+Name: agate
+Version: 1.7.1
+Summary: A data analysis library that is optimized for humans instead of machines.
+Home-page: http://agate.readthedocs.org/
+Author: Christopher Groskopf
+Author-email: chrisgroskopf@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: Babel, isodate, leather, parsedatetime, python-slugify, pytimeparse
+Required-by: agate-dbf, agate-excel, agate-sql, csvkit
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Framework :: IPython
+  Intended Audience :: Developers
+  Intended Audience :: Science/Research
+  License :: OSI Approved :: MIT License
+  Natural Language :: English
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Scientific/Engineering :: Information Analysis
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:
+  Source, https://github.com/wireservice/agate

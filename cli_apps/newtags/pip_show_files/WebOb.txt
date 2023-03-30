@@ -1,0 +1,28 @@
+Name: WebOb
+Version: 1.8.7
+Summary: WSGI request and response object
+Home-page: http://webob.org/
+Author: Ian Bicking
+Author-email: ianb@colorstudy.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: pyramid, WebTest
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Topic :: Internet :: WWW/HTTP :: WSGI
+  Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+  Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:

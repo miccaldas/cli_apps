@@ -1,0 +1,23 @@
+Name: iso8601
+Version: 1.1.0
+Summary: Simple module to parse ISO 8601 dates
+Home-page: https://github.com/micktwomey/pyiso8601
+Author: Michael Twomey
+Author-email: mick@twomeylee.name
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: colander, deform, keystoneauth1, oslo.utils
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+Entry-points:
+Project-URLs:
+  Documentation, https://pyiso8601.readthedocs.io/en/latest/
+  Repository, https://github.com/micktwomey/pyiso8601

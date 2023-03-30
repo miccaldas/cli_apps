@@ -1,0 +1,18 @@
+Name: newspaper3k
+Version: 0.2.8
+Summary: Simplified python article discovery & extraction.
+Home-page: https://github.com/codelucas/newspaper/
+Author: Lucas Ou-Yang
+Author-email: lucasyangpersonal@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: beautifulsoup4, cssselect, feedfinder2, feedparser, jieba3k, lxml, nltk, Pillow, python-dateutil, PyYAML, requests, tinysegmenter, tldextract
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Programming Language :: Python :: 3
+  Natural Language :: English
+  Intended Audience :: Developers
+Entry-points:
+Project-URLs:

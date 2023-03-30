@@ -1,0 +1,43 @@
+Name: pbr
+Version: 5.11.1
+Summary: Python Build Reasonableness
+Home-page: https://docs.openstack.org/pbr/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: keystoneauth1, os-service-types, oslo.i18n, oslo.serialization, python-keystoneclient, stevedore
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Environment :: OpenStack
+  Intended Audience :: Developers
+  Intended Audience :: Information Technology
+  License :: OSI Approved :: Apache Software License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+Entry-points:
+  [console_scripts]
+  pbr = pbr.cmd.main:main
+  
+  [distutils.setup_keywords]
+  pbr = pbr.core:pbr
+  
+  [egg_info.writers]
+  pbr.json = pbr.pbr_json:write_pbr_json
+  
+Project-URLs:
+  Bug Tracker, https://bugs.launchpad.net/pbr/
+  Documentation, https://docs.openstack.org/pbr/
+  Source Code, https://opendev.org/openstack/pbr

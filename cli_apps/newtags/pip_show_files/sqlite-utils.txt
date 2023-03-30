@@ -1,0 +1,33 @@
+Name: sqlite-utils
+Version: 3.30
+Summary: CLI tool and Python utility functions for manipulating SQLite databases
+Home-page: https://github.com/simonw/sqlite-utils
+Author: Simon Willison
+Author-email: 
+License: Apache License, Version 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: click, click-default-group-wheel, python-dateutil, sqlite-fts4, tabulate
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Intended Audience :: Science/Research
+  Intended Audience :: End Users/Desktop
+  Topic :: Database
+  License :: OSI Approved :: Apache Software License
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+Entry-points:
+  [console_scripts]
+  sqlite-utils = sqlite_utils.cli:cli
+Project-URLs:
+  Documentation, https://sqlite-utils.datasette.io/en/stable/
+  Changelog, https://sqlite-utils.datasette.io/en/stable/changelog.html
+  Source code, https://github.com/simonw/sqlite-utils
+  Issues, https://github.com/simonw/sqlite-utils/issues
+  CI, https://github.com/simonw/sqlite-utils/actions

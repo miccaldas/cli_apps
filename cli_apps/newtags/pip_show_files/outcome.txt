@@ -1,0 +1,31 @@
+Name: outcome
+Version: 1.2.0
+Summary: Capture the outcome of Python function calls.
+Home-page: https://github.com/python-trio/outcome
+Author: Frazer McLean
+Author-email: frazer@frazermclean.co.uk
+License: MIT OR Apache-2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: attrs
+Required-by: trio
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Framework :: Trio
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  License :: OSI Approved :: Apache Software License
+  Operating System :: POSIX :: Linux
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:
+  Documentation, https://outcome.readthedocs.io/en/latest/
+  Chat, https://gitter.im/python-trio/general

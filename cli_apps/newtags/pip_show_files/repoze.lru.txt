@@ -1,0 +1,27 @@
+Name: repoze.lru
+Version: 0.7
+Summary: A tiny LRU cache implementation and decorator
+Home-page: http://www.repoze.org
+Author: Agendaless Consulting
+Author-email: repoze-dev@lists.repoze.org
+License: BSD-derived (http://www.repoze.org/LICENSE.txt)
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.0
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  License :: Repoze Public License
+Entry-points:
+  
+Project-URLs:

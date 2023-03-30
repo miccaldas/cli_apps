@@ -1,0 +1,4 @@
+Home-page: https://github.com/newville/asteval
+  Source, https://github.com/newville/asteval
+  Documentation, https://newville.github.io/asteval/
+  Tracker, https://github.com/newville/asteval/issues

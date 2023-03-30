@@ -1,0 +1,20 @@
+Name: cement
+Version: 3.0.8
+Summary: Application Framework for Python
+Home-page: https://builtoncement.com
+Author: Data Folk Labs, LLC
+Author-email: derks@datafolklabs.com
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+  [console_scripts]
+  cement = cement.cli.main:main
+  
+Project-URLs:
+  Documentation, https://docs.builtoncement.com
+  Source, https://github.com/datafolklabs/cement

@@ -1,0 +1,15 @@
+Name: PyQt5-Qt5
+Version: 5.15.2
+Summary: The subset of a Qt installation needed by PyQt5.
+Home-page: https://www.riverbankcomputing.com/software/pyqt/
+Author: Riverbank Computing Limited
+Author-email: info@riverbankcomputing.com
+License: LGPL v3
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: PyQt5
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+Project-URLs:

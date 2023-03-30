@@ -1,0 +1,38 @@
+Name: aiopg
+Version: 1.4.0
+Summary: Postgres integration with asyncio.
+Home-page: https://aiopg.readthedocs.io
+Author: Andrew Svetlov
+Author-email: andrew.svetlov@gmail.com
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: async-timeout, psycopg2-binary
+Required-by: procrastinate
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: BSD License
+  Intended Audience :: Developers
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Operating System :: POSIX
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Environment :: Web Environment
+  Development Status :: 5 - Production/Stable
+  Topic :: Database
+  Topic :: Database :: Front-Ends
+  Framework :: AsyncIO
+Entry-points:
+Project-URLs:
+  Chat: Gitter, https://gitter.im/aio-libs/Lobby
+  CI: GA, https://github.com/aio-libs/aiopg/actions?query=workflow%3ACI
+  Coverage: codecov, https://codecov.io/gh/aio-libs/aiopg
+  Docs: RTD, https://aiopg.readthedocs.io
+  GitHub: issues, https://github.com/aio-libs/aiopg/issues
+  GitHub: repo, https://github.com/aio-libs/aiopg

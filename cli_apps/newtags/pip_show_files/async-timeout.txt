@@ -1,0 +1,33 @@
+Name: async-timeout
+Version: 4.0.2
+Summary: Timeout context manager for asyncio programs
+Home-page: https://github.com/aio-libs/async-timeout
+Author: Andrew Svetlov <andrew.svetlov@gmail.com>
+Author-email: andrew.svetlov@gmail.com
+License: Apache 2
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: aiohttp, aiopg, redis
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Topic :: Software Development :: Libraries
+  Framework :: AsyncIO
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+Entry-points:
+Project-URLs:
+  Chat: Gitter, https://gitter.im/aio-libs/Lobby
+  CI: GitHub Actions, https://github.com/aio-libs/async-timeout/actions
+  Coverage: codecov, https://codecov.io/github/aio-libs/async-timeout
+  GitHub: issues, https://github.com/aio-libs/async-timeout/issues
+  GitHub: repo, https://github.com/aio-libs/async-timeout

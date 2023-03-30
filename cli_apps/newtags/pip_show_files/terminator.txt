@@ -1,0 +1,15 @@
+Name: terminator
+Version: 2.1.2
+Summary: Terminator, the robot future of terminals
+Home-page: https://github.com/gnome-terminator/terminator
+Author: Chris Jones
+Author-email: cmsj@tenshu.net
+License: GNU GPL v2
+Location: /usr/lib/python3.10/site-packages
+Requires: configobj, dbus-python, psutil, pycairo, pygobject
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+Entry-points:
+Project-URLs:

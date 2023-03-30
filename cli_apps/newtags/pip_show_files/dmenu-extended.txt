@@ -1,0 +1,44 @@
+Name: dmenu-extended
+Version: 1.2.1
+Summary: A wrapper for dmenu that implements plugins and fast file/folder searching
+Home-page: 
+Author: 
+Author-email: Mark Hedley Jones <markhedleyjones@gmail.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2013 Mark Hedley Jones
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+        the Software, and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+        FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+        COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+        IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Programming Language :: Python :: 3
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+Entry-points:
+  [console_scripts]
+  dmenu_extended_cache_build = dmenu_extended.main:build_cache
+  dmenu_extended_install_systemd_service = dmenu_extended.install_systemd_service:run
+  dmenu_extended_run = dmenu_extended.main:run
+Project-URLs:
+  Homepage, https://github.com/MarkHedleyJones/dmenu-extended
+  Bug Tracker, https://github.com/MarkHedleyJones/dmenu-extended/issues

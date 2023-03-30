@@ -1,0 +1,19 @@
+Name: youtube-search
+Version: 2.1.2
+Summary: Perform YouTube video searches without the API
+Home-page: https://github.com/joetats/youtube_search
+Author: Joe Tatusko
+Author-email: tatuskojc@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: requests
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+Entry-points:
+Project-URLs:

@@ -1,0 +1,34 @@
+Name: procrastinate
+Version: 0.27.0
+Summary: Postgres-based distributed task processing library
+Home-page: https://procrastinate.readthedocs.io/
+Author: Joachim Jablon
+Author-email: 
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: aiopg, attrs, click, croniter, psycopg2-binary, python-dateutil
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+Entry-points:
+  [console_scripts]
+  procrastinate=procrastinate.cli:main
+  
+Project-URLs:
+  Documentation, https://procrastinate.readthedocs.io/
+  Repository, https://github.com/procrastinate-org/procrastinate/

@@ -1,0 +1,46 @@
+Name: invoke
+Version: 2.0.0
+Summary: Pythonic task execution
+Home-page: https://pyinvoke.org
+Author: Jeff Forcier
+Author-email: jeff@bitprophet.org
+License: BSD
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Intended Audience :: Developers
+  Intended Audience :: System Administrators
+  License :: OSI Approved :: BSD License
+  Operating System :: POSIX
+  Operating System :: Unix
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Software Development
+  Topic :: Software Development :: Build Tools
+  Topic :: Software Development :: Libraries
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: System :: Software Distribution
+  Topic :: System :: Systems Administration
+Entry-points:
+  [console_scripts]
+  inv = invoke.main:program.run
+  invoke = invoke.main:program.run
+Project-URLs:
+  Docs, https://docs.pyinvoke.org
+  Source, https://github.com/pyinvoke/invoke
+  Issues, https://github.com/pyinvoke/invoke/issues
+  Changelog, https://www.pyinvoke.org/changelog.html
+  CI, https://app.circleci.com/pipelines/github/pyinvoke/invoke

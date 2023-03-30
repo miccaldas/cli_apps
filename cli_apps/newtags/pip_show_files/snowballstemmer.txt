@@ -1,0 +1,63 @@
+Name: snowballstemmer
+Version: 2.2.0
+Summary: This package provides 29 stemmers for 28 languages generated from Snowball algorithms.
+Home-page: https://github.com/snowballstem/snowball
+Author: Snowball Developers
+Author-email: snowball-discuss@lists.tartarus.org
+License: BSD-3-Clause
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Natural Language :: Arabic
+  Natural Language :: Basque
+  Natural Language :: Catalan
+  Natural Language :: Danish
+  Natural Language :: Dutch
+  Natural Language :: English
+  Natural Language :: Finnish
+  Natural Language :: French
+  Natural Language :: German
+  Natural Language :: Greek
+  Natural Language :: Hindi
+  Natural Language :: Hungarian
+  Natural Language :: Indonesian
+  Natural Language :: Irish
+  Natural Language :: Italian
+  Natural Language :: Lithuanian
+  Natural Language :: Nepali
+  Natural Language :: Norwegian
+  Natural Language :: Portuguese
+  Natural Language :: Romanian
+  Natural Language :: Russian
+  Natural Language :: Serbian
+  Natural Language :: Spanish
+  Natural Language :: Swedish
+  Natural Language :: Tamil
+  Natural Language :: Turkish
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Database
+  Topic :: Internet :: WWW/HTTP :: Indexing/Search
+  Topic :: Text Processing :: Indexing
+  Topic :: Text Processing :: Linguistic
+Entry-points:
+Project-URLs:

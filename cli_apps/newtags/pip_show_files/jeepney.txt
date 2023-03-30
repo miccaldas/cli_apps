@@ -1,0 +1,19 @@
+Name: jeepney
+Version: 0.8.0
+Summary: Low-level, pure Python DBus protocol wrapper.
+Home-page: https://gitlab.com/takluyver/jeepney
+Author: Thomas Kluyver
+Author-email: thomas@kluyver.me.uk
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: keyring, SecretStorage
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Topic :: Desktop Environment
+Entry-points:
+Project-URLs:
+  Documentation, https://jeepney.readthedocs.io/en/latest/

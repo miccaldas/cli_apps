@@ -1,0 +1,41 @@
+Name: Django
+Version: 4.1.7
+Summary: A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+Home-page: https://www.djangoproject.com/
+Author: Django Software Foundation
+Author-email: foundation@djangoproject.com
+License: BSD-3-Clause
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: asgiref, sqlparse
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Web Environment
+  Framework :: Django
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Internet :: WWW/HTTP
+  Topic :: Internet :: WWW/HTTP :: Dynamic Content
+  Topic :: Internet :: WWW/HTTP :: WSGI
+  Topic :: Software Development :: Libraries :: Application Frameworks
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+  [console_scripts]
+  django-admin = django.core.management:execute_from_command_line
+  
+Project-URLs:
+  Documentation, https://docs.djangoproject.com/
+  Release notes, https://docs.djangoproject.com/en/stable/releases/
+  Funding, https://www.djangoproject.com/fundraising/
+  Source, https://github.com/django/django
+  Tracker, https://code.djangoproject.com/

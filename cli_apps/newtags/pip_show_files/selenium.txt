@@ -1,0 +1,28 @@
+Name: selenium
+Version: 4.8.3
+Summary: 
+Home-page: https://www.selenium.dev
+Author: 
+Author-email: 
+License: Apache 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: certifi, trio, trio-websocket, urllib3
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Operating System :: POSIX
+  Operating System :: Microsoft :: Windows
+  Operating System :: MacOS :: MacOS X
+  Topic :: Software Development :: Testing
+  Topic :: Software Development :: Libraries
+  Programming Language :: Python
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+Entry-points:
+Project-URLs:

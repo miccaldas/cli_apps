@@ -1,0 +1,27 @@
+Name: ordered-set
+Version: 4.1.0
+Summary: An OrderedSet is a custom MutableSet that remembers its order, so that every
+Home-page: 
+Author: 
+Author-email: Elia Robyn Lake <gh@arborelia.net>
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: setuptools
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:
+  Home, https://github.com/rspeer/ordered-set

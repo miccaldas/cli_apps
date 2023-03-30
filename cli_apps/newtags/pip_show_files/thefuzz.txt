@@ -1,0 +1,23 @@
+Name: thefuzz
+Version: 0.19.0
+Summary: Fuzzy string matching in python
+Home-page: https://github.com/seatgeek/thefuzz
+Author: Adam Cohen
+Author-email: adam@seatgeek.com
+License: GPLv2
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+  Programming Language :: Python
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+Entry-points:
+Project-URLs:

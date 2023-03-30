@@ -1,0 +1,31 @@
+Name: spark-parser
+Version: 1.8.9
+Summary: An Earley-Algorithm Context-free grammar Parser Toolkit
+Home-page: https://github.com/rocky/python-spark/
+Author: Rocky Bernstein
+Author-email: rb@dustyfeet.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: click
+Required-by: decompyle3, trepan3k, uncompyle6
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2.3
+  Programming Language :: Python :: 2.4
+  Programming Language :: Python :: 2.5
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.2
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Topic :: Software Development :: Code Generators
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

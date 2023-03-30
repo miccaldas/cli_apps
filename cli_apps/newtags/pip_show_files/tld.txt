@@ -1,0 +1,36 @@
+Name: tld
+Version: 0.13
+Summary: Extract the top-level domain (TLD) from the URL given.
+Home-page: https://github.com/barseghyanartur/tld
+Author: Artur Barseghyan
+Author-email: artur.barseghyan@gmail.com
+License: MPL-1.1 OR GPL-2.0-only OR LGPL-2.1-or-later
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: courlan
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Environment :: Web Environment
+  Intended Audience :: Developers
+  Operating System :: OS Independent
+  Development Status :: 5 - Production/Stable
+  Topic :: Internet
+  License :: OSI Approved :: Mozilla Public License 1.1 (MPL 1.1)
+  License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+  License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Entry-points:
+  [console_scripts]
+  update-tld-names = tld.utils:update_tld_names_cli
+Project-URLs:
+  Bug Tracker, https://github.com/barseghyanartur/tld/issues
+  Documentation, https://tld.readthedocs.io/
+  Source Code, https://github.com/barseghyanartur/tld/
+  Changelog, https://tld.readthedocs.io/en/latest/changelog.html

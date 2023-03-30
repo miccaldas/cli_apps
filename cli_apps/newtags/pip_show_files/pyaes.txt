@@ -1,0 +1,17 @@
+Name: pyaes
+Version: 1.6.1
+Summary: Pure-Python Implementation of the AES block-cipher and common modes of operation
+Home-page: https://github.com/ricmoo/pyaes
+Author: Richard Moore
+Author-email: pyaes@ricmoo.com
+License: License :: OSI Approved :: MIT License
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: mycli
+Metadata-Version: 1.1
+Installer: 
+Classifiers:
+  Topic :: Security :: Cryptography
+  License :: OSI Approved :: MIT License
+Entry-points:
+Project-URLs:

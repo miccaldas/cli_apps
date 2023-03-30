@@ -1,0 +1,15 @@
+Name: team
+Version: 1.0
+Summary: Python wrapper for teaming lib.
+Home-page: 
+Author: Jiří Župka
+Author-email: jzupka@redhat.com
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+Entry-points:
+Project-URLs:

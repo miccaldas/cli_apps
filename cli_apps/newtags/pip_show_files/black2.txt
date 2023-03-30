@@ -1,0 +1,34 @@
+ black
+ 23.3.0
+ The uncompromising code formatter.
+ 
+ 
+ Łukasz Langa <lukasz@langa.pl>
+ MIT
+ /home/mic/.local/lib/python3.10/site-packages
+ click, mypy-extensions, packaging, pathspec, platformdirs, tomli
+ 
+ 2.1
+ pip
+
+ 5 - Production/Stable
+ Console
+ Developers
+ MIT License
+ OS Independent
+ Python
+ Only
+ 3.7
+ 3.8
+ 3.9
+ 3.10
+ 3.11
+ Python Modules
+ Quality Assurance
+
+  [console_scripts]
+patched_main
+patched_main [d]
+
+//github.com/psf/black/blob/main/CHANGES.md
+//github.com/psf/black

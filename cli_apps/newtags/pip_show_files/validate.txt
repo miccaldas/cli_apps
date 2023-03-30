@@ -1,0 +1,22 @@
+Name: validate
+Version: 5.1.0.dev0
+Summary: Config file reading, writing, and validation.
+Home-page: http://www.voidspace.org.uk/python/validate.html
+Author: Michael Foord
+Author-email: fuzzyman@voidspace.org.uk
+License: UNKNOWN
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Programming Language :: Python
+  Operating System :: OS Independent
+  Topic :: Software Development :: Libraries
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

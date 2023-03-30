@@ -1,0 +1,42 @@
+Name: service-identity
+Version: 21.1.0
+Summary: Service identity verification for pyOpenSSL & cryptography.
+Home-page: https://service-identity.readthedocs.io/
+Author: Hynek Schlawack
+Author-email: hs@ox.cx
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: attrs, cryptography, pyasn1, pyasn1-modules, six
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Natural Language :: English
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX :: BSD
+  Operating System :: POSIX :: Linux
+  Operating System :: POSIX
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Programming Language :: Python
+  Topic :: Security :: Cryptography
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:
+  Documentation, https://service-identity.readthedocs.io/
+  Bug Tracker, https://github.com/pyca/service-identity/issues
+  Source Code, https://github.com/pyca/service-identity
+  Funding, https://github.com/sponsors/hynek

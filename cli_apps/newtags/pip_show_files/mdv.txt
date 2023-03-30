@@ -1,0 +1,25 @@
+Name: mdv
+Version: 1.7.4
+Summary: Terminal Markdown Viewer
+Home-page: http://github.com/axiros/terminal_markdown_viewer
+Author: Axiros GmbH
+Author-email: gk@axiros.com
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: markdown, pygments
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Programming Language :: Python
+  Natural Language :: English
+  Operating System :: POSIX
+  Topic :: Text Processing :: Markup
+  License :: OSI Approved :: BSD License
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+Entry-points:
+  [console_scripts]
+  mdv = mdv:run
+Project-URLs:

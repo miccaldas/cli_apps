@@ -1,0 +1,18 @@
+Name: sqlite-fts4
+Version: 1.0.3
+Summary: Python functions for working with SQLite FTS4 search
+Home-page: https://github.com/simonw/sqlite-fts4
+Author: Simon Willison
+Author-email: 
+License: Apache License, Version 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: sqlite-utils
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+Project-URLs:
+  Issues, https://github.com/simonw/sqlite-fts4/issues
+  CI, https://github.com/simonw/sqlite-fts4/actions
+  Changelog, https://github.com/simonw/sqlite-fts4/releases

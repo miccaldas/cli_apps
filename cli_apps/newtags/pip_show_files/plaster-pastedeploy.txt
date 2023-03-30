@@ -1,0 +1,39 @@
+Name: plaster-pastedeploy
+Version: 1.0.1
+Summary: A loader implementing the PasteDeploy syntax to be used by plaster.
+Home-page: https://github.com/Pylons/plaster_pastedeploy
+Author: Hunter Senft-Grupp
+Author-email: pylons-discuss@googlegroups.com
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: PasteDeploy, plaster
+Required-by: pyramid
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Natural Language :: English
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+  [plaster.loader_factory]
+  egg = plaster_pastedeploy:Loader
+  file+ini = plaster_pastedeploy:Loader
+  pastedeploy = plaster_pastedeploy:Loader
+  pastedeploy+egg = plaster_pastedeploy:Loader
+  pastedeploy+ini = plaster_pastedeploy:Loader
+  
+  [plaster.wsgi_loader_factory]
+  egg = plaster_pastedeploy:Loader
+  file+ini = plaster_pastedeploy:Loader
+  pastedeploy = plaster_pastedeploy:Loader
+  pastedeploy+egg = plaster_pastedeploy:Loader
+  pastedeploy+ini = plaster_pastedeploy:Loader
+Project-URLs:

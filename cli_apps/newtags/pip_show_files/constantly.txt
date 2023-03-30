@@ -1,0 +1,25 @@
+Name: constantly
+Version: 15.1.0
+Summary: Symbolic constants in Python
+Home-page: https://github.com/twisted/constantly
+Author: Twisted Matrix Labs Developers
+Author-email: UNKNOWN
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: Twisted
+Metadata-Version: 2.0
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

@@ -1,0 +1,15 @@
+Name: jieba3k
+Version: 0.35.1
+Summary: Chinese Words Segementation Utilities
+Home-page: http://github.com/fxsjy
+Author: Sun, Junyi
+Author-email: ccnusjy@gmail.com
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: newspaper3k
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+Project-URLs:

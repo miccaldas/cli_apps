@@ -1,0 +1,26 @@
+Name: schedule
+Version: 1.1.0
+Summary: Job scheduling for humans.
+Home-page: https://github.com/dbader/schedule
+Author: Daniel Bader
+Author-email: mail@dbader.org
+License: MIT
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Development Status :: 5 - Production/Stable
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Natural Language :: English
+Entry-points:
+Project-URLs:

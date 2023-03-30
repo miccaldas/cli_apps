@@ -1,0 +1,26 @@
+Name: oslo.serialization
+Version: 5.1.1
+Summary: Oslo Serialization library
+Home-page: https://docs.openstack.org/oslo.serialization/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: msgpack, oslo.utils, pbr, pytz
+Required-by: python-keystoneclient
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: OpenStack
+  Intended Audience :: Information Technology
+  Intended Audience :: System Administrators
+  License :: OSI Approved :: Apache Software License
+  Operating System :: POSIX :: Linux
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+Entry-points:
+Project-URLs:

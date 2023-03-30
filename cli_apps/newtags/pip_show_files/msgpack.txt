@@ -1,0 +1,29 @@
+Name: msgpack
+Version: 1.0.5
+Summary: MessagePack serializer
+Home-page: https://msgpack.org/
+Author: Inada Naoki
+Author-email: songofacandy@gmail.com
+License: Apache 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: CacheControl, oslo.serialization
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+Entry-points:
+Project-URLs:
+  Documentation, https://msgpack-python.readthedocs.io/
+  Source, https://github.com/msgpack/msgpack-python
+  Tracker, https://github.com/msgpack/msgpack-python/issues

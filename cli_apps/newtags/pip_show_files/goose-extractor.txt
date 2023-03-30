@@ -1,0 +1,30 @@
+Name: goose-extractor
+Version: 1.0.25
+Summary: Html Content / Article Extractor, web scrapping
+Home-page: https://github.com/grangier/python-goose
+Author: Xavier Grangier
+Author-email: grangier@gmail.com
+License: Apache
+Location: /usr/lib/python3.10/site-packages/goose_extractor-1.0.25-py3.10.egg
+Requires: cssselect, jieba, lxml, nltk, Pillow
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 4 - Beta
+  Environment :: Other Environment
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Operating System :: MacOS :: MacOS X
+  Operating System :: POSIX
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Python
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 2.7
+  Topic :: Internet
+  Topic :: Utilities
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

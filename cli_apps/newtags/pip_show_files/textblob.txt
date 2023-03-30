@@ -1,0 +1,27 @@
+Name: textblob
+Version: 0.17.1
+Summary: Simple, Pythonic text processing. Sentiment analysis, part-of-speech tagging, noun phrase parsing, and more.
+Home-page: https://github.com/sloria/TextBlob
+Author: Steven Loria
+Author-email: sloria1@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: nltk
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  Natural Language :: English
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Text Processing :: Linguistic
+Entry-points:
+Project-URLs:

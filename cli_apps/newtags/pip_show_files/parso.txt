@@ -1,0 +1,29 @@
+Name: parso
+Version: 0.8.3
+Summary: A Python Parser
+Home-page: https://github.com/davidhalter/parso
+Author: David Halter
+Author-email: davidhalter88@gmail.com
+License: MIT
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: jedi
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 4 - Beta
+  Environment :: Plugins
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: Text Editors :: Integrated Development Environments (IDE)
+  Topic :: Utilities
+  Typing :: Typed
+Entry-points:
+Project-URLs:

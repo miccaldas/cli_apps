@@ -1,0 +1,2 @@
+  Documentation, https://markdown-it-py.readthedocs.io
+  Homepage, https://github.com/executablebooks/markdown-it-py

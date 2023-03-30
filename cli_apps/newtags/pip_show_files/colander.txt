@@ -1,0 +1,31 @@
+Name: colander
+Version: 2.0
+Summary: A simple schema-based serialization and deserialization library
+Home-page: https://github.com/Pylons/colander
+Author: Agendaless Consulting
+Author-email: pylons-discuss@googlegroups.com
+License: BSD-derived (http://www.repoze.org/LICENSE.txt)
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: iso8601, translationstring
+Required-by: deform
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Operating System :: OS Independent
+  License :: Repoze Public License
+Entry-points:
+Project-URLs:
+  Documentation, https://docs.pylonsproject.org/projects/colander/en/latest/index.html
+  Changelog, https://docs.pylonsproject.org/projects/colander/en/latest/changes.html
+  Issue Tracker, https://github.com/Pylons/colander/issues

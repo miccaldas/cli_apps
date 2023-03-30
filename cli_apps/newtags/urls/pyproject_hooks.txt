@@ -1,0 +1,3 @@
+  Changelog, https://pyproject-hooks.readthedocs.io/en/latest/changelog.html
+  Documentation, https://pyproject-hooks.readthedocs.io/
+  Source, https://github.com/pypa/pyproject-hooks

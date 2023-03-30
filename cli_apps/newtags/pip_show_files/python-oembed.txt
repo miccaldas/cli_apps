@@ -1,0 +1,21 @@
+Name: python-oembed
+Version: 0.2.4
+Summary: OEmbed consumer library for Python
+Home-page: http://github.com/abarmat/python-oembed
+Author: Ariel Barmat
+Author-email: abarmat@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python
+  Programming Language :: Python :: 2.5
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 3.4
+Entry-points:
+Project-URLs:

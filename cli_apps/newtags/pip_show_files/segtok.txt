@@ -1,0 +1,32 @@
+Name: segtok
+Version: 1.5.11
+Summary: sentence segmentation and word tokenization tools
+Home-page: https://github.com/fnl/segtok
+Author: Florian Leitner
+Author-email: florian.leitner@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: regex
+Required-by: yake
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 3 - Alpha
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Topic :: Scientific/Engineering :: Information Analysis
+  Topic :: Software Development :: Libraries
+  Topic :: Text Processing
+  Topic :: Text Processing :: Linguistic
+Entry-points:
+  [console_scripts]
+  segmenter = segtok.segmenter:main
+  tokenizer = segtok.tokenizer:main
+  
+Project-URLs:

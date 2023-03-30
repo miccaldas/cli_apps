@@ -1,0 +1,31 @@
+Name: pycodestyle
+Version: 2.10.0
+Summary: Python style guide checker
+Home-page: https://pycodestyle.pycqa.org/
+Author: Johann C. Rocholl
+Author-email: johann@rocholl.net
+License: Expat license
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: flake8
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+  [console_scripts]
+  pycodestyle = pycodestyle:_main
+Project-URLs:
+  Changes, https://pycodestyle.pycqa.org/en/latest/developer.html#changes

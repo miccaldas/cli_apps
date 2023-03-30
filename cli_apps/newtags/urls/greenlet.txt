@@ -1,0 +1,4 @@
+Home-page: https://greenlet.readthedocs.io/
+  Bug Tracker, https://github.com/python-greenlet/greenlet/issues
+  Source Code, https://github.com/python-greenlet/greenlet/
+  Documentation, https://greenlet.readthedocs.io/

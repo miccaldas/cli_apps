@@ -1,0 +1,24 @@
+Name: MechanicalSoup
+Version: 1.2.0
+Summary: A Python library for automating interaction with websites
+Home-page: https://mechanicalsoup.readthedocs.io/
+Author: 
+Author-email: 
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: beautifulsoup4, lxml, requests
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3 :: Only
+Entry-points:
+Project-URLs:
+  Source, https://github.com/MechanicalSoup/MechanicalSoup

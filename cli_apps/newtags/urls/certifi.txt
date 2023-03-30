@@ -1,0 +1,2 @@
+Home-page: https://github.com/certifi/python-certifi
+  Source, https://github.com/certifi/python-certifi

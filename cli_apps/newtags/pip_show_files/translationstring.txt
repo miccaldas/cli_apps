@@ -1,0 +1,29 @@
+Name: translationstring
+Version: 1.4
+Summary: Utility library for i18n relied on by various Repoze and Pyramid packages
+Home-page: https://github.com/Pylons/translationstring
+Author: Chris McDonough, Agendaless Consulting
+Author-email: pylons-discuss@googlegroups.com
+License: BSD-like (http://repoze.org/license.html)
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: colander, deform, pyramid
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: Software Development :: Internationalization
+  Topic :: Software Development :: Localization
+  License :: Repoze Public License
+Entry-points:
+Project-URLs:

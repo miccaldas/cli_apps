@@ -1,0 +1,20 @@
+Name: trove-classifiers
+Version: 2023.3.10
+Summary: Canonical source for classifiers on PyPI (pypi.org).
+Home-page: https://github.com/pypa/trove-classifiers
+Author: The PyPI Admins
+Author-email: admin@pypi.org
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Programming Language :: Python :: 3
+  Typing :: Typed
+Entry-points:
+Project-URLs:

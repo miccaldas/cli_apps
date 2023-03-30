@@ -1,0 +1,28 @@
+Name: python-slugify
+Version: 8.0.1
+Summary: A Python slugify application that also handles Unicode
+Home-page: https://github.com/un33k/python-slugify
+Author: Val Neekman
+Author-email: info@neekware.com
+License: MIT
+Location: /usr/lib/python3.10/site-packages
+Requires: text-unidecode
+Required-by: agate
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Natural Language :: English
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+Entry-points:
+  [console_scripts]
+  slugify = slugify.__main__:main
+Project-URLs:

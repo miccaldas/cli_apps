@@ -1,0 +1,29 @@
+Name: mdurl
+Version: 0.1.2
+Summary: Markdown URL utilities
+Home-page: 
+Author: 
+Author-email: Taneli Hukkinen <hukkin@users.noreply.github.com>
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: markdown-it-py
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Operating System :: MacOS
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX :: Linux
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Libraries :: Python Modules
+  Typing :: Typed
+Entry-points:
+Project-URLs:
+  Homepage, https://github.com/executablebooks/mdurl

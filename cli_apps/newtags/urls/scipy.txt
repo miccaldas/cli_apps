@@ -1,0 +1,9 @@
+Home-page: https://scipy.org/
+        Availability: https://github.com/xianyi/OpenBLAS/
+        Availability: https://github.com/xianyi/OpenBLAS/
+        Availability: https://gcc.gnu.org/viewcvs/gcc/
+  Homepage, https://scipy.org/
+  Documentation, https://docs.scipy.org/doc/scipy/
+  Source, https://github.com/scipy/scipy
+  Download, https://github.com/scipy/scipy/releases
+  Tracker, https://github.com/scipy/scipy/issues

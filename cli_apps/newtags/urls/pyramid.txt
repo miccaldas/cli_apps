@@ -1,0 +1,4 @@
+Home-page: https://trypyramid.com
+  Documentation, https://docs.pylonsproject.org/projects/pyramid/en/2.0-branch/
+  Changelog, https://docs.pylonsproject.org/projects/pyramid/en/2.0-branch/whatsnew-2.0.html
+  Issue Tracker, https://github.com/Pylons/pyramid/issues

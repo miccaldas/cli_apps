@@ -1,0 +1,41 @@
+Name: coverage
+Version: 7.2.2
+Summary: Code coverage measurement for Python
+Home-page: https://github.com/nedbat/coveragepy
+Author: Ned Batchelder and 172 others
+Author-email: ned@nedbatchelder.com
+License: Apache-2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: pytest-cov
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: Console
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: 3.12
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Quality Assurance
+  Topic :: Software Development :: Testing
+  Development Status :: 5 - Production/Stable
+Entry-points:
+  [console_scripts]
+  coverage = coverage.cmdline:main
+  coverage-3.10 = coverage.cmdline:main
+  coverage3 = coverage.cmdline:main
+Project-URLs:
+  Documentation, https://coverage.readthedocs.io/en/7.2.2
+  Funding, https://tidelift.com/subscription/pkg/pypi-coverage?utm_source=pypi-coverage&utm_medium=referral&utm_campaign=pypi
+  Issues, https://github.com/nedbat/coveragepy/issues
+  Mastodon, https://hachyderm.io/@coveragepy
+  Mastodon (nedbat), https://hachyderm.io/@nedbat

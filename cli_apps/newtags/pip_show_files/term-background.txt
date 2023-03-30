@@ -1,0 +1,25 @@
+Name: term-background
+Version: 1.0.1
+Summary: Determine if shell has a light or dark background
+Home-page: http://github.com/rocky/shell-term-background
+Author: Rocky Bernstein
+Author-email: rb@dustyfeet.com
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: trepan3k
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Operating System :: OS Independent
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.2
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+Entry-points:
+Project-URLs:

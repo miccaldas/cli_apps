@@ -1,0 +1,31 @@
+Name: apipkg
+Version: 3.0.1
+Summary: apipkg: namespace control and lazy-import mechanism
+Home-page: 
+Author: holger krekel
+Author-email: 
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 4 - Beta
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: Implementation :: CPython
+  Topic :: Software Development :: Libraries
+Entry-points:
+Project-URLs:
+  Homepage, https://github.com/pytest-dev/apipkg

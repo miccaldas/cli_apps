@@ -1,0 +1,5 @@
+Home-page: https://github.com/python-hyper/priority/
+  Documentation, https://python-hyper.org/projects/priority/
+  Source, https://github.com/python-hyper/priority/
+  Tracker, https://github.com/python-hyper/priority/issues
+  Changelog, https://github.com/python-hyper/priority/blob/master/HISTORY.rst

@@ -1,0 +1,29 @@
+Name: PyMySQL
+Version: 1.0.3
+Summary: Pure Python MySQL Driver
+Home-page: 
+Author: 
+Author-email: Inada Naoki <songofacandy@gmail.com>, Yutaka Matsubara <yutaka.matsubara@gmail.com>
+License: MIT License
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: mycli
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Topic :: Database
+Entry-points:
+Project-URLs:
+  Project, https://github.com/PyMySQL/PyMySQL
+  Documentation, https://pymysql.readthedocs.io/

@@ -1,0 +1,31 @@
+Name: WebTest
+Version: 3.0.0
+Summary: Helper to test WSGI applications
+Home-page: https://docs.pylonsproject.org/projects/webtest/en/latest/
+Author: Ian Bicking
+Author-email: 
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: beautifulsoup4, waitress, WebOb
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Framework :: Paste
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Topic :: Internet :: WWW/HTTP :: WSGI
+  Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+Entry-points:
+  
+  [paste.app_factory]
+  debug = webtest.debugapp:make_debug_app
+  
+Project-URLs:

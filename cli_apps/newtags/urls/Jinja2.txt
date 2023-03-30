@@ -1,0 +1,8 @@
+Home-page: https://palletsprojects.com/p/jinja/
+  Donate, https://palletsprojects.com/donate
+  Documentation, https://jinja.palletsprojects.com/
+  Changes, https://jinja.palletsprojects.com/changes/
+  Source Code, https://github.com/pallets/jinja/
+  Issue Tracker, https://github.com/pallets/jinja/issues/
+  Twitter, https://twitter.com/PalletsTeam
+  Chat, https://discord.gg/pallets

@@ -1,0 +1,30 @@
+Name: pyramid-jinja2
+Version: 2.10
+Summary: Jinja2 template bindings for the Pyramid web framework
+Home-page: https://github.com/Pylons/pyramid_jinja2
+Author: Rocky Burt
+Author-email: pylons-discuss@googlegroups.com
+License: BSD-derived (Repoze)
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: jinja2, markupsafe, pyramid, zope.deprecation
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Framework :: Pyramid
+  License :: Repoze Public License
+Entry-points:
+  [pyramid.scaffold]
+  pyramid_jinja2_starter = pyramid_jinja2.scaffolds:Jinja2ProjectTemplate
+Project-URLs:
+  Documentation, https://docs.pylonsproject.org/projects/pyramid_jinja2/en/latest/
+  Changelog, https://github.com/Pylons/pyramid_jinja2/blob/master/CHANGES.rst
+  Issue Tracker, https://github.com/Pylons/pyramid_jinja2/issues

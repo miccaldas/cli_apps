@@ -1,0 +1,21 @@
+Name: pulsemixer
+Version: 1.5.1
+Summary: pulsemixer - CLI and curses mixer for PulseAudio
+Home-page: https://github.com/GeorgeFilipkin/pulsemixer
+Author: George Filipkin
+Author-email: botebotebot@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: Console
+  Environment :: Console :: Curses
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Topic :: Multimedia :: Sound/Audio :: Mixers
+  Topic :: Utilities
+Entry-points:
+Project-URLs:

@@ -1,0 +1,24 @@
+Name: regex
+Version: 2023.3.23
+Summary: Alternative regular expression module, to replace re.
+Home-page: https://github.com/mrabarnett/mrab-regex
+Author: Matthew Barnett
+Author-email: regex@mrabarnett.plus.com
+License: Apache Software License
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: dateparser, multi-rake, nltk, segtok
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3.10
+  Topic :: Scientific/Engineering :: Information Analysis
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: Text Processing
+  Topic :: Text Processing :: General
+Entry-points:
+Project-URLs:

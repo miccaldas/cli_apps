@@ -1,0 +1,34 @@
+Name: pandas
+Version: 1.5.3
+Summary: Powerful data structures for data analysis, time series, and statistics
+Home-page: https://pandas.pydata.org
+Author: The Pandas Development Team
+Author-email: pandas-dev@python.org
+License: BSD-3-Clause
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: numpy, python-dateutil, pytz
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Intended Audience :: Science/Research
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Cython
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Scientific/Engineering
+Entry-points:
+  [pandas_plotting_backends]
+  matplotlib = pandas:plotting._matplotlib
+Project-URLs:
+  Bug Tracker, https://github.com/pandas-dev/pandas/issues
+  Documentation, https://pandas.pydata.org/docs/
+  Source Code, https://github.com/pandas-dev/pandas

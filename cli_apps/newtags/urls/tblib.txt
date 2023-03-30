@@ -1,0 +1,4 @@
+Home-page: https://github.com/ionelmc/python-tblib
+  Documentation, https://python-tblib.readthedocs.io/
+  Changelog, https://python-tblib.readthedocs.io/en/latest/changelog.html
+  Issue Tracker, https://github.com/ionelmc/python-tblib/issues

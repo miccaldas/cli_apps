@@ -1,0 +1,4 @@
+Home-page: https://github.com/zopefoundation/persistent/
+  Documentation, https://persistent.readthedocs.io
+  Issue Tracker, https://github.com/zopefoundation/persistent/issues
+  Sources, https://github.com/zopefoundation/persistent

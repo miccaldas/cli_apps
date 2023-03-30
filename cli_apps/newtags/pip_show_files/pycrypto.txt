@@ -1,0 +1,24 @@
+Name: pycrypto
+Version: 2.6.1
+Summary: Cryptographic modules for Python.
+Home-page: http://www.pycrypto.org/
+Author: Dwayne C. Litzenberger
+Author-email: dlitz@dlitz.net
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: django3-all-access
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: Public Domain
+  Intended Audience :: Developers
+  Operating System :: Unix
+  Operating System :: Microsoft :: Windows
+  Operating System :: MacOS :: MacOS X
+  Topic :: Security :: Cryptography
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 3
+Entry-points:
+Project-URLs:

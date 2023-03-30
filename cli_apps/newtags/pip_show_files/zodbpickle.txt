@@ -1,0 +1,33 @@
+Name: zodbpickle
+Version: 3.0.1
+Summary: Fork of Python 3 pickle module.
+Home-page: https://github.com/zopefoundation/zodbpickle
+Author: Python and Zope Foundation
+Author-email: zodb-dev@zope.dev
+License: PSFL 2 and ZPL 2.1
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: setuptools
+Required-by: ZODB
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: OSI Approved :: Zope Public License
+  License :: OSI Approved :: Python Software Foundation License
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Framework :: ZODB
+  Topic :: Database
+  Topic :: Software Development :: Libraries :: Python Modules
+  Operating System :: Microsoft :: Windows
+  Operating System :: Unix
+  Operating System :: MacOS :: MacOS X
+Entry-points:
+Project-URLs:

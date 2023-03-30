@@ -1,0 +1,21 @@
+Name: requests-file
+Version: 1.5.1
+Summary: File transport adapter for Requests
+Home-page: http://github.com/dashea/requests-file
+Author: David Shea
+Author-email: reallylongword@gmail.com
+License: Apache 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: requests, six
+Required-by: tldextract
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 3 - Alpha
+  Environment :: Plugins
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+Entry-points:
+Project-URLs:

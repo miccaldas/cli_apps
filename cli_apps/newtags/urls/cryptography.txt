@@ -1,0 +1,5 @@
+Home-page: https://github.com/pyca/cryptography
+  Documentation, https://cryptography.io/
+  Source, https://github.com/pyca/cryptography/
+  Issues, https://github.com/pyca/cryptography/issues
+  Changelog, https://cryptography.io/en/latest/changelog/

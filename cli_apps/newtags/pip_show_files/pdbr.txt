@@ -1,0 +1,35 @@
+Name: pdbr
+Version: 0.8.2
+Summary: Pdb with Rich library.
+Home-page: https://github.com/cansarigol/pdbr
+Author: Can Sarigol
+Author-email: ertugrulsarigol@gmail.com
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: icecream, rich, sqlparse
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Intended Audience :: Developers
+  Operating System :: MacOS
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX :: Linux
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+Entry-points:
+  [console_scripts]
+  pdbr=pdbr.cli:shell
+  pdbr_telnet=pdbr.cli:telnet
+  
+Project-URLs:
+  Repository, https://github.com/cansarigol/pdbr

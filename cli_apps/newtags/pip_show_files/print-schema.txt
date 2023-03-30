@@ -1,0 +1,15 @@
+Name: print-schema
+Version: 1.1.1
+Summary: Prints the schema of Python objects
+Home-page: https://github.com/suryashekharc/print_schema
+Author: Surya Shekhar Chakraborty
+Author-email: suryaschak@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: requests
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+Project-URLs:

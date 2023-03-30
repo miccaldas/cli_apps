@@ -1,0 +1,30 @@
+Name: mycli
+Version: 1.25.0
+Summary: CLI for MySQL Database. With auto-completion and syntax highlighting.
+Home-page: http://mycli.net
+Author: Mycli Core Team
+Author-email: mycli-dev@googlegroups.com
+License: UNKNOWN
+Location: /usr/lib/python3.10/site-packages
+Requires: cli_helpers, click, configobj, cryptography, prompt_toolkit, pyaes, Pygments, PyMySQL, pyperclip, sqlparse
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Operating System :: Unix
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: SQL
+  Topic :: Database
+  Topic :: Database :: Front-Ends
+  Topic :: Software Development
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+  [console_scripts]
+  mycli = mycli.main:cli
+Project-URLs:

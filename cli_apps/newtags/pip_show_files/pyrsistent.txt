@@ -1,0 +1,25 @@
+Name: pyrsistent
+Version: 0.19.3
+Summary: Persistent/Functional/Immutable data structures
+Home-page: https://github.com/tobgu/pyrsistent/
+Author: Tobias Gustafsson
+Author-email: tobias.l.gustafsson@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: multi-rake
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:
+  Changelog, https://pyrsistent.readthedocs.io/en/latest/changes.html

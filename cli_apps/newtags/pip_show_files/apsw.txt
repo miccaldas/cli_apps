@@ -1,0 +1,22 @@
+Name: apsw
+Version: 3.41.2.0
+Summary: Another Python SQLite Wrapper
+Home-page: https://github.com/rogerbinns/apsw/
+Author: Roger Binns
+Author-email: rogerb@rogerbinns.com
+License: OSI Approved
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved
+  Operating System :: OS Independent
+  Programming Language :: C
+  Programming Language :: Python :: 3
+  Topic :: Database :: Front-Ends
+Entry-points:
+Project-URLs:

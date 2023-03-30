@@ -1,0 +1,33 @@
+Name: sphinxcontrib-jsmath
+Version: 1.0.1
+Summary: A sphinx extension which renders display math in HTML via JavaScript
+Home-page: http://sphinx-doc.org/
+Author: Georg Brandl
+Author-email: georg@python.org
+License: BSD
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Environment :: Web Environment
+  Intended Audience :: Developers
+  Intended Audience :: Education
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Framework :: Sphinx
+  Framework :: Sphinx :: Extension
+  Topic :: Documentation
+  Topic :: Documentation :: Sphinx
+  Topic :: Text Processing
+  Topic :: Utilities
+Entry-points:
+Project-URLs:

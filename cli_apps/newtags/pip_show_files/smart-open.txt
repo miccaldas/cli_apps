@@ -1,0 +1,26 @@
+Name: smart-open
+Version: 6.3.0
+Summary: Utils for streaming large files (S3, HDFS, GCS, Azure Blob Storage, gzip, bz2...)
+Home-page: https://github.com/piskvorky/smart_open
+Author: Radim Rehurek
+Author-email: me@radimrehurek.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: pathy
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Environment :: Console
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Topic :: System :: Distributed Computing
+  Topic :: Database :: Front-Ends
+Entry-points:
+Project-URLs:

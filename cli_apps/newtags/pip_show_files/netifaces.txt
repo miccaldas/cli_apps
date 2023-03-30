@@ -1,0 +1,28 @@
+Name: netifaces
+Version: 0.11.0
+Summary: Portable network interface information.
+Home-page: https://github.com/al45tair/netifaces
+Author: Alastair Houghton
+Author-email: alastair@alastairs-place.net
+License: MIT License
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: oslo.utils
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Topic :: System :: Networking
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+Entry-points:
+Project-URLs:

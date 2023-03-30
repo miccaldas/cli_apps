@@ -1,0 +1,29 @@
+Name: pipx
+Version: 1.2.0
+Summary: Install and Run Python Applications in Isolated Environments
+Home-page: 
+Author: 
+Author-email: Chad Smith <chadsmith.software@gmail.com>
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: argcomplete, packaging, userpath
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+Entry-points:
+  [console_scripts]
+  pipx = pipx.main:cli
+Project-URLs:
+  Documentation, https://pypa.github.io/pipx/
+  Source Code, https://github.com/pypa/pipx
+  Bug Tracker, https://github.com/pypa/pipx/issues

@@ -1,0 +1,34 @@
+Name: loguru
+Version: 0.6.0
+Summary: Python logging made (stupidly) simple
+Home-page: https://github.com/Delgan/loguru
+Author: Delgan
+Author-email: delgan.py@gmail.com
+License: MIT license
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: cli-apps, python-project
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Topic :: System :: Logging
+  Intended Audience :: Developers
+  Natural Language :: English
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: PyPy
+  Programming Language :: Python :: Implementation :: CPython
+Entry-points:
+Project-URLs:
+  Changelog, https://github.com/Delgan/loguru/blob/master/CHANGELOG.rst
+  Documentation, https://loguru.readthedocs.io/en/stable/index.html

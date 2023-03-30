@@ -1,0 +1,35 @@
+Name: python-swiftclient
+Version: 4.2.0
+Summary: OpenStack Object Storage API Client Library
+Home-page: https://docs.openstack.org/python-swiftclient/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: Apache License, Version 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: requests
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: OpenStack
+  Intended Audience :: Information Technology
+  Intended Audience :: System Administrators
+  License :: OSI Approved :: Apache Software License
+  Operating System :: POSIX :: Linux
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3 :: Only
+Entry-points:
+  [console_scripts]
+  swift = swiftclient.shell:main
+  
+  [keystoneauth1.plugin]
+  v1password = swiftclient.authv1:PasswordLoader
+  
+Project-URLs:

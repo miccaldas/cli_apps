@@ -1,0 +1,32 @@
+Name: billiard
+Version: 4.1.0
+Summary: Python multiprocessing fork with improvements and bugfixes
+Home-page: https://github.com/celery/billiard
+Author: R Oudkerk / Python Software Foundation
+Author-email: python-dev@python.org
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: C
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX
+  License :: OSI Approved :: BSD License
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: System :: Distributed Computing
+Entry-points:
+Project-URLs:

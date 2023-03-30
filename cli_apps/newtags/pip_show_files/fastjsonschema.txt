@@ -1,0 +1,32 @@
+Name: fastjsonschema
+Version: 2.16.3
+Summary: Fastest Python implementation of JSON schema
+Home-page: https://github.com/horejsek/python-fastjsonschema
+Author: Michal Horejsek
+Author-email: fastjsonschema@horejsek.com
+License: BSD
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: validate-pyproject
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

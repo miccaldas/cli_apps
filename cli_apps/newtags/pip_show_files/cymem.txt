@@ -1,0 +1,35 @@
+Name: cymem
+Version: 2.0.7
+Summary: Manage calls to calloc/free through Cython
+Home-page: https://github.com/explosion/cymem
+Author: Matthew Honnibal
+Author-email: matt@explosion.ai
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: preshed, thinc
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: Console
+  Intended Audience :: Developers
+  Intended Audience :: Science/Research
+  License :: OSI Approved :: MIT License
+  Operating System :: POSIX :: Linux
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Cython
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Scientific/Engineering
+Entry-points:
+Project-URLs:

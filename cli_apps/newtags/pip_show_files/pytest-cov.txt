@@ -1,0 +1,40 @@
+Name: pytest-cov
+Version: 4.0.0
+Summary: Pytest plugin for measuring coverage.
+Home-page: https://github.com/pytest-dev/pytest-cov
+Author: Marc Schlaich
+Author-email: marc.schlaich@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: coverage, pytest
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Framework :: Pytest
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX
+  Operating System :: Unix
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Testing
+  Topic :: Utilities
+Entry-points:
+  [pytest11]
+  pytest_cov = pytest_cov.plugin
+  
+Project-URLs:
+  Documentation, https://pytest-cov.readthedocs.io/
+  Changelog, https://pytest-cov.readthedocs.io/en/latest/changelog.html
+  Issue Tracker, https://github.com/pytest-dev/pytest-cov/issues

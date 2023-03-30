@@ -1,0 +1,31 @@
+Name: icecream
+Version: 2.1.3
+Summary: Never use print() to debug again; inspect variables, expressions, and program execution with a single, simple function call.
+Home-page: https://github.com/gruns/icecream
+Author: Ansgar Grunseid
+Author-email: grunseid@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: asttokens, colorama, executing, pygments
+Required-by: bkmk, pdbr
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Natural Language :: English
+  Intended Audience :: Developers
+  Topic :: Software Development :: Libraries
+  Development Status :: 4 - Beta
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: Implementation :: PyPy
+  Programming Language :: Python :: Implementation :: CPython
+Entry-points:
+Project-URLs:

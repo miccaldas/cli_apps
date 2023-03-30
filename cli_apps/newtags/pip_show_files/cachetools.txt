@@ -1,0 +1,28 @@
+Name: cachetools
+Version: 5.3.0
+Summary: Extensible memoizing collections and decorators
+Home-page: https://github.com/tkem/cachetools/
+Author: Thomas Kemmer
+Author-email: tkemmer@computer.org
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Other Environment
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

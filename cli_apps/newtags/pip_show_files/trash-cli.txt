@@ -1,0 +1,15 @@
+Name: trash-cli
+Version: 0.23.2.13.2
+Summary: Command line interface to FreeDesktop.org Trash.
+Home-page: https://github.com/andreafrancia/trash-cli
+Author: Andrea Francia
+Author-email: andrea@andreafrancia.it
+License: GPL v2
+Location: /usr/lib/python3.10/site-packages
+Requires: psutil, six, typing
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+Entry-points:
+Project-URLs:

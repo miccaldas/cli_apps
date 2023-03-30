@@ -1,0 +1,28 @@
+Name: validate-pyproject
+Version: 0.12.2.post1.dev0+g2940279.d20230328
+Summary: Validation library and CLI tool for checking on 'pyproject.toml' files using JSON Schema
+Home-page: https://github.com/abravalheri/validate-pyproject/
+Author: Anderson Bravalheri
+Author-email: andersonbravalheri@gmail.com
+License: MPL-2.0 and MIT and BSD-3-Clause
+Location: /usr/lib/python3.10/site-packages
+Requires: fastjsonschema
+Required-by: setuptools
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 4 - Beta
+  Programming Language :: Python
+Entry-points:
+  [console_scripts]
+  validate-pyproject = validate_pyproject.cli:main
+  
+  [validate_pyproject.tool_schema]
+  distutils = validate_pyproject.api:load_builtin_plugin
+  setuptools = validate_pyproject.api:load_builtin_plugin
+Project-URLs:
+  Documentation, https://validate-pyproject.readthedocs.io/
+  Source, https://github.com/abravalheri/validate-pyproject
+  Tracker, https://github.com/abravalheri/validate-pyproject/issues
+  Changelog, https://validate-pyproject.readthedocs.io/en/latest/changelog.html
+  Download, https://pypi.org/project/validate-pyproject/#files

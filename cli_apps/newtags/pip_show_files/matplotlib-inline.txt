@@ -1,0 +1,15 @@
+Name: matplotlib-inline
+Version: 0.1.6
+Summary: Inline Matplotlib backend for Jupyter
+Home-page: https://github.com/ipython/matplotlib-inline
+Author: IPython Development Team
+Author-email: ipython-dev@scipy.org
+License: BSD 3-Clause
+Location: /usr/lib/python3.10/site-packages
+Requires: traitlets
+Required-by: ipython
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+Entry-points:
+Project-URLs:

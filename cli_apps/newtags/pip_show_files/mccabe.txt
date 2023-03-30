@@ -1,0 +1,31 @@
+Name: mccabe
+Version: 0.7.0
+Summary: McCabe checker, plugin for flake8
+Home-page: https://github.com/pycqa/mccabe
+Author: Tarek Ziade
+Author-email: tarek@ziade.org
+License: Expat license
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: flake8
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: Software Development :: Quality Assurance
+Entry-points:
+  [flake8.extension]
+  C90 = mccabe:McCabeChecker
+  
+Project-URLs:

@@ -1,0 +1,25 @@
+Name: about-time
+Version: 4.2.1
+Summary: Easily measure timing and throughput of code blocks, with beautiful human friendly representations.
+Home-page: https://github.com/rsalmei/about-time
+Author: Rogério Sampaio de Almeida
+Author-email: rsalmei@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: alive-progress
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Environment :: Console
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+Entry-points:
+Project-URLs:

@@ -1,0 +1,24 @@
+Name: smdv
+Version: 0.1.1
+Summary: smdv: a simple markdown viewer 
+Home-page: https://github.com/flaport/smdv
+Author: Floris Laporte
+Author-email: floris.laporte@gmail.com
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: flask, websockets
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Topic :: Utilities
+  Intended Audience :: End Users/Desktop
+  Intended Audience :: Developers
+  Programming Language :: Python :: 3
+  Operating System :: POSIX :: Linux
+  License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Entry-points:
+  [console_scripts]
+  smdv = smdv:main
+  
+Project-URLs:

@@ -1,0 +1,28 @@
+Name: decompyle3
+Version: 3.9.0
+Summary: Python cross-version byte-code decompiler
+Home-page: https://github.com/rocky/python-decompile3/
+Author: Rocky Bernstein, Hartmut Goebel, John Aycock, and others
+Author-email: rb@dustyfeet.com
+License: GPL3
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: click, spark-parser, xdis
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Topic :: Software Development :: Debuggers
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+  [console_scripts]
+  decompyle3 = decompyle3.bin.decompile:main_bin
+  decompyle3-code = decompyle3.bin.decompile_code_type:main
+  py3disassemble = decompyle3.bin.py3disassemble:main
+  
+Project-URLs:

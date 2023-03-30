@@ -1,0 +1,3 @@
+Home-page: https://github.com/pygithub/pygithub
+  Source, https://github.com/pygithub/pygithub
+  Tracker, https://github.com/pygithub/pygithub/issues

@@ -1,0 +1,25 @@
+Name: dnspython
+Version: 2.3.0
+Summary: DNS toolkit
+Home-page: https://www.dnspython.org
+Author: Bob Halley
+Author-email: halley@dnspython.org
+License: ISC
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: email-validator, eventlet, pymongo
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  License :: OSI Approved
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+Entry-points:
+Project-URLs:
+  Bug Tracker, https://github.com/rthalley/dnspython/issues
+  Documentation, https://dnspython.readthedocs.io/en/stable/
+  Repository, https://github.com/rthalley/dnspython.git

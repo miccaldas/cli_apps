@@ -1,0 +1,29 @@
+Name: mutagen
+Version: 1.46.0
+Summary: read and write audio tags for many formats
+Home-page: https://github.com/quodlibet/mutagen
+Author: Christoph Reiter
+Author-email: reiter.christoph@gmail.com
+License: GPL-2.0-or-later
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+  Topic :: Multimedia :: Sound/Audio
+Entry-points:
+  [console_scripts]
+  mid3cp = mutagen._tools.mid3cp:entry_point
+  mid3iconv = mutagen._tools.mid3iconv:entry_point
+  mid3v2 = mutagen._tools.mid3v2:entry_point
+  moggsplit = mutagen._tools.moggsplit:entry_point
+  mutagen-inspect = mutagen._tools.mutagen_inspect:entry_point
+  mutagen-pony = mutagen._tools.mutagen_pony:entry_point
+  
+Project-URLs:

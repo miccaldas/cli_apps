@@ -1,0 +1,2 @@
+Home-page: https://github.com/jquast/blessed
+  Documentation, https://blessed.readthedocs.io

@@ -1,0 +1,26 @@
+Name: debtcollector
+Version: 2.5.0
+Summary: A collection of Python deprecation patterns and strategies that help you collect your technical debt in a non-destructive manner.
+Home-page: https://docs.openstack.org/debtcollector/latest
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: wrapt
+Required-by: oslo.config, oslo.utils, python-keystoneclient
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: OpenStack
+  Intended Audience :: Information Technology
+  Intended Audience :: System Administrators
+  License :: OSI Approved :: Apache Software License
+  Operating System :: POSIX :: Linux
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+Entry-points:
+Project-URLs:

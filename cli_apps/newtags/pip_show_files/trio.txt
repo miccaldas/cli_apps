@@ -1,0 +1,33 @@
+Name: trio
+Version: 0.22.0
+Summary: A friendly Python library for async concurrency and I/O
+Home-page: https://github.com/python-trio/trio
+Author: Nathaniel J. Smith
+Author-email: njs@pobox.com
+License: MIT OR Apache-2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: async-generator, attrs, exceptiongroup, idna, outcome, sniffio, sortedcontainers
+Required-by: selenium, trio-websocket
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 3 - Alpha
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  License :: OSI Approved :: Apache Software License
+  Operating System :: POSIX :: Linux
+  Operating System :: MacOS :: MacOS X
+  Operating System :: POSIX :: BSD
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: System :: Networking
+  Framework :: Trio
+Entry-points:
+Project-URLs:

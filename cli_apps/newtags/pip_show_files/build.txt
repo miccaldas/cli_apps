@@ -1,0 +1,33 @@
+Name: build
+Version: 0.10.0
+Summary: A simple, correct Python build frontend
+Home-page: 
+Author: 
+Author-email: Filipe Laíns <lains@riseup.net>, Bernát Gábor <gaborjbernat@gmail.com>, layday <layday@protonmail.com>, Henry Schreiner <henryschreineriii@gmail.com>
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: packaging, pyproject_hooks, tomli
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+  [console_scripts]
+  pyproject-build=build.__main__:entrypoint
+  
+  [pipx.run]
+  build=build.__main__:entrypoint
+  
+Project-URLs:
+  changelog, https://pypa-build.readthedocs.io/en/stable/changelog.html
+  homepage, https://github.com/pypa/build

@@ -1,0 +1,32 @@
+Name: pluggy
+Version: 1.0.0
+Summary: plugin and hook calling mechanisms for python
+Home-page: https://github.com/pytest-dev/pluggy
+Author: Holger Krekel
+Author-email: holger@merlinux.eu
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: pytest
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: POSIX
+  Operating System :: Microsoft :: Windows
+  Operating System :: MacOS :: MacOS X
+  Topic :: Software Development :: Testing
+  Topic :: Software Development :: Libraries
+  Topic :: Utilities
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+Entry-points:
+Project-URLs:

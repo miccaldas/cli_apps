@@ -1,0 +1,35 @@
+Name: pexpect
+Version: 4.8.0
+Summary: Pexpect allows easy control of interactive console applications.
+Home-page: https://pexpect.readthedocs.io/
+Author: Noah Spurrier; Thomas Kluyver; Jeff Quast
+Author-email: noah@noah.org, thomas@kluyver.me.uk, contact@jeffquast.com
+License: ISC license
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: ipython
+Metadata-Version: 1.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Intended Audience :: Developers
+  Intended Audience :: System Administrators
+  License :: OSI Approved :: ISC License (ISCL)
+  Operating System :: POSIX
+  Operating System :: MacOS :: MacOS X
+  Programming Language :: Python
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Topic :: Software Development
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: Software Development :: Quality Assurance
+  Topic :: Software Development :: Testing
+  Topic :: System
+  Topic :: System :: Archiving :: Packaging
+  Topic :: System :: Installation/Setup
+  Topic :: System :: Shells
+  Topic :: System :: Software Distribution
+  Topic :: Terminals
+Entry-points:
+Project-URLs:

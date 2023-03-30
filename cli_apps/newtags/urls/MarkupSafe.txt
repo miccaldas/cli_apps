@@ -1,0 +1,8 @@
+Home-page: https://palletsprojects.com/p/markupsafe/
+  Donate, https://palletsprojects.com/donate
+  Documentation, https://markupsafe.palletsprojects.com/
+  Changes, https://markupsafe.palletsprojects.com/changes/
+  Source Code, https://github.com/pallets/markupsafe/
+  Issue Tracker, https://github.com/pallets/markupsafe/issues/
+  Twitter, https://twitter.com/PalletsTeam
+  Chat, https://discord.gg/pallets

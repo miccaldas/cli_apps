@@ -1,0 +1,28 @@
+Name: pangocairocffi
+Version: 0.7.0
+Summary: CFFI-based pango-cairo bindings for Python
+Home-page: https://github.com/leifgehrmann/pangocairocffi
+Author: Leif Gehrmann
+Author-email: 
+License: LGPL-2.1
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: cairocffi, cffi, pangocffi
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 1 - Planning
+  Intended Audience :: Developers
+  Natural Language :: English
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Topic :: Multimedia :: Graphics
+  Topic :: Text Processing :: Fonts
+Entry-points:
+Project-URLs:
+  Code, https://github.com/leifgehrmann/pangocairocffi
+  Issue tracker, https://github.com/leifgehrmann/pangocairocffi/issues

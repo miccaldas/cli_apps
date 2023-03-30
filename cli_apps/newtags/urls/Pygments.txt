@@ -1,0 +1,5 @@
+Home-page: https://pygments.org/
+  Documentation, https://pygments.org/docs/
+  Source, https://github.com/pygments/pygments
+  Bug Tracker, https://github.com/pygments/pygments/issues
+  Changelog, https://github.com/pygments/pygments/blob/master/CHANGES

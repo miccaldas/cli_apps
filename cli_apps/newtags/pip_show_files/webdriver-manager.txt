@@ -1,0 +1,27 @@
+Name: webdriver-manager
+Version: 3.8.5
+Summary: Library provides the way to automatically manage drivers for different browsers
+Home-page: https://github.com/SergeyPirogov/webdriver_manager
+Author: Sergey Pirogov
+Author-email: automationremarks@gmail.com
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: packaging, python-dotenv, requests, tqdm
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: Apache Software License
+  Intended Audience :: Information Technology
+  Intended Audience :: Developers
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Topic :: Software Development :: Libraries :: Python Modules
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX
+  Operating System :: Unix
+  Operating System :: MacOS
+Entry-points:
+Project-URLs:

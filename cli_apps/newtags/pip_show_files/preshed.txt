@@ -1,0 +1,30 @@
+Name: preshed
+Version: 3.0.8
+Summary: Cython hash table that trusts the keys are pre-hashed
+Home-page: https://github.com/explosion/preshed
+Author: Explosion
+Author-email: contact@explosion.ai
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: cymem, murmurhash
+Required-by: thinc
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: Console
+  Intended Audience :: Developers
+  Intended Audience :: Science/Research
+  License :: OSI Approved :: MIT License
+  Operating System :: POSIX :: Linux
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Cython
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Scientific/Engineering
+Entry-points:
+Project-URLs:

@@ -1,0 +1,43 @@
+Name: htmldate
+Version: 1.4.2
+Summary: Fast and robust extraction of original and updated publication dates from URLs and web pages.
+Home-page: https://htmldate.readthedocs.io
+Author: Adrien Barbaresi
+Author-email: barbaresi@bbaw.de
+License: GPLv3+
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: charset-normalizer, dateparser, lxml, python-dateutil, urllib3
+Required-by: 
+Metadata-Version: 2.0
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Intended Audience :: Developers
+  Intended Audience :: Education
+  Intended Audience :: Information Technology
+  Intended Audience :: Science/Research
+  License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX :: Linux
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Internet :: WWW/HTTP
+  Topic :: Scientific/Engineering :: Information Analysis
+  Topic :: Text Processing :: Linguistic
+  Topic :: Text Processing :: Markup :: HTML
+Entry-points:
+  [console_scripts]
+  htmldate = htmldate.cli:main
+  
+Project-URLs:
+  Source, https://github.com/adbar/htmldate
+  Tracker, https://github.com/adbar/htmldate/issues
+  Blog, https://adrien.barbaresi.eu/blog/tag/htmldate.html

@@ -1,0 +1,25 @@
+Name: tzlocal
+Version: 2.1
+Summary: tzinfo object for the local timezone
+Home-page: https://github.com/regebro/tzlocal
+Author: Lennart Regebro
+Author-email: regebro@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: pytz
+Required-by: APScheduler, dateparser, jrnl
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: OSI Approved :: MIT License
+  Operating System :: Microsoft :: Windows
+  Operating System :: Unix
+  Operating System :: MacOS :: MacOS X
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+Entry-points:
+Project-URLs:

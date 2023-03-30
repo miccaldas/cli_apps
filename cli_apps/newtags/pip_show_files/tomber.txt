@@ -1,0 +1,15 @@
+Name: tomber
+Version: 1.0.5
+Summary: a python Tomb (the Crypto Undertaker) wrapper
+Home-page: https://github.com/reiven/tomber
+Author: Federico Reiven
+Author-email: reiven@gmail.com
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+Project-URLs:

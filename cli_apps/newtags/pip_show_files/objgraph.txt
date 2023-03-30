@@ -1,0 +1,23 @@
+Name: objgraph
+Version: 3.5.0
+Summary: Draws Python object reference graphs with graphviz
+Home-page: https://mg.pov.lt/objgraph/
+Author: Marius Gedminas
+Author-email: marius@gedmin.as
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: graphviz
+Required-by: mrq
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+Entry-points:
+Project-URLs:

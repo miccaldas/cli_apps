@@ -1,0 +1,4 @@
+Home-page: https://github.com/Pylons/pyramid_tm
+  Documentation, https://docs.pylonsproject.org/projects/pyramid-tm/en/latest/index.html
+  Changelog, https://docs.pylonsproject.org/projects/pyramid-tm/en/latest/changes.html
+  Issue Tracker, https://github.com/Pylons/pyramid_tm/issues

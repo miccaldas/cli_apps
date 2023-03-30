@@ -1,0 +1,35 @@
+Name: bottle
+Version: 0.12.25
+Summary: Fast and simple WSGI-framework for small web-applications.
+Home-page: http://bottlepy.org/
+Author: Marcel Hellkamp
+Author-email: marc@gsites.de
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+  Topic :: Internet :: WWW/HTTP :: HTTP Servers
+  Topic :: Internet :: WWW/HTTP :: WSGI
+  Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+  Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+  Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+  Topic :: Software Development :: Libraries :: Application Frameworks
+  Programming Language :: Python :: 2.5
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.2
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+Entry-points:
+Project-URLs:

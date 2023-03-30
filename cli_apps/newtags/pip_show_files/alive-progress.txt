@@ -1,0 +1,26 @@
+Name: alive-progress
+Version: 3.1.0
+Summary: A new kind of Progress Bar, with real-time throughput, ETA, and very cool animations!
+Home-page: https://github.com/rsalmei/alive-progress
+Author: Rogério Sampaio de Almeida
+Author-email: rsalmei@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: about-time, grapheme
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Environment :: Console
+  Natural Language :: English
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+Entry-points:
+Project-URLs:

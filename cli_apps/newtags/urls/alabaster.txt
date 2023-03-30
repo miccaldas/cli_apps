@@ -1,0 +1,4 @@
+Home-page: https://alabaster.readthedocs.io
+  Source, https://github.com/bitprophet/alabaster
+  Changelog, https://github.com/bitprophet/alabaster/blob/main/docs/changelog.rst
+  CI, https://app.circleci.com/pipelines/github/bitprophet/alabaster

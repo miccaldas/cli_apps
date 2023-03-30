@@ -1,0 +1,35 @@
+Name: pycryptodomex
+Version: 3.17
+Summary: Cryptographic library for Python
+Home-page: https://www.pycryptodome.org
+Author: Helder Eijs
+Author-email: helderijs@gmail.com
+License: BSD, Public Domain
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: OSI Approved :: BSD License
+  License :: OSI Approved :: Apache Software License
+  License :: Public Domain
+  Intended Audience :: Developers
+  Operating System :: Unix
+  Operating System :: Microsoft :: Windows
+  Operating System :: MacOS :: MacOS X
+  Topic :: Security :: Cryptography
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+Entry-points:
+Project-URLs:
+  Source, https://github.com/Legrandin/pycryptodome/

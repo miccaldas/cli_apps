@@ -1,0 +1,22 @@
+Name: args
+Version: 0.1.0
+Summary: Command Arguments for Humans.
+Home-page: https://github.com/kennethreitz/args
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.com
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: clint
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Environment :: Web Environment
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Topic :: Internet :: WWW/HTTP :: Dynamic Content
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

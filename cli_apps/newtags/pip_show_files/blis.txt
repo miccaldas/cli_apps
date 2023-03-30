@@ -1,0 +1,31 @@
+Name: blis
+Version: 0.7.9
+Summary: The Blis BLAS-like linear algebra library, as a self-contained C-extension.
+Home-page: https://github.com/explosion/cython-blis
+Author: Matthew Honnibal
+Author-email: matt@explosion.ai
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: numpy
+Required-by: thinc
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Environment :: Console
+  Intended Audience :: Developers
+  Intended Audience :: Information Technology
+  License :: OSI Approved :: BSD License
+  Operating System :: POSIX :: Linux
+  Operating System :: MacOS :: MacOS X
+  Programming Language :: Cython
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Scientific/Engineering
+Entry-points:
+Project-URLs:

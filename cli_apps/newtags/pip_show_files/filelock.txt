@@ -1,0 +1,29 @@
+Name: filelock
+Version: 3.10.7
+Summary: A platform independent file lock.
+Home-page: 
+Author: 
+Author-email: 
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: tldextract, virtualenv
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: The Unlicense (Unlicense)
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Topic :: Internet
+  Topic :: Software Development :: Libraries
+  Topic :: System
+Entry-points:
+Project-URLs:
+  Documentation, https://py-filelock.readthedocs.io
+  Homepage, https://github.com/tox-dev/py-filelock
+  Source, https://github.com/tox-dev/py-filelock
+  Tracker, https://github.com/tox-dev/py-filelock/issues

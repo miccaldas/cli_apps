@@ -1,0 +1,31 @@
+Name: multidict
+Version: 6.0.4
+Summary: multidict implementation
+Home-page: https://github.com/aio-libs/multidict
+Author: Andrew Svetlov
+Author-email: andrew.svetlov@gmail.com
+License: Apache 2
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: aiohttp, yarl
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  License :: OSI Approved :: Apache Software License
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Development Status :: 5 - Production/Stable
+Entry-points:
+Project-URLs:
+  Chat: Gitter, https://gitter.im/aio-libs/Lobby
+  CI: GitHub, https://github.com/aio-libs/multidict/actions
+  Coverage: codecov, https://codecov.io/github/aio-libs/multidict
+  Docs: RTD, https://multidict.readthedocs.io
+  GitHub: issues, https://github.com/aio-libs/multidict/issues
+  GitHub: repo, https://github.com/aio-libs/multidict

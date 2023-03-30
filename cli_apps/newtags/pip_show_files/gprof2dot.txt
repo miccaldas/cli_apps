@@ -1,0 +1,25 @@
+Name: gprof2dot
+Version: 2022.7.29
+Summary: Generate a dot graph from the output of several profilers.
+Home-page: https://github.com/jrfonseca/gprof2dot
+Author: Jose Fonseca
+Author-email: jose.r.fonseca@gmail.com
+License: LGPL
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Environment :: Console
+  Intended Audience :: Developers
+  Operating System :: OS Independent
+  License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Topic :: Software Development
+Entry-points:
+  [console_scripts]
+  gprof2dot = gprof2dot:main
+Project-URLs:

@@ -1,0 +1,23 @@
+Name: python-Levenshtein
+Version: 0.20.9
+Summary: Python extension for computing string edit distances and similarities.
+Home-page: https://github.com/maxbachmann/python-Levenshtein
+Author: Max Bachmann
+Author-email: pypi@maxbachmann.de
+License: GPL-2.0-or-later
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: Levenshtein
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Entry-points:
+Project-URLs:

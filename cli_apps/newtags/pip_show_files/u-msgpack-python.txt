@@ -1,0 +1,23 @@
+Name: u-msgpack-python
+Version: 2.7.2
+Summary: A portable, lightweight MessagePack serializer and deserializer written in pure Python.
+Home-page: https://github.com/vsergeev/u-msgpack-python
+Author: vsergeev
+Author-email: v@sergeev.io
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: pyspider
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:

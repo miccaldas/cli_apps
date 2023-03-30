@@ -1,0 +1,27 @@
+Name: CacheControl
+Version: 0.12.11
+Summary: httplib2 caching for requests
+Home-page: https://github.com/ionrock/cachecontrol
+Author: Eric Larson
+Author-email: eric@ionrock.org
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: msgpack, requests
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 4 - Beta
+  Environment :: Web Environment
+  License :: OSI Approved :: Apache Software License
+  Operating System :: OS Independent
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Topic :: Internet :: WWW/HTTP
+Entry-points:
+  [console_scripts]
+  doesitcache = cachecontrol._cmd:main
+Project-URLs:

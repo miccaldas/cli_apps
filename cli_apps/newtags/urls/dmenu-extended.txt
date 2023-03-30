@@ -1,0 +1,2 @@
+  Homepage, https://github.com/MarkHedleyJones/dmenu-extended
+  Bug Tracker, https://github.com/MarkHedleyJones/dmenu-extended/issues

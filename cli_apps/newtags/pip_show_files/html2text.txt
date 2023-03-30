@@ -1,0 +1,30 @@
+Name: html2text
+Version: 2020.1.16
+Summary: Turn HTML into equivalent Markdown-structured text.
+Home-page: https://github.com/Alir3z4/html2text/
+Author: Aaron Swartz
+Author-email: me@aaronsw.com
+License: GNU GPL 3
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: GNU General Public License (GPL)
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+  [console_scripts]
+  html2text = html2text.cli:main
+Project-URLs:

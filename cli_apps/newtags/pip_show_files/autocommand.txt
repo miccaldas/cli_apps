@@ -1,0 +1,26 @@
+Name: autocommand
+Version: 2.2.2
+Summary: A library to create a command-line program from a function
+Home-page: https://github.com/Lucretiel/autocommand
+Author: Nathan West
+Author-email: 
+License: LGPLv3
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: jaraco.text
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 6 - Mature
+  Intended Audience :: Developers
+  License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Topic :: Software Development
+  Topic :: Software Development :: Libraries
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:
+  Homepage, https://github.com/Lucretiel/autocommand
+  Bug Tracker, https://github.com/Lucretiel/autocommand/issues

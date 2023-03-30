@@ -1,0 +1,20 @@
+Name: stem
+Version: 1.8.1
+Summary: Stem is a Python controller library that allows applications to interact with Tor (https://www.torproject.org/).
+Home-page: https://stem.torproject.org/
+Author: Damian Johnson
+Author-email: atagar@torproject.org
+License: LGPLv3
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: torrequest
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+  Topic :: Security
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

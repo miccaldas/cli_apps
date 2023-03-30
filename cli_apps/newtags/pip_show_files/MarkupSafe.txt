@@ -1,0 +1,30 @@
+Name: MarkupSafe
+Version: 2.1.2
+Summary: Safely add untrusted strings to HTML/XML markup.
+Home-page: https://palletsprojects.com/p/markupsafe/
+Author: Armin Ronacher
+Author-email: armin.ronacher@active-4.com
+License: BSD-3-Clause
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: Jinja2, Mako, pyramid-jinja2, Werkzeug, WTForms
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Web Environment
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Topic :: Internet :: WWW/HTTP :: Dynamic Content
+  Topic :: Text Processing :: Markup :: HTML
+Entry-points:
+Project-URLs:
+  Donate, https://palletsprojects.com/donate
+  Documentation, https://markupsafe.palletsprojects.com/
+  Changes, https://markupsafe.palletsprojects.com/changes/
+  Source Code, https://github.com/pallets/markupsafe/
+  Issue Tracker, https://github.com/pallets/markupsafe/issues/
+  Twitter, https://twitter.com/PalletsTeam
+  Chat, https://discord.gg/pallets

@@ -1,0 +1,41 @@
+Name: cryptography
+Version: 40.0.1
+Summary: cryptography is a package which provides cryptographic recipes and primitives to Python developers.
+Home-page: https://github.com/pyca/cryptography
+Author: The Python Cryptographic Authority and individual contributors
+Author-email: cryptography-dev@python.org
+License: (Apache-2.0 OR BSD-3-Clause) AND PSF-2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: cffi
+Required-by: jrnl, mycli, SecretStorage, service-identity
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: Apache Software License
+  License :: OSI Approved :: BSD License
+  Natural Language :: English
+  Operating System :: MacOS :: MacOS X
+  Operating System :: POSIX
+  Operating System :: POSIX :: BSD
+  Operating System :: POSIX :: Linux
+  Operating System :: Microsoft :: Windows
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Security :: Cryptography
+Entry-points:
+Project-URLs:
+  Documentation, https://cryptography.io/
+  Source, https://github.com/pyca/cryptography/
+  Issues, https://github.com/pyca/cryptography/issues
+  Changelog, https://cryptography.io/en/latest/changelog/

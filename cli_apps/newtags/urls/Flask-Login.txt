@@ -1,0 +1,5 @@
+Home-page: https://github.com/maxcountryman/flask-login
+  Documentation, https://flask-login.readthedocs.io/
+  Changes, https://github.com/maxcountryman/flask-login/blob/main/CHANGES.md
+  Source Code, https://github.com/maxcountryman/flask-login
+  Issue Tracker, https://github.com/maxcountryman/flask-login/issues

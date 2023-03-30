@@ -1,0 +1,3 @@
+Home-page: https://github.com/HyperionGray/trio-websocket
+  Bug Reports, https://github.com/HyperionGray/trio-websocket/issues
+  Source, https://github.com/HyperionGray/trio-websocket

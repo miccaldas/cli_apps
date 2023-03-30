@@ -1,0 +1,36 @@
+Name: leather
+Version: 0.3.4
+Summary: Python charting for 80% of humans.
+Home-page: http://leather.readthedocs.io/
+Author: Christopher Groskopf
+Author-email: chrisgroskopf@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: six
+Required-by: agate
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 3 - Alpha
+  Framework :: IPython
+  Intended Audience :: Developers
+  Intended Audience :: Science/Research
+  License :: OSI Approved :: MIT License
+  Topic :: Multimedia :: Graphics
+  Natural Language :: English
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Scientific/Engineering :: Information Analysis
+  Topic :: Scientific/Engineering :: Visualization
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

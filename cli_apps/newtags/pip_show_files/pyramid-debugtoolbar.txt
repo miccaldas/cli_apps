@@ -1,0 +1,26 @@
+Name: pyramid-debugtoolbar
+Version: 4.10
+Summary: A package which provides an interactive HTML debugger for Pyramid application development
+Home-page: https://docs.pylonsproject.org/projects/pyramid-debugtoolbar/en/latest/
+Author: Chris McDonough, Michael Merickel, Casey Duncan, Blaise Laflamme
+Author-email: pylons-discuss@googlegroups.com
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: Pygments, pyramid, pyramid-mako
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Framework :: Pyramid
+  Topic :: Internet :: WWW/HTTP :: WSGI
+  License :: Repoze Public License
+Entry-points:
+Project-URLs:

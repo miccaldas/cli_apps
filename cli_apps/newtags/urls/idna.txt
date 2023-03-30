@@ -1,0 +1,3 @@
+  Changelog, https://github.com/kjd/idna/blob/master/HISTORY.rst
+  Issue tracker, https://github.com/kjd/idna/issues
+  Source, https://github.com/kjd/idna

@@ -1,0 +1,33 @@
+Name: eventlet
+Version: 0.33.3
+Summary: Highly concurrent networking library
+Home-page: http://eventlet.net
+Author: Linden Lab
+Author-email: eventletdev@lists.secondlife.com
+License: 
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: dnspython, greenlet, six
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 4 - Beta
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Operating System :: MacOS :: MacOS X
+  Operating System :: Microsoft :: Windows
+  Operating System :: POSIX
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python
+  Topic :: Internet
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:
+  Source, https://github.com/eventlet/eventlet

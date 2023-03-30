@@ -1,0 +1,52 @@
+Name: Babel
+Version: 2.12.1
+Summary: Internationalization utilities
+Home-page: https://babel.pocoo.org/
+Author: Armin Ronacher
+Author-email: armin.ronacher@active-4.com
+License: BSD
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: agate
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Web Environment
+  Intended Audience :: Developers
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+  [babel.checkers]
+  num_plurals = babel.messages.checkers:num_plurals
+  python_format = babel.messages.checkers:python_format
+  
+  [babel.extractors]
+  ignore = babel.messages.extract:extract_nothing
+  javascript = babel.messages.extract:extract_javascript
+  python = babel.messages.extract:extract_python
+  
+  [console_scripts]
+  pybabel = babel.messages.frontend:main
+  
+  [distutils.commands]
+  compile_catalog = babel.messages.frontend:compile_catalog
+  extract_messages = babel.messages.frontend:extract_messages
+  init_catalog = babel.messages.frontend:init_catalog
+  update_catalog = babel.messages.frontend:update_catalog
+  
+  [distutils.setup_keywords]
+  message_extractors = babel.messages.frontend:check_message_extractors
+Project-URLs:
+  Source, https://github.com/python-babel/babel

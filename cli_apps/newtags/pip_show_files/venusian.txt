@@ -1,0 +1,24 @@
+Name: venusian
+Version: 3.0.0
+Summary: A library for deferring decorator actions
+Home-page: https://pylonsproject.org/
+Author: Chris McDonough, Agendaless Consulting
+Author-email: pylons-devel@googlegroups.com
+License: BSD-derived (http://www.repoze.org/LICENSE.txt)
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: pyramid
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Intended Audience :: Developers
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:

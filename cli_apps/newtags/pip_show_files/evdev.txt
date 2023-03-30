@@ -1,0 +1,28 @@
+Name: evdev
+Version: 1.6.1
+Summary: Bindings to the Linux input handling subsystem
+Home-page: https://github.com/gvalkov/python-evdev
+Author: Georgi Valkov
+Author-email: georgi.t.valkov@gmail.com
+License: Revised BSD License
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: pynput
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Operating System :: POSIX :: Linux
+  Intended Audience :: Developers
+  Topic :: Software Development :: Libraries
+  License :: OSI Approved :: BSD License
+  Programming Language :: Python :: Implementation :: CPython
+Entry-points:
+Project-URLs:

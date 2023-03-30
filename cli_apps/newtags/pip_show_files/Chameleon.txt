@@ -1,0 +1,29 @@
+Name: Chameleon
+Version: 4.0.0
+Summary: Fast HTML/XML Template Compiler.
+Home-page: https://chameleon.readthedocs.io
+Author: Malthe Borch
+Author-email: mborch@gmail.com
+License: BSD-like (http://repoze.org/license.html)
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: deform
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:
+  Documentation, https://chameleon.readthedocs.io
+  Issue Tracker, https://github.com/malthe/chameleon/issues
+  Sources, https://github.com/malthe/chameleon

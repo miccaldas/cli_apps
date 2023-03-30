@@ -1,0 +1,20 @@
+Name: jaraco.text
+Version: 3.11.1
+Summary: Module for text manipulation
+Home-page: https://github.com/jaraco/jaraco.text
+Author: Jason R. Coombs
+Author-email: jaraco@jaraco.com
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: autocommand, inflect, jaraco.context, jaraco.functools, more-itertools
+Required-by: setuptools
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+Entry-points:
+Project-URLs:

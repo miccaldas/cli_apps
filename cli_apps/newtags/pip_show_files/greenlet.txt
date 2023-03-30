@@ -1,0 +1,36 @@
+Name: greenlet
+Version: 2.0.2
+Summary: Lightweight in-process concurrent programming
+Home-page: https://greenlet.readthedocs.io/
+Author: Alexey Borzenkov
+Author-email: snaury@gmail.com
+License: MIT License
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: eventlet, gevent, SQLAlchemy
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Natural Language :: English
+  Programming Language :: C
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Operating System :: OS Independent
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:
+  Bug Tracker, https://github.com/python-greenlet/greenlet/issues
+  Source Code, https://github.com/python-greenlet/greenlet/
+  Documentation, https://greenlet.readthedocs.io/

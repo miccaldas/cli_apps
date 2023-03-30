@@ -1,0 +1,26 @@
+Name: stack-data
+Version: 0.6.2
+Summary: Extract data from python stack frames and tracebacks for informative displays
+Home-page: http://github.com/alexmojaki/stack_data
+Author: Alex Hall
+Author-email: alex.mojaki@gmail.com
+License: MIT
+Location: /usr/lib/python3.10/site-packages
+Requires: asttokens, executing, pure-eval
+Required-by: ipython
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Intended Audience :: Developers
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Topic :: Software Development :: Debuggers
+Entry-points:
+Project-URLs:

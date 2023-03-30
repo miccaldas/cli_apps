@@ -1,0 +1,15 @@
+Name: python3-xlib
+Version: 0.15
+Summary: Python3 X Library
+Home-page: https://github.com/LiuLang/python3-xlib
+Author: Peter Liljenberg
+Author-email: petli@ctrl-c.liu.se
+License: GPLv2
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: MouseInfo
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+Project-URLs:

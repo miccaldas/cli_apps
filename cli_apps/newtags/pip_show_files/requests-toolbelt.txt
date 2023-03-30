@@ -1,0 +1,28 @@
+Name: requests-toolbelt
+Version: 0.10.1
+Summary: A utility belt for advanced users of python-requests
+Home-page: https://toolbelt.readthedocs.io/
+Author: Ian Cordasco, Cory Benfield
+Author-email: graffatcolmingov@gmail.com
+License: Apache 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: requests
+Required-by: twine
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: OSI Approved :: Apache Software License
+  Intended Audience :: Developers
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+Entry-points:
+Project-URLs:

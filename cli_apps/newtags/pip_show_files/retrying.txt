@@ -1,0 +1,28 @@
+Name: retrying
+Version: 1.3.4
+Summary: Retrying
+Home-page: https://github.com/groodt/retrying
+Author: Greg Roodt
+Author-email: 
+License: Apache 2.0
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: six
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Intended Audience :: Developers
+  Natural Language :: English
+  License :: OSI Approved :: Apache Software License
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: Implementation :: CPython
+  Topic :: Internet
+  Topic :: Utilities
+Entry-points:
+Project-URLs:

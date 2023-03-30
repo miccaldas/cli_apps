@@ -1,0 +1,92 @@
+Name: Markdown
+Version: 3.4.3
+Summary: Python implementation of John Gruber's Markdown.
+Home-page: 
+Author: Manfred Stienstra, Yuri Takhteyev
+Author-email: Waylan limberg <python.markdown@gmail.com>
+License: Copyright 2007, 2008 The Python Markdown Project (v. 1.7 and later)
+        Copyright 2004, 2005, 2006 Yuri Takhteyev (v. 0.2-1.6b)
+        Copyright 2004 Manfred Stienstra (the original version)
+        
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+        * Redistributions in binary form must reproduce the above copyright
+          notice, this list of conditions and the following disclaimer in the
+          documentation and/or other materials provided with the distribution.
+        * Neither the name of the Python Markdown Project nor the
+          names of its contributors may be used to endorse or promote products
+          derived from this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE PYTHON MARKDOWN PROJECT ''AS IS'' AND ANY
+        EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL ANY CONTRIBUTORS TO THE PYTHON MARKDOWN PROJECT
+        BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+        CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+        SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+        INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+        CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+        ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+        POSSIBILITY OF SUCH DAMAGE.
+        
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: mdv
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Communications :: Email :: Filters
+  Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+  Topic :: Internet :: WWW/HTTP :: Site Management
+  Topic :: Software Development :: Documentation
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: Text Processing :: Filters
+  Topic :: Text Processing :: Markup :: HTML
+  Topic :: Text Processing :: Markup :: Markdown
+Entry-points:
+  [console_scripts]
+  markdown_py = markdown.__main__:run
+  
+  [markdown.extensions]
+  abbr = markdown.extensions.abbr:AbbrExtension
+  admonition = markdown.extensions.admonition:AdmonitionExtension
+  attr_list = markdown.extensions.attr_list:AttrListExtension
+  codehilite = markdown.extensions.codehilite:CodeHiliteExtension
+  def_list = markdown.extensions.def_list:DefListExtension
+  extra = markdown.extensions.extra:ExtraExtension
+  fenced_code = markdown.extensions.fenced_code:FencedCodeExtension
+  footnotes = markdown.extensions.footnotes:FootnoteExtension
+  legacy_attrs = markdown.extensions.legacy_attrs:LegacyAttrExtension
+  legacy_em = markdown.extensions.legacy_em:LegacyEmExtension
+  md_in_html = markdown.extensions.md_in_html:MarkdownInHtmlExtension
+  meta = markdown.extensions.meta:MetaExtension
+  nl2br = markdown.extensions.nl2br:Nl2BrExtension
+  sane_lists = markdown.extensions.sane_lists:SaneListExtension
+  smarty = markdown.extensions.smarty:SmartyExtension
+  tables = markdown.extensions.tables:TableExtension
+  toc = markdown.extensions.toc:TocExtension
+  wikilinks = markdown.extensions.wikilinks:WikiLinkExtension
+Project-URLs:
+  Homepage, https://Python-Markdown.github.io/
+  Documentation, https://Python-Markdown.github.io/
+  Repository, https://github.com/Python-Markdown/markdown
+  Issue Tracker, https://github.com/Python-Markdown/markdown/issues
+  Changelog, https://github.com/Python-Markdown/markdown/blob/master/docs/change_log/index.md

@@ -1,0 +1,41 @@
+Name: sphinxcontrib-htmlhelp
+Version: 2.0.1
+Summary: sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files
+Home-page: 
+Author: 
+Author-email: Georg Brandl <georg@python.org>
+License: BSD-2-Clause
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Environment :: Web Environment
+  Intended Audience :: Developers
+  Intended Audience :: Education
+  License :: OSI Approved :: BSD License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Programming Language :: Python :: 3.12
+  Framework :: Sphinx
+  Framework :: Sphinx :: Extension
+  Topic :: Documentation
+  Topic :: Documentation :: Sphinx
+  Topic :: Text Processing
+  Topic :: Utilities
+Entry-points:
+Project-URLs:
+  Changelog, https://www.sphinx-doc.org/en/master/changes.html
+  Code, https://github.com/sphinx-doc/sphinxcontrib-htmlhelp
+  Download, https://pypi.org/project/sphinxcontrib-htmlhelp/
+  Homepage, https://www.sphinx-doc.org/
+  Issue tracker, https://github.com/sphinx-doc/sphinx/issues

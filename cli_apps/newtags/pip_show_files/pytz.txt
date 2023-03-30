@@ -1,0 +1,39 @@
+Name: pytz
+Version: 2023.3
+Summary: World timezone definitions, modern and historical
+Home-page: http://pythonhosted.org/pytz
+Author: Stuart Bishop
+Author-email: stuart@stuartbishop.net
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: APScheduler, dateparser, jrnl, oslo.serialization, oslo.utils, pandas, tzlocal
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Natural Language :: English
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 2
+  Programming Language :: Python :: 2.4
+  Programming Language :: Python :: 2.5
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.1
+  Programming Language :: Python :: 3.2
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3.11
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:

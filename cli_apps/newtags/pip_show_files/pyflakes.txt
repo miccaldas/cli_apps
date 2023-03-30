@@ -1,0 +1,33 @@
+Name: pyflakes
+Version: 3.0.1
+Summary: passive checker of Python programs
+Home-page: https://github.com/PyCQA/pyflakes
+Author: A lot of people
+Author-email: code-quality@python.org
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: flake8
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 6 - Mature
+  Environment :: Console
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development
+  Topic :: Utilities
+Entry-points:
+  [console_scripts]
+  pyflakes = pyflakes.api:main
+Project-URLs:

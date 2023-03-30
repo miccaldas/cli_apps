@@ -1,0 +1,24 @@
+Name: python-daemon
+Version: 3.0.1
+Summary: Library to implement a well-behaved Unix daemon process.
+Home-page: https://pagure.io/python-daemon/
+Author: Ben Finney
+Author-email: ben+python@benfinney.id.au
+License: Apache-2
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: docutils, lockfile, setuptools
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  License :: OSI Approved :: Apache Software License
+  Operating System :: POSIX
+  Programming Language :: Python :: 3
+  Intended Audience :: Developers
+  Topic :: Software Development :: Libraries :: Python Modules
+Entry-points:
+Project-URLs:
+  Change Log, https://pagure.io/python-daemon/blob/main/f/ChangeLog
+  Source, https://pagure.io/python-daemon/
+  Issue Tracker, https://pagure.io/python-daemon/issues

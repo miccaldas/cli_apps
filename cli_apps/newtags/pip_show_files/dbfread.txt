@@ -1,0 +1,15 @@
+Name: dbfread
+Version: 2.0.7
+Summary: Read DBF Files with Python
+Home-page: https://dbfread.readthedocs.io/
+Author: Ole Martin Bjorndalen
+Author-email: ombdalen@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: agate-dbf
+Metadata-Version: 2.0
+Installer: pip
+Classifiers:
+Entry-points:
+Project-URLs:

@@ -1,0 +1,34 @@
+Name: columnize
+Version: 0.3.11
+Summary: Format a simple (i.e. not nested) list into aligned columns.
+Home-page: https://github.com/rocky/pycolumnize
+Author: Rocky Bernstein
+Author-email: rocky@gnu.org
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: trepan3k
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python
+  Topic :: Software Development :: Libraries :: Python Modules
+  Programming Language :: Python :: 2.4
+  Programming Language :: Python :: 2.5
+  Programming Language :: Python :: 2.6
+  Programming Language :: Python :: 2.7
+  Programming Language :: Python :: 3.1
+  Programming Language :: Python :: 3.2
+  Programming Language :: Python :: 3.3
+  Programming Language :: Python :: 3.4
+  Programming Language :: Python :: 3.5 
+  Programming Language :: Python :: 3.6 
+  Programming Language :: Python :: 3.7 
+  Programming Language :: Python :: 3.8 
+  Programming Language :: Python :: 3.9 
+  Programming Language :: Python :: 3.10 
+Entry-points:
+Project-URLs:

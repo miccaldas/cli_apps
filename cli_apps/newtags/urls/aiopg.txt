@@ -1,0 +1,7 @@
+Home-page: https://aiopg.readthedocs.io
+  Chat: Gitter, https://gitter.im/aio-libs/Lobby
+  CI: GA, https://github.com/aio-libs/aiopg/actions?query=workflow%3ACI
+  Coverage: codecov, https://codecov.io/gh/aio-libs/aiopg
+  Docs: RTD, https://aiopg.readthedocs.io
+  GitHub: issues, https://github.com/aio-libs/aiopg/issues
+  GitHub: repo, https://github.com/aio-libs/aiopg

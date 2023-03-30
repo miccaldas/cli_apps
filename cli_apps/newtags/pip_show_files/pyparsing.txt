@@ -1,0 +1,32 @@
+Name: pyparsing
+Version: 3.0.9
+Summary: pyparsing module - Classes and methods to define and execute parsing grammars
+Home-page: 
+Author: 
+Author-email: Paul McGuire <ptmcg.gm+pyparsing@gmail.com>
+License: 
+Location: /usr/lib/python3.10/site-packages
+Requires: 
+Required-by: oslo.utils
+Metadata-Version: 2.1
+Installer: 
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Intended Audience :: Developers
+  Intended Audience :: Information Technology
+  License :: OSI Approved :: MIT License
+  Operating System :: OS Independent
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3.6
+  Programming Language :: Python :: 3.7
+  Programming Language :: Python :: 3.8
+  Programming Language :: Python :: 3.9
+  Programming Language :: Python :: 3.10
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Typing :: Typed
+Entry-points:
+Project-URLs:
+  Homepage, https://github.com/pyparsing/pyparsing/

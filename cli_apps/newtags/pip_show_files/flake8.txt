@@ -1,0 +1,40 @@
+Name: flake8
+Version: 6.0.0
+Summary: the modular source code checker: pep8 pyflakes and co
+Home-page: https://github.com/pycqa/flake8
+Author: Tarek Ziade
+Author-email: tarek@ziade.org
+License: MIT
+Location: /home/mic/.local/lib/python3.10/site-packages
+Requires: mccabe, pycodestyle, pyflakes
+Required-by: 
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+  Development Status :: 5 - Production/Stable
+  Environment :: Console
+  Framework :: Flake8
+  Intended Audience :: Developers
+  License :: OSI Approved :: MIT License
+  Programming Language :: Python
+  Programming Language :: Python :: 3
+  Programming Language :: Python :: 3 :: Only
+  Programming Language :: Python :: Implementation :: CPython
+  Programming Language :: Python :: Implementation :: PyPy
+  Topic :: Software Development :: Libraries :: Python Modules
+  Topic :: Software Development :: Quality Assurance
+Entry-points:
+  [console_scripts]
+  flake8 = flake8.main.cli:main
+  
+  [flake8.extension]
+  E = flake8.plugins.pycodestyle:pycodestyle_logical
+  F = flake8.plugins.pyflakes:FlakesChecker
+  W = flake8.plugins.pycodestyle:pycodestyle_physical
+  
+  [flake8.report]
+  default = flake8.formatting.default:Default
+  pylint = flake8.formatting.default:Pylint
+  quiet-filename = flake8.formatting.default:FilenameOnly
+  quiet-nothing = flake8.formatting.default:Nothing
+Project-URLs:
