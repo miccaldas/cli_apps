@@ -1,0 +1,6 @@
+https://github.com/nedbat/coveragepy
+  Documentation, https://coverage.readthedocs.io/en/7.2.2
+  Funding, https://tidelift.com/subscription/pkg/pypi-coverage?utm_source=pypi-coverage&utm_medium=referral&utm_campaign=pypi
+  Issues, https://github.com/nedbat/coveragepy/issues
+  Mastodon, https://hachyderm.io/@coveragepy
+  Mastodon (nedbat), https://hachyderm.io/@nedbat

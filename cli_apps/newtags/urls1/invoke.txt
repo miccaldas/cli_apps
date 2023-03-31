@@ -1,0 +1,6 @@
+https://pyinvoke.org
+  Docs, https://docs.pyinvoke.org
+  Source, https://github.com/pyinvoke/invoke
+  Issues, https://github.com/pyinvoke/invoke/issues
+  Changelog, https://www.pyinvoke.org/changelog.html
+  CI, https://app.circleci.com/pipelines/github/pyinvoke/invoke

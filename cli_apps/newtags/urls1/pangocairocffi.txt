@@ -1,0 +1,3 @@
+https://github.com/leifgehrmann/pangocairocffi
+  Code, https://github.com/leifgehrmann/pangocairocffi
+  Issue tracker, https://github.com/leifgehrmann/pangocairocffi/issues

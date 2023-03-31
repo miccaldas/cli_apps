@@ -1,0 +1,4 @@
+https://pandas.pydata.org
+  Bug Tracker, https://github.com/pandas-dev/pandas/issues
+  Documentation, https://pandas.pydata.org/docs/
+  Source Code, https://github.com/pandas-dev/pandas

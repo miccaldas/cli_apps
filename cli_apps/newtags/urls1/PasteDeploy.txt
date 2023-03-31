@@ -1,0 +1,4 @@
+https://docs.pylonsproject.org/projects/pastedeploy/en/latest/
+  Documentation, https://docs.pylonsproject.org/projects/pastedeploy/en/latest/
+  Changelog, https://docs.pylonsproject.org/projects/pastedeploy/en/latest/news.html
+  Issue Tracker, https://github.com/Pylons/pastedeploy/issues

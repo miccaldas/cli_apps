@@ -1,0 +1,4 @@
+https://github.com/tantale/deprecated
+  Documentation, https://deprecated.readthedocs.io/en/latest/
+  Source, https://github.com/tantale/deprecated
+  Bug Tracker, https://github.com/tantale/deprecated/issues

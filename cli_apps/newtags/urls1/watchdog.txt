@@ -1,0 +1,5 @@
+https://github.com/gorakhargosh/watchdog
+  Documentation, https://python-watchdog.readthedocs.io/en/stable/
+  Source, https://github.com/gorakhargosh/watchdog/
+  Issues, https://github.com/gorakhargosh/watchdog/issues
+  Changelog, https://github.com/gorakhargosh/watchdog/blob/master/changelog.rst

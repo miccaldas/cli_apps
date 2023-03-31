@@ -1,0 +1,4 @@
+https://wtforms.readthedocs.io/
+  Documentation, https://wtforms.readthedocs.io/
+  Code, https://github.com/wtforms/wtforms
+  Issue Tracker, https://github.com/wtforms/wtforms/issues

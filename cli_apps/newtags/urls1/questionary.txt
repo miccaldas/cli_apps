@@ -1,0 +1,3 @@
+https://github.com/tmbo/questionary
+  Documentation, https://questionary.readthedocs.io/
+  Repository, https://github.com/tmbo/questionary

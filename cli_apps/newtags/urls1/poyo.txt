@@ -1,0 +1,3 @@
+https://github.com/hackebrot/poyo
+  Repository, https://github.com/hackebrot/poyo
+  Issues, https://github.com/hackebrot/poyo/issues

@@ -1,0 +1,4 @@
+https://chameleon.readthedocs.io
+  Documentation, https://chameleon.readthedocs.io
+  Issue Tracker, https://github.com/malthe/chameleon/issues
+  Sources, https://github.com/malthe/chameleon

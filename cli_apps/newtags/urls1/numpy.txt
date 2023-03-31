@@ -1,0 +1,4 @@
+https://www.numpy.org
+  Bug Tracker, https://github.com/numpy/numpy/issues
+  Documentation, https://numpy.org/doc/1.24
+  Source Code, https://github.com/numpy/numpy

@@ -1,0 +1,4 @@
+https://github.com/Pylons/colander
+  Documentation, https://docs.pylonsproject.org/projects/colander/en/latest/index.html
+  Changelog, https://docs.pylonsproject.org/projects/colander/en/latest/changes.html
+  Issue Tracker, https://github.com/Pylons/colander/issues

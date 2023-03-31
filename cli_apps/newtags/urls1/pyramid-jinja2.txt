@@ -1,0 +1,4 @@
+https://github.com/Pylons/pyramid_jinja2
+  Documentation, https://docs.pylonsproject.org/projects/pyramid_jinja2/en/latest/
+  Changelog, https://github.com/Pylons/pyramid_jinja2/blob/master/CHANGES.rst
+  Issue Tracker, https://github.com/Pylons/pyramid_jinja2/issues

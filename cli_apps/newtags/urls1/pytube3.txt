@@ -1,0 +1,3 @@
+https://github.com/hbmartin/pytube3
+  Bug Reports, https://github.com/hbmartin/pytube3/issues
+  Read the Docs, https://pytube3.readthedocs.io/en/latest/?badge=latest

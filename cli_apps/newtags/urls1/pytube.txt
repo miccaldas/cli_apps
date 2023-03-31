@@ -1,0 +1,3 @@
+https://github.com/pytube/pytube
+  Bug Reports, https://github.com/pytube/pytube/issues
+  Read the Docs, https://pytube.io

@@ -1,0 +1,2 @@
+https://github.com/miguelgrinberg/flask-migrate
+  Bug Tracker, https://github.com/miguelgrinberg/flask-migrate/issues

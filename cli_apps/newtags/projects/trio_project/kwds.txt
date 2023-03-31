@@ -1,0 +1,7 @@
+codespace
+library
+codespaces
+git
+svn
+web
+async

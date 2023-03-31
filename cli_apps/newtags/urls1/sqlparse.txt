@@ -1,0 +1,5 @@
+https://github.com/andialbrecht/sqlparse
+  Documentation, https://sqlparse.readthedocs.io/
+  Release Notes, https://sqlparse.readthedocs.io/en/latest/changes/
+  Source, https://github.com/andialbrecht/sqlparse
+  Tracker, https://github.com/andialbrecht/sqlparse/issues

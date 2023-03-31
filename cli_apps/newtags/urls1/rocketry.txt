@@ -1,0 +1,4 @@
+https://rocketry.readthedocs.io
+  Funding, https://github.com/sponsors/Miksus
+  Source, https://github.com/Miksus/rocketry
+  Changelog, https://rocketry.readthedocs.io/en/stable/versions.html

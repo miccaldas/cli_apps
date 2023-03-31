@@ -1,0 +1,8 @@
+https://palletsprojects.com/p/click/
+  Donate, https://palletsprojects.com/donate
+  Documentation, https://click.palletsprojects.com/
+  Changes, https://click.palletsprojects.com/changes/
+  Source Code, https://github.com/pallets/click/
+  Issue Tracker, https://github.com/pallets/click/issues/
+  Twitter, https://twitter.com/PalletsTeam
+  Chat, https://discord.gg/pallets

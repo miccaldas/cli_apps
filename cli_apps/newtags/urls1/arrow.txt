@@ -1,0 +1,4 @@
+https://arrow.readthedocs.io
+  Repository, https://github.com/arrow-py/arrow
+  Bug Reports, https://github.com/arrow-py/arrow/issues
+  Documentation, https://arrow.readthedocs.io

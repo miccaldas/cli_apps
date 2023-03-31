@@ -1,0 +1,6 @@
+https://github.com/aio-libs/async-timeout
+  Chat: Gitter, https://gitter.im/aio-libs/Lobby
+  CI: GitHub Actions, https://github.com/aio-libs/async-timeout/actions
+  Coverage: codecov, https://codecov.io/github/aio-libs/async-timeout
+  GitHub: issues, https://github.com/aio-libs/async-timeout/issues
+  GitHub: repo, https://github.com/aio-libs/async-timeout

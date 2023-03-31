@@ -1,0 +1,4 @@
+https://pycqa.github.io/isort/
+  Changelog, https://github.com/pycqa/isort/blob/main/CHANGELOG.md
+  Documentation, https://pycqa.github.io/isort/
+  Repository, https://github.com/pycqa/isort
