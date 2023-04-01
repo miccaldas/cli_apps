@@ -1,0 +1,17 @@
+paddle
+mode
+word
+地址：
+words
+chinese
+hmm
+dictionary
+idf
+default
+file
+segmentation
+linux
+cut
+custom
+usage
+accurate

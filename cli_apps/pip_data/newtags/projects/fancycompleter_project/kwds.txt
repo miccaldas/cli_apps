@@ -1,0 +1,11 @@
+colors
+prompt
+tab
+default
+completions
+interactive
+automatically
+file
+version
+builtin
+works

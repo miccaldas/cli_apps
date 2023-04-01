@@ -1,0 +1,14 @@
+snowball
+compiler
+algorithms
+stemming
+connected
+iso
+retrieval
+porter
+martin
+word
+form
+language
+originally
+connection

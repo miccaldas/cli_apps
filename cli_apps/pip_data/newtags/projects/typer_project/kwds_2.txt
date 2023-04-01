@@ -1,0 +1,5 @@
+clis
+syntax
+terminal
+bash
+creates

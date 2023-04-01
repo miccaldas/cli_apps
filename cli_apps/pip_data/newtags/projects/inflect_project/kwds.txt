@@ -1,0 +1,12 @@
+singular
+word
+form
+english
+words
+argument
+forms
+strings
+inflections
+noun
+classical
+methods

@@ -1,0 +1,8 @@
+system
+minimalist
+production
+ready
+plugin
+running
+pytestdev
+projects

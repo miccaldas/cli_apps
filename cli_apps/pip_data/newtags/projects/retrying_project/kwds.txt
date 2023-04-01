@@ -1,0 +1,14 @@
+behavior
+apache
+retry
+customize
+licensed
+written
+anything
+exceptions
+generalpurpose
+simplify
+task
+adding
+attempts
+wait

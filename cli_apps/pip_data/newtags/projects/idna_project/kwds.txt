@@ -1,0 +1,14 @@
+latin
+small
+specification
+unicode
+domain
+conversion
+version
+older
+letter
+internationalized
+uts
+standard
+support
+sharp

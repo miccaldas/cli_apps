@@ -1,0 +1,14 @@
+messagepack
+type
+data
+types
+json
+extension
+binary
+api
+default
+string
+serialization
+array
+format
+supports

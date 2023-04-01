@@ -1,0 +1,12 @@
+files
+bytes
+extract
+office
+word
+read
+size
+tool
+binary
+storage
+write
+olefileio

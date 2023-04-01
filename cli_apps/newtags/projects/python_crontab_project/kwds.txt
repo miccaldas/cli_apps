@@ -1,7 +1,0 @@
-api
-reading
-writing
-files
-accessing
-system
-npythoncrontab

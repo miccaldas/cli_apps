@@ -1,0 +1,5 @@
+clis
+executes
+bash
+debugging
+ready

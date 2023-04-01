@@ -1,0 +1,12 @@
+source
+checks
+simple
+files
+program
+file
+errors
+works
+pycqa
+url
+cli
+ready

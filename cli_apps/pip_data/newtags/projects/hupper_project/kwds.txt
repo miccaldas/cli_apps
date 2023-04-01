@@ -1,0 +1,11 @@
+process
+pylons
+monitor
+file
+reloader
+development
+inprocess
+reloading
+automatically
+url
+cli

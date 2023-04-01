@@ -1,0 +1,11 @@
+connector
+mysql
+mariadb
+source
+binary
+wheels
+project
+question
+building
+windows
+program

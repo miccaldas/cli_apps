@@ -1,0 +1,10 @@
+github
+api
+typed
+pull
+maintainers
+interactions
+information
+longterm
+issues
+requests

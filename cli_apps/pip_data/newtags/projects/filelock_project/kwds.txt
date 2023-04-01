@@ -1,0 +1,14 @@
+lock
+party
+standard
+windows
+unix
+file
+locks
+application
+nlibrary
+nsimple
+communication
+separate
+above
+pypi

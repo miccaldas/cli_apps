@@ -1,0 +1,5 @@
+pastedeploy
+plaster
+configuration
+plugin
+binding

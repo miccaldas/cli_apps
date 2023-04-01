@@ -1,0 +1,13 @@
+contents
+indices
+tables
+noted
+document
+licensed
+guides
+languages
+openstack
+project
+provided
+openstackorg
+powered

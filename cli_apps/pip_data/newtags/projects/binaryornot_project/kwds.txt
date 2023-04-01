@@ -1,0 +1,11 @@
+file
+binary
+ultralightweight
+perl
+pure
+heuristic
+types
+works
+cases
+text
+windows

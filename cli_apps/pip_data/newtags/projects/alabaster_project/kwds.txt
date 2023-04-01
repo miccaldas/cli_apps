@@ -1,0 +1,16 @@
+sphinx
+theme
+configurable
+lean
+responsive
+light
+nprofessionallysupported
+visually
+system
+footer
+note
+live
+easy
+style
+github
+improved

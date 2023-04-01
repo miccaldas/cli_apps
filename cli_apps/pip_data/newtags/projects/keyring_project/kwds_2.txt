@@ -1,0 +1,5 @@
+keyringrc
+keyrings
+password
+keychain
+jaraco

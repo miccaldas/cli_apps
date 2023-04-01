@@ -1,0 +1,10 @@
+gpl
+port
+unidecode
+basic
+artistic
+choose
+nand
+ports
+kmike
+textunidecode

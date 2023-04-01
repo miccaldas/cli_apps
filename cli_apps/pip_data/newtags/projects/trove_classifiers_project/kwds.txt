@@ -1,0 +1,13 @@
+classifiers
+canonical
+source
+pypi
+strings
+list
+pypa
+troveclassifiers
+url
+cli
+ready
+checkout
+web

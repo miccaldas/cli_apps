@@ -1,0 +1,17 @@
+oslo
+internationalization
+read
+features
+text
+nstrings
+noted
+working
+translation
+application
+document
+licensed
+guides
+languages
+openstack
+project
+provided

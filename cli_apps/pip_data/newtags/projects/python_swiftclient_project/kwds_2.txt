@@ -1,0 +1,4 @@
+swiftclient
+openstack
+document
+licensed

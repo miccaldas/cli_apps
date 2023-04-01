@@ -1,0 +1,17 @@
+email
+address
+domain
+dns
+form
+unicode
+addresses
+characters
+checks
+set
+forms
+mail
+local
+validation
+login
+returned
+internationalized

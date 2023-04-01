@@ -1,0 +1,5 @@
+openstack
+i18n
+oslo
+languages
+translation

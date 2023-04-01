@@ -1,0 +1,5 @@
+wavpack
+quodlibet
+audio
+cpython
+mp3

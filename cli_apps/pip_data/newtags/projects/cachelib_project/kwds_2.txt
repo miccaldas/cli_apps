@@ -1,0 +1,5 @@
+pallets
+cache
+libraries
+werkzeug
+api

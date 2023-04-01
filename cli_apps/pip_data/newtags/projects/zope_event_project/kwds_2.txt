@@ -1,0 +1,4 @@
+component
+event
+using
+zopefoundation

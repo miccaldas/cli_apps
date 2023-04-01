@@ -1,0 +1,4 @@
+sqlite
+error
+compiled
+sqlcipher3

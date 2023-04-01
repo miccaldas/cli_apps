@@ -1,0 +1,13 @@
+clone
+languages
+formats
+georg
+pythonorg
+project
+version
+read
+home
+issue
+nthe
+rtf
+html

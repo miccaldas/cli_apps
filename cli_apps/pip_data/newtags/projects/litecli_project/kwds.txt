@@ -1,0 +1,11 @@
+based
+aur
+databases
+arch
+linux
+sqlite
+autocompletion
+syntax
+file
+cli
+packages

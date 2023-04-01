@@ -1,0 +1,5 @@
+flask
+csrf
+wtforms
+recaptcha
+web

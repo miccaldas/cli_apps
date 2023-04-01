@@ -1,0 +1,17 @@
+environment
+pythondotenv
+file
+reads
+set
+default
+development
+keyvalue
+pairs
+applications
+files
+file
+principles
+add
+bash
+string
+variables

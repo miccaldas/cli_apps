@@ -1,0 +1,12 @@
+goose
+article
+extractor
+meta
+version
+language
+java
+configuration
+parser
+main
+originally
+web

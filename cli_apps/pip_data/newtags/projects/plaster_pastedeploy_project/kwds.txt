@@ -1,0 +1,14 @@
+plaster
+pastedeploy
+configuration
+loader
+pylons
+file
+ini
+applications
+binding
+url
+cli
+ready
+plugin
+nthat

@@ -1,0 +1,5 @@
+cairo
+software
+cpython
+graphics
+copyright

@@ -1,0 +1,12 @@
+cli
+display
+resizing
+images
+terminal
+optional
+api
+kitty
+basic
+requires
+gnu
+linux

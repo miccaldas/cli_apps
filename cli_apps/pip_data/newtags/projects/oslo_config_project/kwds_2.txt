@@ -1,0 +1,4 @@
+openstack
+oslo
+document
+configuration

@@ -1,0 +1,5 @@
+dbf
+databases
+sphinx
+dbase
+nfoxbase

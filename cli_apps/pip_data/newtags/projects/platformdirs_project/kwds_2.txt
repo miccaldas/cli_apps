@@ -1,0 +1,5 @@
+directories
+platform
+configuration
+cache
+tracker

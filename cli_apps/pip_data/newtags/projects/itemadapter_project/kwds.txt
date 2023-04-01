@@ -1,0 +1,12 @@
+item
+class
+method
+items
+classes
+field
+metadata
+based
+default
+interface
+additionally
+adapters

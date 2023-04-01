@@ -1,0 +1,5 @@
+openstack
+oslo
+encoding
+document
+languages

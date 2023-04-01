@@ -1,0 +1,5 @@
+html
+markdown
+gplv3
+text
+formatted

@@ -1,0 +1,4 @@
+autocompletion
+syntax
+nfile
+ipython

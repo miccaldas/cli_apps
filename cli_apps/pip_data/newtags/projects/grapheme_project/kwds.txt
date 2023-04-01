@@ -1,0 +1,7 @@
+unicode
+graphemes
+working
+perceived
+user
+text
+characters

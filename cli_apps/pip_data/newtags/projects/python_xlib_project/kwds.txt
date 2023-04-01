@@ -1,0 +1,10 @@
+lgpl
+license
+interface
+protocol
+programs
+released
+client
+pure
+run
+pythonxlib

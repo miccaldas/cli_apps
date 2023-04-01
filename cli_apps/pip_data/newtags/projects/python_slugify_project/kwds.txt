@@ -1,0 +1,12 @@
+gpl
+decoding
+overview
+notice
+contribution
+license
+sponsors
+slugify
+running
+perl
+artistic
+options

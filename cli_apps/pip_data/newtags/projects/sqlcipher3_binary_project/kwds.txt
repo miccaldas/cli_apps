@@ -1,0 +1,11 @@
+sqlcipher
+sqlite
+completely
+additional
+staticallylinked
+wheel
+bindings
+selfcontained
+binary
+newer
+coleifer

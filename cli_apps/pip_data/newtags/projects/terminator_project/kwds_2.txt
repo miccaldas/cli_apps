@@ -1,0 +1,4 @@
+launchpad
+gnome
+binary
+terminals

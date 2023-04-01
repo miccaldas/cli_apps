@@ -1,0 +1,3 @@
+wxpython
+pyutils
+line_profile

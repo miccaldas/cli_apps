@@ -1,0 +1,10 @@
+autocompletion
+analysis
+static
+refactoring
+completion
+version
+ncan
+ipython
+repl
+list

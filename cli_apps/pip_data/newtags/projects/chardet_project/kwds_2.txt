@@ -1,0 +1,4 @@
+cp932
+ascii
+utf
+encodings

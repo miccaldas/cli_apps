@@ -1,0 +1,6 @@
+decorator
+classes
+methods
+deprecate
+decorate
+class

@@ -1,0 +1,12 @@
+file
+cache
+files
+terminal
+items
+item
+add
+folders
+list
+application
+enter
+dmenuextended

@@ -1,3 +1,0 @@
-tomb
-installed
-wrapper

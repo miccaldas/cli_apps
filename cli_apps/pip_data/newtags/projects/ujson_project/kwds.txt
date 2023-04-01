@@ -1,0 +1,10 @@
+default
+fast
+html
+unicode
+linux
+characters
+written
+decoder
+encoder
+ultrajson

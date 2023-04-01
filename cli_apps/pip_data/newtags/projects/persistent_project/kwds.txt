@@ -1,0 +1,11 @@
+objects
+persistence
+automatic
+zodb
+zopefoundation
+url
+cli
+ready
+checkout
+web
+fast

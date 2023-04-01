@@ -1,0 +1,4 @@
+freedesktop
+trashes
+rm
+trashcan

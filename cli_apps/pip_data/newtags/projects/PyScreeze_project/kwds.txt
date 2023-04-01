@@ -1,0 +1,11 @@
+pillow
+returns
+image
+found
+locate
+left
+top
+width
+special
+height
+screenshot

@@ -1,0 +1,14 @@
+plugins
+manage
+applications
+loading
+easy
+allowing
+configure
+nand
+runtime
+makes
+extend
+discovering
+indices
+dynamically

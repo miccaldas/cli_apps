@@ -1,0 +1,10 @@
+version
+wikipedia
+google
+run
+results
+installation
+basic
+original
+shuyo
+languages

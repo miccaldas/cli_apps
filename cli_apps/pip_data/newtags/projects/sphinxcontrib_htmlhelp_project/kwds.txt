@@ -1,0 +1,16 @@
+sphinx
+automatic
+html
+extensions
+texinfo
+easy
+markup
+api
+windows
+functionality
+sections
+including
+latex
+epub
+nfunctions
+classes

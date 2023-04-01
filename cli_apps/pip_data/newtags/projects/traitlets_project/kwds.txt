@@ -1,0 +1,12 @@
+ipython
+run
+precommit
+copyright
+method
+attributes
+nand
+automatically
+fix
+default
+jupyter
+traits

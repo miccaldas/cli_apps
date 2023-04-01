@@ -1,0 +1,4 @@
+typelib
+libraries
+gui
+libgtk

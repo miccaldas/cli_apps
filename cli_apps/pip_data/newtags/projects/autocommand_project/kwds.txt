@@ -1,0 +1,11 @@
+type
+default
+automatically
+main
+lucretiel
+parser
+program
+annotation
+parameter
+switch
+arguments

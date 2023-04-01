@@ -1,0 +1,5 @@
+unidecode
+text
+gplv2
+transliteration
+kmike

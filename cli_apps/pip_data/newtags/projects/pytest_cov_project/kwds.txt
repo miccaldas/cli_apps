@@ -1,0 +1,11 @@
+coverage
+plugin
+data
+subprocess
+file
+overview
+run
+distributed
+support
+installed
+pytestcov

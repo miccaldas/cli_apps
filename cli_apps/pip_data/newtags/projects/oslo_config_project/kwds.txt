@@ -1,0 +1,16 @@
+osloconfig
+configuration
+read
+openstack
+nline
+files
+noted
+parsing
+options
+document
+licensed
+guides
+languages
+project
+provided
+powered

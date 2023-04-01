@@ -1,0 +1,4 @@
+bitprophet
+alias
+aliases
+dictionary

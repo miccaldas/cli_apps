@@ -1,0 +1,13 @@
+youtubedl
+file
+string
+download
+url
+numeric
+note
+extractor
+windows
+make
+number
+quality
+formats

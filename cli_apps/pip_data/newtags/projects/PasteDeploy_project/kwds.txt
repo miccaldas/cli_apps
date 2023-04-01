@@ -1,0 +1,12 @@
+application
+configuration
+paste
+wsgi
+entry
+file
+uri
+files
+contents
+documents
+relative
+deployment

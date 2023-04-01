@@ -1,0 +1,11 @@
+image
+jpeg
+returns
+gif
+tiff
+svg
+netpbm
+png
+size
+headers
+width

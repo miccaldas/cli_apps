@@ -1,0 +1,5 @@
+clipboard
+xclip
+paste
+pbcopy
+pyqt4

@@ -1,0 +1,10 @@
+order
+local
+rich
+pdb
+config
+display
+django
+global
+variables
+list

@@ -1,0 +1,10 @@
+string
+format
+custom
+read
+column
+json
+binary
+score
+ranking
+sqlite

@@ -1,0 +1,10 @@
+namespace
+registry
+object
+entry
+registries
+check
+decorator
+registered
+point
+super

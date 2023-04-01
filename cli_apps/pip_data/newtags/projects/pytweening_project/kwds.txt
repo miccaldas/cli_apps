@@ -1,0 +1,6 @@
+easing
+tweening
+implemented
+set
+end
+usage

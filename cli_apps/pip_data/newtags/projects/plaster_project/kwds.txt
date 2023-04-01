@@ -1,0 +1,11 @@
+file
+application
+api
+settings
+scheme
+format
+section
+registered
+find
+specific
+configuration

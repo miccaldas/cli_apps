@@ -1,0 +1,5 @@
+tables
+indices
+welcome
+and
+copyright

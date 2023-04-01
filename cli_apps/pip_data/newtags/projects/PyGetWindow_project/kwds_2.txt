@@ -1,0 +1,4 @@
+gui
+platform
+notepad
+windows

@@ -1,0 +1,8 @@
+linux
+usage
+crossplatform
+clipboard
+windows
+xsel
+works
+xclip

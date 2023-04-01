@@ -1,0 +1,5 @@
+terminal
+orkohunter
+shell
+ctrl
+pip3

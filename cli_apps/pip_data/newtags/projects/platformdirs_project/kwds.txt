@@ -1,0 +1,16 @@
+indices
+configuration
+netc
+tables
+directories
+nthis
+files
+user
+data
+determine
+platformspecific
+system
+includes
+place
+cache
+source

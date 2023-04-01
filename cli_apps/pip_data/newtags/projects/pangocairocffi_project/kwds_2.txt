@@ -1,0 +1,5 @@
+pango
+cairo
+cffi
+bindings
+libraries

@@ -1,0 +1,9 @@
+objects
+class
+attributes
+areas
+simple
+topleft
+corner
+asweigart
+rectangular

@@ -1,0 +1,15 @@
+indices
+office
+xml
+excel
+read
+write
+n’t
+xlsx
+guard
+xlsm
+attacks
+file
+feature
+support
+xltx

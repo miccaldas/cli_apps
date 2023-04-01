@@ -1,0 +1,12 @@
+clis
+cli
+great
+easy
+type
+based
+hints
+build
+check
+features
+subcommands
+automatic

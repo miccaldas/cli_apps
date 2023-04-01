@@ -1,0 +1,7 @@
+called
+applied
+passed
+instance
+wrapped
+method
+decorators

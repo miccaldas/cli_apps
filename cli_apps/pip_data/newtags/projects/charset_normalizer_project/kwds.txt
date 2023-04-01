@@ -1,0 +1,15 @@
+encoding
+chardet
+restrictive
+text
+specific
+ousret
+fork
+noise
+files
+coherence
+detection
+file
+offer
+project
+charsetnormalizer

@@ -1,0 +1,15 @@
+arrange
+set
+true
+list
+simple
+nested
+tidelift
+adapted
+array
+showing
+colsep
+displaywidth
+vertical
+ljust
+columns

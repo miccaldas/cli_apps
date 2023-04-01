@@ -1,0 +1,14 @@
+nthe
+installed
+logging
+spacy
+console
+logged
+full
+file
+statistics
+training
+config
+fields
+parameters
+loggers

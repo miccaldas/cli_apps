@@ -1,0 +1,5 @@
+encoding
+unicode
+charset
+interpreter
+decoded

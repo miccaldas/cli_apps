@@ -1,0 +1,4 @@
+urwid
+shortcuts
+using
+nreadline

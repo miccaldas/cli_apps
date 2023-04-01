@@ -1,0 +1,4 @@
+python2
+nconfigparser
+zope
+nconfiguration

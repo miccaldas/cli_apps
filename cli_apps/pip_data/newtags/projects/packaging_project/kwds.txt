@@ -1,0 +1,11 @@
+reusable
+interoperability
+nspecifications
+behaviour
+core
+implement
+correct
+benefit
+greatly
+single
+shared

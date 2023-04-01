@@ -1,0 +1,17 @@
+keybindings
+manager
+project
+variable
+set
+component
+shortcuts
+enviroment
+meant
+donation
+desired
+default
+custom
+crossplatform
+terminalbased
+tuifi
+termuxoriented

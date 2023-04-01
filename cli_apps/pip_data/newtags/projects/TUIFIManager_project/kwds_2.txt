@@ -1,0 +1,5 @@
+termux
+giorgosxou
+terminal
+shortcuts
+keybindings

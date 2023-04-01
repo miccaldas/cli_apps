@@ -1,0 +1,9 @@
+pyflakes
+pycodestyle
+mccabe
+list
+tool
+tools
+glues
+thirdparty
+plugins

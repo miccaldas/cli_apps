@@ -1,0 +1,14 @@
+encoding
+variants
+detector
+character
+note
+hungarian
+ascii
+shift
+jis
+japanese
+johab
+korean
+cyrillic
+bulgarian

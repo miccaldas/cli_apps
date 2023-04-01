@@ -1,0 +1,6 @@
+figlet
+written
+pwaller
+url
+cli
+ready

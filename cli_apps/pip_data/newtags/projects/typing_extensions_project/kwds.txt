@@ -1,0 +1,16 @@
+type
+draft
+static
+typing
+types
+hints
+syntax
+system
+reference
+accessible
+nand
+complete
+support
+ntype
+checking
+inline

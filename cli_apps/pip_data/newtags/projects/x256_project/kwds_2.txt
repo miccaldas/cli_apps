@@ -1,0 +1,5 @@
+xterm
+print
+color
+software
+rgb

@@ -1,0 +1,16 @@
+mouse
+rgb
+information
+application
+color
+pixel
+log
+works
+position
+display
+run
+gui
+buttons
+save
+copy
+enter

@@ -1,0 +1,11 @@
+completion
+bash
+shell
+script
+program
+called
+zsh
+tab
+argument
+application
+completers

@@ -1,0 +1,11 @@
+zipfile
+official
+tidelift
+jaraco
+standard
+url
+cli
+ready
+wrapper
+checkout
+web

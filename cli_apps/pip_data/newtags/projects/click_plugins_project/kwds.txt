@@ -1,0 +1,8 @@
+register
+core
+subcommands
+subgroups
+nthat
+commandline
+related
+clickplugins

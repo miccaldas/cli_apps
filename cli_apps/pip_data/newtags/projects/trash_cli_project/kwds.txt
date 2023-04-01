@@ -1,0 +1,11 @@
+files
+file
+restore
+trashed
+interface
+remove
+note
+days
+freedesktoporg
+crontab
+trashcli
