@@ -1,5 +1,0 @@
-terminal
-textualize
-software
-framework
-developers

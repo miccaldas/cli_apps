@@ -1,2 +1,0 @@
-  Project, https://github.com/PyMySQL/PyMySQL
-  Documentation, https://pymysql.readthedocs.io/

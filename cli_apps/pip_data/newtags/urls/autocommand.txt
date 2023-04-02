@@ -1,3 +1,0 @@
-Home-page: https://github.com/Lucretiel/autocommand
-  Homepage, https://github.com/Lucretiel/autocommand
-  Bug Tracker, https://github.com/Lucretiel/autocommand/issues

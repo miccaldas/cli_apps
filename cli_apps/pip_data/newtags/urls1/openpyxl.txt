@@ -1,4 +1,0 @@
-https://openpyxl.readthedocs.io
-  Documentation, https://openpyxl.readthedocs.io/en/stable/
-  Source, https://foss.heptapod.net/openpyxl/openpyxl
-  Tracker, https://foss.heptapod.net/openpyxl/openpyxl/-/issues

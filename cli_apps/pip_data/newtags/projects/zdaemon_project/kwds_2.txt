@@ -1,5 +1,0 @@
-unix
-daemons
-linux
-os
-ncommands

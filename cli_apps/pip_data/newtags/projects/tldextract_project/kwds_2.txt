@@ -1,5 +1,0 @@
-error
-ncache_dir
-regex
-snippet
-urls

@@ -1,5 +1,0 @@
-interoperability
-implement
-reusable
-provides
-nspecifications

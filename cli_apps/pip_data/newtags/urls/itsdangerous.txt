@@ -1,8 +1,0 @@
-Home-page: https://palletsprojects.com/p/itsdangerous/
-  Donate, https://palletsprojects.com/donate
-  Documentation, https://itsdangerous.palletsprojects.com/
-  Changes, https://itsdangerous.palletsprojects.com/changes/
-  Source Code, https://github.com/pallets/itsdangerous/
-  Issue Tracker, https://github.com/pallets/itsdangerous/issues/
-  Twitter, https://twitter.com/PalletsTeam
-  Chat, https://discord.gg/pallets

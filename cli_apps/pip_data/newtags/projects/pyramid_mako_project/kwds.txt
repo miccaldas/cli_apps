@@ -1,8 +1,0 @@
-pyramid
-bindings
-web
-mako
-framework
-templating
-system
-pylons

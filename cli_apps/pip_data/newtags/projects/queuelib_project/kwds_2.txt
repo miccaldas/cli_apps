@@ -1,4 +1,0 @@
-scrapy
-require
-emptied
-queues

@@ -1,4 +1,0 @@
-tests
-testing
-platform
-pypy3

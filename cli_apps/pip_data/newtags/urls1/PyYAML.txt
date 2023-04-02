@@ -1,5 +1,0 @@
-https://pyyaml.org/
-  Bug Tracker, https://github.com/yaml/pyyaml/issues
-  CI, https://github.com/yaml/pyyaml/actions
-  Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation
-  Source Code, https://github.com/yaml/pyyaml

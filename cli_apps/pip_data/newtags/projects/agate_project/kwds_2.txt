@@ -1,5 +1,0 @@
-pandas
-numpy
-optimized
-problems
-analysis

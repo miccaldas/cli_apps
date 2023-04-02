@@ -1,5 +1,0 @@
-argparse
-bash
-shellcode
-terminal
-ipython

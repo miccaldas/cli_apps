@@ -1,4 +1,0 @@
-highlighting
-syntax
-prettify
-highlighter

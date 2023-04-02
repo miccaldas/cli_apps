@@ -1,4 +1,0 @@
-scrapinghub
-csv
-bot
-parsers

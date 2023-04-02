@@ -1,4 +1,0 @@
-codec
-nconversion
-unicode
-errors

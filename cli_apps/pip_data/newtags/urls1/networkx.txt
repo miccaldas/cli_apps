@@ -1,4 +1,0 @@
-https://networkx.org/
-  Bug Tracker, https://github.com/networkx/networkx/issues
-  Documentation, https://networkx.org/documentation/stable/
-  Source Code, https://github.com/networkx/networkx

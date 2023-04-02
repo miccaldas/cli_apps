@@ -1,5 +1,0 @@
-wordnet
-pythonic
-text
-parsing
-nlp

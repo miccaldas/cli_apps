@@ -1,2 +1,0 @@
-Home-page: https://github.com/tobgu/pyrsistent/
-  Changelog, https://pyrsistent.readthedocs.io/en/latest/changes.html

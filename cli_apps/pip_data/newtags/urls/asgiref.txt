@@ -1,4 +1,0 @@
-Home-page: https://github.com/django/asgiref/
-  Documentation, https://asgi.readthedocs.io/
-  Further Documentation, https://docs.djangoproject.com/en/stable/topics/async/#async-adapter-functions
-  Changelog, https://github.com/django/asgiref/blob/master/CHANGELOG.txt

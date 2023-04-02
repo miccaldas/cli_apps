@@ -1,5 +1,0 @@
-djangocon
-framework
-apps
-software
-web

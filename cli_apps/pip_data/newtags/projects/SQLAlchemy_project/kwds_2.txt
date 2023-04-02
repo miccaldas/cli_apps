@@ -1,5 +1,0 @@
-database
-sql
-pythonic
-relational
-zzzcomputing

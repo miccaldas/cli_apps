@@ -1,3 +1,0 @@
-https://github.com/dateutil/dateutil
-  Documentation, https://dateutil.readthedocs.io/en/stable/
-  Source, https://github.com/dateutil/dateutil

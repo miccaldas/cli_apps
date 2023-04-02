@@ -1,5 +1,0 @@
-wsgi
-zeug
-interpreter
-libraries
-template

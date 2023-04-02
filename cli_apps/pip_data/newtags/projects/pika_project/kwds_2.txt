@@ -1,5 +1,0 @@
-rabbitmq
-amqp
-protocol
-pypi
-network

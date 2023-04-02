@@ -1,5 +1,0 @@
-pyflakes
-pypy
-twisted
-constants
-symbolic

@@ -1,4 +1,0 @@
-cld2
-ready
-bindings
-languages

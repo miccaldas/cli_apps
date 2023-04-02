@@ -1,4 +1,0 @@
-Home-page: https://github.com/pypa/distlib
-  Documentation, https://distlib.readthedocs.io/
-  Source, https://github.com/pypa/distlib
-  Tracker, https://github.com/pypa/distlib/issues

@@ -1,5 +1,0 @@
-indices
-tables
-copyright
-to
-welcome

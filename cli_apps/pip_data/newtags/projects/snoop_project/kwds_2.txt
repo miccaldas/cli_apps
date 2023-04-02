@@ -1,5 +1,0 @@
-debugging
-debugger
-ipython
-snoops
-pysnooper

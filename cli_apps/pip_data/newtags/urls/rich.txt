@@ -1,2 +1,0 @@
-Home-page: https://github.com/Textualize/rich
-  Documentation, https://rich.readthedocs.io/en/latest/

@@ -1,9 +1,0 @@
-time
-small
-kinds
-number
-parses
-copyright
-internationalisation
-wow
-expressions

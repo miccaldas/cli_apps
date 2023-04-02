@@ -1,6 +1,0 @@
-Home-page: https://www.djangoproject.com/
-  Documentation, https://docs.djangoproject.com/
-  Release notes, https://docs.djangoproject.com/en/stable/releases/
-  Funding, https://www.djangoproject.com/fundraising/
-  Source, https://github.com/django/django
-  Tracker, https://code.djangoproject.com/

@@ -1,4 +1,0 @@
-web
-wsgi
-database
-frameworks

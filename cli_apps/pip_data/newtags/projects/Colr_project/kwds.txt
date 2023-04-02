@@ -1,8 +1,0 @@
-windows
-nand
-chainable
-text
-tool
-stdin
-required
-colors

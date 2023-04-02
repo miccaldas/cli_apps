@@ -1,9 +1,0 @@
-version
-deprecated
-input
-simple
-naturally
-notice
-sorts
-windows
-sorting

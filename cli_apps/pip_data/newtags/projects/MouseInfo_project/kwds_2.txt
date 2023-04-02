@@ -1,5 +1,0 @@
-mouse
-cursor
-gui
-interactive
-terminal

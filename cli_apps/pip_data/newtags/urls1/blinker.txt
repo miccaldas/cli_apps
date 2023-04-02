@@ -1,2 +1,0 @@
-https://blinker.readthedocs.io
-  Source, https://github.com/pallets-eco/blinker

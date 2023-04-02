@@ -1,5 +1,0 @@
-jquery
-html
-lxml
-api
-nxml

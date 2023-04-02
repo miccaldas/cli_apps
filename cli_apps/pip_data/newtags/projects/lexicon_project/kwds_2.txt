@@ -1,4 +1,0 @@
-bitprophet
-alias
-aliases
-dictionary

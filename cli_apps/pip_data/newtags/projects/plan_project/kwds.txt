@@ -1,7 +1,0 @@
-crontab
-jobs
-management
-fengsp
-url
-cli
-ready

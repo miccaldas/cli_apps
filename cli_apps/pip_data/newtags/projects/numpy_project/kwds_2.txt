@@ -1,5 +1,0 @@
-computational
-tools
-libraries
-visualizations
-workflow

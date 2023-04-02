@@ -1,5 +1,0 @@
-markdown
-syntax
-parser
-html
-implementations

@@ -1,4 +1,0 @@
-https://typing.readthedocs.io/
-  Home, https://github.com/python/typing_extensions
-  Q & A, https://github.com/python/typing/discussions
-  Repository, https://github.com/python/typing_extensions

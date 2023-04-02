@@ -1,1 +1,0 @@
-Home-page: https://docs.openstack.org/oslo.i18n/latest

@@ -1,4 +1,0 @@
-commandline
-setuptools
-nconfig
-plugins

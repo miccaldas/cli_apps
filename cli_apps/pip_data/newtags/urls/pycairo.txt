@@ -1,1 +1,0 @@
-Home-page: https://pycairo.readthedocs.io

@@ -1,2 +1,0 @@
-https://www.pycryptodome.org
-  Source, https://github.com/Legrandin/pycryptodome/

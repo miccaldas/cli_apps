@@ -1,4 +1,0 @@
-bugfix
-patches
-version
-torproject

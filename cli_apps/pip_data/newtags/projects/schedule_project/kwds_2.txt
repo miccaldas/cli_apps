@@ -1,5 +1,0 @@
-scheduler
-scheduling
-ruby
-dbader
-syntax

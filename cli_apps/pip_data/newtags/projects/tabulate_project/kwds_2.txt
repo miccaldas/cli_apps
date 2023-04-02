@@ -1,3 +1,0 @@
-python3
-nfile
-latex_booktabs

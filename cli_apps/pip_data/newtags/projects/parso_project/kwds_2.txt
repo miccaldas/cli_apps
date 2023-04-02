@@ -1,5 +1,0 @@
-parser
-parsing
-python3
-syntax
-errors

@@ -1,4 +1,0 @@
-Home-page: https://www.nltk.org/
-  Documentation, https://www.nltk.org/
-  Source Code, https://github.com/nltk/nltk
-  Issue Tracker, https://github.com/nltk/nltk/issues

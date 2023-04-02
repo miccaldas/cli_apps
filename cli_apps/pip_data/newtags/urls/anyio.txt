@@ -1,3 +1,0 @@
-  Documentation, https://anyio.readthedocs.io/en/latest/
-  Source code, https://github.com/agronholm/anyio
-  Issue tracker, https://github.com/agronholm/anyio/issues

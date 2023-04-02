@@ -1,3 +1,0 @@
-Home-page: https://www.makotemplates.org/
-  Documentation, https://docs.makotemplates.org
-  Issue Tracker, https://github.com/sqlalchemy/mako

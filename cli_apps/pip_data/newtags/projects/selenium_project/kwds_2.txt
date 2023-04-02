@@ -1,4 +1,0 @@
-webdriver
-seleniumconf
-automation
-browsers

@@ -1,4 +1,0 @@
-openstack
-authentication
-document
-keystoneauth

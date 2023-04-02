@@ -1,5 +1,0 @@
-tool
-help
-see
-making
-like

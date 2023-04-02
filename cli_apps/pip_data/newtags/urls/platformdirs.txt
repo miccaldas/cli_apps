@@ -1,4 +1,0 @@
-  Documentation, https://platformdirs.readthedocs.io
-  Homepage, https://github.com/platformdirs/platformdirs
-  Source, https://github.com/platformdirs/platformdirs
-  Tracker, https://github.com/platformdirs/platformdirs/issues

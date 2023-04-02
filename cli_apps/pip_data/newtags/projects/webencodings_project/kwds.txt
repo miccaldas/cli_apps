@@ -1,7 +1,0 @@
-character
-bom
-labels
-license
-bsd
-python’s
-pythonwebencodings

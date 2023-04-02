@@ -1,5 +1,0 @@
-openstack
-serialization
-formats
-messagepack
-json

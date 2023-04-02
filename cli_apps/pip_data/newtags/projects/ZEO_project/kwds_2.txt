@@ -1,5 +1,0 @@
-zodb
-server
-framework
-storage
-zopefoundation

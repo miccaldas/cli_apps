@@ -1,5 +1,0 @@
-figlet
-pwaller
-using
-web
-try

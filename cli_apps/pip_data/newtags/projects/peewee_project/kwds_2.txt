@@ -1,5 +1,0 @@
-sqlalchemy
-sqlite
-django
-database
-postgresql

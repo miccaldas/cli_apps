@@ -1,7 +1,0 @@
-zopefoundation
-zopedeprecation
-classes
-url
-cli
-ready
-called

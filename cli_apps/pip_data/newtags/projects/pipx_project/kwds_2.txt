@@ -1,5 +1,0 @@
-pipsi
-pypi
-pypa
-terminal
-installer

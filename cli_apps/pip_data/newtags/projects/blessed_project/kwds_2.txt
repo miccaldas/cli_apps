@@ -1,5 +1,0 @@
-terminal
-shell
-console
-enter
-debugger

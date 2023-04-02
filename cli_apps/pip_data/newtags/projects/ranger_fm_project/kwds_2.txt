@@ -1,5 +1,0 @@
-ranger
-foss
-docker
-console
-volunteer

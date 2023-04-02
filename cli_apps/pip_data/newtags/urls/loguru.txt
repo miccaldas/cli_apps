@@ -1,3 +1,0 @@
-Home-page: https://github.com/Delgan/loguru
-  Changelog, https://github.com/Delgan/loguru/blob/master/CHANGELOG.rst
-  Documentation, https://loguru.readthedocs.io/en/stable/index.html

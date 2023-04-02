@@ -1,7 +1,0 @@
-wrapper
-allonhadaya
-dmenupython
-url
-cli
-ready
-checkout

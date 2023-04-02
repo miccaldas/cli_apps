@@ -1,4 +1,0 @@
-api
-software
-receiver
-signals

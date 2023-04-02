@@ -1,2 +1,0 @@
-Home-page: https://babel.pocoo.org/
-  Source, https://github.com/python-babel/babel

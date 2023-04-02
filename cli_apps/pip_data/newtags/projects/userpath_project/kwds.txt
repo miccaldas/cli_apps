@@ -1,9 +1,0 @@
-tool
-user
-path
-crossplatform
-required
-adding
-locations
-elevated
-privileges

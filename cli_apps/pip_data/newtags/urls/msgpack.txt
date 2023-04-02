@@ -1,4 +1,0 @@
-Home-page: https://msgpack.org/
-  Documentation, https://msgpack-python.readthedocs.io/
-  Source, https://github.com/msgpack/msgpack-python
-  Tracker, https://github.com/msgpack/msgpack-python/issues

@@ -1,3 +1,0 @@
-Home-page: https://www.sqlalchemy.org
-  Documentation, https://docs.sqlalchemy.org
-  Issue Tracker, https://github.com/sqlalchemy/sqlalchemy/

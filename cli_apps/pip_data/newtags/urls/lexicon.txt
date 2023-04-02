@@ -1,4 +1,0 @@
-Home-page: https://github.com/bitprophet/lexicon#what
-  Source, https://github.com/bitprophet/lexicon
-  Changelog, https://github.com/bitprophet/lexicon/blob/main/docs/changelog.rst
-  CI, https://app.circleci.com/pipelines/github/bitprophet/lexicon

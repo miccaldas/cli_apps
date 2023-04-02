@@ -1,5 +1,0 @@
-cpython
-eventlet_hub
-interpreter
-threading
-concurrent

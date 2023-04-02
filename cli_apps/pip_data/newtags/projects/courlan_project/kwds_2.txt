@@ -1,4 +1,0 @@
-adbar
-urls
-crawler
-webpages

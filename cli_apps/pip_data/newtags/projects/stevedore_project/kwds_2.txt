@@ -1,4 +1,0 @@
-plugins
-openstack
-runtime
-extensions

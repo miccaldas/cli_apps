@@ -1,1 +1,0 @@
-Home-page: https://www.riverbankcomputing.com/software/pyqt/

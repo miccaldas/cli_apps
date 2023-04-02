@@ -1,3 +1,0 @@
-Home-page: https://github.com/micktwomey/pyiso8601
-  Documentation, https://pyiso8601.readthedocs.io/en/latest/
-  Repository, https://github.com/micktwomey/pyiso8601

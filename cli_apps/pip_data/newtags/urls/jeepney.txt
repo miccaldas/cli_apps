@@ -1,2 +1,0 @@
-Home-page: https://gitlab.com/takluyver/jeepney
-  Documentation, https://jeepney.readthedocs.io/en/latest/

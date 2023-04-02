@@ -1,5 +1,0 @@
-framework
-pyramid
-templating
-web
-bindings

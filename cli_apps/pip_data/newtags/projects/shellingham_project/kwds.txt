@@ -1,8 +1,0 @@
-shell
-surrounding
-tool
-user
-environment
-shell
-posix
-running

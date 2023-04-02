@@ -1,4 +1,0 @@
-typelib
-libraries
-gui
-libgtk

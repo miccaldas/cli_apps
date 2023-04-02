@@ -1,1 +1,0 @@
-https://github.com/rr-/urwid_readline

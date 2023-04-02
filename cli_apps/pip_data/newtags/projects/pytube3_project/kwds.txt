@@ -1,9 +1,0 @@
-deprecated
-hbmartin
-url
-cli
-ready
-checkout
-web
-fast
-official

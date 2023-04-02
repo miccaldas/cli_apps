@@ -1,9 +1,0 @@
-cache
-memoizing
-decorators
-extensible
-standard
-size
-maximum
-tkem
-url

@@ -1,4 +1,0 @@
-Home-page: https://github.com/pganssle/pytz-deprecation-shim
-  Source, https://github.com/pganssle/pytz-deprecation-shim
-  Bug Reports, https://github.com/pganssle/pytz-deprecation-shim/issues
-  Documentation, https://pytz-deprecation-shim.readthedocs.io

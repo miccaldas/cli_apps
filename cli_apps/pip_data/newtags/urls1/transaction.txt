@@ -1,3 +1,0 @@
-https://github.com/zopefoundation/transaction
-  Issue Tracker, https://github.com/zopefoundation/transaction/issues
-  Sources, https://github.com/zopefoundation/transaction

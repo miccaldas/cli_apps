@@ -1,4 +1,0 @@
-platform
-os
-nversion
-linux_distribution

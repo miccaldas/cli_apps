@@ -1,5 +1,0 @@
-Home-page: https://service-identity.readthedocs.io/
-  Documentation, https://service-identity.readthedocs.io/
-  Bug Tracker, https://github.com/pyca/service-identity/issues
-  Source Code, https://github.com/pyca/service-identity
-  Funding, https://github.com/sponsors/hynek

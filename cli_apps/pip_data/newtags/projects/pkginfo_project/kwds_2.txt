@@ -1,5 +1,0 @@
-py2
-docstrings
-errors
-markdownisms
-lp

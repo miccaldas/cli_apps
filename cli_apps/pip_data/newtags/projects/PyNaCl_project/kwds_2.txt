@@ -1,5 +1,0 @@
-libsodium
-pyca
-libraries
-npypy
-nacl

@@ -1,8 +1,0 @@
-lifo
-fifo
-priority
-provides
-note
-api
-index
-queues

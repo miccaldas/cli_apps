@@ -1,4 +1,0 @@
-parsing
-macos
-languages
-timezone

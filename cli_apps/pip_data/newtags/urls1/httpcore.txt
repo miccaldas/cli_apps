@@ -1,3 +1,0 @@
-https://github.com/encode/httpcore
-  Documentation, https://www.encode.io/httpcore
-  Source, https://github.com/encode/httpcore

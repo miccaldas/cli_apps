@@ -1,8 +1,0 @@
-text
-urwid
-readline
-edit
-pass
-supported
-ndirectory
-nwith

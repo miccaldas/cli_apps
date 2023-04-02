@@ -1,4 +1,0 @@
-swiftclient
-openstack
-document
-licensed

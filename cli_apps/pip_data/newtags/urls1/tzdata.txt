@@ -1,4 +1,0 @@
-https://github.com/python/tzdata
-  Bug Reports, https://github.com/python/tzdata/issues
-  Source, https://github.com/python/tzdata
-  Documentation, https://tzdata.readthedocs.io

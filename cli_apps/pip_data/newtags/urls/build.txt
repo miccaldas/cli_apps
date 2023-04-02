@@ -1,2 +1,0 @@
-  changelog, https://pypa-build.readthedocs.io/en/stable/changelog.html
-  homepage, https://github.com/pypa/build

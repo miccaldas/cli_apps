@@ -1,7 +1,0 @@
-bindings
-leifgehrmann
-ncairo
-url
-cli
-ready
-npangocairo

@@ -1,5 +1,0 @@
-cpython
-psf
-pytest
-formatter
-datadog

@@ -1,5 +1,0 @@
-http
-api
-proxy
-netrc
-encode

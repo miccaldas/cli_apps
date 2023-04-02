@@ -1,5 +1,0 @@
-crontab
-fengsp
-ready
-jobs
-management

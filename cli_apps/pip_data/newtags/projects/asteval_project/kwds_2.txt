@@ -1,5 +1,0 @@
-ast
-lambda
-subscripting
-expressions
-numpy

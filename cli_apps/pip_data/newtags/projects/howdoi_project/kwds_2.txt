@@ -1,5 +1,0 @@
-coding
-programmer
-bash
-vscode
-basic

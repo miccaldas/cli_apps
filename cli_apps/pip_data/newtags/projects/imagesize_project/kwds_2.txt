@@ -1,5 +1,0 @@
-imagesize_py
-shibukawa
-jpeg
-svg
-gif

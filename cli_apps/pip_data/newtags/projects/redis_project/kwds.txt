@@ -1,8 +1,0 @@
-redispy
-client
-hiredis
-true
-start
-version
-connection
-response

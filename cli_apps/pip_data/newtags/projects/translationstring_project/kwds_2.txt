@@ -1,5 +1,0 @@
-translation
-i18n
-internationalization
-string
-packages

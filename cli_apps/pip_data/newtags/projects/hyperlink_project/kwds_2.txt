@@ -1,4 +1,0 @@
-pythonic
-hyper
-uris
-urls

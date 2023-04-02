@@ -1,3 +1,0 @@
-Home-page: https://github.com/redis/hiredis-py
-  Changes, https://github.com/redis/hiredis-py/releases
-  Issue tracker, https://github.com/redis/hiredis-py/issues

@@ -1,5 +1,0 @@
-packages
-software
-documenting
-dictionaries
-classes

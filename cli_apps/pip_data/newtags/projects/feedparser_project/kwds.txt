@@ -1,8 +1,0 @@
-atom
-rss
-feeds
-html
-web
-source
-directory
-build

@@ -1,5 +1,0 @@
-retryerror
-compile
-apache
-retry_with
-exception

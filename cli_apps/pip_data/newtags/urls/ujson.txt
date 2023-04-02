@@ -1,2 +1,0 @@
-Home-page: https://github.com/ultrajson/ultrajson
-  Source, https://github.com/ultrajson/ultrajson

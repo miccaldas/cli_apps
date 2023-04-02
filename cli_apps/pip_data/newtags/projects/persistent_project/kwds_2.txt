@@ -1,5 +1,0 @@
-sphinx
-zodb
-persistence
-try
-using

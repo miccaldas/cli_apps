@@ -1,5 +1,0 @@
-spacy
-excels
-plugins
-api
-frameworks

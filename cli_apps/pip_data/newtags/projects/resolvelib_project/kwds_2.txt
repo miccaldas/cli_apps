@@ -1,4 +1,0 @@
-dependencies
-dependency
-sarugaku
-resolver

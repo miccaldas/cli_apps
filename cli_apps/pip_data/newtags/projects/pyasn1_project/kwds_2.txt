@@ -1,5 +1,0 @@
-pythonista
-compiler
-asn
-snmp
-encoding

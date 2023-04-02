@@ -1,7 +1,0 @@
-https://github.com/aio-libs/multidict
-  Chat: Gitter, https://gitter.im/aio-libs/Lobby
-  CI: GitHub, https://github.com/aio-libs/multidict/actions
-  Coverage: codecov, https://codecov.io/github/aio-libs/multidict
-  Docs: RTD, https://multidict.readthedocs.io
-  GitHub: issues, https://github.com/aio-libs/multidict/issues
-  GitHub: repo, https://github.com/aio-libs/multidict

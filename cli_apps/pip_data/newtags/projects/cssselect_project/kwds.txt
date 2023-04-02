@@ -1,5 +1,0 @@
-selectors
-css
-find
-source
-quick

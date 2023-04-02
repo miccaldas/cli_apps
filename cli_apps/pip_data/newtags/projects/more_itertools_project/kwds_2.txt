@@ -1,5 +1,0 @@
-itertools
-iterables
-compose
-blocks
-more

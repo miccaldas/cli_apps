@@ -1,5 +1,0 @@
-pypy3
-packages
-executable
-pypa
-pypi

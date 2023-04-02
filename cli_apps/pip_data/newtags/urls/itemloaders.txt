@@ -1,3 +1,0 @@
-Home-page: https://github.com/scrapy/itemloaders
-  Documentation, https://itemloaders.readthedocs.io/
-  Source, https://github.com/scrapy/itemloaders

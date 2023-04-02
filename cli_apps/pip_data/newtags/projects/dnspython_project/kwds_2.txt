@@ -1,5 +1,0 @@
-dns
-nameserver
-zone
-queries
-updates

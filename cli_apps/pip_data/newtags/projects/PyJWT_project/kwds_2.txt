@@ -1,5 +1,0 @@
-token
-jpadilla
-json
-try
-ready

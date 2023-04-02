@@ -1,4 +1,0 @@
-syntax
-typing
-generics
-types

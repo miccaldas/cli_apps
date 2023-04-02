@@ -1,4 +1,0 @@
-pythonic
-gzip
-filesystem
-webhdfs

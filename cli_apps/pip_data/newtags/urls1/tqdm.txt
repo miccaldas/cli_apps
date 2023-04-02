@@ -1,4 +1,0 @@
-https://tqdm.github.io
-  Changelog, https://tqdm.github.io/releases
-  Source, https://github.com/tqdm/tqdm
-  Wiki, https://github.com/tqdm/tqdm/wiki

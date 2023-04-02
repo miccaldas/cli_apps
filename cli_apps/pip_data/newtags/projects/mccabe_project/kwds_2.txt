@@ -1,5 +1,0 @@
-pycon
-pycqa
-error
-require
-setuptools

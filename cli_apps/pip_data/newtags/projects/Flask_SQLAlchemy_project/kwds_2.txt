@@ -1,5 +1,0 @@
-sqlalchemy
-flask
-adds
-ready
-pallets

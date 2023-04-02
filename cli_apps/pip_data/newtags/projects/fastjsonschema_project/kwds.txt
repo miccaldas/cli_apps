@@ -1,4 +1,0 @@
-validator
-horejsek
-url
-pythonfastjsonschema

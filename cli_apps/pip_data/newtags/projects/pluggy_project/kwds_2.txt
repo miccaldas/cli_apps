@@ -1,5 +1,0 @@
-pytest
-plugin
-dev
-minimalist
-projects

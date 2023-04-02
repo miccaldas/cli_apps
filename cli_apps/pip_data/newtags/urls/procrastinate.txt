@@ -1,3 +1,0 @@
-Home-page: https://procrastinate.readthedocs.io/
-  Documentation, https://procrastinate.readthedocs.io/
-  Repository, https://github.com/procrastinate-org/procrastinate/

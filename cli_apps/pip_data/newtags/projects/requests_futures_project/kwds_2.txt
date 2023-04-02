@@ -1,5 +1,0 @@
-interpreter
-api
-requests
-require
-futures

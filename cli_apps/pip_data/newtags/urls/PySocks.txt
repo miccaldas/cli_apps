@@ -1,2 +1,0 @@
-Summary: A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information.
-Home-page: https://github.com/Anorov/PySocks

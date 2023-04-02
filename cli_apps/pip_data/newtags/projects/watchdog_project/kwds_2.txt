@@ -1,5 +1,0 @@
-nfile
-shell
-logs
-monitoring
-filesystem

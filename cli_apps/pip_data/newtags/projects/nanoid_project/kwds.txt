@@ -1,8 +1,0 @@
-symbols
-length
-nano
-uuid
-probability
-reduce
-nonsecure
-urlfriendly

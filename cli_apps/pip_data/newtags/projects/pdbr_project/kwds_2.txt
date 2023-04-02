@@ -1,4 +1,0 @@
-pdb
-terminal
-prompt
-debugger

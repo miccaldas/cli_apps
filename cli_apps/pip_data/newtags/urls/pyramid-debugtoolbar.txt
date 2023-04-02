@@ -1,1 +1,0 @@
-Home-page: https://docs.pylonsproject.org/projects/pyramid-debugtoolbar/en/latest/

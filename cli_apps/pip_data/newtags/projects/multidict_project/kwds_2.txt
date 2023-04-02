@@ -1,3 +1,0 @@
-compile
-require
-multidict_no_extensions

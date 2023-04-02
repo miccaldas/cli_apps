@@ -1,7 +1,0 @@
-compatible
-port
-released
-github
-project
-maintenance
-versions

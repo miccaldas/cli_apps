@@ -1,4 +1,0 @@
-ndata
-github
-copyright
-etingof

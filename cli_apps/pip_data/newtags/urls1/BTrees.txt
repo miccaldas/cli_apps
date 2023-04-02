@@ -1,4 +1,0 @@
-https://github.com/zopefoundation/BTrees
-  Documentation, https://btrees.readthedocs.io
-  Issue Tracker, https://github.com/zopefoundation/BTrees/issues
-  Sources, https://github.com/zopefoundation/BTrees

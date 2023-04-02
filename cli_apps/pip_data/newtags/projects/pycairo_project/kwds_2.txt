@@ -1,5 +1,0 @@
-pythonic
-cairo
-pypy
-api
-bindings

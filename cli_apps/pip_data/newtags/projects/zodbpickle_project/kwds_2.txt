@@ -1,5 +1,0 @@
-zodb
-python2
-py3k
-pickle
-pickling

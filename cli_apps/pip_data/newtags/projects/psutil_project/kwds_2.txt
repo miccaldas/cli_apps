@@ -1,5 +1,0 @@
-unix
-netstat
-software
-process
-platform

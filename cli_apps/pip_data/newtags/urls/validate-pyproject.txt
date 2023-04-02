@@ -1,6 +1,0 @@
-Home-page: https://github.com/abravalheri/validate-pyproject/
-  Documentation, https://validate-pyproject.readthedocs.io/
-  Source, https://github.com/abravalheri/validate-pyproject
-  Tracker, https://github.com/abravalheri/validate-pyproject/issues
-  Changelog, https://validate-pyproject.readthedocs.io/en/latest/changelog.html
-  Download, https://pypi.org/project/validate-pyproject/#files

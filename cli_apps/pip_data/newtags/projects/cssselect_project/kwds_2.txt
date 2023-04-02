@@ -1,5 +1,0 @@
-scrapy
-xpath
-html
-selectors
-xml

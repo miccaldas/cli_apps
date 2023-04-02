@@ -1,4 +1,0 @@
-chromedriver
-selenium
-browser
-webdrivers

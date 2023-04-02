@@ -1,7 +1,0 @@
-extensions
-mypy
-nlibrary
-url
-cli
-ready
-standard

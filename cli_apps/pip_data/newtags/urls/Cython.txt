@@ -1,5 +1,0 @@
-  Documentation, https://cython.readthedocs.io/
-  Donate, https://cython.readthedocs.io/en/latest/src/donating.html
-  Source Code, https://github.com/cython/cython
-  Bug Tracker, https://github.com/cython/cython/issues
-  User Group, https://groups.google.com/g/cython-users

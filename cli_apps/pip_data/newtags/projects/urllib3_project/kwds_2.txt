@@ -1,5 +1,0 @@
-http
-libraries
-npurchasing
-software
-proxy

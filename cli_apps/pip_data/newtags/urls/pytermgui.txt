@@ -1,3 +1,0 @@
-  homepage, https://github.com/bczsalba/PyTermGUI
-  repository, https://github.com/bczsalba/PyTermGUI
-  documentation, https://ptg.bczsalba.com

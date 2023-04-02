@@ -1,4 +1,0 @@
-urwid
-shortcuts
-using
-nreadline

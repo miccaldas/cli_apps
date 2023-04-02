@@ -1,5 +1,0 @@
-Home-page: https://jrnl.sh
-  Documentation, https://jrnl.sh
-  Funding, https://opencollective.com/jrnl
-  Issue Tracker, https://github.com/jrnl-org/jrnl/issues
-  Repository, https://github.com/jrnl-org/jrnl

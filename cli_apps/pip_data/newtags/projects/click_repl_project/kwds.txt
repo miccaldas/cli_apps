@@ -1,9 +1,0 @@
-installation
-usage
-subcommand
-apps
-app
-shell
-advanced
-works
-clickcontrib

@@ -1,4 +1,0 @@
-dbcli
-tools
-libraries
-helpers

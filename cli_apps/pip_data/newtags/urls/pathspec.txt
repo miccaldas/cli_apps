@@ -1,3 +1,0 @@
-  Documentation, https://python-path-specification.readthedocs.io/en/latest/index.html
-  Issue Tracker, https://github.com/cpburnz/python-pathspec/issues
-  Source Code, https://github.com/cpburnz/python-pathspec

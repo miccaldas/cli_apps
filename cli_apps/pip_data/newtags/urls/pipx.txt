@@ -1,3 +1,0 @@
-  Documentation, https://pypa.github.io/pipx/
-  Source Code, https://github.com/pypa/pipx
-  Bug Tracker, https://github.com/pypa/pipx/issues

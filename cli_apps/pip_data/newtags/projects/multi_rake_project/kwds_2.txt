@@ -1,5 +1,0 @@
-rake
-min_chars
-keywords
-multilingual
-polish

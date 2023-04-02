@@ -1,8 +1,0 @@
-database
-rogerbinns
-nother
-ython
-url
-cli
-ready
-wrapper

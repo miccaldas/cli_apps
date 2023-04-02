@@ -1,5 +1,0 @@
-interface
-netmask
-ip
-ethernet
-configure

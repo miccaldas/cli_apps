@@ -1,5 +1,0 @@
-django
-oauth
-access
-using
-authentication

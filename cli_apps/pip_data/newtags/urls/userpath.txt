@@ -1,4 +1,0 @@
-  Funding, https://github.com/sponsors/ofek
-  History, https://github.com/ofek/userpath/blob/master/HISTORY.rst
-  Issues, https://github.com/ofek/userpath/issues
-  Source, https://github.com/ofek/userpath

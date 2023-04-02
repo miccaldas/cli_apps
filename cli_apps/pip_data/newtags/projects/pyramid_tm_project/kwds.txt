@@ -1,8 +1,0 @@
-pyramid
-transaction
-centralized
-applications
-middleware
-management
-pylons
-ndocumentation

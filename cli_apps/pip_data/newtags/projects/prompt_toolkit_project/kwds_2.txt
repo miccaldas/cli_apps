@@ -1,5 +1,0 @@
-prompt
-unix
-shell
-interactive
-syntax

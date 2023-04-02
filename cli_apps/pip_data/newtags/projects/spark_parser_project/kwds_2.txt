@@ -1,4 +1,0 @@
-syntax
-parsing
-grammars
-parsers

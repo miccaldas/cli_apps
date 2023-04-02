@@ -1,4 +1,0 @@
-https://github.com/simonw/sqlite-fts4
-  Issues, https://github.com/simonw/sqlite-fts4/issues
-  CI, https://github.com/simonw/sqlite-fts4/actions
-  Changelog, https://github.com/simonw/sqlite-fts4/releases

@@ -1,2 +1,0 @@
-  Changelog, https://github.com/psf/black/blob/main/CHANGES.md
-  Homepage, https://github.com/psf/black

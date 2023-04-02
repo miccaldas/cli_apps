@@ -1,5 +1,0 @@
-pycqa
-errors
-syntax
-require
-nper

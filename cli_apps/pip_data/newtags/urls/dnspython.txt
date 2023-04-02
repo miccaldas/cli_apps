@@ -1,4 +1,0 @@
-Home-page: https://www.dnspython.org
-  Bug Tracker, https://github.com/rthalley/dnspython/issues
-  Documentation, https://dnspython.readthedocs.io/en/stable/
-  Repository, https://github.com/rthalley/dnspython.git

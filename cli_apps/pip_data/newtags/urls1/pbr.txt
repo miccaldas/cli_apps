@@ -1,4 +1,0 @@
-https://docs.openstack.org/pbr/latest/
-  Bug Tracker, https://bugs.launchpad.net/pbr/
-  Documentation, https://docs.openstack.org/pbr/
-  Source Code, https://opendev.org/openstack/pbr

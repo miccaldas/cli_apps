@@ -1,8 +1,0 @@
-prompts
-pretty
-easy
-nfor
-tom
-confirmations
-lists
-free

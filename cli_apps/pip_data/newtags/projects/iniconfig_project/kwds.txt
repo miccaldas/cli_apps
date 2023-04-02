@@ -1,5 +1,0 @@
-supports
-sections
-raises
-pytestdev
-features

@@ -1,5 +1,0 @@
-easygui
-javascript
-message
-tkinter
-box

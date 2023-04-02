@@ -1,5 +1,0 @@
-html
-cpython
-parser
-libraries
-errors

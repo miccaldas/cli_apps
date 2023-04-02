@@ -1,5 +1,0 @@
-jaraco
-parsing
-indentation
-using
-newlines

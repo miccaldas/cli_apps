@@ -1,4 +1,0 @@
-hyper
-framing
-decoding
-frames

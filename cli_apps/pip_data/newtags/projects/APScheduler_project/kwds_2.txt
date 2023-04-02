@@ -1,4 +1,0 @@
-scheduling
-cron
-trigger
-scheduler

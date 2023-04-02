@@ -1,8 +1,0 @@
-based
-lowlevel
-calling
-pypa
-url
-cli
-ready
-pyprojecthooks

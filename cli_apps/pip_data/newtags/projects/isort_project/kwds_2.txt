@@ -1,4 +1,0 @@
-pipfile
-pythonic
-alphabetically
-sortimports

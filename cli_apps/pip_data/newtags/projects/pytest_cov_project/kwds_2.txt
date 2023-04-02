@@ -1,4 +1,0 @@
-pytest
-subprocess
-unittest2
-coverage

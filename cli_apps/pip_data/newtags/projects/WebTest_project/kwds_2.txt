@@ -1,4 +1,0 @@
-wsgi
-testing
-easy_install
-frameworks

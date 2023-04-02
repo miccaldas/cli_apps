@@ -1,6 +1,0 @@
-https://github.com/wtforms/flask-wtf/
-  Documentation, https://flask-wtf.readthedocs.io/
-  Changes, https://flask-wtf.readthedocs.io/changes/
-  Source Code, https://github.com/wtforms/flask-wtf/
-  Issue Tracker, https://github.com/wtforms/flask-wtf/issues/
-  Chat, https://discord.gg/pallets

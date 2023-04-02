@@ -1,5 +1,0 @@
-uinput
-linux
-gvalkov
-subsystem
-ninput

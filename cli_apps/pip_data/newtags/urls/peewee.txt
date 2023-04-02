@@ -1,2 +1,0 @@
-Home-page: https://github.com/coleifer/peewee/
-  Source, https://github.com/coleifer/peewee

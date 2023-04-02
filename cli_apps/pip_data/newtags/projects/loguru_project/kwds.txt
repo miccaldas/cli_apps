@@ -1,7 +1,0 @@
-logs
-messages
-simple
-delgan
-standard
-sink
-logging

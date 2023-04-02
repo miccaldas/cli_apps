@@ -1,9 +1,0 @@
-lists
-strings
-mappings
-data
-structure
-validation
-composed
-pylons
-deserialization

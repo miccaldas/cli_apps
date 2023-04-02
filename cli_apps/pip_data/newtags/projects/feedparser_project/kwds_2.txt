@@ -1,5 +1,0 @@
-feeds
-rss
-ready
-kurtmckee
-try

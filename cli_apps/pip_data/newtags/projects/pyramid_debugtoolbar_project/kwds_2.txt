@@ -1,3 +1,0 @@
-debugger
-debugging
-_debug_toolbar

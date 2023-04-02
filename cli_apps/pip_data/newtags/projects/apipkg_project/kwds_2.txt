@@ -1,5 +1,0 @@
-pytest
-pypy
-cpython
-namespace
-mypkg

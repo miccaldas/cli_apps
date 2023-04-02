@@ -1,5 +1,0 @@
-namespace
-registry
-initialize
-implemented
-dependencies

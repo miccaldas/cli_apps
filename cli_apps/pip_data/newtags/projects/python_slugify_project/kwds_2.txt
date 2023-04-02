@@ -1,5 +1,0 @@
-slugify
-unicode
-try
-perl
-version

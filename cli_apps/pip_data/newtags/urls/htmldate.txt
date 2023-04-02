@@ -1,4 +1,0 @@
-Home-page: https://htmldate.readthedocs.io
-  Source, https://github.com/adbar/htmldate
-  Tracker, https://github.com/adbar/htmldate/issues
-  Blog, https://adrien.barbaresi.eu/blog/tag/htmldate.html

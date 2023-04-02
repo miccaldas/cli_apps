@@ -1,5 +1,0 @@
-wsgi
-nginx
-frameworks
-server
-unix

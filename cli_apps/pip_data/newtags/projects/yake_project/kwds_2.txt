@@ -1,5 +1,0 @@
-textrank
-keywords
-dictionaries
-corpus
-extractor

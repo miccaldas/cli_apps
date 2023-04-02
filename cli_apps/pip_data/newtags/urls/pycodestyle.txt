@@ -1,2 +1,0 @@
-Home-page: https://pycodestyle.pycqa.org/
-  Changes, https://pycodestyle.pycqa.org/en/latest/developer.html#changes

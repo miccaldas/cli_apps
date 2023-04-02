@@ -1,5 +1,0 @@
-filename
-opencv
-platform
-linux
-pil

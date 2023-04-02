@@ -1,5 +1,0 @@
-pypy3
-pyca
-ciphers
-cryptographic
-encryption

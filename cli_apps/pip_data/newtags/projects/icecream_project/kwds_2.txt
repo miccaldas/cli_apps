@@ -1,5 +1,0 @@
-debugging
-bash
-filename
-snippet
-syntax

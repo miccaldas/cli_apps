@@ -1,4 +1,0 @@
-sphinx
-template
-customizations
-themes

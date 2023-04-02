@@ -1,4 +1,0 @@
-https://red-bird.readthedocs.io
-  Funding, https://github.com/sponsors/Miksus
-  Source, https://github.com/Miksus/red-bird
-  Changelog, https://red-bird.readthedocs.io/en/stable/versions.html

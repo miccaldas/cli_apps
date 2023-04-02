@@ -1,3 +1,0 @@
-  repository, https://github.com/jamesturk/jellyfish/
-  homepage, https://jamesturk.github.io/jellyfish/
-  documentation, https://jamesturk.github.io/jellyfish/

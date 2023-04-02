@@ -1,4 +1,0 @@
-https://twine.readthedocs.io/
-  Source, https://github.com/pypa/twine/
-  Documentation, https://twine.readthedocs.io/en/latest/
-  Packaging tutorial, https://packaging.python.org/tutorials/packaging-projects/

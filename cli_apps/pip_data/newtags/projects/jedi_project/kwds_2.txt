@@ -1,4 +1,0 @@
-autocompletion
-syntax
-nfile
-ipython

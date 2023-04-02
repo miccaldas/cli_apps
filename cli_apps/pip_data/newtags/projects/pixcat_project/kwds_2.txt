@@ -1,5 +1,0 @@
-terminal
-thumbnail
-kitty
-resizing
-mirukana

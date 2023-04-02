@@ -1,3 +1,0 @@
-cpython
-database
-sqlite3

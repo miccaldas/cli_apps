@@ -1,4 +1,0 @@
-scrapy
-csv
-class
-items

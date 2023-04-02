@@ -1,4 +1,0 @@
-Home-page: https://github.com/Pylons/pyramid_mako
-  Documentation, https://docs.pylonsproject.org/projects/pyramid_mako/en/latest/
-  Changelog, https://github.com/Pylons/pyramid_mako/blob/master/CHANGES.txt
-  Issue Tracker, https://github.com/Pylons/pyramid_mako/issues

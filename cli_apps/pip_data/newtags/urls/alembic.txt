@@ -1,4 +1,0 @@
-Home-page: https://alembic.sqlalchemy.org
-  Source, https://github.com/sqlalchemy/alembic/
-  Documentation, https://alembic.sqlalchemy.org/en/latest/
-  Issue Tracker, https://github.com/sqlalchemy/alembic/issues/

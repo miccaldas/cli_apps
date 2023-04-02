@@ -1,2 +1,0 @@
-Home-page: https://github.com/GiorgosXou/TUIFIManager
-  Github, https://github.com/GiorgosXou/TUIFIManager

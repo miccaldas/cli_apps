@@ -1,5 +1,0 @@
-cpython
-pdbpp
-prompt
-tab
-filename

@@ -1,4 +1,0 @@
-https://github.com/msiemens/tinydb
-  Changelog, https://github.com/msiemens/tinydb/en/latest/changelog.html
-  Documentation, https://tinydb.readthedocs.org/
-  Issues, https://github.com/msiemens/tinydb/issues

@@ -1,5 +1,0 @@
-openstack
-keystone
-api
-document
-licensed

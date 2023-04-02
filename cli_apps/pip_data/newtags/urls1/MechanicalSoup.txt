@@ -1,2 +1,0 @@
-https://mechanicalsoup.readthedocs.io/
-  Source, https://github.com/MechanicalSoup/MechanicalSoup

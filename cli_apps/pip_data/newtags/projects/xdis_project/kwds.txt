@@ -1,4 +1,0 @@
-running
-disassembler
-gnu
-crossversion

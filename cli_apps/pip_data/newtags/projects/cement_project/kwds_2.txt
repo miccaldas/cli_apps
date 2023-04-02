@@ -1,5 +1,0 @@
-framework
-tools
-developer
-projects
-backend

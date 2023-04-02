@@ -1,5 +1,0 @@
-xpath
-scrapy
-xml
-html
-extract

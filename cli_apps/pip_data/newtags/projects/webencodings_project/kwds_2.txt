@@ -1,5 +1,0 @@
-encoding
-web
-utf
-nwhen
-decoders

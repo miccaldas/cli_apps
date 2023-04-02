@@ -1,5 +1,0 @@
-wsgi
-cpython
-pypy
-pylons
-unix

@@ -1,4 +1,0 @@
-7zip
-coding
-debug
-uncompresssed

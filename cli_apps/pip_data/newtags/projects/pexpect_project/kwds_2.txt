@@ -1,4 +1,0 @@
-automating
-nscripts
-nexpect
-automated

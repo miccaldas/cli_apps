@@ -1,5 +1,0 @@
-https://wasi-master.github.io/rich-rst
-  Bug Tracker, https://github.com/wasi-master/rich-rst/issues
-  Source, https://github.com/wasi-master/rich-rst
-  Documentation, https://rich-rst.readthedocs.io/en/latest/
-  Say Thanks, https://saythanks.io/to/wasi-master

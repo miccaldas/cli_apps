@@ -1,3 +1,0 @@
-https://github.com/python-trio/outcome
-  Documentation, https://outcome.readthedocs.io/en/latest/
-  Chat, https://gitter.im/python-trio/general

@@ -1,5 +1,0 @@
-pylons
-pypy
-using
-strings
-ready

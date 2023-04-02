@@ -1,2 +1,0 @@
-Home-page: https://github.com/wireservice/csvkit
-  Documentation, https://csvkit.readthedocs.io/en/latest/

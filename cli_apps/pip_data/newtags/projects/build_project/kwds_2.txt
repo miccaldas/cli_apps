@@ -1,5 +1,0 @@
-pypa
-try
-environment
-ready
-full

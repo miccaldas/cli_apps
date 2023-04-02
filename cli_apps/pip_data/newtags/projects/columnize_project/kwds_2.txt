@@ -1,5 +1,0 @@
-pycolumnize
-arrange_vertical
-spaces
-lists
-columns

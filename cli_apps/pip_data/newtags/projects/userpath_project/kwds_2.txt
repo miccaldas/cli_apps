@@ -1,5 +1,0 @@
-path
-ofek
-platform
-privileges
-user

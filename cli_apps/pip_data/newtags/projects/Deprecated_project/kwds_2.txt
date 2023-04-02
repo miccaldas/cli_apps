@@ -1,5 +1,0 @@
-decorator
-tantale
-developer
-using
-try

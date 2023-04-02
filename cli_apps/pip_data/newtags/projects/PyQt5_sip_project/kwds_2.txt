@@ -1,5 +1,0 @@
-libraries
-sip
-bindings
-software
-extension

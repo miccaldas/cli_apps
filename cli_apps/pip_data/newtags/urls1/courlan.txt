@@ -1,3 +1,0 @@
-https://github.com/adbar/courlan
-  Blog, https://adrien.barbaresi.eu/blog/
-  Tracker, https://github.com/adbar/courlan/issues

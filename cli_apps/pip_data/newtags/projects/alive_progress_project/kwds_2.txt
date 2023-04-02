@@ -1,5 +1,0 @@
-software
-compiler
-interactive
-codepoints
-compilation

@@ -1,5 +1,0 @@
-gnu
-bytecode
-pydisasm
-interpreter
-disassembly
