@@ -2,12 +2,13 @@
 We'll use pip's package information system
 to get information on installed packages.
 """
+import multiprocessing
 import os
 import subprocess
+from multiprocessing import Pool
 
-#import snoop
+# import snoop
 from snoop import pp
-
 
 # def type_watch(source, value):
 #     return "type({})".format(source), type(value)
@@ -16,8 +17,8 @@ from snoop import pp
 # snoop.install(watch_extras=[type_watch])
 
 
-#@snoop()
-def query_builder():
+# @snoop()
+def query_builder(clean):
     """
     We'll instantiate the lists
     here, compare it to the old
@@ -26,26 +27,28 @@ def query_builder():
     these entries through a
     subprocess command, that will
     link to pip.
+    We'll use multiprocessing to
+    speed up the process.
     """
 
     cwd = os.getcwd()
-    name_path = f"{cwd}/lists/names_linux.txt"
     old_name_path = f"{cwd}/lists/old_names_linux.txt"
-
-    with open(name_path, "r") as f:
-        names = f.readlines()
 
     with open(old_name_path, "r") as f:
         old_names = f.readlines()
 
-    clean = [i.strip() for i in names]
     old_clean = [v.strip() for v in old_names]
 
-    for name in clean:
-        if pp(name not in old_clean):
-            cmd = f"pip show {name} > package_files/{name}.txt"
-            subprocess.run(cmd, shell=True)
+    if clean not in old_clean:
+        cmd = f"pip show {clean} > package_files/{clean}"
+        subprocess.run(cmd, shell=True)
 
 
 if __name__ == "__main__":
-    query_builder()
+    cwd = os.getcwd()
+    name_path = f"{cwd}/lists/names_linux.txt"
+    with open(name_path, "r") as f:
+        names = f.readlines()
+    clean = [i.strip() for i in names]
+    with Pool() as pool:
+        pool.map(query_builder, clean)

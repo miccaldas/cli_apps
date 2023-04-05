@@ -41,3 +41,25 @@ Keyword Uploader
 
 .. automodule:: cli_apps.newtags.yay_newtags.kwd_uploader
 .. autofunction:: kwd_uploader
+
+Stragglers
+----------
+
+.. automodule:: cli_apps.newtags.yay_newtags.stragglers
+.. autofunction:: get_missing
+.. autofunction:: missing_list
+.. autofunction:: start_project
+.. autofunction:: create_settings
+.. autofunction:: run_spider
+.. autofunction:: csv_cleaning
+.. autofunction:: kwd_creation
+.. autofunction:: kwd_upload
+
+Check For Deleted
+-----------------
+
+.. automodule:: cli_apps.newtags.yay_newtags.check_for_deleted
+.. autofunction:: clean_lists
+.. autofunction:: db_pack_lst
+.. autofunction:: compare_lsts
+.. autofunction:: delete_entries

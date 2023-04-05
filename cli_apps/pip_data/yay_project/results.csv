@@ -1,0 +1,1816 @@
+name,content
+Scrapy,"An open source and collaborative framework for extracting the data you need from websites.
+      ,In a fast, simple, yet extensible way.,
+        Maintained by
+        ,
+        (formerly Scrapinghub)
+        and
+        ,
+      , , Scrapy 2.8.0 ,Terminal,Build and run your,Terminal,Deploy them to,or use , to host the spiders on your own server,write the rules to extract the data and let Scrapy do the rest,extensible by design, plug new functionality easily without having to touch the core,written in Python and runs on Linux, Windows, Mac and BSD,Maintained by , (formerly Scrapinghub) and "
+name,content
+nvidia-cusparse-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+nvidia-cudnn-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+nvidia-cuda-nvrtc-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+Send2Trash,"arsenetar/send2trash,Name already in use,Send2Trash -- Send files to trash on all platforms,natively,all platforms,
+        Python library to natively send files to Trash (or Recycle bin) on all platforms.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,Send2Trash is a small package that sends files to the Trash (or Recycle Bin) , and on
+,. On OS X, it uses native , Cocoa calls or can use pyobjc
+with NSFileManager. On Windows, it uses native , call if on Vista or newer and
+pywin32 is installed or falls back to , calls. On other platforms, if ,
+and , are available, it will use this.  Otherwise, it will fallback to its own implementation of
+the ,., is used to access native libraries, so no compilation is necessary.,Send2Trash supports Python 2.7 and up (Python 3 is supported).,Additional help is welcome for supporting this package.  Specifically help with the OSX and Linux
+issues and fixes would be most appreciated.,You can download it with pip:,To install with pywin32 or pyobjc required specify the extra nativeLib:,or you can download the source from , and install it with:,On Freedesktop platforms (Linux, BSD, etc.), you may not be able to efficiently
+trash some files. In these cases, an exception ,
+is raised, so that the application can handle this case. This inherits from
+, (, on Python 2). Specifically, this affects
+files on a different device to the user's home directory, where the root of the
+device does not have a , directory, and we don't have permission to
+create a , directory.,For any other problem, , is raised.,
+      Python library to natively send files to Trash (or Recycle bin) on all platforms.
+    "
+name,content
+jaraco.classes,"jaraco/jaraco.classes,Name already in use,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,Available as part of the Tidelift Subscription.,This project and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.,.,To report a security vulnerability, please use the
+,.
+Tidelift will coordinate the fix and disclosure."
+name,content
+nvidia-cuda-runtime-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+dbus-python,"best,This page lists implementations and language bindings for the D-Bus protocol, their status and, if appropriate, links to download them. ,GDBus is part of GNOME's GLib library, since version 2.26+. Language bindings are available via GObject-Introspection. It is an implementation of the D-Bus protocol (not a binding).,QtDBus is part of Qt, and is a higher-level binding for libdbus. Various language bindings for QtDBus are available.,Eldbus is part of Enlightenment's EFL. It is a binding for libdbus.,If you use this low-level API directly, you're signing up for some pain. —official API documentation,libdbus is part of dbus, and is the reference implementation of the D-Bus protocol. This does not make it the , implementation of D-Bus, and for most purposes it isn't the best available. Its maintainers recommend using GDBus, sd-bus or QtDBus instead.,sd-bus is part of libsystemd, and is an implementation of the D-Bus protocol (not a binding).,If you implement a new C++ library for D-Bus, please call it something more distinctive than /dbus-c(p|x|plus|+)\1/, otherwise everyone will mix it up with the existing libraries.,dbus-cxx is a sigc++ binding for libdbus.,dbus-cpp is a header-only C++11 binding for libdbus.,Also known as dbus-cplusplus, this is a C++ binding for libdbus. It appears to be inactive (latest release 2011) and is not recommended. Various forks exist; please list any actively-maintained forks here if you know of them.,A C++17 binding for systemd's sd-bus., is a modern, pythonic D-Bus library built on top of PyGI and GDBus., is a another modern python library for D-Bus.,GDBus, the D-Bus implementation in GLib, can be used from Python 2 or 3 via ,.,QtDBus, the D-Bus implementation in Qt, can be used from Python 2 or 3 via recent versions of ,., is a native Python implementation of the D-Bus protocol for the Twisted networking framework. , is a pure Python D-Bus module.
+It consists of an IO-free core implementing the protocol, and integrations
+for both blocking I/O and for different asynchronous frameworks., is the most popular Ruby D-Bus library. It is an implementation of the D-Bus protocol (not a binding).,Rust implementation, based on Serde.,libdbus-based binding.,dbus-sharp is an implementation of the D-Bus protocol (not a binding).,FreePascal has dbus package included.,Gambas has gb.dbus package included.,Since version 2.0 it has been a complete native implementation of the protocol and not a wrapper around the reference implementation. 1.x versions are feature-complete bindings around the reference implementation.,Java D-Bus is hosted in freedesktop.org's ,., ,The last release binding the reference implementation is ,. (2006-12-26),Documentation and API reference for the Java implementation of D-Bus is ,.,The Maintainer is Matthew Johnson < , > ,dbus-glib is an old GLib binding for libdbus. ,dbus-python is a binding for libdbus, the reference implementation of D-Bus. For compatibility reasons, its API involves a lot of type-guessing (despite ""explicit is better than implicit"" and ""resist the temptation to guess""). "
+name,content
+nvidia-nccl-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+nvidia-curand-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+mpmath," is a free (BSD licensed) Python library for real and complex floating-point arithmetic with arbitrary precision. It has been developed by , since 2007, with help from many contributors.,The following example computes 50 digits of pi by numerically evaluating the Gaussian integral with mpmath. See , and the documentation links below for many more examples!,mpmath works with both Python 2 and Python 3, with no other required dependencies. It can be used as a library, interactively via the Python interpreter, or from within the , or , computer algebra systems which include mpmath as standard component. , lets you use mpmath directly in the browser.,The latest version is 1.3.0, released 2023-03-07. Download: ,Source code git repository: ,Issue tracker: ,Feedback and questions are welcome on the , (mpmath@googlegroups.com),This project was previously hosted on Google Code. See , for the old site.,The documentation provides installation instructions and lots of interactive examples., (HTML),mpmath can be used as an arbitrary-precision substitute for Python's float/complex types and math/cmath modules, but also does much more ,. Almost any calculation can be performed just as well at 10-digit or 1000-digit precision, with either real or complex numbers, and in many cases mpmath implements efficient algorithms that scale well for extremely high precision work.,mpmath implements a huge number of ,, with arbitrary precision and full support for complex numbers:,mpmath also includes rudimentary support for interval arithmetic (only basic functions are available).,If , is available, mpmath provides a convenient plotting interface. The pictures at the top of this page were generated by the commands ,, ,, and the , script. See the , for more images.,mpmath internally uses Python's builtin long integers by default, but automatically switches to ,/, for much faster high-precision arithmetic if , is installed or if mpmath is imported from within ,.,The , computer algebra system includes mpmath as a standard component, and uses it for numerical evaluation of special functions. , and ,, Python computer algebra systems, use mpmath for numerical evaluation. Other software includes:,As of April 2014, Google Scholar , in the scientific literature. A very outdated hand-compiled list can be found ,.,If you use mpmath in your research, please cite it! In BibTeX format, the following entry can be used:"
+name,content
+pymongo,"mongodb/mongo-python-driver,Name already in use,PyMongo,examples,doc/build/html/,
+        PyMongo - the Official MongoDB Python driver
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,The PyMongo distribution contains tools for interacting with MongoDB
+database from Python.  The , package is an implementation of
+the , for Python. The ,
+package is a native Python driver for MongoDB. The , package
+is a ,
+implementation on top of ,.,PyMongo supports MongoDB 3.6, 4.0, 4.2, 4.4, 5.0, and 6.0.,For issues with, questions about, or feedback for PyMongo, please look into
+our ,. Please
+do not email any of the PyMongo developers directly with issues or
+questions - you're more likely to get an answer on the ,.,Think you’ve found a bug? Want to see a new feature in PyMongo? Please open a
+case in our issue management tool, JIRA:,Bug reports in JIRA for all driver projects (i.e. PYTHON, CSHARP, JAVA) and the
+Core Server (i.e. SERVER) project are ,.,Please include all of the following information when opening an issue:,Detailed steps to reproduce the problem, including full traceback, if possible.,The exact python version used, with patch level:,The exact version of PyMongo used, with patch level:,The operating system and version (e.g. Windows 7, OSX 10.8, ...),Web framework or asynchronous network library used, if any, with version (e.g.
+Django 1.7, mod_wsgi 4.3.0, gevent 1.0.1, Tornado 4.0.2, ...),If you’ve identified a security vulnerability in a driver or any other
+MongoDB project, please report it according to the ,.,PyMongo can be installed with ,:,Or , from
+,:,You can also download the project source and do:,Do , install the ""bson"" package from pypi. PyMongo comes with its own
+bson package; doing ""easy_install bson"" installs a third-party package that
+is incompatible with PyMongo.,PyMongo supports CPython 3.7+ and PyPy3.7+.,Required dependencies:,Support for mongodb+srv:// URIs requires ,Optional dependencies:,GSSAPI authentication requires , on Unix or , on Windows. The correct
+dependency can be installed automatically along with PyMongo:,MONGODB-AWS authentication requires ,:,OCSP (Online Certificate Status Protocol) requires ,, ,, , and may
+require ,:,Wire protocol compression with snappy requires ,:,Wire protocol compression with zstandard requires ,:,Client-Side Field Level Encryption requires , and
+,:,You can install all dependencies automatically with the following
+command:,Additional dependencies are:,Here's a basic example (for more see the , section of the docs):,Documentation is available at ,.,To build the documentation, you will need to install ,.
+Documentation can be generated by running ,. Generated documentation can be found in the
+, directory.,The easiest way to run the tests is to run , in
+the root of the distribution.,To verify that PyMongo works with Gevent's monkey-patching:,Or with Eventlet's:,
+      PyMongo - the Official MongoDB Python driver
+    "
+name,content
+SecretStorage,"mitya57/secretstorage,Name already in use,label,secret,attributes,
+        Python bindings to Freedesktop.org Secret Service API
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,This module provides a way for securely storing passwords and other secrets.,It uses D-Bus , API that is supported by GNOME Keyring,
+KWallet (since version 5.97) and KeePassXC.,The main classes provided are ,, representing a secret
+item (that has a ,, a , and some ,) and
+,, a place items are stored in.,SecretStorage supports most of the functions provided by Secret Service,
+including creating and deleting items and collections, editing items,
+locking and unlocking collections.,The documentation can be found on ,.,Note,SecretStorage 3.x supports Python 3.6 and newer versions.
+If you have an older version of Python, install SecretStorage 2.x:,SecretStorage requires these packages to work:,To build SecretStorage, use this command:,If you have , installed, you can also build the documentation:,First, make sure that you have the Secret Service daemon installed.
+The , is the reference server-side implementation for the
+Secret Service specification.,Then, start the daemon and unlock the , collection, if needed.
+The testsuite will fail to run if the , collection exists and is
+locked. If it does not exist, the testsuite can also use the temporary
+, collection, as provided by the GNOME Keyring.,Then, run the Python unittest module:,If you want to run the tests in an isolated or headless environment, run
+this command in a D-Bus session:,SecretStorage is available under BSD license. The source code can be found
+on ,.,
+      Python bindings to Freedesktop.org Secret Service API
+    "
+name,content
+huggingface-hub,"huggingface/huggingface_hub,Name already in use,
+        All the open source things related to the Hugging Face Hub.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+,
+,
+,
+,The , is a client library to interact with the Hugging Face Hub. The Hugging Face Hub is a platform with over 90K models, 14K datasets, and 12K demos in which people can easily collaborate in their ML workflows. The Hub works as a central place where anyone can share, explore, discover, and experiment with open-source Machine Learning.,With ,, you can easily download and upload models, datasets, and Spaces. You can extract useful information from the Hub, and do much more. Some example use cases:,Read all about it in ,.,We're partnering with cool open source ML libraries to provide free model hosting and versioning. You can find the existing integrations ,.,The advantages are:,If you would like to integrate your library, feel free to open an issue to begin the discussion. We wrote a , with , showing how to do this integration.,
+      All the open source things related to the Hugging Face Hub.
+    "
+name,content
+cmake,"June 13 – 15, 2023,1 pm to 5 pm EST,CMake is part of Kitware’s collection of commercially supported , for software development.,Attend an upcoming CMake training course, , , ,CMake 3.26.3 is available for download,Kitware is excited to announce our Summer 2023 training courses. In June we are hosting training classes for our popular open source platforms, CMake and VTK. Our courses are taught by Kitware’s software R&D experts who champion these platforms. They mix theory and application with a set of tutorials and exercises. If you are interested […],CMake 3.26.2 is available for download,
+	, | 
+	, | 
+	, | 
+	, | 
+	,
+				,Share your input on Kitware’s paid public training courses! Help us offer the best material to help you become an expert with our popular open source software tools."
+name,content
+lit,"The LLVM Project is a collection of modular and reusable compiler and
+   toolchain technologies.  Despite its name, LLVM has little to do with
+   traditional virtual machines.  The name
+   ""LLVM"" itself is not an acronym; it is the full name of the project.,LLVM began as a , at
+   the ,, with
+   the goal of providing a modern, SSA-based compilation strategy capable
+   of supporting both static and dynamic compilation of arbitrary
+   programming languages.  Since then, LLVM has
+   grown to be an umbrella project consisting of a number of
+   subprojects, many of which are being used in production by a wide variety of
+   , projects
+   as well as being widely used in ,.  Code
+   in the LLVM project is licensed under the
+   ,
+   ,The primary sub-projects of LLVM are:,The , libraries provide a modern source- and
+    target-independent ,, along with
+    , for many
+    popular CPUs (as well as some less common ones!) These libraries are built
+    around a , code representation
+    known as the LLVM intermediate representation (""LLVM IR"").  The LLVM Core
+    libraries are ,, and it is particularly
+    easy to invent your own language (or port an existing compiler) to use
+    ,., is an ""LLVM native""
+    C/C++/Objective-C compiler, which aims to deliver amazingly fast compiles,
+    extremely useful , and to provide a platform for building great
+    source level tools.
+    The , and
+    , are
+    tools that automatically find bugs in your code, and are great examples of the
+    sort of tools that can be built using the Clang frontend as a library to
+    parse C/C++ code.,The , project builds on
+    libraries provided by LLVM and Clang to provide a great native debugger.
+    It uses the Clang ASTs and expression parser, LLVM JIT, LLVM disassembler,
+    etc so that it provides an experience that ""just works"".  It is also
+    blazing fast and much more memory efficient than GDB at loading symbols.
+    ,The , and
+    , projects provide
+    a standard conformant and high-performance implementation of the C++
+    Standard Library, including full support for C++11 and C++14.,The , project
+    provides highly tuned implementations of the low-level code generator
+    support routines like "","" and other calls generated when
+    a target doesn't have a short sequence of native instructions to implement
+    a core IR operation. It also provides implementations of run-time libraries
+    for dynamic testing tools such as
+    ,,
+    ,,
+    ,,
+    and
+    ,.
+    ,The , subproject is a novel
+    approach to building reusable and extensible compiler infrastructure. MLIR
+    aims to address software fragmentation, improve compilation for heterogeneous
+    hardware, significantly reduce the cost of building domain specific compilers,
+    and aid in connecting existing compilers together.
+    ,The , subproject
+    provides an , runtime for use with the
+    OpenMP implementation in Clang.,The , project implements
+    a suite of cache-locality optimizations as well as auto-parallelism and
+    vectorization using a polyhedral model.,The , project aims to
+    implement the OpenCL standard library.,The , project implements a
+    ""symbolic virtual machine"" which uses a theorem prover to try to evaluate
+    all dynamic paths through a program in an effort to find bugs and to prove
+    properties of functions.  A major feature of klee is that it can produce a
+    testcase in the event that it detects a bug.,The , project is a new
+    linker. That is a drop-in replacement for system linkers
+    and runs much faster.,The ,
+    project is a post-link optimizer. It achieves the improvements by optimizing
+    application's code layout based on execution profile gathered by sampling
+    profiler.,In addition to official subprojects of LLVM, there are a broad variety of
+other projects that ,.  Through these external projects you can use
+LLVM to compile Ruby, Python, Haskell, Rust, D, PHP, Pure, Lua, Julia, and a number of
+other languages. A major strength of LLVM is its versatility, flexibility, and
+reusability, which is why it is being used for such a wide variety of different
+tasks: everything from doing light-weight JIT compiles of embedded languages
+like Lua to compiling Fortran code for massive super computers.,As much as everything else, LLVM has a broad and friendly community of people
+who are interested in building great low-level tools.  If you are interested in
+,, a
+good first place is to skim the , and join ,.  For information on how to send in a patch, get commit access, and
+copyright and license topics, please see ,.
+,: LLVM 16.0.0 is now ,!  LLVM is publicly available under an open source ,.  Also, you might want to
+  check out , in Git that will appear in the next LLVM release.  If
+  you want them early, , through
+  anonymous Git.,
+, - EuroLLVM Dev Mtg,
+,LLVM has been awarded the ,!
+     This award is given by ACM to , software system worldwide
+   every year.
+   ,
+     LLVM is ,!
+     Click on any of the individual recipients' names on that page for
+     the detailed citation describing the award.
+  ,Upcoming:,Proceedings from past meetings:"
+name,content
+sphinx-click,"click-contrib/sphinx-click,Name already in use,sphinx-click,
+        A Sphinx plugin to automatically document click-based applications
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again., is a , plugin that allows you to automatically extract
+documentation from a , application and include it in your docs.,Install the plugin using ,:,Alternatively, install from source by cloning this repo then running ,
+locally:,Important,To document a Click-based application, both the application itself and any
+additional dependencies required by that application ,.,Enable the plugin in your Sphinx , file:,Once enabled, you can now use the plugin wherever necessary in the
+documentation.,Detailed information on the various options available is provided in the
+,.,This plugin is perfect to document a Click-based CLI in Sphinx, as it properly
+renders the help screen and its options in nice HTML with deep links and
+styling.,However, if you are looking to document the source code of a Click-based CLI,
+and the result of its execution, you might want to check out ,.
+The latter provides the , and , Sphinx
+directives so you can ,.,
+      A Sphinx plugin to automatically document click-based applications
+    "
+name,content
+yappi,"sumerc/yappi,Name already in use,Yappi,(new in 1.2),(new in 1.3),
+        Yet Another Python Profiler, but this time multithreading, asyncio and gevent aware.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+    ,
+,
+    A tracing profiler that is , aware.
+,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+,CPython standard distribution comes with three deterministic profilers. ,, , and ,. , is implemented as a C module based on ,, , is in pure Python and , can be seen as a small subset of a cProfile. The major issue is that all of these profilers lack support for multi-threaded programs and CPU time.,If you want to profile a  multi-threaded application, you must give an entry point to these profilers and then maybe merge the outputs. None of these profilers are designed to work on long-running multi-threaded applications. It is also not possible to profile an application that start/stop/retrieve traces on the fly with these profilers.,Now fast forwarding to 2019: With the latest improvements on , library and asynchronous frameworks, most of the current profilers lacks the ability to show correct wall/cpu time or even call count information per-coroutine. Thus we need a different kind of approach to profile asynchronous code. Yappi, with v1.2 introduces the concept of ,. With ,, you should be able to profile correct wall/cpu time and call count of your coroutine. (including the time spent in context switches, too). You can see details ,.,Can be installed via PyPI,OR from the source directly.,You can profile a multithreaded application via Yappi and can easily retrieve
+per-thread profile information by filtering on , with , API.,You can use , on , API to filter on functions, modules
+or whatever available in , object.,You can see that coroutine wall-time's are correctly profiled.,You can use yappi to profile greenlet applications now!, , ,Note: Yes. I know I should be moving docs to readthedocs.io. Stay tuned!,Special thanks to A.Jesse Jiryu Davis:,Yappi is the default profiler in ,. If you have Yappi installed, , will use it. See , documentation for more details.,
+      Yet Another Python Profiler, but this time multithreading, asyncio and gevent aware.
+    "
+name,content
+linkify-it-py,"tsutsu3/linkify-it-py,Name already in use,linkify-it-py,with astral characters,str,dict,validate,self,text,pos,text,pos,pos,self,normalize,
+        Links recognition library with full unicode support 
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+,
+,
+,
+,This is Python port of ,.,Links recognition library with FULL unicode support.
+Focused on high quality link patterns detection in plain text.,Why it's awesome:,or,Creates new linkifier instance with optional additional schemas.,By default understands:, is an dict, where each key/value describes protocol/rule:,:,Searches linkifiable pattern and returns , on success or , on fail.,Quick check if link MAY BE can exist. Can be used to optimize more expensive
+, calls. Return , if link can not be found, , - if ,
+call needed to know exactly.,Similar to , but checks only specific protocol tail exactly at given
+position. Returns length of found pattern (0 on fail).,Returns , of found link matches or null if nothing found.,Each match has:,Checks if a match exists at the start of the string. Returns ,
+(see docs for ,) or null if no URL is at the start.
+Doesn't work with fuzzy links.,Load (or merge) new tlds list. Those are needed for fuzzy links (without schema)
+to avoid false positives. By default:,If that's not enough, you can reload defaults with more detailed zones list.,Add a new schema to the schemas object. As described in the constructor
+definition, , is a link prefix (,, for example), and ,
+is a , to alias to another schema, or an , with , and
+optionally , definitions.  To disable an existing rule, use
+,.,Override default options. Missed properties will not be changed.,
+      Links recognition library with full unicode support 
+    "
+name,content
+sentencepiece,"google/sentencepiece,Name already in use,SentencePiece,
+        Unsupervised text tokenizer for Neural Network-based text generation.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+,
+,
+,
+,
+,
+,
+,SentencePiece is an unsupervised text tokenizer and detokenizer mainly for
+Neural Network-based text generation systems where the vocabulary size
+is predetermined prior to the neural model training. SentencePiece implements
+, (e.g., , [,]) and
+, [,])
+with the extension of direct training from raw sentences. SentencePiece allows us to make a purely end-to-end system that does not depend on language-specific pre/postprocessing.,For those unfamiliar with SentencePiece as a software/algorithm, one can read ,.,Note that BPE algorithm used in WordPiece is slightly different from the original BPE.,SentencePiece is a re-implementation of ,, an effective way to alleviate the open vocabulary
+problems in neural machine translation. SentencePiece supports two segmentation algorithms, , [,] and , [,]. Here are the high level differences from other implementations.,Neural Machine Translation models typically operate with a fixed
+vocabulary. Unlike most unsupervised word segmentation algorithms, which
+assume an infinite vocabulary, SentencePiece trains the segmentation model such
+that the final vocabulary size is fixed, e.g., 8k, 16k, or 32k.,Note that SentencePiece specifies the final vocabulary size for training, which is different from
+, that uses the number of merge operations.
+The number of merge operations is a BPE-specific parameter and not applicable to other segmentation algorithms, including unigram, word and character.,Previous sub-word implementations assume that the input sentences are pre-tokenized. This constraint was required for efficient training, but makes the preprocessing complicated as we have to run language dependent tokenizers in advance.
+The implementation of SentencePiece is fast enough to train the model from raw sentences. This is useful for training the tokenizer and detokenizer for Chinese and Japanese where no explicit spaces exist between words.,The first step of Natural Language processing is text tokenization. For
+example, a standard English tokenizer would segment the text ""Hello world."" into the
+following three tokens.,[Hello] [World] [.],One observation is that the original input and tokenized sequence are ,. For instance, the information that is no space between
+“World” and “.” is dropped from the tokenized sequence, since e.g., ,SentencePiece treats the input text just as a sequence of Unicode characters. Whitespace is also handled as a normal symbol. To handle the whitespace as a basic token explicitly, SentencePiece first escapes the whitespace with a meta symbol ""▁"" (U+2581) as follows.,Hello▁World.,Then, this text is segmented into small pieces, for example:,[Hello] [▁Wor] [ld] [.],Since the whitespace is preserved in the segmented text, we can detokenize the text without any ambiguities.,This feature makes it possible to perform detokenization without relying on language-specific resources.,Note that we cannot apply the same lossless conversions when splitting the
+sentence with standard word segmenters, since they treat the whitespace as a
+special symbol. Tokenized sequences do not preserve the necessary information to restore the original sentence.,Subword regularization [,] and BPE-dropout , are simple regularization methods
+that virtually augment training data with on-the-fly subword sampling, which helps to improve the accuracy as well as robustness of NMT models.,To enable subword regularization, you would like to integrate SentencePiece library
+(,/,) into the NMT system to sample one segmentation for each parameter update, which is different from the standard off-line data preparations. Here's the example of ,. You can find that 'New York' is segmented differently on each , or , calls. The details of sampling parameters are found in ,.,SentencePiece provides Python wrapper that supports both SentencePiece training and segmentation.
+You can install Python binary package of SentencePiece with.,For more detail, see ,The following tools and libraries are required to build SentencePiece:,On Ubuntu, the build tools can be installed with apt-get:,Then, you can build and install command line tools as follows.,On OSX/macOS, replace the last command with ,You can download and install sentencepiece using the , dependency manager:,The sentencepiece port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please , on the vcpkg repository.,You can download the wheel from the ,.
+We generate , using the OpenSSF's , during the release process. To verify a release binary:,pip install wheel_file.whl,Use , flag to display all parameters for training, or see , for an overview.,Use , flag to insert the BOS/EOS markers or reverse the input sequence.,SentencePiece supports nbest segmentation and segmentation sampling with , flags.,Use , flag to decode the text in reverse order.,You can find that the original input sentence is restored from the vocabulary id sequence., stores a list of vocabulary and emission log probabilities. The vocabulary id corresponds to the line number in this file.,By default, SentencePiece uses Unknown (<unk>), BOS (<s>) and EOS (</s>) tokens which have the ids of 0, 1, and 2 respectively. We can redefine this mapping in the training phase as follows.,When setting -1 id e.g., ,, this special token is disabled. Note that the unknown id cannot be disabled.  We can define an id for padding (<pad>) as ,.  ,If you want to assign another special tokens, please see ,., accepts a , and a , option so that , will only produce symbols which also appear in the vocabulary (with at least some frequency). The background of this feature is described in ,.,The usage is basically the same as that of ,. Assuming that L1 and L2 are the two languages (source/target languages), train the shared spm model, and get resulting vocabulary for each:, command is used just in case because , loads the first 10M lines of corpus by default.,Then segment train/test corpus with , option,
+      Unsupervised text tokenizer for Neural Network-based text generation.
+    "
+name,content
+nvidia-nvtx-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+torchvision,"pytorch/vision,Name already in use,if,
+        Datasets, Transforms and Models specific to Computer Vision
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,The torchvision package consists of popular datasets, model architectures, and common image transformations for computer vision.,We recommend Anaconda as Python package management system. Please refer to ,
+for the detail of PyTorch (,) installation. The following is the corresponding , versions and
+supported Python versions.,Anaconda:,pip:,From source:,We don't officially support building from source using ,, but , you do,
+you'll need to use the , flag.
+In case building TorchVision from source fails, install the nightly version of PyTorch following
+the linked guide on the  , and retry the install.,By default, GPU support is built if CUDA is found and , is true.
+It's possible to force building GPU support by setting , environment variable,
+which is useful when building a docker image.,Torchvision currently supports the following image backends:, , and , must be available at compilation time in order to be available. Make sure that it is available on the standard library locations,
+otherwise, add the include and library paths in the environment variables , and ,, respectively.,Torchvision currently supports the following video backends:,TorchVision provides an example project for how to use the models on C++ using JIT Script.,Installation From source:,Once installed, the library can be accessed in cmake (after properly configuring ,) via the , target:,The , package will also automatically look for the , package and add it as a dependency to ,,
+so make sure that it is also available to cmake via the ,.,For an example setup, take a look at ,.,Python linking is disabled by default when compiling TorchVision with CMake, this allows you to run models without any Python
+dependency. In some special cases where TorchVision's operators are used from Python code, you may need to link to Python. This
+can be done by passing , to CMake.,In order to get the torchvision operators registered with torch (eg. for the JIT), all you need to do is to ensure that you
+, in your project.,You can find the API documentation on the pytorch website: ,See the , file for how to help out.,This is a utility library that downloads and prepares public datasets. We do not host or distribute these datasets, vouch for their quality or fairness, or claim that you have license to use the dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license.,If you're a dataset owner and wish to update any part of it (description, citation, etc.), or do not want your dataset to be included in this library, please get in touch through a GitHub issue. Thanks for your contribution to the ML community!,The pre-trained models provided in this library may have their own licenses or terms and conditions derived from the dataset used for training. It is your responsibility to determine whether you have permission to use the models for your use case.,More specifically, SWAG models are released under the CC-BY-NC 4.0 license. See , for additional details.,If you find TorchVision useful in your work, please consider citing the following BibTeX entry:,
+      Datasets, Transforms and Models specific to Computer Vision
+    "
+name,content
+jarowinkler,"maxbachmann/JaroWinkler,Name already in use,
+ JaroWinkler
+,
+        Python library for fast approximate string matching using Jaro and Jaro-Winkler similarity
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+  ,
+  ,
+  ,
+  ,
+,The implementation is based on a novel approach to calculate the Jaro-Winkler similarity using bitparallelism. This is significantly faster than the original approach used in other libraries. The following benchmark shows the performance difference to jellyfish and python-Levenshtein.,
+,
+,You can install this library from , with pip:,JaroWinkler provides binary wheels for all common platforms.,For a source build (for example from a SDist packaged) you only require a C++14 compatible compiler. You can install directly from GitHub if you would like.,Any algorithms in JaroWinkler can not only be used with strings, but with any arbitary sequences of hashable objects:,So as long as two objects have the same hash they are treated as similar. You can provide a , method for your own object instances.,All algorithms provide a , parameter. This parameter can be used to filter out bad matches. Internally this allows JaroWinkler to select faster implementations in some places:,JaroWinkler can be used with RapidFuzz, which provides multiple methods to compute string metrics on collections of inputs. JaroWinkler implements the RapidFuzz C-API which allows RapidFuzz to call the functions without any of the usual overhead of python, which makes this even faster.,PRs are welcome!,Thank you ,Copyright 2021 - present ,. , is free and open-source software licensed under the ,.,
+      Python library for fast approximate string matching using Jaro and Jaro-Winkler similarity
+    "
+name,content
+nvidia-cuda-cupti-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+keybert,"MaartenGr/KeyBERT,Name already in use,KeyBERT,
+        Minimal keyword extraction with BERT
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+,
+,
+,
+,KeyBERT is a minimal and easy-to-use keyword extraction technique that leverages BERT embeddings to
+create keywords and keyphrases that are most similar to a document.,Corresponding medium post can be found ,.,Although there are already many methods available for keyword generation
+(e.g.,
+,,
+,, TF-IDF, etc.)
+I wanted to create a very basic, but powerful method for extracting keywords and keyphrases.
+This is where , comes in! Which uses BERT-embeddings and simple cosine similarity
+to find the sub-phrases in a document that are the most similar to the document itself.,First, document embeddings are extracted with BERT to get a document-level representation.
+Then, word embeddings are extracted for N-gram words/phrases. Finally, we use cosine similarity
+to find the words/phrases that are the most similar to the document. The most similar words could
+then be identified as the words that best describe the entire document.,KeyBERT is by no means unique and is created as a quick and easy method
+for creating keywords and keyphrases. Although there are many great
+papers and solutions out there that use BERT-embeddings
+(e.g.,
+,,
+,,
+,,
+), I could not find a BERT-based solution that did not have to be trained from scratch and
+could be used for beginners (,).
+Thus, the goal was a , and at most 3 lines of code in usage.,Installation can be done using ,:,You may want to install more depending on the transformers and language backends that you will be using. The possible installations are:,The most minimal example can be seen below for the extraction of keywords:,You can set , to set the length of the resulting keywords/keyphrases:,To extract keyphrases, simply set , to (1, 2) or higher depending on the number
+of words you would like in the resulting keyphrases:,We can highlight the keywords in the document by simply setting ,:,: For a full overview of all possible transformer models see ,.
+I would advise either , for English documents or ,
+for multi-lingual documents or any other language.,To diversify the results, we take the 2 x top_n most similar words/phrases to the document.
+Then, we take all top_n combinations from the 2 x top_n words and extract the combination
+that are the least similar to each other by cosine similarity.,To diversify the results, we can use Maximal Margin Relevance (MMR) to create
+keywords / keyphrases which is also based on cosine similarity. The results
+with ,:,The results with ,:,KeyBERT supports many embedding models that can be used to embed the documents and words:,Click , for a full overview of all supported embedding models.,
+You can select any model from , ,
+and pass it through KeyBERT with ,:,Or select a SentenceTransformer model with your own parameters:,
+, allows you to choose almost any embedding model that
+is publicly available. Flair can be used as follows:,You can select any , transformers model ,.,To cite KeyBERT in your work, please use the following bibtex reference:,Below, you can find several resources that were used for the creation of KeyBERT
+but most importantly, these are amazing resources for creating impressive keyword extraction models:,:,:,:
+The selection of keywords/keyphrases was modeled after:,: If you find a paper or github repo that has an easy-to-use implementation
+of BERT-embeddings for keyword/keyphrase extraction, let me know! I'll make sure to
+add a reference to this repo.,
+      Minimal keyword extraction with BERT
+    "
+name,content
+triton,"openai/triton,Name already in use,Triton,Quick Installation,Install from source,Changelog,Contributing,Compatibility,
+        Development repository for the Triton language and compiler
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,This is the development repository of Triton, a language and compiler for writing highly efficient custom Deep-Learning primitives. The aim of Triton is to provide an open-source environment to write fast code at higher productivity than CUDA, but also with higher flexibility than other existing DSLs.,The foundations of this project are described in the following MAPL2019 publication: ,. Please consider citing this work if you use Triton!,The , contains installation instructions and tutorials.,You can install the latest stable release of Triton from pip:,Binary wheels are available for CPython 3.6-3.11 and PyPy 3.7-3.9.,And the latest nightly release:,Version 2.0 is out! New features include:,Community contributions are more than welcome, whether it be to fix bugs or to add new features. For more detailed instructions, please visit our ,.,If you’re interested in joining our team and working on Triton & GPU kernels, ,!,Supported Platforms:,Supported Hardware:,
+      Development repository for the Triton language and compiler
+    "
+name,content
+timebudget,"leopd/timebudget,Name already in use,timebudget,
+        Stupidly-simple speed measurements for Python.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,Trying to figure out where the time's going in your python code?  Tired of writing ,?  You can find out with just a few lines of code after you,With just two lines of code (one is the import), you can see how long something takes...,will print,To get a report on the total time from functions you care about, just annotate those functions:,And now when you run your program, you'll see how much time was spent in each annotated function:,Or instead of calling , you can manually call,If you don't set , then the statistics will accumulate into the next report.,You can also wrap specific blocks of code to be recorded in the report, and optionally override
+the default , choice for any block:,If you are doing something repeatedly, and want to know the percent of time doing different things, time the loop itself, and pass the name to report.  That is, add a timebudget annotation or wrapper onto the thing which is happening repeatedly.  Each time this method or code-block is entered will now be considered one ""cycle"" and your report will tell you what fraction of time things take within this cycle.,Then the report looks like:,Here, the times in milliseconds are the totals (averages per cycle), not the average time per call.  So in the above example, , is taking about 30ms per call, but being called twice per loop.  Similarly, , is still about 300ms each time it's called, but it's only getting called on 60% of the cycles on average, so on average it's using 41% of the time in , or 180ms.,Needs Python 3.6 or higher.  Other libraries are in , and can be installed like,To run tests:,This tool is inspired by ,, the awesome progress bar.  TQDM is stupidly simple to add to your code, and just makes it better.  I aspire to imitate that.,
+      Stupidly-simple speed measurements for Python.
+    "
+name,content
+sentence-transformers,"UKPLab/sentence-transformers,Name already in use,Sentence Transformers: Multilingual Sentence, Paragraph, and Image Embeddings using BERT & Co.,sentence-transformers,sentence-transformers,
+        Multilingual Sentence & Image Embeddings with BERT
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+,
+,
+,
+,
+,This framework provides an easy method to compute dense vector representations for ,, ,, and ,. The models are based on transformer networks like BERT / RoBERTa / XLM-RoBERTa etc. and achieve state-of-the-art performance in various task. Text is embedding in vector space such that similar text is close and can efficiently be found using cosine similarity.,We provide an increasing number of , for more than 100 languages, fine-tuned for various use-cases.,Further, this framework allows an easy  ,, to achieve maximal performance on your specific task.,For the ,, see ,.,The following publications are integrated in this framework:,We recommend , or higher, , or higher and , or higher. The code does , work with Python 2.7.,Install the , with ,:,You can install the , with ,:,Alternatively, you can also clone the latest version from the , and install it directly from the source code:,If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA Version. Follow
+, for further details how to install PyTorch.,See , in our documenation., shows you how to use an already trained Sentence Transformer model to embed sentences for another task.,First download a pretrained model.,Then provide some sentences to the model.,And that's it already. We now have a list of numpy arrays with the embeddings.,We provide a large list of , for more than 100 languages. Some models are general purpose models, while others produce embeddings for specific use cases. Pre-trained models can be loaded by just passing the model name: ,.,This framework allows you to fine-tune your own sentence embedding methods, so that you get task-specific sentence embeddings. You have various options to choose from in order to get perfect sentence embeddings for your specific task.,See , for an introduction how to train your own embedding models. We provide , how to train models on various datasets.,Some highlights are:,Our models are evaluated extensively on 15+ datasets including challening domains like Tweets, Reddit, emails. They achieve by far the , from all available sentence embedding methods. Further, we provide several , that are ,.,You can use this framework for:,and many more use-cases.,For all examples, see ,.,If you find this repository helpful, feel free to cite our publication ,:,If you use one of the multilingual models, feel free to cite our publication ,:,Please have a look at , for our different publications that are integrated into SentenceTransformers.,Contact person: ,, ,Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions.,This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication.,
+      Multilingual Sentence & Image Embeddings with BERT
+    "
+name,content
+typing," — Support for type hints,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,Introducing,equivalent,exactly equivalent,subtype,subclass,escape hatch,not,nominal subtyping,structural subtyping,Type Hinting Generics In Standard Collections,class object,type narrowing,bound,constrained,and,bound,constrained,variadic,arbitrary,arbitrary,always,all,individual, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,val,typ,func,func, ,Note,The Python runtime does not enforce function and variable type annotations.
+They can be used by third party tools such as type checkers, IDEs, linters,
+etc.,This module provides runtime support for type hints. The most fundamental
+support consists of the types ,, ,, ,,
+,, and ,. For a full specification, please see
+,. For a simplified introduction to type hints, see ,.,The function below takes and returns a string and is annotated as follows:,In the function ,, the argument , is expected to be of type
+, and the return type ,. Subtypes are accepted as
+arguments.,New features are frequently added to the , module.
+The , package
+provides backports of these new features to older versions of Python.,For a summary of deprecated features and a deprecation timeline, please see
+,.,See also,For a quick overview of type hints, refer to
+,.,The “Type System Reference” section of , – since
+the Python typing system is standardised via PEPs, this reference should
+broadly apply to most Python type checkers, although some parts may still be
+specific to mypy.,The documentation at , serves as useful reference
+for type system features, useful typing related tools and typing best practices.,Since the initial introduction of type hints in , and ,, a
+number of PEPs have modified and enhanced Python’s framework for type
+annotations. These include:, syntax for annotating variables outside of function
+definitions, and , , and the
+, decorator, , and the ability to use standard
+library classes as , , , , and the , decorator, , , and the ability to use
+the binary-or operator , to signify a
+, , and , , , , , and , , , the , decorator,A type alias is defined by assigning the type to the alias. In this example,
+, and , will be treated as interchangeable synonyms:,Type aliases are useful for simplifying complex type signatures. For example:,Note that , as a type hint is a special case and is replaced by
+,.,Use the , helper to create distinct types:,The static type checker will treat the new type as if it were a subclass
+of the original type. This is useful in helping catch logical errors:,You may still perform all , operations on a variable of type ,,
+but the result will always be of type ,. This lets you pass in a
+, wherever an , might be expected, but will prevent you from
+accidentally creating a , in an invalid way:,Note that these checks are enforced only by the static type checker. At runtime,
+the statement , will make , a
+callable that immediately returns whatever parameter you pass it. That means
+the expression , does not create a new class or introduce
+much overhead beyond that of a regular function call.,More precisely, the expression , is always
+true at runtime.,It is invalid to create a subtype of ,:,However, it is possible to create a , based on a ‘derived’ ,:,and typechecking for , will work as expected.,See , for more details.,Note,Recall that the use of a type alias declares two types to be , to
+one another. Doing , will make the static type checker
+treat , as being , to , in all cases.
+This is useful when you want to simplify complex type signatures.,In contrast, , declares one type to be a , of another.
+Doing , will make the static type
+checker treat , as a , of ,, which means a
+value of type , cannot be used in places where a value of type
+, is expected. This is useful when you want to prevent logic
+errors with minimal runtime cost., is now a class rather than a function.  There is some additional
+runtime cost when calling , over a regular function.  However, this
+cost will be reduced in 3.11.0.,Frameworks expecting callback functions of specific signatures might be
+type hinted using ,.,For example:,It is possible to declare the return type of a callable without specifying
+the call signature by substituting a literal ellipsis
+for the list of arguments in the type hint: ,.,Callables which take other callables as arguments may indicate that their
+parameter types are dependent on each other using ,.
+Additionally, if that callable adds or removes arguments from other
+callables, the , operator may be used.  They
+take the form , and
+,
+respectively., now supports , and ,.
+See , for more details.,See also,The documentation for , and , provides
+examples of usage in ,.,Since type information about objects kept in containers cannot be statically
+inferred in a generic way, abstract base classes have been extended to support
+subscription to denote expected types for container elements.,Generics can be parameterized by using a factory available in typing
+called ,.,A user-defined class can be defined as a generic class., as a base class defines that the class , takes a
+single type parameter , . This also makes , valid as a type within the
+class body.,The , base class defines , so
+that , is valid as a type:,A generic type can have any number of type variables. All varieties of
+, are permissible as parameters for a generic type:,Each type variable argument to , must be distinct.
+This is thus invalid:,You can use multiple inheritance with ,:,When inheriting from generic classes, some type variables could be fixed:,In this case , has a single parameter, ,.,Using a generic class without specifying type parameters assumes
+, for each position. In the following example, , is
+not generic but implicitly inherits from ,:,User defined generic type aliases are also supported. Examples:, no longer has a custom metaclass.,User-defined generics for parameter expressions are also supported via parameter
+specification variables in the form ,.  The behavior is consistent
+with type variables’ described above as parameter specification variables are
+treated by the typing module as a specialized type variable.  The one exception
+to this is that a list of types can be used to substitute a ,:,Furthermore, a generic with only one parameter specification variable will accept
+parameter lists in the forms , and also
+, for aesthetic reasons.  Internally, the latter is converted
+to the former, so the following are equivalent:,Do note that generics with , may not have correct
+, after substitution in some cases because they
+are intended primarily for static type checking., can now be parameterized over parameter expressions.
+See , and , for more details.,A user-defined generic class can have ABCs as base classes without a metaclass
+conflict. Generic metaclasses are not supported. The outcome of parameterizing
+generics is cached, and most types in the typing module are , and
+comparable for equality.,A special kind of type is ,. A static type checker will treat
+every type as being compatible with , and , as being
+compatible with every type.,This means that it is possible to perform any operation or method call on a
+value of type , and assign it to any variable:,Notice that no type checking is performed when assigning a value of type
+, to a more precise type. For example, the static type checker did
+not report an error when assigning , to , even though , was
+declared to be of type , and receives an , value at
+runtime!,Furthermore, all functions without a return type or parameter types will
+implicitly default to using ,:,This behavior allows , to be used as an , when you
+need to mix dynamically and statically typed code.,Contrast the behavior of , with the behavior of ,.
+Similar to ,, every type is a subtype of ,. However,
+unlike ,, the reverse is not true: , is , a
+subtype of every other type.,That means when the type of a value is ,, a type checker will
+reject almost all operations on it, and assigning it to a variable (or using
+it as a return value) of a more specialized type is a type error. For example:,Use , to indicate that a value could be any type in a typesafe
+manner. Use , to indicate that a value is dynamically typed.,Initially , defined the Python static type system as using
+,. This means that a class , is allowed where
+a class , is expected if and only if , is a subclass of ,.,This requirement previously also applied to abstract base classes, such as
+,. The problem with this approach is that a class had
+to be explicitly marked to support them, which is unpythonic and unlike
+what one would normally do in idiomatic dynamically typed Python code.
+For example, this conforms to ,:, allows to solve this problem by allowing users to write
+the above code without explicit base classes in the class definition,
+allowing , to be implicitly considered a subtype of both ,
+and , by static type checkers. This is known as
+, (or static duck-typing):,Moreover, by subclassing a special class ,, a user
+can define new custom protocols to fully enjoy structural subtyping
+(see examples below).,The module defines the following classes, functions and decorators.,Note,This module defines several types that are subclasses of pre-existing
+standard library classes which also extend ,
+to support type variables inside ,.
+These types became redundant in Python 3.9 when the
+corresponding pre-existing classes were enhanced to support ,.,The redundant types are deprecated as of Python 3.9 but no
+deprecation warnings will be issued by the interpreter.
+It is expected that type checkers will flag the deprecated types
+when the checked program targets Python 3.9 or newer.,The deprecated types will be removed from the , module
+in the first Python version released 5 years after the release of Python 3.9.0.
+See details in ,—,.,These can be used as types in annotations and do not support ,.,Special type indicating an unconstrained type.,Every type is compatible with ,., is compatible with every type., can now be used as a base class. This can be useful for
+avoiding type checker errors with classes that can duck type anywhere or
+are highly dynamic.,Special type that includes only literal strings. A string
+literal is compatible with ,, as is another
+,, but an object typed as just , is not.
+A string created by composing ,-typed objects
+is also acceptable as a ,.,Example:,This is useful for sensitive APIs where arbitrary user-generated
+strings could generate problems. For example, the two cases above
+that generate type checker errors could be vulnerable to an SQL
+injection attack.,See , for more details.,The ,,
+a type that has no members.,This can be used to define a function that should never be
+called, or a function that never returns:,On older Python versions, , may be used to express the
+same concept. , was added to make the intended meaning more explicit.,Special type indicating that a function never returns.
+For example:, can also be used as a
+,, a type that
+has no values. Starting in Python 3.11, the , type should
+be used for this concept instead. Type checkers should treat the two
+equivalently.,Special type to represent the current enclosed class.
+For example:,This annotation is semantically equivalent to the following,
+albeit in a more succinct fashion:,In general if something currently follows the pattern of:,You should use , as calls to , would have
+, as the return type and not ,.,Other common use cases include:,s that are used as alternative constructors and return instances
+of the , parameter.,Annotating an , method which returns self.,See , for more details.,Special annotation for explicitly declaring a ,.
+For example:,See , for more details about explicit type aliases.,These can be used as types in annotations using ,, each having a unique syntax.,Tuple type; , is the type of a tuple of two items
+with the first item of type X and the second of type Y. The type of
+the empty tuple can be written as ,.,Example: , is a tuple of two elements corresponding
+to type variables T1 and T2.  , is a tuple
+of an int, a float and a string.,To specify a variable-length tuple of homogeneous type,
+use literal ellipsis, e.g. ,. A plain ,
+is equivalent to ,, and in turn to ,., now supports subscripting (,).
+See , and ,.,Union type; , is equivalent to , and means either X or Y.,To define a union, use e.g. , or the shorthand ,. Using that shorthand is recommended. Details:,The arguments must be types and there must be at least one.,Unions of unions are flattened, e.g.:,Unions of a single argument vanish, e.g.:,Redundant arguments are skipped, e.g.:,When comparing unions, the argument order is ignored, e.g.:,You cannot subclass or instantiate a ,.,You cannot write ,.,Don’t remove explicit subclasses from unions at runtime.,Unions can now be written as ,. See
+,.,Optional type., is equivalent to , (or ,).,Note that this is not the same concept as an optional argument,
+which is one that has a default.  An optional argument with a
+default does not require the , qualifier on its type
+annotation just because it is optional. For example:,On the other hand, if an explicit value of , is allowed, the
+use of , is appropriate, whether the argument is optional
+or not. For example:,Optional can now be written as ,. See
+,.,Callable type; , is a function of (int) -> str.,The subscription syntax must always be used with exactly two
+values: the argument list and the return type.  The argument list
+must be a list of types or an ellipsis; the return type must be
+a single type.,There is no syntax to indicate optional or keyword arguments;
+such function types are rarely used as callback types.
+, (literal ellipsis) can be used to
+type hint a callable taking any number of arguments and returning
+,.  A plain , is equivalent to
+,, and in turn to
+,.,Callables which take other callables as arguments may indicate that their
+parameter types are dependent on each other using ,.
+Additionally, if that callable adds or removes arguments from other
+callables, the , operator may be used.  They
+take the form , and
+,
+respectively., now supports subscripting (,).
+See , and ,., now supports , and ,.
+See , for more details.,See also,The documentation for , and , provide
+examples of usage with ,.,Used with , and , to type annotate a higher
+order callable which adds, removes, or transforms parameters of another
+callable.  Usage is in the form
+,. ,
+is currently only valid when used as the first argument to a ,.
+The last parameter to , must be a , or
+ellipsis (,).,For example, to annotate a decorator , which provides a
+, to the decorated function,  , can be
+used to indicate that , expects a callable which takes in a
+, as the first argument, and returns a callable with a different type
+signature.  In this case, the , indicates that the returned
+callable’s parameter types are dependent on the parameter types of the
+callable being passed in:,See also, – Parameter Specification Variables (the PEP which introduced
+, and ,)., and ,.,A variable annotated with , may accept a value of type ,. In
+contrast, a variable annotated with , may accept values that are
+classes themselves – specifically, it will accept the , of
+,. For example:,Note that , is covariant:,The fact that , is covariant implies that all subclasses of
+, should implement the same constructor signature and class method
+signatures as ,. The type checker should flag violations of this,
+but should also allow constructor calls in subclasses that match the
+constructor calls in the indicated base class. How the type checker is
+required to handle this particular case may change in future revisions of
+,.,The only legal parameters for , are classes, ,,
+,, and unions of any of these types.
+For example:, is equivalent to , which in turn is equivalent
+to ,, which is the root of Python’s metaclass hierarchy., now supports subscripting (,).
+See , and ,.,A type that can be used to indicate to type checkers that the
+corresponding variable or function parameter has a value equivalent to
+the provided literal (or one of several literals). For example:, cannot be subclassed. At runtime, an arbitrary value
+is allowed as type argument to ,, but type checkers may
+impose restrictions. See , for more details about literal types., now de-duplicates parameters.  Equality comparisons of
+, objects are no longer order dependent. , objects
+will now raise a , exception during equality comparisons
+if one of their parameters are not ,.,Special type construct to mark class variables.,As introduced in ,, a variable annotation wrapped in ClassVar
+indicates that a given attribute is intended to be used as a class variable
+and should not be set on instances of that class. Usage:, accepts only types and cannot be further subscribed., is not a class itself, and should not
+be used with , or ,.
+, does not change Python runtime behavior, but
+it can be used by third-party type checkers. For example, a type checker
+might flag the following code as an error:,A special typing construct to indicate to type checkers that a name
+cannot be re-assigned or overridden in a subclass. For example:,There is no runtime checking of these properties. See , for
+more details.,Special typing constructs that mark individual keys of a ,
+as either required or non-required respectively.,See , and , for more details.,A type, introduced in , (,), to decorate existing types with context-specific metadata
+(possibly multiple pieces of it, as , is variadic).
+Specifically, a type , can be annotated with metadata , via the
+typehint ,. This metadata can be used for either static
+analysis or at runtime. If a library (or tool) encounters a typehint
+, and has no special logic for metadata ,, it
+should ignore it and simply treat the type as ,. Unlike the
+, functionality that currently exists in the ,
+module which completely disables typechecking annotations on a function
+or a class, the , type allows for both static typechecking
+of , (which can safely ignore ,)
+together with runtime access to , within a specific application.,Ultimately, the responsibility of how to interpret the annotations (if
+at all) is the responsibility of the tool or library encountering the
+, type. A tool or library encountering an , type
+can scan through the annotations to determine if they are of interest
+(e.g., using ,).,When a tool or a library does not support annotations or encounters an
+unknown annotation it should just ignore it and treat annotated type as
+the underlying type.,It’s up to the tool consuming the annotations to decide whether the
+client is allowed to have several annotations on one type and how to
+merge those annotations.,Since the , type allows you to put several annotations of
+the same (or different) type(s) on any node, the tools or libraries
+consuming those annotations are in charge of dealing with potential
+duplicates. For example, if you are doing value range analysis you might
+allow this:,Passing , to , lets one
+access the extra annotations at runtime.,The details of the syntax:,The first argument to , must be a valid type,Multiple type annotations are supported (, supports variadic
+arguments):, must be called with at least two arguments (
+, is not valid),The order of the annotations is preserved and matters for equality
+checks:,Nested , types are flattened, with metadata ordered
+starting with the innermost annotation:,Duplicated annotations are not removed:, can be used with nested and generic aliases:,Special typing form used to annotate the return type of a user-defined
+type guard function.  , only accepts a single type argument.
+At runtime, functions marked this way should return a boolean., aims to benefit , – a technique used by static
+type checkers to determine a more precise type of an expression within a
+program’s code flow.  Usually type narrowing is done by analyzing
+conditional code flow and applying the narrowing to a block of code.  The
+conditional expression here is sometimes referred to as a “type guard”:,Sometimes it would be convenient to use a user-defined boolean function
+as a type guard.  Such a function should use , as its
+return type to alert static type checkers to this intention.,Using  , tells the static type checker that for a given
+function:,The return value is a boolean.,If the return value is ,, the type of its argument
+is the type inside ,.,For example:,If , is a class or instance method, then the type in
+, maps to the type of the second parameter after , or
+,.,In short, the form ,,
+means that if , returns ,, then , narrows from
+, to ,.,Note, need not be a narrower form of , – it can even be a
+wider form. The main reason is to allow for things like
+narrowing , to , even though the latter
+is not a subtype of the former, since , is invariant.
+The responsibility of writing type-safe type guards is left to the user., also works with type variables.  See , for more details.,These are not used in annotations. They are building blocks for creating generic types.,Abstract base class for generic types.,A generic type is typically declared by inheriting from an
+instantiation of this class with one or more type variables.
+For example, a generic mapping type might be defined as:,This class can then be used as follows:,Type variable.,Usage:,Type variables exist primarily for the benefit of static type
+checkers.  They serve as the parameters for generic types as well
+as for generic function definitions.  See , for more
+information on generic types.  Generic functions work as follows:,Note that type variables can be ,, ,, or neither, but
+cannot be both bound , constrained.,Bound type variables and constrained type variables have different
+semantics in several important ways. Using a , type variable means
+that the , will be solved using the most specific type possible:,Type variables can be bound to concrete types, abstract types (ABCs or
+protocols), and even unions of types:,Using a , type variable, however, means that the ,
+can only ever be solved as being exactly one of the constraints given:,At runtime, , will raise ,.  In general,
+, and , should not be used with types.,Type variables may be marked covariant or contravariant by passing
+, or ,.  See , for more
+details.  By default, type variables are invariant.,Type variable tuple. A specialized form of ,
+that enables , generics.,A normal type variable enables parameterization with a single type. A type
+variable tuple, in contrast, allows parameterization with an
+, number of types by acting like an , number of type
+variables wrapped in a tuple. For example:,Note the use of the unpacking operator , in ,.
+Conceptually, you can think of , as a tuple of type variables
+,. , would then become
+,, which is equivalent to
+,. (Note that in older versions of Python, you might
+see this written using , instead, as
+,.),Type variable tuples must , be unpacked. This helps distinguish type
+variable tuples from normal type variables:,Type variable tuples can be used in the same contexts as normal type
+variables. For example, in class definitions, arguments, and return types:,Type variable tuples can be happily combined with normal type variables:,However, note that at most one type variable tuple may appear in a single
+list of type arguments or type parameters:,Finally, an unpacked type variable tuple can be used as the type annotation
+of ,:,In contrast to non-unpacked annotations of , - e.g. ,,
+which would specify that , arguments are , - ,
+enables reference to the types of the , arguments in ,.
+Here, this allows us to ensure the types of the , passed
+to , match the types of the (positional) arguments of
+,.,See , for more details on type variable tuples.,A typing operator that conceptually marks an object as having been
+unpacked. For example, using the unpack operator , on a
+, is equivalent to using ,
+to mark the type variable tuple as having been unpacked:,In fact, , can be used interchangeably with , in the context
+of types. You might see , being used explicitly in older versions
+of Python, where , couldn’t be used in certain places:,Parameter specification variable.  A specialized version of
+,.,Usage:,Parameter specification variables exist primarily for the benefit of static
+type checkers.  They are used to forward the parameter types of one
+callable to another callable – a pattern commonly found in higher order
+functions and decorators.  They are only valid when used in ,,
+or as the first argument to ,, or as parameters for user-defined
+Generics.  See , for more information on generic types.,For example, to add basic logging to a function, one can create a decorator
+, to log function calls.  The parameter specification variable
+tells the type checker that the callable passed into the decorator and the
+new callable returned by it have inter-dependent type parameters:,Without ,, the simplest way to annotate this previously was to
+use a , with bound ,.  However this
+causes two problems:,The type checker can’t type check the , function because
+, and , have to be typed ,., may be required in the body of the ,
+decorator when returning the , function, or the static type
+checker must be told to ignore the ,.,Since , captures both positional and keyword parameters,
+, and , can be used to split a , into its
+components.  , represents the tuple of positional parameters in a
+given call and should only be used to annotate ,.  ,
+represents the mapping of keyword parameters to their values in a given call,
+and should be only be used to annotate ,.  Both
+attributes require the annotated parameter to be in scope. At runtime,
+, and , are instances respectively of
+, and ,.,Parameter specification variables created with , or
+, can be used to declare covariant or contravariant
+generic types.  The , argument is also accepted, similar to
+,.  However the actual semantics of these keywords are yet to
+be decided.,Note,Only parameter specification variables defined in global scope can
+be pickled.,See also, – Parameter Specification Variables (the PEP which introduced
+, and ,)., and ,.,Arguments and keyword arguments attributes of a ,. The
+, attribute of a , is an instance of ,,
+and , is an instance of ,. They are intended
+for runtime introspection and have no special meaning to static type checkers.,Calling , on either of these objects will return the
+original ,:, is a , defined as
+,.,It is meant to be used for functions that may accept any kind of string
+without allowing different kinds of strings to mix. For example:,Base class for protocol classes. Protocol classes are defined like this:,Such classes are primarily used with static type checkers that recognize
+structural subtyping (static duck-typing), for example:,See , for more details. Protocol classes decorated with
+, (described later) act as simple-minded runtime
+protocols that check only the presence of given attributes, ignoring their
+type signatures.,Protocol classes can be generic, for example:,Mark a protocol class as a runtime protocol.,Such a protocol can be used with , and ,.
+This raises , when applied to a non-protocol class.  This
+allows a simple-minded structural check, very similar to “one trick ponies”
+in , such as ,.  For example:,Note, will check only the presence of the required
+methods or attributes, not their type signatures or types.
+For example, ,
+is a class, therefore it passes an ,
+check against ,.  However, the
+, method exists only to raise a
+, with a more informative message, therefore making
+it impossible to call (instantiate) ,.,Note,An , check against a runtime-checkable protocol can be
+surprisingly slow compared to an , check against
+a non-protocol class. Consider using alternative idioms such as
+, calls for structural checks in performance-sensitive
+code.,These are not used in annotations. They are building blocks for declaring types.,Typed version of ,.,Usage:,This is equivalent to:,To give a field a default value, you can assign to it in the class body:,Fields with a default value must come after any fields without a default.,The resulting class has an extra attribute , giving a
+dict that maps the field names to the field types.  (The field names are in
+the , attribute and the default values are in the
+, attribute, both of which are part of the ,
+API.), subclasses can also have docstrings and methods:, subclasses can be generic:,Backward-compatible usage:,Added support for , variable annotation syntax.,Added support for default values, methods, and docstrings.,The , and , attributes are
+now regular dictionaries instead of instances of ,.,Removed the , attribute in favor of the more
+standard , attribute which has the same information.,Added support for generic namedtuples.,A helper class to indicate a distinct type to a typechecker,
+see ,. At runtime it returns an object that returns
+its argument when called.
+Usage:, is now a class rather than a function.,Special construct to add type hints to a dictionary.
+At runtime it is a plain ,., declares a dictionary type that expects all of its
+instances to have a certain set of keys, where each key is
+associated with a value of a consistent type. This expectation
+is not checked at runtime but is only enforced by type checkers.
+Usage:,To allow using this feature with older versions of Python that do not
+support ,, , supports two additional equivalent
+syntactic forms:,Using a literal , as the second argument:,Using keyword arguments:,The keyword-argument syntax is deprecated in 3.11 and will be removed
+in 3.13. It may also be unsupported by static type checkers.,The functional syntax should also be used when any of the keys are not valid
+,, for example because they are keywords or contain hyphens.
+Example:,By default, all keys must be present in a ,. It is possible to
+mark individual keys as non-required using ,:,This means that a , , can have the ,
+key omitted.,It is also possible to mark all keys as non-required by default
+by specifying a totality of ,:,This means that a , , can have any of the keys
+omitted. A type checker is only expected to support a literal , or
+, as the value of the , argument. , is the default,
+and makes all items defined in the class body required.,Individual keys of a , , can be marked as
+required using ,:,It is possible for a , type to inherit from one or more other , types
+using the class-based syntax.
+Usage:, has three items: ,, , and ,. It is equivalent to this
+definition:,A , cannot inherit from a non-, class,
+except for ,. For example:,A , can be generic:,A , can be introspected via annotations dicts
+(see , for more information on annotations best practices),
+,, ,, and ,., gives the value of the , argument.
+Example:, and , return
+, objects containing required and non-required keys, respectively.,Keys marked with , will always appear in ,
+and keys marked with , will always appear in ,.,For backwards compatibility with Python 3.10 and below,
+it is also possible to use inheritance to declare both required and
+non-required keys in the same , . This is done by declaring a
+, with one value for the , argument and then
+inheriting from it in another , with a different value for
+,:,See , for more examples and detailed rules of using ,.,Added support for marking individual keys as , or ,.
+See ,.,Added support for generic ,s.,A generic version of ,.
+Useful for annotating return types. To annotate arguments it is preferred
+to use an abstract collection type such as ,.,This type can be used as follows:, now supports subscripting (,).
+See , and ,.,Generic version of ,.
+Useful for annotating return types. To annotate arguments it is preferred
+to use an abstract collection type such as , or
+,.,This type may be used as follows:, now supports subscripting (,).
+See , and ,.,A generic version of ,.
+Useful for annotating return types. To annotate arguments it is preferred
+to use an abstract collection type such as ,., now supports subscripting (,).
+See , and ,.,A generic version of ,.,
+now supports subscripting (,).
+See , and ,.,Note, is a special form.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,Generic type , and its subclasses ,
+and ,
+represent the types of I/O streams such as returned by
+,.,The , namespace is deprecated and will be removed.
+These types should be directly imported from , instead.,These type aliases
+correspond to the return types from , and
+,.  These types (and the corresponding functions)
+are generic in , and can be made specific by writing
+,, ,, ,, or
+,.,The , namespace is deprecated and will be removed.
+These types should be directly imported from , instead.,Classes , and , from , now support ,.
+See , and ,., is an alias for ,. It is provided to supply a forward
+compatible path for Python 2 code: in Python 2, , is an alias for
+,.,Use , to indicate that a value must contain a unicode string in
+a manner that is compatible with both Python 2 and Python 3:,Python 2 is no longer supported, and most type checkers also no longer
+support type checking Python 2 code. Removal of the alias is not
+currently planned, but users are encouraged to use
+, instead of , wherever possible.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,.,This type represents the types ,, ,,
+and , of byte sequences.,As a shorthand for this type, , can be used to
+annotate arguments of any of the types mentioned above., now supports subscripting (,).
+See , and ,.,A generic version of , now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,.
+This type can be used as follows:, now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,.,
+now supports subscripting (,).
+See , and ,.,A generic version of ,.,
+now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generator can be annotated by the generic type
+,. For example:,Note that unlike many other generics in the typing module, the ,
+of , behaves contravariantly, not covariantly or
+invariantly.,If your generator will only yield values, set the , and
+, to ,:,Alternatively, annotate your generator as having a return type of
+either , or ,:, now supports subscripting (,).
+See , and ,.,An alias to ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,An alias to ,.,A generic version of ,.
+The variance and order of type variables
+correspond to those of ,, for example:, now supports subscripting (,).
+See , and ,.,An async generator can be annotated by the generic type
+,. For example:,Unlike normal generators, async generators cannot return a value, so there
+is no , type parameter. As with ,, the
+, behaves contravariantly.,If your generator will only yield values, set the , to
+,:,Alternatively, annotate your generator as having a return type of
+either , or ,:,
+now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,., now supports subscripting (,).
+See , and ,.,A generic version of ,.,
+now supports subscripting (,).
+See , and ,.,A generic version of ,.,
+now supports subscripting (,).
+See , and ,.,These protocols are decorated with ,.,An ABC with one abstract method , that is covariant
+in its return type.,An ABC with one abstract method ,.,An ABC with one abstract method ,.,An ABC with one abstract method ,.,An ABC with one abstract method ,.,An ABC with one abstract method ,.,An ABC with one abstract method ,
+that is covariant in its return type.,Cast a value to a type.,This returns the value unchanged.  To the type checker this
+signals that the return value has the designated type, but at
+runtime we intentionally don’t check anything (we want this
+to be as fast as possible).,Ask a static type checker to confirm that , has an inferred type of ,.,When the type checker encounters a call to ,, it
+emits an error if the value is not of the specified type:,At runtime this returns the first argument unchanged with no side effects.,This function is useful for ensuring the type checker’s understanding of a
+script is in line with the developer’s intentions:,Ask a static type checker to confirm that a line of code is unreachable.,Example:,Here, the annotations allow the type checker to infer that the
+last case can never execute, because , is either
+an , or a ,, and both options are covered by
+earlier cases.
+If a type checker finds that a call to , is
+reachable, it will emit an error. For example, if the type annotation
+for , was instead ,, the type checker would
+emit an error pointing out that , is of type ,.
+For a call to , to pass type checking, the inferred type of
+the argument passed in must be the bottom type, ,, and nothing
+else.,At runtime, this throws an exception when called.,See also, has more
+information about exhaustiveness checking with static typing.,Reveal the inferred static type of an expression.,When a static type checker encounters a call to this function,
+it emits a diagnostic with the type of the argument. For example:,This can be useful when you want to debug how your type checker
+handles a particular piece of code.,The function returns its argument unchanged, which allows using
+it within an expression:,Most type checkers support , anywhere, even if the
+name is not imported from ,. Importing the name from
+, allows your code to run without runtime errors and
+communicates intent more clearly.,At runtime, this function prints the runtime type of its argument to stderr
+and returns it unchanged:, may be used to
+decorate a class, metaclass, or a function that is itself a decorator.
+The presence of , tells a static type checker that the
+decorated object performs runtime “magic” that
+transforms a class, giving it ,-like behaviors.,Example usage with a decorator function:,On a base class:,On a metaclass:,The , classes defined above will
+be treated by type checkers similarly to classes created with
+,.
+For example, type checkers will assume these classes have
+, methods that accept , and ,.,The decorated class, metaclass, or function may accept the following bool
+arguments which type checkers will assume have the same effect as they
+would have on the
+, decorator: ,,
+,, ,, ,, ,, ,,
+,, and ,. It must be possible for the value of these
+arguments (, or ,) to be statically evaluated.,The arguments to the , decorator can be used to
+customize the default behaviors of the decorated class, metaclass, or
+function:, indicates whether the , parameter is assumed to be
+, or , if it is omitted by the caller., indicates whether the , parameter is
+assumed to be True or False if it is omitted by the caller., indicates whether the , parameter is
+assumed to be True or False if it is omitted by the caller., specifies a static list of supported classes
+or functions that describe fields, similar to ,.,Arbitrary other keyword arguments are accepted in order to allow for
+possible future extensions.,Type checkers recognize the following optional arguments on field
+specifiers:, indicates whether the field should be included in the
+synthesized , method. If unspecified, , defaults to
+,., provides the default value for the field., provides a runtime callback that returns the
+default value for the field. If neither , nor
+, are specified, the field is assumed to have no
+default value and must be provided a value when the class is
+instantiated., is an alias for ,., indicates whether the field should be marked as
+keyword-only. If ,, the field will be keyword-only. If
+,, it will not be keyword-only. If unspecified, the value of
+the , parameter on the object decorated with
+, will be used, or if that is unspecified, the
+value of , on , will be used., provides an alternative name for the field. This alternative
+name is used in the synthesized , method.,At runtime, this decorator records its arguments in the
+, attribute on the decorated object.
+It has no other runtime effect.,See , for more details.,The , decorator allows describing functions and methods
+that support multiple different combinations of argument types. A series
+of ,-decorated definitions must be followed by exactly one
+non-,-decorated definition (for the same function/method).
+The ,-decorated definitions are for the benefit of the
+type checker only, since they will be overwritten by the
+non-,-decorated definition, while the latter is used at
+runtime but should be ignored by a type checker.  At runtime, calling
+a ,-decorated function directly will raise
+,. An example of overload that gives a more
+precise type than can be expressed using a union or a type variable:,See , for more details and comparison with other typing semantics.,Overloaded functions can now be introspected at runtime using
+,.,Return a sequence of ,-decorated definitions for
+,. , is the function object for the implementation of the
+overloaded function. For example, given the definition of , in
+the documentation for ,,
+, will return a sequence of three function objects
+for the three defined overloads. If called on a function with no overloads,
+, returns an empty sequence., can be used for introspecting an overloaded function at
+runtime.,Clear all registered overloads in the internal registry. This can be used
+to reclaim the memory used by the registry.,A decorator to indicate to type checkers that the decorated method
+cannot be overridden, and the decorated class cannot be subclassed.
+For example:,There is no runtime checking of these properties. See , for
+more details.,The decorator will now set the , attribute to ,
+on the decorated object. Thus, a check like
+, can be used at runtime
+to determine whether an object , has been marked as final.
+If the decorated object does not support setting attributes,
+the decorator returns the object unchanged without raising an exception.,Decorator to indicate that annotations are not type hints.,This works as class or function ,.  With a class, it
+applies recursively to all methods and classes defined in that class
+(but not to methods defined in its superclasses or subclasses).,This mutates the function(s) in place.,Decorator to give another decorator the , effect.,This wraps the decorator with something that wraps the decorated
+function in ,.,Decorator to mark a class or function to be unavailable at runtime.,This decorator is itself not available at runtime. It is mainly
+intended to mark classes that are defined in type stub files if
+an implementation returns an instance of a private class:,Note that returning instances of private classes is not recommended.
+It is usually preferable to make such classes public.,Return a dictionary containing type hints for a function, method, module
+or class object.,This is often the same as ,. In addition,
+forward references encoded as string literals are handled by evaluating
+them in , and , namespaces. For a class ,, return
+a dictionary constructed by merging all the , along
+, in reverse order.,The function recursively replaces all , with ,,
+unless , is set to , (see , for
+more information). For example:,Note, does not work with imported
+, that include forward references.
+Enabling postponed evaluation of annotations (,) may remove
+the need for most forward references.,Added , parameter as part of ,.,Previously, , was added for function and method annotations
+if a default value equal to , was set.
+Now the annotation is returned unchanged.,Provide basic introspection for generic types and special typing forms.,For a typing object of the form , these functions return
+, and ,. If , is a generic alias for a builtin or
+, class, it gets normalized to the original class.
+If , is a union or , contained in another
+generic type, the order of , may be different from the order
+of the original arguments , due to type caching.
+For unsupported objects return , and , correspondingly.
+Examples:,Check if a type is a ,.,For example:,A class used for internal typing representation of string forward references.
+For example, , is implicitly transformed into
+,.  This class should not be instantiated by
+a user, but may be used by introspection tools.,Note, generic types such as , will not be
+implicitly transformed into , and thus
+will not automatically resolve to ,.,A special constant that is assumed to be , by 3rd party static
+type checkers. It is , at runtime. Usage:,The first type annotation must be enclosed in quotes, making it a
+“forward reference”, to hide the , reference from the
+interpreter runtime.  Type annotations for local variables are not
+evaluated, so the second annotation does not need to be enclosed in quotes.,Note,If , is used,
+annotations are not evaluated at function definition time.
+Instead, they are stored as strings in ,.
+This makes it unnecessary to use quotes around the annotation
+(see ,).,Certain features in , are deprecated and may be removed in a future
+version of Python. The following table summarizes major deprecations for your
+convenience. This is subject to change, and not all deprecations are listed.,Feature,Deprecated in,Projected removal,PEP/issue, and ,
+submodules,3.8,3.13, versions of standard
+collections,3.9,Undecided,3.11,Undecided"
+name,content
+torch," 2.0,now available,Learn about the tools and frameworks in the PyTorch Ecosystem,See the posters presented at ecosystem day 2021,See the posters presented at developer day 2021,See the posters presented at PyTorch conference - 2022,Learn about PyTorch’s features and capabilities,Learn more about the PyTorch Foundation.,Join the PyTorch developer community to contribute, learn, and get your questions answered.,Learn how our community solves real, everyday machine learning problems with PyTorch,Find resources and get questions answered,Find events, webinars, and podcasts,A place to discuss PyTorch code, issues, install, research,Discover, publish, and reuse pre-trained models,Faster, more pythonic and dynamic as ever,Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.,Scalable distributed training and performance optimization in research and production is enabled by the torch.distributed backend.,A rich ecosystem of tools and libraries extends PyTorch and supports development in computer vision, NLP and more.,PyTorch is well supported on major cloud platforms, providing frictionless development and easy scaling.,Support Ukraine 🇺🇦 ,Select your preferences and run the install command. Stable represents the most currently tested and supported version of PyTorch. This should
+   be suitable for many users. Preview is available if you want the latest, not fully tested and supported, builds that are generated nightly.
+   Please ensure that you have ,,  depending on your package manager. Anaconda is our recommended
+   package manager since it installs all dependencies. You can also
+  ,. Note that LibTorch is only available for C++.
+, PyTorch LTS has been deprecated. For more information, see
+   ,.
+,Get up and running with PyTorch quickly through popular cloud platforms and machine learning services.,Microsoft Azure,Explore a rich ecosystem of libraries, tools, and more to support development.,Captum (“comprehension” in Latin) is an open source, extensible library for model interpretability built on PyTorch.,PyTorch Geometric is a library for deep learning on irregular input data such as graphs, point clouds, and manifolds.,skorch is a high-level library for PyTorch that provides full scikit-learn compatibility.,Join the PyTorch developer community to contribute, learn, and get your questions answered.,Browse and join discussions on deep learning with PyTorch.,Discuss advanced topics. Request access: https://bit.ly/ptslack,Docs and tutorials in Chinese, translated by the community.,Tutorials in Korean, translated by the community.,Tutorials in Japanese, translated by the community.,Learn about the PyTorch core and module maintainers.,Learn how you can contribute to PyTorch code and documentation.,PyTorch design principles for contributors and maintainers.,Learn about the PyTorch governance hierarchy.,Stay up to date with the codebase and discover RFCs, PRs and more.,Reduce inference costs by 71% and drive scale out using PyTorch, TorchServe, and AWS Inferentia.,Pushing the state of the art in NLP and Multi-task learning.,Using PyTorch’s flexibility to efficiently research new algorithmic approaches.,Access comprehensive developer documentation for PyTorch,Get in-depth tutorials for beginners and advanced developers,Find development resources and get your questions answered,Stay up to date,PyTorch Podcasts,© Copyright The Linux Foundation. The PyTorch Foundation is a project of The Linux Foundation. 
+          For web site terms of use, trademark policy and other policies applicable to The PyTorch Foundation please see 
+          ,. The PyTorch Foundation supports the PyTorch open source 
+          project, which has been established as PyTorch Project a Series of LF Projects, LLC. For policies applicable to the PyTorch Project a Series of LF Projects, LLC, 
+          please see ,.,To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: ,."
+name,content
+nvidia-cusolver-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+tokenizers,"huggingface/tokenizers,Name already in use,
+        , Fast State-of-the-Art Tokenizers optimized for Research and Production
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+    ,
+    ,
+    ,
+,
+,
+    ,
+    ,
+    ,
+,Provides an implementation of today's most used tokenizers, with a focus on performance and
+versatility.,We provide bindings to the following languages (more to come!):,Choose your model between Byte-Pair Encoding, WordPiece or Unigram and instantiate a tokenizer:,You can customize how pre-tokenization (e.g., splitting into words) is done:,Then training your tokenizer on a set of files just takes two lines of codes:,Once your tokenizer is trained, encode any text with just one line:,Check the , or the
+, to learn
+more!,
+      , Fast State-of-the-Art Tokenizers optimized for Research and Production
+    "
+name,content
+confection,"explosion/confection,Name already in use,Confection: The sweetest config system for Python,
+        , Confection: the sweetest config system for Python 
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again., , is a lightweight library that offers a , letting you conveniently describe arbitrary
+trees of objects.,Configuration is a huge challenge for machine-learning code because you may want to expose almost any
+detail of any function as a hyperparameter. The setting you want to expose might be arbitrarily far
+down in your call stack, so it might need to pass all the way through the CLI or REST API,
+through any number of intermediate functions, affecting the interface of everything along the way.
+And then once those settings are added, they become hard to remove later. Default values also
+become hard to change without breaking backwards compatibility.,To solve this problem, , offers a config system that lets you easily describe arbitrary trees of objects.
+The objects can be created via function calls you register using a simple decorator syntax. You can even version the
+functions you create, allowing you to make improvements without breaking backwards compatibility. The most similar
+config system we’re aware of is ,, which uses a similar syntax, and also
+allows you to link the configuration system to functions in your code using a decorator. ,'s config system is
+simpler and emphasizes a different workflow via a subset of Gin’s functionality.,
+,
+,
+,
+,The configuration system parses a , file like,and resolves it to a ,:,The config is divided into sections, with the section name in square brackets – for
+example, ,. Within the sections, config values can be assigned to keys using ,. Values can also be referenced
+from other sections using the dot notation and placeholders indicated by the dollar sign and curly braces. For example,
+, will receive the value of use_vectors in the training block. This is useful for settings that
+are shared across components.,The config format has three main differences from Python’s built-in ,:,There’s no pre-defined scheme you have to follow; how you set up the top-level sections is up to you. At the end of
+it, you’ll receive a dictionary with the values that you can use in your script – whether it’s complete initialized
+functions, or just basic settings.,For instance, let’s say you want to define a new optimizer. You'd define its arguments in , like so:,To load and parse this configuration:,Under the hood, , will look up the , function in the ""optimizers"" registry and then
+call it with the arguments , and ,. If the function has type annotations, it will also validate the
+input. For instance, if , is annotated as a float and the config defines a string, , will raise an
+error.,The Thinc documentation offers further information on the configuration system:,This class holds the model and training , and can load and save the
+INI-style configuration format from/to a string, file or bytes. The , class is a subclass of , and uses
+Python’s , under the hood.,Initialize a new , object with optional data.,Load the config from a string.,Load the config from a string.,Serialize the config to a byte string.,Load the config from a byte string.,Serialize the config to a file.,Load the config from a file.,Deep-copy the config.,Interpolate variables like , or , and return a copy of the config with interpolated
+values. Can be used if a config is loaded with ,, e.g. via ,.,Deep-merge two config objects, using the current config as the default. Only merges sections and dictionaries and not
+other values like lists. Values that are provided in the updates are overwritten in the base config, and any new values
+or sections are added. If a config value is a variable like , (e.g. if the config was loaded with
+,, ,, even if the updates provide a different value. This ensures that variable
+references aren’t destroyed by a merge., Note that blocks that refer to registered functions using the , syntax are only merged if they are
+referring to the same functions. Otherwise, merging could easily produce invalid configs, since different functions
+can take different arguments. If a block refers to a different function, it’s overwritten.,
+      , Confection: the sweetest config system for Python 
+    "
+name,content
+sqlglot,"tobymao/sqlglot,Name already in use,
+        Python SQL Parser and Transpiler
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,SQLGlot is a no-dependency SQL parser, transpiler, optimizer, and engine. It can be used to format SQL or translate between , like ,, ,, ,, ,, and ,. It aims to read a wide variety of SQL inputs and output syntactically correct SQL in the targeted dialects.,It is a very comprehensive generic SQL parser with a robust ,. It is also quite ,, while being written purely in Python.,You can easily , the parser, , queries, traverse expression trees, and programmatically , SQL.,Syntax , are highlighted and dialect incompatibilities can warn or raise depending on configurations. However, it should be noted that SQL validation is not SQLGlot’s goal, so some syntax errors may go unnoticed.,Contributions are very welcome in SQLGlot; read the , to get started!,From PyPI:,Or with a local checkout:,Requirements for development (optional):,We'd love to hear from you. Join our community ,!,Easily translate from one dialect to another. For example, date/time functions vary from dialects and can be hard to deal with:,SQLGlot can even translate custom time formats:,As another example, let's suppose that we want to read in a SQL query that contains a CTE and a cast to ,, and then transpile it to Spark, which uses backticks for identifiers and , instead of ,:,Comments are also preserved in a best-effort basis when transpiling SQL code:,You can explore SQL with expression helpers to do things like find columns and tables:,When the parser detects an error in the syntax, it raises a ParserError:,Structured syntax errors are accessible for programmatic use:,Presto , supports the accuracy argument which is not supported in Hive:,SQLGlot supports incrementally building sql expressions:,You can also modify a parsed tree:,There is also a way to recursively transform the parsed tree by applying a mapping function to each tree node:,SQLGlot can rewrite queries into an ""optimized"" form. It performs a variety of , to create a new canonical AST. This AST can be used to standardize queries or provide the foundations for implementing an actual engine. For example:,You can see the AST version of the sql by calling ,:,SQLGlot can calculate the difference between two expressions and output changes in a form of a sequence of actions needed to transform a source expression into a target one:,See also: ,., can be added by subclassing ,:,One can even interpret SQL queries using SQLGlot, where the tables are represented as Python dictionaries. Although the engine is not very fast (it's not supposed to be) and is in a relatively early stage of development, it can be useful for unit testing and running SQL natively across Python objects. Additionally, the foundation can be easily integrated with fast compute kernels (arrow, pandas). Below is an example showcasing the execution of a SELECT expression that involves aggregations and JOINs:,See also: ,.,SQLGlot uses , to serve its API documentation:, run on Python 3.10.5 in seconds.,SQLGlot uses , to simplify literal timedelta expressions. The optimizer will not simplify expressions like the following if the module cannot be found:,
+      Python SQL Parser and Transpiler
+    "
+name,content
+threadpoolctl,"joblib/threadpoolctl,Name already in use,Thread-pool Controls , ,
+        Python helpers to limit the number of threads used in native libraries that handle their own internal threadpool (BLAS and OpenMP implementations)
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,Python helpers to limit the number of threads used in the
+threadpool-backed of common native libraries used for scientific
+computing and data science (e.g. BLAS and OpenMP).,Fine control of the underlying thread-pool size can be useful in
+workloads that involve nested parallelism so as to mitigate
+oversubscription issues.,For users, install the last published version from PyPI:,For contributors, install from the source repository in developer
+mode:,then you run the tests with pytest:,Get a JSON description of thread-pools initialized when importing python
+packages such as numpy or scipy for instance:,The JSON information is written on STDOUT. If some of the packages are missing,
+a warning message is displayed on STDERR.,Introspect the current state of the threadpool-enabled runtime libraries
+that are loaded when importing Python packages:,In the above example, , was installed from the default anaconda channel and comes
+with MKL and its Intel OpenMP (,) implementation while , was installed
+from pypi.org and links against GNU OpenMP (,) so both OpenMP runtimes are
+loaded in the same Python program.,The state of these libraries is also accessible through the object oriented API:,Control the number of threads used by the underlying runtime libraries
+in specific sections of your Python program:,The threadpools can also be controlled via the object oriented API, which is especially
+useful to avoid searching through all the loaded shared libraries each time. It will
+however not act on libraries loaded after the instantiation of the
+,:, and , can also be used as decorators to set
+the maximum number of threads used by the supported libraries at a function level. The
+decorators are accessible through their , method:,When one wants to have sequential BLAS calls within an OpenMP parallel region, it's
+safer to set , since setting , and
+, might not lead to the expected behavior in some configurations
+(e.g. OpenBLAS with the OpenMP threading layer
+,)., can fail to limit the number of inner threads when nesting
+parallel loops managed by distinct OpenMP runtime implementations (for instance
+libgomp from GCC and libomp from clang/llvm or libiomp from ICC).,See the , function in ,
+for an example. More information can be found at:
+,Note however that this problem does not happen when , is
+used to limit the number of threads used internally by BLAS calls that are
+themselves nested under OpenMP parallel loops. , works as
+expected, even if the inner BLAS implementation relies on a distinct OpenMP
+implementation.,Using Intel OpenMP (ICC) and LLVM OpenMP (clang) in the same Python program
+under Linux is known to cause problems. See the following guide for more details
+and workarounds:
+,Setting the maximum number of threads of the OpenMP and BLAS libraries has a global
+effect and impacts the whole Python process. There is no thread level isolation as
+these libraries do not offer thread-local APIs to configure the number of threads to
+use in nested parallel calls.,To make a release:,Bump the version number (,) in ,.,Build the distribution archives:,Check the contents of ,.,If everything is fine, make a commit for the release, tag it, push the
+tag to github and then:,The initial dynamic library introspection code was written by @anton-malakhov
+for the smp package available at , .,threadpoolctl extends this for other operating systems. Contrary to smp,
+threadpoolctl does not attempt to limit the size of Python multiprocessing
+pools (threads or processes) or set operating system-level CPU affinity
+constraints: threadpoolctl only interacts with native libraries via their
+public runtime APIs.,
+      Python helpers to limit the number of threads used in native libraries that handle their own internal threadpool (BLAS and OpenMP implementations)
+    "
+name,content
+pyOpenSSL,"Welcome to pyOpenSSL’s documentation!,Release v23.2.0.dev (,).,pyOpenSSL is a rather thin wrapper around (a subset of) the OpenSSL library.
+With thin wrapper we mean that a lot of the object methods do nothing more than
+calling a corresponding function in the OpenSSL library.,© Copyright 2001 The pyOpenSSL developers.
+      "
+name,content
+sympy,"
+      SymPy is a Python library for symbolic mathematics. It aims to
+      become a full-featured computer algebra system (CAS) while keeping the code as
+      simple as possible in order to be comprehensible and easily extensible. SymPy
+      is written entirely in Python.
+    , ,SymPy is…,This is an (incomplete) list of projects that use SymPy. If you use SymPy in
+your project, please let us know on our ,, so that we can add your
+project here as well.,
+              ,
+              ,
+            ,
+        , Version 1.7.1 released (,),
+    ,
+        , Version 1.7 released (,),
+    ,
+        , Version 1.6.2 released (,),
+    ,
+        , Version 1.6.1 released (,),
+    ,
+        , Version 1.6 released (,),
+    ,
+        , Version 1.5.1 released (,),
+    ,
+        , Version 1.5 released (,),
+    ,
+        , Version 1.4 released (,),
+    ,Copyright © 2021 SymPy Development Team. ,
+        This page is open source. Fork , to edit it.
+      ,
+        Languages (beta):
+        ,,
+        ,,
+        ,,
+        ,,
+        ,,
+        ,,
+        ,,
+        ,,
+        ,
+      "
+name,content
+nvidia-cublas-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+rapidfuzz,"maxbachmann/RapidFuzz,Name already in use,
+,
+,
+        Rapid fuzzy string matching in Python using various string metrics
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+,
+  , •
+  , •
+  , •
+  ,
+,RapidFuzz is a fast string matching library for Python and C++, which is using the string similarity calculations from ,. However there are a couple of aspects that set RapidFuzz apart from FuzzyWuzzy:,There are several ways to install RapidFuzz, the recommended methods
+are to either use ,(the Python package manager) or
+, (an open-source, cross-platform, package manager),RapidFuzz can be installed with , the following way:,There are pre-built binaries (wheels) of RapidFuzz for MacOS (10.9 and later), Linux x86_64 and Windows. Wheels for armv6l (Raspberry Pi Zero) and armv7l (Raspberry Pi) are available on ,.,   ,If you run into this error on Windows the reason is most likely, that the , is not installed, which is required to find C++ Libraries (The C++ 2019 version includes the 2015, 2017 and 2019 version).,RapidFuzz can be installed with ,:,RapidFuzz can be installed directly from the source distribution by cloning the repository. This requires a C++17 capable compiler.,Some simple functions are shown below. A complete documentation of all functions can be found ,.,Scorers in RapidFuzz can be found in the modules , and ,.,The process module makes it compare strings to lists of strings. This is generally more
+performant than using the scorers directly from Python.
+Here are some examples on the usage of processors in RapidFuzz:,The full documentation of processors can be found ,The following benchmark gives a quick performance comparison between RapidFuzz and FuzzyWuzzy.
+More detailed benchmarks for the string metrics can be found in the ,. For this simple comparison I generated a list of 10.000 strings with length 10, that is compared to a sample of 100 elements from this list:,The first benchmark compares the performance of the scorers in FuzzyWuzzy and RapidFuzz when they are used directly
+from Python in the following way:,The following graph shows how many elements are processed per second with each of the scorers. There are big performance differences between the different scorers. However each of the scorers is faster in RapidFuzz,The second benchmark compares the performance when the scorers are used in combination with cdist in the following
+way:,The following graph shows how many elements are processed per second with each of the scorers. In RapidFuzz the usage of scorers through processors like , is a lot faster than directly using it. That's why they should be used whenever possible.,If you are using RapidFuzz for your work and feel like giving a bit of your own benefit back to support the project, consider sending us money through GitHub Sponsors or PayPal that we can use to buy us free time for the maintenance of this great library, to fix bugs in the software, review and integrate code contributions, to improve its features and documentation, or to just take a deep breath and have a cup of tea every once in a while. Thank you for your support.,Support the project through , or via ,:,.,RapidFuzz is licensed under the MIT license since I believe that everyone should be able to use it without being forced to adopt the GPL license. That's why the library is based on an older version of fuzzywuzzy that was MIT licensed as well.
+This old version of fuzzywuzzy can be found ,.,
+      Rapid fuzzy string matching in Python using various string metrics
+    "
+name,content
+sphinxcontrib-autoprogram,"sphinx-contrib/autoprogram,Name already in use,
+        Documenting CLI programs
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,This contrib extension, ,, provides an automated
+way to document CLI programs.  It scans , object,
+and then expands it into a set of , and ,
+directives.,Install using ,:,You can find the documentation from the following URL:,
+      Documenting CLI programs
+    "
+name,content
+sphinx-autobuild,"executablebooks/sphinx-autobuild,Name already in use,sphinx-autobuild,
+        Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,Rebuild Sphinx documentation on changes, with live-reload in the browser.,
+,sphinx-autobuild is available on ,. It can be installed using pip:,To build a classical Sphinx documentation set, run:,This will start a server at , and start watching for changes in the , directory. When a change is detected in ,, the documentation is rebuilt and any open browser windows are reloaded automatically. , (,+,) will stop the server.,sphinx-autobuild accepts the same arguments as , (these get passed to sphinx-build on each build). It also has a few additional options, which can seen by running ,:,FYI: Sphinx is planning to ,.,To use sphinx-autobuild with the Makefile generated by Sphinx, add the following to the end of the Makefile:, will now invoke sphinx-autobuild.,If you generated the , with an older version of sphinx, this syntax might not work for you. Consider , structure.,sphinx-autobuild can open the homepage of the generated documentation in your default browser. Passing , will enable this behaviour.,sphinx-autobuild asks the operating system for a free port number and use that for its server. Passing , will enable this behaviour.,When working on a Sphinx HTML theme, add the source directory of the theme as a watch directory. It is also recommended to disable Sphinx's incremental builds by passing the , option to sphinx-autobuild.,This results in slower builds, but it ensures that all pages are built from the same state of the HTML theme. It also works around a , which causes significant problems during theme development.,When working on multiple Sphinx documentation projects simultaneously, it is required to use different output directories for each project. It is also recommended to use , and , to avoid needing to manually manage ports and opening browser windows (which can get tedious quickly).,Sphinx does not ,, like theme files, static files and source code used with autodoc.,At the time of writing, the only known workaround is to instruct Sphinx to rebuild the relevant pages. This can be done by disabling incremental mode (with ,) or passing relevant , in addition to source and output directory in the CLI.,This project stands on the shoulders of giants like ,, , and ,, without whom this project would not be possible.,Many thanks to everyone who has , as well as participated in ,. This project is better thanks to your contribution. ,
+      Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.
+    "
+name,content
+rq,"rq/rq,Name already in use,Redis Queue,
+        Simple job queues for Python
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,RQ (,) is a simple Python library for queueing jobs and processing
+them in the background with workers.  It is backed by Redis and it is designed
+to have a low barrier to entry.  It should be integrated in your web stack
+easily.,RQ requires Redis >= 3.0.0.,
+,
+,
+,Full documentation can be found ,.,If you find RQ useful, please consider supporting this project via ,.,First, run a Redis server, of course:,To put jobs on queues, you don't have to do anything special, just define
+your typically lengthy or blocking function:,You do use the excellent , package, don't you?,Then, create an RQ queue:,And enqueue the function call:,Scheduling jobs are also similarly easy:,Retrying failed jobs is also supported:,For a more complete example, refer to the ,.  But this is the essence.,To start executing enqueued function calls in the background, start a worker
+from your project's directory:,That's about it.,Simply use the following command to install the latest released version:,If you want the cutting edge version (that may well be broken), use this:,Check out these below repos which might be useful in your rq based project.,This project has been inspired by the good parts of ,, ,
+and ,, and has been created as a lightweight alternative to the
+heaviness of Celery or other AMQP-based queueing implementations.,
+      Simple job queues for Python
+    "
+name,content
+nvidia-cufft-cu11,"CUDA Zone,Get exclusive access to hundreds of SDKs, technical trainings, and opportunities , to connect with millions of like-minded developers, researchers, and students.,Join the NVIDIA Developer Program to watch technical sessions from conferences around the world., ,Explore exclusive discounts for higher education, CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs., In GPU-accelerated applications, the sequential part of the workload runs on the CPU – which is optimized for single-threaded performance – while the compute intensive portion of the application runs on thousands of GPU cores in parallel. When using CUDA, developers program in popular languages such as C, C++, Fortran, Python and MATLAB and express parallelism through extensions in the form of a few basic keywords., The , from NVIDIA provides everything you need to develop GPU-accelerated applications. The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime.,Thousands of applications developed with CUDA have been deployed to GPUs in embedded systems, workstations, datacenters and in the cloud., , CUDA serves as a common platform across all NVIDIA GPU families so you can deploy and scale your application across GPU configurations., , , , , The first GPUs were designed as graphics accelerators, becoming more programmable over the 90s, culminating in NVIDIA's first GPU in 1999. Researchers and scientists rapidly began to apply the excellent floating point performance of this GPU for general purpose computing. In 2003, a team of researchers led by Ian Buck unveiled Brook, the first widely adopted programming model to extend C with data-parallel constructs. Ian Buck later joined NVIDIA and led the launch of CUDA in 2006, the world's first solution for general-computing on GPUs., Since its inception, the CUDA ecosystem has grown rapidly to include software development tools, services and partner-based solutions. The , includes libraries, debugging and optimization tools, a compiler and a runtime library to deploy your application. You'll also find code samples, programming guides, user manuals, API references and other documentation to help you get started.,cuRAND,NPP,Math Library,cuFFT,nvGRAPH,NCCL,Nsight,Visual Profiler, CUDA GDB,CUDA MemCheck,OpenACC,CUDA Profiling Tools Interface,CUDA accelerates applications across a wide range of domains from image processing, to deep learning, numerical analytics and computational science.,Get started with CUDA by downloading the CUDA Toolkit and exploring introductory resources including videos, code samples, hands-on labs and webinars."
+name,content
+sphinx-basic-ng,"pradyunsg/sphinx-basic-ng,Name already in use,sphinx-basic-ng,
+        A modernised skeleton for Sphinx themes.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,A modernised skeleton for Sphinx themes.,Clone this repository,Install it locally,Install ,Use , to build a simple demo site,
+      A modernised skeleton for Sphinx themes.
+    "
+name,content
+scikit-learn,"scikit-learn,""We use scikit-learn to support leading-edge basic research [...]"",""I think it's the most well-designed ML package I've seen so far."",""scikit-learn's ease-of-use, performance and overall variety of algorithms implemented has proved invaluable [...]."",""The great benefit of scikit-learn is its fast learning curve [...]"",""It allows us to do AWesome stuff we would not otherwise accomplish"",""scikit-learn makes doing advanced analysis in Python accessible to anyone."",Identifying which category an object belongs to., Spam detection, image recognition.
+          ,
+          ,,
+          ,,
+          ,,
+          and ,Predicting a continuous-valued attribute associated with an object., Drug response, Stock prices.
+          ,
+          ,,
+          ,,
+          ,,
+          and ,Automatic grouping of similar objects into sets., Customer segmentation, Grouping experiment outcomes
+          ,
+          ,,
+          ,,
+          ,,
+          and ,Reducing the number of random variables to consider., Visualization, Increased efficiency
+          ,
+          ,,
+          ,,
+          ,,
+          and ,Comparing, validating and choosing parameters and models., Improved accuracy via parameter tuning
+          ,
+          ,,
+          ,,
+          ,,
+          and ,Feature extraction and normalization.,  Transforming input data such as text for use with machine learning algorithms.
+          ,
+          ,,
+          ,,
+          and ,
+            ,
+        ,
+                  scikit-learn development and maintenance are financially supported by
+                "
+name,content
+Levenshtein,"maxbachmann/Levenshtein,Name already in use,Levenshtein,
+        The Levenshtein Python C extension module contains functions for fast computation of Levenshtein distance and string similarity
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+  ,
+  ,
+  ,
+  ,
+  ,
+,The Levenshtein Python C extension module contains functions for fast
+computation of:,The documentation for the current version can be found at ,If you are using Levenshtein for your work and feel like giving a bit of your own benefit back to support the project, consider sending us money through GitHub Sponsors or PayPal that we can use to buy us free time for the maintenance of this great library, to fix bugs in the software, review and integrate code contributions, to improve its features and documentation, or to just take a deep breath and have a cup of tea every once in a while. Thank you for your support.,Support the project through , or via ,:,.,Levenshtein is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2 of the License, or (at your option)
+any later version.,See the file , for the full text of GNU General Public License version 2.,
+      The Levenshtein Python C extension module contains functions for fast computation of Levenshtein distance and string similarity
+    "
+name,content
+livereload,"lepture/python-livereload,Name already in use,LiveReload,
+        livereload server in python (MAINTAINERS NEEDED)
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,Reload webpages on changes, without hitting refresh in your browser.,LiveReload is for web developers who know Python. It is available on ,.,.,To report a security vulnerability, please use the ,.
+Tidelift will coordinate the fix and disclosure.,
+      livereload server in python (MAINTAINERS NEEDED)
+    "
+name,content
+pyahocorasick,"WojciechMula/pyahocorasick,Name already in use,pyahocorasick,
+        Python module (C extension and plain python) implementing Aho-Corasick algorithm
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again., , , is a fast and memory efficient library for exact or approximate
+multi-pattern string search meaning that you can find multiple key strings
+occurrences at once in some input text.  The strings ""index"" can be built ahead
+of time and saved (as a pickle) to disk to reload and reuse later.  The library
+provides an ahocorasick Python module that you can use as a plain dict-like
+Trie or convert a Trie to an automaton for efficient Aho-Corasick search., is implemented in C and tested on Python 3.6 and up.
+It works on 64 bits Linux, macOS and Windows.,The , is BSD-3-Clause. Some utilities, such as tests and the pure Python
+automaton are dedicated to the Public Domain.,Many thanks for this package. Wasn't sure where to leave a thank you note but
+this package is absolutely fantastic in our application where we have a library
+of 100k+ CRISPR guides that we have to count in a stream of millions of DNA
+sequencing reads. This package does it faster than the previous C program we
+used for the purpose and helps us stick to just Python code in our pipeline.,Miika (AstraZeneca Functional Genomics Centre)
+,You can fetch , from:,The , is published at ,This module is written in C. You need a C compiler installed to compile native
+CPython extensions. To install:,Then create an Automaton:,You can use the Automaton class as a trie. Add some string keys and their associated
+value to this trie. Here we associate a tuple of (insertion index, original string)
+as a value to each key string we add to the trie:,Then check if some string exists in the trie:,And play with the , dict-like method:,Now convert the trie to an Aho-Corasick automaton to enable Aho-Corasick search:,Then search all occurrences of the keys (the needles) in an input string (our haystack).,Here we print the results and just check that they are correct. The
+Automaton.iter() method return the results as two-tuples of the end index where a
+trie key was found in the input string and the associated value for this key. Here
+we had stored as values a tuple with the original string and its trie insertion
+order:,You can also create an eventually large automaton ahead of time and pickle it to
+re-load later. Here we just pickle to a string. You would typically pickle to a
+file instead:,See also:,The full documentation including the API overview and reference is published on
+,.,Overview,With an ,
+you can efficiently search all occurrences of multiple strings (the needles) in an
+input string (the haystack) making a single pass over the input string. With
+pyahocorasick you can eventually build large automatons and pickle them to reuse
+them over and over as an indexed structure for fast multi pattern string matching.,One of the advantages of an Aho-Corasick automaton is that the typical worst-case
+and best-case , are about the same and depends primarily on the size
+of the input string and secondarily on the number of matches returned.  While
+this may not be the fastest string search algorithm in all cases, it can search
+for multiple strings at once and its runtime guarantees make it rather unique.
+Because pyahocorasick is based on a Trie, it stores redundant keys prefixes only
+once using memory efficiently.,A drawback is that it needs to be constructed and ""finalized"" ahead of time
+before you can search strings. In several applications where you search for
+several pre-defined ""needles"" in a variable ""haystacks"" this is actually an
+advantage., are commonly used for fast multi-pattern matching
+in intrusion detection systems (such as snort), anti-viruses and many other
+applications that need fast matching against a pre-defined set of string keys.,Internally an Aho-Corasick automaton is typically based on a Trie with extra
+data for failure links and an implementation of the Aho-Corasick search
+procedure.,Behind the scenes the , Python library implements these two data
+structures:  a , and an Aho-Corasick
+string matching automaton. Both are exposed through the Automaton class.,In addition to Trie-like and Aho-Corasick methods and data structures,
+, also implements dict-like methods: The pyahocorasick
+, is a , a dict-like structure indexed by string keys each
+associated with a value object. You can use this to retrieve an associated value
+in a time proportional to a string key length.,pyahocorasick is available in two flavors:,The type of strings accepted and returned by , methods are either
+, or ,, depending on a compile time settings (preprocessor
+definition of , as set in setup.py).,The , attributes can tell you how the library was built.
+On Python 3, unicode is the default.,Warning,When the library is built with unicode support, an Automaton will store 2 or
+4 bytes per letter, depending on your Python installation. When built
+for bytes, only one byte per letter is needed.,To install for common operating systems, use pip. Pre-built wheels should be
+available on Pypi at some point in the future:,To build from sources you need to have a C compiler installed and configured which
+should be standard on Linux and easy to get on MacOSX.,To build from sources, clone the git repository or download and extract the source
+archive.,Install pip (and its setuptools companion) and then run (in a virtualenv of
+course!):,If compilation succeeds, the module is ready to use.,Support is available through the , to report bugs or ask
+questions.,You can submit contributions through ,.,The initial author and maintainer is Wojciech Muła. , is Wojciech's sidekick and helps maintaining,
+and rewrote documentation, setup CI servers and did a some work to make this
+module more accessible to end users.,Alphabetic list of authors:,and many others!,This library would not be possible without help of many people, who contributed in
+various ways.
+They created ,,
+reported bugs as ,
+or via direct messages, proposed fixes, or spent their valuable time on testing.,Thank you.,This library is licensed under very liberal
+, license. Some
+portions of the code are dedicated to the public domain such as the pure Python
+automaton and test code.,Full text of license is available in LICENSE file.,While , tries to be the finest and fastest Aho Corasick library
+for Python you may consider these other libraries:,
+      Python module (C extension and plain python) implementing Aho-Corasick algorithm
+    "
+name,content
+transformers,"huggingface/transformers,Name already in use,NOTE:,
+        , Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.
+      ,
+        Use Git or checkout with SVN using the web URL.
+    ,
+      Work fast with our official CLI.
+      ,.
+    ,
+                Please
+                ,
+                to use Codespaces.
+              ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,
+    If nothing happens, , and try again.
+  ,Your codespace will open once ready.,There was a problem preparing your codespace, please try again.,
+  ,
+  ,
+  ,
+,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+,
+        , |
+        , |
+        , |
+        , |
+        , |
+        , |
+        ,
+    ,
+,State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow, Transformers provides thousands of pretrained models to perform tasks on different modalities such as text, vision, and audio.,These models can be applied on:,Transformer models can also perform tasks on ,, such as table question answering, optical character recognition, information extraction from scanned documents, video classification, and visual question answering., Transformers provides APIs to quickly download and use those pretrained models on a given text, fine-tune them on your own datasets and then share them with the community on our ,. At the same time, each python module defining an architecture is fully standalone and can be modified to enable quick research experiments., Transformers is backed by the three most popular deep learning libraries — ,, , and , — with a seamless integration between them. It's straightforward to train your models with one before loading them for inference with the other.,You can test most of our models directly on their pages from the ,. We also offer , for public and private models.,Here are a few examples:,In Natural Language Processing:,In Computer Vision:,In Audio:,In Multimodal tasks:,, built by the Hugging Face team, is the official demo of this repo’s text generation capabilities.,To immediately use a model on a given input (text, image, audio, ...), we provide the , API. Pipelines group together a pretrained model with the preprocessing that was used during that model's training. Here is how to quickly use a pipeline to classify positive versus negative texts:,The second line of code downloads and caches the pretrained model used by the pipeline, while the third evaluates it on the given text. Here the answer is ""positive"" with a confidence of 99.97%.,Many tasks have a pre-trained , ready to go, in NLP but also in computer vision and speech. For example, we can easily extract detected objects in an image:,Here we get a list of objects detected in the image, with a box surrounding the object and a confidence score. Here is the original image on the left, with the predictions displayed on the right:,You can learn more about the tasks supported by the , API in ,.,In addition to ,, to download and use any of the pretrained models on your given task, all it takes is three lines of code. Here is the PyTorch version:,And here is the equivalent code for TensorFlow:,The tokenizer is responsible for all the preprocessing the pretrained model expects, and can be called directly on a single string (as in the above examples) or a list. It will output a dictionary that you can use in downstream code or simply directly pass to your model using the ** argument unpacking operator.,The model itself is a regular , or a , (depending on your backend) which you can use as usual. , explains how to integrate such a model into a classic PyTorch or TensorFlow training loop, or how to use our , API to quickly fine-tune on a new dataset.,Easy-to-use state-of-the-art models:,Lower compute costs, smaller carbon footprint:,Choose the right framework for every part of a model's lifetime:,Easily customize a model or an example to your needs:,This repository is tested on Python 3.6+, Flax 0.3.2+, PyTorch 1.3.1+ and TensorFlow 2.3+.,You should install , Transformers in a ,. If you're unfamiliar with Python virtual environments, check out the ,.,First, create a virtual environment with the version of Python you're going to use and activate it.,Then, you will need to install at least one of Flax, PyTorch or TensorFlow.
+Please refer to ,, , and/or , and , installation pages regarding the specific installation command for your platform.,When one of those backends has been installed, , Transformers can be installed using pip as follows:,If you'd like to play with the examples or need the bleeding edge of the code and can't wait for a new release, you must ,.,Since Transformers version v4.0.0, we now have a conda channel: ,., Transformers can be installed using conda as follows:,Follow the installation pages of Flax, PyTorch or TensorFlow to see how to install them with conda.,  On Windows, you may be prompted to activate Developer Mode in order to benefit from caching. If this is not an option for you, please let us know in ,., provided by , Transformers are seamlessly integrated from the huggingface.co , where they are uploaded directly by , and ,.,Current number of checkpoints: , Transformers currently provides the following architectures (see , for a high-level summary of each them):,To check if each model has an implementation in Flax, PyTorch or TensorFlow, or has an associated tokenizer backed by the , Tokenizers library, refer to ,.,These implementations have been tested on several datasets (see the example scripts) and should match the performance of the original implementations. You can find more details on performance in the Examples section of the ,.,We now have a , you can cite for the , Transformers library:,
+      , Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.
+    "
