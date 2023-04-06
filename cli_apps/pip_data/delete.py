@@ -18,24 +18,47 @@ import subprocess
 # snoop.install(watch_extras=[type_watch])
 
 
-#@snoop
+# @snoop
 def delete():
     """
-    We'll delete all files in the
-    'results' and 'package_files'
-    folders, and all lists with
-    the exception of
-    'names_linux.txt'
+    We'll delete all files in the *results*,
+    'package_files' and *kws* folders, all
+    lists, with the exception of
+    'names_linux.txt', and all *bin* files.
     """
     cwd = os.getcwd()
-    results = f"{cwd}/results"
-    packs = f"{cwd}/package_files"
+    pip = "/home/mic/python/cli_apps/cli_apps/pip_data"
+    results = f"{pip}/results"
+    packs = f"{pip}/package_files"
+    kws = f"{pip}/tags/kws"
 
-    fldrs = [results, packs]
+    fldrs = [results, packs, kws]
     for fld in fldrs:
         paths = [os.path.join(fld, file) for file in os.listdir(fld)]
         for path in paths:
             os.remove(path)
+
+    newname = f"{pip}/tags/newname.bin"
+    if newname:
+        os.remove(newname)
+    newurls = f"{pip}/tags/newurls.bin"
+    if newurls:
+        os.remove(newurls)
+    nospaces = f"{pip}/tags/nospaces.bin"
+    if nospaces:
+        os.remove(nospaces)
+    kwdlst = f"{pip}/kwdlst.bin"
+    if kwdlst:
+        os.remove(kwdlst)
+    first_pip = f"{pip}/lists/first_pip.txt"
+    if first_pip:
+        os.remove(first_pip)
+    old_names = f"{pip}/lists/old_names_linux.txt"
+    if old_names:
+        os.remove(old_names)
+
+    cmd = f"/usr/bin/trash-put {pip}/pip_project"
+    subprocess.run(cmd, shell=True)
 
 
 if __name__ == "__main__":

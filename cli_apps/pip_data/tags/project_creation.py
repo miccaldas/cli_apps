@@ -1,5 +1,5 @@
 """
-Creates the *Scrapy* project folder.
+Creates the *Pip's Scrapy* project folder.
 """
 import os
 import pickle
@@ -12,11 +12,12 @@ from snoop import pp
 @snoop
 def project_creation():
     """
+    Project Creation for Pip packages.
     Runs *Scrapy's* command to start a project.\n
-    :var str cmd: *scrapy startproject yay_project*.
+    :var str cmd: *scrapy startproject pip_project*.
     """
     cwd = os.getcwd()
-    cmd = "scrapy startproject yay_project"
+    cmd = "/home/mic/.local/bin/scrapy startproject pip_project"
     subprocess.run(cmd, cwd=cwd, shell=True)
 
 
@@ -27,6 +28,7 @@ if __name__ == "__main__":
 @snoop
 def settings_definition():
     """
+    Settings Definition for Pip packages.
     Defines the following options:\n
     1. FEED_EXPORT_FIELDS.  Title of the csv columns.
     2.  FEED_FORMAT. *csv*.
@@ -34,8 +36,8 @@ def settings_definition():
     4. RETRY_TIMES   Number of retries when there's a connection error.\n
     .. NOTE:: The feeds definitions will be deprecated in the near future.
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
-    with open(f"{tags}/yay_project/yay_project/settings.py", "a") as d:
+    pip = "/home/mic/python/cli_apps/cli_apps/pip_data"
+    with open(f"{pip}/pip_project/pip_project/settings.py", "a") as d:
         d.write("ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}")
         d.write("\n")
         d.write('FEED_EXPORT_FIELDS = ["name", "content"]')
@@ -46,9 +48,9 @@ def settings_definition():
         d.write("\n")
         d.write("RETRY_TIMES = 1\n")
         d.close()
-    with open(f"{tags}/yay_project/yay_project/pipelines.py", "r") as f:
+    with open(f"{pip}/pip_project/pip_project/pipelines.py", "r") as f:
         lines = f.readlines()
-    with open(f"{tags}/yay_project/yay_project/pipelines.py", "w") as f:
+    with open(f"{pip}/pip_project/pip_project/pipelines.py", "w") as f:
         for line in lines:
             f.write(line)
         f.write("\n")
@@ -62,6 +64,7 @@ if __name__ == "__main__":
 @snoop
 def xorg_urls():
     """
+    Xorg_urls for Pip packages.
     All Xorg packages had as URL, a generic *Freedesktop* site
     url, which won't bring much information. We replace them
     with url's to their *Github* pages.
@@ -95,6 +98,7 @@ if __name__ == "__main__":
 @snoop
 def name_change():
     """
+    Name change for Pip packages.
     Some of these names have dashes and dots on them, and Scrapy
     doesn't accept them on its spider's/project's names.
     To comply, but not forget original name, we add a chenged
@@ -122,6 +126,7 @@ if __name__ == "__main__":
 @snoop
 def spider():
     """
+    Spider creation for pip packages.
     For each entry in our packages list is built a spider, that'llhave its own file.\n
     :var str srch_title: Css query for *<h1>* elements.\n
     :var str enphasys: Css query for <em> tags. Usually sub-titles.\n
@@ -136,7 +141,7 @@ def spider():
         spider_name = f"{entry[0].strip()}_spider"
         class_name = f"{spider_name}".upper()
         with open(
-            f"{pip}/yay_project/yay_project/spiders/{spider_name}.py",
+            f"{pip}/pip_project/pip_project/spiders/{spider_name}.py",
             "w",
         ) as f:
             f.write("import scrapy\n")

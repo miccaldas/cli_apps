@@ -1,9 +1,9 @@
 [Unit]
-Description=Updating the scraped Pypi list.
+Description=Updating the pip list.
 After=network.target
 
 [Service]
-WorkingDirectory=/home/mic/python/cli_apps/cli_apps/
+WorkingDirectory=/home/mic/python/cli_apps/cli_apps/pip_data/
 ExecStart=/usr/bin/python3.10 main.py
 User=mic
 Group=mic

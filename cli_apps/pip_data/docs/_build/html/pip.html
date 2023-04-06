@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Pip Modules &#8212; Cli Apps 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mrtools.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <script src="_static/jquery.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tagging Modules" href="tagging.html" /> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <!-- <li><a href="index.html">Home</a></li>
+    <li><a href="usage/installation.html">Get it</a></li>
+    <li><a href="contents.html">Docs</a></li>
+    <li><a href="develop.html">Extend/Develop</a></li> -->
+  </ul>
+  <div>
+    
+    <h1 class="logo"><a href="index.html">Cli Apps</a></h1>
+    
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tagging.html" title="Tagging Modules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Pip Modules</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pip-modules">
+<h1>Pip Modules<a class="headerlink" href="#pip-modules" title="Permalink to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<p>This is the place where we update and maintain all the database entries that come from <em>Pip</em>. We have the usual CRUD functionalities, we even had a bespoke app to access the db once. But it soon turned obvious that most of the interactiosn would be autommatic, and there was no reason to maintain an app that nobody used. Not even me. The main tasks here is information sourcing, data cleaning and database upkeep. Quite possibly in that order. But the module’s presentation will clear up what we do here.</p>
+</section>
+<section id="module-cli_apps.pip_data.initiation_scripts">
+<span id="initiation-scripts"></span><h2>Initiation Scripts<a class="headerlink" href="#module-cli_apps.pip_data.initiation_scripts" title="Permalink to this heading">¶</a></h2>
+<p>These are the initial steps in the update process.
+Its name <em>_scripts</em> came from the fact that, originally,
+these tasks were done by bash scripts. But, as I grew more
+confident using the unbelievably cumbersome Python’s regex,
+I finally was able to have all of code in Python.</p>
+<p>The first command ask pip for a list, and the second
+removes everything except the name.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.initiation_scripts.initiation_scripts">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.initiation_scripts.</span></span><span class="sig-name descname"><span class="pre">initiation_scripts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/initiation_scripts.html#initiation_scripts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.initiation_scripts.initiation_scripts" title="Permalink to this definition">¶</a></dt>
+<dd><p>We use a <em>Pip</em> command to get the lsit of installed packages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="nb">list</span> <span class="o">--</span><span class="nb">format</span> <span class="n">freeze</span>
+</pre></div>
+</div>
+<p>Then we create a file with only the packages names, with the help
+of some <em>Python’s</em> regex.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.query_builder">
+<span id="query-builder"></span><h2>Query Builder<a class="headerlink" href="#module-cli_apps.pip_data.query_builder" title="Permalink to this heading">¶</a></h2>
+<p>We’ll use pip’s package information system
+to get information on installed packages.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.query_builder.query_builder">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.query_builder.</span></span><span class="sig-name descname"><span class="pre">query_builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clean</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/query_builder.html#query_builder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.query_builder.query_builder" title="Permalink to this definition">¶</a></dt>
+<dd><p>We’ll instantiate the lists
+here, compare it to the old
+name list, and keep only
+new entries. Then we’ll pass
+these entries through a
+subprocess command, that will
+link to pip.
+We’ll use multiprocessing to
+speed up the process.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.extract_file_info">
+<span id="extract-file-info"></span><h2>Extract File Info<a class="headerlink" href="#module-cli_apps.pip_data.extract_file_info" title="Permalink to this heading">¶</a></h2>
+<p>We extract name, description and url information from the <em>pip show</em> files,
+and create new files with this data in the <em>results</em> folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.extract_file_info.extract_file_info">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.extract_file_info.</span></span><span class="sig-name descname"><span class="pre">extract_file_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/extract_file_info.html#extract_file_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.extract_file_info.extract_file_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>We iterate through the files in <em>package_files</em>, search for the
+entries we want for the database, prune them, to get only the
+data, and create a new file in the <em>results</em> folder. These files
+will be ready to be uploaded.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.tags.project_creation">
+<span id="pip-s-project-creation"></span><h2>Pip’s Project Creation<a class="headerlink" href="#module-cli_apps.pip_data.tags.project_creation" title="Permalink to this heading">¶</a></h2>
+<p>Creates the <em>Pip’s Scrapy</em> project folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.project_creation">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">project_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#project_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.project_creation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project Creation for Pip packages.
+Runs <em>Scrapy’s</em> command to start a project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – <em>scrapy startproject pip_project</em>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.settings_definition">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">settings_definition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#settings_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.settings_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings Definition for Pip packages.
+Defines the following options:</p>
+<ol class="arabic simple">
+<li><p>FEED_EXPORT_FIELDS.  Title of the csv columns.</p></li>
+<li><p>FEED_FORMAT. <em>csv</em>.</p></li>
+<li><p>FEED_URI.  <em>results.csv</em></p></li>
+<li><p>RETRY_TIMES   Number of retries when there’s a connection error.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The feeds definitions will be deprecated in the near future.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.xorg_urls">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">xorg_urls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#xorg_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.xorg_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Xorg_urls for Pip packages.
+All Xorg packages had as URL, a generic <em>Freedesktop</em> site
+url, which won’t bring much information. We replace them
+with url’s to their <em>Github</em> pages.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.name_change">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">name_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#name_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.name_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name change for Pip packages.
+Some of these names have dashes and dots on them, and Scrapy
+doesn’t accept them on its spider’s/project’s names.
+To comply, but not forget original name, we add a chenged
+version, with underline, as first element of the tuple.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This change turned out to be useless, since we decided to
+create just one project, with all the spiders inside it.
+I leave it here for documentation purposes.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.spider">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">spider</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#spider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.spider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spider creation for pip packages.
+For each entry in our packages list is built a spider, that’llhave its own file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>srch_title</strong> (<em>str</em>) – Css query for <em>&lt;h1&gt;</em> elements.</p></li>
+<li><p><strong>enphasys</strong> (<em>str</em>) – Css query for &lt;em&gt; tags. Usually sub-titles.</p></li>
+<li><p><strong>srch_text</strong> (<em>str</em>) – Css query for all <em>&lt;p&gt;</em> tags.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the package. Added so we can identify the lines in the csv.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.tags.kwd_creator">
+<span id="pip-s-keyword-creation"></span><h2>Pip’s Keyword Creation<a class="headerlink" href="#module-cli_apps.pip_data.tags.kwd_creator" title="Permalink to this heading">¶</a></h2>
+<p>Keyword creator for Pip packages.
+Cleans csv file data and runs KeyBERT, to find keywords for each package.
+Stores them in a file in the <em>kwds</em> folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.kwd_creator.csv_cleaner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">csv_cleaner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/kwd_creator.html#csv_cleaner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.kwd_creator.csv_cleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Csv cleaner for Pip packages.
+We remove column names and also the exccess whitespaces from the scraped content.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.kwd_creator.kwd_creator">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">kwd_creator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/kwd_creator.html#kwd_creator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.kwd_creator.kwd_creator" title="Permalink to this definition">¶</a></dt>
+<dd><p>We run KeyBERT through the csv results.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.tags.spider_runner">
+<span id="pip-s-spider-runner"></span><h2>Pip’s Spider Runner<a class="headerlink" href="#module-cli_apps.pip_data.tags.spider_runner" title="Permalink to this heading">¶</a></h2>
+<p>Enters the Scrapy project folder and runs its spiders.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.spider_runner.spider_runner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.spider_runner.</span></span><span class="sig-name descname"><span class="pre">spider_runner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spiders_lst</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/spider_runner.html#spider_runner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.spider_runner.spider_runner" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – <em>scrapy crawl &lt;sipder_name&gt;</em></p>
+</dd>
+</dl>
+<p>We use multiprocessing to speed up the process.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.db_upld">
+<span id="database-upload"></span><h2>Database Upload<a class="headerlink" href="#module-cli_apps.pip_data.db_upld" title="Permalink to this heading">¶</a></h2>
+<p>We’ll read the files in ‘results’ and turn it into a list of tuples.
+We’ll collect three keyword results per package, add it to results
+and send it to a MySQL database.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.db_upld.kwd_collector">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.db_upld.</span></span><span class="sig-name descname"><span class="pre">kwd_collector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/db_upld.html#kwd_collector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.db_upld.kwd_collector" title="Permalink to this definition">¶</a></dt>
+<dd><p>We collect the keywords.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.db_upld.db_upload">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.db_upld.</span></span><span class="sig-name descname"><span class="pre">db_upload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/db_upld.html#db_upload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.db_upld.db_upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>The database was previously created.
+So its just the case of iterating
+through the tuples, assign to each a
+to a column and the upload is
+complete.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.delete">
+<span id="delete"></span><h2>Delete<a class="headerlink" href="#module-cli_apps.pip_data.delete" title="Permalink to this heading">¶</a></h2>
+<p>Clears the package of unnecessary
+files. We keep ‘names_linux.txt’,
+because it’s important to compare
+each draw, and only handle what is
+new.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.delete.delete">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.delete.</span></span><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/delete.html#delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.delete.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>We’ll delete all files in the <em>results</em>,
+‘package_files’ and <em>kws</em> folders, all
+lists, with the exception of
+‘names_linux.txt’, and all <em>bin</em> files.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.cron">
+<span id="cron"></span><h2>Cron<a class="headerlink" href="#module-cli_apps.pip_data.cron" title="Permalink to this heading">¶</a></h2>
+<p>Creates cron notification saying that pip update was ran.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.cron.cron">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.cron.</span></span><span class="sig-name descname"><span class="pre">cron</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/cron.html#cron"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.cron.cron" title="Permalink to this definition">¶</a></dt>
+<dd><p>We’ll use dunst for the notification.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.app_reminder">
+<span id="app-reminder"></span><h2>App Reminder<a class="headerlink" href="#module-cli_apps.pip_data.app_reminder" title="Permalink to this heading">¶</a></h2>
+<p>In order to remind myself of all the cli tools at
+my disposal in the computer, this module will
+take a random entry from the database and show its
+webpage in a browser window.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.app_reminder.app_reminder">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.app_reminder.</span></span><span class="sig-name descname"><span class="pre">app_reminder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/app_reminder.html#app_reminder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.app_reminder.app_reminder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens automatically the url.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Pip Modules</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.initiation_scripts">Initiation Scripts</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.initiation_scripts.initiation_scripts"><code class="docutils literal notranslate"><span class="pre">initiation_scripts()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.query_builder">Query Builder</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.query_builder.query_builder"><code class="docutils literal notranslate"><span class="pre">query_builder()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.extract_file_info">Extract File Info</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.extract_file_info.extract_file_info"><code class="docutils literal notranslate"><span class="pre">extract_file_info()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.project_creation">Pip’s Project Creation</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.kwd_creator">Pip’s Keyword Creation</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.spider_runner">Pip’s Spider Runner</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.db_upld">Database Upload</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.db_upld.kwd_collector"><code class="docutils literal notranslate"><span class="pre">kwd_collector()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.db_upld.db_upload"><code class="docutils literal notranslate"><span class="pre">db_upload()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.delete">Delete</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.delete.delete"><code class="docutils literal notranslate"><span class="pre">delete()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.cron">Cron</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.cron.cron"><code class="docutils literal notranslate"><span class="pre">cron()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.app_reminder">App Reminder</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.app_reminder.app_reminder"><code class="docutils literal notranslate"><span class="pre">app_reminder()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tagging.html"
+                          title="previous chapter">Tagging Modules</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pip.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tagging.html" title="Tagging Modules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Pip Modules</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, mclds.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

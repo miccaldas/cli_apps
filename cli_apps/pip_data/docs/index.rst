@@ -1,53 +1,34 @@
-.. NewTags documentation master file, created by
+.. CliApps documentation master file, created by
    sphinx-quickstart on Tue Apr  4 19:52:06 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-NewTags Documentation
-======================
+Cli Apps Pip Documentation
+===========================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
 Introduction
 ------------
-Getting good quality tags for the *cli_apps* database is always a problem. Due to its size, it's not feasible that they're produced in a non-automated way. In our
-last update, there were more than a hundred new packages in the database, from *Pip* alone!  
-
-So there's always a concern on how to turn this application searchable. Quality that, if it's lacking, defeats its all purpose.  
-
-I've been experimenting with different sources of text, that would could be mined for keywords. In the beginning I used the *presentation* field in *Pacman*, or the *Summary* in *Pip*. But these are very limited bases to go on. Surely a longer, richer text source would yield better results.  
-That brought me to the idea of scraping the *Github* or documentation pages of these packages, in order to gain some more insight. The URL's are generally available through *Pacman* and *Pip*, so that's not too difficult.
-All this said, this is my current procedure:
-
-1. Gather information. With:
-
-   .. code-block:: python
-        
-        Pip show <package_name>
-
-        sudo Pacman -Qi <package_name>
-
-for *Pip's* and *Pacman's* packages.
-
-2. From the resulting information, we cull these points:
-
-2.1. Name of Package.
-
-2.2. Description.
-
-2.3. URL for documentation.
-
-With this information, I set about to extract the keywords. For a keyword extractor I'm using `Keybert <https://github.com/MaartenGr/KeyBERT>`_, a simple and minimal keyword tool, with which I've been having the best results from of all that I tried.
-I'm also using `Thefuzz <https://github.com/seatgeek/thefuzz>`_, a string matching tool, to weed out very similar results. *KeyBERT* has, theoritically, the tools to do the same. But when I tried them, the results were very bad. It's something I'll have to revisit shortly.
-With all this done, it's just a matter of uploading to the database and, although I'm much happier than I previously was, there's still a lot of work to be done in this regard. Probably what's needed is multi-page thourough scrape of all available pages, so as to have an even bigger base. Maybe use a more beefy model. Something that'll have to train ... I don't know.
-
-Still a work in progress!
+This is where it's managed the Pip's contribution to the *Cli Apps* database. The idea come about because I was getting tired of not having a clear idea of the command line tools and services in my own computer. Some I installed and forgot, some were installed for something that is not relevant anymore. Others maybe extremely interesting and I wouldn't know that they're there ... I wanted more visibility. So I started monitoring `Pip <https://pip.pypa.io/en/stable/>`_ and `Pacman <https://wiki.archlinux.org/title/pacman>`_, my two main sources of software, to understand what I had installed, what it did amd, most importantly, what I could do with it. I created a database to keep record on this things. It has the following columns:
+1. Name. The name of the package.
+2. Description. A brief description of the package. Usually taken from information given by these two sources.
+3. URL. A link to *Github* or documentation. One of the things that interests me the most.
+4. Four tag columns. I believe firmly that this thing should be easily searchable.
+As you can see by analyzing these modules, the idea is to automate the databases' upkeep as much as possible. Updating is autommatic, tagging is autommatic, deleting is autommatic, etc, etc. My interventions with this service should only be to make the occasional query. But, as anyone who tried something like this know, when we try to automate, we garanty that will pass a lot of man hours building this kind of solution!
+Although we're seeing *Pip's* part, there's another, virtually identical, dedicated to input coming from *Pacman* and *Yay*. But, seen one, seen'em all.
 
 Modules
 -------
 
 .. toctree::
-   modules
+   tagging
+   pip
+
+External Dependencies
+---------------------
+
+* `KeyBERT <https://pypi.org/project/keybert/>`_
+* `Thefuzz <https://github.com/seatgeek/thefuzz>`_

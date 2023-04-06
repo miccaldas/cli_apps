@@ -24,13 +24,13 @@ def spider_runner(spiders_lst):
     We use multiprocessing to speed up the process.
     """
     pip = "/home/mic/python/cli_apps/cli_apps/pip_data"
-    if spiders_lst != "__init__.py":
-        cmd = f"scrapy crawl {spiders_lst[:-3]}"
-        subprocess.run(cmd, cwd=f"{pip}/yay_project/", shell=True)
+    cmd = f"/home/mic/.local/bin/scrapy crawl {spiders_lst[:-3]}"
+    subprocess.run(cmd, cwd=f"{pip}/pip_project/", shell=True)
 
 
 if __name__ == "__main__":
-    spiders_fldr = "/home/mic/python/cli_apps/cli_apps/pip_data/yay_project/yay_project/spiders"
-    spiders_lst = os.listdir(spiders_fldr)
+    spiders_fldr = "/home/mic/python/cli_apps/cli_apps/pip_data/pip_project/pip_project/spiders"
+    spiderslst = os.listdir(spiders_fldr)
+    spiders_lst = [i for i in spiderslst if i != "__init__.py"]
     with Pool() as pool:
         pool.map(spider_runner, spiders_lst)

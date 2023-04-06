@@ -192,119 +192,23 @@
         <article role="main">
           <section id="modules">
 <h1>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h1>
-<section id="module-cli_apps.newtags.yay_newtags.data_manipulation">
-<span id="data-manipulation"></span><h2>Data Manipulation<a class="headerlink" href="#module-cli_apps.newtags.yay_newtags.data_manipulation" title="Permalink to this heading">#</a></h2>
-<p>We’ll compare the list created by Pacman of installed packages with the
-databases’ list of packages. We’ll see what is already in the database
-or not. We’ll deal with both differently.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.package_lists">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">package_lists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#package_lists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.package_lists" title="Permalink to this definition">#</a></dt>
-<dd><p>Here we create two lists:</p>
-<ol class="arabic simple">
-<li><p>List of lists with the information from each package in a sublist.</p></li>
-</ol>
-<p>Taken from the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Qi</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>List of all db entries that haven’t got keyword values.</p></li>
-</ol>
-<p>Both lists are pickled for future use.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.column_lst">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">column_lst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#column_lst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.column_lst" title="Permalink to this definition">#</a></dt>
-<dd><p>We clean ‘paclst’ of everything that’s not to be used in ‘cli_apps’ columns.</p>
-<p>We keep only:</p>
-<ol class="arabic simple">
-<li><p>Name.</p></li>
-<li><p>Description.</p></li>
-<li><p>URL.</p></li>
-</ol>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.package_comparison">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">package_comparison</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#package_comparison"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.package_comparison" title="Permalink to this definition">#</a></dt>
-<dd><p>As we have new packages to upload, before worrying with keyword values,
-we’ll make a list of what packages <em>Pacman</em> discovered that are not in
-the database.
-We clean the title prefixes on each line of columns and make pickle files
-of two groups:</p>
-<ol class="arabic simple">
-<li><p>Packages not in database.</p></li>
-<li><p>Packages already in the database.</p></li>
-</ol>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.upload_new">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">upload_new</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#upload_new"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.upload_new" title="Permalink to this definition">#</a></dt>
-<dd><p>Uploading the new packages to <em>cli_apps</em>.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.adding_lists">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">adding_lists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#adding_lists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.adding_lists" title="Permalink to this definition">#</a></dt>
-<dd><p>There’s entries in <em>cli_apps</em> without keyword values.
-We, on the other hand, have a list of entries, some new,
-some old, that’ll need to have keywords defined.
-Let’s join these lists, sort out repeats, and work
-from there.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.cleaning_list">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">cleaning_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#cleaning_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.cleaning_list" title="Permalink to this definition">#</a></dt>
-<dd><p>There were columns, still, with linebreak symbols. Probably
-taken from the db. We clean them, delete an entry that is
-only one letter, and pickle it.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.name_change">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">name_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#name_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.name_change" title="Permalink to this definition">#</a></dt>
-<dd><p>Some of these names have dashes and dots on them, and Scrapy
-doesn’t accept them on its spider’s/project’s names.
-To comply, but not forget original name, we add a chenged
-version, with underline, as first element of the tuple.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This change turned out to be useless, since we decided to
-create just one project, with all the spiders inside it.
-I leave it here for documentation purposes.</p>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.data_manipulation.xorg_urls">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.data_manipulation.</span></span><span class="sig-name descname"><span class="pre">xorg_urls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/data_manipulation.html#xorg_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.data_manipulation.xorg_urls" title="Permalink to this definition">#</a></dt>
-<dd><p>All Xorg packages had as URL, a generic <em>Freedesktop</em> site
-url, which won’t bring much information. We replace them
-with url’s to their <em>Github</em> pages.</p>
-</dd></dl>
-
-</section>
-<section id="module-cli_apps.newtags.yay_newtags.project_creation">
-<span id="project-creation"></span><h2>Project Creation<a class="headerlink" href="#module-cli_apps.newtags.yay_newtags.project_creation" title="Permalink to this heading">#</a></h2>
+<section id="module-cli_apps.pip_data.tags.project_creation">
+<span id="project-creation"></span><h2>Project Creation<a class="headerlink" href="#module-cli_apps.pip_data.tags.project_creation" title="Permalink to this heading">#</a></h2>
 <p>Creates the <em>Scrapy</em> project folder.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.project_creation.project_creation">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.project_creation.</span></span><span class="sig-name descname"><span class="pre">project_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/project_creation.html#project_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.project_creation.project_creation" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.project_creation">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">project_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#project_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.project_creation" title="Permalink to this definition">#</a></dt>
 <dd><p>Runs <em>Scrapy’s</em> command to start a project.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – <em>scrapy startproject yay_project</em>.</p>
+<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – <em>scrapy startproject pip_project</em>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.project_creation.settings_definition">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.project_creation.</span></span><span class="sig-name descname"><span class="pre">settings_definition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/project_creation.html#settings_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.project_creation.settings_definition" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.settings_definition">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">settings_definition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#settings_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.settings_definition" title="Permalink to this definition">#</a></dt>
 <dd><p>Defines the following options:</p>
 <ol class="arabic simple">
 <li><p>FEED_EXPORT_FIELDS.  Title of the csv columns.</p></li>
@@ -319,8 +223,8 @@ with url’s to their <em>Github</em> pages.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.project_creation.spider">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.project_creation.</span></span><span class="sig-name descname"><span class="pre">spider</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/project_creation.html#spider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.project_creation.spider" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.spider">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">spider</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#spider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.spider" title="Permalink to this definition">#</a></dt>
 <dd><p>For each entry in our packages list is built a spider, that’llhave its own file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
@@ -334,42 +238,60 @@ with url’s to their <em>Github</em> pages.</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.name_change">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">name_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#name_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.name_change" title="Permalink to this definition">#</a></dt>
+<dd><p>Some of these names have dashes and dots on them, and Scrapy
+doesn’t accept them on its spider’s/project’s names.
+To comply, but not forget original name, we add a chenged
+version, with underline, as first element of the tuple.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This change turned out to be useless, since we decided to
+create just one project, with all the spiders inside it.
+I leave it here for documentation purposes.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.xorg_urls">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">xorg_urls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#xorg_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.xorg_urls" title="Permalink to this definition">#</a></dt>
+<dd><p>All Xorg packages had as URL, a generic <em>Freedesktop</em> site
+url, which won’t bring much information. We replace them
+with url’s to their <em>Github</em> pages.</p>
+</dd></dl>
+
 </section>
-<section id="module-cli_apps.newtags.yay_newtags.spider_runner">
-<span id="spider-runner"></span><h2>Spider Runner<a class="headerlink" href="#module-cli_apps.newtags.yay_newtags.spider_runner" title="Permalink to this heading">#</a></h2>
+<section id="module-cli_apps.pip_data.tags.spider_runner">
+<span id="spider-runner"></span><h2>Spider Runner<a class="headerlink" href="#module-cli_apps.pip_data.tags.spider_runner" title="Permalink to this heading">#</a></h2>
 <p>Enters the Scrapy project folder and runs its spiders.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.spider_runner.spider_runner">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.spider_runner.</span></span><span class="sig-name descname"><span class="pre">spider_runner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/spider_runner.html#spider_runner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.spider_runner.spider_runner" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.spider_runner.spider_runner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.spider_runner.</span></span><span class="sig-name descname"><span class="pre">spider_runner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spiders_lst</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/spider_runner.html#spider_runner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.spider_runner.spider_runner" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – <em>scrapy crawl &lt;sipder_name&gt;</em></p>
 </dd>
 </dl>
+<p>We use multiprocessing to speed up the process.</p>
 </dd></dl>
 
 </section>
-<section id="module-cli_apps.newtags.yay_newtags.kwd_creator">
-<span id="keyword-creator"></span><h2>Keyword Creator<a class="headerlink" href="#module-cli_apps.newtags.yay_newtags.kwd_creator" title="Permalink to this heading">#</a></h2>
+<section id="module-cli_apps.pip_data.tags.kwd_creator">
+<span id="keyword-creator"></span><h2>Keyword Creator<a class="headerlink" href="#module-cli_apps.pip_data.tags.kwd_creator" title="Permalink to this heading">#</a></h2>
 <p>Cleans csv file data and runs KeyBERT, to find keywords for each package.
 Stores them in a file in the <em>kwds</em> folder.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.kwd_creator.csv_cleaner">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">csv_cleaner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/kwd_creator.html#csv_cleaner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.kwd_creator.csv_cleaner" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.kwd_creator.csv_cleaner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">csv_cleaner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/kwd_creator.html#csv_cleaner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.kwd_creator.csv_cleaner" title="Permalink to this definition">#</a></dt>
 <dd><p>The column names were repeated for each entry, we remove them here.
-We remove also the excess whitespaces from the scraped content.</p>
+We remove also the exccess whitespaces from the scraped content.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.kwd_creator.kwd_creator">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">kwd_creator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/kwd_creator.html#kwd_creator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.kwd_creator.kwd_creator" title="Permalink to this definition">#</a></dt>
-<dd><p>We run KeyBERT through the csv results, this time without a stop_word list.</p>
-<p>It was much faster and the results aren’t worst because of it.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This turned out to be completely wrong. Keybert created a lot of keywords
-equal to the package name. But we already have that in <em>t1</em>.</p>
-</div>
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.kwd_creator.kwd_creator">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">kwd_creator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/kwd_creator.html#kwd_creator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.kwd_creator.kwd_creator" title="Permalink to this definition">#</a></dt>
+<dd><p>We run KeyBERT through the csv results.</p>
 </dd></dl>
 
 </section>
@@ -380,112 +302,6 @@ equal to the package name. But we already have that in <em>t1</em>.</p>
 <dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader">
 <span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.kwd_uploader.</span></span><span class="sig-name descname"><span class="pre">kwd_uploader</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/kwd_uploader.html#kwd_uploader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader" title="Permalink to this definition">#</a></dt>
 <dd><p>We collect the keywords and upload them to the database.</p>
-</dd></dl>
-
-</section>
-<section id="module-cli_apps.newtags.yay_newtags.stragglers">
-<span id="stragglers"></span><h2>Stragglers<a class="headerlink" href="#module-cli_apps.newtags.yay_newtags.stragglers" title="Permalink to this heading">#</a></h2>
-<p>These are some fourty/fifty entries that their url value is 404 or
-otherwise unavailable. Because of this, they have no tags values.
-We’ll manually insert new url’s, and get them new tags.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.get_missing">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">get_missing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#get_missing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.get_missing" title="Permalink to this definition">#</a></dt>
-<dd><p>Gets all the entries in the database that don’t have any tags.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.missing_list">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">missing_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#missing_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.missing_list" title="Permalink to this definition">#</a></dt>
-<dd><p>List with names and new url values to upload to the database.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.start_project">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">start_project</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#start_project"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.start_project" title="Permalink to this definition">#</a></dt>
-<dd><p>Starts a <em>Scrapy</em> project, using the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">startproject</span> <span class="n">paralel</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.create_settings">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">create_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#create_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.create_settings" title="Permalink to this definition">#</a></dt>
-<dd><p>Adds personal settings to the <em>Scrapy</em> document.</p>
-<p>We’ll use multiprocessing to speed up the build.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For multiprocessing to work, the data source must be
-outside the function. The <em>Pool</em> class creates one worker per cpu
-and calls the function with <em>map</em>. Notice that, when the data is
-fed to the function, <em>records</em> doesn’t stand for a list of tuples,
-but only for one tuple at a time.</p>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.run_spider">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">run_spider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lstfls</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#run_spider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.run_spider" title="Permalink to this definition">#</a></dt>
-<dd><p>Runs the newly created spiders.</p>
-<p>Uses the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">crawl</span> <span class="o">&lt;</span><span class="n">spider_name</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>Function ran with multiprocessing.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.csv_cleaning">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">csv_cleaning</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#csv_cleaning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.csv_cleaning" title="Permalink to this definition">#</a></dt>
-<dd><p>The column names were repeated for each entry, we remove them here.
-We remove also the excess whitespaces from the scraped content.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.kwd_creation">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">kwd_creation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#kwd_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.kwd_creation" title="Permalink to this definition">#</a></dt>
-<dd><p>Creates and cleans tags taken  from the collected scrapings.
-Function run with multiprocessing.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.stragglers.kwd_upload">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.stragglers.</span></span><span class="sig-name descname"><span class="pre">kwd_upload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/stragglers.html#kwd_upload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.stragglers.kwd_upload" title="Permalink to this definition">#</a></dt>
-<dd><p>Gathers the tags values, uploads them to the database.</p>
-</dd></dl>
-
-</section>
-<section id="module-cli_apps.newtags.yay_newtags.check_for_deleted">
-<span id="check-for-deleted"></span><h2>Check For Deleted<a class="headerlink" href="#module-cli_apps.newtags.yay_newtags.check_for_deleted" title="Permalink to this heading">#</a></h2>
-<p>I have a feeling that there are some entries in the <em>cli_apps</em> database, that were already deleted.
-To check for this, we’ll get a list of all <em>yay</em> and <em>pip</em> packages installed, and compare it to the
-entries in the db. If there’s entries in <em>cli_apps</em> that are not in the lists, they’re deleted packages.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.check_for_deleted.clean_lists">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.check_for_deleted.</span></span><span class="sig-name descname"><span class="pre">clean_lists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/check_for_deleted.html#clean_lists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.check_for_deleted.clean_lists" title="Permalink to this definition">#</a></dt>
-<dd><p>We’ll get the <em>pip</em> and <em>yay</em> package lists, and clean them
-until we have only the package names. We’ll then create a
-list to put them together.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.check_for_deleted.db_pack_lst">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.check_for_deleted.</span></span><span class="sig-name descname"><span class="pre">db_pack_lst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/check_for_deleted.html#db_pack_lst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.check_for_deleted.db_pack_lst" title="Permalink to this definition">#</a></dt>
-<dd><p>Download a list of all packages in the database.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.check_for_deleted.compare_lsts">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.check_for_deleted.</span></span><span class="sig-name descname"><span class="pre">compare_lsts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/check_for_deleted.html#compare_lsts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.check_for_deleted.compare_lsts" title="Permalink to this definition">#</a></dt>
-<dd><p>We’ll compare the lists to see if there’s something to be erased.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.check_for_deleted.delete_entries">
-<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.check_for_deleted.</span></span><span class="sig-name descname"><span class="pre">delete_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/check_for_deleted.html#delete_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.check_for_deleted.delete_entries" title="Permalink to this definition">#</a></dt>
-<dd><p>We’ll delete from the database the entries that we found
-through the <em>comparison</em> list.</p>
 </dd></dl>
 
 </section>
@@ -539,52 +355,25 @@ through the <em>comparison</em> list.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Modules</a><ul>
-<li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.data_manipulation">Data Manipulation</a><ul>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.package_lists"><code class="docutils literal notranslate"><span class="pre">package_lists()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.column_lst"><code class="docutils literal notranslate"><span class="pre">column_lst()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.package_comparison"><code class="docutils literal notranslate"><span class="pre">package_comparison()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.upload_new"><code class="docutils literal notranslate"><span class="pre">upload_new()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.adding_lists"><code class="docutils literal notranslate"><span class="pre">adding_lists()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.cleaning_list"><code class="docutils literal notranslate"><span class="pre">cleaning_list()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.data_manipulation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.project_creation">Project Creation</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.project_creation">Project Creation</a><ul>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.spider_runner">Spider Runner</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.spider_runner">Spider Runner</a><ul>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.kwd_creator">Keyword Creator</a><ul>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.kwd_creator">Keyword Creator</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.kwd_uploader">Keyword Uploader</a><ul>
 <li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader"><code class="docutils literal notranslate"><span class="pre">kwd_uploader()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.stragglers">Stragglers</a><ul>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.get_missing"><code class="docutils literal notranslate"><span class="pre">get_missing()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.missing_list"><code class="docutils literal notranslate"><span class="pre">missing_list()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.start_project"><code class="docutils literal notranslate"><span class="pre">start_project()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.create_settings"><code class="docutils literal notranslate"><span class="pre">create_settings()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.run_spider"><code class="docutils literal notranslate"><span class="pre">run_spider()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.csv_cleaning"><code class="docutils literal notranslate"><span class="pre">csv_cleaning()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.kwd_creation"><code class="docutils literal notranslate"><span class="pre">kwd_creation()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.stragglers.kwd_upload"><code class="docutils literal notranslate"><span class="pre">kwd_upload()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.check_for_deleted">Check For Deleted</a><ul>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.check_for_deleted.clean_lists"><code class="docutils literal notranslate"><span class="pre">clean_lists()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.check_for_deleted.db_pack_lst"><code class="docutils literal notranslate"><span class="pre">db_pack_lst()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.check_for_deleted.compare_lsts"><code class="docutils literal notranslate"><span class="pre">compare_lsts()</span></code></a></li>
-<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.check_for_deleted.delete_entries"><code class="docutils literal notranslate"><span class="pre">delete_entries()</span></code></a></li>
 </ul>
 </li>
 </ul>

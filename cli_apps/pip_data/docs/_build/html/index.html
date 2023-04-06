@@ -1,279 +1,161 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Modules" href="modules.html" />
 
-    <!-- Generated with Sphinx 6.1.3 and Furo 2023.03.27 -->
-        <title>NewTags 0.0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    
-    
+<!DOCTYPE html>
 
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
-  
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style></head>
-  <body>
-    
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
-    
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
-</svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
-
-
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="#"><div class="brand">NewTags 0.0.1 documentation</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
-  
-  
-  <span class="sidebar-brand-text">NewTags 0.0.1 documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+    <title>Cli Apps Pip Documentation &#8212; Cli Apps 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mrtools.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <script src="_static/jquery.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tagging Modules" href="tagging.html" /> 
+  </head><body>
+<div class="pageheader">
   <ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
-</ul>
-
+    <!-- <li><a href="#">Home</a></li>
+    <li><a href="usage/installation.html">Get it</a></li>
+    <li><a href="contents.html">Docs</a></li>
+    <li><a href="develop.html">Extend/Develop</a></li> -->
+  </ul>
+  <div>
+    
+    <h1 class="logo"><a href="#">Cli Apps</a></h1>
+    
+  </div>
 </div>
-</div>
 
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          
-<div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
-        </div>
-        <article role="main">
-          <section id="newtags-documentation">
-<h1>NewTags Documentation<a class="headerlink" href="#newtags-documentation" title="Permalink to this heading">#</a></h1>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tagging.html" title="Tagging Modules"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Cli Apps Pip Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cli-apps-pip-documentation">
+<h1>Cli Apps Pip Documentation<a class="headerlink" href="#cli-apps-pip-documentation" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>Getting good quality tags for the <em>cli_apps</em> database is always a problem. Due to its size, it’s not feasible that they’re produced in a non-automated way. In our
-last update, there were more than a hundred new packages in the database, from <em>Pip</em> alone!</p>
-<p>So there’s always a concern on how to turn this application searchable. Quality that, if it’s lacking, defeats its all purpose.</p>
-<p>I’ve been experimenting with different sources of text, that would could be mined for keywords. In the beginning I used the <em>presentation</em> field in <em>Pacman</em>, or the <em>Summary</em> in <em>Pip</em>. But these are very limited bases to go on. Surely a longer, richer text source would yield better results.
-That brought me to the idea of scraping the <em>Github</em> or documentation pages of these packages, in order to gain some more insight. The URL’s are generally available through <em>Pacman</em> and <em>Pip</em>, so that’s not too difficult.
-All this said, this is my current procedure:</p>
-<ol class="arabic">
-<li><p>Gather information. With:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Pip</span> <span class="n">show</span> <span class="o">&lt;</span><span class="n">package_name</span><span class="o">&gt;</span>
-
-<span class="n">sudo</span> <span class="n">Pacman</span> <span class="o">-</span><span class="n">Qi</span> <span class="o">&lt;</span><span class="n">package_name</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</li>
-</ol>
-<p>for <em>Pip’s</em> and <em>Pacman’s</em> packages.</p>
-<ol class="arabic simple" start="2">
-<li><p>From the resulting information, we cull these points:</p></li>
-</ol>
-<p>2.1. Name of Package.</p>
-<p>2.2. Description.</p>
-<p>2.3. URL for documentation.</p>
-<p>With this information, I set about to extract the keywords. For a keyword extractor I’m using <a class="reference external" href="https://github.com/MaartenGr/KeyBERT">Keybert</a>, a simple and minimal keyword tool, with which I’ve been having the best results from of all that I tried.
-I’m also using <a class="reference external" href="https://github.com/seatgeek/thefuzz">Thefuzz</a>, a string matching tool, to weed out very similar results. <em>KeyBERT</em> has, theoritically, the tools to do the same. But when I tried them, the results were very bad. It’s something I’ll have to revisit shortly.
-With all this done, it’s just a matter of uploading to the database and, although I’m much happier than I previously was, there’s still a lot of work to be done in this regard. Probably what’s needed is multi-page thourough scrape of all available pages, so as to have an even bigger base. Maybe use a more beefy model. Something that’ll have to train … I don’t know.</p>
-<p>Still a work in progress!</p>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<p>This is where it’s managed the Pip’s contribution to the <em>Cli Apps</em> database. The idea come about because I was getting tired of not having a clear idea of the command line tools and services in my own computer. Some I installed and forgot, some were installed for something that is not relevant anymore. Others maybe extremely interesting and I wouldn’t know that they’re there … I wanted more visibility. So I started monitoring <a class="reference external" href="https://pip.pypa.io/en/stable/">Pip</a> and <a class="reference external" href="https://wiki.archlinux.org/title/pacman">Pacman</a>, my two main sources of software, to understand what I had installed, what it did amd, most importantly, what I could do with it. I created a database to keep record on this things. It has the following columns:
+1. Name. The name of the package.
+2. Description. A brief description of the package. Usually taken from information given by these two sources.
+3. URL. A link to <em>Github</em> or documentation. One of the things that interests me the most.
+4. Four tag columns. I believe firmly that this thing should be easily searchable.
+As you can see by analyzing these modules, the idea is to automate the databases’ upkeep as much as possible. Updating is autommatic, tagging is autommatic, deleting is autommatic, etc, etc. My interventions with this service should only be to make the occasional query. But, as anyone who tried something like this know, when we try to automate, we garanty that will pass a lot of man hours building this kind of solution!
+Although we’re seeing <em>Pip’s</em> part, there’s another, virtually identical, dedicated to input coming from <em>Pacman</em> and <em>Yay</em>. But, seen one, seen’em all.</p>
 </section>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#module-cli_apps.newtags.yay_newtags.data_manipulation">Data Manipulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.package_lists"><code class="docutils literal notranslate"><span class="pre">package_lists()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.column_lst"><code class="docutils literal notranslate"><span class="pre">column_lst()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.package_comparison"><code class="docutils literal notranslate"><span class="pre">package_comparison()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.upload_new"><code class="docutils literal notranslate"><span class="pre">upload_new()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.adding_lists"><code class="docutils literal notranslate"><span class="pre">adding_lists()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.cleaning_list"><code class="docutils literal notranslate"><span class="pre">cleaning_list()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.data_manipulation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tagging.html">Tagging Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tagging.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tagging.html#tagging-structure">Tagging Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tagging.html#module-cli_apps.pip_data.tags.project_creation">Project Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.project_creation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.project_creation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#module-cli_apps.newtags.yay_newtags.project_creation">Project Creation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tagging.html#module-cli_apps.pip_data.tags.spider_runner">Spider Runner</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#module-cli_apps.newtags.yay_newtags.spider_runner">Spider Runner</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tagging.html#module-cli_apps.pip_data.tags.kwd_creator">Keyword Creator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.pip_data.tags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#module-cli_apps.newtags.yay_newtags.kwd_creator">Keyword Creator</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tagging.html#module-cli_apps.newtags.yay_newtags.kwd_uploader">Keyword Uploader</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tagging.html#cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader"><code class="docutils literal notranslate"><span class="pre">kwd_uploader()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#module-cli_apps.newtags.yay_newtags.kwd_uploader">Keyword Uploader</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader"><code class="docutils literal notranslate"><span class="pre">kwd_uploader()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#module-cli_apps.newtags.yay_newtags.stragglers">Stragglers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.get_missing"><code class="docutils literal notranslate"><span class="pre">get_missing()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.missing_list"><code class="docutils literal notranslate"><span class="pre">missing_list()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.start_project"><code class="docutils literal notranslate"><span class="pre">start_project()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.create_settings"><code class="docutils literal notranslate"><span class="pre">create_settings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.run_spider"><code class="docutils literal notranslate"><span class="pre">run_spider()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.csv_cleaning"><code class="docutils literal notranslate"><span class="pre">csv_cleaning()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.kwd_creation"><code class="docutils literal notranslate"><span class="pre">kwd_creation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.stragglers.kwd_upload"><code class="docutils literal notranslate"><span class="pre">kwd_upload()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pip.html">Pip Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.initiation_scripts">Initiation Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.initiation_scripts.initiation_scripts"><code class="docutils literal notranslate"><span class="pre">initiation_scripts()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#module-cli_apps.newtags.yay_newtags.check_for_deleted">Check For Deleted</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.check_for_deleted.clean_lists"><code class="docutils literal notranslate"><span class="pre">clean_lists()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.check_for_deleted.db_pack_lst"><code class="docutils literal notranslate"><span class="pre">db_pack_lst()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.check_for_deleted.compare_lsts"><code class="docutils literal notranslate"><span class="pre">compare_lsts()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#cli_apps.newtags.yay_newtags.check_for_deleted.delete_entries"><code class="docutils literal notranslate"><span class="pre">delete_entries()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.query_builder">Query Builder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.query_builder.query_builder"><code class="docutils literal notranslate"><span class="pre">query_builder()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.extract_file_info">Extract File Info</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.extract_file_info.extract_file_info"><code class="docutils literal notranslate"><span class="pre">extract_file_info()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.tags.project_creation">Pip’s Project Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.project_creation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.project_creation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.tags.kwd_creator">Pip’s Keyword Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.tags.spider_runner">Pip’s Spider Runner</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.tags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.db_upld">Database Upload</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.db_upld.kwd_collector"><code class="docutils literal notranslate"><span class="pre">kwd_collector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.db_upld.db_upload"><code class="docutils literal notranslate"><span class="pre">db_upload()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.delete">Delete</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.delete.delete"><code class="docutils literal notranslate"><span class="pre">delete()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.cron">Cron</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.cron.cron"><code class="docutils literal notranslate"><span class="pre">cron()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip.html#module-cli_apps.pip_data.app_reminder">App Reminder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip.html#cli_apps.pip_data.app_reminder.app_reminder"><code class="docutils literal notranslate"><span class="pre">app_reminder()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -281,70 +163,79 @@ With all this done, it’s just a matter of uploading to the database and, altho
 </ul>
 </div>
 </section>
+<section id="external-dependencies">
+<h2>External Dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/keybert/">KeyBERT</a></p></li>
+<li><p><a class="reference external" href="https://github.com/seatgeek/thefuzz">Thefuzz</a></p></li>
+</ul>
+</section>
 </section>
 
-        </article>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
       </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="modules.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Modules</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2023, mclds
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">NewTags Documentation</a><ul>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cli Apps Pip Documentation</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#external-dependencies">External Dependencies</a></li>
 </ul>
 </li>
 </ul>
 
-          </div>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tagging.html"
+                          title="next chapter">Tagging Modules</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
-      
-      
-    </aside>
-  </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    </body>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tagging.html" title="Tagging Modules"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Cli Apps Pip Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, mclds.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
 </html>

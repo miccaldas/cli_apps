@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Tagging Modules &#8212; Cli Apps 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mrtools.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <script src="_static/jquery.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pip Modules" href="pip.html" />
+    <link rel="prev" title="Cli Apps Pip Documentation" href="index.html" /> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <!-- <li><a href="index.html">Home</a></li>
+    <li><a href="usage/installation.html">Get it</a></li>
+    <li><a href="contents.html">Docs</a></li>
+    <li><a href="develop.html">Extend/Develop</a></li> -->
+  </ul>
+  <div>
+    
+    <h1 class="logo"><a href="index.html">Cli Apps</a></h1>
+    
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pip.html" title="Pip Modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Cli Apps Pip Documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tagging Modules</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tagging-modules">
+<h1>Tagging Modules<a class="headerlink" href="#tagging-modules" title="Permalink to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<p>Getting good quality tags for the <em>cli_apps</em> database is always a problem. Due to its size, it’s not feasible that they’re produced in a non-automated way. In our
+last update, there were more than a hundred new packages in the database, from <em>Pip</em> alone!</p>
+<p>So there’s always a concern on how to turn this application searchable. Quality that, if it’s lacking, defeats its all purpose.</p>
+<p>I’ve been experimenting with different sources of text, that would could be mined for keywords. In the beginning I used the <em>presentation</em> field in <em>Pacman</em>, or the <em>Summary</em> in <em>Pip</em>. But these are very limited bases to go on. Surely a longer, richer text source would yield better results.
+That brought me to the idea of scraping the <em>Github</em> or documentation pages of these packages, in order to gain some more insight. The URL’s are generally available through <em>Pacman</em> and <em>Pip</em>, so that’s not too difficult.
+All this said, this is my current procedure:</p>
+<ol class="arabic">
+<li><p>Gather information. With:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Pip</span> <span class="n">show</span> <span class="o">&lt;</span><span class="n">package_name</span><span class="o">&gt;</span>
+
+<span class="n">sudo</span> <span class="n">Pacman</span> <span class="o">-</span><span class="n">Qi</span> <span class="o">&lt;</span><span class="n">package_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>for <em>Pip’s</em> and <em>Pacman’s</em> packages.</p>
+<ol class="arabic simple" start="2">
+<li><p>From the resulting information, we cull these points:</p></li>
+</ol>
+<p>2.1. Name of Package.</p>
+<p>2.2. Description.</p>
+<p>2.3. URL for documentation.</p>
+<p>With this information, I set about to extract the keywords. For a keyword extractor I’m using <a class="reference external" href="https://github.com/MaartenGr/KeyBERT">Keybert</a>, a simple and minimal keyword tool, with which I’ve been having the best results from of all that I tried.
+I’m also using <a class="reference external" href="https://github.com/seatgeek/thefuzz">Thefuzz</a>, a string matching tool, to weed out very similar results. <em>KeyBERT</em> has, theoritically, the tools to do the same. But when I tried them, the results were very bad. It’s something I’ll have to revisit shortly.
+With all this done, it’s just a matter of uploading to the database and, although I’m much happier than I previously was, there’s still a lot of work to be done in this regard. Probably what’s needed is multi-page thourough scrape of all available pages, so as to have an even bigger base. Maybe use a more beefy model. Something that’ll have to train … I don’t know.</p>
+<p>Still a work in progress!</p>
+</section>
+<section id="tagging-structure">
+<h2>Tagging Structure<a class="headerlink" href="#tagging-structure" title="Permalink to this heading">¶</a></h2>
+<img alt="_images/workflow.png" src="_images/workflow.png" />
+</section>
+<section id="module-cli_apps.pip_data.tags.project_creation">
+<span id="project-creation"></span><h2>Project Creation<a class="headerlink" href="#module-cli_apps.pip_data.tags.project_creation" title="Permalink to this heading">¶</a></h2>
+<p>Creates the <em>Pip’s Scrapy</em> project folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.project_creation">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">project_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#project_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.project_creation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project Creation for Pip packages.
+Runs <em>Scrapy’s</em> command to start a project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – <em>scrapy startproject pip_project</em>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.settings_definition">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">settings_definition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#settings_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.settings_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings Definition for Pip packages.
+Defines the following options:</p>
+<ol class="arabic simple">
+<li><p>FEED_EXPORT_FIELDS.  Title of the csv columns.</p></li>
+<li><p>FEED_FORMAT. <em>csv</em>.</p></li>
+<li><p>FEED_URI.  <em>results.csv</em></p></li>
+<li><p>RETRY_TIMES   Number of retries when there’s a connection error.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The feeds definitions will be deprecated in the near future.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.spider">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">spider</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#spider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.spider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spider creation for pip packages.
+For each entry in our packages list is built a spider, that’llhave its own file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>srch_title</strong> (<em>str</em>) – Css query for <em>&lt;h1&gt;</em> elements.</p></li>
+<li><p><strong>enphasys</strong> (<em>str</em>) – Css query for &lt;em&gt; tags. Usually sub-titles.</p></li>
+<li><p><strong>srch_text</strong> (<em>str</em>) – Css query for all <em>&lt;p&gt;</em> tags.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the package. Added so we can identify the lines in the csv.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.name_change">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">name_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#name_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.name_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name change for Pip packages.
+Some of these names have dashes and dots on them, and Scrapy
+doesn’t accept them on its spider’s/project’s names.
+To comply, but not forget original name, we add a chenged
+version, with underline, as first element of the tuple.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This change turned out to be useless, since we decided to
+create just one project, with all the spiders inside it.
+I leave it here for documentation purposes.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.project_creation.xorg_urls">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">xorg_urls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/project_creation.html#xorg_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.project_creation.xorg_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Xorg_urls for Pip packages.
+All Xorg packages had as URL, a generic <em>Freedesktop</em> site
+url, which won’t bring much information. We replace them
+with url’s to their <em>Github</em> pages.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.tags.spider_runner">
+<span id="spider-runner"></span><h2>Spider Runner<a class="headerlink" href="#module-cli_apps.pip_data.tags.spider_runner" title="Permalink to this heading">¶</a></h2>
+<p>Enters the Scrapy project folder and runs its spiders.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.spider_runner.spider_runner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.spider_runner.</span></span><span class="sig-name descname"><span class="pre">spider_runner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spiders_lst</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/spider_runner.html#spider_runner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.spider_runner.spider_runner" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – <em>scrapy crawl &lt;sipder_name&gt;</em></p>
+</dd>
+</dl>
+<p>We use multiprocessing to speed up the process.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.pip_data.tags.kwd_creator">
+<span id="keyword-creator"></span><h2>Keyword Creator<a class="headerlink" href="#module-cli_apps.pip_data.tags.kwd_creator" title="Permalink to this heading">¶</a></h2>
+<p>Keyword creator for Pip packages.
+Cleans csv file data and runs KeyBERT, to find keywords for each package.
+Stores them in a file in the <em>kwds</em> folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.kwd_creator.csv_cleaner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">csv_cleaner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/kwd_creator.html#csv_cleaner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.kwd_creator.csv_cleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Csv cleaner for Pip packages.
+We remove column names and also the exccess whitespaces from the scraped content.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.pip_data.tags.kwd_creator.kwd_creator">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.pip_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">kwd_creator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/pip_data/tags/kwd_creator.html#kwd_creator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.pip_data.tags.kwd_creator.kwd_creator" title="Permalink to this definition">¶</a></dt>
+<dd><p>We run KeyBERT through the csv results.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.newtags.yay_newtags.kwd_uploader">
+<span id="keyword-uploader"></span><h2>Keyword Uploader<a class="headerlink" href="#module-cli_apps.newtags.yay_newtags.kwd_uploader" title="Permalink to this heading">¶</a></h2>
+<p>Prepare and send keyword data to the <em>cli_apps</em> database.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.newtags.yay_newtags.kwd_uploader.</span></span><span class="sig-name descname"><span class="pre">kwd_uploader</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/newtags/yay_newtags/kwd_uploader.html#kwd_uploader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader" title="Permalink to this definition">¶</a></dt>
+<dd><p>We collect the keywords and upload them to the database.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Tagging Modules</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#tagging-structure">Tagging Structure</a></li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.project_creation">Project Creation</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.project_creation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.spider_runner">Spider Runner</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.pip_data.tags.kwd_creator">Keyword Creator</a><ul>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.pip_data.tags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.newtags.yay_newtags.kwd_uploader">Keyword Uploader</a><ul>
+<li><a class="reference internal" href="#cli_apps.newtags.yay_newtags.kwd_uploader.kwd_uploader"><code class="docutils literal notranslate"><span class="pre">kwd_uploader()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Cli Apps Pip Documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pip.html"
+                          title="next chapter">Pip Modules</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tagging.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pip.html" title="Pip Modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Cli Apps Pip Documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tagging Modules</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, mclds.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

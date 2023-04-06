@@ -1,4 +1,5 @@
 """
+Keyword creator for Pip packages.
 Cleans csv file data and runs KeyBERT, to find keywords for each package.
 Stores them in a file in the *kwds* folder.
 """
@@ -24,11 +25,11 @@ snoop.install(watch_extras=[type_watch])
 @snoop
 def csv_cleaner():
     """
-    The column names were repeated for each entry, we remove them here.
-    We remove also the exccess whitespaces from the scraped content.
+    Csv cleaner for Pip packages.
+    We remove column names and also the exccess whitespaces from the scraped content.
     """
     cwd = os.getcwd()
-    pth = "/home/mic/python/cli_apps/cli_apps/pip_data/yay_project"
+    pth = "/home/mic/python/cli_apps/cli_apps/pip_data/pip_project"
 
     lines = []
     with open(f"{pth}/results.csv", "r") as f:

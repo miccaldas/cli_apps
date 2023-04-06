@@ -6,13 +6,15 @@ import os
 import subprocess
 
 import click
-import snoop
+
+# import snoop
 from crontab import CronTab
 
 from cron import cron
-from db_upld import db_upload
+from db_upld import db_upload, kwd_collector
 from delete import delete
 from extract_file_info import extract_file_info
+from initiation_scripts import initiation_scripts
 from query_builder import query_builder
 from tags.kwd_creator import csv_cleaner, kwd_creator
 from tags.project_creation import (
@@ -40,14 +42,14 @@ def change_name():
     processed.
     """
     cwd = os.getcwd()
-    # os.rename(f"{cwd}/lists/names_linux.txt", f"{cwd}/lists/old_names_linux.txt")
+    os.rename(f"{cwd}/lists/names_linux.txt", f"{cwd}/lists/old_names_linux.txt")
 
 
 if __name__ == "__main__":
     change_name()
 
 
-@snoop
+# @snoop
 def run():
     """
     We call the initiation script to get a
@@ -63,38 +65,43 @@ def run():
     and, as is parsing them, it will upload them.
     """
 
-    cmd0 = "/home/mic/python/cli_apps/cli_apps/initiation_scripts.sh"
-    # subprocess.run(cmd0, shell=True)
+    initiation_scripts()
 
-    # query_builder()
+    # As we're using multiprocessing in 'query_builder', I can't call it from another module,
+    # as it expects a list as an argument, and that list must be given by code under the
+    # function but before setting the pool. This is a workaround.
+    cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/query_builder.py"
+    subprocess.run(cmd, shell=True)
 
-    # extract_file_info()
+    extract_file_info()
 
-    # project_creation()
+    project_creation()
 
-    # settings_definition()
+    settings_definition()
 
-    # xorg_urls()
+    xorg_urls()
 
-    # name_change()
+    name_change()
 
-    # spider()
+    spider()
 
     # As we're using multiprocessing in 'spider_runner', I can't call it from another module,
     # as it expects a list as an argument, and that list must be given by code under the
-    # function end and before setting the pool. This is a workaround.
-    # cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/tags/spider_runner.py"
-    # subprocess.run(cmd, shell=True)
+    # function but before setting the pool. This is a workaround.
+    cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/tags/spider_runner.py"
+    subprocess.run(cmd, shell=True)
 
-    # csv_cleaner()
+    csv_cleaner()
 
     kwd_creator()
 
-    # db_upload()
+    kwd_collector()
 
-    # delete()
+    db_upload()
 
-    # cron()
+    delete()
+
+    cron()
 
 
 if __name__ == "__main__":

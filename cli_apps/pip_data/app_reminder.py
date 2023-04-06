@@ -20,18 +20,13 @@ def app_reminder():
         cur.execute(query)
         records = cur.fetchall()
     except Error as e:
-        err_msg = "Error while connecting to db", e
         print("Error while connecting to db", e)
-        if err_msg:
-            return query, err_msg
     finally:
         if conn:
             conn.close()
 
     url = records[0][2]
     webbrowser.open_new_tab(url)
-
-    return query
 
 
 if __name__ == "__main__":

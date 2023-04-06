@@ -1,5 +1,5 @@
 [Unit]
-Description=Updating the scraped Pypi list.
+Description=Updating the pip list.
 Requires=pypi_updt.service
 
 [Timer]
