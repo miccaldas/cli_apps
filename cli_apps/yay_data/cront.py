@@ -1,6 +1,7 @@
 """Creates cron notification saying that yay update was ran."""
 import requests
-#import snoop
+
+# import snoop
 from crontab import CronTab
 
 

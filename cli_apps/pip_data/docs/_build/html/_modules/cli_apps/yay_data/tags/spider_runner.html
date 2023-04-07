@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cli_apps.pip_data.tags.spider_runner &#8212; Cli Apps 0.0.1 documentation</title>
+    <title>cli_apps.yay_data.tags.spider_runner &#8212; Cli Apps 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mrtools.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
@@ -53,7 +53,7 @@
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" accesskey="U">Module code</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">cli_apps.pip_data.tags.spider_runner</a></li> 
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.tags.spider_runner</a></li> 
       </ul>
     </div>  
 
@@ -62,7 +62,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>Source code for cli_apps.pip_data.tags.spider_runner</h1><div class="highlight"><pre>
+  <h1>Source code for cli_apps.yay_data.tags.spider_runner</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Enters the Scrapy project folder and runs its spiders.</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -75,26 +75,29 @@
 <span class="kn">from</span> <span class="nn">snoop</span> <span class="kn">import</span> <span class="n">pp</span>
 
 
-<span class="k">def</span> <span class="nf">type_watch</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s2">&quot;type(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="c1"># def type_watch(source, value):</span>
+<span class="c1">#     return &quot;type({})&quot;.format(source), type(value)</span>
 
 
-<span class="n">snoop</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">watch_extras</span><span class="o">=</span><span class="p">[</span><span class="n">type_watch</span><span class="p">])</span>
+<span class="c1"># snoop.install(watch_extras=[type_watch])</span>
 
 
-<div class="viewcode-block" id="spider_runner"><a class="viewcode-back" href="../../../../tagging.html#cli_apps.pip_data.tags.spider_runner.spider_runner">[docs]</a><span class="nd">@snoop</span>
+<div class="viewcode-block" id="spider_runner"><a class="viewcode-back" href="../../../../yay.html#cli_apps.yay_data.tags.spider_runner.spider_runner">[docs]</a><span class="nd">@snoop</span>
 <span class="k">def</span> <span class="nf">spider_runner</span><span class="p">(</span><span class="n">spiders_lst</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :var str cmd: *scrapy crawl &lt;sipder_name&gt;*\n</span>
+<span class="sd">    .. code-block::</span>
+
+<span class="sd">        scrapy crawl &lt;sipder_name&gt;</span>
+
 <span class="sd">    We use multiprocessing to speed up the process.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">tags</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/pip_data/tags&quot;</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags&quot;</span>
     <span class="n">cmd</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/home/mic/.local/bin/scrapy crawl </span><span class="si">{</span><span class="n">spiders_lst</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/pip_project/&quot;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/yay_project/&quot;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">spiders_fldr</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/pip_data/tags/pip_project/pip_project/spiders&quot;</span>
+    <span class="n">spiders_fldr</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags/yay_project/yay_project/spiders&quot;</span>
     <span class="n">spiderslst</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">spiders_fldr</span><span class="p">)</span>
     <span class="n">spiders_lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">spiderslst</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="s2">&quot;__init__.py&quot;</span><span class="p">]</span>
     <span class="k">with</span> <span class="n">Pool</span><span class="p">()</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
@@ -132,7 +135,7 @@
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">cli_apps.pip_data.tags.spider_runner</a></li> 
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.tags.spider_runner</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

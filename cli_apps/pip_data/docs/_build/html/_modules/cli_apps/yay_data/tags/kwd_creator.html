@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cli_apps.pip_data.tags.kwd_creator &#8212; Cli Apps 0.0.1 documentation</title>
+    <title>cli_apps.yay_data.tags.kwd_creator &#8212; Cli Apps 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mrtools.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
@@ -53,7 +53,7 @@
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" accesskey="U">Module code</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">cli_apps.pip_data.tags.kwd_creator</a></li> 
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.tags.kwd_creator</a></li> 
       </ul>
     </div>  
 
@@ -62,11 +62,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>Source code for cli_apps.pip_data.tags.kwd_creator</h1><div class="highlight"><pre>
+  <h1>Source code for cli_apps.yay_data.tags.kwd_creator</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Keyword creator for Pip packages.</span>
+<span class="sd">Keyword creator for *Arch* packages.</span>
 <span class="sd">Cleans csv file data and runs KeyBERT, to find keywords for each package.</span>
-<span class="sd">Stores them in a file in the *kwds* folder.</span>
+<span class="sd">Stores them in a file in the *kws* folder.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -87,16 +87,17 @@
 <span class="n">snoop</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">watch_extras</span><span class="o">=</span><span class="p">[</span><span class="n">type_watch</span><span class="p">])</span>
 
 
-<div class="viewcode-block" id="csv_cleaner"><a class="viewcode-back" href="../../../../tagging.html#cli_apps.pip_data.tags.kwd_creator.csv_cleaner">[docs]</a><span class="nd">@snoop</span>
+<div class="viewcode-block" id="csv_cleaner"><a class="viewcode-back" href="../../../../yay.html#cli_apps.yay_data.tags.kwd_creator.csv_cleaner">[docs]</a><span class="nd">@snoop</span>
 <span class="k">def</span> <span class="nf">csv_cleaner</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Csv cleaner for Pip packages.</span>
-<span class="sd">    We remove column names and also the exccess whitespaces from the scraped content.</span>
+<span class="sd">    Csv cleaner for *Arch* packages.</span>
+<span class="sd">    We remove column names and the exccess whitespaces from the scraped content.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">pth</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/pip_data/tags/pip_project&quot;</span>
+    <span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags&quot;</span>
 
     <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pth</span><span class="si">}</span><span class="s2">/results.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/yay_project/results.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
             <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
@@ -107,7 +108,7 @@
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">)):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\s+&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">nospaces</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">content</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">])</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/pip_data/tags/nospaces.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/nospaces.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">nospaces</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></div>
 
 
@@ -115,12 +116,12 @@
     <span class="n">csv_cleaner</span><span class="p">()</span>
 
 
-<div class="viewcode-block" id="kwd_creator"><a class="viewcode-back" href="../../../../tagging.html#cli_apps.pip_data.tags.kwd_creator.kwd_creator">[docs]</a><span class="nd">@snoop</span>
+<div class="viewcode-block" id="kwd_creator"><a class="viewcode-back" href="../../../../yay.html#cli_apps.yay_data.tags.kwd_creator.kwd_creator">[docs]</a><span class="nd">@snoop</span>
 <span class="k">def</span> <span class="nf">kwd_creator</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    We run KeyBERT through the csv results.</span>
+<span class="sd">    We run KeyBERT through *nospaces.bin*.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">tags</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/pip_data/tags&quot;</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags&quot;</span>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/nospaces.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">csvcontent</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -128,7 +129,7 @@
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">csvcontent</span><span class="p">:</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">text</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">badwords</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;codespace&quot;</span><span class="p">,</span> <span class="s2">&quot;codespaces&quot;</span><span class="p">]</span>
+        <span class="n">badwords</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;codespace&quot;</span><span class="p">,</span> <span class="s2">&quot;codespaces&quot;</span><span class="p">,</span> <span class="s2">&quot;svn&quot;</span><span class="p">,</span> <span class="s2">&quot;pypi&quot;</span><span class="p">]</span>
         <span class="n">kw_model</span> <span class="o">=</span> <span class="n">KeyBERT</span><span class="p">()</span>
         <span class="n">keys</span> <span class="o">=</span> <span class="n">kw_model</span><span class="o">.</span><span class="n">extract_keywords</span><span class="p">(</span>
             <span class="n">text</span><span class="p">,</span>
@@ -188,7 +189,7 @@
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">cli_apps.pip_data.tags.kwd_creator</a></li> 
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.tags.kwd_creator</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

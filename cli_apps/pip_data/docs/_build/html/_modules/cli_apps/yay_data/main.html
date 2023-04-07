@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cli_apps.yay_data.main &#8212; Cli Apps 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mrtools.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/hoverxref.js"></script>
+    <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../../../_static/js/micromodal.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <!-- <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../../usage/installation.html">Get it</a></li>
+    <li><a href="../../../contents.html">Docs</a></li>
+    <li><a href="../../../develop.html">Extend/Develop</a></li> -->
+  </ul>
+  <div>
+    
+    <h1 class="logo"><a href="../../../index.html">Cli Apps</a></h1>
+    
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.main</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for cli_apps.yay_data.main</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Main module. Calls all other modules.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Here so __pycache__ folders aren&#39;t created.</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">dont_write_bytecode</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="kn">import</span> <span class="nn">snoop</span>
+<span class="kn">from</span> <span class="nn">cli_apps.yay_data.cront</span> <span class="kn">import</span> <span class="n">crons</span>
+<span class="kn">from</span> <span class="nn">cli_apps.yay_data.db_upld</span> <span class="kn">import</span> <span class="n">db_upload</span><span class="p">,</span> <span class="n">kwd_collector</span>
+<span class="kn">from</span> <span class="nn">cli_apps.yay_data.delete</span> <span class="kn">import</span> <span class="n">delete</span>
+<span class="kn">from</span> <span class="nn">cli_apps.yay_data.lists</span> <span class="kn">import</span> <span class="n">Lists</span>
+<span class="kn">from</span> <span class="nn">cli_apps.yay_data.tags.kwd_creator</span> <span class="kn">import</span> <span class="n">csv_cleaner</span><span class="p">,</span> <span class="n">kwd_creator</span>
+<span class="kn">from</span> <span class="nn">cli_apps.yay_data.tags.project_creation</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">alternative_urls</span><span class="p">,</span>
+    <span class="n">name_change</span><span class="p">,</span>
+    <span class="n">null_entries</span><span class="p">,</span>
+    <span class="n">project_creation</span><span class="p">,</span>
+    <span class="n">settings_definition</span><span class="p">,</span>
+    <span class="n">spider</span><span class="p">,</span>
+    <span class="n">xorg_urls</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">snoop</span> <span class="kn">import</span> <span class="n">pp</span>
+
+
+<span class="k">def</span> <span class="nf">type_watch</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;type(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+
+<span class="n">snoop</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">watch_extras</span><span class="o">=</span><span class="p">[</span><span class="n">type_watch</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../yay.html#cli_apps.yay_data.main.main">[docs]</a><span class="nd">@snoop</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    We call the other modules, in order, to update the database.</span>
+<span class="sd">    The program runs as much as needed to ascertain two things:\n</span>
+<span class="sd">    1. Is there new packages?</span>
+<span class="sd">    2.  Is there packages in the db that need tag values?</span>
+<span class="sd">        This questions are answered in the *yay_names* method and in</span>
+<span class="sd">        the *null_entries* function, respectively. When the latter has</span>
+<span class="sd">        run, we do a check to see if one of them created any output.</span>
+<span class="sd">        We check this by seeing if the *bin* documents they create are</span>
+<span class="sd">        not empty. If they aren&#39;t, the other modules are ran. If not, only</span>
+<span class="sd">        the *delete* module will run.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">lsts</span> <span class="o">=</span> <span class="n">Lists</span><span class="p">(</span>
+        <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/lists&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">lsts</span><span class="o">.</span><span class="n">yay_lst</span><span class="p">()</span>
+    <span class="n">lsts</span><span class="o">.</span><span class="n">db_lst</span><span class="p">()</span>
+    <span class="n">lsts</span><span class="o">.</span><span class="n">yay_names</span><span class="p">()</span>
+
+    <span class="n">project_creation</span><span class="p">()</span>
+    <span class="n">settings_definition</span><span class="p">()</span>
+    <span class="n">null_entries</span><span class="p">()</span>
+
+    <span class="n">yaydata</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data&quot;</span><span class="p">)</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/newnames.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">newnames</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span>
+        <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags/newestnames.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span>
+    <span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">newestnames</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">newnames</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">newestnames</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="n">xorg_urls</span><span class="p">()</span>
+        <span class="n">alternative_urls</span><span class="p">()</span>
+        <span class="n">name_change</span><span class="p">()</span>
+        <span class="n">spider</span><span class="p">()</span>
+        <span class="c1"># The module &#39;spider_runner&#39; has multiprocessing on and can&#39;t be called as the</span>
+        <span class="c1"># other modules. This is a work-around.</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/usr/bin/python </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">/tags/spider_runner.py&quot;</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">csv_cleaner</span><span class="p">()</span>
+        <span class="n">kwd_creator</span><span class="p">()</span>
+        <span class="n">kwd_collector</span><span class="p">()</span>
+        <span class="n">db_upload</span><span class="p">()</span>
+        <span class="n">crons</span><span class="p">()</span>
+    <span class="n">delete</span><span class="p">()</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.main</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, mclds.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

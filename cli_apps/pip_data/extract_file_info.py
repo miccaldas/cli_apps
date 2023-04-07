@@ -30,29 +30,30 @@ def extract_file_info():
     texts = f"{cwd}/package_files/"
     pckg_files = os.listdir(texts)
 
-    for file in pckg_files:
-        data = []
-        with open(f"{texts}{file}", "r") as f:
-            content = f.readlines()
-        for line in content:
-            if line.startswith("Name: "):
-                nmln = line[6:].strip()
-                data.append(nmln)
-            if line.startswith("Summary: "):
-                if len(line) > 11:
-                    smln = line[9:].strip()
-                else:
-                    smln = "NA"
-                data.append(smln)
-            if line.startswith("Home-page: "):
-                if len(line) > 12:
-                    hpln = line[11:].strip()
-                else:
-                    hpln = "NA"
-                data.append(hpln)
-        with open(f"{results}/{file}", "w") as v:
-            for d in data:
-                v.write(f"{d}\n")
+    if pckg_files != []:
+        for file in pckg_files:
+            data = []
+            with open(f"{texts}{file}", "r") as f:
+                content = f.readlines()
+            for line in content:
+                if line.startswith("Name: "):
+                    nmln = line[6:].strip()
+                    data.append(nmln)
+                if line.startswith("Summary: "):
+                    if len(line) > 11:
+                        smln = line[9:].strip()
+                    else:
+                        smln = "NA"
+                    data.append(smln)
+                if line.startswith("Home-page: "):
+                    if len(line) > 12:
+                        hpln = line[11:].strip()
+                    else:
+                        hpln = "NA"
+                    data.append(hpln)
+            with open(f"{results}/{file}", "w") as v:
+                for d in data:
+                    v.write(f"{d}\n")
 
 
 if __name__ == "__main__":

@@ -26,7 +26,6 @@ def delete():
     lists, with the exception of
     'names_linux.txt', and all *bin* files.
     """
-    cwd = os.getcwd()
     pip = "/home/mic/python/cli_apps/cli_apps/pip_data"
     results = f"{pip}/results"
     packs = f"{pip}/package_files"
@@ -34,31 +33,23 @@ def delete():
 
     fldrs = [results, packs, kws]
     for fld in fldrs:
-        paths = [os.path.join(fld, file) for file in os.listdir(fld)]
-        for path in paths:
-            os.remove(path)
+        if os.listdir(fld) != []:
+            paths = [os.path.join(fld, file) for file in os.listdir(fld)]
+            for path in paths:
+                os.remove(path)
 
-    newname = f"{pip}/tags/newname.bin"
-    if newname:
-        os.remove(newname)
-    newurls = f"{pip}/tags/newurls.bin"
-    if newurls:
-        os.remove(newurls)
-    nospaces = f"{pip}/tags/nospaces.bin"
-    if nospaces:
-        os.remove(nospaces)
-    kwdlst = f"{pip}/kwdlst.bin"
-    if kwdlst:
-        os.remove(kwdlst)
-    first_pip = f"{pip}/lists/first_pip.txt"
-    if first_pip:
-        os.remove(first_pip)
-    old_names = f"{pip}/lists/old_names_linux.txt"
-    if old_names:
-        os.remove(old_names)
+    files = os.listdir(f"{pip}/tags")
+    for file in files:
+        if file.endswith(".bin"):
+            os.remove(f"{pip}/tags/{file}")
+        if file == "pip_project":
+            cmd = f"/usr/bin/trash-put {pip}/tags/pip_project"
+            subprocess.run(cmd, shell=True)
 
-    cmd = f"/usr/bin/trash-put {pip}/pip_project"
-    subprocess.run(cmd, shell=True)
+    lists = os.listdir(f"{pip}/lists")
+    for lst in lists:
+        if lst != "names_linux.txt":
+            os.remove(f"{pip}/lists/{lst}")
 
 
 if __name__ == "__main__":

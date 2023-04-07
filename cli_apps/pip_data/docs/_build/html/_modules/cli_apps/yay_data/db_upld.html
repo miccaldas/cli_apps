@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cli_apps.yay_data.db_upld &#8212; Cli Apps 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mrtools.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/hoverxref.js"></script>
+    <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../../../_static/js/micromodal.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <!-- <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../../usage/installation.html">Get it</a></li>
+    <li><a href="../../../contents.html">Docs</a></li>
+    <li><a href="../../../develop.html">Extend/Develop</a></li> -->
+  </ul>
+  <div>
+    
+    <h1 class="logo"><a href="../../../index.html">Cli Apps</a></h1>
+    
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.db_upld</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for cli_apps.yay_data.db_upld</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">We&#39;ll read the files in *results* and turn it into a list of tuples.</span>
+<span class="sd">We&#39;ll collect three keyword results per package, add it to *results*</span>
+<span class="sd">and send it to a MySQL database.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="kn">import</span> <span class="nn">snoop</span>
+<span class="kn">from</span> <span class="nn">mysql.connector</span> <span class="kn">import</span> <span class="n">Error</span><span class="p">,</span> <span class="n">connect</span>
+<span class="kn">from</span> <span class="nn">snoop</span> <span class="kn">import</span> <span class="n">pp</span>
+
+
+<span class="k">def</span> <span class="nf">type_watch</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;type(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+
+<span class="n">snoop</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">watch_extras</span><span class="o">=</span><span class="p">[</span><span class="n">type_watch</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="kwd_collector"><a class="viewcode-back" href="../../../yay.html#cli_apps.yay_data.db_upld.kwd_collector">[docs]</a><span class="nd">@snoop</span>
+<span class="k">def</span> <span class="nf">kwd_collector</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    We collect the *Arch* keywords and joint them with the rest of the data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags&quot;</span>
+    <span class="n">fldr</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/kws&quot;</span>
+    <span class="n">fllst</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">fldr</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/newname.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">v</span><span class="p">:</span>
+        <span class="n">newname</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="n">kwdlst</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fllst</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fldr</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">kws</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">kws</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">t2</span> <span class="o">=</span> <span class="n">kws</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">t3</span> <span class="o">=</span> <span class="n">kws</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">t4</span> <span class="o">=</span> <span class="n">kws</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="c1"># Adding the keywords to the description&#39;, &#39;url&#39; data.</span>
+                <span class="c1"># We first select &#39;description&#39; and &#39;url&#39; from the list</span>
+                <span class="c1"># of packages, where the &#39;name&#39; in the list is the same</span>
+                <span class="c1"># as the name in the file being read.</span>
+                <span class="n">nndata</span> <span class="o">=</span> <span class="p">[(</span><span class="n">c</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">d</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">newname</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+                <span class="n">kwdlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="n">t2</span><span class="p">,</span>
+                        <span class="n">t3</span><span class="p">,</span>
+                        <span class="n">t4</span><span class="p">,</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">kws</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">t2</span> <span class="o">=</span> <span class="n">kws</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">t3</span> <span class="o">=</span> <span class="n">kws</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">t4</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span>
+                <span class="n">nndata</span> <span class="o">=</span> <span class="p">[(</span><span class="n">c</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">d</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">newname</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+                <span class="n">kwdlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="n">t2</span><span class="p">,</span>
+                        <span class="n">t3</span><span class="p">,</span>
+                        <span class="n">t4</span><span class="p">,</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">kws</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">t2</span> <span class="o">=</span> <span class="n">kws</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">t3</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span>
+                <span class="n">t4</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span>
+                <span class="n">nndata</span> <span class="o">=</span> <span class="p">[(</span><span class="n">c</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">d</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">newname</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+                <span class="n">kwdlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="n">t2</span><span class="p">,</span>
+                        <span class="n">t3</span><span class="p">,</span>
+                        <span class="n">t4</span><span class="p">,</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">kws</span> <span class="o">==</span> <span class="p">[]:</span>
+                <span class="n">t2</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span>
+                <span class="n">t3</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span>
+                <span class="n">t4</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span>
+                <span class="n">nndata</span> <span class="o">=</span> <span class="p">[(</span><span class="n">c</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">d</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">newname</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+                <span class="n">kwdlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nndata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="n">t2</span><span class="p">,</span>
+                        <span class="n">t3</span><span class="p">,</span>
+                        <span class="n">t4</span><span class="p">,</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/kwdlst.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">kwdlst</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">kwd_collector</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="db_upload"><a class="viewcode-back" href="../../../yay.html#cli_apps.yay_data.db_upld.db_upload">[docs]</a><span class="nd">@snoop</span>
+<span class="k">def</span> <span class="nf">db_upload</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    We&#39;ll iterate through the *kws* files, add them to the *Arch* data,</span>
+<span class="sd">    clean the results for *MySQL*, and upload the new entries to *cli_apps*.\n</span>
+<span class="sd">    .. code-block:: sql</span>
+
+<span class="sd">        INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4) VALUES (%s, %s, %s, %s, %s, %s, %s)</span>
+
+<span class="sd">    Then we&#39;ll upload the entries that were already in the db but lacked tag values.\n</span>
+<span class="sd">    .. code-block:: sql</span>
+
+<span class="sd">        UPDATE cli_apps SET t2 = %s, t3 = %s, t4 = %s WHERE name = %s</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">tags</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/tags&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/kwdlst.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">kwdlst</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/yay_data/newnames.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">oldnames</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+    <span class="c1"># The &#39;kwdlst.bin&#39; file has both the new entries and the ones that only lacked tags.</span>
+    <span class="c1"># Because they will have to be uploaded with different queries, we remove the new</span>
+    <span class="c1"># entries from &#39;kwdlst.bin&#39; and put them in a new list.</span>
+    <span class="n">newnames</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">oldnames</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kwdlst</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">oldnames</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="n">kwdlst</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+                <span class="n">newnames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kwdlst</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                <span class="n">kwdlst</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+    <span class="c1"># Upload for the new entries.</span>
+    <span class="k">if</span> <span class="n">newnames</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">new</span> <span class="ow">in</span> <span class="n">newnames</span><span class="p">:</span>
+                <span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="n">new</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">6</span><span class="p">]]</span>
+                <span class="n">conn</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;mic&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;xxxx&quot;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s2">&quot;cli_apps&quot;</span><span class="p">)</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4) VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)&quot;</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">answers</span><span class="p">)</span>
+                <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while connecting to db&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+    <span class="c1"># Upload for the entries who only lacked tags.</span>
+    <span class="k">if</span> <span class="n">kwdlst</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">lst</span> <span class="ow">in</span> <span class="n">kwdlst</span><span class="p">:</span>
+                <span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="n">lst</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">conn</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;mic&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;xxxx&quot;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s2">&quot;cli_apps&quot;</span><span class="p">)</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;UPDATE cli_apps SET t2 = </span><span class="si">%s</span><span class="s2">, t3 = </span><span class="si">%s</span><span class="s2">, t4 = </span><span class="si">%s</span><span class="s2"> WHERE name = </span><span class="si">%s</span><span class="s2">&quot;</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">answers</span><span class="p">)</span>
+                <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while connecting to db&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">db_upload</span><span class="p">()</span>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.db_upld</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, mclds.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

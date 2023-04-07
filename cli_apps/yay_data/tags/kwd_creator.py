@@ -1,7 +1,7 @@
 """
-Keyword creator for Pip packages.
+Keyword creator for *Arch* packages.
 Cleans csv file data and runs KeyBERT, to find keywords for each package.
-Stores them in a file in the *kwds* folder.
+Stores them in a file in the *kws* folder.
 """
 import csv
 import os
@@ -25,13 +25,14 @@ snoop.install(watch_extras=[type_watch])
 @snoop
 def csv_cleaner():
     """
-    Csv cleaner for Pip packages.
-    We remove column names and also the exccess whitespaces from the scraped content.
+    Csv cleaner for *Arch* packages.
+    We remove column names and the exccess whitespaces from the scraped content.
     """
-    pth = "/home/mic/python/cli_apps/cli_apps/pip_data/tags/pip_project"
+    cwd = os.getcwd()
+    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
 
     lines = []
-    with open(f"{pth}/results.csv", "r") as f:
+    with open(f"{tags}/yay_project/results.csv", "r") as f:
         reader = csv.reader(f)
         for line in reader:
             lines.append(line)
@@ -42,7 +43,7 @@ def csv_cleaner():
     for k in range(len(content)):
         x = re.sub("\s+", " ", content[k][1])
         nospaces.append([content[k][0], x])
-    with open("/home/mic/python/cli_apps/cli_apps/pip_data/tags/nospaces.bin", "wb") as t:
+    with open(f"{tags}/nospaces.bin", "wb") as t:
         pickle.dump(nospaces, t)
 
 
@@ -53,9 +54,9 @@ if __name__ == "__main__":
 @snoop
 def kwd_creator():
     """
-    We run KeyBERT through the csv results.
+    We run KeyBERT through *nospaces.bin*.
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
 
     with open(f"{tags}/nospaces.bin", "rb") as f:
         csvcontent = pickle.load(f)
@@ -63,7 +64,7 @@ def kwd_creator():
     for line in csvcontent:
         name = line[0]
         text = line[1]
-        badwords = [f"{name}", f"n{name}", "codespace", "codespaces"]
+        badwords = [f"{name}", f"n{name}", "codespace", "codespaces", "svn", "pypi"]
         kw_model = KeyBERT()
         keys = kw_model.extract_keywords(
             text,

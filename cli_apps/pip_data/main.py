@@ -2,6 +2,11 @@
 Module where we define the tasks
 of the pip update process.
 """
+import sys
+
+# Here so __pycache__ folders aren't created.
+sys.dont_write_bytecode = True
+
 import os
 import subprocess
 
@@ -66,42 +71,32 @@ def run():
     """
 
     initiation_scripts()
-
     # As we're using multiprocessing in 'query_builder', I can't call it from another module,
     # as it expects a list as an argument, and that list must be given by code under the
     # function but before setting the pool. This is a workaround.
     cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/query_builder.py"
     subprocess.run(cmd, shell=True)
-
     extract_file_info()
 
-    project_creation()
-
-    settings_definition()
-
-    xorg_urls()
-
-    name_change()
-
-    spider()
-
-    # As we're using multiprocessing in 'spider_runner', I can't call it from another module,
-    # as it expects a list as an argument, and that list must be given by code under the
-    # function but before setting the pool. This is a workaround.
-    cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/tags/spider_runner.py"
-    subprocess.run(cmd, shell=True)
-
-    csv_cleaner()
-
-    kwd_creator()
-
-    kwd_collector()
-
-    db_upload()
-
+    cwd = os.getcwd()
+    file_res = os.listdir(f"{cwd}/results")
+    if file_res != []:
+        project_creation()
+        settings_definition()
+        xorg_urls()
+        name_change()
+        spider()
+        # As we're using multiprocessing in 'spider_runner', I can't call it from another module,
+        # as it expects a list as an argument, and that list must be given by code under the
+        # function but before setting the pool. This is a workaround.
+        cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/tags/spider_runner.py"
+        subprocess.run(cmd, shell=True)
+        csv_cleaner()
+        kwd_creator()
+        kwd_collector()
+        db_upload()
+        cron()
     delete()
-
-    cron()
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cli_apps.pip_data.initiation_scripts &#8212; Cli Apps 0.0.1 documentation</title>
+    <title>cli_apps.yay_data.delete &#8212; Cli Apps 0.0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mrtools.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
@@ -53,7 +53,7 @@
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">cli_apps.pip_data.initiation_scripts</a></li> 
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.delete</a></li> 
       </ul>
     </div>  
 
@@ -62,18 +62,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>Source code for cli_apps.pip_data.initiation_scripts</h1><div class="highlight"><pre>
+  <h1>Source code for cli_apps.yay_data.delete</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">These are the initial steps in the update process.</span>
-<span class="sd">Its name *_scripts* came from the fact that, originally,</span>
-<span class="sd">these tasks were done by bash scripts. But, as I grew more</span>
-<span class="sd">confident using the unbelievably cumbersome Python&#39;s regex,</span>
-<span class="sd">I finally was able to have all of code in Python.\n</span>
-<span class="sd">The first command ask pip for a list, and the second</span>
-<span class="sd">removes everything except the name.</span>
+<span class="sd">Deletes all transient file and folders from *yay_data*.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">subprocess</span>
 
 <span class="kn">import</span> <span class="nn">snoop</span>
@@ -87,36 +80,36 @@
 <span class="n">snoop</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">watch_extras</span><span class="o">=</span><span class="p">[</span><span class="n">type_watch</span><span class="p">])</span>
 
 
-<div class="viewcode-block" id="initiation_scripts"><a class="viewcode-back" href="../../../pip.html#cli_apps.pip_data.initiation_scripts.initiation_scripts">[docs]</a><span class="nd">@snoop</span>
-<span class="k">def</span> <span class="nf">initiation_scripts</span><span class="p">():</span>
+<div class="viewcode-block" id="delete"><a class="viewcode-back" href="../../../yay.html#cli_apps.yay_data.delete.delete">[docs]</a><span class="nd">@snoop</span>
+<span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    We use a *Pip* command to get the lsit of installed packages::</span>
-
-<span class="sd">        pip list --format freeze</span>
-
-<span class="sd">    Then we create a file with only the packages names, with the help</span>
-<span class="sd">    of some *Python&#39;s* regex.</span>
+<span class="sd">    Deletes all *bin* files, keywords, lists files and the project folder.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/pip_data/lists/first_pip.txt&quot;</span>
-    <span class="n">cmd</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;pip list --format freeze &gt; &#39;</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
-    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="n">lists</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cwd</span><span class="si">}</span><span class="s2">/lists&quot;</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cwd</span><span class="si">}</span><span class="s2">/tags&quot;</span>
 
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">file</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">cwd</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.bin&quot;</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cwd</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;==.*$&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
-        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">lst</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">lists</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lists</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">lst</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/mic/python/cli_apps/cli_apps/pip_data/lists/names_linux.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">tags</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.bin&quot;</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="s2">&quot;yay_project&quot;</span><span class="p">:</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/usr/bin/trash-put </span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="s2">&quot;kws&quot;</span><span class="p">:</span>
+            <span class="n">cmd1</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/usr/bin/trash-put </span><span class="si">{</span><span class="n">tags</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">/*&quot;</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd1</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">initiation_scripts</span><span class="p">()</span>
+    <span class="n">delete</span><span class="p">()</span>
 </pre></div>
 
             <div class="clearer"></div>
@@ -150,7 +143,7 @@
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">cli_apps.pip_data.initiation_scripts</a></li> 
+        <li class="nav-item nav-item-this"><a href="">cli_apps.yay_data.delete</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

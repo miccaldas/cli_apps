@@ -46,8 +46,10 @@ def initiation_scripts():
         lines.append(name)
 
     for o in lines:
-        with open("/home/mic/python/cli_apps/cli_apps/pip_data/lists/names_linux.txt", "a") as f:
-            f.write(f"{o}\n")
+        with open(
+            "/home/mic/python/cli_apps/cli_apps/pip_data/lists/names_linux.txt", "a"
+        ) as f:
+            f.write(f"{o}")
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ import os
 import pickle
 import subprocess
 
-import snoop
+# import snoop
 from mysql.connector import Error, connect
 
 # def type_watch(source, value):
@@ -51,7 +51,7 @@ def kwd_collector():
                 t4 = "NA"
                 kwdlst.append((f"{file}", t2, t3, t4))
 
-    with open("kwdlst.bin", "wb") as f:
+    with open(f"{tags}/kwdlst.bin", "wb") as f:
         pickle.dump(kwdlst, f)
 
 
@@ -70,8 +70,9 @@ def db_upload():
     """
 
     folders = "/home/mic/python/cli_apps/cli_apps/pip_data/results/"
+    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
     paths = [os.path.join(folders, file) for file in os.listdir(folders)]
-    with open("kwdlst.bin", "rb") as f:
+    with open(f"{tags}/kwdlst.bin", "rb") as f:
         kwdlst = pickle.load(f)
 
     for file in paths:
@@ -87,7 +88,7 @@ def db_upload():
                 answers += [k[1].lower()]
                 answers += [k[2].lower()]
                 answers += [k[3].lower()]
-            print(answers)
+
             try:
                 conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
                 cur = conn.cursor()

@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Yay Modules &#8212; Cli Apps 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mrtools.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <script src="_static/jquery.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Pip Modules" href="pip.html" /> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <!-- <li><a href="index.html">Home</a></li>
+    <li><a href="usage/installation.html">Get it</a></li>
+    <li><a href="contents.html">Docs</a></li>
+    <li><a href="develop.html">Extend/Develop</a></li> -->
+  </ul>
+  <div>
+    
+    <h1 class="logo"><a href="index.html">Cli Apps</a></h1>
+    
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pip.html" title="Pip Modules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Yay Modules</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="yay-modules">
+<h1>Yay Modules<a class="headerlink" href="#yay-modules" title="Permalink to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<p>This is the part of the app where we treat <em>Arch’s</em> packages information. It’s a more streamlined version of <em>Pip’s</em>, as we have the benefit of having done it already. The objective is to update <em>Pip’s</em> modules to follow what’s been done in <em>Yay</em>, but not today.
+We’ve done away with the <em>package_folder</em> and <em>results</em> directories, by keeping everything inside lists that encompass all information. It makes for a more tight and manageable codebase.</p>
+</section>
+<section id="module-cli_apps.yay_data.main">
+<span id="main"></span><h2>Main<a class="headerlink" href="#module-cli_apps.yay_data.main" title="Permalink to this heading">¶</a></h2>
+<p>Main module. Calls all other modules.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.main.main">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.main.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/main.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.main.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>We call the other modules, in order, to update the database.
+The program runs as much as needed to ascertain two things:</p>
+<ol class="arabic simple">
+<li><p>Is there new packages?</p></li>
+<li><p>Is there packages in the db that need tag values?
+This questions are answered in the <em>yay_names</em> method and in
+the <em>null_entries</em> function, respectively. When the latter has
+run, we do a check to see if one of them created any output.
+We check this by seeing if the <em>bin</em> documents they create are
+not empty. If they aren’t, the other modules are ran. If not, only
+the <em>delete</em> module will run.</p></li>
+</ol>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.yay_data.lists">
+<span id="lists"></span><h2>Lists<a class="headerlink" href="#module-cli_apps.yay_data.lists" title="Permalink to this heading">¶</a></h2>
+<p>Houses a class created so I can write location information just once.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cli_apps.yay_data.lists.Lists">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.lists.</span></span><span class="sig-name descname"><span class="pre">Lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lists</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/lists.html#Lists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.lists.Lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sources, cleans and prepares the data lists needed to update
+the database with <em>Arch</em> packages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attr str cwd<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Present location.</p>
+</dd>
+<dt class="field-even">Attr str lists<span class="colon">:</span></dt>
+<dd class="field-even"><p>Location of the <em>lists</em> folder.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cli_apps.yay_data.lists.Lists.yay_lst">
+<span class="sig-name descname"><span class="pre">yay_lst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/lists.html#Lists.yay_lst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.lists.Lists.yay_lst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sources and stores in a file, all <em>Arch</em> installed packages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yay</span> <span class="o">-</span><span class="n">Qi</span> <span class="o">&gt;</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">lists</span><span class="p">}</span><span class="o">/</span><span class="n">yay_lst</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cli_apps.yay_data.lists.Lists.db_lst">
+<span class="sig-name descname"><span class="pre">db_lst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/lists.html#Lists.db_lst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.lists.Lists.db_lst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sources, cleans and stores in a file, list of names of packages in the database.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cli_apps</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cli_apps.yay_data.lists.Lists.yay_names">
+<span class="sig-name descname"><span class="pre">yay_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/lists.html#Lists.yay_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.lists.Lists.yay_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans and compares the lists of <em>Arch</em> packages and
+the list packages in the database. Whatever is on the
+first list but not on the second is put on a list to
+get imported. Does the following operations:</p>
+<blockquote>
+<div><p>1. Breaks the <em>Arch</em> list in sublists, each with
+information on each package.</p>
+<p>2. Strips lines of linebreaks and deletes empty
+lines.</p>
+<ol class="arabic" start="3">
+<li><dl>
+<dt>Creates a list of tuples with information on:</dt><dd><p>3.1. Name.</p>
+<p>3.2. Description.</p>
+<p>3.3. URL.</p>
+</dd>
+</dl>
+</li>
+<li><p>Strips away the line prefix with the title.</p></li>
+<li><p>Creates list of <em>Arch</em> packages not in the db.</p></li>
+<li><p>Stores it in a file.</p></li>
+</ol>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.yay_data.tags.project_creation">
+<span id="project-creation"></span><h2>Project Creation<a class="headerlink" href="#module-cli_apps.yay_data.tags.project_creation" title="Permalink to this heading">¶</a></h2>
+<p>Creates the <em>Yay’s Scrapy</em> project folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.project_creation.project_creation">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">project_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/project_creation.html#project_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.project_creation.project_creation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project Creation for <em>Arch</em> packages.
+Runs <em>Scrapy’s</em> command to start a project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">startproject</span> <span class="n">pip_project</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.project_creation.settings_definition">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">settings_definition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/project_creation.html#settings_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.project_creation.settings_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings definition for <em>Arch</em> packages.
+Defines the following options:</p>
+<ol class="arabic simple">
+<li><p>FEED_EXPORT_FIELDS.  Title of the csv columns.</p></li>
+<li><p>FEED_FORMAT. <em>csv</em>.</p></li>
+<li><p>FEED_URI.  <em>results.csv</em></p></li>
+<li><p>RETRY_TIMES   Number of retries when there’s a connection error.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The feeds definitions will be deprecated in the near future.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.project_creation.null_entries">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">null_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/project_creation.html#null_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.project_creation.null_entries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sometimes there’s entries in the database that don’t have
+tag values. This function collects them and adds them to
+our list.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cli_apps</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.project_creation.xorg_urls">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">xorg_urls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/project_creation.html#xorg_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.project_creation.xorg_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Xorg_urls for Yay packages.
+All Xorg packages had as URL, a generic <em>Freedesktop</em> site
+url, which won’t bring much information. We replace them
+with url’s to their <em>Github</em> pages.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.project_creation.alternative_urls">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">alternative_urls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/project_creation.html#alternative_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.project_creation.alternative_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>There are some url’s that don’t produce scraping results,
+we look for them in <em>newurls.bin</em> and search the web for
+alternatives that we know will yield results. If we find
+them, we alter the url value.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.project_creation.name_change">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">name_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/project_creation.html#name_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.project_creation.name_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name change for <em>Arch</em> packages.
+Some of these names have dashes and dots on them, and Scrapy
+doesn’t accept them on its spider’s/project’s names.
+To comply, but not forget original name, we add a chenged
+version, with underline, as first element of the tuple.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.project_creation.spider">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.project_creation.</span></span><span class="sig-name descname"><span class="pre">spider</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/project_creation.html#spider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.project_creation.spider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spider creation for pip packages.
+For each entry in our packages list is built a spider, with its own file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>srch_title</strong> (<em>str</em>) – Css query for <em>&lt;h1&gt;</em> elements.</p></li>
+<li><p><strong>enphasys</strong> (<em>str</em>) – Css query for &lt;em&gt; tags. Usually sub-titles.</p></li>
+<li><p><strong>srch_text</strong> (<em>str</em>) – Css query for all <em>&lt;p&gt;</em> tags.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the package. Added so we can identify the lines in the csv.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.yay_data.tags.spider_runner">
+<span id="spider-runner"></span><h2>Spider Runner<a class="headerlink" href="#module-cli_apps.yay_data.tags.spider_runner" title="Permalink to this heading">¶</a></h2>
+<p>Enters the Scrapy project folder and runs its spiders.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.spider_runner.spider_runner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.spider_runner.</span></span><span class="sig-name descname"><span class="pre">spider_runner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spiders_lst</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/spider_runner.html#spider_runner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.spider_runner.spider_runner" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">crawl</span> <span class="o">&lt;</span><span class="n">sipder_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>We use multiprocessing to speed up the process.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.yay_data.tags.kwd_creator">
+<span id="keyword-creator"></span><h2>Keyword Creator<a class="headerlink" href="#module-cli_apps.yay_data.tags.kwd_creator" title="Permalink to this heading">¶</a></h2>
+<p>Keyword creator for <em>Arch</em> packages.
+Cleans csv file data and runs KeyBERT, to find keywords for each package.
+Stores them in a file in the <em>kws</em> folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.kwd_creator.csv_cleaner">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">csv_cleaner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/kwd_creator.html#csv_cleaner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.kwd_creator.csv_cleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Csv cleaner for <em>Arch</em> packages.
+We remove column names and the exccess whitespaces from the scraped content.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.tags.kwd_creator.kwd_creator">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.tags.kwd_creator.</span></span><span class="sig-name descname"><span class="pre">kwd_creator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/tags/kwd_creator.html#kwd_creator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.tags.kwd_creator.kwd_creator" title="Permalink to this definition">¶</a></dt>
+<dd><p>We run KeyBERT through <em>nospaces.bin</em>.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.yay_data.db_upld">
+<span id="database-uploader"></span><h2>Database Uploader<a class="headerlink" href="#module-cli_apps.yay_data.db_upld" title="Permalink to this heading">¶</a></h2>
+<p>We’ll read the files in <em>results</em> and turn it into a list of tuples.
+We’ll collect three keyword results per package, add it to <em>results</em>
+and send it to a MySQL database.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.db_upld.kwd_collector">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.db_upld.</span></span><span class="sig-name descname"><span class="pre">kwd_collector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/db_upld.html#kwd_collector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.db_upld.kwd_collector" title="Permalink to this definition">¶</a></dt>
+<dd><p>We collect the <em>Arch</em> keywords and joint them with the rest of the data.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.db_upld.db_upload">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.db_upld.</span></span><span class="sig-name descname"><span class="pre">db_upload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/db_upld.html#db_upload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.db_upld.db_upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>We’ll iterate through the <em>kws</em> files, add them to the <em>Arch</em> data,
+clean the results for <em>MySQL</em>, and upload the new entries to <em>cli_apps</em>.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">cli_apps</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">presentation</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="n">t3</span><span class="p">,</span><span class="w"> </span><span class="n">t4</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then we’ll upload the entries that were already in the db but lacked tag values.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span><span class="w"> </span><span class="n">cli_apps</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">t3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">t4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">s</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.yay_data.delete">
+<span id="delete"></span><h2>Delete<a class="headerlink" href="#module-cli_apps.yay_data.delete" title="Permalink to this heading">¶</a></h2>
+<p>Deletes all transient file and folders from <em>yay_data</em>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.delete.delete">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.delete.</span></span><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/delete.html#delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.delete.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all <em>bin</em> files, keywords, lists files and the project folder.</p>
+</dd></dl>
+
+</section>
+<section id="module-cli_apps.yay_data.cront">
+<span id="cron"></span><h2>Cron<a class="headerlink" href="#module-cli_apps.yay_data.cront" title="Permalink to this heading">¶</a></h2>
+<p>Creates cron notification saying that yay update was ran.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_apps.yay_data.cront.crons">
+<span class="sig-prename descclassname"><span class="pre">cli_apps.yay_data.cront.</span></span><span class="sig-name descname"><span class="pre">crons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cli_apps/yay_data/cront.html#crons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cli_apps.yay_data.cront.crons" title="Permalink to this definition">¶</a></dt>
+<dd><p>We’ll use dunst for the notification.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Yay Modules</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.main">Main</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.lists">Lists</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.lists.Lists"><code class="docutils literal notranslate"><span class="pre">Lists</span></code></a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.lists.Lists.yay_lst"><code class="docutils literal notranslate"><span class="pre">Lists.yay_lst()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.lists.Lists.db_lst"><code class="docutils literal notranslate"><span class="pre">Lists.db_lst()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.lists.Lists.yay_names"><code class="docutils literal notranslate"><span class="pre">Lists.yay_names()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.tags.project_creation">Project Creation</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.project_creation.project_creation"><code class="docutils literal notranslate"><span class="pre">project_creation()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.project_creation.settings_definition"><code class="docutils literal notranslate"><span class="pre">settings_definition()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.project_creation.null_entries"><code class="docutils literal notranslate"><span class="pre">null_entries()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.project_creation.xorg_urls"><code class="docutils literal notranslate"><span class="pre">xorg_urls()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.project_creation.alternative_urls"><code class="docutils literal notranslate"><span class="pre">alternative_urls()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.project_creation.name_change"><code class="docutils literal notranslate"><span class="pre">name_change()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.project_creation.spider"><code class="docutils literal notranslate"><span class="pre">spider()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.tags.spider_runner">Spider Runner</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.spider_runner.spider_runner"><code class="docutils literal notranslate"><span class="pre">spider_runner()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.tags.kwd_creator">Keyword Creator</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.kwd_creator.csv_cleaner"><code class="docutils literal notranslate"><span class="pre">csv_cleaner()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.tags.kwd_creator.kwd_creator"><code class="docutils literal notranslate"><span class="pre">kwd_creator()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.db_upld">Database Uploader</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.db_upld.kwd_collector"><code class="docutils literal notranslate"><span class="pre">kwd_collector()</span></code></a></li>
+<li><a class="reference internal" href="#cli_apps.yay_data.db_upld.db_upload"><code class="docutils literal notranslate"><span class="pre">db_upload()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.delete">Delete</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.delete.delete"><code class="docutils literal notranslate"><span class="pre">delete()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cli_apps.yay_data.cront">Cron</a><ul>
+<li><a class="reference internal" href="#cli_apps.yay_data.cront.crons"><code class="docutils literal notranslate"><span class="pre">crons()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pip.html"
+                          title="previous chapter">Pip Modules</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/yay.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pip.html" title="Pip Modules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cli Apps 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Yay Modules</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, mclds.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

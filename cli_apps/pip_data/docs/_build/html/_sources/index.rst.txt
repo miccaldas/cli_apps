@@ -26,6 +26,7 @@ Modules
 .. toctree::
    tagging
    pip
+   yay
 
 External Dependencies
 ---------------------

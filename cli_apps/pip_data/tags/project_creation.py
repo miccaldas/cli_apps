@@ -16,7 +16,7 @@ def project_creation():
     Runs *Scrapy's* command to start a project.\n
     :var str cmd: *scrapy startproject pip_project*.
     """
-    cwd = os.getcwd()
+    cwd = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
     cmd = "/home/mic/.local/bin/scrapy startproject pip_project"
     subprocess.run(cmd, cwd=cwd, shell=True)
 
@@ -36,8 +36,8 @@ def settings_definition():
     4. RETRY_TIMES   Number of retries when there's a connection error.\n
     .. NOTE:: The feeds definitions will be deprecated in the near future.
     """
-    pip = "/home/mic/python/cli_apps/cli_apps/pip_data"
-    with open(f"{pip}/pip_project/pip_project/settings.py", "a") as d:
+    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    with open(f"{tags}/pip_project/pip_project/settings.py", "a") as d:
         d.write("ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}")
         d.write("\n")
         d.write('FEED_EXPORT_FIELDS = ["name", "content"]')
@@ -48,9 +48,9 @@ def settings_definition():
         d.write("\n")
         d.write("RETRY_TIMES = 1\n")
         d.close()
-    with open(f"{pip}/pip_project/pip_project/pipelines.py", "r") as f:
+    with open(f"{tags}/pip_project/pip_project/pipelines.py", "r") as f:
         lines = f.readlines()
-    with open(f"{pip}/pip_project/pip_project/pipelines.py", "w") as f:
+    with open(f"{tags}/pip_project/pip_project/pipelines.py", "w") as f:
         for line in lines:
             f.write(line)
         f.write("\n")
@@ -103,10 +103,6 @@ def name_change():
     doesn't accept them on its spider's/project's names.
     To comply, but not forget original name, we add a chenged
     version, with underline, as first element of the tuple.\n
-    .. NOTE::
-        This change turned out to be useless, since we decided to
-        create just one project, with all the spiders inside it.
-        I leave it here for documentation purposes.
     """
 
     tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
@@ -134,14 +130,14 @@ def spider():
     :var str name: The name of the package. Added so we can identify the lines in the csv.
     """
 
-    pip = "/home/mic/python/cli_apps/cli_apps/pip_data"
-    with open(f"{pip}/tags/newname.bin", "rb") as f:
+    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    with open(f"{tags}/newname.bin", "rb") as f:
         newurls = pickle.load(f)
     for entry in newurls:
         spider_name = f"{entry[0].strip()}_spider"
         class_name = f"{spider_name}".upper()
         with open(
-            f"{pip}/pip_project/pip_project/spiders/{spider_name}.py",
+            f"{tags}/pip_project/pip_project/spiders/{spider_name}.py",
             "w",
         ) as f:
             f.write("import scrapy\n")

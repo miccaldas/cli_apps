@@ -1,39 +1,54 @@
 """
-Module Docstring
+Houses a class created so I can write location information just once.
 """
 import os
 import pickle
 import re
 import subprocess
 
-import snoop
+# import snoop
 from mysql.connector import Error, connect
-from snoop import pp
+
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
 class Lists:
-    """"""
+    """
+    Sources, cleans and prepares the data lists needed to update
+    the database with *Arch* packages.\n
+    :attr str cwd: Present location.
+    :attr str lists: Location of the *lists* folder.
+    """
 
     def __init__(self, cwd, lists):
         self.cwd = cwd
         self.lists = lists
 
-    @snoop
+    # @snoop
     def yay_lst(self):
-        """"""
+        """
+        Sources and stores in a file, all *Arch* installed packages::
+
+            yay -Qi > {self.lists}/yay_lst.txt
+        """
         cmd = f"yay -Qi > {self.lists}/yay_lst.txt"
         subprocess.run(cmd, shell=True)
 
-    @snoop
+    # @snoop
     def db_lst(self):
-        """"""
+        """
+        Sources, cleans and stores in a file, list of names of packages in the database.\n
+        .. code-block:: sql
+
+            SELECT name FROM cli_apps
+        """
         try:
             conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
             cur = conn.cursor()
@@ -52,12 +67,28 @@ class Lists:
 
     # @snoop
     def yay_names(self):
-        """"""
+        """
+        Cleans and compares the lists of *Arch* packages and
+        the list packages in the database. Whatever is on the
+        first list but not on the second is put on a list to
+        get imported. Does the following operations:
+
+            1. Breaks the *Arch* list in sublists, each with
+            information on each package.\n
+            2. Strips lines of linebreaks and deletes empty
+            lines.\n
+            3. Creates a list of tuples with information on:
+                3.1. Name.\n
+                3.2. Description.\n
+                3.3. URL.
+            4. Strips away the line prefix with the title.
+            5. Creates list of *Arch* packages not in the db.
+            6. Stores it in a file.
+        """
         with open(f"{self.lists}/dblst.bin", "rb") as f:
             dblst = pickle.load(f)
         with open(f"{self.lists}/yay_lst.txt", "r") as v:
             yay_lst = v.readlines()
-
         yay_tups = []
         yaytemp = []
         for y in yay_lst:
@@ -82,18 +113,7 @@ class Lists:
                         cleantemp.append(v.strip())
 
         yayvals = [(t[0], t[2], t[4]) for t in yayclean]
-        yaylst = [a[18:] for a in yayvals]
-        pp(yaylst)
-
-        # newnames = [i for i in yaylst if i not in dblst]
-        # with open('newnames.bin', 'wb') as w:
-        #     pickle.dump(newnames, w)
-
-
-lsts = Lists(
-    "/home/mic/python/cli_apps/cli_apps/yay_data",
-    "/home/mic/python/cli_apps/cli_apps/yay_data/lists",
-)
-# lsts.yay_lst()
-# lsts.db_lst()
-lsts.yay_names()
+        yaylst = [(a[18:], b[18:], c[18:]) for a, b, c in yayvals]
+        newnames = [i for i in yaylst if i[0] not in dblst]
+        with open("newnames.bin", "wb") as w:
+            pickle.dump(newnames, w)
