@@ -31,7 +31,7 @@ from tags.project_creation import (
 )
 
 # def type_watch(source, value):
-#     return "type({})".format(source), type(value)
+#     return f"type({source})", type(value)
 
 
 # snoop.install(watch_extras=[type_watch])
@@ -81,23 +81,31 @@ def run():
     cwd = os.getcwd()
     file_res = os.listdir(f"{cwd}/results")
     if file_res != []:
-        project_creation()
-        settings_definition()
-        xorg_urls()
-        name_change()
-        spider()
-        # As we're using multiprocessing in 'spider_runner', I can't call it from another module,
-        # as it expects a list as an argument, and that list must be given by code under the
-        # function but before setting the pool. This is a workaround.
-        cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/tags/spider_runner.py"
-        subprocess.run(cmd, shell=True)
-        csv_cleaner()
-        kwd_creator()
-        kwd_collector()
-        db_upload()
-        cron()
+        run_rest()
     delete()
 
 
 if __name__ == "__main__":
     run()
+
+
+# @snoop
+def run_rest():
+    """
+    Code that runs if there are new *Pip* packages to process.
+    """
+    project_creation()
+    settings_definition()
+    xorg_urls()
+    name_change()
+    spider()
+    # As we're using multiprocessing in 'spider_runner', I can't call it from another module,
+    # as it expects a list as an argument, and that list must be given by code under the
+    # function but before setting the pool. This is a workaround.
+    cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/tags/spider_runner.py"
+    subprocess.run(cmd, shell=True)
+    csv_cleaner()
+    kwd_creator()
+    kwd_collector()
+    db_upload()
+    cron()

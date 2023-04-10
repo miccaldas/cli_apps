@@ -6,18 +6,18 @@ import os
 import re
 import subprocess
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def extract_file_info():
     """
     We iterate through the files in *package_files*, search for the
@@ -40,16 +40,10 @@ def extract_file_info():
                     nmln = line[6:].strip()
                     data.append(nmln)
                 if line.startswith("Summary: "):
-                    if len(line) > 11:
-                        smln = line[9:].strip()
-                    else:
-                        smln = "NA"
+                    smln = line[9:].strip() if len(line) > 11 else "NA"
                     data.append(smln)
                 if line.startswith("Home-page: "):
-                    if len(line) > 12:
-                        hpln = line[11:].strip()
-                    else:
-                        hpln = "NA"
+                    hpln = line[11:].strip() if len(line) > 12 else "NA"
                     data.append(hpln)
             with open(f"{results}/{file}", "w") as v:
                 for d in data:

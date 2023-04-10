@@ -7,19 +7,20 @@ import os
 import pickle
 import subprocess
 
-import snoop
+# import snoop
 from mysql.connector import Error, connect
-from snoop import pp
+
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def kwd_collector():
     """
     We collect the *Arch* keywords and joint them with the rest of the data.
@@ -111,7 +112,16 @@ if __name__ == "__main__":
     kwd_collector()
 
 
-@snoop
+# Suggested by Sourcery. Encapsulates repeated
+# db execution code, as there are three calls
+# to the db in 'db_upload' into one block of code.
+def execute_db(cur, query, answers, conn):
+    cur.execute(query, answers)
+    conn.commit()
+    conn.close()
+
+
+# @snoop
 def db_upload():
     """
     We'll iterate through the *kws* files, add them to the *Arch* data,
@@ -150,23 +160,19 @@ def db_upload():
                 conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
                 cur = conn.cursor()
                 query = "INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-                cur.execute(query, answers)
-                conn.commit()
-                conn.close()
+                execute_db(cur, query, answers, conn)
         except Error as e:
             print("Error while connecting to db", e)
 
     # Upload for the entries who only lacked tags.
     if kwdlst != []:
         try:
+            query = "UPDATE cli_apps SET t2 = %s, t3 = %s, t4 = %s WHERE name = %s"
             for lst in kwdlst:
                 answers = [lst[4], lst[5], lst[6], lst[0]]
                 conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
                 cur = conn.cursor()
-                query = "UPDATE cli_apps SET t2 = %s, t3 = %s, t4 = %s WHERE name = %s"
-                cur.execute(query, answers)
-                conn.commit()
-                conn.close()
+                execute_db(cur, query, answers, conn)
         except Error as e:
             print("Error while connecting to db", e)
 

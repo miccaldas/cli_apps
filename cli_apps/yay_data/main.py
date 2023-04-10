@@ -9,7 +9,7 @@ import os
 import pickle
 import subprocess
 
-import snoop
+# import snoop
 from cli_apps.yay_data.cront import crons
 from cli_apps.yay_data.db_upld import db_upload, kwd_collector
 from cli_apps.yay_data.delete import delete
@@ -24,17 +24,18 @@ from cli_apps.yay_data.tags.project_creation import (
     spider,
     xorg_urls,
 )
-from snoop import pp
+
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def main():
     """
     We call the other modules, in order, to update the database.

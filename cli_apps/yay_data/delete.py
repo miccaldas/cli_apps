@@ -4,18 +4,18 @@ Deletes all transient file and folders from *yay_data*.
 import os
 import subprocess
 
-import snoop
+# import snoop
 from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def delete():
     """
     Deletes all *bin* files, keywords, lists files and the project folder.

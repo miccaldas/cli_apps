@@ -5,6 +5,7 @@ take a random entry from the database and show its
 webpage in a browser window.
 """
 import webbrowser
+
 from mysql.connector import Error, connect
 
 
@@ -14,7 +15,9 @@ def app_reminder():
     """
 
     try:
-        conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+        conn = connect(
+            host="localhost", user="mic", password="xxxx", database="cli_apps"
+        )
         cur = conn.cursor()
         query = "SELECT name, presentation, url FROM cli_apps ORDER BY rand() LIMIT 1"
         cur.execute(query)

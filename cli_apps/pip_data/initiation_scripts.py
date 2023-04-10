@@ -11,18 +11,18 @@ import os
 import re
 import subprocess
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def initiation_scripts():
     """
     We use a *Pip* command to get the lsit of installed packages::
@@ -46,9 +46,7 @@ def initiation_scripts():
         lines.append(name)
 
     for o in lines:
-        with open(
-            "/home/mic/python/cli_apps/cli_apps/pip_data/lists/names_linux.txt", "a"
-        ) as f:
+        with open("/home/mic/python/cli_apps/cli_apps/pip_data/lists/names_linux.txt", "a") as f:
             f.write(f"{o}")
 
 
