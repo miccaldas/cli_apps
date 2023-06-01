@@ -5,7 +5,7 @@ and send it to a MySQL database.
 """
 import os
 import pickle
-import subprocess
+
 
 # import snoop
 from mysql.connector import Error, connect
