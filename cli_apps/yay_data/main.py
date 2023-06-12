@@ -9,7 +9,7 @@ import os
 import pickle
 import subprocess
 
-# import snoop
+import snoop
 from cli_apps.yay_data.cront import crons
 from cli_apps.yay_data.db_upld import db_upload, kwd_collector
 from cli_apps.yay_data.delete import delete
@@ -24,18 +24,17 @@ from cli_apps.yay_data.tags.project_creation import (
     spider,
     xorg_urls,
 )
-
-# from snoop import pp
-
-
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
+from snoop import pp
 
 
-# snoop.install(watch_extras=[type_watch])
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# @snoop
+snoop.install(watch_extras=[type_watch])
+
+
+@snoop
 def main():
     """
     We call the other modules, in order, to update the database.
@@ -66,7 +65,9 @@ def main():
     tags = os.listdir("/home/mic/python/cli_apps/cli_apps/yay_data/tags")
     with open("/home/mic/python/cli_apps/cli_apps/yay_data/newnames.bin", "rb") as f:
         newnames = pickle.load(f)
-    with open("/home/mic/python/cli_apps/cli_apps/yay_data/tags/newestnames.bin", "rb") as d:
+    with open(
+        "/home/mic/python/cli_apps/cli_apps/yay_data/tags/newestnames.bin", "rb"
+    ) as d:
         newestnames = pickle.load(d)
 
     if newnames != [] or newestnames != []:
