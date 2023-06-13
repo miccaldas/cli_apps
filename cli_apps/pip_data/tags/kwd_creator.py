@@ -73,16 +73,28 @@ def kwd_creator():
         keywords = [o for o, p in keys]
 
         kwds = []
+        # This is here to ensure that the keywords are not very similar.
         for y in keywords:
+            # Create a list without one of the keywords.
             slst = [b for b in keywords if b != y]
+            # If the keyword list is greater than one:
             if slst != []:
+                # We compare the similarity index of the keyword against
+                # all of the others.
                 value = process.extractOne(y, slst)
+                # If there's a resonable index of disimilarity:
                 if value[1] < 85:
+                    # keep the keyword.
                     kwds.append(y)
+        # List of keywords that weren't chosen in the latter process.
         similars = [u for u in keywords if u not in kwds]
+        # If the list is not empty:
         if similars != []:
+            # get the longest keyword in there:
             sim_choice = max(similars, key=len)
+            # and add it to the chosen keywords list.
             kwds += [sim_choice]
+
         with open(f"{tags}/kws/{name}", "w") as v:
             for q in kwds:
                 v.write(f"{q}\n")

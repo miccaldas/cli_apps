@@ -8,8 +8,10 @@ import os
 import pickle
 import re
 import subprocess
+import sys
 
 import snoop
+from dotenv import load_dotenv
 from keybert import KeyBERT
 from snoop import pp
 from thefuzz import fuzz, process
@@ -20,6 +22,11 @@ def type_watch(source, value):
 
 
 snoop.install(watch_extras=[type_watch])
+load_dotenv()
+
+# Project Environmental Variables
+tags = os.getenv("TAGS")
+project = os.getenv("PROJECT")
 
 
 @snoop
@@ -28,11 +35,12 @@ def csv_cleaner():
     Csv cleaner for *Arch* packages.
     We remove column names and the exccess whitespaces from the scraped content.
     """
+    # Needed to avoid "Field larger than field limit error"
+    csv.field_size_limit(sys.maxsize)
     cwd = os.getcwd()
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
 
     lines = []
-    with open(f"{tags}/yay_project/results.csv", "r") as f:
+    with open(f"{project}results.csv", "r") as f:
         reader = csv.reader(f)
         for line in reader:
             lines.append(line)
@@ -43,7 +51,7 @@ def csv_cleaner():
     for k in range(len(content)):
         x = re.sub("\s+", " ", content[k][1])
         nospaces.append([content[k][0], x])
-    with open(f"{tags}/nospaces.bin", "wb") as t:
+    with open(f"{tags}nospaces.bin", "wb") as t:
         pickle.dump(nospaces, t)
 
 
@@ -56,9 +64,7 @@ def kwd_creator():
     """
     We run KeyBERT through *nospaces.bin*.
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-
-    with open(f"{tags}/nospaces.bin", "rb") as f:
+    with open(f"{tags}nospaces.bin", "rb") as f:
         csvcontent = pickle.load(f)
 
     for line in csvcontent:
@@ -74,17 +80,29 @@ def kwd_creator():
         keywords = [o for o, p in keys]
 
         kwds = []
+        # This is here to ensure that the keywords are not very similar.
         for y in keywords:
+            # Create a list without one of the keywords.
             slst = [b for b in keywords if b != y]
+            # If the keyword list is greater than one:
             if slst != []:
+                # We compare the similarity index of the keyword against
+                # all of the others.
                 value = process.extractOne(y, slst)
+                # If there's a resonable index of disimilarity:
                 if value[1] < 85:
+                    # keep the keyword.
                     kwds.append(y)
+        # List of keywords that weren't chosen in the latter process.
         similars = [u for u in keywords if u not in kwds]
+        # If the list is not empty:
         if similars != []:
+            # get the longest keyword in there:
             sim_choice = max(similars, key=len)
+            # and add it to the chosen keywords list.
             kwds += [sim_choice]
-        with open(f"{tags}/kws/{name}", "w") as v:
+
+        with open(f"{tags}kws/{name}", "w") as v:
             for q in kwds:
                 v.write(f"{q}\n")
 

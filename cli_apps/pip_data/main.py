@@ -22,13 +22,8 @@ from extract_file_info import extract_file_info
 from initiation_scripts import initiation_scripts
 from query_builder import query_builder
 from tags.kwd_creator import csv_cleaner, kwd_creator
-from tags.project_creation import (
-    name_change,
-    project_creation,
-    settings_definition,
-    spider,
-    xorg_urls,
-)
+from tags.project_creation import init_project
+from tags.spider_runner import spider_runner
 
 # def type_watch(source, value):
 #     return f"type({source})", type(value)
@@ -71,41 +66,27 @@ def run():
     """
 
     initiation_scripts()
+
     # As we're using multiprocessing in 'query_builder', I can't call it from another module,
     # as it expects a list as an argument, and that list must be given by code under the
     # function but before setting the pool. This is a workaround.
     cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/query_builder.py"
     subprocess.run(cmd, shell=True)
+
     extract_file_info()
 
+    # We check the 'results' folder to see if there's anything there.
+    # If there is, we continue.
     cwd = os.getcwd()
     file_res = os.listdir(f"{cwd}/results")
+
     if file_res != []:
-        run_rest()
+        init_project()
+        spider_runner()
+        csv_cleaner()
+        kwd_creator()
     delete()
 
 
 if __name__ == "__main__":
     run()
-
-
-# @snoop
-def run_rest():
-    """
-    Code that runs if there are new *Pip* packages to process.
-    """
-    project_creation()
-    settings_definition()
-    xorg_urls()
-    name_change()
-    spider()
-    # As we're using multiprocessing in 'spider_runner', I can't call it from another module,
-    # as it expects a list as an argument, and that list must be given by code under the
-    # function but before setting the pool. This is a workaround.
-    cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/tags/spider_runner.py"
-    subprocess.run(cmd, shell=True)
-    csv_cleaner()
-    kwd_creator()
-    kwd_collector()
-    db_upload()
-    cron()

@@ -6,7 +6,6 @@ and send it to a MySQL database.
 import os
 import pickle
 
-
 # import snoop
 from mysql.connector import Error, connect
 
@@ -16,13 +15,15 @@ from mysql.connector import Error, connect
 
 # snoop.install(watch_extras=[type_watch])
 
+cwd = os.getcwd()
+
 
 # @snoop
 def kwd_collector():
     """
     We collect the keywords.
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    tags = f"{cwd}/tags"
     fldr = f"{tags}/kws"
     fllst = os.listdir(fldr)
 
@@ -68,9 +69,8 @@ def db_upload():
     to a column and the upload is
     complete.
     """
-
-    folders = "/home/mic/python/cli_apps/cli_apps/pip_data/results/"
-    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    folders = f"{cwd}/results/"
+    tags = f"{cwd}/tags"
     paths = [os.path.join(folders, file) for file in os.listdir(folders)]
     with open(f"{tags}/kwdlst.bin", "rb") as f:
         kwdlst = pickle.load(f)
@@ -79,7 +79,7 @@ def db_upload():
         with open(file, "r") as f:
             fdata = f.readlines()
             name = fdata[0].strip()
-            kwds = [(a, b, c, d) for a, b, c, d in kwdlst if a == fdata[0].strip()]
+            kwds = [(a, b, c, d) for a, b, c, d in kwdlst if a == name]
             presentation = fdata[1].strip()
             url = fdata[2].strip()
             answers = [name, presentation, url]

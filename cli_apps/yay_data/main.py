@@ -15,16 +15,10 @@ from cli_apps.yay_data.db_upld import db_upload, kwd_collector
 from cli_apps.yay_data.delete import delete
 from cli_apps.yay_data.lists import Lists
 from cli_apps.yay_data.tags.kwd_creator import csv_cleaner, kwd_creator
-from cli_apps.yay_data.tags.project_creation import (
-    alternative_urls,
-    name_change,
-    null_entries,
-    project_creation,
-    settings_definition,
-    spider,
-    xorg_urls,
-)
-from snoop import pp
+from cli_apps.yay_data.tags.project_creation import init_project
+from dotenv import load_dotenv
+
+# from snoop import pp
 
 
 def type_watch(source, value):
@@ -32,6 +26,11 @@ def type_watch(source, value):
 
 
 snoop.install(watch_extras=[type_watch])
+load_dotenv()
+
+# Environmental Variables
+tags = os.getenv("TAGS")
+yay = os.getenv("YAY")
 
 
 @snoop
@@ -49,41 +48,28 @@ def main():
         the *delete* module will run.
     """
 
+    # Instantiates the 'List' class in the 'lists' module.
     lsts = Lists(
-        "/home/mic/python/cli_apps/cli_apps/yay_data",
-        "/home/mic/python/cli_apps/cli_apps/yay_data/lists",
+        yay,
+        f"{yay}lists",
     )
+    # Calls its methods.
     lsts.yay_lst()
     lsts.db_lst()
     lsts.yay_names()
 
-    project_creation()
-    settings_definition()
-    null_entries()
+    init_project()
 
-    yaydata = os.listdir("/home/mic/python/cli_apps/cli_apps/yay_data")
-    tags = os.listdir("/home/mic/python/cli_apps/cli_apps/yay_data/tags")
-    with open("/home/mic/python/cli_apps/cli_apps/yay_data/newnames.bin", "rb") as f:
-        newnames = pickle.load(f)
-    with open(
-        "/home/mic/python/cli_apps/cli_apps/yay_data/tags/newestnames.bin", "rb"
-    ) as d:
-        newestnames = pickle.load(d)
+    # The module 'spider_runner' has multiprocessing on and can't be called as the
+    # other modules. This is a work-around.
+    cmd = f"/usr/bin/python {tags}spider_runner.py"
+    subprocess.run(cmd, shell=True)
 
-    if newnames != [] or newestnames != []:
-        xorg_urls()
-        alternative_urls()
-        name_change()
-        spider()
-        # The module 'spider_runner' has multiprocessing on and can't be called as the
-        # other modules. This is a work-around.
-        cmd = f"/usr/bin/python {os.getcwd()}/tags/spider_runner.py"
-        subprocess.run(cmd, shell=True)
-        csv_cleaner()
-        kwd_creator()
-        kwd_collector()
-        db_upload()
-        crons()
+    csv_cleaner()
+    kwd_creator()
+    kwd_collector()
+    db_upload()
+    crons()
     delete()
 
 

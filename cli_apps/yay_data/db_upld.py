@@ -6,30 +6,34 @@ and send it to a MySQL database.
 import os
 import pickle
 import subprocess
+from dotenv import load_dotenv
 
-# import snoop
+import snoop
 from mysql.connector import Error, connect
-
-# from snoop import pp
-
-
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
+from snoop import pp
 
 
-# snoop.install(watch_extras=[type_watch])
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# @snoop
+snoop.install(watch_extras=[type_watch])
+load_dotenv()
+
+# Environmental Variables
+tags = os.getenv("TAGS")
+yay = os.getenv("YAY")
+
+
+@snoop
 def kwd_collector():
     """
     We collect the *Arch* keywords and joint them with the rest of the data.
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    fldr = f"{tags}/kws"
+    fldr = f"{tags}kws"
     fllst = os.listdir(fldr)
 
-    with open(f"{tags}/newname.bin", "rb") as v:
+    with open(f"{tags}newname.bin", "rb") as v:
         newname = pickle.load(v)
 
     kwdlst = []
@@ -104,7 +108,7 @@ def kwd_collector():
                         t4,
                     )
                 )
-    with open(f"{tags}/kwdlst.bin", "wb") as f:
+    with open(f"{tags}kwdlst.bin", "wb") as f:
         pickle.dump(kwdlst, f)
 
 
@@ -121,7 +125,7 @@ def execute_db(cur, query, answers, conn):
     conn.close()
 
 
-# @snoop
+@snoop
 def db_upload():
     """
     We'll iterate through the *kws* files, add them to the *Arch* data,
@@ -136,21 +140,24 @@ def db_upload():
         UPDATE cli_apps SET t2 = %s, t3 = %s, t4 = %s WHERE name = %s
     """
 
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    with open(f"{tags}/kwdlst.bin", "rb") as f:
+    with open(f"{tags}kwdlst.bin", "rb") as f:
         kwdlst = pickle.load(f)
-    with open("/home/mic/python/cli_apps/cli_apps/yay_data/newnames.bin", "rb") as f:
+    with open(f"{yay}newnames.bin", "rb") as f:
         oldnames = pickle.load(f)
 
     # The 'kwdlst.bin' file has both the new entries and the ones that only lacked tags.
     # Because they will have to be uploaded with different queries, we remove the new
     # entries from 'kwdlst.bin' and put them in a new list.
+    # There's a 'break' statement at the end of the 'kwdlst' loop, that stops it when it
+    # found a match. That has two salutary consequences: 1 - It makes the loop much faster
+    # and memory onerous, two, it avoids a 'index out of range' error that was happening.
     newnames = []
     for n in range(len(oldnames)):
         for k in range(len(kwdlst)):
             if oldnames[n][0].strip() == kwdlst[k][0].strip():
                 newnames.append(kwdlst[k])
                 kwdlst.pop(k)
+                break
 
     # Upload for the new entries.
     if newnames != []:

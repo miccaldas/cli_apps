@@ -91,6 +91,7 @@ class Lists:
             yay_lst = v.readlines()
         yay_tups = []
         yaytemp = []
+        # Separates 'yay_lst' into sublists. So you isolate each entry.
         for y in yay_lst:
             if y == "\n":
                 yaytemp.append(y)
@@ -101,6 +102,7 @@ class Lists:
 
         yayclean = []
         cleantemp = []
+        # Separates 'yay_tups' into sublists.
         for t in yay_tups:
             for v in t:
                 if v != "\n":

@@ -5,10 +5,20 @@ import os
 import pickle
 import subprocess
 
-import snoop
+# import snoop
+from dotenv import load_dotenv
 from mysql.connector import Error, connect
-from ScrapeSearchEngine.ScrapeSearchEngine import Bing, Google, Startpage
-from snoop import pp
+from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
+
+# from snoop import pp
+
+load_dotenv()
+
+# Environmental Variables
+tags = os.getenv("TAGS")
+yay = os.getenv("YAY")
+project = os.getenv("PROJECT")
+spiders = os.getenv("SPIDERS")
 
 
 # @snoop
@@ -19,13 +29,8 @@ def project_creation():
 
         scrapy startproject pip_project
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
     cmd = "/home/mic/.local/bin/scrapy startproject yay_project"
     subprocess.run(cmd, cwd=tags, shell=True)
-
-
-if __name__ == "__main__":
-    project_creation()
 
 
 # @snoop
@@ -33,25 +38,15 @@ def settings_definition():
     """
     Settings definition for *Arch* packages.
     Defines the following options:\n
-    1. FEED_EXPORT_FIELDS.  Title of the csv columns.
-    2.  FEED_FORMAT. *csv*.
-    3. FEED_URI.  *results.csv*
-    4. RETRY_TIMES   Number of retries when there's a connection error.\n
-    .. NOTE:: The feeds definitions will be deprecated in the near future.
+    1. FEEDS  Dictionary which structures the file that'll house the spider's results.\n
+    2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    with open(f"{tags}/yay_project/yay_project/settings.py", "a") as d:
-        d.write(
-            "FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}\n"
-        )
+    with open(f"{project}yay_project/settings.py", "a") as d:
+        d.write("FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}\n")
         d.write("RETRY_TIMES = 1\n")
 
 
-if __name__ == "__main__":
-    settings_definition()
-
-
-@snoop
+# @snoop
 def null_entries():
     """
     Sometimes there's entries in the database that don't have
@@ -61,16 +56,13 @@ def null_entries():
 
         SELECT * FROM cli_apps WHERE t2 IS NULL
     """
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    namesfile = "/home/mic/python/cli_apps/cli_apps/yay_data/newnames.bin"
+    namesfile = f"{yay}newnames.bin"
 
     with open(namesfile, "rb") as f:
         newnames = pickle.load(f)
 
     try:
-        conn = connect(
-            host="localhost", user="mic", password="xxxx", database="cli_apps"
-        )
+        conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
         cur = conn.cursor()
         query = "SELECT * FROM cli_apps WHERE t2 IS NULL"
         cur.execute(query)
@@ -81,28 +73,26 @@ def null_entries():
         if conn:
             conn.close()
 
+    # Creates new list from 'cli_apps' db, only with the 'name', 'presentation', 'url' columns.
     records = [(b, c, e) for a, b, c, d, e, f, g, h, i in recs]
     for record in records:
+        # Adds to 'newnames' each tuple in records. It there's no brackets around 'record', it
+        # would add 'record' first and then all items of 'record', one by one.
         newnames += [record]
-    with open(f"{tags}/newestnames.bin", "wb") as v:
+    with open(f"{tags}newestnames.bin", "wb") as v:
         pickle.dump(newnames, v)
 
 
-if __name__ == "__main__":
-    null_entries()
-
-
-@snoop
+# @snoop
 def xorg_urls():
     """
     Xorg_urls for Yay packages.
-    All Xorg packages had as URL, a generic *Freedesktop* site
+    All Xorg packages have as URL, a generic *Freedesktop* site
     url, which won't bring much information. We replace them
     with url's to their *Github* pages.
     """
 
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    namesfile = "/home/mic/python/cli_apps/cli_apps/yay_data/tags/newestnames.bin"
+    namesfile = f"{tags}newestnames.bin"
 
     with open(namesfile, "rb") as f:
         newnames = pickle.load(f)
@@ -118,15 +108,11 @@ def xorg_urls():
         else:
             newurls.append(entry)
 
-    with open(f"{tags}/newurls.bin", "wb") as v:
+    with open(f"{tags}newurls.bin", "wb") as v:
         pickle.dump(newurls, v)
 
 
-if __name__ == "__main__":
-    xorg_urls()
-
-
-@snoop
+# @snoop
 def alternative_urls():
     """
     There are some url's that don't produce scraping results,
@@ -134,9 +120,7 @@ def alternative_urls():
     alternatives that we know will yield results. If we find
     them, we alter the url value.
     """
-
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    with open(f"{tags}/newurls.bin", "rb") as f:
+    with open(f"{tags}newurls.bin", "rb") as f:
         newurls = pickle.load(f)
 
     changers = [
@@ -144,6 +128,7 @@ def alternative_urls():
         for i in newurls
         if i[2].startswith("https://gitlab.com")
         or i[2].startswith("https://pagure.io")
+        or i[2].startswith("http://www.voidspace.org.uk")
         or i[2].startswith("/")
         or "sourceforge" in i[2]
         or "canonware" in i[2]
@@ -155,11 +140,18 @@ def alternative_urls():
     if changers != []:
         for i in changers:
             name = i[0]
+            # There's a 'Scrape Search Engine' package, that does web searches in chosen searchengines
+            # programatically. I added 'Startpage' to its list of engines, and that's what we're using.
+            # It requires a userAgent value, so as not to be shunned by the engines. I put my own.
             startpage = Startpage(name, userAgent)
+            # If the package starts with 'python-', we'll assume its python related and build a query
+            # accordingly.
             if i[0].startswith("python-"):
                 nm = i[0][7:]
                 name = f"{nm} python"
                 startpage = Startpage(name, userAgent)
+            # From the results, we'll look for those that send you to a 'github', 'pypi' site, or to a
+            # site that has the same name as the package.
             for s in startpage:
                 if s.startswith("https://github.com"):
                     nurls.append((i[0], i[1], s))
@@ -171,21 +163,18 @@ def alternative_urls():
                     nurls.append((i[0], i[1], s))
                     break
 
+    # We'll delete the entries with the old url and replace them with the new one.
     for n in range(len(newurls)):
         for nu in range(len(nurls)):
             if newurls[n][0] == nurls[nu][0]:
                 newurls.pop(n)
                 newurls += [nurls[nu]]
 
-    with open(f"{tags}/alturls.bin", "wb") as f:
+    with open(f"{tags}alturls.bin", "wb") as f:
         pickle.dump(newurls, f)
 
 
-if __name__ == "__main__":
-    alternative_urls()
-
-
-@snoop
+# @snoop
 def name_change():
     """
     Name change for *Arch* packages.
@@ -194,22 +183,16 @@ def name_change():
     To comply, but not forget original name, we add a chenged
     version, with underline, as first element of the tuple.\n
     """
-
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    with open(f"{tags}/alturls.bin", "rb") as f:
+    with open(f"{tags}alturls.bin", "rb") as f:
         setcols = pickle.load(f)
 
     dotname = [(h.replace(".", "_"), h, d, e) for h, d, e in setcols]
     newname = [(n.replace("-", "_"), i, o, m) for n, i, o, m in dotname]
-    with open(f"{tags}/newname.bin", "wb") as v:
+    with open(f"{tags}newname.bin", "wb") as v:
         pickle.dump(newname, v)
 
 
-if __name__ == "__main__":
-    name_change()
-
-
-@snoop
+# @snoop
 def spider():
     """
     Spider creation for pip packages.
@@ -219,15 +202,13 @@ def spider():
     :var str srch_text: Css query for all *<p>* tags.\n
     :var str name: The name of the package. Added so we can identify the lines in the csv.
     """
-
-    tags = "/home/mic/python/cli_apps/cli_apps/yay_data/tags"
-    with open(f"{tags}/newname.bin", "rb") as f:
+    with open(f"{tags}newname.bin", "rb") as f:
         newurls = pickle.load(f)
     for entry in newurls:
         spider_name = f"{entry[0].strip()}_spider"
         class_name = f"{spider_name}".upper()
         with open(
-            f"{tags}/yay_project/yay_project/spiders/{spider_name}.py",
+            f"{spiders}{spider_name}.py",
             "w",
         ) as f:
             f.write("import scrapy\n")
@@ -249,5 +230,31 @@ def spider():
             f.write("        yield results\n")
 
 
+# @snoop
+def init_project():
+    """
+    Starts all the functions in this module.
+    """
+    project_creation()
+    settings_definition()
+    null_entries()
+
+    # In the case that there's no new packages, we want the app to stop calling functions
+    # on content that's not there. So we first get newnames' and 'newestnames'. The first
+    # has the new entries, if any, the second has db entries that have no tags but we want
+    # to check them anyway.
+    # If any of these two are not empty, we proceed, if not, the process stops here.
+    yaydata = os.listdir(yay)
+    with open(f"{yay}newnames.bin", "rb") as f:
+        newnames = pickle.load(f)
+    with open(f"{tags}newestnames.bin", "rb") as d:
+        newestnames = pickle.load(d)
+    if newnames != [] or newestnames != []:
+        xorg_urls()
+        alternative_urls()
+        name_change()
+        spider()
+
+
 if __name__ == "__main__":
-    spider()
+    init_project()

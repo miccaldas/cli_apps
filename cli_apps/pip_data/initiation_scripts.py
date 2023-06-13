@@ -4,36 +4,36 @@ Its name *_scripts* came from the fact that, originally,
 these tasks were done by bash scripts. But, as I grew more
 confident using the unbelievably cumbersome Python's regex,
 I finally was able to have all of code in Python.\n
-The first command ask pip for a list, and the second
+The first command asks pip for a list, and the second
 removes everything except the name.
 """
 import os
 import re
 import subprocess
 
-# import snoop
-# from snoop import pp
+import snoop
+from snoop import pp
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
 
 
-# @snoop
+@snoop
 def initiation_scripts():
     """
-    We use a *Pip* command to get the lsit of installed packages::
+    We use a *Pip* command to get the list of installed packages::
 
         pip list --format freeze
 
     Then we create a file with only the packages names, with the help
     of some *Python's* regex.
     """
-
-    file = "/home/mic/python/cli_apps/cli_apps/pip_data/lists/first_pip.txt"
+    cwd = os.getcwd()
+    file = f"{cwd}/lists/first_pip.txt"
     cmd = f"pip list --format freeze > '{file}'"
     subprocess.run(cmd, shell=True)
 
@@ -42,11 +42,12 @@ def initiation_scripts():
 
     lines = []
     for line in file:
+        # Deletes everything after the '==' sign. It's information on version which we don't care here.'
         name = re.sub("==.*$", "", line)
         lines.append(name)
 
     for o in lines:
-        with open("/home/mic/python/cli_apps/cli_apps/pip_data/lists/names_linux.txt", "a") as f:
+        with open(f"{cwd}/lists/names_linux.txt", "a") as f:
             f.write(f"{o}")
 
 

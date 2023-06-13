@@ -8,8 +8,6 @@ import subprocess
 import snoop
 from snoop import pp
 
-cwd = os.getcwd()
-
 
 @snoop
 def project_creation():
@@ -18,20 +16,47 @@ def project_creation():
     Runs *Scrapy's* command to start a project.\n
     :var str cmd: *scrapy startproject pip_project*.
     """
+    cwd = os.getcwd()
     cmd = "/home/mic/.local/bin/scrapy startproject pip_project"
     subprocess.run(cmd, cwd=cwd, shell=True)
 
 
+if __name__ == "__main__":
+    project_creation()
+
+
+@snoop
 def settings_definition():
     """
-    Settings definition for *Pip* packages.
+    Settings Definition for Pip packages.
     Defines the following options:\n
-    1. FEEDS  Dictionary which structures the file that'll house the spider's results.\n
-    2. RETRY_TIMES   Number of retries when there's a connection error.\n
+    3. FEED_URI.  *results.csv*
+    4. RETRY_TIMES   Number of retries when there's a connection error.\n
+    .. NOTE:: The feeds definitions will be deprecated in the near future.
     """
-    with open(f"{cwd}/pip_project/pip_project/settings.py", "a") as d:
-        d.write("FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}\n")
+    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    with open(f"{tags}/pip_project/pip_project/settings.py", "a") as d:
+        d.write("ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}")
+        d.write("\n")
+        d.write('FEED_EXPORT_FIELDS = ["name", "content"]')
+        d.write("\n")
+        d.write('FEED_FORMAT = "csv"')
+        d.write("\n")
+        d.write('FEED_URI = "results.csv"')
+        d.write("\n")
         d.write("RETRY_TIMES = 1\n")
+        d.close()
+    with open(f"{tags}/pip_project/pip_project/pipelines.py", "r") as f:
+        lines = f.readlines()
+    with open(f"{tags}/pip_project/pip_project/pipelines.py", "w") as f:
+        for line in lines:
+            f.write(line)
+        f.write("\n")
+        f.write("        return item")
+
+
+if __name__ == "__main__":
+    settings_definition()
 
 
 @snoop
@@ -42,6 +67,8 @@ def xorg_urls():
     url, which won't bring much information. We replace them
     with url's to their *Github* pages.
     """
+
+    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
     results = "/home/mic/python/cli_apps/cli_apps/pip_data/results"
     lstresults = os.listdir(results)
 
@@ -58,8 +85,12 @@ def xorg_urls():
         else:
             newurls.append(result)
 
-    with open(f"{cwd}/newurls.bin", "wb") as v:
+    with open(f"{tags}/newurls.bin", "wb") as v:
         pickle.dump(newurls, v)
+
+
+if __name__ == "__main__":
+    xorg_urls()
 
 
 @snoop
@@ -71,13 +102,19 @@ def name_change():
     To comply, but not forget original name, we add a chenged
     version, with underline, as first element of the tuple.\n
     """
-    with open(f"{cwd}/newurls.bin", "rb") as f:
+
+    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    with open(f"{tags}/newurls.bin", "rb") as f:
         setcols = pickle.load(f)
 
     dotname = [(h.replace(".", "_"), h, d, e) for h, d, e in setcols]
     newname = [(n.replace("-", "_"), i, o, m) for n, i, o, m in dotname]
-    with open(f"{cwd}/newname.bin", "wb") as v:
+    with open(f"{tags}/newname.bin", "wb") as v:
         pickle.dump(newname, v)
+
+
+if __name__ == "__main__":
+    name_change()
 
 
 @snoop
@@ -90,13 +127,15 @@ def spider():
     :var str srch_text: Css query for all *<p>* tags.\n
     :var str name: The name of the package. Added so we can identify the lines in the csv.
     """
-    with open(f"{cwd}/newname.bin", "rb") as f:
+
+    tags = "/home/mic/python/cli_apps/cli_apps/pip_data/tags"
+    with open(f"{tags}/newname.bin", "rb") as f:
         newurls = pickle.load(f)
     for entry in newurls:
         spider_name = f"{entry[0].strip()}_spider"
         class_name = f"{spider_name}".upper()
         with open(
-            f"{cwd}/pip_project/pip_project/spiders/{spider_name}.py",
+            f"{tags}/pip_project/pip_project/spiders/{spider_name}.py",
             "w",
         ) as f:
             f.write("import scrapy\n")
@@ -118,17 +157,5 @@ def spider():
             f.write("        yield results\n")
 
 
-@snoop
-def init_project():
-    """
-    Calls all functions in this module.
-    """
-    project_creation()
-    settings_definition()
-    xorg_urls()
-    name_change()
-    spider()
-
-
 if __name__ == "__main__":
-    init_project()
+    spider()

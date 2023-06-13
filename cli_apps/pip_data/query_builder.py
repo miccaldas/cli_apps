@@ -7,17 +7,18 @@ import os
 import subprocess
 from multiprocessing import Pool
 
-# import snoop
+import snoop
 from snoop import pp
 
-# def type_watch(source, value):
-#     return "type({})".format(source), type(value)
+
+def type_watch(source, value):
+    return "type({})".format(source), type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
 
 
-# @snoop()
+@snoop()
 def query_builder(clean):
     """
     We'll instantiate the lists

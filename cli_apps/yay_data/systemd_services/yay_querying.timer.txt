@@ -1,7 +1,0 @@
-● yay_querying.timer - Updating the Yay app list.
-     Loaded: loaded (/usr/lib/systemd/system/yay_querying.timer; disabled; preset: disabled)
-     Active: active (running) since Sun 2023-06-11 19:29:51 WEST; 56ms ago
-    Trigger: n/a
-   Triggers: ● yay_querying.service
-
-Jun 11 19:29:51 micaldas-host systemd[1]: Started Updating the Yay app list..
