@@ -5,13 +5,13 @@ import os
 import pickle
 import subprocess
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
 cwd = os.getcwd()
 
 
-@snoop
+# @snoop
 def project_creation():
     """
     Project Creation for Pip packages.
@@ -22,6 +22,7 @@ def project_creation():
     subprocess.run(cmd, cwd=cwd, shell=True)
 
 
+# @snoop
 def settings_definition():
     """
     Settings definition for *Pip* packages.
@@ -34,7 +35,7 @@ def settings_definition():
         d.write("RETRY_TIMES = 1\n")
 
 
-@snoop
+# @snoop
 def xorg_urls():
     """
     Xorg_urls for Pip packages.
@@ -62,7 +63,7 @@ def xorg_urls():
         pickle.dump(newurls, v)
 
 
-@snoop
+# @snoop
 def name_change():
     """
     Name change for Pip packages.
@@ -80,7 +81,7 @@ def name_change():
         pickle.dump(newname, v)
 
 
-@snoop
+# @snoop
 def spider():
     """
     Spider creation for pip packages.
@@ -118,7 +119,7 @@ def spider():
             f.write("        yield results\n")
 
 
-@snoop
+# @snoop
 def init_project():
     """
     Calls all functions in this module.
