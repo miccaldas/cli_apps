@@ -93,3 +93,5 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}
 RETRY_TIMES = 1
+FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}
+RETRY_TIMES = 1
