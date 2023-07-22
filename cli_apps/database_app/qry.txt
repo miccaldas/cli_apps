@@ -1,0 +1,1 @@
+ python search.py python cli -q installer -q pip -i 1928 -i 1890 -n python-installer -n  python-sortedcontainers
