@@ -1,13 +1,15 @@
 """
 Module Docstring
 """
-import snoop
-from snoop import pp
-import pickle
-from db import dbdata
 import os
+import pickle
 from time import sleep
+
+import snoop
 from pyfzf.pyfzf import FzfPrompt
+from snoop import pp
+
+from db import dbdata
 
 
 def type_watch(source, value):
@@ -37,6 +39,10 @@ def names_expression():
         pickle.dump(nqy, f)
 
 
+if __name__ == "__main__":
+    names_expression()
+
+
 @snoop
 def get_names():
     """
@@ -50,8 +56,12 @@ def get_names():
 
     ninfo = dbdata(query, "fetch")
 
-    with open("ninfo.bin", "wb") as g:
+    with open("nlst.bin", "wb") as g:
         pickle.dump(ninfo, g)
+
+
+if __name__ == "__main__":
+    get_names()
 
 
 @snoop
@@ -65,6 +75,10 @@ def all_names():
 
     with open("allnm.bin", "wb") as f:
         pickle.dump(allnm, f)
+
+
+if __name__ == "__main__":
+    all_names()
 
 
 @snoop
@@ -85,10 +99,12 @@ def show_names():
         '--border bold --border-label="╢Choose Some Names!╟" --border-label-pos bottom',
     )
     if newnames != []:
-        newexp = names_expression(newnames)
+        with open("names.bin", "wb") as g:
+            pickle.dump(newnames, g)
 
-    with open("names.bin", "wb") as g:
-        pickle.dump(newexp, g)
+
+if __name__ == "__main__":
+    show_names()
 
 
 @snoop
@@ -109,7 +125,10 @@ def names_mngmnt(names):
             show_names()
             names_expression()
             get_names()
+            os.remove("allnm.bin")
+            os.remove("names.bin")
+            os.remove("nqy.bin")
 
-    os.remove("names.bin")
-    os.remove("nqy.bin")
-    os.remove("allnm.bin")
+
+if __name__ == "__main__":
+    names_mngmnt()

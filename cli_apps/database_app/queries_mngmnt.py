@@ -33,7 +33,7 @@ def queries_expression():
     we turn it into a string. REady to be
     fed to the database.
     """
-    with open("queries.bin", "wb") as f:
+    with open("queries.bin", "rb") as f:
         queries = pickle.load(f)
 
     megaqry = []
@@ -47,6 +47,10 @@ def queries_expression():
 
     with open("megastr.bin", "wb") as f:
         pickle.dump(megastr, f)
+
+
+if __name__ == "__main__":
+    queries_expression()
 
 
 @snoop
@@ -64,8 +68,12 @@ def get_queries():
         pickle.dump(qr, g)
 
 
+if __name__ == "__main__":
+    get_queries()
+
+
 @snoop
-def query_mngmnt(queries):
+def queries_mngmnt(queries):
     """
     Calls all query searches functions.
     """
@@ -76,3 +84,8 @@ def query_mngmnt(queries):
     get_queries()
 
     os.remove("megastr.bin")
+    os.remove("queries.bin")
+
+
+if __name__ == "__main__":
+    queries_mngmnt()

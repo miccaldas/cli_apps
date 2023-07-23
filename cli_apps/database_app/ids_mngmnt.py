@@ -1,10 +1,12 @@
 """
 Houses all functions regarding id's.
 """
-import snoop
-from snoop import pp
 import os
 import pickle
+
+import snoop
+from snoop import pp
+
 from db import dbdata
 
 
@@ -37,6 +39,10 @@ def ids_expression():
         pickle.dump(iqry, f)
 
 
+if __name__ == "__main__":
+    ids_expression()
+
+
 @snoop
 def get_ids():
     """
@@ -49,8 +55,12 @@ def get_ids():
 
     idinfo = dbdata(query, "fetch")
 
-    with open("idinfo.bin", "wb") as g:
+    with open("ilst.bin", "wb") as g:
         pickle.dump(idinfo, g)
+
+
+if __name__ == "__main__":
+    get_ids()
 
 
 @snoop
@@ -66,3 +76,7 @@ def ids_mngmnt(ids):
 
     os.remove("ids.bin")
     os.remove("iqry.bin")
+
+
+if __name__ == "__main__":
+    ids_mngmnt()

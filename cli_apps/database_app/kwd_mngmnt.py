@@ -44,6 +44,10 @@ def kwds_expression():
         pickle.dump(query, f)
 
 
+if __name__ == "__main__":
+    kwds_expression()
+
+
 @snoop
 def get_kwds():
     """
@@ -59,6 +63,10 @@ def get_kwds():
         pickle.dump(kl, g)
 
 
+if __name__ == "__main__":
+    get_kwds()
+
+
 @snoop
 def kwdchoice():
     """
@@ -68,6 +76,10 @@ def kwdchoice():
     chc = input("Do you want to see a list of available tags[y/n]? ")
     with open("chc.bin", "wb") as f:
         pickle.dump(chc, f)
+
+
+if __name__ == "__main__":
+    kwdchoice()
 
 
 @snoop
@@ -80,6 +92,10 @@ def kwd_lst():
     klst = [i[0] for i in clquery]
 
     return klst
+
+
+if __name__ == "__main__":
+    kwd_lst()
 
 
 @snoop
@@ -102,6 +118,10 @@ def showks():
             pickle.dump(newtgs, f)
 
 
+if __name__ == "__main__":
+    showks()
+
+
 @snoop
 def kwd_mngmnt(keywords):
     """
@@ -113,17 +133,28 @@ def kwd_mngmnt(keywords):
     """
     if keywords:
         with open("keywords.bin", "wb") as g:
-            pickle.dimp(keywords, g)
+            pickle.dump(keywords, g)
         kwds_expression()
         get_kwds()
         os.remove("kquery.bin")
+        os.remove("keywords.bin")
     else:
+        kwdchoice()
         with open("chc.bin", "rb") as f:
             choice = pickle.load(f)
 
         if choice == "y":
+            kwd_lst()
             showks()
             kwds_expression()
             get_kwds()
             os.remove("kquery.bin")
+            os.remove("chc.bin")
             os.remove("keywords.bin")
+            os.remove("chc.bin")
+        else:
+            os.remove("chc.bin")
+
+
+if __name__ == "__main__":
+    kwd_mngmnt()
