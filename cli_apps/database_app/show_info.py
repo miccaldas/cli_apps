@@ -24,7 +24,7 @@ from required_by import required_by
 
 
 # @snoop
-def show_info(req="no"):
+def show_info():
     """
     We look in the data_file, to see what packages have
     information available on them, we create links of
@@ -65,14 +65,6 @@ def show_info(req="no"):
             # The '+=' formulation, between lists, makes it so the first
             # absorbs the elements of the second one.
             fullcont += content
-
-    # Boolean argument that tells if the user wants an examination of required
-    # packages by its search. If it's 'yes', the user wants in information on
-    # the packages that depend on those that we'll find. This is taken care by
-    # 'required_ny' module. 'show_info' sends it the 'fullcont' that he created
-    # so there's no doubling of efforts.
-    if req == "yes":
-        required_by(fullcont)
 
     console = Console()
     console.print(Padding("[bold]PACKAGES[/]", (3, 10, 0, 10)), justify="center")

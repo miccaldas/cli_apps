@@ -1,0 +1,22 @@
+Name            : python-vine
+Version         : 5.0.0-6
+Description     : Promises, promises, promises
+Architecture    : any
+URL             : https://github.com/celery/vine
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : python-case
+Optional Deps   : None
+Required By     : python-amqp
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 72.57 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sat 08 Apr 2023 09:28:32 AM WEST
+Install Date    : Sat 06 May 2023 02:54:54 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+

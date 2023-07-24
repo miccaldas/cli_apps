@@ -62,9 +62,11 @@ def get_query(keywords, queries, ids, names, req):
         checkinfo()
         aggregate_info()
         srch_allinfo()
-        show_info(req="no")
-        if req:
-            show_info(req="yes")
+        show_info()
+
+    if req:
+        cmd = f"cp {data}/* required_files/"
+        print("There are new documents in Required Files.")
 
     for i in [f"/usr/bin/trash-put {data}/*", f"/usr/bin/trash-put {cwd}/*.bin"]:
         subprocess.run(i, shell=True)
