@@ -1,0 +1,22 @@
+Name            : python-pooch
+Version         : 1.7.0-4
+Description     : Python library for fetching and caching data files
+Architecture    : any
+URL             : https://www.fatiando.org/pooch/latest/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : python-requests  python-platformdirs
+Optional Deps   : None
+Required By     : python-scipy
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 745.07 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Tue 11 Jul 2023 11:33:38 AM WEST
+Install Date    : Wed 12 Jul 2023 05:30:21 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+

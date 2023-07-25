@@ -2,16 +2,20 @@
 Houses several methods to be used in building other modules.
 """
 import os
+import os.path
 import pickle
 import subprocess
 from datetime import datetime
 
 import snoop
-from blessed import Terminal
+from click import style
 from pyfzf.pyfzf import FzfPrompt
+from rich import print
+from rich.console import Console
 from snoop import pp
 
 from db import dbdata
+from show_info import show_info
 
 
 def type_watch(source, value):
@@ -19,6 +23,27 @@ def type_watch(source, value):
 
 
 snoop.install(watch_extras=[type_watch])
+
+
+# @snoop
+def input_decision(prompt):
+    """
+    Template for inputs, asking the user
+    for a decision.
+    """
+    console = Console()
+
+    print("\n")
+    dec = input(
+        style(
+            f"          {prompt} ",
+            fg=(160, 196, 157),
+            bold=True,
+        )
+    )
+    print("\n")
+
+    return dec
 
 
 @snoop
@@ -54,10 +79,7 @@ def aggregate_info():
                     # This code allows to merge to an existing list,
                     # elements of another.
                     allinf += [i]
-    allinfo = [
-        (a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i)
-        for a, b, c, d, e, f, g, h, i in allinf
-    ]
+    allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i) for a, b, c, d, e, f, g, h, i in allinf]
 
     with open("allinfo.bin", "wb") as f:
         pickle.dump(allinfo, f)
@@ -65,6 +87,16 @@ def aggregate_info():
 
 if __name__ == "__main__":
     aggregate_info()
+
+
+@snoop
+def subcall(shellcmd, flnm, fldr, flnmid):
+    """
+    Makes 'subprocess' calls for 'yay_info'
+    and 'pip_info'. To simplify the code.
+    """
+    cmd = f"{shellcmd} {flnm} > {fldr}/{flnm}{flnmid}"
+    subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
 
 
 @snoop
@@ -82,41 +114,36 @@ def yay_info(srch):
     grow, as we add other services
     using this function.
     """
+    shellcmd = "yay -Qi"
 
-    if type(srch) == list:
-        # 'srch' comes from 'srch_allinfo', will need to evaluate the
-        # output, as 'fzf' presents a list as a string. To id it,
-        # 'srch_allinfo' adds, at the end of 'srch', the string 'ai'.
-        # This way we'll know we can't process it without evaluating it.
-        if srch[-1] == "ai":
-            # In this case, 'srch' will be two member tuple; the first, a
-            # string with information, the second, a code to identify its
-            # provenance. We only need the first.
-            for i in srch[0]:
-                selection = eval(i)
-                cmd = f"yay -Qi {selection[1]} > data_files/{selection[1]}_yay"
-                subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
-                # As the error the comand generates is a shell command, python
-                # has no notion of an error. So, to check if the 'yay' command
-                # ended successfully, we'll look at the size of supposdly created
-                # file. If it's 0, it means that it errored out.
-                stat = os.stat(f"data_files/{selection[1]}_yay")
-                if stat.st_size == 0:
-                    cmd1 = (
-                        f"yay -Qi python-{selection[1]} > data_files/{selection[1]}_yay"
-                    )
-                    subprocess.run(cmd1, cwd=f"{os.getcwd()}", shell=True)
-        else:
-            # If it's a list and doesn't have an 'ai' entry, it didn't cpme 'fzx'
-            # and it doesn't need to be evaluated.
-            for s in srch:
-                cmd2 = f"yay -Qi {s[1]} > required_files/{s[1]}"
-                subprocess.run(cmd2, cwd=f"{os.getcwd()}", shell=True)
-    else:
-        # We're assuming it comes from 'request_by' and only has one item to search.
-        for t in srch:
-            cmd3 = f"yay -Qi {t[1]} > required_files/{s[1]}"
-            subprocess.run(cmd3, cwd=f"{os.getcwd()}", shell=True)
+    # If 'srch' comes from 'srch_allinfo', will need to evaluate the
+    # output, as 'fzf' presents a list as a string. To id it,
+    # 'srch_allinfo' adds, at the end of 'srch', the string 'ai'.
+    # This way we'll know we can't process it without evaluating it.
+    if srch[-1] == "ai":
+        fldr = "data_files"
+        # In this case, 'srch' will be two member tuple; the first, a
+        # string with information, the second, a code to identify its
+        # provenance. We only need the first.
+        for i in srch[0]:
+            selection = eval(i)
+            if selection[1].startswith("python-"):
+                flnm = f"{selection[1]}"
+            else:
+                flnm = f"python-{selection[1]}"
+            flnmid = "_yay"
+            subcall(shellcmd, flnm, fldr, flnmid)
+    # 'srch' originating in 'required_by', will have a last entry called 'req'.
+    if srch[-1] == "req":
+        fldr = "required_files"
+        # This makes it so we won't loop through the 'req' entry.
+        for s in srch[:-1]:
+            if s[1].startswith("python-"):
+                flnm = f"{s[1]}"
+            else:
+                flnm = f"python-{s[0]}"
+            flnmid = f"_{s[1]}"
+            subcall(shellcmd, flnm, fldr, flnmid)
 
 
 if __name__ == "__main__":
@@ -129,27 +156,24 @@ def pip_info(srch):
     Module to extract information on
     packages from 'pip'.
     """
+    shellcmd = "pip show"
 
-    if type(srch) == list:
-        if srch[-1] == "ai":
-            # In this case, 'srch' will be two member tuple; the first, a
-            # string with information, the second, a code to identify its
-            # provenance. We only need the first.
-            for i in srch[0]:
-                selection = eval()
-                if selection[1].startswith("python-"):
-                    select = selection[1][5:]
-                    come = "pip show select"
-                    subprocess.run(come, cwd=f"{os.getcwd()}", shell=True)
-                cmd = f"pip show {selection[1]} > data_files/{selection[1]}_pip"
-                subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
-        else:
-            for s in srch:
-                cmd1 = f"pip show {s[1]}"
-                subprocess.run(cmd1, cwd=f"{os.getcwd()}", shell=True)
-    if type(srch) == str:
-        cmd2 = f"pip show {srch} > required_files/{srch}_pip"
-        subprocess.run(cmd2, cwd=f"{os.getcwd()}", shell=True)
+    if srch[-1] == "ai":
+        fldr = "data_files"
+        # In this case, 'srch' will be two member tuple; the first, a
+        # string with information, the second, a code to identify its
+        # provenance. We only need the first.
+        for i in srch[0]:
+            selection = eval(i)
+            flnm = f"{selection[1]}"
+            flnmid = "_pip"
+            subcall(shellcmd, flnm, fldr, flnmid)
+    if srch[-1] == "req":
+        fldr = "required_files"
+        for s in srch[:-1]:
+            flnm = f"{s[0]}"
+            flnmid = f"_{s[1]}"
+            subcall(shellcmd, flnm, fldr, flnmid)
 
 
 if __name__ == "__main__":
@@ -167,13 +191,56 @@ def srch_allinfo():
     with open("allinfo.bin", "rb") as f:
         allinfo = pickle.load(f)
 
-    # srch = fzf.prompt(allinfo)
     sr = fzf.prompt(allinfo)
     srch = (sr, "ai")
-    print(srch)
-    # pip_info(srch)
+
+    pip_info(srch)
     yay_info(srch)
 
 
 if __name__ == "__main__":
     srch_allinfo()
+
+
+@snoop
+def delete_all_files():
+    """
+    Deletes all files in 'data_files' and 'required_files'.
+    Deletes all binary files in present directory.
+    """
+    for f in ["data_files", "required_files"]:
+        fldr = f"{os.getcwd()}/{f}"
+        fls = os.listdir(fldr)
+        if fls != []:
+            for i in fls:
+                pth = f"{fldr}/{i}"
+                os.remove(pth)
+
+    cwd_fls = os.listdir(f"{os.getcwd()}")
+    binaries = [i for i in cwd_fls if i.endswith(".bin")]
+    if binaries != []:
+        for b in binaries:
+            os.remove(f"{os.getcwd()}/{b}")
+
+
+# if __name__ == "__main__":
+#     delete_all_files()
+
+
+@snoop
+def delete_empty_files():
+    """
+    Searches for entries with size 0. Deletes them.
+    """
+    for f in ["data_files", "required_files"]:
+        fldr = f"{os.getcwd()}/{f}"
+        fls = os.listdir(fldr)
+        if fls != []:
+            for i in fls:
+                pth = f"{fldr}/{i}"
+                if os.stat(pth).st_size == 0:
+                    os.remove(pth)
+
+
+if __name__ == "__main__":
+    delete_empty_files()

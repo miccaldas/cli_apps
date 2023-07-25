@@ -1,0 +1,22 @@
+Name            : python-requests
+Version         : 2.28.2-4
+Description     : Python HTTP for Humans
+Architecture    : any
+URL             : https://requests.readthedocs.io/
+Licenses        : Apache
+Groups          : None
+Provides        : None
+Depends On      : python-urllib3  python-chardet  python-idna
+Optional Deps   : python-pysocks: SOCKS proxy support
+Required By     : python-cachecontrol  python-pooch  python-sphinx  virt-install
+Optional For    : archlinux-contrib  python-pymongo  python-redis
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 624.92 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sun 09 Apr 2023 09:16:23 PM WEST
+Install Date    : Sat 06 May 2023 02:54:56 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+

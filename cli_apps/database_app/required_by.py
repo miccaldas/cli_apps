@@ -15,7 +15,7 @@ from rich.console import Console
 from rich.padding import Padding
 from snoop import pp
 
-from methods import pip_info, srch_allinfo, yay_info
+from methods import delete_all_files, pip_info, yay_info
 
 
 def type_watch(source, value):
@@ -27,8 +27,17 @@ snoop.install(watch_extras=[type_watch])
 
 @snoop
 def get_lst():
-    """"""
-    reqs = f"{os.getcwd()}/required_files"
+    """
+    Iterates through the files in 'data_files'
+    and looks for information on dependencies,
+    if it finds that package has dependecies,
+    it adds the package name and the dependecy
+    name in a tuple and stores it in a list.
+    """
+    # All information from 'main' is stored in
+    # 'data_files'. Will go there to retrieve
+    # the information asked in the command line.
+    reqs = f"{os.getcwd()}/data_files"
     fils = os.listdir(reqs)
 
     lst = []
@@ -36,26 +45,53 @@ def get_lst():
         with open(f"{reqs}/{file}", "r") as f:
             fil = f.readlines()
             for f in fil:
+                # Format found in files created by 'yay -Qi'
                 if f.startswith("Required By     : "):
-                    if f != f.startswith("Required By     : None"):
+                    if f != f.startswith("Required By     : None\n"):
+                        # The title and spaces occupy 18 px, the 20 px
+                        # its that value and a small margin of confort.
                         if len(f) > 20:
+                            # Deletes the title from the line. We noe have
+                            # only the dependecies names.
                             deps = f[18:]
                             lst.append((file, deps))
+                # Format found in files created by 'pip show'
+                if f.startswith("Required-by: "):
+                    if len(f) > 15:
+                        deps = f[13:]
+                        lst.append((file, deps))
+    with open("lst.bin", "wb") as v:
+        pickle.dump(lst, v)
+
+    # The info comes with linebreaks, we strip them and eliminate
+    # entries with only "None".
     cleanlst = [(a, i.strip()) for a, i in lst if i != "None\n"]
+    with open("cleanlst.bin", "wb") as k:
+        pickle.dump(cleanlst, k)
 
-    spltlst = []
-    for tup in cleanlst:
-        if " " in tup[1]:
-            nw = (tup[0], tup[1].split())
-            spltlst.append(nw)
-        else:
-            spltlst.append(tup)
+    # If nothing's there, it'll be mostly, for not habing found dependecies.
+    # We delete the files of 'data_files' and raise systemexit().
+    if cleanlst == []:
+        print("The chosen packages are required by none.")
+        delete_all_files()
+        raise SystemExit
+    # If we find dependencies, we look for empty spaces in the strings we
+    # collected. If there's empty spaces it's because its a list of dependecies.
+    # We split the string so as to create a list.
+    else:
+        spltlst = []
+        for tup in cleanlst:
+            if " " in tup[1]:
+                if "," in tup[1]:
+                    nw = (tup[0], tup[1].split(", "))
+                    spltlst.append(nw)
+                else:
+                    nw = (tup[0], tup[1].split(" "))
+            else:
+                spltlst.append(tup)
 
-    return spltlst
-
-
-if __name__ == "__main__":
-    get_lst()
+        with open("spltlst.bin", "wb") as f:
+            pickle.dump(spltlst, f)
 
 
 # @snoop
@@ -68,7 +104,8 @@ def show():
     shows the prompt one line below the text and
     pressed to the border of the screen.
     """
-    deps = get_lst()
+    with open("spltlst.bin", "rb") as t:
+        deps = pickle.load(t)
     # This list will collect the id'd version of 'deps' this module will create.
     numbered_deps = []
 
@@ -114,34 +151,36 @@ def show():
     with open("choice_deps.bin", "wb") as g:
         pickle.dump(choice_deps, g)
 
-    return numbered_deps
+    with open("numdeps.bin", "wb") as f:
+        pickle.dump(numbered_deps, f)
 
 
 @snoop
-def choice_processing():
+def choice_processing(binary):
     """
     As "choice_deps" comes in as a string, that may contain one
     or more choices, and because the user can write its input
     in several ways, will try to predict some of them, and handle
     the input so to have a list of dependecies in the end.
     """
-    with open("choice_deps.bin", "rb") as f:
-        choice_deps = pickle.load(f)
+    try:
+        with open(f"{binary}", "rb") as f:
+            choice_deps = pickle.load(f)
 
-    if " " in choice_deps:
-        choice = choice_deps.split(" ")
-    if ", " in choice_deps:
-        choice = choice.deps.split(", ")
-    if " " not in choice_deps:
-        if len(choice_deps) == 2:
+        if " " in choice_deps:
+            choice = choice_deps.split(" ")
+        if ", " in choice_deps:
+            choice = choice.deps.split(", ")
+        if " " not in choice_deps:
             choice = choice_deps
         else:
             if "," in choice_deps:
                 choice = choice_deps.split(",")
 
-    # choice = [int(i) for i in chc]
-
-    return choice
+        with open("choice.bin", "wb") as g:
+            pickle.dump(choice, g)
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 @snoop
@@ -149,24 +188,41 @@ def collect_deps_info():
     """
     Collects information on the chosen dependendecies.
     """
-    numdeps = show()
-    choice = choice_processing()
+    with open("numdeps.bin", "rb") as f:
+        numdeps = pickle.load(f)
+
+    with open("choice.bin", "rb") as g:
+        choice = pickle.load(g)
 
     print(f"choice is {choice}")
     print(f"numdeps is {numdeps}")
 
-    lst = [
-        (numdeps[i][2], numdeps[i][1])
+    srch = [
+        (numdeps[i][1], numdeps[i][2])
         for i in range(len(numdeps))
         if numdeps[i][0] in choice
     ]
+    # This will add a code to the 'srch' list that'll allow 'yay_info'
+    # and 'pip_info' to know what is the internal structure of 'srch',
+    # that is very different from that that is created by 'srch_allinfo'
+    # when called by 'main'.
+    srch.append("req")
+    print(srch)
+    return srch
 
-    # yay_info(lst)
-    pip_info(lst)
+
+@snoop
+def required_main():
+    """
+    Calls all other functions in this module.
+    """
+    get_lst()
+    show()
+    choice_processing("choice_deps.bin")
+    srch = collect_deps_info()
+    yay_info(srch)
+    pip_info(srch)
 
 
 if __name__ == "__main__":
-    collect_deps_info()
-
-# srch_allinfo()
-# get_lst()
+    required_main()

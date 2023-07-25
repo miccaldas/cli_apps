@@ -11,7 +11,6 @@ from rich import print
 from rich.console import Console
 from rich.padding import Padding
 from rich.panel import Panel
-from required_by import required_by
 
 # from snoop import pp
 
@@ -24,7 +23,7 @@ from required_by import required_by
 
 
 # @snoop
-def show_info():
+def show_info(folder, title):
     """
     We look in the data_file, to see what packages have
     information available on them, we create links of
@@ -32,7 +31,7 @@ def show_info():
     Rich to get a better look.
     """
     cwd = os.getcwd()
-    data = f"{cwd}/data_files"
+    data = f"{cwd}/{folder}"
     file_names = os.listdir(data)
 
     # List to house the links that'll create based on 'file_names'. We're
@@ -67,7 +66,10 @@ def show_info():
             fullcont += content
 
     console = Console()
-    console.print(Padding("[bold]PACKAGES[/]", (3, 10, 0, 10)), justify="center")
+    console.print(
+        Padding(f"[bold]{title}[/]", (3, 10, 0, 10)),
+        justify="center",
+    )
     for line in fullcont:
         if line.startswith("Location: "):
             console.print(Padding(f"[red]{line}[/]", (0, 10, 0, 10)))

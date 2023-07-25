@@ -1,0 +1,10 @@
+Name: goose3
+Version: 3.1.13
+Summary: Html Content / Article Extractor, web scrapping for Python3
+Home-page: https://github.com/goose3/goose3
+Author: Mahmoud Lababidi
+Author-email: lababidi+py@gmail.com
+License: Apache
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: beautifulsoup4, cssselect, langdetect, lxml, Pillow, pyahocorasick, python-dateutil, requests
+Required-by: 
