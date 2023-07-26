@@ -4,20 +4,20 @@ Houses all modules regarding fulltext searches.
 import os
 import pickle
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
-from db import dbdata
-
-
-def type_watch(source, value):
-    return f"type({source})", type(value)
+from cli_apps.database_app.db import dbdata
 
 
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-@snoop
+# snoop.install(watch_extras=[type_watch])
+
+
+# @snoop
 def queries_expression():
     """
     Builds the SQL query string.
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     queries_expression()
 
 
-@snoop
+# @snoop
 def get_queries():
     """
     Uses the expression created by 'queries_expression' to make
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     get_queries()
 
 
-@snoop
+# @snoop
 def queries_mngmnt(queries):
     """
     Calls all query searches functions.

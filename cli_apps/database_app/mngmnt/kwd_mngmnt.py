@@ -5,22 +5,25 @@ import os
 import pickle
 from time import sleep
 
-import snoop
+# import snoop
+from cli_apps.database_app.db import dbdata
+from cli_apps.database_app.methods import input_decision
 from pyfzf.pyfzf import FzfPrompt
-from snoop import pp
+from rich.console import Console
+from rich.padding import Padding
 
-from db import dbdata
-
-
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# from snoop import pp
 
 
-snoop.install(watch_extras=[type_watch])
-fzf = FzfPrompt()
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-@snoop
+# snoop.install(watch_extras=[type_watch])
+# fzf = FzfPrompt()
+
+
+# @snoop
 def kwds_expression():
     """
     Searches the tag fields for each of the chosen keywords.
@@ -48,7 +51,7 @@ if __name__ == "__main__":
     kwds_expression()
 
 
-@snoop
+# @snoop
 def get_kwds():
     """
     Uses the expression created by 'kwds_expression' to make
@@ -67,13 +70,15 @@ if __name__ == "__main__":
     get_kwds()
 
 
-@snoop
+# @snoop
 def kwdchoice():
     """
     Where we ask the user that did not input tags,
     if he wants to see a list of them.
     """
-    chc = input("Do you want to see a list of available tags[y/n]? ")
+    # chc = input("Do you want to see a list of available tags[y/n]? ")
+    chc = input_decision("Do you want to see a list of available tags[y/n]? ")
+    print("\n")
     with open("chc.bin", "wb") as f:
         pickle.dump(chc, f)
 
@@ -82,7 +87,7 @@ if __name__ == "__main__":
     kwdchoice()
 
 
-@snoop
+# @snoop
 def kwd_lst():
     """
     Collects a list of all tags in the database.
@@ -98,7 +103,7 @@ if __name__ == "__main__":
     kwd_lst()
 
 
-@snoop
+# @snoop
 def showks():
     """
     Calls 'kwd_lst' tag list and presents it to
@@ -107,8 +112,10 @@ def showks():
     with the results.
     """
     klst = kwd_lst()
-    print("Choose the tags that interest you. If any.")
+    console = Console()
+    console.print(Padding("Choose the tags that interest you. If any.", (2, 10, 2, 10)))
     sleep(0.5)
+    fzf = FzfPrompt()
     newtgs = fzf.prompt(
         klst,
         '--border bold --border-label="╢Choose Some Tags!╟" --border-label-pos bottom',
@@ -122,7 +129,7 @@ if __name__ == "__main__":
     showks()
 
 
-@snoop
+# @snoop
 def kwd_mngmnt(keywords):
     """
     Module that aggregates all operations regarding keywords.
@@ -151,7 +158,6 @@ def kwd_mngmnt(keywords):
             os.remove("kquery.bin")
             os.remove("chc.bin")
             os.remove("keywords.bin")
-            os.remove("chc.bin")
         else:
             os.remove("chc.bin")
 

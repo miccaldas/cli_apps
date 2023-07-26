@@ -5,7 +5,7 @@ Module Docstring
 import os
 import subprocess
 
-import snoop
+# import snoop
 from dotenv import load_dotenv
 from snoop import pp
 
@@ -14,12 +14,12 @@ def type_watch(source, value):
     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
-load_dotenv()
+# load_dotenv()
 
 
-@snoop
+# @snoop
 def srch_package():
     """
     Searches for a package, regardless

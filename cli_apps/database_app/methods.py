@@ -7,22 +7,24 @@ import pickle
 import subprocess
 from datetime import datetime
 
-import snoop
+# import snoop
 from click import style
 from pyfzf.pyfzf import FzfPrompt
 from rich import print
 from rich.console import Console
-from snoop import pp
+from rich.padding import Padding
 
 from db import dbdata
 from show_info import show_info
 
-
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# from snoop import pp
 
 
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
+
+
+# snoop.install(watch_extras=[type_watch])
 
 
 # @snoop
@@ -31,8 +33,6 @@ def input_decision(prompt):
     Template for inputs, asking the user
     for a decision.
     """
-    console = Console()
-
     print("\n")
     dec = input(
         style(
@@ -46,7 +46,16 @@ def input_decision(prompt):
     return dec
 
 
-@snoop
+# @snoop
+def print_template(text):
+    """
+    Template to format string presentation.
+    """
+    console = Console()
+    console.print(Padding(f"[bold #AAC8A7]{text}[/]", (0, 10, 0, 10)))
+
+
+# @snoop
 def checkinfo():
     """
     We'll check what 'bin' files there are,
@@ -63,7 +72,7 @@ if __name__ == "__main__":
     checkinfo()
 
 
-@snoop
+# @snoop
 def aggregate_info():
     """
     Collects and merges file contents produced by 'search'.
@@ -89,7 +98,7 @@ if __name__ == "__main__":
     aggregate_info()
 
 
-@snoop
+# @snoop
 def subcall(shellcmd, flnm, fldr, flnmid):
     """
     Makes 'subprocess' calls for 'yay_info'
@@ -99,7 +108,7 @@ def subcall(shellcmd, flnm, fldr, flnmid):
     subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
 
 
-@snoop
+# @snoop
 def yay_info(srch):
     """
     Module to extract information on
@@ -119,45 +128,97 @@ def yay_info(srch):
     # If 'srch' comes from 'srch_allinfo', will need to evaluate the
     # output, as 'fzf' presents a list as a string. To id it,
     # 'srch_allinfo' adds, at the end of 'srch', the string 'ai'.
-    # This way we'll know we can't process it without evaluating it.
+    # This means the format of 'srch' in this case is two element tuple
+    # with a list of tuples in string format as its first element, and
+    # the code 'ai' as its second.
     if srch[-1] == "ai":
         fldr = "data_files"
+        datapth = f"{os.getcwd()}/{fldr}"
+        flnmid = "_yay"
+
+        # This deletes the contents of 'data_files'. This is to ensure
+        # there's no contamination between requests, whilst giving time
+        # enough to play with the data. Until a new request comes in.
+        cmd = "/usr/bin/trash-put data_files/*"
+        subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
+
         # In this case, 'srch' will be two member tuple; the first, a
         # string with information, the second, a code to identify its
         # provenance. We only need the first.
         for i in srch[0]:
             selection = eval(i)
+            # To ensure we looked thouroughly through 'Paacman's database,
+            # we'll try to look for packages in two of the ways they're
+            # usually written. In this case, if the 'srch' request has a
+            # package that start's with 'python-':
             if selection[1].startswith("python-"):
+                # We try with this name first.
                 flnm = f"{selection[1]}"
+                subcall(shellcmd, flnm, fldr, flnmid)
+                # Then we'll check if the file created with its name has a
+                # file size of 0. This means, most probably, that it didn't
+                # find the package.
+                if os.stat(f"{datapth}/{flnm}{flnmid}").st_size == 0:
+                    # If it didn't find the package, we try to search for it
+                    # without the "python-" prefix.
+                    flnm = f"{selection[1]}[7:]"
+                    subcall(shellcmd, flnm, fldr, flnmid)
             else:
+                # Here, regarding filename, it's the opposite of above. We
+                # start with packages that don't have a 'python-' prefix,
+                # and try to add it if they fail to be found.
+                flnm = f"{selection[1]}"
+                subcall(shellcmd, flnm, fldr, flnmid)
+                if os.stat(f"{datapth}/{flnm}{flnmid}").st_size == 0:
+                    flnm = f"python-{selection[1]}"
+                    subcall(shellcmd, flnm, fldr, flnmid)
                 flnm = f"python-{selection[1]}"
-            flnmid = "_yay"
-            subcall(shellcmd, flnm, fldr, flnmid)
     # 'srch' originating in 'required_by', will have a last entry called 'req'.
     if srch[-1] == "req":
         fldr = "required_files"
+        datapth = f"{os.getcwd()}/{fldr}"
+
+        # This deletes the contents of 'data_files'. This is to ensure
+        # there's no contamination between requests, whilst giving time
+        # enough to play with the data. Until a new request comes in.
+        cmd = "/usr/bin/trash-put required_files/*"
+        subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
+
         # This makes it so we won't loop through the 'req' entry.
         for s in srch[:-1]:
-            if s[1].startswith("python-"):
-                flnm = f"{s[1]}"
+            # For notess on how 'flnm' is defined, see above comments
+            # from lines 142 to 161.
+            if s[0].startswith("python-"):
+                flnm = f"{s[0]}"
+                flnmid = f"_{s[1]}"
+                subcall(shellcmd, flnm, fldr, flnmid)
+                if os.stat(f"{datapth}/{flnm}{flnmid}").st_size == 0:
+                    flnm = f"{s[0]}[7:]"
+                    subcall(shellcmd, flnm, fldr, flnmid)
             else:
-                flnm = f"python-{s[0]}"
-            flnmid = f"_{s[1]}"
-            subcall(shellcmd, flnm, fldr, flnmid)
+                flnm = f"{s[0]}"
+                flnmid = f"_{s[1]}"
+                subcall(shellcmd, flnm, fldr, flnmid)
+                if os.stat(f"{datapth}/{flnm}{flnmid}").st_size == 0:
+                    flnm = f"python-{s[0]}"
+                    subcall(shellcmd, flnm, fldr, flnmid)
 
 
 if __name__ == "__main__":
     yay_info()
 
 
-@snoop
+# @snoop
 def pip_info(srch):
     """
     Module to extract information on
     packages from 'pip'.
     """
     shellcmd = "pip show"
-
+    # If 'srch' comes from 'srch_allinfo', will need to evaluate the
+    # output, as 'fzf' presents a list as a string. To id it,
+    # 'srch_allinfo' adds, at the end of 'srch', the string 'ai'.
+    # This way we'll know we can't process it without evaluating it.
     if srch[-1] == "ai":
         fldr = "data_files"
         # In this case, 'srch' will be two member tuple; the first, a
@@ -168,8 +229,13 @@ def pip_info(srch):
             flnm = f"{selection[1]}"
             flnmid = "_pip"
             subcall(shellcmd, flnm, fldr, flnmid)
+    # The 'req' code tell 's us that it's a request from 'required_by'.
+    # This means that is a list of tuples with a chosen package as
+    # second member, and one of its dependencies as the first.
     if srch[-1] == "req":
         fldr = "required_files"
+        # The last element of 'srch' is the provenance code 'req'.
+        # We don't need it for this.
         for s in srch[:-1]:
             flnm = f"{s[0]}"
             flnmid = f"_{s[1]}"
@@ -180,7 +246,7 @@ if __name__ == "__main__":
     pip_info()
 
 
-@snoop
+# @snoop
 def srch_allinfo():
     """
     Searches 'allinfo' with fzf and, if needed,
@@ -194,40 +260,37 @@ def srch_allinfo():
     sr = fzf.prompt(allinfo)
     srch = (sr, "ai")
 
-    pip_info(srch)
     yay_info(srch)
+    pip_info(srch)
 
 
 if __name__ == "__main__":
     srch_allinfo()
 
 
-@snoop
+# @snoop
 def delete_all_files():
     """
-    Deletes all files in 'data_files' and 'required_files'.
-    Deletes all binary files in present directory.
+    Deletes all binary files in present directory and 'mngmnt'.
     """
-    for f in ["data_files", "required_files"]:
-        fldr = f"{os.getcwd()}/{f}"
-        fls = os.listdir(fldr)
-        if fls != []:
-            for i in fls:
-                pth = f"{fldr}/{i}"
-                os.remove(pth)
 
     cwd_fls = os.listdir(f"{os.getcwd()}")
-    binaries = [i for i in cwd_fls if i.endswith(".bin")]
-    if binaries != []:
-        for b in binaries:
+    mngmnt_fls = os.listdir(f"{os.getcwd()}/mngmnt")
+    cwd_bins = [i for i in cwd_fls if i.endswith(".bin")]
+    mngmnt_bins = [i for i in mngmnt_fls if i.endswith(".bin")]
+    if cwd_bins != []:
+        for b in cwd_bins:
             os.remove(f"{os.getcwd()}/{b}")
+    if mngmnt_bins != []:
+        for b in mngmnt_bins:
+            os.remove(f"{os.getcwd()}/mngmnt/{b}")
 
 
-# if __name__ == "__main__":
-#     delete_all_files()
+if __name__ == "__main__":
+    delete_all_files()
 
 
-@snoop
+# @snoop
 def delete_empty_files():
     """
     Searches for entries with size 0. Deletes them.
@@ -238,9 +301,41 @@ def delete_empty_files():
         if fls != []:
             for i in fls:
                 pth = f"{fldr}/{i}"
+                # 'os.stat(pth)' corresponds to all metadata.
+                # 'sr_size' is file size.
                 if os.stat(pth).st_size == 0:
                     os.remove(pth)
 
 
 if __name__ == "__main__":
     delete_empty_files()
+
+
+# @snoop
+def alternative_presentations(tag="ai"):
+    """
+    Presents, at screens showing info
+    from 'data_files' or 'required_files',
+    other options of search. At this time
+    they are: location and dependecies.
+    """
+
+    if tag == "ai":
+        required = input_decision("Do you want to explore one of this packages dependecies?[y/n] ")
+        if required == "y":
+            alternative = "required_by"
+        ailocation = input_decision("Do you want to see more on the location of these files?[y/n] ")
+        if ailocation == "y":
+            alternative = "location_main"
+        if required == "y" and ailocation == "y":
+            alternative = ("required_by", "location_main")
+    if tag == "req":
+        location = input_decision("Do you want to see more on the location of these files?[y/n] ")
+        if location == "y":
+            alternative == "location"
+
+    return alternative
+
+
+if __name__ == "__main__":
+    alternative_presentations()

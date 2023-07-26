@@ -5,21 +5,24 @@ import os
 import pickle
 from time import sleep
 
-import snoop
+# import snoop
+from cli_apps.database_app.db import dbdata
+from cli_apps.database_app.methods import input_decision
 from pyfzf.pyfzf import FzfPrompt
-from snoop import pp
+from rich.console import Console
+from rich.padding import Padding
 
-from db import dbdata
-
-
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# from snoop import pp
 
 
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-@snoop
+# snoop.install(watch_extras=[type_watch])
+
+
+# @snoop
 def names_expression():
     """
     Builds the SQL statement that'll look for data on
@@ -43,7 +46,7 @@ if __name__ == "__main__":
     names_expression()
 
 
-@snoop
+# @snoop
 def get_names():
     """
     With the built expression on 'names_expression',
@@ -64,7 +67,7 @@ if __name__ == "__main__":
     get_names()
 
 
-@snoop
+# @snoop
 def all_names():
     """
     Collects all names in the database.
@@ -81,7 +84,7 @@ if __name__ == "__main__":
     all_names()
 
 
-@snoop
+# @snoop
 def show_names():
     """
     Shows the name list with fzf. The user might
@@ -92,7 +95,13 @@ def show_names():
     with open("allnm.bin", "rb") as f:
         allnm = pickle.load(f)
 
-    print("Choose the names that interest you. If any.")
+    console = Console()
+    console.print(
+        Padding(
+            "[bold #AAC8A7]Choose the names that interest you. If any.[/]",
+            (2, 10, 2, 10),
+        )
+    )
     sleep(0.5)
     newnames = fzf.prompt(
         allnm,
@@ -107,11 +116,12 @@ if __name__ == "__main__":
     show_names()
 
 
-@snoop
+# @snoop
 def names_mngmnt(names):
     """
     Calls all functions regarding names.
     """
+    console = Console()
     if names:
         with open("names.bin", "wb") as f:
             pickle.dump(names, f)
@@ -119,7 +129,7 @@ def names_mngmnt(names):
         names_expression()
         get_names()
     else:
-        question = input("Do you want to see a list of names?[y/n]? ")
+        question = input_decision("Do you want to see a list of names?[y/n]? ")
         if question == "y":
             all_names()
             show_names()

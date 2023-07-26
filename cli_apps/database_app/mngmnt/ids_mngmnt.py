@@ -4,20 +4,20 @@ Houses all functions regarding id's.
 import os
 import pickle
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
-from db import dbdata
-
-
-def type_watch(source, value):
-    return f"type({source})", type(value)
+from cli_apps.database_app.db import dbdata
 
 
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-@snoop
+# snoop.install(watch_extras=[type_watch])
+
+
+# @snoop
 def ids_expression():
     """
     Builds the SQL statement to search the
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     ids_expression()
 
 
-@snoop
+# @snoop
 def get_ids():
     """
     With the SQL query built by 'ids_expression',
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     get_ids()
 
 
-@snoop
+# @snoop
 def ids_mngmnt(ids):
     """
     Starts all id related functions.

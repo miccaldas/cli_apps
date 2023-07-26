@@ -9,23 +9,24 @@ user can check any time. It'll be a more mediated experience.
 import os
 import pickle
 
-import snoop
+# import snoop
 from click import style
 from rich.console import Console
 from rich.padding import Padding
-from snoop import pp
 
 from methods import delete_all_files, pip_info, yay_info
 
-
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# from snoop import pp
 
 
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-@snoop
+# snoop.install(watch_extras=[type_watch])
+
+
+# @snoop
 def get_lst():
     """
     Iterates through the files in 'data_files'
@@ -87,6 +88,7 @@ def get_lst():
                     spltlst.append(nw)
                 else:
                     nw = (tup[0], tup[1].split(" "))
+                    spltlst.append(nw)
             else:
                 spltlst.append(tup)
 
@@ -110,14 +112,10 @@ def show():
     numbered_deps = []
 
     console = Console()
-    console.print(
-        Padding("[bold #E9FFC2]DEPENDENCIES[/]", (3, 10, 0, 10)), justify="center"
-    )
+    console.print(Padding("[bold #E9FFC2]DEPENDENCIES[/]", (3, 10, 0, 10)), justify="center")
     for i in range(len(deps)):
         if deps[i][0]:
-            console.print(
-                Padding(f"[bold #AAC8A7]\n{deps[i][0][:-4]}[/]", (0, 10, 0, 10))
-            )
+            console.print(Padding(f"[bold #AAC8A7]\n{deps[i][0][:-4]}[/]", (0, 10, 0, 10)))
         if type(deps[i][1]) == list:
             for idx, t in enumerate(deps[i][1]):
                 # collects a dependency id made of the index of the chosen package,
@@ -132,9 +130,7 @@ def show():
                     )
                 )
         else:
-            console.print(
-                Padding(f"[bold #E9FFC2]\[{i}0] - {deps[i][1]}[/]", (0, 10, 0, 14))
-            )
+            console.print(Padding(f"[bold #E9FFC2]\[{i}0] - {deps[i][1]}[/]", (0, 10, 0, 14)))
             numdp = [f"{i}0", f"{deps[i][1]}", f"{deps[i][0][:-4]}"]
             numbered_deps.append(numdp)
 
@@ -155,7 +151,7 @@ def show():
         pickle.dump(numbered_deps, f)
 
 
-@snoop
+# @snoop
 def choice_processing(binary):
     """
     As "choice_deps" comes in as a string, that may contain one
@@ -183,7 +179,7 @@ def choice_processing(binary):
         print(f"An error occurred: {e}")
 
 
-@snoop
+# @snoop
 def collect_deps_info():
     """
     Collects information on the chosen dependendecies.
@@ -197,21 +193,16 @@ def collect_deps_info():
     print(f"choice is {choice}")
     print(f"numdeps is {numdeps}")
 
-    srch = [
-        (numdeps[i][1], numdeps[i][2])
-        for i in range(len(numdeps))
-        if numdeps[i][0] in choice
-    ]
+    srch = [(numdeps[i][1], numdeps[i][2]) for i in range(len(numdeps)) if numdeps[i][0] in choice]
     # This will add a code to the 'srch' list that'll allow 'yay_info'
     # and 'pip_info' to know what is the internal structure of 'srch',
     # that is very different from that that is created by 'srch_allinfo'
     # when called by 'main'.
     srch.append("req")
-    print(srch)
     return srch
 
 
-@snoop
+# @snoop
 def required_main():
     """
     Calls all other functions in this module.
