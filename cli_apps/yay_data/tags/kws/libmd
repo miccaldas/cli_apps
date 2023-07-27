@@ -1,0 +1,5 @@
+libraries
+openbsd
+library
+libc
+freebsd

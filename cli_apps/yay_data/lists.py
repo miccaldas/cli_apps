@@ -6,17 +6,16 @@ import pickle
 import re
 import subprocess
 
-# import snoop
+import snoop
 from mysql.connector import Error, connect
-
-# from snoop import pp
-
-
-# def type_watch(source, value):
-#     return "type({})".format(source), type(value)
+from snoop import pp
 
 
-# snoop.install(watch_extras=[type_watch])
+def type_watch(source, value):
+    return "type({})".format(source), type(value)
+
+
+snoop.install(watch_extras=[type_watch])
 
 
 class Lists:
@@ -31,7 +30,7 @@ class Lists:
         self.cwd = cwd
         self.lists = lists
 
-    # @snoop
+    @snoop
     def yay_lst(self):
         """
         Sources and stores in a file, all *Arch* installed packages::
@@ -41,7 +40,7 @@ class Lists:
         cmd = f"yay -Qi > {self.lists}/yay_lst.txt"
         subprocess.run(cmd, shell=True)
 
-    # @snoop
+    @snoop
     def db_lst(self):
         """
         Sources, cleans and stores in a file, list of names of packages in the database.\n
@@ -65,7 +64,7 @@ class Lists:
         with open(f"{self.lists}/dblst.bin", "wb") as f:
             pickle.dump(records, f)
 
-    # @snoop
+    @snoop
     def yay_names(self):
         """
         Cleans and compares the lists of *Arch* packages and

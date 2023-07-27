@@ -6,18 +6,19 @@ and send it to a MySQL database.
 import os
 import pickle
 import subprocess
-from dotenv import load_dotenv
 
 import snoop
+from dotenv import load_dotenv
 from mysql.connector import Error, connect
-from snoop import pp
+
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 # Environmental Variables
@@ -25,7 +26,7 @@ tags = os.getenv("TAGS")
 yay = os.getenv("YAY")
 
 
-@snoop
+# @snoop
 def kwd_collector():
     """
     We collect the *Arch* keywords and joint them with the rest of the data.

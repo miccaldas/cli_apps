@@ -33,7 +33,7 @@ tags = os.getenv("TAGS")
 yay = os.getenv("YAY")
 
 
-@snoop
+# @snoop
 def main():
     """
     We call the other modules, in order, to update the database.

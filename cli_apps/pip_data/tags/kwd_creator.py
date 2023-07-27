@@ -8,13 +8,13 @@ import os
 import pickle
 import re
 import subprocess
+import sys
 
 # import snoop
 from keybert import KeyBERT
 
 # from snoop import pp
 from thefuzz import fuzz, process
-
 
 # def type_watch(source, value):
 #     return "type({})".format(source), type(value)
@@ -29,8 +29,8 @@ def csv_cleaner():
     Csv cleaner for Pip packages.
     We remove column names and also the exccess whitespaces from the scraped content.
     """
-    pth = "/home/mic/python/cli_apps/cli_apps/pip_data/tags/pip_project"
-
+    pth = "/home/mic/python/cli_apps/cli_apps/pip_data/pip_project"
+    csv.field_size_limit(sys.maxsize)
     lines = []
     with open(f"{pth}/results.csv", "r") as f:
         reader = csv.reader(f)

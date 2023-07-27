@@ -10,26 +10,26 @@ import re
 import subprocess
 import sys
 
-import snoop
+# import snoop
 from dotenv import load_dotenv
 from keybert import KeyBERT
-from snoop import pp
+
+# from snoop import pp
 from thefuzz import fuzz, process
 
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
 
-
-snoop.install(watch_extras=[type_watch])
-load_dotenv()
+# snoop.install(watch_extras=[type_watch])
+# load_dotenv()
 
 # Project Environmental Variables
 tags = os.getenv("TAGS")
 project = os.getenv("PROJECT")
 
 
-@snoop
+# @snoop
 def csv_cleaner():
     """
     Csv cleaner for *Arch* packages.
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     csv_cleaner()
 
 
-@snoop
+# @snoop
 def kwd_creator():
     """
     We run KeyBERT through *nospaces.bin*.

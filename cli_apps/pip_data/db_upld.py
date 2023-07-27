@@ -6,7 +6,7 @@ and send it to a MySQL database.
 import os
 import pickle
 
-# import snoop
+import snoop
 from mysql.connector import Error, connect
 
 # def type_watch(source, value):
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     kwd_collector()
 
 
-# @snoop
+@snoop
 def db_upload():
     """
     The database was previously created.
@@ -88,11 +88,11 @@ def db_upload():
                 answers += [k[1].lower()]
                 answers += [k[2].lower()]
                 answers += [k[3].lower()]
-
+            answers += ["pip"]
             try:
                 conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
                 cur = conn.cursor()
-                query = "INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+                query = "INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4, source) VALUES (%s, %s, %s, %s, %s, %s, %s)"
                 cur.execute(query, answers)
                 conn.commit()
             except Error as e:

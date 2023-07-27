@@ -1,0 +1,4 @@
+gflags_namespace
+gflags_declare
+gflags_include_dir
+compilers

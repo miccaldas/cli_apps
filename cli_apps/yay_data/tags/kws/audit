@@ -1,0 +1,4 @@
+glibc
+compile
+kernheaders
+rpmbuild

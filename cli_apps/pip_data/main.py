@@ -19,7 +19,7 @@ from cron import cron
 from db_upld import db_upload, kwd_collector
 from delete import delete
 from extract_file_info import extract_file_info
-from initiation_scripts import initiation_scripts
+from initiation_scripts import db_data, initiation_scripts
 from query_builder import query_builder
 from tags.kwd_creator import csv_cleaner, kwd_creator
 from tags.project_creation import init_project
@@ -30,23 +30,6 @@ from tags.spider_runner import spider_runner
 
 
 # snoop.install(watch_extras=[type_watch])
-
-
-# @snoop
-def change_name():
-    """
-    We'll change the name of the 'names_linux.txt'
-    file to 'old_names_linux.txt'. This way, when
-    we update again, we'll have the names of the
-    entries, and can discard all that we already
-    processed.
-    """
-    cwd = os.getcwd()
-    os.rename(f"{cwd}/lists/names_linux.txt", f"{cwd}/lists/old_names_linux.txt")
-
-
-if __name__ == "__main__":
-    change_name()
 
 
 # @snoop
@@ -65,6 +48,7 @@ def run():
     and, as is parsing them, it will upload them.
     """
 
+    # db_data()
     initiation_scripts()
 
     # As we're using multiprocessing in 'query_builder', I can't call it from another module,
@@ -85,6 +69,7 @@ def run():
         spider_runner()
         csv_cleaner()
         kwd_creator()
+        db_upload()
     delete()
 
 

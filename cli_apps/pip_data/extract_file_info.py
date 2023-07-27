@@ -6,18 +6,18 @@ import os
 import re
 import subprocess
 
-# import snoop
-# from snoop import pp
+import snoop
+from snoop import pp
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
 
 
-# @snoop
+@snoop
 def extract_file_info():
     """
     We iterate through the files in *package_files*, search for the

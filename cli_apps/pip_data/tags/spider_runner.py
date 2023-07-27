@@ -6,20 +6,20 @@ import os
 import subprocess
 from multiprocessing import Pool
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 cwd = os.getcwd()
 
 
-@snoop
+# @snoop
 def spider_runner(spiders_lst):
     """
     :var str cmd: *scrapy crawl <sipder_name>*\n

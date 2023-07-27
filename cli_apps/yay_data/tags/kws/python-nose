@@ -1,0 +1,4 @@
+nosetests
+pip
+unittest
+python3

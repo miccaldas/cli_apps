@@ -4,21 +4,22 @@ to get information on installed packages.
 """
 import multiprocessing
 import os
+import pickle
 import subprocess
 from multiprocessing import Pool
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop()
+# @snoop()
 def query_builder(clean):
     """
     We'll instantiate the lists
@@ -33,14 +34,12 @@ def query_builder(clean):
     """
 
     cwd = os.getcwd()
-    old_name_path = f"{cwd}/lists/old_names_linux.txt"
+    old_name_path = f"{cwd}/lists/old_names_linux.bin"
 
-    with open(old_name_path, "r") as f:
-        old_names = f.readlines()
+    with open(old_name_path, "rb") as f:
+        old_names = pickle.load(f)
 
-    old_clean = [v.strip() for v in old_names]
-
-    if clean not in old_clean:
+    if clean not in old_names:
         cmd = f"pip show {clean} > package_files/{clean}"
         subprocess.run(cmd, shell=True)
 

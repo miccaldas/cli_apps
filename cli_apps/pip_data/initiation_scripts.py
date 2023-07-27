@@ -8,21 +8,40 @@ The first command asks pip for a list, and the second
 removes everything except the name.
 """
 import os
+import pickle
 import re
 import subprocess
 
-import snoop
-from snoop import pp
+from db import dbdata
+
+# import snoop
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
+def db_data():
+    """
+    Takes a list of all names in the db.
+    """
+    query = "SELECT name FROM cli_apps"
+    lst = dbdata(query, "fetch")
+    lt = [i for sub in lst for i in sub]
+    with open("lists/old_names_linux.bin", "wb") as f:
+        pickle.dump(lt, f)
+
+
+if __name__ == "__main__":
+    db_data()
+
+
+# @snoop
 def initiation_scripts():
     """
     We use a *Pip* command to get the list of installed packages::

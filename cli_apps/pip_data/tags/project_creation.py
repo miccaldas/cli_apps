@@ -6,6 +6,7 @@ import pickle
 import subprocess
 
 # import snoop
+
 # from snoop import pp
 
 cwd = os.getcwd()
@@ -31,7 +32,9 @@ def settings_definition():
     2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
     with open(f"{cwd}/pip_project/pip_project/settings.py", "a") as d:
-        d.write("FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}\n")
+        d.write(
+            "FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}\n"
+        )
         d.write("RETRY_TIMES = 1\n")
 
 
