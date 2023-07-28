@@ -12,6 +12,9 @@ from pyfzf.pyfzf import FzfPrompt
 from rich.console import Console
 from rich.padding import Padding
 
+from mngmnt.get import get
+from mngmnt.sql_expression import sql_expression
+
 # from snoop import pp
 
 
@@ -24,50 +27,50 @@ from rich.padding import Padding
 
 
 # @snoop
-def kwds_expression():
-    """
-    Searches the tag fields for each of the chosen keywords.
-    Creates an UNION SQL query between results of each tags.
-    This precludes repeated results. The SQL query is kept
-    in a pickle file.
-    """
-    with open("keywords.bin", "rb") as g:
-        keys = pickle.load(g)
+# def kwds_expression():
+#     """
+#     Searches the tag fields for each of the chosen keywords.
+#     Creates an UNION SQL query between results of each tags.
+#     This precludes repeated results. The SQL query is kept
+#     in a pickle file.
+#     """
+#     with open("keywords.bin", "rb") as g:
+#         keys = pickle.load(g)
 
-    qry = []
-    for i in keys:
-        query = f"SELECT * FROM cli_apps WHERE t1 = '{i}' OR t2 = '{i}' OR t3 = '{i}' OR t4 = '{i}'"
-        qry.append(query)
-    querytups = [(g, " UNION ") for g in qry]
-    querylst = [h for tup in querytups for h in tup]
-    querylst.pop(-1)
-    query = " ".join(querylst)
+#     qry = []
+#     for i in keys:
+#         query = f"SELECT * FROM cli_apps WHERE t1 = '{i}' OR t2 = '{i}' OR t3 = '{i}' OR t4 = '{i}'"
+#         qry.append(query)
+#     querytups = [(g, " UNION ") for g in qry]
+#     querylst = [h for tup in querytups for h in tup]
+#     querylst.pop(-1)
+#     query = " ".join(querylst)
 
-    with open("kquery.bin", "wb") as f:
-        pickle.dump(query, f)
+#     with open("kquery.bin", "wb") as f:
+#         pickle.dump(query, f)
 
 
-if __name__ == "__main__":
-    kwds_expression()
+# if __name__ == "__main__":
+#     kwds_expression()
 
 
 # @snoop
-def get_kwds():
-    """
-    Uses the expression created by 'kwds_expression' to make
-    a database call. Keeps results in a pickle file.
-    """
-    with open("kquery.bin", "rb") as f:
-        query = pickle.load(f)
+# def get_kwds():
+#     """
+#     Uses the expression created by 'kwds_expression' to make
+#     a database call. Keeps results in a pickle file.
+#     """
+#     with open("kquery.bin", "rb") as f:
+#         query = pickle.load(f)
 
-    kl = dbdata(query, "fetch")
+#     kl = dbdata(query, "fetch")
 
-    with open("klst.bin", "wb") as g:
-        pickle.dump(kl, g)
+#     with open("klst.bin", "wb") as g:
+#         pickle.dump(kl, g)
 
 
-if __name__ == "__main__":
-    get_kwds()
+# if __name__ == "__main__":
+#     get_kwds()
 
 
 # @snoop
@@ -141,8 +144,10 @@ def kwd_mngmnt(keywords):
     if keywords:
         with open("keywords.bin", "wb") as g:
             pickle.dump(keywords, g)
-        kwds_expression()
-        get_kwds()
+        sql_expression("keywords.bin", "kquery.bin")
+        # kwds_expression()
+        # get_kwds()
+        get("kquery.bin", "klst.bin")
         os.remove("kquery.bin")
         os.remove("keywords.bin")
     else:
@@ -153,8 +158,10 @@ def kwd_mngmnt(keywords):
         if choice == "y":
             kwd_lst()
             showks()
-            kwds_expression()
-            get_kwds()
+            sql_expression("keywords.bin", "kquery.bin")
+            # kwds_expression()
+            # get_kwds()
+            get("kquery.bin", "klst.bin")
             os.remove("kquery.bin")
             os.remove("chc.bin")
             os.remove("keywords.bin")

@@ -26,7 +26,7 @@ def cleaning():
     """
     We get rid of linebreaks and names with forward dashes.
     """
-    with open("compgen.txt", "r") as f:
+    with open("lists/compgen.txt", "r") as f:
         cg = f.readlines()
 
     cleancg = [i.strip() for i in cg]
@@ -55,8 +55,10 @@ def db_comparison():
 
     notindb = [i for i in cleaner if i not in cleannames]
 
-    with open("notindb.db", "wb") as g:
+    with open("lists/notindb.db", "wb") as g:
         pickle.dump(notindb, g)
+
+    os.remove("cleaner.bin")
 
 
 # @snoop
@@ -68,10 +70,10 @@ def mansplain():
     having to create a spider to retrieve the data
     we have in-house.
     """
-    with open("notindb.bin", "rb") as f:
+    with open("lists/notindb.bin", "rb") as f:
         nodb = pickle.load(f)
 
-    with open("man_pages_lst.txt", "r") as g:
+    with open("lists/man_pages_lst.txt", "r") as g:
         mn = g.readlines()
 
     man = [i.strip() for i in mn]
@@ -83,13 +85,13 @@ def mansplain():
 
     noman = [i for i in nodb if i not in short_man]
 
-    with open("noman.bin", "wb") as g:
+    with open("lists/noman.bin", "wb") as g:
         pickle.dump(noman, g)
 
     print(len(noman))
 
 
-# if __name__ == "__main__":
-# cleaning()
-# db_comparison()
-# mansplain()
+if __name__ == "__main__":
+    # cleaning()
+    # db_comparison()
+    # mansplain()

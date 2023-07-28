@@ -7,6 +7,8 @@ import shutil
 import subprocess
 
 import click
+import snoop
+from snoop import pp
 
 from location import location_main
 from methods import (
@@ -25,15 +27,12 @@ from mngmnt.queries_mngmnt import queries_mngmnt
 from required_by import required_main
 from show_info import show_info
 
-# import snoop
-# from snoop import pp
+
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
-
-
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
 
 
 @click.command()
@@ -42,7 +41,7 @@ from show_info import show_info
 @click.option("-i", "--ids", multiple=True, is_flag=False, flag_value="id", default=[], type=int)
 @click.option("-n", "--names", multiple=True, is_flag=False, flag_value="query", default=[])
 @click.option("--req / --no-req", default=False)
-# @snoop
+@snoop
 def get_query(keywords, queries, ids, names, req):
     """
     Because we want to deal with complex queries, we'll define that we can receive,

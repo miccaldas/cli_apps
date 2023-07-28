@@ -7,7 +7,7 @@ import pickle
 import subprocess
 from datetime import datetime
 
-# import snoop
+import snoop
 from click import style
 from pyfzf.pyfzf import FzfPrompt
 from rich import print
@@ -55,7 +55,7 @@ def print_template(text):
     console.print(Padding(f"[bold #AAC8A7]{text}[/]", (0, 10, 0, 10)))
 
 
-# @snoop
+@snoop
 def checkinfo():
     """
     We'll check what 'bin' files there are,
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     checkinfo()
 
 
-# @snoop
+@snoop
 def aggregate_info():
     """
     Collects and merges file contents produced by 'search'.
@@ -88,7 +88,9 @@ def aggregate_info():
                     # This code allows to merge to an existing list,
                     # elements of another.
                     allinf += [i]
-    allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i) for a, b, c, d, e, f, g, h, i in allinf]
+    for t in allinf:
+        print(t)
+    allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j) for a, b, c, d, e, f, g, h, i, j in allinf]
 
     with open("allinfo.bin", "wb") as f:
         pickle.dump(allinfo, f)

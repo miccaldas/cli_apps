@@ -7,7 +7,7 @@ the 'cli_apps' entries.
 import pickle
 from urllib.parse import urlparse
 
-# import snoop
+import snoop
 from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
 
 # from snoop import pp
@@ -34,12 +34,16 @@ def run_searches(targets, interval):
         "https://sourceware.org",
         "https://ftp.gnu.org",
         "https://www.commandlinux.com/man-page",
-        "https://manpages.i",
+        "https://manpages.",
         "https://helpmanual.io",
         "https://man7.org/",
     ]
 
-    avoidance_urls = ["netloc.endswith('.pt')", "https://linkedin.com", "https://dicion"]
+    avoidance_urls = [
+        "netloc.endswith('.pt')",
+        "https://linkedin.com",
+        "https://dicion",
+    ]
 
     userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
     app_data = []
@@ -50,14 +54,27 @@ def run_searches(targets, interval):
         app_data.append(app_tuple)
         app_data.append(interval)
 
-    with open("app_data.bin", "wb") as f:
-        pickle.dump(app_data, f)
+        with open(f"app_data/{interval[0]}_{interval[1]}.bin", "wb") as f:
+            pickle.dump(app_data, f)
+        with open("tally.bin", "a") as g:
+            g.write(f"{interval}\n")
 
-    with open("tally.txt", "a") as g:
-        g.write(f"{interval}\n")
+
+@snoop
+def tally(split, noman):
+    """
+    Where we keep count of what has already been
+    analyzed and not.
+    """
+    noman_update = [i for i in noman if i not in split]
+    with open("lists/noman.db", "wb") as f:
+        pickle.dump(noman_update, f)
+
+    length = len(noman_update)
+    print(f"    There are now {length} entries to be done.")
 
 
-# @snoop
+@snoop
 def target_definition():
     """
     It probably won't be productive to try
@@ -69,13 +86,14 @@ def target_definition():
     to be explored, as well as the id
     interval that we used.
     """
-    with open("notindb.bin", "rb") as f:
-        nodb = pickle.load(f)
+    with open("lists/noman.bin", "rb") as f:
+        noman = pickle.load(f)
 
-    split = [t for i, t in enumerate(nodb) if i <= 50]
+    split = [i for i, t in enumerate(noman) if i > 50 and i <= 100]
+    targets = [t for i, t in enumerate(noman) if i > 50 and i <= 100]
 
-    targets = split
-    run_searches(targets, [0, 50])
+    run_searches(targets, [50, 100])
+    tally(targets, noman)
 
 
 if __name__ == "__main__":

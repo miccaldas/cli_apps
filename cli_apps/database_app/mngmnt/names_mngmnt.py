@@ -12,6 +12,9 @@ from pyfzf.pyfzf import FzfPrompt
 from rich.console import Console
 from rich.padding import Padding
 
+from mngmnt.get import get
+from mngmnt.sql_expression import sql_expression
+
 # from snoop import pp
 
 
@@ -20,51 +23,6 @@ from rich.padding import Padding
 
 
 # snoop.install(watch_extras=[type_watch])
-
-
-# @snoop
-def names_expression():
-    """
-    Builds the SQL statement that'll look for data on
-    the chosen names.
-    """
-    with open("names.bin", "rb") as g:
-        names = pickle.load(g)
-    nqry = []
-    for i in names:
-        partial = f"SELECT * FROM cli_apps WHERE name = '{i}'"
-        nqry.append(partial)
-        nqry.append(" UNION ")
-    nqry.pop(-1)
-    nqry.append(" ORDER BY TIME")
-    nqy = " ".join(nqry)
-    with open("nqy.bin", "wb") as f:
-        pickle.dump(nqy, f)
-
-
-if __name__ == "__main__":
-    names_expression()
-
-
-# @snoop
-def get_names():
-    """
-    With the built expression on 'names_expression',
-    we'll maake a db call and get the information.
-    """
-    with open("nqy.bin", "rb") as f:
-        query = pickle.load(f)
-
-    print(query)
-
-    ninfo = dbdata(query, "fetch")
-
-    with open("nlst.bin", "wb") as g:
-        pickle.dump(ninfo, g)
-
-
-if __name__ == "__main__":
-    get_names()
 
 
 # @snoop
@@ -126,15 +84,16 @@ def names_mngmnt(names):
         with open("names.bin", "wb") as f:
             pickle.dump(names, f)
 
-        names_expression()
-        get_names()
+        sql_expression("names.bin", "nqy.bin")
+        get("nqy.bin", "nlst.bin")
     else:
         question = input_decision("Do you want to see a list of names?[y/n]? ")
         if question == "y":
             all_names()
             show_names()
-            names_expression()
-            get_names()
+            sql_expression("names.bin", "nqy.bin")
+            get("nqy.bin", "nlst.bin")
+
             os.remove("allnm.bin")
             os.remove("names.bin")
             os.remove("nqy.bin")

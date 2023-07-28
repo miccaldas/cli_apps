@@ -1,9 +1,11 @@
 """
 MySQL module, to be shared by all modules.
 """
+import snoop
 from mysql.connector import Error, connect
 
 
+@snoop
 def dbdata(query, data, answers=None):
     """
     Collects list of posts on the db.
@@ -23,8 +25,9 @@ def dbdata(query, data, answers=None):
             database="cli_apps",
         )
         cur = conn.cursor()
-        if answers:
-            cur.execute(query, answers)
+        if query:
+            if answers:
+                cur.execute(query, "fresh", answers)
         else:
             cur.execute(query)
         if data == "fetch":
