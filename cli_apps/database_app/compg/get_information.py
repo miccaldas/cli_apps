@@ -33,16 +33,14 @@ def run_searches(targets, interval):
         "https://pypi.org",
         "https://sourceware.org",
         "https://ftp.gnu.org",
-        "https://www.commandlinux.com/man-page",
+        "https://www.commandlinux.com",
         "https://manpages.",
         "https://helpmanual.io",
         "https://man7.org/",
     ]
 
     avoidance_urls = [
-        "netloc.endswith('.pt')",
         "https://linkedin.com",
-        "https://dicion",
     ]
 
     userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"

@@ -3,16 +3,14 @@ Houses all functions regarding keywords.
 """
 import os
 import pickle
-from time import sleep
 
 # import snoop
 from cli_apps.database_app.db import dbdata
 from cli_apps.database_app.methods import input_decision
-from pyfzf.pyfzf import FzfPrompt
-from rich.console import Console
-from rich.padding import Padding
 
+from mngmnt.column_content import column_content
 from mngmnt.get import get
+from mngmnt.show_column import show_column
 from mngmnt.sql_expression import sql_expression
 
 # from snoop import pp
@@ -24,112 +22,6 @@ from mngmnt.sql_expression import sql_expression
 
 # snoop.install(watch_extras=[type_watch])
 # fzf = FzfPrompt()
-
-
-# @snoop
-# def kwds_expression():
-#     """
-#     Searches the tag fields for each of the chosen keywords.
-#     Creates an UNION SQL query between results of each tags.
-#     This precludes repeated results. The SQL query is kept
-#     in a pickle file.
-#     """
-#     with open("keywords.bin", "rb") as g:
-#         keys = pickle.load(g)
-
-#     qry = []
-#     for i in keys:
-#         query = f"SELECT * FROM cli_apps WHERE t1 = '{i}' OR t2 = '{i}' OR t3 = '{i}' OR t4 = '{i}'"
-#         qry.append(query)
-#     querytups = [(g, " UNION ") for g in qry]
-#     querylst = [h for tup in querytups for h in tup]
-#     querylst.pop(-1)
-#     query = " ".join(querylst)
-
-#     with open("kquery.bin", "wb") as f:
-#         pickle.dump(query, f)
-
-
-# if __name__ == "__main__":
-#     kwds_expression()
-
-
-# @snoop
-# def get_kwds():
-#     """
-#     Uses the expression created by 'kwds_expression' to make
-#     a database call. Keeps results in a pickle file.
-#     """
-#     with open("kquery.bin", "rb") as f:
-#         query = pickle.load(f)
-
-#     kl = dbdata(query, "fetch")
-
-#     with open("klst.bin", "wb") as g:
-#         pickle.dump(kl, g)
-
-
-# if __name__ == "__main__":
-#     get_kwds()
-
-
-# @snoop
-def kwdchoice():
-    """
-    Where we ask the user that did not input tags,
-    if he wants to see a list of them.
-    """
-    # chc = input("Do you want to see a list of available tags[y/n]? ")
-    chc = input_decision("Do you want to see a list of available tags[y/n]? ")
-    print("\n")
-    with open("chc.bin", "wb") as f:
-        pickle.dump(chc, f)
-
-
-if __name__ == "__main__":
-    kwdchoice()
-
-
-# @snoop
-def kwd_lst():
-    """
-    Collects a list of all tags in the database.
-    """
-    query = "SELECT t1 FROM cli_apps UNION SELECT t2 FROM cli_apps UNION SELECT t3 FROM cli_apps UNION SELECT t4 FROM cli_apps"
-    clquery = dbdata(query, "fetch")
-    klst = [i[0] for i in clquery]
-
-    return klst
-
-
-if __name__ == "__main__":
-    kwd_lst()
-
-
-# @snoop
-def showks():
-    """
-    Calls 'kwd_lst' tag list and presents it to
-    the user through 'fzf'. If the user makes
-    any selections, creates a pickle file
-    with the results.
-    """
-    klst = kwd_lst()
-    console = Console()
-    console.print(Padding("Choose the tags that interest you. If any.", (2, 10, 2, 10)))
-    sleep(0.5)
-    fzf = FzfPrompt()
-    newtgs = fzf.prompt(
-        klst,
-        '--border bold --border-label="╢Choose Some Tags!╟" --border-label-pos bottom',
-    )
-    if newtgs != []:
-        with open("keywords.bin", "wb") as f:
-            pickle.dump(newtgs, f)
-
-
-if __name__ == "__main__":
-    showks()
 
 
 # @snoop
@@ -145,22 +37,22 @@ def kwd_mngmnt(keywords):
         with open("keywords.bin", "wb") as g:
             pickle.dump(keywords, g)
         sql_expression("keywords.bin", "kquery.bin")
-        # kwds_expression()
-        # get_kwds()
         get("kquery.bin", "klst.bin")
         os.remove("kquery.bin")
         os.remove("keywords.bin")
     else:
-        kwdchoice()
-        with open("chc.bin", "rb") as f:
-            choice = pickle.load(f)
-
+        choice = input_decision("Do you want to see a list of available tags[y/n]? ")
         if choice == "y":
-            kwd_lst()
-            showks()
+            column_content(
+                "SELECT t1 FROM cli_apps UNION SELECT t2 FROM cli_apps UNION SELECT t3 FROM cli_apps UNION SELECT t4 FROM cli_apps",
+                "klst.bin",
+            )
+            show_column(
+                "klst.bin",
+                "Choose Some Tags!",
+                "keywords.bin",
+            )
             sql_expression("keywords.bin", "kquery.bin")
-            # kwds_expression()
-            # get_kwds()
             get("kquery.bin", "klst.bin")
             os.remove("kquery.bin")
             os.remove("chc.bin")

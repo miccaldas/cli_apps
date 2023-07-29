@@ -31,9 +31,7 @@ def sql_expression(in_binary, out_binary):
 
     collection = []
     if in_binary == "queries.bin":
-        qry = (
-            "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
-        )
+        qry = "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
     if in_binary == "keywords.bin":
         qry = 'SELECT * FROM cli_apps WHERE t1 = "dummy" OR t2 = "dummy" OR t3 = "dummy" OR t4 = "dummy"'
     if in_binary == "ids.bin":
@@ -42,7 +40,7 @@ def sql_expression(in_binary, out_binary):
         qry = "SELECT * FROM cli_apps WHERE name = 'dummy'"
 
     for ask in asks:
-        # This is for keywords, to create an expression by keyword.
+        # This is for keywords.
         if "t1" in qry:
             kqry = qry.replace("dummy", ask)
             collection.append(kqry)
@@ -51,23 +49,24 @@ def sql_expression(in_binary, out_binary):
             nqry = qry.replace("dummy", ask)
             collection.append(nqry)
         # Id's
-        if "id = 'dummy'" in qry:
-            iqry = qry.replace("dummy", ask)
+        if "id = dummy" in qry:
+            iqry = qry.replace("dummy", str(ask))
             collection.append(iqry)
         # Queries.
         if "('dummy')" in qry:
             qqry = qry.replace("dummy", ask)
             collection.append(qqry)
-
+        # If there's morethan one choice we link them with 'UNION', that eliminates repeats.
         collection.append(" UNION")
+    # There'll be one 'UNION' to many. This deletes it.
     collection.pop(-1)
+    # 'Order' in a mysql expression comes at the end. We add it now.
     collection.append(" ORDER BY time")
+    # We turn this list to string, so it's accepted as sql query.
     collection_str = " ".join(collection)
 
-    insertdb = collection_str
-
     with open(f"{out_binary}", "wb") as g:
-        pickle.dump(insertdb, g)
+        pickle.dump(collection_str, g)
 
 
 if __name__ == "__main__":

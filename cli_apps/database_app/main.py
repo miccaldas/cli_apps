@@ -71,7 +71,7 @@ def get_query(keywords, queries, ids, names, req):
         show_info("data_files", "PACKAGES IN DATA_FILES")
         alternative = alternative_presentations(tag="ai")
         if alternative == "required_by":
-            required_main()()
+            required_main()
         if alternative == "location_main":
             location_main("data_files")
         if alternative == ("required_by", "location_main"):
