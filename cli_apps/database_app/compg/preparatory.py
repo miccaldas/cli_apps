@@ -10,7 +10,7 @@ import os
 import pickle
 
 # import snoop
-from db import dbdata
+from cli_apps.database_app.db import dbdata
 from snoop import pp
 
 
@@ -94,4 +94,4 @@ def mansplain():
 if __name__ == "__main__":
     # cleaning()
     # db_comparison()
-    # mansplain()
+    mansplain()

@@ -17,8 +17,7 @@ NEWSPIDER_MODULE = "compg_project.spiders"
 #USER_AGENT = "compg_project (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
-
+ROBOTSTXT_OBEY = False
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -91,3 +90,5 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content'],},}
+RETRY_TIMES = 1

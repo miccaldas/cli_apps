@@ -27,21 +27,6 @@ def run_searches(targets, interval):
     and it will search for 10 information links per
     target.
     """
-    preferential_urls = [
-        "https://github.com",
-        "https://linux.die.net",
-        "https://pypi.org",
-        "https://sourceware.org",
-        "https://ftp.gnu.org",
-        "https://www.commandlinux.com",
-        "https://manpages.",
-        "https://helpmanual.io",
-        "https://man7.org/",
-    ]
-
-    avoidance_urls = [
-        "https://linkedin.com",
-    ]
 
     userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
     app_data = []
@@ -50,12 +35,13 @@ def run_searches(targets, interval):
         startpage = Startpage(name, userAgent)
         app_tuple = (name, startpage)
         app_data.append(app_tuple)
-        app_data.append(interval)
 
-        with open(f"app_data/{interval[0]}_{interval[1]}.bin", "wb") as f:
-            pickle.dump(app_data, f)
-        with open("tally.bin", "a") as g:
-            g.write(f"{interval}\n")
+    app_data.append(interval)
+
+    with open(f"app_data/{interval[0]}_{interval[1]}.bin", "wb") as f:
+        pickle.dump(app_data, f)
+    with open("tally.bin", "a") as g:
+        g.write(f"{interval}\n")
 
 
 @snoop
@@ -87,10 +73,12 @@ def target_definition():
     with open("lists/noman.bin", "rb") as f:
         noman = pickle.load(f)
 
-    split = [i for i, t in enumerate(noman) if i > 50 and i <= 100]
+    # split = [i for i, t in enumerate(noman) if i > 50 and i <= 100]
     targets = [t for i, t in enumerate(noman) if i > 50 and i <= 100]
+    # We turn it to tuple as it's possible to use set() to accelerate
+    # loop iteration.
 
-    run_searches(targets, [50, 100])
+    run_searches(targets, (50, 100))
     tally(targets, noman)
 
 

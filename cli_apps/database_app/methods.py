@@ -8,6 +8,7 @@ import subprocess
 from datetime import datetime
 
 import snoop
+
 from click import style
 from pyfzf.pyfzf import FzfPrompt
 from rich import print
@@ -28,16 +29,15 @@ from show_info import show_info
 
 
 # @snoop
-def input_decision(prompt):
+def input_decision(prompt, color=(160, 196, 157)):
     """
     Template for inputs, asking the user
     for a decision.
     """
-    print("\n")
     dec = input(
         style(
             f"          {prompt} ",
-            fg=(160, 196, 157),
+            fg=color,
             bold=True,
         )
     )
