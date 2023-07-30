@@ -55,10 +55,7 @@ def kwd_mngmnt(keywords):
             sql_expression("keywords.bin", "kquery.bin")
             get("kquery.bin", "klst.bin")
             os.remove("kquery.bin")
-            os.remove("chc.bin")
             os.remove("keywords.bin")
-        else:
-            os.remove("chc.bin")
 
 
 if __name__ == "__main__":
