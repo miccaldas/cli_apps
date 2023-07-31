@@ -21,7 +21,7 @@ from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
 
 
 # @snoop
-def run_searches(targets, interval):
+def run_searches(targets, epoch):
     """
     User calls this function with a list of targets,
     and it will search for 10 information links per
@@ -36,26 +36,10 @@ def run_searches(targets, interval):
         app_tuple = (name, startpage)
         app_data.append(app_tuple)
 
-    app_data.append(interval)
+    app_data.append(epoch)
 
-    with open(f"app_data/{interval[0]}_{interval[1]}.bin", "wb") as f:
+    with open(f"app_data/{epoch[0]}_{epoch[1]}.bin", "wb") as f:
         pickle.dump(app_data, f)
-    with open("tally.bin", "a") as g:
-        g.write(f"{interval}\n")
-
-
-@snoop
-def tally(split, noman):
-    """
-    Where we keep count of what has already been
-    analyzed and not.
-    """
-    noman_update = [i for i in noman if i not in split]
-    with open("lists/noman.db", "wb") as f:
-        pickle.dump(noman_update, f)
-
-    length = len(noman_update)
-    print(f"    There are now {length} entries to be done.")
 
 
 @snoop
@@ -70,16 +54,16 @@ def target_definition():
     to be explored, as well as the id
     interval that we used.
     """
+    with open("epoch.bin", "rb") as g:
+        epoch = pickle.load(g)
     with open("lists/noman.bin", "rb") as f:
         noman = pickle.load(f)
 
-    # split = [i for i, t in enumerate(noman) if i > 50 and i <= 100]
-    targets = [t for i, t in enumerate(noman) if i > 50 and i <= 100]
-    # We turn it to tuple as it's possible to use set() to accelerate
-    # loop iteration.
+    min = epoch[0]
+    max = epoch[1]
+    targets = [t for i, t in enumerate(noman) if i > f"{min}" and i <= f"{max}"]
 
-    run_searches(targets, (50, 100))
-    tally(targets, noman)
+    run_searches(targets, [f"{min}", f"{max}"])
 
 
 if __name__ == "__main__":

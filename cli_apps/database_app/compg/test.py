@@ -10,6 +10,8 @@ from cli_apps.database_app.db import dbdata
 from dotenv import load_dotenv
 from snoop import pp
 
+from scrapy.kwd_creator import kwd_creator
+
 
 def type_watch(source, value):
     return f"type({source})", type(value)

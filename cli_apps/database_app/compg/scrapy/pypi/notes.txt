@@ -1,0 +1,2 @@
+Linux.die.net
+response.xpath("//html/body/div[1]/div[2]/text()").getall()

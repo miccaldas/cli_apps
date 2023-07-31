@@ -1,0 +1,14 @@
+Linux.die.net
+response.xpath("//html/body/div[1]/div[2]/text()").getall()
+
+[('pbmtodjvurle', 'https://linux.die.net/man/1/pbmtodjvurle'),
+ ('ppmpat', 'https://linux.die.net/man/1/ppmpat'),
+ ('mrftopbm', 'https://linux.die.net/man/1/mrftopbm'),
+ ('pamfixtrunc', 'https://linux.die.net/man/1/pamfixtrunc'),
+ ('pyhtmlizer', 'https://linux.die.net/man/1/pyhtmlizer'),
+ ('ppmdim', 'https://linux.die.net/man/1/ppmdim'),
+ ('pnmtosir', 'https://linux.die.net/man/1/pnmtosir'),
+ ('sbigtopgm', 'https://linux.die.net/man/1/sbigtopgm'),
+ ('pamscale', 'https://linux.die.net/man/1/pamscale')]
+
+

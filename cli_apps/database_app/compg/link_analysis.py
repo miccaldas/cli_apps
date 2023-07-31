@@ -1,6 +1,6 @@
 """
-Module to deal with the leftovers of the 'analysis_app_data'
-process.
+Module to select the best sources of knowledge
+for the scrapy spiders.
 """
 import os
 import pickle
@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 
 import snoop
 from cli_apps.database_app.methods import input_decision
+from dotenv import load_dotenv
 from snoop import pp
 
 
@@ -17,151 +18,39 @@ def type_watch(source, value):
 
 
 snoop.install(watch_extras=[type_watch])
+load_dotenv()
+
+# Envs
+appdata = os.getenv("APPDATA")
+comp = os.getenv("COMP")
+git = os.getenv("GIT")
+pip = os.getenv("PIP")
+src = os.getenv("SRC")
+die = os.getenv("DIE")
+gnu = os.getenv("GNU")
+cmd = os.getenv("CMD")
+deb = os.getenv("deb")
+hlp = os.getenv("HLP")
+mn7 = os.getenv("MN7")
 
 
 @snoop
-def localfiles():
-    """
-    If you came from "get_information", the
-    'finalize.bin' and 'left.bin' don't exist but
-    after runnig this function, they will.
-    This is here so we can verify their existence.
-    """
-    cwd = os.getcwd()
-    filelst = os.listdir(cwd)
-
-    return filelst
-
-
-@snoop
-def define_left_final(app_data=None):
-    """
-    Checks for existence of the 'finalized.bin'
-    and 'left.bin'. If they're there it loads
-    them into lists, if not, it uses the value
-    given by the user in the 'app_data' argument
-    as source for the list that would come from
-    'finalized.bin', and uses an empty list for
-    the expected output of 'left.bin'
-    """
-    filelst = localfiles()
-
-    # Using set() makes loops much faster.
-    if "finalized.bin" in set(filelst):
-        with open("finalized.bin", "rb") as g:
-            fin = pickle.load(g)
-        # Turn it back to list as they're easier to deal.
-        final = list(fin)
-    else:
-        final = []
-
-    if "left.bin" in set(filelst):
-        with open("left.bin", "rb") as f:
-            lft = pickle.load(f)
-        left = list(lft)
-    if app_data:
-        with open(f"app_data/{app_data}", "rb") as j:
-            all_left = pickle.load(j)
-            txt = "You seem to be beginning a new batch of apps. Do you want to create a new 'interval.bin'?[y/n] "
-            interval_decision = input_decision(txt, color=(145, 200, 228))
-            if interval_decision == "y":
-                interval = all_left[-1]
-                interval_str = f"{interval[0]}_{interval[1]}_results.bin"
-                with open("interval.bin", "wb") as q:
-                    pickle.dump(interval_str, q)
-                left = all_left[:-1]
-
-    return final, left
-
-
-@snoop
-def update_finalized(nfinal):
-    """
-    Updates the contents of the
-    'finalized.bin'.
-    """
-    filelst = localfiles()
-
-    if "finalized.bin" in set(filelst):
-        # "trash-put" was preffred to os.remove() as permits retrieving the erased files.
-        # We're using subprocess_check_output() function, that can be used to detect error
-        # messages not from Python.
-        try:
-            subprocess.check_output(
-                "/usr/bin/trash-put finalized.bin", cwd=os.getcwd(), shell=True
-            )
-        except subprocess.CalledProcessError as e:
-            print("Unable to trash file ", e.output)
-            raise SystemExit
-    with open("finalized.bin", "wb") as h:
-        pickle.dump(nfinal, h)
-
-
-@snoop
-def update_left(left, manned_names):
-    """
-    Updates the contents of left.bin'.
-    """
-    filelst = localfiles()
-
-    if "left.bin" in set(filelst):
-        # From the list of apps still to process, we delete those we processed now.
-        nleft = [i for i in left if i[0] not in manned_names]
-        # This block specifies what to do if we already processed all apps.
-        if len(nleft) == 0:
-            close = input_decision(
-                "All apps in 'left' were treated. Do you want to close the analysis?[y/n]",
-                (145, 200, 228),
-            )
-            if close == "y":
-                with open("interval.bin", "rb") as w:
-                    interval = pickle.load(w)
-                    # We're using subprocess_check_output() function, that can be used to detect error
-                    # messages not from Python.
-                    try:
-                        subprocess.check_output(
-                            f"cp finalized.bin lists/{interval}",
-                            cwd=os.getcwd(),
-                            shell=True,
-                        )
-                    except subprocess.CalledProcessError as e:
-                        print("Unable to copy file ", e.output)
-                        raise SystemExit
-                # These deletes are just good house-keeping. No need to put them in a 'if/else'block.
-                binaries = ["finalized.bin", "left.bin", "interval.bin"]
-                for binary in binaries:
-                    subprocess.run(
-                        f"/usr/bin/trash-put {binary}", cwd=os.getcwd(), shell=True
-                    )
-        # Block explaining what to do in case we still have apps to process.
-        if len(nleft) != 0:
-            try:
-                subprocess.check_output(
-                    "/usr/bin/trash-put left.bin", cwd=os.getcwd(), shell=True
-                )
-            except subprocess.CalledProcessError as e:
-                print("Unable to trash file ", e.output)
-                raise SystemExit
-            with open("left.bin", "wb") as p:
-                pickle.dump(nleft, p)
-
-    nleft = left
-    with open("left.bin", "wb") as p:
-        pickle.dump(nleft, p)
-
-
-@snoop
-def url_searcher(url, app_data=None):
+def url_searcher(url, app_data):
     """
     Function to search for links, given an url.
     """
-    init_lists = define_left_final(app_data)
-    final = init_lists[0]
-    left = init_lists[1]
+    with open(f"{comp}epoch.bin", "rb") as d:
+        ep = pickle.load(d)
+    low = ep[0]
+    upp = ep[1]
+
+    with open(f"{comp}app_data/{app_data}", "rb") as u:
+        appdata = pickle.load(u)
+        app_data = appdata[:-1]
 
     mansource = []
     manned_names = []
-    for i in left:
+    for i in app_data:
         for lnk in i[1]:
             if lnk.startswith(url):
                 mansource.append((i[0], lnk))
@@ -176,8 +65,6 @@ def url_searcher(url, app_data=None):
                 mansource.remove(g)
 
     print(mansource)
-    print("\n")
-    print(len(left))
     cont = input_decision("Do you want to continue?[y/n] ", (145, 200, 228))
     if cont == "n":
         raise SystemExit
@@ -203,34 +90,48 @@ def url_searcher(url, app_data=None):
     if cont == "n":
         raise SystemExit
 
-    final += urls
-    # the 'final' list is, for reasons unknown, creating repeated
-    # entries. Because I'm lazy, instead of understanding why, we
-    # just pass it through set() to eliminate them.
-    nfinal = list(set(final))
-
-    update_finalized(nfinal)
-    update_left(left, manned_names)
+    # As we're going to create different projects for different sites, we'll
+    # send the url's pertaining to a site, to their folder.
+    with open(f"{comp}epoch.bin", "rb") as k:
+        interval = pickle.load(k)
+    if interval != [] and len(interval) == 2:
+        if url == "https://github.com":
+            fldr = git
+        if url == "https://linux.die.net":
+            fldr = die
+        if url == "https://pypi.org":
+            fldr = pip
+        if url == "https://sourceware.org":
+            fldr = src
+        if url == "https://ftp.gnu.org":
+            fldr = gnu
+        if url == "https://www.commandlinux.com":
+            fldr = cmd
+        if url == "https://manpages.debian":
+            fldr = deb
+        if url == "https://helpmanual.io":
+            fldr = hlp
+        if url == "https://man7.org/":
+            fldr = mn7
+        with open(f"{fldr}/urls_{low}_{upp}.bin", "wb") as f:
+            pickle.dump(urls, f)
 
 
 if __name__ == "__main__":
-    url_searcher("https://linux.die.net")
+    url_searcher()
 
 
 # @snoop
-def link_parse(part, app_data=None):
+def link_parse(part, app_data, destination):
     """
     This functions accepts as input any item
     of urlparse taxonomy and will search
     for the app's name there.
     """
-    init_lists = define_left_final(app_data)
-    final = init_lists[0]
-    left = init_lists[1]
 
     site_names = []
     manned_names = []
-    for f in left:
+    for f in app_data:
         # The reason we're using set() to speed the loop in 'f[1]'
         # but not in 'left', it's because 'left' has lists inside
         # its tuples. Although set() accepts tuples, it doesn't
@@ -246,45 +147,34 @@ def link_parse(part, app_data=None):
                     site_names.append((f[0], lnk))
                     manned_names.append(f[0])
 
-    final += site_names
-    # the 'final' list is, for reasons unknown, creating repeated
-    # entries. Because I'm lazy, instead of understanding why, we
-    # just pass it through set() to eliminate them.
-    nfinal = list(set(final))
-
-    update_finalized(nfinal)
-    update_left(left, manned_names)
+    with open(f"{destination}/link_parse.bin", "wb") as f:
+        pickle.dump(site_names, f)
 
 
-# if __name__ == "__main__":
-#     link_parse()
+if __name__ == "__main__":
+    link_parse()
 
 
 # @snoop
-def first_link(app_data=None):
+def first_link(app_data, destination):
     """
     Given that we tok this out from a
     search engine, it would be prudent
     to heed to their knowledge and see
     what is the their first pick of links.
     """
-    init_lists = define_left_final(app_data)
-    final = init_lists[0]
-    left = init_lists[1]
 
     firsts = []
     manned_names = []
-    for f in left:
+    for f in app_data:
         for i, t in enumerate(f[1]):
             if i == 0:
                 firsts.append((f[0], t))
                 manned_names.append(f[0])
-    final += firsts
-    nfinal = final
 
-    update_finalized(nfinal)
-    update_left(left, manned_names)
+    with open(f"{destination}/first_links.bin", "wb") as f:
+        pickle.dump(firsts, f)
 
 
-# if __name__ == "__main__":
-#     first_link()
+if __name__ == "__main__":
+    first_link("25_35.bin")
