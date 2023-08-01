@@ -28,8 +28,8 @@ def project_creation():
 
         scrapy startproject github_project
     """
-    cmd = "/usr/bin/scrapy startproject command_linux_project"
-    subprocess.run(cmd, cwd=cmd, shell=True)
+    cmmd = "/usr/bin/scrapy startproject command_linux_project"
+    subprocess.run(cmmd, cwd=cmd, shell=True)
 
 
 # @snoop
@@ -40,7 +40,7 @@ def settings_definition():
     1. FEEDS  Dictionary which structures the file that'll house the spider's results.\n
     2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
-    with open(f"{project}gthb_project/settings.py", "a") as d:
+    with open(f"{project}command_linux_project/settings.py", "a") as d:
         d.write("FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content'],},}\n")
         d.write("RETRY_TIMES = 1\n")
 
@@ -75,14 +75,20 @@ def spider():
             f.write("\n\n")
             f.write("    #@snoop\n")
             f.write("    def parse(self, response):\n")
-            f.write("        srch_title = response.css('h1::text').getall()\n")
-            f.write("        srch_enphasys = response.css('em::text').getall()\n")
-            f.write("        srch_text = response.css('p::text').getall()\n\n")
+            f.write("        srch_text = response.xpath('/html/body').get()\n\n")
+            f.write("        des = srch_text.split('DESCRIPTION')[1]\n")
+            f.write("        desc = des.split('EXIT')[0]\n")
+            f.write("        notitle = desc.replace('<h2>', '').replace('</h2>', '')\n")
+            f.write("        noitalics = notitle.replace('<i>', '').replace('</i>', '')\n")
+            f.write("        nobrks = noitalics.replace('\\n', ' ')\n")
+            f.write("        nobold = nobrks.replace('<b>', '').replace('</b>', '')\n")
+            f.write("        notxt = nobold.replace('<p>', '').replace('</p>', '')\n")
+            f.write("        txt = notxt.split('<a')[0]\n")
             # DON'T ALIGN THIS LINE! It's like that because it has the 'f' for
             # f-expression before it. Leave it be.
             f.write(f"        name = '{entry[0]}'\n\n")
-            f.write("        lsts = srch_enphasys + srch_text\n")
-            f.write("        results = {'name': name, 'title': srch_title, 'content': lsts}\n")
+            f.write("        lsts = txt\n")
+            f.write("        results = {'name': name, 'content': lsts}\n")
             f.write("        yield results\n")
 
 

@@ -5,6 +5,7 @@ import multiprocessing
 import os
 import subprocess
 from multiprocessing import Pool
+
 from dotenv import load_dotenv
 
 # import snoop
@@ -20,9 +21,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Envs
-git = os.getenv("GIT")
-project = os.getenv("GITPROJ")
-spiders = os.getenv("GITSPIDERS")
+cmd = os.getenv("CMD")
+project = os.getenv("CMDPROJ")
+spiders = os.getenv("CMDSPIDERS")
 
 
 # @snoop

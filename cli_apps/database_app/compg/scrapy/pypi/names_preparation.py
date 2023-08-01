@@ -3,28 +3,53 @@ Module to prepare the file that'll house
 all information entries to use on the
 Scrapy project.
 """
+import os
 import pickle
+import shutil
 
-# import snoop
-# from snoop import pp
-
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
-
-
-# snoop.install(watch_extras=[type_watch])
+import snoop
+from cli_apps.database_app.compg.link_analysis import url_searcher
+from dotenv import load_dotenv
+from snoop import pp
 
 
-# @snoop()
-def names_preparation_scrapy():
+def type_watch(source, value):
+    return f"type({source})", type(value)
+
+
+snoop.install(watch_extras=[type_watch])
+load_dotenv()
+
+# Envs
+pip = os.getenv("PIP")
+
+
+@snoop
+def call_analysis():
     """
-    We'll use the names in the 'names.bin'
+    Calls 'url_searcher'.
+    """
+    with open("../../epoch.bin", "rb") as f:
+        epoch = pickle.load(f)
+
+    url_searcher("https://pypi.org", f"{epoch[0]}_{epoch[1]}.bin")
+    shutil.copy(f"{pip}urls_{epoch[0]}_{epoch[1]}.bin", f"{pip}finalized.bin")
+
+
+if __name__ == "__main__":
+    call_analysis()
+
+
+@snoop()
+def names_preparation():
+    """
+    We'll use the names in the binaries
     produced by 'link_analysis' and:
     1 - Delete repeats,
     2 - Take out slashes and points and
         replace them with underscores.
     """
-    with open("finalized.bin", "rb") as f:
+    with open(f"{pip}finalized.bin", "rb") as f:
         final = pickle.load(f)
 
     # Scrapy's spider's can not have slashes or pucntuation marks
@@ -33,9 +58,9 @@ def names_preparation_scrapy():
     nodots = [(i[0], i[1].replace(".", "_"), i[2]) for i in noslashes]
     spiders = [(i[0], f"{i[1]}_spider", i[2]) for i in nodots]
 
-    with open("spiders.bin", "wb") as f:
+    with open(f"{pip}spiders.bin", "wb") as f:
         pickle.dump(spiders, f)
 
 
 if __name__ == "__main__":
-    names_preparation_scrapy()
+    names_preparation()

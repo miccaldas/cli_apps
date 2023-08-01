@@ -29,7 +29,7 @@ src = os.getenv("SRC")
 die = os.getenv("DIE")
 gnu = os.getenv("GNU")
 cmd = os.getenv("CMD")
-deb = os.getenv("deb")
+deb = os.getenv("DEB")
 hlp = os.getenv("HLP")
 mn7 = os.getenv("MN7")
 
@@ -44,7 +44,7 @@ def url_searcher(url, app_data):
     low = ep[0]
     upp = ep[1]
 
-    with open(f"{comp}app_data/{app_data}", "rb") as u:
+    with open(f"{app_data}", "rb") as u:
         appdata = pickle.load(u)
         app_data = appdata[:-1]
 

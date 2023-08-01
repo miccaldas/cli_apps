@@ -1,109 +1,139 @@
 """
 Keyword creator for *Arch* packages.
-Cleans csv file data and runs KeyBERT, to find keywords for each package.
-Stores them in a file in the *kws* folder.
+Cleans bin file data and runs KeyBERT,
+to find keywords for each package.
 """
-import json
 import os
 import pickle
 import re
 import subprocess
 import sys
 
-# import snoop
+import snoop
+from cli_apps.database_app.methods import print_template
+from dotenv import load_dotenv
 from keybert import KeyBERT
 
 # from snoop import pp
 from thefuzz import fuzz, process
 
-# def type_watch(source, value):
-#     return "type({})".format(source), type(value)
+
+def type_watch(source, value):
+    return "type({})".format(source), type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
-# load_dotenv()
+snoop.install(watch_extras=[type_watch])
 
-# Project Environmental Variables
-compg = os.getcwd()
-project = f"{compg}/compg_project"
+load_dotenv()
+
+# Envs
+hlp = os.getenv("HLP")
+project = os.getenv("HLPPROJ")
 
 
-# @snoop
-def _json_cleaner():
+@snoop
+def bin_cleaner():
     """
-    Csv cleaner for *Arch* packages.
-    We remove column names and the exccess whitespaces from the scraped content.
+    Binary cleaner.
+    We remove html tags, linebreaks, exccess whitespaces from the scraped content.
     """
-    # Needed to avoid "Field larger than field limit error"
-    cwd = os.getcwd()
 
     lines = []
-    with open(f"{project}results.csv", "r") as f:
-        reader = csv.reader(f)
-        for line in reader:
-            lines.append(line)
+    with open(f"{project}results.bin", "rb") as f:
+        entries = []
+        while True:
+            try:
+                entries.append(pickle.load(f))
+            except EOFError:
+                break
 
-    content = [i for i in lines if i != ["name", "content"]]
-
-    nospaces = []
-    for k in range(len(content)):
-        x = re.sub("\s+", " ", content[k][1])
-        nospaces.append([content[k][0], x])
-    with open(f"{tags}nospaces.bin", "wb") as t:
-        pickle.dump(nospaces, t)
+    clean_list = []
+    for i, t in enumerate(entries):
+        lst = entries[i]["content"]
+    print(len(lst))
+    for i in lst:
+        print(i)
+    # lt = [i.replace("<i>", "").replace("</i>", "").replace("</a>", "") for i in lst]
+    # lt.pop(-1)
+    # llt = [re.sub('<a href=.+">', "", i) for i in lt]
+    # clean_list.append(llt)
+    # with open(f"{hlp}clean_list.bin", "wb") as f:
+    #     pickle.dump(clean_list, f)
 
 
 if __name__ == "__main__":
-    json_cleaner()
+    bin_cleaner()
 
 
-# @snoop
+@snoop
 def kwd_creator():
     """
-    We run KeyBERT through *nospaces.bin*.
+    We run KeyBERT through *clean_list.bin*.
+    I chose to make the changes to the data
+    still in the spider, so I don't have need
+    for the 'bin_cleaner' module. I'll keep it
+    commented, because we don't know if I'll
+    change my mind again.
     """
-    with open(f"{compg}/nospaces.bin", "rb") as f:
-        csvcontent = pickle.load(f)
+    filelst = os.listdir(f"{hlp}")
 
-    for line in csvcontent:
-        name = line[0]
-        text = line[1]
-        badwords = [f"{name}", f"n{name}", "codespace", "codespaces", "svn", "pypi"]
-        kw_model = KeyBERT()
-        keys = kw_model.extract_keywords(
-            text,
-            keyphrase_ngram_range=(1, 1),
-            stop_words=badwords,
-        )
-        keywords = [o for o, p in keys]
+    if "clean_list.bin" in filelst:
+        with open(f"{hlp}/clean_list.bin", "rb") as f:
+            content = pickle.load(f)
+        print_template(f"Using clean_list.bin file found in {hlp}")
+    else:
+        with open(f"{project}results.bin", "rb") as g:
+            content = []
+            while True:
+                try:
+                    content.append(pickle.load(g))
+                except EOFError:
+                    break
+        print_template(f"Using results.bin from {project}")
 
-        kwds = []
-        # This is here to ensure that the keywords are not very similar.
-        for y in keywords:
-            # Create a list without one of the keywords.
-            slst = [b for b in keywords if b != y]
-            # If the keyword list is greater than one:
-            if slst != []:
-                # We compare the similarity index of the keyword against
-                # all of the others.
-                value = process.extractOne(y, slst)
-                # If there's a resonable index of disimilarity:
-                if value[1] < 85:
-                    # keep the keyword.
-                    kwds.append(y)
-        # List of keywords that weren't chosen in the latter process.
-        similars = [u for u in keywords if u not in kwds]
-        # If the list is not empty:
-        if similars != []:
-            # get the longest keyword in there:
-            sim_choice = max(similars, key=len)
-            # and add it to the chosen keywords list.
-            kwds += [sim_choice]
+    print(content)
 
-        with open(f"{compg}/kws/{name}", "w") as v:
-            for q in kwds:
-                v.write(f"{q}\n")
+    for dic in content:
+        name = dic["name"]
+        for c in dic["content"]:
+            # 'content' has a prefix with the app's name the we don't want to be
+            # in text, becuase we're going to expressly insert it as the first tag.
+            text = c.split(" - ")[1]
+            badwords = ["codespace", f"{name}", "format"]
+            kw_model = KeyBERT()
+            keys = kw_model.extract_keywords(
+                text,
+                keyphrase_ngram_range=(1, 1),
+                stop_words=badwords,
+            )
+            keywords = [o for o, p in keys]
+            kwds = []
+            # This is here to ensure that the keywords are not very similar.
+            for y in keywords:
+                # Create a list without one of the keywords.
+                slst = [b for b in keywords if b != y]
+                # If the keyword list is greater than one:
+                if slst != []:
+                    # We compare the similarity index of the keyword against
+                    # all of the others.
+                    value = process.extractOne(y, slst)
+                    # If there's a resonable index of disimilarity:
+                    if value[1] < 85:
+                        # keep the keyword.
+                        kwds.append(y)
+            # List of keywords that weren't chosen in the latter process.
+            similars = [u for u in keywords if u not in kwds]
+            # If the list is not empty:
+            if similars != []:
+                # get the longest keyword in there:
+                sim_choice = max(similars, key=len)
+                # and add it to the chosen keywords list.
+                kwds += [sim_choice]
+
+            with open(f"{hlp}kws/{name}", "w") as v:
+                for q in kwds:
+                    v.write(f"{q}\n")
 
 
-if __name__ == "__main__":
-    kwd_creator()
+# if __name__ == "__main__":
+#     kwd_creator()

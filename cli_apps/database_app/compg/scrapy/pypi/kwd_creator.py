@@ -1,74 +1,83 @@
 """
 Keyword creator for *Arch* packages.
-Cleans csv file data and runs KeyBERT, to find keywords for each package.
-Stores them in a file in the *kws* folder.
+Cleans bin file data and runs KeyBERT,
+to find keywords for each package.
 """
-import json
 import os
 import pickle
 import re
 import subprocess
 import sys
 
-# import snoop
+import snoop
+from dotenv import load_dotenv
 from keybert import KeyBERT
 
 # from snoop import pp
 from thefuzz import fuzz, process
 
-# def type_watch(source, value):
-#     return "type({})".format(source), type(value)
+
+def type_watch(source, value):
+    return "type({})".format(source), type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
-# load_dotenv()
+snoop.install(watch_extras=[type_watch])
 
-# Project Environmental Variables
-compg = os.getcwd()
-project = f"{compg}/compg_project"
+load_dotenv()
+
+# Envs
+pip = os.getenv("PIP")
+project = os.getenv("PIPPROJ")
 
 
-# @snoop
-def _json_cleaner():
+@snoop
+def bin_cleaner():
     """
-    Csv cleaner for *Arch* packages.
-    We remove column names and the exccess whitespaces from the scraped content.
+    Binary cleaner.
+    We remove html tags, linebreaks, exccess whitespaces from the scraped content.
     """
-    # Needed to avoid "Field larger than field limit error"
-    cwd = os.getcwd()
 
     lines = []
-    with open(f"{project}results.csv", "r") as f:
-        reader = csv.reader(f)
-        for line in reader:
-            lines.append(line)
+    with open(f"{project}results.bin", "rb") as f:
+        entries = []
+        while True:
+            try:
+                entries.append(pickle.load(f))
+            except EOFError:
+                break
 
-    content = [i for i in lines if i != ["name", "content"]]
+    clean_lst = []
+    for i, t in enumerate(entries):
+        lst = t[0]["content"]
+        lt = [i.replace("<i>", "").replace("</i>", "").replace("</a>", "") for i in lst]
+        lt.pop(-1)
+        llt = [re.sub('<a href=.+">', "", i) for i in lt]
+        clean_lst.append(llt)
+    with open(f"{pip}clean_list.bin", "wb") as f:
+        pickle.dump(clean_lst, f)
 
-    nospaces = []
-    for k in range(len(content)):
-        x = re.sub("\s+", " ", content[k][1])
-        nospaces.append([content[k][0], x])
-    with open(f"{tags}nospaces.bin", "wb") as t:
-        pickle.dump(nospaces, t)
 
-
-if __name__ == "__main__":
-    json_cleaner()
+# if __name__ == "__main__":
+#     bin_cleaner()
 
 
 # @snoop
 def kwd_creator():
     """
-    We run KeyBERT through *nospaces.bin*.
+    We run KeyBERT through *clean_list.bin*.
     """
-    with open(f"{compg}/nospaces.bin", "rb") as f:
-        csvcontent = pickle.load(f)
+    with open(f"{pip}clean_list.bin", "rb") as f:
+        str_content = pickle.load(f)
 
-    for line in csvcontent:
-        name = line[0]
-        text = line[1]
-        badwords = [f"{name}", f"n{name}", "codespace", "codespaces", "svn", "pypi"]
+    # We turn the list of strings into one string, so keyBERT can read it.
+    content = [[" ".join(lst)] for lst in str_content]
+
+    if list in content:
+        for lst in content:
+            name = lst[0].split(" - ")[0]
+            text = lst[0].split(" - ")[1]
+
+        badwords = ["codespace", f"{name}", "format"]
         kw_model = KeyBERT()
         keys = kw_model.extract_keywords(
             text,
@@ -100,7 +109,7 @@ def kwd_creator():
             # and add it to the chosen keywords list.
             kwds += [sim_choice]
 
-        with open(f"{compg}/kws/{name}", "w") as v:
+        with open(f"{pip}/kws/{name}", "w") as v:
             for q in kwds:
                 v.write(f"{q}\n")
 

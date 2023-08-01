@@ -7,7 +7,7 @@ from projects_creation import init_project
 from snoop import pp
 
 from db_upload import data_preparation, db_upload
-from kwd_creator import bin_cleaner, kwd_creator
+from kwd_creator import kwd_creator
 from names_preparation import call_analysis, names_preparation
 from spider_runner import spider_runner
 
@@ -22,17 +22,18 @@ load_dotenv()
 
 
 @snoop
-def gthb_main():
+def command_linux_main():
     """
-    CAlls all function in this folder.
+    Calls all function in this folder.
     """
     call_analysis()
     names_preparation()
     init_project()
     spider_runner()
+    kwd_creator()
     data_preparation()
     db_upload()
 
 
 if __name__ == "__main__":
-    gthb_main()
+    command_linux_main()

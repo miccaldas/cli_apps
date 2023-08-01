@@ -20,33 +20,34 @@ snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 # Envs
-git = os.getenv("GIT")
+cmd = os.getenv("CMD")
+project = os.getenv("CMDPROJ")
 
 
-# @snoop
+@snoop
 def data_preparation():
     """
     We gather information for the db columns that
     is dispersed through various files, in one list.
     """
-    with open(f"{git}clean_list.bin", "rb") as f:
+    with open(f"{project}/results.bin", "rb") as f:
         clean = pickle.load(f)
-    with open(f"{git}spiders.bin", "rb") as g:
+    with open(f"{cmd}spiders.bin", "rb") as g:
         spiders = pickle.load(g)
+    with open(f"{cmd}clean_data.bin", "rb") as h:
+        cleandata = pickle.load(h)
 
-    # The first string from the spider's output is composed of the app's name
-    # a dash and a small description. We'll use these values to insert into
-    # the 'name' and 'description' columns. To do that we split the string at
-    # the dash, the first part of the splitted string is the name, the other
-    # the description.
-    cleandata = [(i[0].split(" - ")[0], i[0].split(" - ")[1]) for i in clean]
     # We add the url value that was in the 'spiders.bin' file We define 'f' as
     # the current name/description tuples of 'cleandata' and to that we add the
     # link value in 'spiders', as tuple, for this is the way to insert an element
     # to a pre-existing tuple.
-    plnk = [f + (t[2],) for f in cleandata for t in spiders if f[0] == t[0]]
+    # plnk = [f + (t[2],) for f in cleandata for t in spiders if cleandata[0] == t[0]]
+    plnk = []
+    for t in spiders:
+        if cleandata[0] == t[0]:
+            plnk.append(cleandata + (t[2],))
 
-    kwlst = os.listdir(f"{git}kws")
+    kwlst = os.listdir(f"{cmd}kws")
 
     data = []
     for k in kwlst:
@@ -57,7 +58,7 @@ def data_preparation():
         kl = []
         # We open the list of files with keywords. We'll open each one and iterate
         # through their content.
-        with open(f"{git}kws/{k}", "r") as f:
+        with open(f"{cmd}kws/{k}", "r") as f:
             ks = f.readlines()
         # If keyBERT created 3 or more keyword, we gather the first three.
         if len(ks) >= 3:
@@ -95,8 +96,8 @@ def data_preparation():
             entry += ["compg"]
             data.append(entry)
 
-    with open(f"{git}final_data.bin", "wb") as g:
-        pickle.dump(data, g)
+    with open(f"{cmd}final_data.bin", "wb") as i:
+        pickle.dump(data, i)
 
 
 if __name__ == "__main__":
@@ -109,7 +110,7 @@ def db_upload():
     We upload the data
     to the db.
     """
-    with open(f"{git}final_data.bin", "rb") as f:
+    with open(f"{cmd}final_data.bin", "rb") as f:
         dt = pickle.load(f)
 
     for d in dt:

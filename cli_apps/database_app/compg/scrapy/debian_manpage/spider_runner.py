@@ -6,23 +6,27 @@ import os
 import subprocess
 from multiprocessing import Pool
 
-import snoop
-from snoop import pp
+from dotenv import load_dotenv
+
+# import snoop
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
+# def type_watch(source, value):
+#     return "type({})".format(source), type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
-# Environmental Variables
-compg = f"{os.getcwd()}/"
-project = f"{compg}compg_project/"
-spiders = f"{project}compg_project/spiders/"
+load_dotenv()
+
+# Envs
+deb = os.getenv("DEB")
+project = os.getenv("DEBPROJ")
+spiders = os.getenv("DEBSPIDERS")
 
 
-@snoop
+# @snoop
 def spider_runner(spiders_lst):
     """
     .. code-block::

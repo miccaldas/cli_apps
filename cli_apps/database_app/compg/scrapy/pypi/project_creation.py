@@ -5,15 +5,19 @@ import os
 import pickle
 import subprocess
 
+from dotenv import load_dotenv
+
 # import snoop
 from mysql.connector import Error, connect
 from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
 
 # from snoop import pp
+load_dotenv()
 
-compg = f"{os.getcwd()}/"
-project = f"{compg}compg_project/"
-spiders = f"{project}compg_project/spiders/"
+# Envs
+pip = os.getenv("PIP")
+project = os.getenv("PIPPROJ")
+spiders = os.getenv("PIPSPIDERS")
 
 
 # @snoop
@@ -22,10 +26,10 @@ def project_creation():
     Project Creation for *Arch* packages.
     Runs *Scrapy's* command to start a project::
 
-        scrapy startproject pip_project
+        scrapy startproject pypi_project
     """
-    cmd = "/usr/bin/scrapy startproject compg_project"
-    subprocess.run(cmd, cwd=compg, shell=True)
+    cmd = "/usr/bin/scrapy startproject pypi_project"
+    subprocess.run(cmd, cwd=pip, shell=True)
 
 
 # @snoop
@@ -36,17 +40,9 @@ def settings_definition():
     1. FEEDS  Dictionary which structures the file that'll house the spider's results.\n
     2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
-    with open(f"{project}compg_project/settings.py", "a") as d:
+    with open(f"{project}pypi_project/settings.py", "a") as d:
         d.write("FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content'],},}\n")
         d.write("RETRY_TIMES = 1\n")
-
-    # The 'die.net' manpage site doesn't  allow scrapers. We have to change this to use it.
-    with open(f"{project}compg_project/settings.py", "r") as e:
-        lines = e.readlines()
-        lines[19] = "ROBOTSTXT_OBEY = False"
-
-    with open(f"{project}compg_project/settings.py", "w") as m:
-        m.writelines(lines)
 
 
 # @snoop
@@ -59,7 +55,8 @@ def spider():
     :var str srch_text: Css query for all *<p>* tags.\n
     :var str name: The name of the package. Added so we can identify the lines in the json.
     """
-    with open(f"{compg}spiders.bin", "rb") as f:
+
+    with open(f"{pip}spiders.bin", "rb") as f:
         newurls = pickle.load(f)
     for entry in newurls:
         spider_name = f"{entry[1]}"
@@ -83,9 +80,9 @@ def spider():
             f.write("        srch_text = response.css('p::text').getall()\n\n")
             # DON'T ALIGN THIS LINE! It's like that because it has the 'f' for
             # f-expression before it. Leave it be.
-            f.write(f"        name = '{entry[0]}'\n")
-            f.write("        lsts = srch_title + srch_enphasys + srch_text\n")
-            f.write("        results = {'name': name, 'content': lsts}\n")
+            f.write(f"        name = '{entry[0]}'\n\n")
+            f.write("        lsts = srch_enphasys + srch_text\n")
+            f.write("        results = {'name': name, 'title': srch_title, 'content': lsts}\n")
             f.write("        yield results\n")
 
 
