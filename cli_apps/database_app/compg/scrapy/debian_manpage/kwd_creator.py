@@ -88,48 +88,57 @@ def kwd_creator():
                     break
         print_template(f"Using results.bin from {project}")
 
-    print(content)
-
+    texts = []
     for dic in content:
+        temp = []
         name = dic["name"]
         for c in dic["content"]:
             # 'content' has a prefix with the app's name the we don't want to be
-            # in text, becuase we're going to expressly insert it as the first tag.
-            text = c.split(" - ")[1]
-            badwords = ["codespace", f"{name}", "format"]
-            kw_model = KeyBERT()
-            keys = kw_model.extract_keywords(
-                text,
-                keyphrase_ngram_range=(1, 1),
-                stop_words=badwords,
-            )
-            keywords = [o for o, p in keys]
-            kwds = []
-            # This is here to ensure that the keywords are not very similar.
-            for y in keywords:
-                # Create a list without one of the keywords.
-                slst = [b for b in keywords if b != y]
-                # If the keyword list is greater than one:
-                if slst != []:
-                    # We compare the similarity index of the keyword against
-                    # all of the others.
-                    value = process.extractOne(y, slst)
-                    # If there's a resonable index of disimilarity:
-                    if value[1] < 85:
-                        # keep the keyword.
-                        kwds.append(y)
-            # List of keywords that weren't chosen in the latter process.
-            similars = [u for u in keywords if u not in kwds]
-            # If the list is not empty:
-            if similars != []:
-                # get the longest keyword in there:
-                sim_choice = max(similars, key=len)
-                # and add it to the chosen keywords list.
-                kwds += [sim_choice]
+            # in text, because we're going to expressly insert it as the first tag.
+            if c.startswith(f"{name}: - "):
+                txt = c.split(" - ")[1]
+                temp.append(txt)
+            else:
+                temp.append(c)
+        texts.append(temp)
 
-            with open(f"{deb}kws/{name}", "w") as v:
-                for q in kwds:
-                    v.write(f"{q}\n")
+    txts = [" ".join(i) for i in texts]
+
+    for text in txts:
+        badwords = ["codespace", f"{name}", "format"]
+        kw_model = KeyBERT()
+        keys = kw_model.extract_keywords(
+            text,
+            keyphrase_ngram_range=(1, 1),
+            stop_words=badwords,
+        )
+        keywords = [o for o, p in keys]
+        kwds = []
+        # This is here to ensure that the keywords are not very similar.
+        for y in keywords:
+            # Create a list without one of the keywords.
+            slst = [b for b in keywords if b != y]
+            # If the keyword list is greater than one:
+            if slst != []:
+                # We compare the similarity index of the keyword against
+                # all of the others.
+                value = process.extractOne(y, slst)
+                # If there's a resonable index of disimilarity:
+                if value[1] < 85:
+                    # keep the keyword.
+                    kwds.append(y)
+        # List of keywords that weren't chosen in the latter process.
+        similars = [u for u in keywords if u not in kwds]
+        # If the list is not empty:
+        if similars != []:
+            # get the longest keyword in there:
+            sim_choice = max(similars, key=len)
+            # and add it to the chosen keywords list.
+            kwds += [sim_choice]
+
+    with open(f"{deb}kws/{name}", "w") as v:
+        for q in kwds:
+            v.write(f"{q}\n")
 
 
 if __name__ == "__main__":

@@ -81,13 +81,12 @@ def spider():
             f.write("\n\n")
             f.write("    #@snoop\n")
             f.write("    def parse(self, response):\n")
-            f.write("        srch_nostruct = response.xpath(\"//*[@id='dynamic']/div[2]/main/section/div/div[1]/div[3]/div/text()\").getall()\n")
-            f.write("        srch_struct1 = response.xpath(\"//*[@id='man-page']/div/div[1]/text()\").getall()\n")
-            f.write("        srch_struct2 = response.xpath(\"//*[@id='dynamic']/div[2]/main/section/div/div[1]/div[2]/div/text()\").getall()\n\n")
+            f.write("        srch_gen = response.xpath(\"//*[@id='man-page']/div/div[1]/text()\").getall()\n")
+            f.write("        srch_desc = response.xpath(\"//*[@id='man-page']/div/div[1]/text()[1]\").getall()\n")
             # DON'T ALIGN THIS LINE! It's like that because it has the 'f' for
             # f-expression before it. Leave it be.
             f.write(f"        name = '{entry[0]}'\n\n")
-            f.write("        lsts = srch_nostruct + srch_struct1 + srch_struct2\n")
+            f.write("        lsts = srch_desc + srch_gen\n")
             f.write("        results = {'name': name, 'content': lsts}\n")
             f.write("        yield results\n")
 

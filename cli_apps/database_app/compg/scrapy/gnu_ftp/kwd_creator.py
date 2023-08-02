@@ -1,74 +1,155 @@
 """
 Keyword creator for *Arch* packages.
-Cleans csv file data and runs KeyBERT, to find keywords for each package.
-Stores them in a file in the *kws* folder.
+Cleans bin file data and runs KeyBERT,
+to find keywords for each package.
 """
-import json
 import os
 import pickle
 import re
 import subprocess
 import sys
 
-# import snoop
+import snoop
+from cli_apps.database_app.methods import input_decision, print_template
+from dotenv import load_dotenv
 from keybert import KeyBERT
 
 # from snoop import pp
 from thefuzz import fuzz, process
 
-# def type_watch(source, value):
-#     return "type({})".format(source), type(value)
+
+def type_watch(source, value):
+    return "type({})".format(source), type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
-# load_dotenv()
+snoop.install(watch_extras=[type_watch])
 
-# Project Environmental Variables
-compg = os.getcwd()
-project = f"{compg}/compg_project"
+load_dotenv()
+
+# Envs
+gnu = os.getenv("GNU")
+project = os.getenv("GNUPROJ")
 
 
-# @snoop
-def _json_cleaner():
+@snoop
+def bin_cleaner():
     """
-    Csv cleaner for *Arch* packages.
-    We remove column names and the exccess whitespaces from the scraped content.
+    Binary cleaner. This function remains, and probably
+    will for a while, very protean. As page struture change,
+    so must the cleaning. Commented are kept things that
+    worked for some situations but may not work for others.
+    Until we're  very secure on the page structure on this
+    site, will have to be tentative.
     """
-    # Needed to avoid "Field larger than field limit error"
-    cwd = os.getcwd()
-
+    with open("finalized.bin", "rb") as g:
+        cleandata = pickle.load(g)
     lines = []
-    with open(f"{project}results.csv", "r") as f:
-        reader = csv.reader(f)
-        for line in reader:
-            lines.append(line)
+    with open(f"{project}results.bin", "rb") as f:
+        entries = []
+        while True:
+            try:
+                entries.append(pickle.load(f))
+            except EOFError:
+                break
 
-    content = [i for i in lines if i != ["name", "content"]]
+    splits = []
+    descs = []
+    # We identified two patterns in the site that give good results.
+    # We'll look for one, if it fails, we'll for the other.
+    for i, t in enumerate(entries):
+        name = entries[i]["name"]
+        lst = entries[i]["content"]
+    # We're looking for twothings in 'lst', a quote for the field 'description'
+    # probably the same thing for keyword creation. We've noticed that more text
+    # doesn't mean better results. So, unless we start seeing bad results, the
+    # 'edscription' filed and keyBERT are fed with the same text.
+    for ls in lst:
+        # We split the content string in the breakline points, to mimic the appearance
+        # of the web page.
+        splits = ls.split("\n")
+        for idx, line in enumerate(splits):
+            # If line starts with this pattern....
+            if line.startswith(name + ": - "):
+                # split on it and keep the second half.
+                desc = line.split(": - "[1])
+                descs.append(name, desc)
+                break
+            if descs == []:
+                if line.startswith("Usage: "):
+                    descs.append((name, splits[i]))
 
-    nospaces = []
-    for k in range(len(content)):
-        x = re.sub("\s+", " ", content[k][1])
-        nospaces.append([content[k][0], x])
-    with open(f"{tags}nospaces.bin", "wb") as t:
-        pickle.dump(nospaces, t)
+    desc_decision = input_decision(f"[+] - Descs is [bold #FFC6AC]{descs}[/bold #FFC6AC]. Do you want to continue?[y/n]")
+    if desc_decision == "n":
+        raise SystemExit
+
+    # We'll add the text to cleandata, so as to have all found info in the same place.
+    clst = []
+    for desc in descs:
+        for c in cleandata:
+            if desc[0] == c[0]:
+                info = c + (desc[1],)
+                clst.append(info)
+
+    with open(f"{gnu}clean_list.bin", "wb") as f:
+        pickle.dump(clst, f)
 
 
-if __name__ == "__main__":
-    json_cleaner()
+# if __name__ == "__main__":
+#     bin_cleaner()
 
 
-# @snoop
+@snoop
 def kwd_creator():
     """
-    We run KeyBERT through *nospaces.bin*.
+    We run KeyBERT through *clean_list.bin*.
+    I chose to make the changes to the data
+    still in the spider, so I don't have need
+    for the 'bin_cleaner' module. I'll keep it
+    commented, because we don't know if I'll
+    change my mind again.
     """
-    with open(f"{compg}/nospaces.bin", "rb") as f:
-        csvcontent = pickle.load(f)
+    filelst = os.listdir(f"{gnu}")
 
-    for line in csvcontent:
-        name = line[0]
-        text = line[1]
-        badwords = [f"{name}", f"n{name}", "codespace", "codespaces", "svn", "pypi"]
+    if "clean_list.bin" in filelst:
+        with open(f"{gnu}/clean_list.bin", "rb") as f:
+            content = pickle.load(f)
+        print_template(f"Using [bold #FFC6AC]clean_list.bin file[/bold #FFC6AC] found in {gnu}")
+    else:
+        with open(f"{project}results.bin", "rb") as g:
+            content = []
+            while True:
+                try:
+                    content.append(pickle.load(g))
+                except EOFError:
+                    break
+        print_template(f"Using [bold #FFC6AC]results.bin file[/bold #FFC6AC] from {project}")
+
+    print(content)
+    desc_decision = input_decision("[+] - Do you want to continue?[y/n]")
+    if desc_decision == "n":
+        raise SystemExit
+
+    if all(type(i) == tuple for i in content):
+        txts = [(i[0], i[2]) for i in content]
+    if all(type(i) == dict for i in content):
+        txts = []
+        for dic in content:
+            temp = []
+            name = dic["name"]
+            for c in dic["content"]:
+                # 'content' has a prefix with the app's name the we don't want to be
+                # in text, because we're going to expressly insert it as the first tag.
+                if c.startswith(f"{name}: - "):
+                    txt = c.split(" - ")[1]
+                    temp.append(txt)
+                else:
+                    temp.append(c)
+            txts.append(temp)
+
+    for t in txts:
+        name = t[0]
+        text = t[1]
+        badwords = ["codespace", f"{name}", "format"]
         kw_model = KeyBERT()
         keys = kw_model.extract_keywords(
             text,
@@ -76,7 +157,6 @@ def kwd_creator():
             stop_words=badwords,
         )
         keywords = [o for o, p in keys]
-
         kwds = []
         # This is here to ensure that the keywords are not very similar.
         for y in keywords:
@@ -100,7 +180,7 @@ def kwd_creator():
             # and add it to the chosen keywords list.
             kwds += [sim_choice]
 
-        with open(f"{compg}/kws/{name}", "w") as v:
+        with open(f"{gnu}kws/{name}", "w") as v:
             for q in kwds:
                 v.write(f"{q}\n")
 

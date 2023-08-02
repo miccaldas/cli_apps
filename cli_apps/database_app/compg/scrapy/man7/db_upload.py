@@ -20,8 +20,8 @@ snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 # Envs
-hlp = os.getenv("HLP")
-project = os.getenv("HLPPROJ")
+mn7 = os.getenv("MN7")
+project = os.getenv("MN7PROJ")
 comp = os.getenv("COMP")
 
 
@@ -31,15 +31,12 @@ def data_preparation():
     We gather information for the db columns that
     is dispersed through various files, in one list.
     """
-    with open(f"{hlp}spiders.bin", "rb") as g:
+    with open(f"{mn7}spiders.bin", "rb") as g:
         spiders = pickle.load(g)
-    with open(f"{hlp}clean_list.bin", "rb") as h:
+    with open(f"{mn7}clean_list.bin", "rb") as h:
         cleandata = pickle.load(h)
     with open(f"{comp}epoch.bin", "rb") as i:
         epoch = pickle.load(i)
-
-    low = epoch[0]
-    high = epoch[1]
 
     # There are times where the program chooses links that are very similar. For example, it sent us
     # these two url's:
@@ -57,7 +54,7 @@ def data_preparation():
             clean.append(c)
     cleandata = clean
 
-    kwlst = os.listdir(f"{hlp}kws")
+    kwlst = os.listdir(f"{mn7}kws")
 
     fin = []
     for k in kwlst:
@@ -67,7 +64,7 @@ def data_preparation():
         # first list is empty again, ready to restart.
         # We open the list of files with keywords. We'll open each one and iterate
         # through their content.
-        with open(f"{hlp}kws/{k}", "r") as f:
+        with open(f"{mn7}kws/{k}", "r") as f:
             ks = f.readlines()
         # If keyBERT created 3 or more keyword, we gather the first three.
         if len(ks) >= 3:
@@ -108,7 +105,7 @@ def data_preparation():
                 fin.append(tall)
 
     print(fin)
-    with open(f"{hlp}final_data_{low}_{high}.bin", "wb") as i:
+    with open(f"{mn7}final_data_{epoch[0]}_{epoch[1]}.bin", "wb") as i:
         pickle.dump(fin, i)
 
 
@@ -127,7 +124,7 @@ def db_upload():
     low = epoch[0]
     high = epoch[1]
 
-    with open(f"{hlp}final_data_{low}_{high}.bin", "rb") as f:
+    with open(f"{mn7}final_data_{epoch[0]}_{epoch[1]}.bin", "rb") as f:
         d = pickle.load(f)
 
     dt = d[0]
@@ -145,7 +142,9 @@ def db_upload():
     t4 = dt[5]
     print(t4)
 
-    q1 = "INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4, source) VALUES "
+    q1 = (
+        "INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4, source) VALUES "
+    )
     q2 = f"('{name}', '{content}', '{url}', '{name}', '{t1}', '{t2}', '{t3}', '{t4}')"
     query = f"{q1}{q2}"
     dbdata(query, "commit")

@@ -111,7 +111,7 @@ def url_searcher(url, app_data):
             fldr = deb
         if url == "https://helpmanual.io":
             fldr = hlp
-        if url == "https://man7.org/":
+        if url == "https://man7.org":
             fldr = mn7
         with open(f"{fldr}/urls_{low}_{upp}.bin", "wb") as f:
             pickle.dump(urls, f)

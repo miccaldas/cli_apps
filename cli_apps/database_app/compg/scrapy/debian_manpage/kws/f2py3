@@ -1,4 +1,5 @@
 fortran
-interface
+f2py
 python
-generator
+program
+module

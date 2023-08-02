@@ -28,14 +28,16 @@ def command_linux_main():
     Calls all function in this folder.
     """
     call_analysis()
-    names_preparation()
-    init_project()
-    spider_runner()
-    kwd_creator()
-    data_preparation()
-    db_upload()
-    epoch_counting_info()
-    delete_files()
+    res = names_preparation()
+    # If call_analysis() doesn't produce results, it returns nothing.
+    if res == "y":
+        init_project()
+        spider_runner()
+        kwd_creator()
+        data_preparation()
+        db_upload()
+        epoch_counting_info()
+        delete_files()
 
 
 if __name__ == "__main__":

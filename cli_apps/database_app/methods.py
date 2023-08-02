@@ -8,7 +8,6 @@ import subprocess
 from datetime import datetime
 
 import snoop
-
 from click import style
 from pyfzf.pyfzf import FzfPrompt
 from rich import print
@@ -47,12 +46,12 @@ def input_decision(prompt, color=(160, 196, 157)):
 
 
 # @snoop
-def print_template(text):
+def print_template(text, style="bold #AAC8A7"):
     """
     Template to format string presentation.
     """
     console = Console()
-    console.print(Padding(f"[bold #AAC8A7]{text}[/]", (0, 10, 0, 10)))
+    console.print(Padding(f"[{style}][+] - {text}[/]", (0, 3, 0, 10)))
 
 
 @snoop
@@ -90,7 +89,10 @@ def aggregate_info():
                     allinf += [i]
     for t in allinf:
         print(t)
-    allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j) for a, b, c, d, e, f, g, h, i, j in allinf]
+    allinfo = [
+        (a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j)
+        for a, b, c, d, e, f, g, h, i, j in allinf
+    ]
 
     with open("allinfo.bin", "wb") as f:
         pickle.dump(allinfo, f)
@@ -323,16 +325,22 @@ def alternative_presentations(tag="ai"):
     """
 
     if tag == "ai":
-        required = input_decision("Do you want to explore one of this packages dependecies?[y/n] ")
+        required = input_decision(
+            "Do you want to explore one of this packages dependecies?[y/n] "
+        )
         if required == "y":
             alternative = "required_by"
-        ailocation = input_decision("Do you want to see more on the location of these files?[y/n] ")
+        ailocation = input_decision(
+            "Do you want to see more on the location of these files?[y/n] "
+        )
         if ailocation == "y":
             alternative = "location_main"
         if required == "y" and ailocation == "y":
             alternative = ("required_by", "location_main")
     if tag == "req":
-        location = input_decision("Do you want to see more on the location of these files?[y/n] ")
+        location = input_decision(
+            "Do you want to see more on the location of these files?[y/n] "
+        )
         if location == "y":
             alternative == "location"
 
