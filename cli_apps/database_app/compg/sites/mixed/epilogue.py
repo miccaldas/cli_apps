@@ -6,7 +6,7 @@ import pickle
 import shutil
 
 # import snoop
-from cli_apps.database_app.compg.scrapy.epoch_counting.data_counting import (
+from cli_apps.database_app.compg.sites.epoch_counting.data_counting import (
     data_counting,
 )
 from cli_apps.database_app.methods import print_template

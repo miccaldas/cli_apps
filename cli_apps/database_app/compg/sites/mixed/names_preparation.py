@@ -14,13 +14,12 @@ from snoop import pp
 
 from epilogue import copy_files, delete_files, epoch_counting_info
 
-
 # def type_watch(source, value):
 #     return f"type({source})", type(value)
 
 
 # snoop.install(watch_extras=[type_watch])
-# load_dotenv()
+load_dotenv()
 
 # Envs
 mix = os.getenv("MIX")
@@ -65,8 +64,21 @@ def names_preparation():
         nodots = [(i[0], i[1].replace(".", "_"), i[2]) for i in noslashes]
         spiders = [(i[0], f"{i[1]}_spider", i[2]) for i in nodots]
 
+        # In the 50-100 cohort there were apps that, either were commands of apps
+        # that have a manpage or links to pages that are not html. we take them
+        # ou here.
+        rejects = [
+            "disable-paste",
+            "mozcerts-qt5",
+            "bottle.py",
+            "nl-cls-add",
+            "nl-route-add",
+            "substrings.pl",
+            "pamtosrf",
+        ]
+        sp = [i for i in spiders if i[0] not in rejects]
         with open(f"{mix}spiders.bin", "wb") as f:
-            pickle.dump(spiders, f)
+            pickle.dump(sp, f)
 
         return "y"
     else:

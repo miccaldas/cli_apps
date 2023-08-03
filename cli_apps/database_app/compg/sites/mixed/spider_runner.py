@@ -21,8 +21,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Envs
-project = os.getenv("MN7PROJ")
-spiders = os.getenv("MN7SPIDERS")
+project = os.getenv("MIXPROJ")
+spiders = os.getenv("MIXSPIDERS")
 
 
 # @snoop

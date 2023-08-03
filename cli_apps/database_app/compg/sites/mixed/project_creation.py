@@ -39,16 +39,16 @@ def settings_definition():
     1. FEEDS  Dictionary which structures the file that'll house the spider's results.\n
     2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
-    with open(f"{project}man7_project/settings.py", "a") as d:
-        d.write("FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content'],},}\n")
+    with open(f"{project}mixed_project/settings.py", "a") as d:
+        d.write("FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content', 'titles', 'ubuntus', 'sourceforge'],},}\n")
         d.write("RETRY_TIMES = 1\n")
 
-    # The 'die.net' manpage site doesn't  allow scrapers. We have to change this to use it.
-    # with open(f"{project}linux_die_project/settings.py", "r") as e:
-    #     lines = e.readlines()
-    #     lines[19] = "ROBOTSTXT_OBEY = False"
-    # with open(f"{project}linux_die_project/settings.py", "w") as m:
-    #     m.writelines(lines)
+    # Some site don't  allow scrapers. We have to change this to use it.
+    with open(f"{project}mixed_project/settings.py", "r") as e:
+        lines = e.readlines()
+        lines[19] = "ROBOTSTXT_OBEY = False"
+    with open(f"{project}mixed_project/settings.py", "w") as m:
+        m.writelines(lines)
 
 
 @snoop
@@ -81,13 +81,21 @@ def spider():
             f.write("\n\n")
             f.write("    #@snoop\n")
             f.write("    def parse(self, response):\n")
-            f.write("        srch_gen = response.xpath(\"//*[@id='man-page']/div/div[1]/text()\").getall()\n")
-            f.write("        srch_desc = response.xpath(\"//*[@id='man-page']/div/div[1]/text()[1]\").getall()\n")
+            f.write("        srch_gen = response.css('p::text').getall()\n")
+            f.write("        srch_h1 = response.css('h1::text').getall()\n")
+            f.write("        srch_h2 = response.css('h2::text').getall()\n")
+            f.write("        srch_h3 = response.css('h3::text').getall()\n")
+            f.write("        srch_h4 = response.css('h4::text').getall()\n")
+            f.write("        srch_pre = response.css('pre::text').getall()\n")
+            f.write("        srch_dd = response.css('dd::text').getall()\n")
             # DON'T ALIGN THIS LINE! It's like that because it has the 'f' for
             # f-expression before it. Leave it be.
             f.write(f"        name = '{entry[0]}'\n\n")
-            f.write("        lsts = srch_desc + srch_gen\n")
-            f.write("        results = {'name': name, 'content': lsts}\n")
+            f.write("        hs = srch_h1 + srch_h2 + srch_h3 + srch_h4\n")
+            f.write("        texts = srch_gen\n")
+            f.write("        pres = srch_pre\n")
+            f.write("        dds = srch_dd\n")
+            f.write("        results = {'name': name, 'content': texts, 'titles': hs, 'ubuntus': pres, 'sourceforge': dds}\n")
             f.write("        yield results\n")
 
 

@@ -13,8 +13,7 @@ import snoop
 from cli_apps.database_app.methods import input_decision, print_template
 from dotenv import load_dotenv
 from keybert import KeyBERT
-
-# from snoop import pp
+from snoop import pp
 from thefuzz import fuzz, process
 
 
@@ -27,8 +26,8 @@ snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 # Envs
-mn7 = os.getenv("MN7")
-project = os.getenv("MN7PROJ")
+mix = os.getenv("MIX")
+project = os.getenv("MIXPROJ")
 
 
 @snoop
@@ -52,52 +51,91 @@ def bin_cleaner():
             except EOFError:
                 break
 
-    splits = []
-    descs = []
-    # We identified two patterns in the site that give good results.
-    # We'll look for one, if it fails, we'll for the other.
-    for i, t in enumerate(entries):
-        name = entries[i]["name"]
-        lst = entries[i]["content"]
-    # We're looking for twothings in 'lst', a quote for the field 'description'
-    # probably the same thing for keyword creation. We've noticed that more text
-    # doesn't mean better results. So, unless we start seeing bad results, the
-    # 'edscription' filed and keyBERT are fed with the same text.
-    for ls in lst:
-        # We split the content string in the breakline points, to mimic the appearance
-        # of the web page.
-        splits = ls.split("\n")
-        for idx, line in enumerate(splits):
-            # If line starts with this pattern....
-            if line.startswith(name + ": - "):
-                # split on it and keep the second half.
-                desc = line.split(": - "[1])
-                descs.append(name, desc)
+    # In the spiders we've created commands generally expecting that we have a generalist 'response.css'
+    # that'll gather info from most sites, another for 'github', and another for 'sourceforge'. We'll
+    # split 'entries in these 3 groups.'
+    # for c in cleandata:
+    #     if c[2].startswith("https://manpages.ubuntu.com/"):
+    #         ubuntus.append(c)
+    ub = [c[0] for c in cleandata if c[1].startswith("https://manpages.ubuntu.com")]
+    ubuntus = [e for e in entries if e["name"] in ub]
+
+    # TODO: Automate the collection of entries with results through 'sourceforge' response.css()
+    sf = ["pbmtonokia"]
+    srcfrg = [e for e in entries if e["name"] in sf]
+
+    ub_sf = ub + sf
+    gens = [e for e in entries if e["name"] not in ub_sf]
+
+    [u.update({"name": f'{u["name"][:-3]}'}) for u in ubuntus if u["name"].endswith(".py")]
+
+    lines = []
+    for u in ubuntus:
+        for line in u["ubuntus"]:
+            # 'locale-gen' string uses a slightly bigger dash  character than the others.
+            # We create an option for that.
+            if line.find(f"{u['name']} - ") != -1 or line.find(f"{u['name']} — ") != -1:
+                lines.append(line)
                 break
-            if descs == []:
-                if line.startswith("Usage: "):
-                    descs.append((name, splits[i]))
 
-    desc_decision = input_decision(
-        f"[+] - Descs is [bold #FFC6AC]{descs}[/bold #FFC6AC]. Do you want to continue?[y/n]"
-    )
-    if desc_decision == "n":
-        raise SystemExit
+    line_lists = []
+    for line in lines:
+        if " - " in line:
+            lnlst = line.split(" - ")
+            line_lists.append(lnlst)
+        if " - " in line:
+            lnlst = line.split(" - ")
+            line_lists.append(lnlst)
 
-    # We'll add the text to cleandata, so as to have all found info in the same place.
-    clst = []
-    for desc in descs:
-        for c in cleandata:
-            if desc[0] == c[0]:
-                info = c + (desc[1],)
-                clst.append(info)
+    cleanlsts = []
+    for lst in line_lists:
+        clst = [lst[0].strip(), lst[1].strip()]
+        cleanlsts.append(clst)
+    print(cleanlsts)
+    # splits = []
+    # descs = []
+    # # We identified two patterns in the site that give good results.
+    # # We'll look for one, if it fails, we'll for the other.
+    # for i, t in enumerate(entries):
+    #     name = entries[i]["name"]
+    #     lst = entries[i]["content"]
+    # # We're looking for twothings in 'lst', a quote for the field 'description'
+    # # probably the same thing for keyword creation. We've noticed that more text
+    # # doesn't mean better results. So, unless we start seeing bad results, the
+    # # 'edscription' filed and keyBERT are fed with the same text.
+    # for ls in lst:
+    #     # We split the content string in the breakline points, to mimic the appearance
+    #     # of the web page.
+    #     splits = ls.split("\n")
+    #     for idx, line in enumerate(splits):
+    #         # If line starts with this pattern....
+    #         if line.startswith(name + ": - "):
+    #             # split on it and keep the second half.
+    #             desc = line.split(": - "[1])
+    #             descs.append(name, desc)
+    #             break
+    #         if descs == []:
+    #             if line.startswith("Usage: "):
+    #                 descs.append((name, splits[i]))
 
-    with open(f"{mn7}clean_list.bin", "wb") as f:
-        pickle.dump(clst, f)
+    # desc_decision = input_decision(f"[+] - Descs is [bold #FFC6AC]{descs}[/bold #FFC6AC]. Do you want to continue?[y/n]")
+    # if desc_decision == "n":
+    #     raise SystemExit
+
+    # # We'll add the text to cleandata, so as to have all found info in the same place.
+    # clst = []
+    # for desc in descs:
+    #     for c in cleandata:
+    #         if desc[0] == c[0]:
+    #             info = c + (desc[1],)
+    #             clst.append(info)
+
+    # with open(f"{mn7}clean_list.bin", "wb") as f:
+    #     pickle.dump(clst, f)
 
 
-# if __name__ == "__main__":
-#     bin_cleaner()
+if __name__ == "__main__":
+    bin_cleaner()
 
 
 @snoop
@@ -110,14 +148,12 @@ def kwd_creator():
     commented, because we don't know if I'll
     change my mind again.
     """
-    filelst = os.listdir(f"{mn7}")
+    filelst = os.listdir(f"{mix}")
 
     if "clean_list.bin" in filelst:
-        with open(f"{mn7}/clean_list.bin", "rb") as f:
+        with open(f"{mix}/clean_list.bin", "rb") as f:
             content = pickle.load(f)
-        print_template(
-            f"Using [bold #FFC6AC]clean_list.bin[/bold #FFC6AC] file found in {mn7}"
-        )
+        print_template(f"Using [bold #FFC6AC]clean_list.bin[/bold #FFC6AC] file found in {mix}")
     else:
         with open(f"{project}results.bin", "rb") as g:
             content = []
@@ -126,9 +162,7 @@ def kwd_creator():
                     content.append(pickle.load(g))
                 except EOFError:
                     break
-        print_template(
-            f"Using [bold #FFC6AC]results.bin[/bold #FFC6AC] file from {project}"
-        )
+        print_template(f"Using [bold #FFC6AC]results.bin[/bold #FFC6AC] file from {project}")
 
     print(content)
     desc_decision = input_decision("[+] - Do you want to continue?[y/n]")
@@ -186,10 +220,10 @@ def kwd_creator():
             # and add it to the chosen keywords list.
             kwds += [sim_choice]
 
-        with open(f"{mn7}kws/{name}", "w") as v:
+        with open(f"{mix}kws/{name}", "w") as v:
             for q in kwds:
                 v.write(f"{q}\n")
 
 
-if __name__ == "__main__":
-    kwd_creator()
+# if __name__ == "__main__":
+#     kwd_creator()
