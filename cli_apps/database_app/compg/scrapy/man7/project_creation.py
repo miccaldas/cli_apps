@@ -14,9 +14,9 @@ from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
 load_dotenv()
 
 # Envs
-gnu = os.getenv("GNU")
-project = os.getenv("GNUPROJ")
-spiders = os.getenv("GNUSPIDERS")
+mn7 = os.getenv("MN7")
+project = os.getenv("MN7PROJ")
+spiders = os.getenv("MN7SPIDERS")
 
 
 # @snoop
@@ -27,8 +27,8 @@ def project_creation():
 
         scrapy startproject gnu_ftp_project
     """
-    cmmd = "/usr/bin/scrapy startproject gnu_ftp_project"
-    subprocess.run(cmmd, cwd=gnu, shell=True)
+    cmmd = "/usr/bin/scrapy startproject man7_project"
+    subprocess.run(cmmd, cwd=mn7, shell=True)
 
 
 # @snoop
@@ -39,10 +39,8 @@ def settings_definition():
     1. FEEDS  Dictionary which structures the file that'll house the spider's results.\n
     2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
-    with open(f"{project}helpmanual_project/settings.py", "a") as d:
-        d.write(
-            "FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content'],},}\n"
-        )
+    with open(f"{project}man7_project/settings.py", "a") as d:
+        d.write("FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content'],},}\n")
         d.write("RETRY_TIMES = 1\n")
 
     # The 'die.net' manpage site doesn't  allow scrapers. We have to change this to use it.
@@ -64,7 +62,7 @@ def spider():
     :var str name: The name of the package. Added so we can identify the lines in the json.
     """
 
-    with open(f"{gnu}spiders.bin", "rb") as f:
+    with open(f"{mn7}spiders.bin", "rb") as f:
         newurls = pickle.load(f)
     for entry in newurls:
         spider_name = f"{entry[1]}"
@@ -83,12 +81,8 @@ def spider():
             f.write("\n\n")
             f.write("    #@snoop\n")
             f.write("    def parse(self, response):\n")
-            f.write(
-                "        srch_gen = response.xpath(\"//*[@id='man-page']/div/div[1]/text()\").getall()\n"
-            )
-            f.write(
-                "        srch_desc = response.xpath(\"//*[@id='man-page']/div/div[1]/text()[1]\").getall()\n"
-            )
+            f.write("        srch_gen = response.xpath(\"//*[@id='man-page']/div/div[1]/text()\").getall()\n")
+            f.write("        srch_desc = response.xpath(\"//*[@id='man-page']/div/div[1]/text()[1]\").getall()\n")
             # DON'T ALIGN THIS LINE! It's like that because it has the 'f' for
             # f-expression before it. Leave it be.
             f.write(f"        name = '{entry[0]}'\n\n")

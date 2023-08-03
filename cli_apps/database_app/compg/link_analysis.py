@@ -155,7 +155,7 @@ if __name__ == "__main__":
     link_parse()
 
 
-# @snoop
+@snoop
 def first_link(app_data, destination):
     """
     Given that we tok this out from a
@@ -163,18 +163,22 @@ def first_link(app_data, destination):
     to heed to their knowledge and see
     what is the their first pick of links.
     """
+    with open(app_data, "rb") as f:
+        app_data = pickle.load(f)
+    with open(f"{comp}epoch.bin", "rb") as d:
+        epoch = pickle.load(d)
 
     firsts = []
     manned_names = []
-    for f in app_data:
+    for f in app_data[:-1]:
         for i, t in enumerate(f[1]):
             if i == 0:
                 firsts.append((f[0], t))
                 manned_names.append(f[0])
 
-    with open(f"{destination}/first_links.bin", "wb") as f:
+    with open(f"{destination}first_links_{epoch[0]}_{epoch[1]}.bin", "wb") as f:
         pickle.dump(firsts, f)
 
 
 if __name__ == "__main__":
-    first_link("25_35.bin")
+    first_link()

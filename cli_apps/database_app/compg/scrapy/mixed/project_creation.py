@@ -14,9 +14,9 @@ from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
 load_dotenv()
 
 # Envs
-gnu = os.getenv("GNU")
-project = os.getenv("GNUPROJ")
-spiders = os.getenv("GNUSPIDERS")
+mix = os.getenv("MIX")
+project = os.getenv("MIXPROJ")
+spiders = os.getenv("MIXSPIDERS")
 
 
 # @snoop
@@ -27,8 +27,8 @@ def project_creation():
 
         scrapy startproject gnu_ftp_project
     """
-    cmmd = "/usr/bin/scrapy startproject gnu_ftp_project"
-    subprocess.run(cmmd, cwd=gnu, shell=True)
+    cmmd = "/usr/bin/scrapy startproject mixed_project"
+    subprocess.run(cmmd, cwd=mix, shell=True)
 
 
 # @snoop
@@ -39,7 +39,7 @@ def settings_definition():
     1. FEEDS  Dictionary which structures the file that'll house the spider's results.\n
     2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
-    with open(f"{project}gnu_ftp_project/settings.py", "a") as d:
+    with open(f"{project}man7_project/settings.py", "a") as d:
         d.write("FEEDS = {'results.bin': {'format': 'pickle', 'fields': ['name', 'content'],},}\n")
         d.write("RETRY_TIMES = 1\n")
 
@@ -62,7 +62,7 @@ def spider():
     :var str name: The name of the package. Added so we can identify the lines in the json.
     """
 
-    with open(f"{gnu}spiders.bin", "rb") as f:
+    with open(f"{mix}spiders.bin", "rb") as f:
         newurls = pickle.load(f)
     for entry in newurls:
         spider_name = f"{entry[1]}"

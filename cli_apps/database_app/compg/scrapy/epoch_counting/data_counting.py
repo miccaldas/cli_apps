@@ -25,7 +25,7 @@ comp = os.getenv("COMP")
 app = os.getenv("APPDATA")
 
 
-# @snoop
+@snoop
 def data_counting():
     """"""
     with open(f"{comp}epoch.bin", "rb") as f:
@@ -88,44 +88,45 @@ def data_counting():
             with open(f"{cwd}helpmanual_data.bin", "rb") as r:
                 hlp = pickle.load(r)
                 datas.append((i, hlp))
-
     names = []
-    # We'll look for data files that output '[]'. That means that
-    # they found nothing in this cohort for their site. We output
-    # a warning message ad delete their entry from 'datas'.
-    for t in datas:
-        if t[1] == []:
-            print_template(
-                f"{t[0]}'s output for the {low}-{high} epoch was 0.",
-                "bold #F31559\n",
-            )
-            datas.remove(t)
+    # # We'll look for data files that output '[]'. That means that
+    # # they found nothing in this cohort for their site. We output
+    # # a warning message ad delete their entry from 'datas'.
+    # for t in datas:
+    #     if t[1] == []:
+    #         print_template(
+    #             f"{t[0]}'s output for the {low}-{high} epoch was 0.",
+    #             "bold #F31559\n",
+    #         )
+    #         datas.remove(t)
 
-    # We collect the processed app's names. As we, depending on the site,
-    # receive data in list of lists or list of dictionaries format, we
-    # have two modes of collection.
+    # # We collect the processed app's names. As we, depending on the site,
+    # # receive data in list of lists or list of dictionaries format, we
+    # # have two modes of collection.
     for d in datas:
         for sub in d[1]:
-            if type(sub) == list:
+            if type(sub) == list or type(sub) == tuple:
                 names.append(sub[0])
             if type(sub) == dict:
                 names.append(sub["name"])
 
-    # 'left' is a file that has an updated number of app's to process in cohort.
-    left = [u for u in ur if u[0] not in names]
-    with open("left.bin", "wb") as t:
-        pickle.dump(left, t)
+    # # 'left' is a file that has an updated number of app's to process in cohort.
+    for n in names:
+        print(n)
+    # left = [u for u in ur if u[0] not in names]
+    # with open("left.bin", "wb") as t:
+    #     pickle.dump(left, t)
 
-    # Function's output.
-    # Two things of note:
-    # 1 - Don't put '[/]' before declaring a new style. Not needed.
-    # 2 - If you have a style inserted in another, to terminate it
-    #     don't write '[/]', it won't work. Write '[/<style_definition>]'.
-    #     See the second print_template() call as an example.
-    print("\n")
-    print_template(f"The epoch is[bold #FFC6AC] {epoch}")
-    print_template(f"There's [bold #FFC6AC]{len(left)}[/bold #FFC6AC] apps to process in this epoch")
-    print_template(f"The site's already processed are [bold #FFC6AC]{processed}")
+    # # Function's output.
+    # # Two things of note:
+    # # 1 - Don't put '[/]' before declaring a new style. Not needed.
+    # # 2 - If you have a style inserted in another, to terminate it
+    # #     don't write '[/]', it won't work. Write '[/<style_definition>]'.
+    # #     See the second print_template() call as an example.
+    # print("\n")
+    # print_template(f"The epoch is[bold #FFC6AC] {epoch}")
+    # print_template(f"There's [bold #FFC6AC]{len(left)}[/bold #FFC6AC] apps to process in this epoch")
+    # print_template(f"The site's already processed are [bold #FFC6AC]{processed}")
 
 
 if __name__ == "__main__":

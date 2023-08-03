@@ -27,8 +27,8 @@ snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 # Envs
-gnu = os.getenv("GNU")
-project = os.getenv("GNUPROJ")
+mn7 = os.getenv("MN7")
+project = os.getenv("MN7PROJ")
 
 
 @snoop
@@ -78,7 +78,9 @@ def bin_cleaner():
                 if line.startswith("Usage: "):
                     descs.append((name, splits[i]))
 
-    desc_decision = input_decision(f"[+] - Descs is [bold #FFC6AC]{descs}[/bold #FFC6AC]. Do you want to continue?[y/n]")
+    desc_decision = input_decision(
+        f"[+] - Descs is [bold #FFC6AC]{descs}[/bold #FFC6AC]. Do you want to continue?[y/n]"
+    )
     if desc_decision == "n":
         raise SystemExit
 
@@ -90,7 +92,7 @@ def bin_cleaner():
                 info = c + (desc[1],)
                 clst.append(info)
 
-    with open(f"{gnu}clean_list.bin", "wb") as f:
+    with open(f"{mn7}clean_list.bin", "wb") as f:
         pickle.dump(clst, f)
 
 
@@ -108,12 +110,14 @@ def kwd_creator():
     commented, because we don't know if I'll
     change my mind again.
     """
-    filelst = os.listdir(f"{gnu}")
+    filelst = os.listdir(f"{mn7}")
 
     if "clean_list.bin" in filelst:
-        with open(f"{gnu}/clean_list.bin", "rb") as f:
+        with open(f"{mn7}/clean_list.bin", "rb") as f:
             content = pickle.load(f)
-        print_template(f"Using [bold #FFC6AC]clean_list.bin[/bold #FFC6AC] file found in {gnu}")
+        print_template(
+            f"Using [bold #FFC6AC]clean_list.bin[/bold #FFC6AC] file found in {mn7}"
+        )
     else:
         with open(f"{project}results.bin", "rb") as g:
             content = []
@@ -122,7 +126,9 @@ def kwd_creator():
                     content.append(pickle.load(g))
                 except EOFError:
                     break
-        print_template(f"Using [bold #FFC6AC]results.bin[/bold #FFC6AC] file from {project}")
+        print_template(
+            f"Using [bold #FFC6AC]results.bin[/bold #FFC6AC] file from {project}"
+        )
 
     print(content)
     desc_decision = input_decision("[+] - Do you want to continue?[y/n]")
@@ -180,7 +186,7 @@ def kwd_creator():
             # and add it to the chosen keywords list.
             kwds += [sim_choice]
 
-        with open(f"{gnu}kws/{name}", "w") as v:
+        with open(f"{mn7}kws/{name}", "w") as v:
             for q in kwds:
                 v.write(f"{q}\n")
 
