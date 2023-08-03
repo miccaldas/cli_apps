@@ -108,10 +108,6 @@ def ubuntu_cleaner():
     return ubuntulines
 
 
-# if __name__ == "__main__":
-#     ubuntu_cleaner()
-
-
 @snoop
 def sourceforge_cleaner():
     """
@@ -127,17 +123,13 @@ def sourceforge_cleaner():
     srclines = []
     for s in srcfrg:
         s.update({"sourceforge": [i.strip() for i in s["sourceforge"]]})
-        srclines.append((s["name"], s["sourceforge"][0]))
+        srclines.append([s["name"], s["sourceforge"][0]])
 
     return srclines
 
 
-# if __name__ == "__main__":
-#     sourceforge_cleaner()
-
-
 @snoop
-def general_cleaner():
+def generic_cleaner():
     """
     Cleans all entries not coming
     from Github or Sourceforge.
@@ -163,53 +155,73 @@ def general_cleaner():
     ]
     genes = [[r["name"], r["content"]] for r in gene if r["content"] != []]
     gener = [[sub[0], [v.strip() for v in sub[1]]] for sub in genes]
-    generics = [[sub[0], [v for v in sub[1] if v != ""]] for sub in gener]
-    for h in generics:
-        print(h)
-    # splits = []
-    # descs = []
-    # # We identified two patterns in the site that give good results.
-    # # We'll look for one, if it fails, we'll for the other.
-    # for i, t in enumerate(entries):
-    #     name = entries[i]["name"]
-    #     lst = entries[i]["content"]
-    # # We're looking for twothings in 'lst', a quote for the field 'description'
-    # # probably the same thing for keyword creation. We've noticed that more text
-    # # doesn't mean better results. So, unless we start seeing bad results, the
-    # # 'edscription' filed and keyBERT are fed with the same text.
-    # for ls in lst:
-    #     # We split the content string in the breakline points, to mimic the appearance
-    #     # of the web page.
-    #     splits = ls.split("\n")
-    #     for idx, line in enumerate(splits):
-    #         # If line starts with this pattern....
-    #         if line.startswith(name + ": - "):
-    #             # split on it and keep the second half.
-    #             desc = line.split(": - "[1])
-    #             descs.append(name, desc)
-    #             break
-    #         if descs == []:
-    #             if line.startswith("Usage: "):
-    #                 descs.append((name, splits[i]))
 
-    # desc_decision = input_decision(f"[+] - Descs is [bold #FFC6AC]{descs}[/bold #FFC6AC]. Do you want to continue?[y/n]")
-    # if desc_decision == "n":
-    #     raise SystemExit
+    empties = [[sub[0], [v for v in sub[1] if v != ""]] for sub in gener]
+    comma = [[sub[0], [v for v in sub[1] if v != ","]] for sub in empties]
+    commaspace = [[sub[0], [v for v in sub[1] if v != ", "]] for sub in comma]
+    point = [[sub[0], [v for v in sub[1] if v != "."]] for sub in commaspace]
 
-    # # We'll add the text to cleandata, so as to have all found info in the same place.
-    # clst = []
-    # for desc in descs:
-    #     for c in cleandata:
-    #         if desc[0] == c[0]:
-    #             info = c + (desc[1],)
-    #             clst.append(info)
+    # In 'point' there's entries we can get the 'presentation' value from the first
+    # item from content, and some that do not. We'll seprate them in two different lists.
+    # This first list are those that we cannot take the 'presentation' value in the first line.
+    nofirst = [
+        "vboximg-mount",
+        "ppmtospu",
+        "sst_dump",
+        "qmlimportscanner-qt5",
+        "vboximg-mount",
+        "vss2xhtml",
+    ]
+    firsts = [p for p in point if p[0] not in nofirst]
 
-    # with open(f"{mn7}clean_list.bin", "wb") as f:
-    #     pickle.dump(clst, f)
+    # As there was no way to create a method, shareable by all, that would get a good 'presentation'
+    # value, we'll do it by hand.
+    seconds = [
+        ["vss2xhtml", "Converts Microsoft Visio stencils to SVG."],
+        [
+            "ppmtospu",
+            "This program converts from the PPM format to the uncompressed Spectrum 512 image format usedon Atari ST computers.",
+        ],
+        [
+            "sst_dump",
+            "sst_dump tool can be used to gain insights about a specific SST file.",
+        ],
+        [
+            "qmlimportscanner-qt5",
+            "Runs at configure time to find the static QML plugins used and links them to the given target.",
+        ],
+        [
+            "vboximg-mount",
+            "Command line utility for Mac OS X hosts that provides raw access to an Oracle VM VirtualBox virtual disk image on the host system",
+        ],
+    ]
+
+    genericlns = [[f[0], f[1][0]] for f in firsts]
+    genericlns += seconds
+    genericlines = [[i.replace("\n", " ") for i in sub] for sub in genericlns]
+
+    return genericlines
+
+
+@snoop
+def final_list():
+    """"""
+    uni = universal_objects()
+    cleandata = uni[0]
+
+    ulines = ubuntu_cleaner()
+    slines = sourceforge_cleaner()
+    glines = generic_cleaner()
+    flines = ulines + slines + glines
+
+    [i.append(f[1]) for i in flines for f in cleandata if i[0] == f[0]]
+
+    with open(f"{mix}clean_list.bin", "wb") as f:
+        pickle.dump(flines, f)
 
 
 if __name__ == "__main__":
-    general_cleaner()
+    final_list()
 
 
 @snoop
@@ -242,13 +254,16 @@ def kwd_creator():
             f"Using [bold #FFC6AC]results.bin[/bold #FFC6AC] file from {project}"
         )
 
-    print(content)
+    print_template(f"{content}")
+    print("\n")
     desc_decision = input_decision("[+] - Do you want to continue?[y/n]")
     if desc_decision == "n":
         raise SystemExit
 
     if all(type(i) == tuple for i in content):
         txts = [(i[0], i[2]) for i in content]
+    if all(type(i) == list for i in content):
+        txts = [(i[0], i[1]) for i in content]
     if all(type(i) == dict for i in content):
         txts = []
         for dic in content:
@@ -303,5 +318,5 @@ def kwd_creator():
                 v.write(f"{q}\n")
 
 
-# if __name__ == "__main__":
-#     kwd_creator()
+if __name__ == "__main__":
+    kwd_creator()
