@@ -14,7 +14,6 @@ from rich import print
 from rich.console import Console
 from rich.padding import Padding
 
-from db import dbdata
 from show_info import show_info
 
 # from snoop import pp

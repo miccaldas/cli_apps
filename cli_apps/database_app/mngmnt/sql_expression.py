@@ -8,8 +8,6 @@ import pickle
 import snoop
 from snoop import pp
 
-from db import dbdata
-
 
 def type_watch(source, value):
     return f"type({source})", type(value)
@@ -31,7 +29,9 @@ def sql_expression(in_binary, out_binary):
 
     collection = []
     if in_binary == "queries.bin":
-        qry = "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
+        qry = (
+            "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
+        )
     if in_binary == "keywords.bin":
         qry = 'SELECT * FROM cli_apps WHERE t1 = "dummy" OR t2 = "dummy" OR t3 = "dummy" OR t4 = "dummy"'
     if in_binary == "ids.bin":

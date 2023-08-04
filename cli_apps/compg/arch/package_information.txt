@@ -1,0 +1,4117 @@
+Name            : ntfs-3g
+Version         : 2022.10.3-1
+Description     : NTFS filesystem driver and utilities
+Architecture    : x86_64
+URL             : https://www.tuxera.com/community/open-source-ntfs-3g/
+Licenses        : GPL2
+Groups          : None
+Provides        : ntfsprogs
+Depends On      : util-linux  fuse2
+Optional Deps   : None
+Required By     : testdisk
+Optional For    : libblockdev
+Conflicts With  : ntfsprogs
+Replaces        : ntfsprogs
+Installed Size  : 1624.69 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 31 Oct 2022 09:48:00 PM WET
+Install Date    : Fri 04 Nov 2022 05:02:26 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : mariadb
+Version         : 11.0.2-2
+Description     : Fast SQL database server, derived from MySQL
+Architecture    : x86_64
+URL             : https://mariadb.org/
+Licenses        : GPL
+Groups          : None
+Provides        : mysql=11.0.2
+Depends On      : mariadb-clients=11.0.2  bzip2  libxml2  lz4  systemd-libs  libxml2  zstd
+Optional Deps   : cracklib: for cracklib plugin [installed]
+                  curl: for ha_s3 plugin [installed]
+                  galera: for MariaDB cluster with Galera WSREP
+                  judy: for Open Query GRAPH (OQGraph) computation engine
+                  perl-dbd-mariadb: for mariadb-hotcopy, mariadb-convert-table-format and mariadb-setpermission
+                  python-mysqlclient: for myrocks_hotbackup
+                  xz: lzma provider [installed]
+Required By     : None
+Optional For    : python-pymysql
+Conflicts With  : mysql
+Replaces        : None
+Installed Size  : 209.94 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Wed 05 Jul 2023 12:01:05 PM WEST
+Install Date    : Sun 09 Jul 2023 04:19:18 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : vivaldi
+Version         : 6.1.3035.204-1
+Description     : An advanced browser made with the power user in mind.
+Architecture    : x86_64
+URL             : https://vivaldi.com
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : gtk3  libcups  nss  alsa-lib  libxss  ttf-font  desktop-file-utils  shared-mime-info  hicolor-icon-theme
+Optional Deps   : vivaldi-ffmpeg-codecs: playback of proprietary video/audio
+                  libnotify: native notifications [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 330.85 MiB
+Packager        : Ike Devolder <ike.devolder@archlinux.org>
+Build Date      : Sat 22 Jul 2023 08:07:19 AM WEST
+Install Date    : Sat 22 Jul 2023 02:09:10 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : gcc
+Version         : 13.2.1-2
+Description     : The GNU Compiler Collection - C and C++ frontends
+Architecture    : x86_64
+URL             : https://gcc.gnu.org
+Licenses        : GPL3  LGPL  FDL  custom
+Groups          : None
+Provides        : gcc-multilib
+Depends On      : gcc-libs=13.2.1-2  binutils>=2.28  libmpc  zstd  libisl.so=23-64
+Optional Deps   : lib32-gcc-libs: for generating code for 32-bit ABI
+Required By     : dkms
+Optional For    : xorg-xrdb
+Conflicts With  : None
+Replaces        : gcc-multilib
+Installed Size  : 184.14 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 09:11:50 AM WEST
+Install Date    : Thu 03 Aug 2023 01:02:40 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : srt
+Version         : 1.5.2-1
+Description     : Secure Reliable Transport library
+Architecture    : x86_64
+URL             : https://www.srtalliance.org/
+Licenses        : MPL2
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  openssl
+Optional Deps   : None
+Required By     : ffmpeg  ffmpeg4.4
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.75 MiB
+Packager        : Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+Build Date      : Thu 29 Jun 2023 04:53:43 PM WEST
+Install Date    : Fri 30 Jun 2023 04:50:25 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : v4l-utils
+Version         : 1.24.1-2
+Description     : Userspace tools and conversion library for Video 4 Linux
+Architecture    : x86_64
+URL             : https://linuxtv.org/
+Licenses        : LGPL
+Groups          : None
+Provides        : libv4l=1.24.1
+Depends On      : hicolor-icon-theme  gcc-libs  libjpeg-turbo  systemd-libs  json-c
+Optional Deps   : qt5-base: for qv4l2 and qvidcap [installed]
+                  alsa-lib: for qv4l2 [installed]
+Required By     : ffmpeg  ffmpeg4.4  gst-plugins-good
+Optional For    : None
+Conflicts With  : libv4l
+Replaces        : libv4l
+Installed Size  : 5.04 MiB
+Packager        : Balló György <bgyorgy@archlinux.org>
+Build Date      : Fri 26 May 2023 10:58:52 AM WEST
+Install Date    : Mon 29 May 2023 06:59:18 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : expect
+Version         : 5.45.4-4
+Description     : A tool for automating interactive applications
+Architecture    : x86_64
+URL             : https://www.nist.gov/el/msid/expect.cfm
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : tcl
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 419.48 KiB
+Packager        : Evangelos Foutras <foutrelis@archlinux.org>
+Build Date      : Wed 14 Sep 2022 05:23:00 PM WEST
+Install Date    : Mon 21 Nov 2022 05:46:53 PM WET
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : gcc
+Version         : 13.2.1-2
+Description     : The GNU Compiler Collection - C and C++ frontends
+Architecture    : x86_64
+URL             : https://gcc.gnu.org
+Licenses        : GPL3  LGPL  FDL  custom
+Groups          : None
+Provides        : gcc-multilib
+Depends On      : gcc-libs=13.2.1-2  binutils>=2.28  libmpc  zstd  libisl.so=23-64
+Optional Deps   : lib32-gcc-libs: for generating code for 32-bit ABI
+Required By     : dkms
+Optional For    : xorg-xrdb
+Conflicts With  : None
+Replaces        : gcc-multilib
+Installed Size  : 184.14 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 09:11:50 AM WEST
+Install Date    : Thu 03 Aug 2023 01:02:40 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : icu
+Version         : 73.2-2
+Description     : International Components for Unicode library
+Architecture    : x86_64
+URL             : https://icu.unicode.org
+Licenses        : custom:icu
+Groups          : None
+Provides        : libicudata.so=73-64  libicui18n.so=73-64  libicuio.so=73-64  libicutest.so=73-64  libicutu.so=73-64  libicuuc.so=73-64
+Depends On      : gcc-libs  glibc  sh
+Optional Deps   : None
+Required By     : boost-libs  harfbuzz-icu  libcdr  libical  libmspub  libreoffice-fresh  libvisio  libxml2  nodejs  postgresql  raptor  thunderbird  tracker3  webkit2gtk
+Optional For    : xfsprogs
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 41.48 MiB
+Packager        : Leonidas Spyropoulos <artafinde@archlinux.org>
+Build Date      : Fri 14 Jul 2023 11:20:05 AM WEST
+Install Date    : Tue 18 Jul 2023 08:07:02 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libnl
+Version         : 3.7.0-3
+Description     : Library for applications dealing with netlink sockets
+Architecture    : x86_64
+URL             : https://github.com/thom311/libnl/
+Licenses        : GPL
+Groups          : None
+Provides        : libnl-3.so=200-64  libnl-cli-3.so=200-64  libnl-genl-3.so=200-64  libnl-idiag-3.so=200-64  libnl-nf-3.so=200-64  libnl-route-3.so=200-64  libnl-xfrm-3.so=200-64
+Depends On      : glibc  gcc-libs
+Optional Deps   : None
+Required By     : htop  libpcap  libteam  openmpi  wpa_supplicant
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.08 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Mon 06 Feb 2023 09:28:43 AM WET
+Install Date    : Thu 09 Feb 2023 03:25:13 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-base
+Version         : 5.15.10+kde+r139-1
+Description     : A cross-platform application and UI framework
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : libjpeg-turbo  xcb-util-keysyms  xcb-util-renderutil  libgl  fontconfig  xdg-utils  shared-mime-info  xcb-util-wm  libxrender  libxi  sqlite  xcb-util-image  mesa  tslib  libinput  libxkbcommon-x11  libproxy  libcups  double-conversion  md4c  qt5-translations
+Optional Deps   : qt5-svg: to use SVG icon themes [installed]
+                  qt5-wayland: to run Qt applications in a Wayland session [installed]
+                  postgresql-libs: PostgreSQL driver [installed]
+                  mariadb-libs: MariaDB driver [installed]
+                  unixodbc: ODBC driver
+                  libfbclient: Firebird/iBase driver
+                  freetds: MS SQL driver
+                  gtk3: GTK platform plugin [installed]
+                  perl: for fixqt4headers and syncqt [installed]
+Required By     : kcoreaddons  kwidgetsaddons  libaccounts-qt  libdbusmenu-qt5  polkit-qt5  qca-qt5  qgpgme-qt5  qt5-declarative  qt5-multimedia  qt5-svg  qt5-tools  qt5-x11extras  qtkeychain-qt5  signond  solid  sonnet  syntax-highlighting  virtualbox
+Optional For    : avahi  libde265  openal  pinentry  v4l-utils
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 63.21 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 31 Jul 2023 11:39:23 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:46 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python
+Version         : 3.11.3-2
+Description     : Next generation of the python high-level scripting language
+Architecture    : x86_64
+URL             : https://www.python.org/
+Licenses        : custom
+Groups          : None
+Provides        : python3  python-externally-managed
+Depends On      : bzip2  expat  gdbm  libffi  libnsl  libxcrypt  openssl  zlib
+Optional Deps   : python-setuptools [installed]
+                  python-pip [installed]
+                  sqlite [installed]
+                  mpdecimal: for decimal
+                  xz: for lzma [installed]
+                  tk: for tkinter
+Required By     : archlinux-contrib  cython  dbus-python  dtc  fontforge  gdb  gdb-common  grc  iotop  ipython  kitty  kitty-shell-integration  libixion  libreoffice-fresh  libvirt-python  mycli  node-gyp  python-aiomysql  python-apipkg  python-appdirs  python-argcomplete  python-arrow  python-asgiref  python-async-timeout  python-attrs  python-autobahn  python-autocommand  python-babel  python-backcall  python-backports.csv  python-beautifulsoup4  python-billiard  python-black  python-cachecontrol  python-cairo  python-certifi  python-chardet  python-cheetah3  python-cli_helpers  python-click  python-click-repl  python-colorama  python-colored-traceback  python-constantly  python-contextlib2  python-convertdate  python-cssselect  python-daphne  python-decorator  python-distlib  python-distro  python-django  python-django-channels  python-djoser  python-dnspython  python-docopt  python-docstring-to-markdown  python-docutils  python-exceptiongroup  python-executing  python-fastjsonschema  python-filelock  python-fluidity  python-fonttools  python-future  python-gitpython  python-gmpy2  python-gobject  python-greenlet  python-hijri-converter  python-html2text  python-hypothesis  python-idna  python-imagesize  python-inflect  python-iniconfig  python-installer  python-isort  python-itemadapter  python-jaraco.context  python-jaraco.functools  python-jaraco.text  python-jarowinkler  python-jedi  python-jeepney  python-jmespath  python-kiwisolver  python-levenshtein  python-lexicon  python-livereload  python-lxml  python-markdown  python-markupsafe  python-mccabe  python-mdv-git  python-mock  python-more-itertools  python-msgpack  python-mypy_extensions  python-mysql-connector  python-nose  python-numpy  python-ordered-set  python-packaging  python-parso  python-pathspec  python-pexpect  python-pickleshare  python-pillow  python-pip  python-pipx  python-platformdirs  python-pluggy  python-ply  python-poyo  python-progressbar  python-prompt-toolkit  python-prompt_toolkit  python-psutil  python-ptyprocess  python-pure-eval  python-py  python-pyaes  python-pyasn1  python-pycodestyle  python-pycryptodomex  python-pydantic  python-pydispatcher  python-pygments  python-pymongo  python-pymysql  python-pynvim  python-pyparsing  python-pyperclip  python-pyproject-hooks  python-pytoolconfig  python-pytorch  python-pytz  python-queuelib  python-rapidfuzz  python-redis  python-regex  python-resolvelib  python-ruamel.yaml.clib  python-schedule  python-six  python-smmap  python-snowballstemmer  python-sortedcontainers  python-soupsieve  python-sphinx-alabaster-theme  python-sphinx-autobuild  python-sphinx-lv2-theme  python-sqlglot  python-sqlparse  python-systemd  python-tabulate  python-tenacity  python-text-unidecode  python-toml  python-tomli  python-tornado  python-trove-classifiers  python-typing_extensions  python-tzlocal  python-uc-micro-py  python-ujson  python-urllib3  python-userpath  python-utils  python-w3lib  python-wcwidth  python-webencodings  python-websockets  python-wrapt  python-wsaccel  python-yaml  python-zipp  qemu-tools  ranger  scrapy  virtualbox  yapf  youtube-dl
+Optional For    : boost  botan  botan2  btrfs-progs  git  glib2  graphviz  gstreamer  gtk2  gupnp  imath  iproute2  ki18n  libcaca  libevent  libimobiledevice  libiptcdata  libnewt  libplist  libpwquality  libvirt-glib  libxml2  libxslt  nftables  pcsclite  postgresql  rsync  systemd  tdb  util-linux-libs  xfsprogs
+Conflicts With  : None
+Replaces        : python3  python-externally-managed
+Installed Size  : 75.07 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Mon 05 Jun 2023 10:32:32 AM WEST
+Install Date    : Tue 13 Jun 2023 03:19:52 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : gpm
+Version         : 1.20.7.r38.ge82d1a6-5
+Description     : A mouse server for the console and xterm
+Architecture    : x86_64
+URL             : https://www.nico.schottelius.org/software/gpm/
+Licenses        : GPL
+Groups          : None
+Provides        : libgpm.so=2-64
+Depends On      : bash  procps-ng
+Optional Deps   : None
+Required By     : aalib  libnewt  w3m
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 412.74 KiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Thu 27 Apr 2023 01:40:01 PM WEST
+Install Date    : Sat 06 May 2023 02:54:46 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : virtualbox-guest-utils
+Version         : 7.0.10-1
+Description     : VirtualBox Guest userspace utilities
+Architecture    : x86_64
+URL             : https://virtualbox.org/
+Licenses        : GPL  custom:CDDL
+Groups          : None
+Provides        : None
+Depends On      : glibc  pam  libx11  libxcomposite  libxdamage  libxext  libxfixes  libxmu  libxt  xorg-xrandr  xf86-video-vmware  VIRTUALBOX-GUEST-MODULES
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : virtualbox-archlinux-additions  virtualbox-guest-additions  virtualbox-guest-utils-nox  virtualbox-guest-dkms
+Replaces        : virtualbox-archlinux-additions  virtualbox-guest-additions  virtualbox-guest-dkms
+Installed Size  : 3.85 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 18 Jul 2023 10:00:10 PM WEST
+Install Date    : Fri 21 Jul 2023 10:11:55 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : openexr
+Version         : 3.1.9-1
+Description     : A high dynamic-range image file format library
+Architecture    : x86_64
+URL             : https://www.openexr.com/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : zlib  imath
+Optional Deps   : None
+Required By     : libjxl  opencv
+Optional For    : imagemagick
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.03 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 26 Jun 2023 08:08:33 AM WEST
+Install Date    : Wed 28 Jun 2023 07:54:12 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-tools
+Version         : 5.15.10+kde+r3-1
+Description     : A cross-platform application and UI framework (Development Tools, QtHelp)
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : qt5-base  hicolor-icon-theme
+Optional Deps   : clang: for qdoc
+Required By     : virtualbox
+Optional For    : None
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 15.54 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 12 Jun 2023 11:49:46 PM WEST
+Install Date    : Thu 22 Jun 2023 01:31:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : db
+Version         : 6.2.32-1
+Description     : The Berkeley DB embedded database system
+Architecture    : x86_64
+URL             : https://www.oracle.com/technology/software/products/berkeley-db/index.html
+Licenses        : AGPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  sh
+Optional Deps   : None
+Required By     : perl
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.16 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Sat 10 Dec 2022 06:39:34 PM WET
+Install Date    : Mon 19 Dec 2022 04:21:36 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libbluray
+Version         : 1.3.4-1
+Description     : Library to access Blu-Ray disks for video playback
+Architecture    : x86_64
+URL             : https://www.videolan.org/developers/libbluray.html
+Licenses        : LGPL2.1
+Groups          : None
+Provides        : libbluray.so=2-64
+Depends On      : fontconfig  libfreetype.so=6-64  libxml2
+Optional Deps   : java-runtime: BD-J library [installed]
+Required By     : ffmpeg  ffmpeg4.4  gvfs  mpv
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1319.99 KiB
+Packager        : Maxime Gauduin <alucryd@archlinux.org>
+Build Date      : Mon 05 Dec 2022 01:32:27 PM WET
+Install Date    : Thu 08 Dec 2022 11:23:37 AM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : java-environment-common
+Version         : 3-5
+Description     : Common files for Java Development Kits
+Architecture    : any
+URL             : https://www.archlinux.org/packages/extra/any/java-common/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : None
+Optional Deps   : None
+Required By     : jdk-openjdk  jdk11-openjdk  jdk8-openjdk
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 0.00 B
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Thu 19 Jan 2023 12:33:57 PM WET
+Install Date    : Wed 25 Jan 2023 01:43:41 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : opencore-amr
+Version         : 0.1.6-1
+Description     : Open source implementation of the Adaptive Multi Rate (AMR) speech codec
+Architecture    : x86_64
+URL             : https://sourceforge.net/projects/opencore-amr/
+Licenses        : Apache
+Groups          : None
+Provides        : libopencore-amrwb.so=0-64  libopencore-amrnb.so=0-64
+Depends On      : glibc
+Optional Deps   : None
+Required By     : ffmpeg  ffmpeg4.4
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 288.03 KiB
+Packager        : David Runge <dvzrv@archlinux.org>
+Build Date      : Tue 02 Aug 2022 09:23:54 AM WEST
+Install Date    : Tue 09 Aug 2022 03:24:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : erlang
+Version         : 26.0.2-1
+Description     : General-purpose concurrent functional programming language developed by Ericsson
+Architecture    : x86_64
+URL             : https://erlang.org
+Licenses        : Apache
+Groups          : None
+Provides        : erlang-nox
+Depends On      : glu  ncurses  openssl  webkit2gtk  wxwidgets-gtk3
+Optional Deps   : erlang-unixodbc: database support
+                  java-environment: for Java support [installed]
+                  lksctp-tools: for SCTP support
+Required By     : None
+Optional For    : None
+Conflicts With  : erlang-nox
+Replaces        : None
+Installed Size  : 113.23 MiB
+Packager        : Alexander F. Rødseth <xyproto@archlinux.org>
+Build Date      : Fri 30 Jun 2023 10:42:34 PM WEST
+Install Date    : Mon 03 Jul 2023 11:43:29 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : xf86-video-vmware
+Version         : 13.4.0-1
+Description     : X.org vmware video driver
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : xorg-drivers
+Provides        : None
+Depends On      : mesa  systemd-libs
+Optional Deps   : None
+Required By     : virtualbox-guest-utils
+Optional For    : None
+Conflicts With  : xorg-server<21.1.1  X-ABI-VIDEODRV_VERSION<25  X-ABI-VIDEODRV_VERSION>=26
+Replaces        : None
+Installed Size  : 193.29 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Tue 24 Jan 2023 03:25:47 PM WET
+Install Date    : Wed 08 Mar 2023 06:05:43 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : perl
+Version         : 5.36.1-2
+Description     : A highly capable, feature-rich programming language
+Architecture    : x86_64
+URL             : https://www.perl.org
+Licenses        : GPL  PerlArtistic
+Groups          : None
+Provides        : perl-archive-tar=2.40  perl-attribute-handlers=1.02  perl-autodie=2.34  perl-autoloader=5.74  perl-autouse=1.11  perl-base=2.27  perl-bignum=0.65  perl-carp=1.52  perl-compress-raw-bzip2=2.103  perl-compress-raw-zlib=2.105  perl-config-perl-v=0.33  perl-constant=1.33  perl-cpan-meta-requirements=2.140  perl-cpan-meta-yaml=0.018  perl-cpan-meta=2.150010  perl-cpan=2.33  perl-data-dumper=2.184  perl-db_file=1.857  perl-devel-ppport=3.68  perl-devel-selfstubber=1.06  perl-digest-md5=2.58  perl-digest-sha=6.02  perl-digest=1.20  perl-dumpvalue=1.21  perl-encode=3.17  perl-encoding-warnings=0.13  perl-env=1.05  perl-experimental=0.028  perl-exporter=5.77  perl-extutils-cbuilder=0.280236  perl-extutils-constant=0.25  perl-extutils-install=2.20  perl-extutils-makemaker=7.64  perl-extutils-manifest=1.73  perl-extutils-parsexs=3.45  perl-extutils-pl2bat=0.004  perl-file-fetch=1.04  perl-file-path=2.18  perl-file-temp=0.2311  perl-filter-simple=0.96  perl-filter-util-call=1.60  perl-findbin=1.53  perl-getopt-long=2.52  perl-http-tiny=0.080  perl-i18n-collate=1.02  perl-i18n-langtags=0.45  perl-if=0.0610  perl-io-compress=2.106  perl-io-socket-ip=0.41  perl-io-zlib=1.11  perl-io=1.50  perl-ipc-cmd=1.04  perl-ipc-sysv=2.09  perl-json-pp=4.07  perl-lib=0.65  perl-libnet=3.13  perl-locale-maketext-simple=0.21_01  perl-locale-maketext=1.31  perl-math-bigint-fastcalc=0.5012  perl-math-bigint=1.999830  perl-math-bigrat=0.2621  perl-math-complex=1.5902  perl-memoize=1.03_01  perl-mime-base64=3.16  perl-module-corelist=5.20230423  perl-module-load-conditional=0.74  perl-module-load=0.36  perl-module-loaded=0.08  perl-module-metadata=1.000037  perl-net-ping=2.74  perl-params-check=0.38  perl-parent=0.238  perl-pathtools=3.84  perl-perl-ostype=1.010  perl-perlfaq=5.20210520  perl-perlio-via-quotedprint=0.09  perl-pod-checker=1.74  perl-pod-escapes=1.07  perl-pod-perldoc=3.2801  perl-pod-simple=3.43  perl-pod-usage=2.01  perl-podlators=5.008  perl-safe=2.43  perl-scalar-list-utils=1.62  perl-search-dict=1.07  perl-selfloader=1.26  perl-socket=2.033  perl-storable=3.26  perl-sys-syslog=0.36  perl-term-ansicolor=5.01  perl-term-cap=1.17  perl-term-complete=1.403  perl-term-readline=1.17  perl-test-harness=3.44  perl-test-simple=1.302190  perl-test=1.31  perl-text-abbrev=1.02  perl-text-balanced=2.04  perl-text-parsewords=3.31  perl-text-tabs=2021.0814  perl-thread-queue=3.14  perl-thread-semaphore=2.13  perl-threads-shared=1.64  perl-threads=2.27  perl-tie-file=1.06  perl-tie-refhash=1.40  perl-time-hires=1.9770  perl-time-local=1.30  perl-time-piece=1.3401  perl-unicode-collate=1.31  perl-unicode-normalize=1.31  perl-version=0.9929  perl-xsloader=0.31
+Depends On      : gdbm>=1.17  db5.3  db  glibc  libxcrypt  libcrypt.so=2-64
+Optional Deps   : None
+Required By     : atool  autoconf  automake  docx2txt  git  groff  hyphen  lesspipe  libwpg  netpbm  openresty  pacman-contrib  perl-error  perl-file-next  perl-image-exiftool  perl-timedate  strace  texinfo
+Optional For    : gd  glibc  gperftools  graphviz  hunspell  jemalloc  lm_sensors  mpg123  openmpi  openssl  postgresql  qt5-base  qt6-base
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 72.73 MiB
+Packager        : Florian Pritz <bluewind@archlinux.org>
+Build Date      : Sat 10 Jun 2023 07:33:37 PM WEST
+Install Date    : Sun 11 Jun 2023 08:51:51 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : source-highlight
+Version         : 3.1.9-10
+Description     : Convert source code to syntax highlighted document
+Architecture    : x86_64
+URL             : https://www.gnu.org/software/src-highlite/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : bash  boost-libs
+Optional Deps   : lesspipe: src-hilite-lesspipe.sh [installed]
+Required By     : gdb
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.18 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sat 21 Jan 2023 01:16:41 PM WET
+Install Date    : Thu 09 Feb 2023 11:01:20 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : gcr
+Version         : 3.41.1-4
+Description     : A library for bits of crypto UI and parsing
+Architecture    : x86_64
+URL             : https://gitlab.gnome.org/GNOME/gcr
+Licenses        : GPL2
+Groups          : None
+Provides        : libgck-1.so=0-64  libgcr-base-3.so=1-64  libgcr-ui-3.so=1-64
+Depends On      : gtk3  libgcrypt  libsecret  openssh  p11-kit
+Optional Deps   : None
+Required By     : gvfs
+Optional For    : pinentry
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.89 MiB
+Packager        : Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+Build Date      : Tue 21 Mar 2023 10:51:48 PM WET
+Install Date    : Wed 10 May 2023 06:59:00 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : hunspell
+Version         : 1.7.2-1
+Description     : Spell checker and morphological analyzer library and program
+Architecture    : x86_64
+URL             : https://github.com/hunspell/hunspell
+Licenses        : GPL  LGPL  MPL
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  readline
+Optional Deps   : perl: for ispellaff2myspell [installed]
+Required By     : libreoffice-fresh  thunderbird
+Optional For    : enchant  sonnet
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1413.44 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sun 01 Jan 2023 04:43:18 PM WET
+Install Date    : Tue 03 Jan 2023 05:26:56 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-docutils
+Version         : 1:0.20.1-1
+Description     : Set of tools for processing plaintext docs into formats such as HTML, XML, or LaTeX
+Architecture    : any
+URL             : http://docutils.sourceforge.net
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : None
+Required By     : python-commonmark  python-sphinx  python-sphinx-click
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 5.72 MiB
+Packager        : Daniel M. Capella <polyzen@archlinux.org>
+Build Date      : Wed 17 May 2023 07:24:49 AM WEST
+Install Date    : Thu 18 May 2023 12:03:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libavif
+Version         : 0.11.1-1
+Description     : Library for encoding and decoding .avif files
+Architecture    : x86_64
+URL             : https://github.com/AOMediaCodec/libavif
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : glibc  aom  dav1d  rav1e  svt-av1  zlib  libpng  libjpeg  libyuv
+Optional Deps   : None
+Required By     : gd  sdl2_image  webkit2gtk
+Optional For    : gdk-pixbuf2
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 346.53 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Tue 08 Nov 2022 10:42:13 PM WET
+Install Date    : Thu 10 Nov 2022 07:41:02 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libvpx
+Version         : 1.13.0-1
+Description     : VP8 and VP9 codec
+Architecture    : x86_64
+URL             : https://www.webmproject.org/
+Licenses        : BSD
+Groups          : None
+Provides        : libvpx.so=8-64
+Depends On      : gcc-libs
+Optional Deps   : None
+Required By     : ffmpeg  ffmpeg4.4  gst-plugins-good  qt5-webengine  thunderbird  virtualbox
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.34 MiB
+Packager        : Maxime Gauduin <alucryd@archlinux.org>
+Build Date      : Fri 17 Feb 2023 02:25:45 PM WET
+Install Date    : Thu 02 Mar 2023 10:33:23 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : hunspell
+Version         : 1.7.2-1
+Description     : Spell checker and morphological analyzer library and program
+Architecture    : x86_64
+URL             : https://github.com/hunspell/hunspell
+Licenses        : GPL  LGPL  MPL
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  readline
+Optional Deps   : perl: for ispellaff2myspell [installed]
+Required By     : libreoffice-fresh  thunderbird
+Optional For    : enchant  sonnet
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1413.44 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sun 01 Jan 2023 04:43:18 PM WET
+Install Date    : Tue 03 Jan 2023 05:26:56 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libqxp
+Version         : 0.0.2-10
+Description     : a library that parses the file format of QuarkXPress documents
+Architecture    : x86_64
+URL             : https://wiki.documentfoundation.org/DLP/Libraries/libqxp
+Licenses        : MPL2
+Groups          : None
+Provides        : None
+Depends On      : librevenge
+Optional Deps   : None
+Required By     : libreoffice-fresh
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.49 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sat 17 Jun 2023 02:17:54 PM WEST
+Install Date    : Thu 29 Jun 2023 05:08:29 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : cracklib
+Version         : 2.9.11-1
+Description     : Password Checking Library
+Architecture    : x86_64
+URL             : https://github.com/cracklib/cracklib
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : glibc  zlib
+Optional Deps   : None
+Required By     : libpwquality
+Optional For    : mariadb
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 917.50 KiB
+Packager        : Tobias Powalowski <tpowa@archlinux.org>
+Build Date      : Mon 03 Apr 2023 06:21:39 AM WEST
+Install Date    : Thu 27 Apr 2023 11:00:58 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : virtualbox
+Version         : 7.0.10-1
+Description     : Powerful x86 virtualization for enterprise as well as home use
+Architecture    : x86_64
+URL             : https://virtualbox.org/
+Licenses        : GPL  custom:CDDL
+Groups          : None
+Provides        : None
+Depends On      : curl  gcc-libs  glibc  liblzf  libpng  libtpms  libvpx  libx11  libxcursor  libxext  libxinerama  libxml2  libxmu  libxt  openssl  procps-ng  python  qt5-base  qt5-tools  qt5-x11extras  sdl  shared-mime-info  zlib  VIRTUALBOX-HOST-MODULES
+Optional Deps   : vde2: Virtual Distributed Ethernet support [installed]
+                  virtualbox-guest-iso: Guest Additions CD image [installed]
+                  virtualbox-ext-vnc: VNC server support
+                  virtualbox-sdk: Developer kit
+Required By     : None
+Optional For    : None
+Conflicts With  : virtualbox-ose
+Replaces        : virtualbox-ose
+Installed Size  : 221.55 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 18 Jul 2023 10:00:10 PM WEST
+Install Date    : Fri 21 Jul 2023 10:11:54 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : zstd
+Version         : 1.5.5-1
+Description     : Zstandard - Fast real-time compression algorithm
+Architecture    : x86_64
+URL             : https://facebook.github.io/zstd/
+Licenses        : BSD  GPL2
+Groups          : None
+Provides        : libzstd.so=1-64
+Depends On      : glibc  gcc-libs  zlib  xz  lz4
+Optional Deps   : None
+Required By     : binutils  boost-libs  btrfs-progs  curl  file  gcc  gnutls  kmod  libarchive  libelf  libtiff  libzip  llvm-libs  mariadb  mariadb-libs  mesa  mkinitcpio  plocate  postgresql  qemu-img  qemu-system-aarch64  qemu-system-alpha  qemu-system-arm  qemu-system-avr  qemu-system-cris  qemu-system-hppa  qemu-system-loongarch64  qemu-system-m68k  qemu-system-microblaze  qemu-system-mips  qemu-system-nios2  qemu-system-or1k  qemu-system-ppc  qemu-system-riscv  qemu-system-rx  qemu-system-s390x  qemu-system-sh4  qemu-system-sparc  qemu-system-tricore  qemu-system-x86  qemu-system-xtensa  rsync  systemd-libs
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1465.29 KiB
+Packager        : Jelle van der Waa <jelle@archlinux.org>
+Build Date      : Sun 16 Apr 2023 01:05:14 PM WEST
+Install Date    : Thu 27 Apr 2023 11:00:58 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qemu-user
+Version         : 8.0.3-1
+Description     : QEMU user mode emulation
+Architecture    : x86_64
+URL             : https://www.qemu.org/
+Licenses        : GPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : capstone  gcc-libs  glib2  libglib-2.0.so=0-64  libgmodule-2.0.so=0-64  glibc  gnutls  libelf  liburing  liburing.so=2-64  numactl  libnuma.so=1-64  qemu-common=8.0.3-1  zlib
+Optional Deps   : qemu-user-binfmt: for binary format rules
+Required By     : qemu-emulators-full
+Optional For    : qemu-desktop
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 105.94 MiB
+Packager        : Anatol Pomozov <anatolik@archlinux.org>
+Build Date      : Mon 17 Jul 2023 11:05:11 PM WEST
+Install Date    : Thu 27 Jul 2023 10:42:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : dunst
+Version         : 1.9.2-1
+Description     : Customizable and lightweight notification-daemon
+Architecture    : x86_64
+URL             : https://dunst-project.org/
+Licenses        : BSD
+Groups          : None
+Provides        : notification-daemon
+Depends On      : libxinerama  dbus  systemd  wayland  libxss  pango  gdk-pixbuf2  libxrandr  glib2
+Optional Deps   : libnotify: dunstify [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 253.85 KiB
+Packager        : Morten Linderud <foxboron@archlinux.org>
+Build Date      : Thu 20 Apr 2023 10:59:41 PM WEST
+Install Date    : Fri 21 Apr 2023 08:50:06 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : vivaldi
+Version         : 6.1.3035.204-1
+Description     : An advanced browser made with the power user in mind.
+Architecture    : x86_64
+URL             : https://vivaldi.com
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : gtk3  libcups  nss  alsa-lib  libxss  ttf-font  desktop-file-utils  shared-mime-info  hicolor-icon-theme
+Optional Deps   : vivaldi-ffmpeg-codecs: playback of proprietary video/audio
+                  libnotify: native notifications [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 330.85 MiB
+Packager        : Ike Devolder <ike.devolder@archlinux.org>
+Build Date      : Sat 22 Jul 2023 08:07:19 AM WEST
+Install Date    : Sat 22 Jul 2023 02:09:10 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : libnl
+Version         : 3.7.0-3
+Description     : Library for applications dealing with netlink sockets
+Architecture    : x86_64
+URL             : https://github.com/thom311/libnl/
+Licenses        : GPL
+Groups          : None
+Provides        : libnl-3.so=200-64  libnl-cli-3.so=200-64  libnl-genl-3.so=200-64  libnl-idiag-3.so=200-64  libnl-nf-3.so=200-64  libnl-route-3.so=200-64  libnl-xfrm-3.so=200-64
+Depends On      : glibc  gcc-libs
+Optional Deps   : None
+Required By     : htop  libpcap  libteam  openmpi  wpa_supplicant
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.08 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Mon 06 Feb 2023 09:28:43 AM WET
+Install Date    : Thu 09 Feb 2023 03:25:13 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : expect
+Version         : 5.45.4-4
+Description     : A tool for automating interactive applications
+Architecture    : x86_64
+URL             : https://www.nist.gov/el/msid/expect.cfm
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : tcl
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 419.48 KiB
+Packager        : Evangelos Foutras <foutrelis@archlinux.org>
+Build Date      : Wed 14 Sep 2022 05:23:00 PM WEST
+Install Date    : Mon 21 Nov 2022 05:46:53 PM WET
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : zeromq
+Version         : 4.3.4-4
+Description     : Fast messaging system built on sockets. C and C++ bindings. aka 0MQ, ZMQ.
+Architecture    : x86_64
+URL             : http://www.zeromq.org
+Licenses        : LGPL
+Groups          : None
+Provides        : libzmq.so=5-64
+Depends On      : glibc  gnutls  gcc-libs  util-linux  libsodium  libpgm
+Optional Deps   : cppzmq: C++ binding for libzmq
+Required By     : libteam
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.00 MiB
+Packager        : George Rawlinson <grawlinson@archlinux.org>
+Build Date      : Fri 02 Jun 2023 10:56:54 PM WEST
+Install Date    : Sat 03 Jun 2023 03:33:07 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : gd
+Version         : 2.3.3-6
+Description     : Library for the dynamic creation of images by programmers
+Architecture    : x86_64
+URL             : https://libgd.github.io/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : fontconfig  libxpm  libwebp  libavif  libheif
+Optional Deps   : perl: bdftogd script [installed]
+Required By     : graphviz  libgphoto2
+Optional For    : glibc
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 683.74 KiB
+Packager        : Evangelos Foutras <foutrelis@archlinux.org>
+Build Date      : Mon 02 Jan 2023 10:35:05 PM WET
+Install Date    : Mon 09 Jan 2023 02:02:59 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : imlib2
+Version         : 1.11.1-1
+Description     : Library that does image file loading and saving as well as rendering, manipulation, arbitrary polygon support
+Architecture    : x86_64
+URL             : https://sourceforge.net/projects/enlightenment/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : bzip2  freetype2  giflib  libjpeg-turbo  libpng  libtiff  libxext  xz
+Optional Deps   : libheif: HEIF loader (for AVIF) [installed]
+                  libid3tag: ID3 loader
+                  libjxl: JXL loader [installed]
+                  librsvg: SVG loader [installed]
+                  libspectre: PS loader
+                  libwebp: WEBP loader [installed]
+                  openjpeg2: J2K loader [installed]
+Required By     : feh  libcaca  sxiv  xmenu
+Optional For    : w3m
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1484.35 KiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 02 May 2023 08:42:48 AM WEST
+Install Date    : Sat 06 May 2023 02:54:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-docutils
+Version         : 1:0.20.1-1
+Description     : Set of tools for processing plaintext docs into formats such as HTML, XML, or LaTeX
+Architecture    : any
+URL             : http://docutils.sourceforge.net
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : None
+Required By     : python-commonmark  python-sphinx  python-sphinx-click
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 5.72 MiB
+Packager        : Daniel M. Capella <polyzen@archlinux.org>
+Build Date      : Wed 17 May 2023 07:24:49 AM WEST
+Install Date    : Thu 18 May 2023 12:03:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-tools
+Version         : 5.15.10+kde+r3-1
+Description     : A cross-platform application and UI framework (Development Tools, QtHelp)
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : qt5-base  hicolor-icon-theme
+Optional Deps   : clang: for qdoc
+Required By     : virtualbox
+Optional For    : None
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 15.54 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 12 Jun 2023 11:49:46 PM WEST
+Install Date    : Thu 22 Jun 2023 01:31:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : vmaf
+Version         : 2.3.1-1
+Description     : Perceptual video quality assessment algorithm based on multi-method fusion
+Architecture    : x86_64
+URL             : https://github.com/Netflix/vmaf/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs
+Optional Deps   : None
+Required By     : ffmpeg
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.53 MiB
+Packager        : Daniel Bermond <dbermond@archlinux.org>
+Build Date      : Wed 13 Apr 2022 04:13:38 PM WEST
+Install Date    : Fri 15 Apr 2022 08:55:11 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libcdr
+Version         : 0.1.7-6
+Description     : CorelDraw file format importer library for LibreOffice
+Architecture    : x86_64
+URL             : https://wiki.documentfoundation.org/DLP/Libraries/libcdr
+Licenses        : GPL2  LGPL2.1  MPL
+Groups          : None
+Provides        : None
+Depends On      : libwpd  lcms2  icu  librevenge
+Optional Deps   : None
+Required By     : libreoffice-fresh
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.85 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sat 17 Jun 2023 02:10:53 PM WEST
+Install Date    : Thu 29 Jun 2023 05:08:29 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : vivaldi
+Version         : 6.1.3035.204-1
+Description     : An advanced browser made with the power user in mind.
+Architecture    : x86_64
+URL             : https://vivaldi.com
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : gtk3  libcups  nss  alsa-lib  libxss  ttf-font  desktop-file-utils  shared-mime-info  hicolor-icon-theme
+Optional Deps   : vivaldi-ffmpeg-codecs: playback of proprietary video/audio
+                  libnotify: native notifications [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 330.85 MiB
+Packager        : Ike Devolder <ike.devolder@archlinux.org>
+Build Date      : Sat 22 Jul 2023 08:07:19 AM WEST
+Install Date    : Sat 22 Jul 2023 02:09:10 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : hunspell
+Version         : 1.7.2-1
+Description     : Spell checker and morphological analyzer library and program
+Architecture    : x86_64
+URL             : https://github.com/hunspell/hunspell
+Licenses        : GPL  LGPL  MPL
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  readline
+Optional Deps   : perl: for ispellaff2myspell [installed]
+Required By     : libreoffice-fresh  thunderbird
+Optional For    : enchant  sonnet
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1413.44 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sun 01 Jan 2023 04:43:18 PM WET
+Install Date    : Tue 03 Jan 2023 05:26:56 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-django
+Version         : 4.2.3-1
+Description     : A high-level Python Web framework that encourages rapid development and clean design
+Architecture    : any
+URL             : http://www.djangoproject.com/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : python  python-pytz  python-sqlparse  python-asgiref
+Optional Deps   : python-psycopg2: for PostgreSQL backend
+                  python-argon2_cffi: for Argon2 password hashing support
+Required By     : python-django-channels  python-django-rest-framework  python-djoser
+Optional For    : python-hypothesis
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 34.80 MiB
+Packager        : Jelle van der Waa <jelle@archlinux.org>
+Build Date      : Tue 04 Jul 2023 08:27:57 PM WEST
+Install Date    : Wed 19 Jul 2023 11:16:36 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : imlib2
+Version         : 1.11.1-1
+Description     : Library that does image file loading and saving as well as rendering, manipulation, arbitrary polygon support
+Architecture    : x86_64
+URL             : https://sourceforge.net/projects/enlightenment/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : bzip2  freetype2  giflib  libjpeg-turbo  libpng  libtiff  libxext  xz
+Optional Deps   : libheif: HEIF loader (for AVIF) [installed]
+                  libid3tag: ID3 loader
+                  libjxl: JXL loader [installed]
+                  librsvg: SVG loader [installed]
+                  libspectre: PS loader
+                  libwebp: WEBP loader [installed]
+                  openjpeg2: J2K loader [installed]
+Required By     : feh  libcaca  sxiv  xmenu
+Optional For    : w3m
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1484.35 KiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 02 May 2023 08:42:48 AM WEST
+Install Date    : Sat 06 May 2023 02:54:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python
+Version         : 3.11.3-2
+Description     : Next generation of the python high-level scripting language
+Architecture    : x86_64
+URL             : https://www.python.org/
+Licenses        : custom
+Groups          : None
+Provides        : python3  python-externally-managed
+Depends On      : bzip2  expat  gdbm  libffi  libnsl  libxcrypt  openssl  zlib
+Optional Deps   : python-setuptools [installed]
+                  python-pip [installed]
+                  sqlite [installed]
+                  mpdecimal: for decimal
+                  xz: for lzma [installed]
+                  tk: for tkinter
+Required By     : archlinux-contrib  cython  dbus-python  dtc  fontforge  gdb  gdb-common  grc  iotop  ipython  kitty  kitty-shell-integration  libixion  libreoffice-fresh  libvirt-python  mycli  node-gyp  python-aiomysql  python-apipkg  python-appdirs  python-argcomplete  python-arrow  python-asgiref  python-async-timeout  python-attrs  python-autobahn  python-autocommand  python-babel  python-backcall  python-backports.csv  python-beautifulsoup4  python-billiard  python-black  python-cachecontrol  python-cairo  python-certifi  python-chardet  python-cheetah3  python-cli_helpers  python-click  python-click-repl  python-colorama  python-colored-traceback  python-constantly  python-contextlib2  python-convertdate  python-cssselect  python-daphne  python-decorator  python-distlib  python-distro  python-django  python-django-channels  python-djoser  python-dnspython  python-docopt  python-docstring-to-markdown  python-docutils  python-exceptiongroup  python-executing  python-fastjsonschema  python-filelock  python-fluidity  python-fonttools  python-future  python-gitpython  python-gmpy2  python-gobject  python-greenlet  python-hijri-converter  python-html2text  python-hypothesis  python-idna  python-imagesize  python-inflect  python-iniconfig  python-installer  python-isort  python-itemadapter  python-jaraco.context  python-jaraco.functools  python-jaraco.text  python-jarowinkler  python-jedi  python-jeepney  python-jmespath  python-kiwisolver  python-levenshtein  python-lexicon  python-livereload  python-lxml  python-markdown  python-markupsafe  python-mccabe  python-mdv-git  python-mock  python-more-itertools  python-msgpack  python-mypy_extensions  python-mysql-connector  python-nose  python-numpy  python-ordered-set  python-packaging  python-parso  python-pathspec  python-pexpect  python-pickleshare  python-pillow  python-pip  python-pipx  python-platformdirs  python-pluggy  python-ply  python-poyo  python-progressbar  python-prompt-toolkit  python-prompt_toolkit  python-psutil  python-ptyprocess  python-pure-eval  python-py  python-pyaes  python-pyasn1  python-pycodestyle  python-pycryptodomex  python-pydantic  python-pydispatcher  python-pygments  python-pymongo  python-pymysql  python-pynvim  python-pyparsing  python-pyperclip  python-pyproject-hooks  python-pytoolconfig  python-pytorch  python-pytz  python-queuelib  python-rapidfuzz  python-redis  python-regex  python-resolvelib  python-ruamel.yaml.clib  python-schedule  python-six  python-smmap  python-snowballstemmer  python-sortedcontainers  python-soupsieve  python-sphinx-alabaster-theme  python-sphinx-autobuild  python-sphinx-lv2-theme  python-sqlglot  python-sqlparse  python-systemd  python-tabulate  python-tenacity  python-text-unidecode  python-toml  python-tomli  python-tornado  python-trove-classifiers  python-typing_extensions  python-tzlocal  python-uc-micro-py  python-ujson  python-urllib3  python-userpath  python-utils  python-w3lib  python-wcwidth  python-webencodings  python-websockets  python-wrapt  python-wsaccel  python-yaml  python-zipp  qemu-tools  ranger  scrapy  virtualbox  yapf  youtube-dl
+Optional For    : boost  botan  botan2  btrfs-progs  git  glib2  graphviz  gstreamer  gtk2  gupnp  imath  iproute2  ki18n  libcaca  libevent  libimobiledevice  libiptcdata  libnewt  libplist  libpwquality  libvirt-glib  libxml2  libxslt  nftables  pcsclite  postgresql  rsync  systemd  tdb  util-linux-libs  xfsprogs
+Conflicts With  : None
+Replaces        : python3  python-externally-managed
+Installed Size  : 75.07 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Mon 05 Jun 2023 10:32:32 AM WEST
+Install Date    : Tue 13 Jun 2023 03:19:52 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libpng
+Version         : 1.6.40-2
+Description     : A collection of routines used to create PNG format graphics files
+Architecture    : x86_64
+URL             : http://www.libpng.org/pub/png/libpng.html
+Licenses        : custom
+Groups          : None
+Provides        : libpng16.so=16-64
+Depends On      : zlib  sh
+Optional Deps   : None
+Required By     : cairo  freetype2  gdk-pixbuf2  ghostscript  graphicsmagick  gst-plugins-base  gtk4  imagemagick  imlib2  jbig2dec  jre-openjdk  jre11-openjdk  libavif  libgxps  libjxl  libreoffice-fresh  libwebp  libzmf  netpbm  openjpeg2  poppler  qemu-system-aarch64  qemu-system-alpha  qemu-system-arm  qemu-system-avr  qemu-system-cris  qemu-system-hppa  qemu-system-loongarch64  qemu-system-m68k  qemu-system-microblaze  qemu-system-mips  qemu-system-nios2  qemu-system-or1k  qemu-system-ppc  qemu-system-riscv  qemu-system-rx  qemu-system-s390x  qemu-system-sh4  qemu-system-sparc  qemu-system-tricore  qemu-system-x86  qemu-system-xtensa  sdl2_image  virtualbox  webkit2gtk  xautomation  xorg-xcursorgen
+Optional For    : libheif
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 583.32 KiB
+Packager        : Leonidas Spyropoulos <artafinde@archlinux.org>
+Build Date      : Thu 29 Jun 2023 10:29:55 AM WEST
+Install Date    : Mon 03 Jul 2023 11:43:29 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : virtualbox
+Version         : 7.0.10-1
+Description     : Powerful x86 virtualization for enterprise as well as home use
+Architecture    : x86_64
+URL             : https://virtualbox.org/
+Licenses        : GPL  custom:CDDL
+Groups          : None
+Provides        : None
+Depends On      : curl  gcc-libs  glibc  liblzf  libpng  libtpms  libvpx  libx11  libxcursor  libxext  libxinerama  libxml2  libxmu  libxt  openssl  procps-ng  python  qt5-base  qt5-tools  qt5-x11extras  sdl  shared-mime-info  zlib  VIRTUALBOX-HOST-MODULES
+Optional Deps   : vde2: Virtual Distributed Ethernet support [installed]
+                  virtualbox-guest-iso: Guest Additions CD image [installed]
+                  virtualbox-ext-vnc: VNC server support
+                  virtualbox-sdk: Developer kit
+Required By     : None
+Optional For    : None
+Conflicts With  : virtualbox-ose
+Replaces        : virtualbox-ose
+Installed Size  : 221.55 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 18 Jul 2023 10:00:10 PM WEST
+Install Date    : Fri 21 Jul 2023 10:11:54 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : db
+Version         : 6.2.32-1
+Description     : The Berkeley DB embedded database system
+Architecture    : x86_64
+URL             : https://www.oracle.com/technology/software/products/berkeley-db/index.html
+Licenses        : AGPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  sh
+Optional Deps   : None
+Required By     : perl
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.16 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Sat 10 Dec 2022 06:39:34 PM WET
+Install Date    : Mon 19 Dec 2022 04:21:36 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : ghostscript
+Version         : 10.01.2-1
+Description     : An interpreter for the PostScript language
+Architecture    : x86_64
+URL             : https://www.ghostscript.com/
+Licenses        : AGPL3  custom
+Groups          : None
+Provides        : None
+Depends On      : libxt  libcups  fontconfig  zlib  libpng  libjpeg  jbig2dec  libtiff  lcms2  libpaper  ijs  openjpeg2  libidn  poppler-data  cairo  glibc  libx11  gdk-pixbuf2  glib2
+Optional Deps   : gtk3: needed for gsx [installed]
+Required By     : graphviz
+Optional For    : graphicsmagick  imagemagick  lesspipe  python-matplotlib
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 43.51 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Wed 21 Jun 2023 09:22:52 PM WEST
+Install Date    : Thu 22 Jun 2023 01:31:07 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : iptables-nft
+Version         : 1:1.8.9-1
+Description     : Linux kernel packet control tool (using nft interface)
+Architecture    : x86_64
+URL             : https://www.netfilter.org/projects/iptables/index.html
+Licenses        : GPL2
+Groups          : None
+Provides        : iptables  arptables  ebtables
+Depends On      : libnftnl  libpcap  libnfnetlink  libnetfilter_conntrack  bash  nftables
+Optional Deps   : None
+Required By     : iproute2  systemd
+Optional For    : libvirt  networkmanager
+Conflicts With  : iptables  arptables  ebtables
+Replaces        : None
+Installed Size  : 5.64 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 27 Jan 2023 06:44:37 PM WET
+Install Date    : Fri 03 Feb 2023 07:09:11 PM WET
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-base
+Version         : 5.15.10+kde+r139-1
+Description     : A cross-platform application and UI framework
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : libjpeg-turbo  xcb-util-keysyms  xcb-util-renderutil  libgl  fontconfig  xdg-utils  shared-mime-info  xcb-util-wm  libxrender  libxi  sqlite  xcb-util-image  mesa  tslib  libinput  libxkbcommon-x11  libproxy  libcups  double-conversion  md4c  qt5-translations
+Optional Deps   : qt5-svg: to use SVG icon themes [installed]
+                  qt5-wayland: to run Qt applications in a Wayland session [installed]
+                  postgresql-libs: PostgreSQL driver [installed]
+                  mariadb-libs: MariaDB driver [installed]
+                  unixodbc: ODBC driver
+                  libfbclient: Firebird/iBase driver
+                  freetds: MS SQL driver
+                  gtk3: GTK platform plugin [installed]
+                  perl: for fixqt4headers and syncqt [installed]
+Required By     : kcoreaddons  kwidgetsaddons  libaccounts-qt  libdbusmenu-qt5  polkit-qt5  qca-qt5  qgpgme-qt5  qt5-declarative  qt5-multimedia  qt5-svg  qt5-tools  qt5-x11extras  qtkeychain-qt5  signond  solid  sonnet  syntax-highlighting  virtualbox
+Optional For    : avahi  libde265  openal  pinentry  v4l-utils
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 63.21 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 31 Jul 2023 11:39:23 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:46 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : java-environment-common
+Version         : 3-5
+Description     : Common files for Java Development Kits
+Architecture    : any
+URL             : https://www.archlinux.org/packages/extra/any/java-common/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : None
+Optional Deps   : None
+Required By     : jdk-openjdk  jdk11-openjdk  jdk8-openjdk
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 0.00 B
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Thu 19 Jan 2023 12:33:57 PM WET
+Install Date    : Wed 25 Jan 2023 01:43:41 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : gcc
+Version         : 13.2.1-2
+Description     : The GNU Compiler Collection - C and C++ frontends
+Architecture    : x86_64
+URL             : https://gcc.gnu.org
+Licenses        : GPL3  LGPL  FDL  custom
+Groups          : None
+Provides        : gcc-multilib
+Depends On      : gcc-libs=13.2.1-2  binutils>=2.28  libmpc  zstd  libisl.so=23-64
+Optional Deps   : lib32-gcc-libs: for generating code for 32-bit ABI
+Required By     : dkms
+Optional For    : xorg-xrdb
+Conflicts With  : None
+Replaces        : gcc-multilib
+Installed Size  : 184.14 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 09:11:50 AM WEST
+Install Date    : Thu 03 Aug 2023 01:02:40 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : mariadb-clients
+Version         : 11.0.2-2
+Description     : MariaDB client tools
+Architecture    : x86_64
+URL             : https://mariadb.org/
+Licenses        : GPL
+Groups          : None
+Provides        : mysql-clients=11.0.2
+Depends On      : mariadb-libs=11.0.2  jemalloc  ncurses
+Optional Deps   : None
+Required By     : mariadb
+Optional For    : None
+Conflicts With  : mysql-clients
+Replaces        : None
+Installed Size  : 32.76 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Wed 05 Jul 2023 12:01:05 PM WEST
+Install Date    : Sun 09 Jul 2023 04:19:17 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : elfutils
+Version         : 0.189-2
+Description     : Handle ELF object files and DWARF debugging information (utilities)
+Architecture    : x86_64
+URL             : https://sourceware.org/elfutils/
+Licenses        : LGPL3  GPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  glibc  libelf=0.189
+Optional Deps   : None
+Required By     : None
+Optional For    : debuginfod
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.48 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 03:16:16 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:38 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : graphviz
+Version         : 8.1.0-1
+Description     : Graph visualization software
+Architecture    : x86_64
+URL             : https://www.graphviz.org/
+Licenses        : EPL
+Groups          : None
+Provides        : None
+Depends On      : libltdl  gd  librsvg  ghostscript  pango  gts  gsfonts
+Optional Deps   : mono: sharp bindings
+                  guile: guile bindings [installed]
+                  lua: lua bindings
+                  perl: perl bindings [installed]
+                  python: python bindings [installed]
+                  r: r bindings
+                  tcl: tcl bindings [installed]
+                  qt6-base: gvedit [installed]
+                  gtk2: gtk output plugin [installed]
+                  xterm: vimdot
+Required By     : libmediainfo
+Optional For    : gperftools
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 11.28 MiB
+Packager        : Lukas Fleischer <lfleischer@archlinux.org>
+Build Date      : Sat 15 Jul 2023 03:03:37 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:42 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : python-pytorch
+Version         : 2.0.1-7
+Description     : Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Architecture    : x86_64
+URL             : https://pytorch.org
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : google-glog  gflags  opencv  openmp  openmpi  pybind11  python  python-yaml  libuv  python-numpy  python-sympy  protobuf  ffmpeg4.4  python-future  qt6-base  intel-oneapi-mkl  python-typing_extensions  numactl  python-jinja  python-networkx  python-filelock
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 528.84 MiB
+Packager        : Torsten Keßler <tpkessler@archlinux.org>
+Build Date      : Sun 09 Jul 2023 10:48:58 AM WEST
+Install Date    : Tue 18 Jul 2023 08:07:03 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : source-highlight
+Version         : 3.1.9-10
+Description     : Convert source code to syntax highlighted document
+Architecture    : x86_64
+URL             : https://www.gnu.org/software/src-highlite/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : bash  boost-libs
+Optional Deps   : lesspipe: src-hilite-lesspipe.sh [installed]
+Required By     : gdb
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.18 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sat 21 Jan 2023 01:16:41 PM WET
+Install Date    : Thu 09 Feb 2023 11:01:20 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : mariadb
+Version         : 11.0.2-2
+Description     : Fast SQL database server, derived from MySQL
+Architecture    : x86_64
+URL             : https://mariadb.org/
+Licenses        : GPL
+Groups          : None
+Provides        : mysql=11.0.2
+Depends On      : mariadb-clients=11.0.2  bzip2  libxml2  lz4  systemd-libs  libxml2  zstd
+Optional Deps   : cracklib: for cracklib plugin [installed]
+                  curl: for ha_s3 plugin [installed]
+                  galera: for MariaDB cluster with Galera WSREP
+                  judy: for Open Query GRAPH (OQGraph) computation engine
+                  perl-dbd-mariadb: for mariadb-hotcopy, mariadb-convert-table-format and mariadb-setpermission
+                  python-mysqlclient: for myrocks_hotbackup
+                  xz: lzma provider [installed]
+Required By     : None
+Optional For    : python-pymysql
+Conflicts With  : mysql
+Replaces        : None
+Installed Size  : 209.94 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Wed 05 Jul 2023 12:01:05 PM WEST
+Install Date    : Sun 09 Jul 2023 04:19:18 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-base
+Version         : 5.15.10+kde+r139-1
+Description     : A cross-platform application and UI framework
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : libjpeg-turbo  xcb-util-keysyms  xcb-util-renderutil  libgl  fontconfig  xdg-utils  shared-mime-info  xcb-util-wm  libxrender  libxi  sqlite  xcb-util-image  mesa  tslib  libinput  libxkbcommon-x11  libproxy  libcups  double-conversion  md4c  qt5-translations
+Optional Deps   : qt5-svg: to use SVG icon themes [installed]
+                  qt5-wayland: to run Qt applications in a Wayland session [installed]
+                  postgresql-libs: PostgreSQL driver [installed]
+                  mariadb-libs: MariaDB driver [installed]
+                  unixodbc: ODBC driver
+                  libfbclient: Firebird/iBase driver
+                  freetds: MS SQL driver
+                  gtk3: GTK platform plugin [installed]
+                  perl: for fixqt4headers and syncqt [installed]
+Required By     : kcoreaddons  kwidgetsaddons  libaccounts-qt  libdbusmenu-qt5  polkit-qt5  qca-qt5  qgpgme-qt5  qt5-declarative  qt5-multimedia  qt5-svg  qt5-tools  qt5-x11extras  qtkeychain-qt5  signond  solid  sonnet  syntax-highlighting  virtualbox
+Optional For    : avahi  libde265  openal  pinentry  v4l-utils
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 63.21 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 31 Jul 2023 11:39:23 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:46 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : ruby-bundler
+Version         : 2.4.13-1
+Description     : Manages an application's dependencies through its entire life, across many machines, systematically and repeatably
+Architecture    : any
+URL             : https://bundler.io
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : ruby
+Optional Deps   : None
+Required By     : ruby-stdlib
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1533.44 KiB
+Packager        : George Rawlinson <grawlinson@archlinux.org>
+Build Date      : Wed 07 Jun 2023 09:20:21 AM WEST
+Install Date    : Thu 08 Jun 2023 09:35:08 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : glslang
+Version         : 12.3.1-2
+Description     : OpenGL and OpenGL ES shader front end and validator
+Architecture    : x86_64
+URL             : https://github.com/KhronosGroup/glslang
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs
+Optional Deps   : None
+Required By     : libplacebo  shaderc
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 17.13 MiB
+Packager        : Sven-Hendrik Haase <svenstaro@archlinux.org>
+Build Date      : Fri 28 Jul 2023 05:43:11 PM WEST
+Install Date    : Sun 30 Jul 2023 03:32:28 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : gd
+Version         : 2.3.3-6
+Description     : Library for the dynamic creation of images by programmers
+Architecture    : x86_64
+URL             : https://libgd.github.io/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : fontconfig  libxpm  libwebp  libavif  libheif
+Optional Deps   : perl: bdftogd script [installed]
+Required By     : graphviz  libgphoto2
+Optional For    : glibc
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 683.74 KiB
+Packager        : Evangelos Foutras <foutrelis@archlinux.org>
+Build Date      : Mon 02 Jan 2023 10:35:05 PM WET
+Install Date    : Mon 09 Jan 2023 02:02:59 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : pulseaudio
+Version         : 16.1-6
+Description     : A featureful, general-purpose sound server
+Architecture    : x86_64
+URL             : https://www.freedesktop.org/wiki/Software/PulseAudio/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : alsa-lib  fftw  libcap  libltdl  libpulse=16.1-6  libsm  libsoxr  libxtst  orc  rtkit  speexdsp  tdb  webrtc-audio-processing
+Optional Deps   : pulseaudio-alsa: ALSA configuration (recommended) [installed]
+                  pulseaudio-bluetooth: Bluetooth support
+                  pulseaudio-equalizer: Graphical equalizer
+                  pulseaudio-jack: Jack support
+                  pulseaudio-lirc: IR (lirc) support
+                  pulseaudio-rtp: RTP and RAOP support
+                  pulseaudio-zeroconf: Zeroconf support
+Required By     : pulseaudio-alsa  pulseaudio-ctl
+Optional For    : firefox
+Conflicts With  : None
+Replaces        : pulseaudio-gconf<=11.1  pulseaudio-xen<=9.0
+Installed Size  : 5.92 MiB
+Packager        : Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+Build Date      : Thu 16 Mar 2023 01:11:06 AM WET
+Install Date    : Sat 18 Mar 2023 05:59:56 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : libetonyek
+Version         : 0.1.10-3
+Description     : Library and a set of tools for reading and converting Apple Keynote presentations
+Architecture    : x86_64
+URL             : https://wiki.documentfoundation.org/DLP/Libraries/libetonyek
+Licenses        : MPL
+Groups          : None
+Provides        : None
+Depends On      : libxml2  zlib  libwpd  librevenge  liblangtag
+Optional Deps   : None
+Required By     : libreoffice-fresh
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 19.47 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sun 08 Jan 2023 08:41:15 PM WET
+Install Date    : Mon 09 Jan 2023 02:03:00 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : db
+Version         : 6.2.32-1
+Description     : The Berkeley DB embedded database system
+Architecture    : x86_64
+URL             : https://www.oracle.com/technology/software/products/berkeley-db/index.html
+Licenses        : AGPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  sh
+Optional Deps   : None
+Required By     : perl
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.16 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Sat 10 Dec 2022 06:39:34 PM WET
+Install Date    : Mon 19 Dec 2022 04:21:36 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : vivaldi
+Version         : 6.1.3035.204-1
+Description     : An advanced browser made with the power user in mind.
+Architecture    : x86_64
+URL             : https://vivaldi.com
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : gtk3  libcups  nss  alsa-lib  libxss  ttf-font  desktop-file-utils  shared-mime-info  hicolor-icon-theme
+Optional Deps   : vivaldi-ffmpeg-codecs: playback of proprietary video/audio
+                  libnotify: native notifications [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 330.85 MiB
+Packager        : Ike Devolder <ike.devolder@archlinux.org>
+Build Date      : Sat 22 Jul 2023 08:07:19 AM WEST
+Install Date    : Sat 22 Jul 2023 02:09:10 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-declarative
+Version         : 5.15.10+kde+r29-1
+Description     : Classes for QML and JavaScript languages
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : qt5-base
+Optional Deps   : None
+Required By     : ki18n  qt5-location  qt5-wayland  qt5-webchannel
+Optional For    : qt5-multimedia  solid  sonnet  syntax-highlighting
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 23.57 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sun 16 Jul 2023 02:10:23 PM WEST
+Install Date    : Sun 16 Jul 2023 04:01:22 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-declarative
+Version         : 5.15.10+kde+r29-1
+Description     : Classes for QML and JavaScript languages
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : qt5-base
+Optional Deps   : None
+Required By     : ki18n  qt5-location  qt5-wayland  qt5-webchannel
+Optional For    : qt5-multimedia  solid  sonnet  syntax-highlighting
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 23.57 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sun 16 Jul 2023 02:10:23 PM WEST
+Install Date    : Sun 16 Jul 2023 04:01:22 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : elfutils
+Version         : 0.189-2
+Description     : Handle ELF object files and DWARF debugging information (utilities)
+Architecture    : x86_64
+URL             : https://sourceware.org/elfutils/
+Licenses        : LGPL3  GPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  glibc  libelf=0.189
+Optional Deps   : None
+Required By     : None
+Optional For    : debuginfod
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.48 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 03:16:16 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:38 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : cairo
+Version         : 1.17.8-2
+Description     : 2D graphics library with support for multiple output devices
+Architecture    : x86_64
+URL             : https://cairographics.org/
+Licenses        : LGPL  MPL
+Groups          : None
+Provides        : libcairo-gobject.so=2-64  libcairo-script-interpreter.so=2-64  libcairo.so=2-64
+Depends On      : fontconfig  freetype2  glib2  libpng  libx11  libxcb  libxext  libxrender  lzo  pixman  zlib
+Optional Deps   : None
+Required By     : ghostscript  gst-plugins-good  gtk2  gtk3  gtk4  libgxps  libreoffice-fresh  librsvg  pango  poppler  poppler-glib  python-cairo  qemu-ui-gtk  spice-gtk  thunderbird  webkit2gtk
+Optional For    : hwloc  python-gobject
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1691.63 KiB
+Packager        : Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+Build Date      : Wed 08 Feb 2023 11:13:25 PM WET
+Install Date    : Thu 09 Feb 2023 03:25:13 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qemu-user
+Version         : 8.0.3-1
+Description     : QEMU user mode emulation
+Architecture    : x86_64
+URL             : https://www.qemu.org/
+Licenses        : GPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : capstone  gcc-libs  glib2  libglib-2.0.so=0-64  libgmodule-2.0.so=0-64  glibc  gnutls  libelf  liburing  liburing.so=2-64  numactl  libnuma.so=1-64  qemu-common=8.0.3-1  zlib
+Optional Deps   : qemu-user-binfmt: for binary format rules
+Required By     : qemu-emulators-full
+Optional For    : qemu-desktop
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 105.94 MiB
+Packager        : Anatol Pomozov <anatolik@archlinux.org>
+Build Date      : Mon 17 Jul 2023 11:05:11 PM WEST
+Install Date    : Thu 27 Jul 2023 10:42:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qemu-user
+Version         : 8.0.3-1
+Description     : QEMU user mode emulation
+Architecture    : x86_64
+URL             : https://www.qemu.org/
+Licenses        : GPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : capstone  gcc-libs  glib2  libglib-2.0.so=0-64  libgmodule-2.0.so=0-64  glibc  gnutls  libelf  liburing  liburing.so=2-64  numactl  libnuma.so=1-64  qemu-common=8.0.3-1  zlib
+Optional Deps   : qemu-user-binfmt: for binary format rules
+Required By     : qemu-emulators-full
+Optional For    : qemu-desktop
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 105.94 MiB
+Packager        : Anatol Pomozov <anatolik@archlinux.org>
+Build Date      : Mon 17 Jul 2023 11:05:11 PM WEST
+Install Date    : Thu 27 Jul 2023 10:42:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : virtualbox-guest-utils
+Version         : 7.0.10-1
+Description     : VirtualBox Guest userspace utilities
+Architecture    : x86_64
+URL             : https://virtualbox.org/
+Licenses        : GPL  custom:CDDL
+Groups          : None
+Provides        : None
+Depends On      : glibc  pam  libx11  libxcomposite  libxdamage  libxext  libxfixes  libxmu  libxt  xorg-xrandr  xf86-video-vmware  VIRTUALBOX-GUEST-MODULES
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : virtualbox-archlinux-additions  virtualbox-guest-additions  virtualbox-guest-utils-nox  virtualbox-guest-dkms
+Replaces        : virtualbox-archlinux-additions  virtualbox-guest-additions  virtualbox-guest-dkms
+Installed Size  : 3.85 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 18 Jul 2023 10:00:10 PM WEST
+Install Date    : Fri 21 Jul 2023 10:11:55 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : v4l-utils
+Version         : 1.24.1-2
+Description     : Userspace tools and conversion library for Video 4 Linux
+Architecture    : x86_64
+URL             : https://linuxtv.org/
+Licenses        : LGPL
+Groups          : None
+Provides        : libv4l=1.24.1
+Depends On      : hicolor-icon-theme  gcc-libs  libjpeg-turbo  systemd-libs  json-c
+Optional Deps   : qt5-base: for qv4l2 and qvidcap [installed]
+                  alsa-lib: for qv4l2 [installed]
+Required By     : ffmpeg  ffmpeg4.4  gst-plugins-good
+Optional For    : None
+Conflicts With  : libv4l
+Replaces        : libv4l
+Installed Size  : 5.04 MiB
+Packager        : Balló György <bgyorgy@archlinux.org>
+Build Date      : Fri 26 May 2023 10:58:52 AM WEST
+Install Date    : Mon 29 May 2023 06:59:18 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : gd
+Version         : 2.3.3-6
+Description     : Library for the dynamic creation of images by programmers
+Architecture    : x86_64
+URL             : https://libgd.github.io/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : fontconfig  libxpm  libwebp  libavif  libheif
+Optional Deps   : perl: bdftogd script [installed]
+Required By     : graphviz  libgphoto2
+Optional For    : glibc
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 683.74 KiB
+Packager        : Evangelos Foutras <foutrelis@archlinux.org>
+Build Date      : Mon 02 Jan 2023 10:35:05 PM WET
+Install Date    : Mon 09 Jan 2023 02:02:59 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : mariadb-clients
+Version         : 11.0.2-2
+Description     : MariaDB client tools
+Architecture    : x86_64
+URL             : https://mariadb.org/
+Licenses        : GPL
+Groups          : None
+Provides        : mysql-clients=11.0.2
+Depends On      : mariadb-libs=11.0.2  jemalloc  ncurses
+Optional Deps   : None
+Required By     : mariadb
+Optional For    : None
+Conflicts With  : mysql-clients
+Replaces        : None
+Installed Size  : 32.76 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Wed 05 Jul 2023 12:01:05 PM WEST
+Install Date    : Sun 09 Jul 2023 04:19:17 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : miniupnpc
+Version         : 2.2.4-2
+Description     : Small UPnP client library/tool to access Internet Gateway Devices
+Architecture    : x86_64
+URL             : https://miniupnp.tuxfamily.org/
+Licenses        : BSD
+Groups          : None
+Provides        : libminiupnpc.so=17-64
+Depends On      : sh  glibc
+Optional Deps   : None
+Required By     : transmission-cli
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 113.35 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sun 09 Apr 2023 04:23:17 AM WEST
+Install Date    : Sat 06 May 2023 02:54:53 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : mongosh-bin
+Version         : 1.10.2-1
+Description     : An interactive shell to connect with MongoDB with syntax highlighting, autocomplete, contextual help and error messages.
+Architecture    : x86_64
+URL             : https://github.com/mongodb-js/mongosh.git
+Licenses        : Apache
+Groups          : None
+Provides        : None
+Depends On      : krb5
+Optional Deps   : None
+Required By     : mongodb-bin
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 134.33 MiB
+Packager        : Unknown Packager
+Build Date      : Thu 03 Aug 2023 01:03:12 AM WEST
+Install Date    : Thu 03 Aug 2023 01:04:09 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : None
+
+Name            : python-twisted
+Version         : 22.10.0-3
+Description     : Asynchronous networking framework written in Python
+Architecture    : any
+URL             : https://twistedmatrix.com/
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : python-zope-interface  python-constantly  python-incremental  python-automat  python-hyperlink  python-attrs  python-typing_extensions
+Optional Deps   : python-pyopenssl: for TLS client hostname verification [installed]
+                  python-service-identity: for TLS client hostname verification [installed]
+                  python-idna: for TLS client hostname verification [installed]
+                  python-cryptography: for using conch [installed]
+                  python-pyasn1: for using conch [installed]
+                  python-appdirs: for using conch [installed]
+                  python-bcrypt: for using conch
+                  python-h2: for http2 support
+                  python-priority: for http2 support
+                  python-pyserial: for serial support
+                  tk: for using tkconch
+Required By     : python-autobahn  python-daphne  python-incremental  scrapy
+Optional For    : avahi  python-automat  python-pyee  python-tornado
+Conflicts With  : python2-twisted<=20.3.0-3
+Replaces        : None
+Installed Size  : 48.58 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Mon 10 Apr 2023 06:21:14 AM WEST
+Install Date    : Wed 31 May 2023 03:23:53 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : mariadb-clients
+Version         : 11.0.2-2
+Description     : MariaDB client tools
+Architecture    : x86_64
+URL             : https://mariadb.org/
+Licenses        : GPL
+Groups          : None
+Provides        : mysql-clients=11.0.2
+Depends On      : mariadb-libs=11.0.2  jemalloc  ncurses
+Optional Deps   : None
+Required By     : mariadb
+Optional For    : None
+Conflicts With  : mysql-clients
+Replaces        : None
+Installed Size  : 32.76 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Wed 05 Jul 2023 12:01:05 PM WEST
+Install Date    : Sun 09 Jul 2023 04:19:17 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : vivaldi
+Version         : 6.1.3035.204-1
+Description     : An advanced browser made with the power user in mind.
+Architecture    : x86_64
+URL             : https://vivaldi.com
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : gtk3  libcups  nss  alsa-lib  libxss  ttf-font  desktop-file-utils  shared-mime-info  hicolor-icon-theme
+Optional Deps   : vivaldi-ffmpeg-codecs: playback of proprietary video/audio
+                  libnotify: native notifications [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 330.85 MiB
+Packager        : Ike Devolder <ike.devolder@archlinux.org>
+Build Date      : Sat 22 Jul 2023 08:07:19 AM WEST
+Install Date    : Sat 22 Jul 2023 02:09:10 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : virtualbox
+Version         : 7.0.10-1
+Description     : Powerful x86 virtualization for enterprise as well as home use
+Architecture    : x86_64
+URL             : https://virtualbox.org/
+Licenses        : GPL  custom:CDDL
+Groups          : None
+Provides        : None
+Depends On      : curl  gcc-libs  glibc  liblzf  libpng  libtpms  libvpx  libx11  libxcursor  libxext  libxinerama  libxml2  libxmu  libxt  openssl  procps-ng  python  qt5-base  qt5-tools  qt5-x11extras  sdl  shared-mime-info  zlib  VIRTUALBOX-HOST-MODULES
+Optional Deps   : vde2: Virtual Distributed Ethernet support [installed]
+                  virtualbox-guest-iso: Guest Additions CD image [installed]
+                  virtualbox-ext-vnc: VNC server support
+                  virtualbox-sdk: Developer kit
+Required By     : None
+Optional For    : None
+Conflicts With  : virtualbox-ose
+Replaces        : virtualbox-ose
+Installed Size  : 221.55 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 18 Jul 2023 10:00:10 PM WEST
+Install Date    : Fri 21 Jul 2023 10:11:54 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : redis
+Version         : 7.0.12-1
+Description     : An in-memory database that persists on disk
+Architecture    : x86_64
+URL             : https://redis.io/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : jemalloc  grep  shadow  systemd-libs
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.75 MiB
+Packager        : Andrew Crerar <crerar@archlinux.org>
+Build Date      : Mon 10 Jul 2023 05:29:05 PM WEST
+Install Date    : Wed 12 Jul 2023 05:30:21 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : liborcus
+Version         : 0.17.2-5
+Description     : File import filter library for spreadsheet documents.
+Architecture    : x86_64
+URL             : https://gitlab.com/orcus/orcus/blob/master/README.md
+Licenses        : MPL
+Groups          : None
+Provides        : None
+Depends On      : libixion
+Optional Deps   : None
+Required By     : libreoffice-fresh
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.01 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sat 08 Apr 2023 04:18:03 AM WEST
+Install Date    : Sat 06 May 2023 02:54:48 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-docutils
+Version         : 1:0.20.1-1
+Description     : Set of tools for processing plaintext docs into formats such as HTML, XML, or LaTeX
+Architecture    : any
+URL             : http://docutils.sourceforge.net
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : None
+Required By     : python-commonmark  python-sphinx  python-sphinx-click
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 5.72 MiB
+Packager        : Daniel M. Capella <polyzen@archlinux.org>
+Build Date      : Wed 17 May 2023 07:24:49 AM WEST
+Install Date    : Thu 18 May 2023 12:03:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : archlinux-contrib
+Version         : 20221211-1
+Description     : Collection of contrib scripts used in Arch Linux
+Architecture    : any
+URL             : https://github.com/archlinux/contrib
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : python-requests: for security tracker [installed]
+                  jq: for rebuild-todo [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 51.70 KiB
+Packager        : Evangelos Foutras <foutrelis@archlinux.org>
+Build Date      : Sun 11 Dec 2022 09:50:55 AM WET
+Install Date    : Thu 09 Feb 2023 07:16:24 AM WET
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : gcc
+Version         : 13.2.1-2
+Description     : The GNU Compiler Collection - C and C++ frontends
+Architecture    : x86_64
+URL             : https://gcc.gnu.org
+Licenses        : GPL3  LGPL  FDL  custom
+Groups          : None
+Provides        : gcc-multilib
+Depends On      : gcc-libs=13.2.1-2  binutils>=2.28  libmpc  zstd  libisl.so=23-64
+Optional Deps   : lib32-gcc-libs: for generating code for 32-bit ABI
+Required By     : dkms
+Optional For    : xorg-xrdb
+Conflicts With  : None
+Replaces        : gcc-multilib
+Installed Size  : 184.14 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 09:11:50 AM WEST
+Install Date    : Thu 03 Aug 2023 01:02:40 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : imlib2
+Version         : 1.11.1-1
+Description     : Library that does image file loading and saving as well as rendering, manipulation, arbitrary polygon support
+Architecture    : x86_64
+URL             : https://sourceforge.net/projects/enlightenment/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : bzip2  freetype2  giflib  libjpeg-turbo  libpng  libtiff  libxext  xz
+Optional Deps   : libheif: HEIF loader (for AVIF) [installed]
+                  libid3tag: ID3 loader
+                  libjxl: JXL loader [installed]
+                  librsvg: SVG loader [installed]
+                  libspectre: PS loader
+                  libwebp: WEBP loader [installed]
+                  openjpeg2: J2K loader [installed]
+Required By     : feh  libcaca  sxiv  xmenu
+Optional For    : w3m
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1484.35 KiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 02 May 2023 08:42:48 AM WEST
+Install Date    : Sat 06 May 2023 02:54:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libxslt
+Version         : 1.1.38-1
+Description     : XML stylesheet transformation library
+Architecture    : x86_64
+URL             : https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home
+Licenses        : custom:MIT
+Groups          : None
+Provides        : libxslt.so=1-64  libexslt.so=0-64
+Depends On      : libgcrypt  libxml2  xz
+Optional Deps   : python: Python bindings [installed]
+Required By     : libosinfo  libreoffice-fresh  postgresql  python-lxml  qt5-webengine  raptor  webkit2gtk  xmlsec
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 792.15 KiB
+Packager        : Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+Build Date      : Mon 03 Jul 2023 10:11:53 PM WEST
+Install Date    : Sun 09 Jul 2023 04:19:16 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-base
+Version         : 5.15.10+kde+r139-1
+Description     : A cross-platform application and UI framework
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : libjpeg-turbo  xcb-util-keysyms  xcb-util-renderutil  libgl  fontconfig  xdg-utils  shared-mime-info  xcb-util-wm  libxrender  libxi  sqlite  xcb-util-image  mesa  tslib  libinput  libxkbcommon-x11  libproxy  libcups  double-conversion  md4c  qt5-translations
+Optional Deps   : qt5-svg: to use SVG icon themes [installed]
+                  qt5-wayland: to run Qt applications in a Wayland session [installed]
+                  postgresql-libs: PostgreSQL driver [installed]
+                  mariadb-libs: MariaDB driver [installed]
+                  unixodbc: ODBC driver
+                  libfbclient: Firebird/iBase driver
+                  freetds: MS SQL driver
+                  gtk3: GTK platform plugin [installed]
+                  perl: for fixqt4headers and syncqt [installed]
+Required By     : kcoreaddons  kwidgetsaddons  libaccounts-qt  libdbusmenu-qt5  polkit-qt5  qca-qt5  qgpgme-qt5  qt5-declarative  qt5-multimedia  qt5-svg  qt5-tools  qt5-x11extras  qtkeychain-qt5  signond  solid  sonnet  syntax-highlighting  virtualbox
+Optional For    : avahi  libde265  openal  pinentry  v4l-utils
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 63.21 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 31 Jul 2023 11:39:23 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:46 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : yajl
+Version         : 2.1.0-5
+Description     : Yet Another JSON Library
+Architecture    : x86_64
+URL             : https://lloyd.github.com/yajl/
+Licenses        : ISC
+Groups          : None
+Provides        : libyajl.so=2-64
+Depends On      : glibc
+Optional Deps   : None
+Required By     : libvirt
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 220.88 KiB
+Packager        : Jelle van der Waa <jelle@archlinux.org>
+Build Date      : Fri 24 Dec 2021 10:29:58 AM WET
+Install Date    : Mon 27 Dec 2021 03:54:40 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : elfutils
+Version         : 0.189-2
+Description     : Handle ELF object files and DWARF debugging information (utilities)
+Architecture    : x86_64
+URL             : https://sourceware.org/elfutils/
+Licenses        : LGPL3  GPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  glibc  libelf=0.189
+Optional Deps   : None
+Required By     : None
+Optional For    : debuginfod
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.48 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 03:16:16 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:38 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : elfutils
+Version         : 0.189-2
+Description     : Handle ELF object files and DWARF debugging information (utilities)
+Architecture    : x86_64
+URL             : https://sourceware.org/elfutils/
+Licenses        : LGPL3  GPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  glibc  libelf=0.189
+Optional Deps   : None
+Required By     : None
+Optional For    : debuginfod
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.48 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Mon 31 Jul 2023 03:16:16 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:38 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : mariadb
+Version         : 11.0.2-2
+Description     : Fast SQL database server, derived from MySQL
+Architecture    : x86_64
+URL             : https://mariadb.org/
+Licenses        : GPL
+Groups          : None
+Provides        : mysql=11.0.2
+Depends On      : mariadb-clients=11.0.2  bzip2  libxml2  lz4  systemd-libs  libxml2  zstd
+Optional Deps   : cracklib: for cracklib plugin [installed]
+                  curl: for ha_s3 plugin [installed]
+                  galera: for MariaDB cluster with Galera WSREP
+                  judy: for Open Query GRAPH (OQGraph) computation engine
+                  perl-dbd-mariadb: for mariadb-hotcopy, mariadb-convert-table-format and mariadb-setpermission
+                  python-mysqlclient: for myrocks_hotbackup
+                  xz: lzma provider [installed]
+Required By     : None
+Optional For    : python-pymysql
+Conflicts With  : mysql
+Replaces        : None
+Installed Size  : 209.94 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Wed 05 Jul 2023 12:01:05 PM WEST
+Install Date    : Sun 09 Jul 2023 04:19:18 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qemu-user
+Version         : 8.0.3-1
+Description     : QEMU user mode emulation
+Architecture    : x86_64
+URL             : https://www.qemu.org/
+Licenses        : GPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : capstone  gcc-libs  glib2  libglib-2.0.so=0-64  libgmodule-2.0.so=0-64  glibc  gnutls  libelf  liburing  liburing.so=2-64  numactl  libnuma.so=1-64  qemu-common=8.0.3-1  zlib
+Optional Deps   : qemu-user-binfmt: for binary format rules
+Required By     : qemu-emulators-full
+Optional For    : qemu-desktop
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 105.94 MiB
+Packager        : Anatol Pomozov <anatolik@archlinux.org>
+Build Date      : Mon 17 Jul 2023 11:05:11 PM WEST
+Install Date    : Thu 27 Jul 2023 10:42:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : sdl12-compat
+Version         : 1.2.64-1
+Description     : SDL 1.2 runtime compatibility library using SDL 2.0
+Architecture    : x86_64
+URL             : https://github.com/libsdl-org/sdl12-compat
+Licenses        : MIT
+Groups          : None
+Provides        : sdl=1:1.2.15+r406+gf1caf909-1
+Depends On      : sdl2  glu
+Optional Deps   : None
+Required By     : virtualbox
+Optional For    : libde265
+Conflicts With  : sdl
+Replaces        : sdl<=1:1.2.15+r406+gf1caf909
+Installed Size  : 651.56 KiB
+Packager        : Jelle van der Waa <jelle@archlinux.org>
+Build Date      : Fri 26 May 2023 08:21:05 AM WEST
+Install Date    : Sat 03 Jun 2023 03:33:07 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : binutils
+Version         : 2.41-1
+Description     : A set of programs to assemble and manipulate binary and object files
+Architecture    : x86_64
+URL             : https://www.gnu.org/software/binutils/
+Licenses        : GPL3  GPL  FDL1.3  custom:FSFAP
+Groups          : None
+Provides        : None
+Depends On      : glibc  jansson  libelf  zlib  zstd
+Optional Deps   : debuginfod: for debuginfod server/client functionality [installed]
+Required By     : gcc  mkinitcpio
+Optional For    : None
+Conflicts With  : binutils-multilib
+Replaces        : binutils-multilib
+Installed Size  : 40.87 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Sun 30 Jul 2023 10:05:38 PM WEST
+Install Date    : Thu 03 Aug 2023 01:02:37 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : redis
+Version         : 7.0.12-1
+Description     : An in-memory database that persists on disk
+Architecture    : x86_64
+URL             : https://redis.io/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : jemalloc  grep  shadow  systemd-libs
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.75 MiB
+Packager        : Andrew Crerar <crerar@archlinux.org>
+Build Date      : Mon 10 Jul 2023 05:29:05 PM WEST
+Install Date    : Wed 12 Jul 2023 05:30:21 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : virglrenderer
+Version         : 0.10.4-1
+Description     : A virtual 3D GPU library, that allows the guest operating system to use the host GPU to accelerate 3D rendering
+Architecture    : x86_64
+URL             : https://virgil3d.github.io/
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : libepoxy  mesa  libva
+Optional Deps   : None
+Required By     : qemu-hw-display-virtio-gpu-gl  qemu-vhost-user-gpu
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 581.70 KiB
+Packager        : Anatol Pomozov <anatol.pomozov@gmail.com>
+Build Date      : Thu 12 Jan 2023 05:00:35 PM WET
+Install Date    : Wed 18 Jan 2023 01:18:20 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-pip
+Version         : 23.2.1-1
+Description     : The PyPA recommended tool for installing Python packages
+Architecture    : any
+URL             : https://pip.pypa.io/
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : python  python-attrs  python-cryptography  python-wheel
+Optional Deps   : None
+Required By     : None
+Optional For    : python
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 20.68 MiB
+Packager        : David Runge <dvzrv@archlinux.org>
+Build Date      : Sun 23 Jul 2023 09:36:12 PM WEST
+Install Date    : Thu 27 Jul 2023 10:42:14 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : cracklib
+Version         : 2.9.11-1
+Description     : Password Checking Library
+Architecture    : x86_64
+URL             : https://github.com/cracklib/cracklib
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : glibc  zlib
+Optional Deps   : None
+Required By     : libpwquality
+Optional For    : mariadb
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 917.50 KiB
+Packager        : Tobias Powalowski <tpowa@archlinux.org>
+Build Date      : Mon 03 Apr 2023 06:21:39 AM WEST
+Install Date    : Thu 27 Apr 2023 11:00:58 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libpaper
+Version         : 2.1.1-1
+Description     : Library for handling paper characteristics
+Architecture    : x86_64
+URL             : https://github.com/rrthomas/libpaper
+Licenses        : LGPL2.1  GPL3
+Groups          : None
+Provides        : paper
+Depends On      : glibc
+Optional Deps   : None
+Required By     : ghostscript
+Optional For    : libreoffice-fresh
+Conflicts With  : paper
+Replaces        : paper
+Installed Size  : 77.65 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sat 01 Jul 2023 06:40:13 PM WEST
+Install Date    : Mon 03 Jul 2023 11:43:29 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : openexr
+Version         : 3.1.9-1
+Description     : A high dynamic-range image file format library
+Architecture    : x86_64
+URL             : https://www.openexr.com/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : zlib  imath
+Optional Deps   : None
+Required By     : libjxl  opencv
+Optional For    : imagemagick
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.03 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 26 Jun 2023 08:08:33 AM WEST
+Install Date    : Wed 28 Jun 2023 07:54:12 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libabw
+Version         : 0.1.3-3
+Description     : a library that parses the file format of AbiWord documents
+Architecture    : x86_64
+URL             : https://wiki.documentfoundation.org/DLP/Libraries/libabw
+Licenses        : MPL
+Groups          : None
+Provides        : None
+Depends On      : librevenge  libxml2
+Optional Deps   : None
+Required By     : libreoffice-fresh
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.69 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sat 21 May 2022 09:19:20 PM WEST
+Install Date    : Tue 24 May 2022 04:28:29 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libstaroffice
+Version         : 0.0.7-2
+Description     : filter for old StarOffice documents(.sdc, .sdw, ...) based on librevenge
+Architecture    : x86_64
+URL             : https://github.com/fosnola/libstaroffice
+Licenses        : MPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : librevenge
+Optional Deps   : None
+Required By     : libreoffice-fresh
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 48.39 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Sat 21 May 2022 08:28:38 PM WEST
+Install Date    : Tue 24 May 2022 04:28:29 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : zstd
+Version         : 1.5.5-1
+Description     : Zstandard - Fast real-time compression algorithm
+Architecture    : x86_64
+URL             : https://facebook.github.io/zstd/
+Licenses        : BSD  GPL2
+Groups          : None
+Provides        : libzstd.so=1-64
+Depends On      : glibc  gcc-libs  zlib  xz  lz4
+Optional Deps   : None
+Required By     : binutils  boost-libs  btrfs-progs  curl  file  gcc  gnutls  kmod  libarchive  libelf  libtiff  libzip  llvm-libs  mariadb  mariadb-libs  mesa  mkinitcpio  plocate  postgresql  qemu-img  qemu-system-aarch64  qemu-system-alpha  qemu-system-arm  qemu-system-avr  qemu-system-cris  qemu-system-hppa  qemu-system-loongarch64  qemu-system-m68k  qemu-system-microblaze  qemu-system-mips  qemu-system-nios2  qemu-system-or1k  qemu-system-ppc  qemu-system-riscv  qemu-system-rx  qemu-system-s390x  qemu-system-sh4  qemu-system-sparc  qemu-system-tricore  qemu-system-x86  qemu-system-xtensa  rsync  systemd-libs
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1465.29 KiB
+Packager        : Jelle van der Waa <jelle@archlinux.org>
+Build Date      : Sun 16 Apr 2023 01:05:14 PM WEST
+Install Date    : Thu 27 Apr 2023 11:00:58 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : cython
+Version         : 3.0.0-1
+Description     : C-Extensions for Python
+Architecture    : x86_64
+URL             : https://cython.org
+Licenses        : APACHE
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : cython-dev
+Installed Size  : 17.97 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 17 Jul 2023 07:53:17 PM WEST
+Install Date    : Wed 19 Jul 2023 11:16:35 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libnl
+Version         : 3.7.0-3
+Description     : Library for applications dealing with netlink sockets
+Architecture    : x86_64
+URL             : https://github.com/thom311/libnl/
+Licenses        : GPL
+Groups          : None
+Provides        : libnl-3.so=200-64  libnl-cli-3.so=200-64  libnl-genl-3.so=200-64  libnl-idiag-3.so=200-64  libnl-nf-3.so=200-64  libnl-route-3.so=200-64  libnl-xfrm-3.so=200-64
+Depends On      : glibc  gcc-libs
+Optional Deps   : None
+Required By     : htop  libpcap  libteam  openmpi  wpa_supplicant
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.08 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Mon 06 Feb 2023 09:28:43 AM WET
+Install Date    : Thu 09 Feb 2023 03:25:13 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : alsa-utils
+Version         : 1.2.9-1
+Description     : Advanced Linux Sound Architecture - Utilities
+Architecture    : x86_64
+URL             : https://www.alsa-project.org
+Licenses        : GPL2
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  glibc  pciutils  psmisc  alsa-lib  libasound.so=2-64  libatopology.so=2-64  ncurses  libformw.so=6-64  libmenuw.so=6-64  libncursesw.so=6-64  libpanelw.so=6-64  libsamplerate  libsamplerate.so=0-64
+Optional Deps   : bash: for alsa-info.sh and alsabat-test.sh [installed]
+                  fftw: for alsabat [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.34 MiB
+Packager        : David Runge <dvzrv@archlinux.org>
+Build Date      : Thu 04 May 2023 07:12:04 PM WEST
+Install Date    : Thu 18 May 2023 12:03:40 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : qemu-user
+Version         : 8.0.3-1
+Description     : QEMU user mode emulation
+Architecture    : x86_64
+URL             : https://www.qemu.org/
+Licenses        : GPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : capstone  gcc-libs  glib2  libglib-2.0.so=0-64  libgmodule-2.0.so=0-64  glibc  gnutls  libelf  liburing  liburing.so=2-64  numactl  libnuma.so=1-64  qemu-common=8.0.3-1  zlib
+Optional Deps   : qemu-user-binfmt: for binary format rules
+Required By     : qemu-emulators-full
+Optional For    : qemu-desktop
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 105.94 MiB
+Packager        : Anatol Pomozov <anatolik@archlinux.org>
+Build Date      : Mon 17 Jul 2023 11:05:11 PM WEST
+Install Date    : Thu 27 Jul 2023 10:42:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-docutils
+Version         : 1:0.20.1-1
+Description     : Set of tools for processing plaintext docs into formats such as HTML, XML, or LaTeX
+Architecture    : any
+URL             : http://docutils.sourceforge.net
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : None
+Required By     : python-commonmark  python-sphinx  python-sphinx-click
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 5.72 MiB
+Packager        : Daniel M. Capella <polyzen@archlinux.org>
+Build Date      : Wed 17 May 2023 07:24:49 AM WEST
+Install Date    : Thu 18 May 2023 12:03:47 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : virtualbox-guest-utils
+Version         : 7.0.10-1
+Description     : VirtualBox Guest userspace utilities
+Architecture    : x86_64
+URL             : https://virtualbox.org/
+Licenses        : GPL  custom:CDDL
+Groups          : None
+Provides        : None
+Depends On      : glibc  pam  libx11  libxcomposite  libxdamage  libxext  libxfixes  libxmu  libxt  xorg-xrandr  xf86-video-vmware  VIRTUALBOX-GUEST-MODULES
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : virtualbox-archlinux-additions  virtualbox-guest-additions  virtualbox-guest-utils-nox  virtualbox-guest-dkms
+Replaces        : virtualbox-archlinux-additions  virtualbox-guest-additions  virtualbox-guest-dkms
+Installed Size  : 3.85 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Tue 18 Jul 2023 10:00:10 PM WEST
+Install Date    : Fri 21 Jul 2023 10:11:55 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : libnl
+Version         : 3.7.0-3
+Description     : Library for applications dealing with netlink sockets
+Architecture    : x86_64
+URL             : https://github.com/thom311/libnl/
+Licenses        : GPL
+Groups          : None
+Provides        : libnl-3.so=200-64  libnl-cli-3.so=200-64  libnl-genl-3.so=200-64  libnl-idiag-3.so=200-64  libnl-nf-3.so=200-64  libnl-route-3.so=200-64  libnl-xfrm-3.so=200-64
+Depends On      : glibc  gcc-libs
+Optional Deps   : None
+Required By     : htop  libpcap  libteam  openmpi  wpa_supplicant
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.08 MiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Mon 06 Feb 2023 09:28:43 AM WET
+Install Date    : Thu 09 Feb 2023 03:25:13 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : solid
+Version         : 5.108.0-1
+Description     : Hardware integration and detection
+Architecture    : x86_64
+URL             : https://community.kde.org/Frameworks
+Licenses        : LGPL
+Groups          : kf5
+Provides        : None
+Depends On      : qt5-base  media-player-info  upower  udisks2
+Optional Deps   : qt5-declarative: QML bindings [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.52 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 08 Jul 2023 10:24:39 PM WEST
+Install Date    : Mon 10 Jul 2023 01:36:57 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : qt5-tools
+Version         : 5.15.10+kde+r3-1
+Description     : A cross-platform application and UI framework (Development Tools, QtHelp)
+Architecture    : x86_64
+URL             : https://www.qt.io
+Licenses        : GPL3  LGPL3  FDL  custom
+Groups          : qt  qt5
+Provides        : None
+Depends On      : qt5-base  hicolor-icon-theme
+Optional Deps   : clang: for qdoc
+Required By     : virtualbox
+Optional For    : None
+Conflicts With  : qtchooser
+Replaces        : None
+Installed Size  : 15.54 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 12 Jun 2023 11:49:46 PM WEST
+Install Date    : Thu 22 Jun 2023 01:31:15 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : db
+Version         : 6.2.32-1
+Description     : The Berkeley DB embedded database system
+Architecture    : x86_64
+URL             : https://www.oracle.com/technology/software/products/berkeley-db/index.html
+Licenses        : AGPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs  sh
+Optional Deps   : None
+Required By     : perl
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.16 MiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Sat 10 Dec 2022 06:39:34 PM WET
+Install Date    : Mon 19 Dec 2022 04:21:36 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : vivaldi
+Version         : 6.1.3035.204-1
+Description     : An advanced browser made with the power user in mind.
+Architecture    : x86_64
+URL             : https://vivaldi.com
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : gtk3  libcups  nss  alsa-lib  libxss  ttf-font  desktop-file-utils  shared-mime-info  hicolor-icon-theme
+Optional Deps   : vivaldi-ffmpeg-codecs: playback of proprietary video/audio
+                  libnotify: native notifications [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 330.85 MiB
+Packager        : Ike Devolder <ike.devolder@archlinux.org>
+Build Date      : Sat 22 Jul 2023 08:07:19 AM WEST
+Install Date    : Sat 22 Jul 2023 02:09:10 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : ijs
+Version         : 0.35-5
+Description     : a library which implements a protocol for transmission of raster page images
+Architecture    : x86_64
+URL             : https://www.openprinting.org/download/ijs/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : glibc  sh
+Optional Deps   : None
+Required By     : ghostscript
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 121.07 KiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Tue 15 Nov 2022 08:44:46 PM WET
+Install Date    : Sun 20 Nov 2022 10:35:08 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libde265
+Version         : 1.0.12-1
+Description     : Open h.265 video codec implementation
+Architecture    : x86_64
+URL             : https://github.com/strukturag/libde265
+Licenses        : LGPL3
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs
+Optional Deps   : ffmpeg: for sherlock265 [installed]
+                  qt5-base: for sherlock265 [installed]
+                  sdl: dec265 YUV overlay output [installed]
+Required By     : libheif
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 801.56 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Tue 13 Jun 2023 04:56:39 PM WEST
+Install Date    : Wed 14 Jun 2023 12:37:25 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libcaca
+Version         : 0.99.beta20-2
+Description     : Color ASCII art library
+Architecture    : x86_64
+URL             : http://caca.zoy.org/wiki/libcaca
+Licenses        : custom:WTFPL
+Groups          : None
+Provides        : None
+Depends On      : freeglut  gcc-libs  glibc  glu  imlib2  libglvnd  libx11  ncurses  slang  zlib
+Optional Deps   : python: Python bindings [installed]
+Required By     : gst-plugins-good
+Optional For    : ranger
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.51 MiB
+Packager        : Balló György <bgyorgy@archlinux.org>
+Build Date      : Thu 01 Jun 2023 03:10:17 PM WEST
+Install Date    : Sat 03 Jun 2023 03:33:05 AM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : opencv
+Version         : 4.8.0-3
+Description     : Open Source Computer Vision Library
+Architecture    : x86_64
+URL             : https://opencv.org/
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : tbb  openexr  gst-plugins-base  libdc1394  cblas  lapack  libgphoto2  openjpeg2  ffmpeg  protobuf
+Optional Deps   : opencv-samples: samples
+                  vtk: for the viz module
+                  glew: for the viz module
+                  qt6-base: for the HighGUI module [installed]
+                  hdf5: for the HDF5 module
+                  opencl-icd-loader: For coding with OpenCL [installed]
+                  java-runtime: Java interface [installed]
+Required By     : python-pytorch
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 96.16 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 15 Jul 2023 10:28:41 PM WEST
+Install Date    : Sun 16 Jul 2023 12:59:08 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libmwaw
+Version         : 0.3.22-1
+Description     : Import library for some old mac text documents.
+Architecture    : x86_64
+URL             : https://sourceforge.net/projects/libmwaw/
+Licenses        : LGPL2.1  MPL
+Groups          : None
+Provides        : None
+Depends On      : librevenge
+Optional Deps   : None
+Required By     : libreoffice-fresh
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.87 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Thu 04 May 2023 07:07:12 PM WEST
+Install Date    : Sat 06 May 2023 02:54:48 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : sqlite
+Version         : 3.42.0-1
+Description     : A C library that implements an SQL database engine
+Architecture    : x86_64
+URL             : https://www.sqlite.org/
+Licenses        : custom:Public Domain
+Groups          : None
+Provides        : sqlite3=3.42.0  libsqlite3.so=0-64
+Depends On      : readline  zlib
+Optional Deps   : None
+Required By     : aria2  botan  botan2  debuginfod  docker  gnupg  ipython  libaccounts-glib  libsoup  libsoup3  nss  php-sqlite  qt5-base  qt6-base  thunderbird  tracker3  webkit2gtk
+Optional For    : python
+Conflicts With  : None
+Replaces        : sqlite3
+Installed Size  : 7.76 MiB
+Packager        : Andreas Radke <andyrtr@archlinux.org>
+Build Date      : Wed 17 May 2023 06:15:01 AM WEST
+Install Date    : Thu 18 May 2023 12:03:41 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : netpbm
+Version         : 10.73.43-1
+Description     : A toolkit for manipulation of graphic images
+Architecture    : x86_64
+URL             : http://netpbm.sourceforge.net/
+Licenses        : custom  BSD  GPL  LGPL
+Groups          : None
+Provides        : None
+Depends On      : perl  libpng  libtiff  libxml2
+Optional Deps   : None
+Required By     : gts
+Optional For    : groff
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.78 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 25 Mar 2023 08:02:03 PM WET
+Install Date    : Sun 26 Mar 2023 03:29:03 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-pipx
+Version         : 1.2.0-1
+Description     : Install and Run Python Applications in Isolated Environments
+Architecture    : any
+URL             : https://github.com/pipxproject/pipx
+Licenses        : MIT  BSD
+Groups          : None
+Provides        : None
+Depends On      : python  python-userpath  python-argcomplete  python-packaging
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 604.74 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sun 14 May 2023 01:00:03 PM WEST
+Install Date    : Fri 21 Jul 2023 10:24:36 AM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : openmpi
+Version         : 4.1.5-2
+Description     : High performance message passing library (MPI)
+Architecture    : x86_64
+URL             : https://www.open-mpi.org
+Licenses        : custom:OpenMPI
+Groups          : None
+Provides        : libmca_common_cuda.so=40-64  libmca_common_monitoring.so=50-64  libmca_common_ompio.so=41-64  libmca_common_sm.so=40-64  libmpi.so=40-64  libmpi_cxx.so=40-64  libmpi_mpifh.so=40-64  libmpi_usempi_ignore_tkr.so=40-64  libmpi_usempif08.so=40-64  libompitrace.so=40-64  libopen-pal.so=40-64  libopen-rte.so=40-64
+Depends On      : gcc-libs  glibc  hwloc  libevent  libnl  openpmix  openssh  zlib  libpmix.so=2-64
+Optional Deps   : cuda: cuda support
+                  gcc-fortran: fortran support
+                  perl: for aggregate_profile.pl and profile2mat.pl [installed]
+Required By     : fftw  python-pytorch
+Optional For    : boost-libs
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 8.98 MiB
+Packager        : David Runge <dvzrv@archlinux.org>
+Build Date      : Tue 23 May 2023 06:39:24 PM WEST
+Install Date    : Mon 29 May 2023 06:59:21 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : java-runtime-common
+Version         : 3-5
+Description     : Common files for Java Runtime Environments
+Architecture    : any
+URL             : https://www.archlinux.org/packages/extra/any/java-common/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : bash  findutils  coreutils
+Optional Deps   : None
+Required By     : jre-openjdk-headless  jre11-openjdk-headless  jre8-openjdk-headless
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 5.26 KiB
+Packager        : Frederik Schwan <freswa@archlinux.org>
+Build Date      : Thu 19 Jan 2023 12:33:57 PM WET
+Install Date    : Wed 25 Jan 2023 01:43:41 PM WET
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+
