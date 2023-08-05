@@ -1,0 +1,10 @@
+Name: keep
+Version: 2.10.1
+Summary: Personal shell command keeper
+Home-page: https://github.com/orkohunter/keep
+Author: Himanshu Mishra
+Author-email: himanshu.mishra.kgp@gmail.com
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: click, PyGithub, requests, terminaltables
+Required-by: 

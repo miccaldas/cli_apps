@@ -1,0 +1,22 @@
+Name            : alsa-lib
+Version         : 1.2.9-1
+Description     : An alternative implementation of Linux sound support
+Architecture    : x86_64
+URL             : https://www.alsa-project.org
+Licenses        : LGPL2.1
+Groups          : None
+Provides        : libasound.so=2-64  libatopology.so=2-64
+Depends On      : alsa-topology-conf  alsa-ucm-conf  glibc
+Optional Deps   : None
+Required By     : alsa-plugins  alsa-utils  ffmpeg  ffmpeg4.4  gst-plugins-base  jack2  libcanberra  mpg123  mpv  portaudio  pulseaudio  qemu-audio-alsa  thunderbird  vivaldi  zita-alsa-pcmi
+Optional For    : jre-openjdk  jre11-openjdk  jre8-openjdk  libsndfile  sdl2  v4l-utils
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1696.26 KiB
+Packager        : David Runge <dvzrv@archlinux.org>
+Build Date      : Thu 04 May 2023 07:00:25 PM WEST
+Install Date    : Thu 18 May 2023 12:03:40 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+

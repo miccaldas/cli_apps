@@ -80,6 +80,7 @@ def data_preparation():
                     ttgs.append("compg")
                     fin.append(ttgs)
 
+    fins = []
     # Another sanity check to see if the information is, really, ready to be uploaded.
     print_template(fin)
     print("\n")
@@ -91,8 +92,8 @@ def data_preparation():
         pickle.dump(fin, i)
 
 
-if __name__ == "__main__":
-    data_preparation()
+# if __name__ == "__main__":
+#     data_preparation()
 
 
 @snoop
@@ -111,16 +112,16 @@ def db_upload():
         name = dt[0]
         content = dt[1]
         url = dt[2]
-        t0 = dt[3]
-        t1 = dt[4]
-        t2 = dt[5]
-        t3 = dt[6]
-        source = dt[7]
+        t0 = dt[4]
+        t1 = dt[5]
+        t2 = dt[6]
+        t3 = dt[7]
+        source = dt[8]
         q1 = "INSERT INTO cli_apps (name, presentation, url, t1, t2, t3, t4, source) VALUES "
         q2 = f"('{name}', '{content}', '{url}', '{t0}', '{t1}', '{t2}', '{t3}', '{source}')"
         query = f"{q1}{q2}"
         dbdata(query, "commit")
 
 
-# if __name__ == "__main__":
-#     db_upload()
+if __name__ == "__main__":
+    db_upload()

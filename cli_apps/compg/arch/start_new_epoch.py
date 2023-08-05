@@ -43,7 +43,11 @@ def start_new_epoch():
     os.remove("epochvals.bin")
     os.remove("choice.bin")
 
-    choice_processing()
+    with open("../lists/noman.bin", "rb") as h:
+        nm = pickle.load(h)
+    data = nm[int(vals[0]) : int(vals[1])]
+    with open(f"{vals[0]}_{vals[1]}.bin", "wb") as i:
+        pickle.dump(data, i)
 
 
 if __name__ == "__main__":

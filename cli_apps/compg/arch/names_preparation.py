@@ -20,10 +20,9 @@ snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 # Envs
-comp = os.getenv("COMP")
 
 
-@snoop
+# @snoop
 def yay_check_for_packages():
     """
     Some of these entries can be commands from
@@ -36,7 +35,7 @@ def yay_check_for_packages():
         epoch = pickle.load(f)
 
     # USE THIS IF STARTING AN EPOCH
-    with open(f"{comp}app_data/{epoch[0]}_{epoch[1]}.bin", "rb") as y:
+    with open(f"{epoch[0]}_{epoch[1]}.bin", "rb") as y:
         lft = pickle.load(y)
     # USE THIS IF YOU'RE INSIDE AN EPOCH
     # with open(f"{sts}/epoch_counting/left.bin", "rb") as f:
@@ -44,7 +43,7 @@ def yay_check_for_packages():
     lft.pop(-1)
     # To work with 'yay' we just need the app's names. We create
     # a list just with them, to ease processing.
-    left_names = [i[0] for i in lft]
+    # left_names = [i[0] for i in lft]
 
     # # This commands searches for the package that's the owner of
     # # a given file.
@@ -54,7 +53,7 @@ def yay_check_for_packages():
     # # The first file is for the results, the second for stderr,
     # # because there'll be there the names of the app's it can't
     # # find.
-    for n in left_names:
+    for n in lft:
         os.system(f"{cmd}{n} >> owners.txt 2>> notfound.txt")
 
     with open("owners.txt", "r") as f:
