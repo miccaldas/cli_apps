@@ -25,7 +25,7 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-# @snoop
+@snoop
 def input_decision(prompt, color=(160, 196, 157)):
     """
     Template for inputs, asking the user
@@ -87,7 +87,10 @@ def aggregate_info():
                     allinf += [i]
     for t in allinf:
         print(t)
-    allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j) for a, b, c, d, e, f, g, h, i, j in allinf]
+    allinfo = [
+        (a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j)
+        for a, b, c, d, e, f, g, h, i, j in allinf
+    ]
 
     with open("allinfo.bin", "wb") as f:
         pickle.dump(allinfo, f)
@@ -134,13 +137,11 @@ def yay_info(srch):
         fldr = "data_files/"
         datapth = f"{os.getcwd()}/{fldr}"
         flnmid = "_yay"
-
         # This deletes the contents of 'data_files'. This is to ensure
         # there's no contamination between requests, whilst giving time
         # enough to play with the data. Until a new request comes in.
         cmd = f"/usr/bin/trash-put {datapth}*"
         subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
-
         # In this case, 'srch' will be two member tuple; the first, a
         # string with information, the second, a code to identify its
         # provenance. We only need the first.
@@ -171,18 +172,16 @@ def yay_info(srch):
                 if os.stat(f"{datapth}/{flnm}{flnmid}").st_size == 0:
                     flnm = f"python-{selection[1]}"
                     subcall(shellcmd, flnm, fldr, flnmid)
-                flnm = f"python-{selection[1]}"
+
     # 'srch' originating in 'required_by', will have a last entry called 'req'.
     if srch[-1] == "req":
         fldr = "required_files/"
         datapth = f"{os.getcwd()}/{fldr}"
-
-        # This deletes the contents of 'data_files'. This is to ensure
+        # This deletes the contents of 'required_files'. This is to ensure
         # there's no contamination between requests, whilst giving time
         # enough to play with the data. Until a new request comes in.
         cmd = f"/usr/bin/trash-put {datapth}*"
         subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
-
         # This makes it so we won't loop through the 'req' entry.
         for s in srch[:-1]:
             # For notess on how 'flnm' is defined, see above comments
@@ -310,35 +309,37 @@ if __name__ == "__main__":
     delete_empty_files()
 
 
-# @snoop
-def alternative_presentations(tag="ai"):
+def req_decision():
     """
-    Presents, at screens showing info
-    from 'data_files' or 'required_files',
-    other options of search. At this time
-    they are: location and dependecies.
+    Asks the user if he wants to see the
+    dependecies of any package.
     """
 
-    if tag == "ai":
-        required = input_decision("Do you want to explore one of these package dependecies?[y/n] ")
-        if required == "y":
-            alternative = "required_by"
-        ailocation = input_decision("Do you want to see more on the location of these files?[y/n] ")
-        if ailocation == "y":
-            alternative = "location_main"
-        if required == "y" and ailocation == "y":
-            alternative = ("required_by", "location_main")
-        ext = input_decision("Do you want to exit the session?[y/n] ")
-        if ext == "y":
-            alternative = "exit"
+    required = input_decision(
+        "Do you want to explore one of these package dependecies?[y/n] "
+    )
 
-    if tag == "req":
-        location = input_decision("Do you want to see more on the location of these files?[y/n] ")
-        if location == "y":
-            alternative == "location"
-
-    return alternative
+    if required == "y":
+        return "y"
 
 
 if __name__ == "__main__":
-    alternative_presentations()
+    req_decision()
+
+
+@snoop
+def loc_decision():
+    """
+    Asks the user if he wants to see the
+    folder contents of a package.
+    """
+
+    ailocation = input_decision(
+        "Do you want to see more on the location of these files?[y/n] "
+    )
+    if ailocation == "y":
+        return "y"
+
+
+if __name__ == "__main__":
+    loc_decision()

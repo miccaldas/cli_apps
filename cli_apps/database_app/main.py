@@ -7,26 +7,26 @@ import shutil
 import subprocess
 
 import click
-
-# import snoop
+import snoop
 from snoop import pp
 
 from location import location_main
 from methods import (
     aggregate_info,
-    alternative_presentations,
     checkinfo,
     delete_all_files,
     delete_empty_files,
     input_decision,
+    loc_decision,
+    req_decision,
     srch_allinfo,
 )
 from mngmnt.ids_mngmnt import ids_mngmnt
 from mngmnt.kwd_mngmnt import kwd_mngmnt
 from mngmnt.names_mngmnt import names_mngmnt
 from mngmnt.queries_mngmnt import queries_mngmnt
-from required_by import required_main
 from show_info import show_info
+from use_paths import required_loop
 
 # def type_watch(source, value):
 #     return f"type({source})", type(value)
@@ -37,11 +37,17 @@ from show_info import show_info
 
 @click.command()
 @click.argument("keywords", nargs=-1)
-@click.option("-q", "--queries", multiple=True, is_flag=False, flag_value="query", default=[])
-@click.option("-i", "--ids", multiple=True, is_flag=False, flag_value="id", default=[], type=int)
-@click.option("-n", "--names", multiple=True, is_flag=False, flag_value="query", default=[])
+@click.option(
+    "-q", "--queries", multiple=True, is_flag=False, flag_value="query", default=[]
+)
+@click.option(
+    "-i", "--ids", multiple=True, is_flag=False, flag_value="id", default=[], type=int
+)
+@click.option(
+    "-n", "--names", multiple=True, is_flag=False, flag_value="query", default=[]
+)
 @click.option("--req / --no-req", default=False)
-# @snoop
+@snoop
 def get_query(keywords, queries, ids, names, req):
     """
     Because we want to deal with complex queries, we'll define that we can receive,
@@ -69,24 +75,24 @@ def get_query(keywords, queries, ids, names, req):
         aggregate_info()
         srch_allinfo()
         show_info("data_files", "PACKAGES IN DATA_FILES")
-        alternative = alternative_presentations(tag="ai")
-        while alternative != "exit":
-            if alternative == "required_by":
-                required_main("data_files")
-            if alternative == "location_main":
-                location_main("data_files")
-            if alternative == ("required_by", "location_main"):
-                required_main("data_files")
-                location_main("required_files")
-        if req:
-            required_main()
-            delete_empty_files()
-            show_info("required_files", "PACKAGES IN REQUIRED_FILES")
-            alternative_presentations(tag="req")
-            if alternative == "location":
-                location_main("required_files")
+        re = req_decision()
+        lc = loc_decision()
+        if re == "y" and lc == "y":
+            # required_main()
+            location_main()
+            # alternative_presentations()
+        if re == "y":
+            required_loop()
 
-        delete_all_files()
+        # if req:
+        #     required_main()
+        #     delete_empty_files()
+        #     show_info("required_files", "PACKAGES IN REQUIRED_FILES")
+        #     alternative_presentations(tag="req")
+        #     if alternative == "location":
+        #         location_main("required_files")
+
+        # delete_all_files()
 
 
 if __name__ == "__main__":
