@@ -4,20 +4,20 @@ produced by 'expressions'.
 """
 import pickle
 
-import snoop
-from snoop import pp
+# import snoop
+# from snoop import pp
 
 from db import dbdata
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def get(in_binary, out_binary):
     """
     The db call, which expression is

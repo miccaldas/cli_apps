@@ -7,7 +7,8 @@ import shutil
 import subprocess
 
 import click
-import snoop
+
+# import snoop
 from snoop import pp
 
 from location import location_main
@@ -27,12 +28,11 @@ from mngmnt.queries_mngmnt import queries_mngmnt
 from required_by import required_main
 from show_info import show_info
 
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
 
-
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 
 
 @click.command()
@@ -41,7 +41,7 @@ snoop.install(watch_extras=[type_watch])
 @click.option("-i", "--ids", multiple=True, is_flag=False, flag_value="id", default=[], type=int)
 @click.option("-n", "--names", multiple=True, is_flag=False, flag_value="query", default=[])
 @click.option("--req / --no-req", default=False)
-@snoop
+# @snoop
 def get_query(keywords, queries, ids, names, req):
     """
     Because we want to deal with complex queries, we'll define that we can receive,
@@ -70,13 +70,14 @@ def get_query(keywords, queries, ids, names, req):
         srch_allinfo()
         show_info("data_files", "PACKAGES IN DATA_FILES")
         alternative = alternative_presentations(tag="ai")
-        if alternative == "required_by":
-            required_main()
-        if alternative == "location_main":
-            location_main("data_files")
-        if alternative == ("required_by", "location_main"):
-            required_main()
-            location_main()
+        while alternative != "exit":
+            if alternative == "required_by":
+                required_main("data_files")
+            if alternative == "location_main":
+                location_main("data_files")
+            if alternative == ("required_by", "location_main"):
+                required_main("data_files")
+                location_main("required_files")
         if req:
             required_main()
             delete_empty_files()

@@ -7,15 +7,17 @@ consumption, we created a directory to house the data, that the
 user can check any time. It'll be a more mediated experience.
 """
 import os
+import pdb
 import pickle
 
 import snoop
 from click import style
 from rich.console import Console
 from rich.padding import Padding
-from snoop import pp
 
 from methods import delete_all_files, pip_info, yay_info
+
+# from snoop import pp
 
 
 def type_watch(source, value):
@@ -25,8 +27,8 @@ def type_watch(source, value):
 snoop.install(watch_extras=[type_watch])
 
 
-# @snoop
-def get_lst():
+@snoop
+def get_lst(folder):
     """
     Iterates through the files in 'data_files'
     and looks for information on dependencies,
@@ -37,7 +39,7 @@ def get_lst():
     # All information from 'main' is stored in
     # 'data_files'. Will go there to retrieve
     # the information asked in the command line.
-    reqs = f"{os.getcwd()}/data_files"
+    reqs = f"{os.getcwd()}/{folder}"
     fils = os.listdir(reqs)
 
     lst = []
@@ -81,15 +83,18 @@ def get_lst():
     else:
         spltlst = []
         for tup in cleanlst:
-            if " " in tup[1]:
-                if "," in tup[1]:
-                    nw = (tup[0], tup[1].split(", "))
-                    spltlst.append(nw)
-                else:
-                    nw = (tup[0], tup[1].split(" "))
-                    spltlst.append(nw)
+            if " " in tup[1] and "," in tup[1]:
+                nw = (tup[0], tup[1].split(", "))
+                for n in nw[1]:
+                    if n == "":
+                        nw[1].remove(n)
+                spltlst.append(nw)
             else:
-                spltlst.append(tup)
+                nw = (tup[0], tup[1].split(" "))
+                for n in nw[1]:
+                    if n == "":
+                        nw[1].remove(n)
+                spltlst.append(nw)
 
         with open("spltlst.bin", "wb") as f:
             pickle.dump(spltlst, f)
@@ -107,18 +112,14 @@ def show():
     """
     with open("spltlst.bin", "rb") as t:
         deps = pickle.load(t)
+
     # This list will collect the id'd version of 'deps' this module will create.
     numbered_deps = []
-
     console = Console()
-    console.print(
-        Padding("[bold #E9FFC2]DEPENDENCIES[/]", (3, 10, 0, 10)), justify="center"
-    )
+    console.print(Padding("[bold #E9FFC2]DEPENDENCIES[/]", (3, 10, 0, 10)), justify="center")
     for i in range(len(deps)):
         if deps[i][0]:
-            console.print(
-                Padding(f"[bold #AAC8A7]\n{deps[i][0][:-4]}[/]", (0, 10, 0, 10))
-            )
+            console.print(Padding(f"[bold #AAC8A7]\n{deps[i][0][:-4]}[/]", (0, 10, 0, 10)))
         if type(deps[i][1]) == list:
             for idx, t in enumerate(deps[i][1]):
                 # collects a dependency id made of the index of the chosen package,
@@ -133,12 +134,9 @@ def show():
                     )
                 )
         else:
-            console.print(
-                Padding(f"[bold #E9FFC2]\[{i}0] - {deps[i][1]}[/]", (0, 10, 0, 14))
-            )
+            console.print(Padding(f"[bold #E9FFC2]\[{i}0] - {deps[i][1]}[/]", (0, 10, 0, 14)))
             numdp = [f"{i}0", f"{deps[i][1]}", f"{deps[i][0][:-4]}"]
             numbered_deps.append(numdp)
-
     print("\n")
     choice_deps = input(
         style(
@@ -156,7 +154,7 @@ def show():
         pickle.dump(numbered_deps, f)
 
 
-@snoop
+# @snoop
 def choice_processing(binary):
     """
     As "choice_deps" comes in as a string, that may contain one
@@ -166,25 +164,25 @@ def choice_processing(binary):
     """
     try:
         with open(f"{binary}", "rb") as f:
-            choice_deps = pickle.load(f)
+            choices = pickle.load(f)
 
-        if " " in choice_deps:
-            choice = choice_deps.split(" ")
-        if ", " in choice_deps:
-            choice = choice.deps.split(", ")
-        if " " not in choice_deps:
-            choice = choice_deps
-        else:
-            if "," in choice_deps:
-                choice = choice_deps.split(",")
+        if " " in choices:
+            choice = choices.split(" ")
+        if ", " in choices:
+            choice = choices.split(", ")
+        if " " not in choices:
+            choice = choices
+        if "," in choices:
+            choice = choices.split(",")
 
         with open("choice.bin", "wb") as g:
             pickle.dump(choice, g)
     except Exception as e:
         print(f"An error occurred: {e}")
+        raise SystemExit
 
 
-# @snoop
+@snoop
 def collect_deps_info():
     """
     Collects information on the chosen dependendecies.
@@ -195,14 +193,7 @@ def collect_deps_info():
     with open("choice.bin", "rb") as g:
         choice = pickle.load(g)
 
-    print(f"choice is {choice}")
-    print(f"numdeps is {numdeps}")
-
-    srch = [
-        (numdeps[i][1], numdeps[i][2])
-        for i in range(len(numdeps))
-        if numdeps[i][0] in choice
-    ]
+    srch = [(numdeps[i][1], numdeps[i][2]) for i in range(len(numdeps)) if numdeps[i][0] in choice]
     # This will add a code to the 'srch' list that'll allow 'yay_info'
     # and 'pip_info' to know what is the internal structure of 'srch',
     # that is very different from that that is created by 'srch_allinfo'
@@ -211,17 +202,17 @@ def collect_deps_info():
     return srch
 
 
-# @snoop
-def required_main():
+@snoop
+def required_main(folder="data_files"):
     """
     Calls all other functions in this module.
     """
-    get_lst()
+    get_lst(folder)
     show()
     choice_processing("choice_deps.bin")
     srch = collect_deps_info()
     yay_info(srch)
-    pip_info(srch)
+    # pip_info(srch)
 
 
 if __name__ == "__main__":

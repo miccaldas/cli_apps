@@ -8,7 +8,7 @@ import subprocess
 from contextlib import suppress
 from time import sleep
 
-import snoop
+# import snoop
 from rich.console import Console
 from rich.padding import Padding
 
@@ -87,14 +87,17 @@ def dislocation():
     Where we open a file or, in case it's
     a folder, just see its contents.
     """
+    filelst = os.listdir(os.getcwd())
 
     with open("idlocs.bin", "rb") as g:
         idlocs = pickle.load(g)
 
     choice_processing("visits.bin")
     # 'choice.bin' is the outpu of "choice_processing"
-    with open("choice.bin", "rb") as v:
-        choice = pickle.load(v)
+
+    if "choice.bin" in filelst:
+        with open("choice.bin", "rb") as v:
+            choice = pickle.load(v)
 
     chc = [int(i) for i in choice]
 
@@ -205,60 +208,59 @@ def show_dirpath():
     results = []
     temp_lst = []
     console = Console()
+    filelst = os.listdir(os.getcwd())
 
-    # When the link doesn't exist, it creates this error, that is unnecessary
-    # because we know what's wrong by other means.
-    with suppress(FileNotFoundError):
+    if "dirpath.txt" in filelst:
         with open("dirpath.txt", "r") as f:
             dirs = f.readlines()
 
-    # To separate each directory output for presentation
-    # purposes, we're going to create sublists with only
-    # the content of one directory. As we know that
-    # there's a blank line separating each directory,
-    # we'll create a final and a temporary list. The
-    # temporary one will be appending all the entries it
-    # finds. If it finds a line that is only a linebreak,
-    # the final list will append all content of the temporary.
-    # Wich is immediately emptied of previous content, so it
-    # can start the process of finding the new folder entry.
-    for i in dirs:
-        if i == "\n":
-            temp_lst.append(i)
-            results.append(temp_lst)
-            temp_lst = []
-        else:
-            temp_lst.append(i)
+            # To separate each directory output for presentation
+            # purposes, we're going to create sublists with only
+            # the content of one directory. As we know that
+            # there's a blank line separating each directory,
+            # we'll create a final and a temporary list. The
+            # temporary one will be appending all the entries it
+            # finds. If it finds a line that is only a linebreak,
+            # the final list will append all content of the temporary.
+            # Wich is immediately emptied of previous content, so it
+            # can start the process of finding the new folder entry.
+            for i in dirs:
+                if i == "\n":
+                    temp_lst.append(i)
+                    results.append(temp_lst)
+                    temp_lst = []
+                else:
+                    temp_lst.append(i)
 
-    console.print(Padding("[bold]LOCATIONS[/]", (3, 10, 0, 10)), justify="center")
-    for idx, r in enumerate(results):
-        # 'results' is a list of lists. One for each location. That's why we
-        # have this additional step.
-        for i, t in enumerate(r):
-            # This defines the formatting for the line that has the path.
-            if t.startswith("/"):
-                console.print(
-                    Padding(
-                        f"[bold #A0C49D][link=file://{t.strip()}]\n{t.strip()}[/link][/]",
-                        (0, 10, 0, 10),
-                    )
-                )
-            # This corresponds to the file lines.
-            if t.startswith("-r"):
-                console.print(Padding(f"[bold]\[{idx}{i}]   {t.strip()}[/]", (0, 10, 0, 10)))
-            # And this is a 'total' line, that I don't know what it does, and tried
-            # very hard to get rid of it. But it seemed to only make maatters worst.
-            # So there it is.
-            if t.startswith("total"):
-                console.print(Padding(f"[bold]{t.strip()}[/]", (0, 10, 0, 10)))
-    print("\n\n")
+            console.print(Padding("[bold]LOCATIONS[/]", (3, 10, 0, 10)), justify="center")
+            for idx, r in enumerate(results):
+                # 'results' is a list of lists. One for each location. That's why we
+                # have this additional step.
+                for i, t in enumerate(r):
+                    # This defines the formatting for the line that has the path.
+                    if t.startswith("/"):
+                        console.print(
+                            Padding(
+                                f"[bold #A0C49D][link=file://{t.strip()}]\n{t.strip()}[/link][/]",
+                                (0, 10, 0, 10),
+                            )
+                        )
+                    # This corresponds to the file lines.
+                    if t.startswith("-r"):
+                        console.print(Padding(f"[bold]\[{idx}{i}]   {t.strip()}[/]", (0, 10, 0, 10)))
+                    # And this is a 'total' line, that I don't know what it does, and tried
+                    # very hard to get rid of it. But it seemed to only make maatters worst.
+                    # So there it is.
+                    if t.startswith("total"):
+                        console.print(Padding(f"[bold]{t.strip()}[/]", (0, 10, 0, 10)))
+            print("\n\n")
 
-    open_dirs_files(results)
+            open_dirs_files(results)
 
-    os.remove("dirpath.txt")
-    os.remove("idlocs.bin")
-    os.remove("choice.bin")
-    os.remove("visits.bin")
+            os.remove("dirpath.txt")
+            os.remove("idlocs.bin")
+            os.remove("choice.bin")
+            os.remove("visits.bin")
 
 
 def location_main(folder):

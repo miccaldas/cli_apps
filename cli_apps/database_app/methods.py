@@ -13,17 +13,16 @@ from pyfzf.pyfzf import FzfPrompt
 from rich import print
 from rich.console import Console
 from rich.padding import Padding
+from snoop import pp
 
 from show_info import show_info
 
-# from snoop import pp
+
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
-
-
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
 
 
 # @snoop
@@ -53,7 +52,7 @@ def print_template(text, style="bold #AAC8A7"):
     console.print(Padding(f"[{style}][+] - {text}[/]", (0, 3, 0, 10)))
 
 
-@snoop
+# @snoop
 def checkinfo():
     """
     We'll check what 'bin' files there are,
@@ -70,7 +69,7 @@ if __name__ == "__main__":
     checkinfo()
 
 
-@snoop
+# @snoop
 def aggregate_info():
     """
     Collects and merges file contents produced by 'search'.
@@ -88,10 +87,7 @@ def aggregate_info():
                     allinf += [i]
     for t in allinf:
         print(t)
-    allinfo = [
-        (a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j)
-        for a, b, c, d, e, f, g, h, i, j in allinf
-    ]
+    allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j) for a, b, c, d, e, f, g, h, i, j in allinf]
 
     with open("allinfo.bin", "wb") as f:
         pickle.dump(allinfo, f)
@@ -111,7 +107,7 @@ def subcall(shellcmd, flnm, fldr, flnmid):
     subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
 
 
-# @snoop
+@snoop
 def yay_info(srch):
     """
     Module to extract information on
@@ -135,14 +131,14 @@ def yay_info(srch):
     # with a list of tuples in string format as its first element, and
     # the code 'ai' as its second.
     if srch[-1] == "ai":
-        fldr = "data_files"
+        fldr = "data_files/"
         datapth = f"{os.getcwd()}/{fldr}"
         flnmid = "_yay"
 
         # This deletes the contents of 'data_files'. This is to ensure
         # there's no contamination between requests, whilst giving time
         # enough to play with the data. Until a new request comes in.
-        cmd = "/usr/bin/trash-put data_files/*"
+        cmd = f"/usr/bin/trash-put {datapth}*"
         subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
 
         # In this case, 'srch' will be two member tuple; the first, a
@@ -178,13 +174,13 @@ def yay_info(srch):
                 flnm = f"python-{selection[1]}"
     # 'srch' originating in 'required_by', will have a last entry called 'req'.
     if srch[-1] == "req":
-        fldr = "required_files"
+        fldr = "required_files/"
         datapth = f"{os.getcwd()}/{fldr}"
 
         # This deletes the contents of 'data_files'. This is to ensure
         # there's no contamination between requests, whilst giving time
         # enough to play with the data. Until a new request comes in.
-        cmd = "/usr/bin/trash-put required_files/*"
+        cmd = f"/usr/bin/trash-put {datapth}*"
         subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
 
         # This makes it so we won't loop through the 'req' entry.
@@ -211,13 +207,13 @@ if __name__ == "__main__":
     yay_info()
 
 
-# @snoop
+@snoop
 def pip_info(srch):
     """
     Module to extract information on
     packages from 'pip'.
     """
-    shellcmd = "pip show"
+    shellcmd = "pip -qq show"
     # If 'srch' comes from 'srch_allinfo', will need to evaluate the
     # output, as 'fzf' presents a list as a string. To id it,
     # 'srch_allinfo' adds, at the end of 'srch', the string 'ai'.
@@ -324,22 +320,20 @@ def alternative_presentations(tag="ai"):
     """
 
     if tag == "ai":
-        required = input_decision(
-            "Do you want to explore one of this packages dependecies?[y/n] "
-        )
+        required = input_decision("Do you want to explore one of these package dependecies?[y/n] ")
         if required == "y":
             alternative = "required_by"
-        ailocation = input_decision(
-            "Do you want to see more on the location of these files?[y/n] "
-        )
+        ailocation = input_decision("Do you want to see more on the location of these files?[y/n] ")
         if ailocation == "y":
             alternative = "location_main"
         if required == "y" and ailocation == "y":
             alternative = ("required_by", "location_main")
+        ext = input_decision("Do you want to exit the session?[y/n] ")
+        if ext == "y":
+            alternative = "exit"
+
     if tag == "req":
-        location = input_decision(
-            "Do you want to see more on the location of these files?[y/n] "
-        )
+        location = input_decision("Do you want to see more on the location of these files?[y/n] ")
         if location == "y":
             alternative == "location"
 
