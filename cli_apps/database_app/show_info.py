@@ -10,7 +10,6 @@ import subprocess
 from rich import print
 from rich.console import Console
 from rich.padding import Padding
-from rich.panel import Panel
 
 # from snoop import pp
 
@@ -30,24 +29,24 @@ def show_info(folder, title):
     their location, so we can show their content. We use
     Rich to get a better look.
     """
+    console = Console()
+
     cwd = os.getcwd()
     data = f"{cwd}/{folder}"
     file_names = os.listdir(data)
 
-    # List to house the links that'll create based on 'file_names'. We're
-    # going to trust that the user knows that the files are are there and
-    # make only a test, further on, to ascertain that the file is there or
-    # not.
+    # List to house the links that'll create based on 'file_names'.
     lnks = []
     for name in file_names:
         lnk = f"{data}/{name}"
         lnks.append(lnk)
 
     for lnk in lnks:
-        # This is the test. We check for file size, if it's zero, we pop it
+        # Checking for file size, if it's zero, we pop it
         # out of the list.:
         stt = os.stat(lnk)
         if stt.st_size == 0:
+            console.print(Padding(f"[bold #E48586]The file {lnk} as 0 size. Deleted.", (3, 10, 0, 10)))
             idx = lnks.index(lnk)
             lnks.pop(idx)
 
@@ -65,7 +64,6 @@ def show_info(folder, title):
             # absorbs the elements of the second one.
             fullcont += content
 
-    console = Console()
     console.print(
         Padding(f"[bold]{title}[/]", (3, 10, 0, 10)),
         justify="center",

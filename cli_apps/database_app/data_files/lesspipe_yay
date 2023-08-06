@@ -1,0 +1,39 @@
+Name            : lesspipe
+Version         : 2.07-1
+Description     : an input filter for the pager less
+Architecture    : any
+URL             : https://www-zeuthen.desy.de/~friebel/unix/lesspipe.html
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : less  perl
+Optional Deps   : rpmextract: support for rpm files
+                  fastjar: support for jar files
+                  unzip: support for zip files [installed]
+                  unrar: support for rar files [installed]
+                  p7zip: support for 7za files [installed]
+                  cabextract: support for cab files [installed]
+                  cdrtools: support for iso files
+                  html2text: support for html files [installed]
+                  ghostscript: support for ps files [installed]
+                  djvulibre: support for DjVu files
+                  odt2txt: support for OpenDocument files
+                  antiword: support for word file
+                  catdoc: support for word file
+                  pandoc: support for word file
+                  libreoffice-fresh: support for MS Office files [installed]
+                  unrtf: support for rtf file
+                  mediainfo: support for mp4 file [installed]
+                  imagemagick: support for some image file [installed]
+Required By     : None
+Optional For    : source-highlight
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 139.99 KiB
+Packager        : Konstantin Gizdov <arch@kge.pw>
+Build Date      : Thu 26 Jan 2023 12:42:47 AM WET
+Install Date    : Sat 28 Jan 2023 09:45:32 AM WET
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+

@@ -4,9 +4,6 @@ and gets the user there.
 """
 import os
 import pickle
-import subprocess
-from contextlib import suppress
-from time import sleep
 
 # import snoop
 from rich.console import Console
@@ -14,7 +11,6 @@ from rich.padding import Padding
 
 from methods import input_decision, print_template
 from required_by import choice_processing
-from show_info import show_info
 
 # from snoop import pp
 
@@ -54,8 +50,8 @@ def package_location(folder):
                         # Creates a tuple with the package name and a full link to its location.
                         locations.append((f"{pref}", f"{loc}/{nm}"))
 
-    # We'll need to have a nemurated version of 'locations' because, two functions ahed, there'll
-    # be a need to identify location paths by their index number.
+    # We'll need to have a numeric version of 'locations' because, two functions ahead,
+    # there'll be a need to identify location paths by their index number.
     idlocs = enumerate(locations)
     with open("idlocs.bin", "wb") as d:
         pickle.dump(idlocs, d)
@@ -70,15 +66,23 @@ def package_location(folder):
             console.print(Padding(f"\n[bold]{pth[0].upper()}[/]", (0, 10, 0, 10)))
             console.print(Padding(f"[bold]\[{idx}][/] - [bold]{pth[1]}[/]", (0, 10, 0, 10)))
         print("\n")
-        visits = input_decision("Choose a number(s) to visit. Press 'Enter' to leave:")
-        with open("visits.bin", "wb") as f:
-            pickle.dump(visits, f)
-        print("\n\n")
+        visits = input_decision("Choose a number(s) to visit. Press Enter to leave:")
+        if visits != "":
+            with open("visits.bin", "wb") as f:
+                pickle.dump(visits, f)
+            print("\n\n")
+            # These return statements are read in the loop management module, and if
+            # negative, it'll break the loop.
+            return "y"
+        else:
+            return "n"
     else:
-        print_template(f"We couldn't find any information regarding Locations for these files: {reqfiles}")
-        sleep(0.3)
-        with suppress(SystemError, FileNotFoundError):
-            raise SystemError
+        console.print(
+            "[bold #E48586]          We couldn't find any information regarding Locations for these files: ",
+            *reqfiles,
+        )
+        print("\n")
+        return "n"
 
 
 # @snoop
@@ -87,55 +91,61 @@ def dislocation():
     Where we open a file or, in case it's
     a folder, just see its contents.
     """
-    filelst = os.listdir(os.getcwd())
+    console = Console()
 
     with open("idlocs.bin", "rb") as g:
         idlocs = pickle.load(g)
 
+    # 'visits.bin' it's one string with several numbers inside.
+    # we want to turn it to a list of integers. First we pass
+    # it through choice_processing() that turns it to a list of
+    # strings.
     choice_processing("visits.bin")
     # 'choice.bin' is the outpu of "choice_processing"
-
+    # 'filelst' has to be after the choice_processing() call, ot
+    # it won't have the newly created 'chocie.bin'.
+    filelst = os.listdir(os.getcwd())
     if "choice.bin" in filelst:
         with open("choice.bin", "rb") as v:
             choice = pickle.load(v)
 
-    chc = [int(i) for i in choice]
-
-    # 't' is composed of package name and path. We only need the latter.
-    pths = [t[1] for i, t in idlocs if i in chc]
+    # The pickle results come as strings. We need to convert them.
+    # The problem with this is if we transform '0' to integer, it's
+    # interpreted as a null value, and returns an error saying that
+    # the variable 'choice' is not set. This is a workaround.
+    if choice != "0":
+        chc = [int(i) for i in choice]
+        # 't' is composed of package name and path. We only need the latter.
+        pths = [t[1] for i, t in idlocs if i in chc]
+    else:
+        pths = [t[1] for i, t in idlocs if str(i) == "0"]
 
     for pth in pths:
         if os.path.exists(pth):
             if os.path.isfile(pth):
-                cmd = f"vim {pth}"
-                subprocess.run(cmd, shell=True)
+                os.system(f"vim {pth}")
             if os.path.isdir(pth):
-                # If I used the standard way of opening a with statement
-                # and putting the write orders there, I couldn't put the
-                # paths to the locations atop of the 'ls -l' output. It
-                # turns out that, ven if you put it first, a write order
-                # inside a 'with' statement, in comparison with a
-                # substring command in the same place, will always run
-                # after the subprocess one. I imagine that the write order
-                # is only given when closing the statement. So, I had to
-                # turn to this very cumbersome method of assuring that
-                # things went inthe desired order.
+                # If I used the standard way of opening a file, I couldn't put the
+                # paths to the locations atop of the 'ls -l' output. It turns out
+                # that, even if you put it first, a write() order inside a context
+                # manager, in comparison with a substring() command in the same place,
+                # will always run after subprocess. I imagine that the write order is
+                # only given when closing the statement.
+                # So, I had to turn to this, very cumbersome, method, to make sure that
+                # things printed in the desired order.
                 p = open("dirpath.txt", "a")
                 p.write(f"{pth}")
                 p.close()
                 v = open("dirpath.txt", "a")
                 v.write("\n")
                 v.close()
-                cmd = f"ls -l {pth} >> dirpath.txt"
-                subprocess.run(cmd, shell=True)
+                os.system(f"ls -l {pth} >> dirpath.txt")
                 u = open("dirpath.txt", "a")
                 u.write("\n")
                 u.close()
         else:
-            print_template(f"The path {pth} does not exist.")
-            sleep(0.3)
-            with suppress(SystemError, FileNotFoundError):
-                raise SystemError
+            console.print(f"[bold #E48586]    CThe path {pth} does not exist.")
+            raise SystemExit
 
 
 # @snoop
@@ -145,59 +155,61 @@ def open_dirs_files(result):
     the files presented in 'dirpath.txt'.
     If yes, it opens it in a editor.
     """
-    fil = input_decision("choose a file to open: ")
+    fil = input_decision("Choose a file to open:")
     fllst = []
     paths = []
 
-    # 'fil returns a string. If it has spaces in it, it's beccause
-    # it's a list.
-    if " " in fil:
-        # In the 'required_by' module, I created a function,
-        # 'choice_processing, 'that turns strings with entries
-        # separated by spaces, in lists of strings. It receives
-        # a binary file and outputs another.
-        with open("fil.bin", "wb") as f:
-            pickle.dump(fil, f)
-        choice_processing("fil.bin")
-        with open("choice.bin", "rb") as g:
-            fllst = pickle.load(g)
-    # The id's in the presentation are structured in the following
-    # way, each location path has its own enumerated is, say: 0, 1,
-    # 2, for example, and the each line representing a file in said
-    # location has an id that is composed of, first, the id of the
-    # location, and second, its own id inside the list of files in
-    # said path. Let's say we have a location that is the second one
-    # in the location list. That means that its id will be '1'. Let's
-    # say that a file is insode this location and it's, also, the
-    # second file on its list. That'll mean that its id will '11'.One
-    # for its location id, and One for its own.
-    for fl in fllst:
-        result_idx = int(fl[0])
-        sublst_idx = int(fl[1:])
-        # With these two numbers we can reconstruct the id's of the original
-        # list, and access them with ease.
-        # 'chc' will be a line like this:
-        # "-rw-r--r-- 1 mic mic 18560 May 20 18:21 cookies.py"
-        # We just want to file name, so we split the string in spaces and
-        # collect the last one.
-        chc = result[result_idx][sublst_idx]
-        splt = chc.split(" ")
-        file = splt[-1].strip()
-        # To facilitate the presentation of data, the lists were not stripped
-        # of linebreaks. We do that here.
-        path = f"{result[result_idx][0].strip()}/{file}"
-        paths.append(path)
-        for p in paths:
-            subprocess.run(f"vim {p}", shell=True)
-    # In case of being just one choice.
-    if " " not in fil:
-        result_idx = int(fil[0])
-        sublst_idx = int(fil[1:])
-        chc = result[result_idx][sublst_idx]
-        splt = chc.split(" ")
-        file = splt[-1].strip()
-        path = f"{result[result_idx][0].strip()}/{file}"
-        subprocess.run(f"sudo vim {path}", shell=True)
+    if fil != "":
+        # 'fil returns a string. If it has spaces in it, it's beccause
+        # it's a list.
+        if " " in fil:
+            # In the 'required_by' module, I created a function,
+            # 'choice_processing, 'that turns strings with entries
+            # separated by spaces, in lists of strings. It receives
+            # a binary file and outputs another.
+            with open("fil.bin", "wb") as f:
+                pickle.dump(fil, f)
+            choice_processing("fil.bin")
+            with open("choice.bin", "rb") as g:
+                fllst = pickle.load(g)
+        # The id's in the presentation are structured in the following
+        # way, each location path is indexed,, and the each line
+        # representing a file in said location has an id composed of,
+        # first, the location id, second, its own id inside the list of
+        # files in the path. Let's say we have a location that is the second
+        # in the location list. That means that its id will be '1', as we're
+        # counting from '0'. Let's choose a file, in this location, that's,
+        # also, second on its list. That'll mean that its id will '11'.
+        # One for its location id,  and One for its own.
+        for fl in fllst:
+            result_idx = int(fl[0])
+            sublst_idx = int(fl[1:])
+            # With these two numbers we can reconstruct the id's of the original
+            # list, and access them with ease.
+            # 'chc' will be a line like this:
+            # "-rw-r--r-- 1 mic mic 18560 May 20 18:21 cookies.py"
+            # We just want the file name, so we split the string in spaces and
+            # collect the last one.
+            chc = result[result_idx][sublst_idx]
+            splt = chc.split(" ")
+            file = splt[-1].strip()
+            # To facilitate the presentation of data, the lists were not stripped
+            # of linebreaks. We do that here.
+            path = f"{result[result_idx][0].strip()}/{file}"
+            paths.append(path)
+            for p in paths:
+                os.system(f"vim {p}")
+        # In case of being just one choice.
+        if " " not in fil:
+            result_idx = int(fil[0])
+            sublst_idx = int(fil[1:])
+            chc = result[result_idx][sublst_idx]
+            splt = chc.split(" ")
+            file = splt[-1].strip()
+            path = f"{result[result_idx][0].strip()}/{file}"
+            os.system(f"vim {path}")
+    else:
+        raise SystemExit
 
 
 # @snoop
@@ -221,9 +233,9 @@ def show_dirpath():
             # we'll create a final and a temporary list. The
             # temporary one will be appending all the entries it
             # finds. If it finds a line that is only a linebreak,
-            # the final list will append all content of the temporary.
-            # Wich is immediately emptied of previous content, so it
-            # can start the process of finding the new folder entry.
+            # the final list will append all content of the
+            # temporary, wich is immediately emptied of previous
+            # content, when starting a new loop..
             for i in dirs:
                 if i == "\n":
                     temp_lst.append(i)
@@ -245,7 +257,7 @@ def show_dirpath():
                                 (0, 10, 0, 10),
                             )
                         )
-                    # This corresponds to the file lines.
+                    # This corresponds to the file name lines.
                     if t.startswith("-r"):
                         console.print(Padding(f"[bold]\[{idx}{i}]   {t.strip()}[/]", (0, 10, 0, 10)))
                     # And this is a 'total' line, that I don't know what it does, and tried
@@ -261,16 +273,3 @@ def show_dirpath():
             os.remove("idlocs.bin")
             os.remove("choice.bin")
             os.remove("visits.bin")
-
-
-def location_main(folder):
-    """
-    Calls all other functions.
-    """
-    package_location(folder)
-    dislocation()
-    show_dirpath()
-
-
-if __name__ == "__main__":
-    location_main()

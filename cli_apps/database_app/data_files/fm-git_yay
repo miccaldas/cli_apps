@@ -1,0 +1,22 @@
+Name            : fm-git
+Version         : v0.15.10.r3.g4ef8432-1
+Description     : A terminal based file manager
+Architecture    : x86_64
+URL             : https://github.com/knipferrc/fm
+Licenses        : MIT
+Groups          : None
+Provides        : fm
+Depends On      : None
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : fm
+Replaces        : None
+Installed Size  : 15.80 MiB
+Packager        : Unknown Packager
+Build Date      : Thu 22 Jun 2023 01:34:49 PM WEST
+Install Date    : Thu 22 Jun 2023 01:35:13 PM WEST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : None
+

@@ -9,8 +9,8 @@ import pickle
 # from snoop import pp
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
 # snoop.install(watch_extras=[type_watch])

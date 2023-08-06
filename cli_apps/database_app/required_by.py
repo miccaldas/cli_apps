@@ -2,30 +2,29 @@
 This modules probes the packages that depend on given package.
 A lot of times I don't don't know if a dependecy is a live
 event or a fossil of a bygone era. This will help bring clarity
-to these questions. This won't be so directed to immediate
-consumption, we created a directory to house the data, that the
-user can check any time. It'll be a more mediated experience.
+to these questions.
 """
 import os
 import pickle
 
-import snoop
+# import snoop
 from click import style
 from rich.console import Console
 from rich.padding import Padding
-from snoop import pp
 
-from methods import delete_all_files, pip_info, print_template, yay_info
+from methods import pip_info, print_template, yay_info
 
-
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# from snoop import pp
 
 
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-@snoop
+# snoop.install(watch_extras=[type_watch])
+
+
+# @snoop
 def get_lst(folder):
     """
     Iterates through the files in 'folder'
@@ -34,12 +33,12 @@ def get_lst(folder):
     it adds the package name and the dependecy
     name in a tuple and stores it in a list.
     """
-    # Retrieves the information asked in the command line.
     cwd = os.getcwd()
+    console = Console()
 
     # I'm putting this here in case if get_lst() doesn't
     # find dependecies, there'll be no 'spltlst.bin' for
-    # show(), and if it does a search for the file in the
+    # show(). As it does a search for the file in the
     # beginning, we get to leave graciously.
     if "spltlst.bin" in os.listdir(cwd):
         os.remove(f"{cwd}/spltlst.bin")
@@ -73,14 +72,15 @@ def get_lst(folder):
     cleanlst = [(a, i.strip()) for a, i in lst if i != "None\n"]
 
     # If nothing's there, it'll be mostly, for not having found dependecies.
-    # We delete the files of 'data_files' and raise systemexit().
+    # We delete the files of 'data_files' and return 'y'. This value wiçç be
+    # picked up in the 'use_cases' module, and they'll break the loop.
     if cleanlst == []:
-        print_template("The chosen packages are required by none.")
+        console.print("T[bold #E48586]          The chosen packages are required by none.")
         return "n"
-    # If we find dependencies, we look for empty spaces in the strings we
-    # collected. If there's empty spaces it's because its a list of dependecies.
-    # We split the string so as to create a list.
     else:
+        # If we find dependencies, we look for empty spaces in the strings we
+        # collected. If there's empty spaces it's because its a list of dependecies.
+        # We split the string so as to create a list.
         spltlst = []
         for tup in cleanlst:
             if ", " in tup[1]:
@@ -102,21 +102,21 @@ def get_lst(folder):
         return "y"
 
 
-@snoop
+# @snoop
 def show():
     """
     Visualizes the results.
-    We use used mostly *Rich* to views results,
-    except in the *input* method. Although 'rich'
-    has their own implementation of 'input', it
-    shows the prompt one line below the text and
-    pressed to the border of the screen.
+    We use mostly *Rich* to views results, except
+    in the *input* method. Although 'rich' has
+    their own implementation of 'input', it shows
+    the prompt, one line below the text and pressed
+    to the border of the screen.
     """
     if "spltlst.bin" in os.listdir(os.getcwd()):
         with open("spltlst.bin", "rb") as t:
             deps = pickle.load(t)
 
-        # This list will collect the id'd version of 'deps' this module will create.
+        # 'numbered_deps' will collect the id'd version of 'deps' this module will create.
         numbered_deps = []
         console = Console()
         console.print(Padding("[bold #E9FFC2]DEPENDENCIES[/]", (3, 10, 0, 10)), justify="center")
@@ -143,22 +143,21 @@ def show():
         print("\n")
         choice_deps = input(
             style(
-                "          Choose the dependecies you want to see. Press 'q' to quit. ",
+                "          Choose the dependecies you want to see. Press Enter to quit. ",
                 bold=True,
                 fg=(160, 196, 157),
             )
         )
-        console.print("\n\n")
+        console.print("\n")
 
-        if choice_deps != "" or choice_deps != "q":
+        if choice_deps != "":
             with open("choice_deps.bin", "wb") as g:
                 pickle.dump(choice_deps, g)
-
             with open("numdeps.bin", "wb") as f:
                 pickle.dump(numbered_deps, f)
 
 
-@snoop
+# @snoop
 def choice_processing(binary):
     """
     As "choice_deps" comes in as a string, that may contain one
@@ -166,7 +165,7 @@ def choice_processing(binary):
     in several ways, will try to predict some of them, and handle
     the input so to have a list of dependecies in the end.
     """
-    try:
+    if f"{binary}" in os.listdir(os.getcwd()):
         with open(f"{binary}", "rb") as f:
             choices = pickle.load(f)
 
@@ -181,19 +180,18 @@ def choice_processing(binary):
 
         with open("choice.bin", "wb") as g:
             pickle.dump(choice, g)
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        raise SystemExit
+    else:
+        console = Console()
+        console.print(f"[bold #E48586]    Couldn't find the {binary} file.")
 
 
-@snoop
+# @snoop
 def collect_deps_info():
     """
     Collects information on the chosen dependendecies.
     """
     with open("numdeps.bin", "rb") as f:
         numdeps = pickle.load(f)
-
     with open("choice.bin", "rb") as g:
         choice = pickle.load(g)
 
