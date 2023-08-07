@@ -3,6 +3,7 @@ Module Docstring
 """
 import os
 import pickle
+from dotenv import load_dotenv
 
 # import snoop
 from cli_apps.database_app.methods import input_decision
@@ -17,6 +18,7 @@ from mngmnt.sql_expression import sql_expression
 
 
 # snoop.install(watch_extras=[type_watch])
+load_dotenv()
 
 
 # @snoop
@@ -24,27 +26,29 @@ def names_mngmnt(names):
     """
     Calls all functions regarding names.
     """
+    da = os.getenv("da")
+
     if names:
-        with open("names.bin", "wb") as f:
+        with open(f"{da}names.bin", "wb") as f:
             pickle.dump(names, f)
 
-        sql_expression("names.bin", "nqy.bin")
-        get("nqy.bin", "nlst.bin")
+        sql_expression(f"{da}names.bin", f"{da}nqy.bin")
+        get(f"{da}nqy.bin", f"{da}nlst.bin")
     else:
         question = input_decision("Do you want to see a list of names?[y/n]? ")
         if question == "y":
-            column_content("SELECT name FROM cli_apps", "allnm.bin")
+            column_content("SELECT name FROM cli_apps", f"{da}allnm.bin")
             show_column(
-                "allnm.bin",
+                f"{da}allnm.bin",
                 "Choose Some Names!",
-                "names.bin",
+                f"{da}names.bin",
             )
-            sql_expression("names.bin", "nqy.bin")
-            get("nqy.bin", "nlst.bin")
+            sql_expression(f"{da}names.bin", f"{da}nqy.bin")
+            get(f"{da}nqy.bin", f"{da}nlst.bin")
 
-            os.remove("names.bin")
-            os.remove("nqy.bin")
-            os.remove("allnm.bin")
+            os.remove(f"{da}names.bin")
+            os.remove(f"{da}nqy.bin")
+            os.remove(f"{da}allnm.bin")
 
 
 if __name__ == "__main__":

@@ -3,20 +3,23 @@ From arguments and options of the cli request,
 we're going to create sql expressions to query
 the database.
 """
+import os
 import pickle
 
-# import snoop
-# from snoop import pp
+import snoop
+from dotenv import load_dotenv
+from snoop import pp
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
+load_dotenv()
 
 
-# @snoop
+@snoop
 def sql_expression(in_binary, out_binary):
     """
     We'll see what content there are
@@ -24,17 +27,21 @@ def sql_expression(in_binary, out_binary):
     and turn them to a sql expression. that
     we'll pickle.
     """
+    da = os.getenv("DA")
+
     with open(f"{in_binary}", "rb") as f:
         asks = pickle.load(f)
 
     collection = []
-    if in_binary == "queries.bin":
-        qry = "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
-    if in_binary == "keywords.bin":
+    if in_binary == f"{da}queries.bin":
+        qry = (
+            "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
+        )
+    if in_binary == f"{da}keywords.bin":
         qry = 'SELECT * FROM cli_apps WHERE t1 = "dummy" OR t2 = "dummy" OR t3 = "dummy" OR t4 = "dummy"'
-    if in_binary == "ids.bin":
+    if in_binary == f"{da}ids.bin":
         qry = "SELECT * FROM cli_apps WHERE id = dummy"
-    if in_binary == "names.bin":
+    if in_binary == f"{da}names.bin":
         qry = "SELECT * FROM cli_apps WHERE name = 'dummy'"
 
     for ask in asks:

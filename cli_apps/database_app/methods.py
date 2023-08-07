@@ -7,23 +7,24 @@ import pickle
 import subprocess
 from datetime import datetime
 
-# import snoop
+import snoop
 from click import style
+from dotenv import load_dotenv
 from pyfzf.pyfzf import FzfPrompt
 from rich import print
 from rich.console import Console
 from rich.padding import Padding
+from snoop import pp
 
 from show_info import show_info
 
-# from snoop import pp
+
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
-
-
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
+load_dotenv()
 
 
 # @snoop
@@ -54,13 +55,15 @@ def print_template(text, style="bold #AAC8A7"):
     console.print(Padding(f"[{style}][+] - {text}[/]", (0, 3, 0, 10)))
 
 
-# @snoop
+@snoop
 def checkinfo():
     """
     We'll check what 'bin' files there are,
     and make a list of their names.
     """
-    filelst = os.listdir(os.getcwd())
+    da = os.getenv("DA")
+
+    filelst = os.listdir(da)
     srch_results = ["qlst.bin", "klst.bin", "ilst.bin", "nlst.bin"]
     results = [i for i in srch_results if i in filelst]
 
@@ -71,26 +74,31 @@ if __name__ == "__main__":
     checkinfo()
 
 
-# @snoop
+@snoop
 def aggregate_info():
     """
     Collects and merges file contents produced by 'search'.
     """
     fls = checkinfo()
     allinf = []
+    da = os.getenv("DA")
 
     for f in fls:
-        with open(f, "rb") as fl:
+        with open(f"{da}{f}", "rb") as fl:
             partial = pickle.load(fl)
             if partial != [] and partial != "":
                 for i in partial:
                     # This code allows to merge to an existing list,
                     # elements of another.
                     allinf += [i]
-    allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j) for a, b, c, d, e, f, g, h, i, j in allinf]
+                allinfo = [(a, b, c, d.strftime("%d/%m/%Y"), e, f, g, h, i, j) for a, b, c, d, e, f, g, h, i, j in allinf]
 
-    with open("allinfo.bin", "wb") as f:
-        pickle.dump(allinfo, f)
+                with open(f"{da}allinfo.bin", "wb") as f:
+                    pickle.dump(allinfo, f)
+
+    if allinfo == []:
+        print_template("aggregate_info() couldn't find content on the available files.")
+        raise SystemExit
 
 
 if __name__ == "__main__":
@@ -103,8 +111,10 @@ def subcall(shellcmd, flnm, fldr, flnmid, stderr):
     Makes 'subprocess' calls for 'yay_info'
     and 'pip_info'. To simplify the code.
     """
+    da = os.getenv("DA")
+
     cmd = f"{shellcmd} {flnm} > {fldr}/{flnm}{flnmid} {stderr}"
-    subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
+    subprocess.run(cmd, cwd=da, shell=True)
 
 
 # @snoop
@@ -119,6 +129,8 @@ def yay_info(srch):
     comes from 'required_by', it could
     a string or a list of strings.
     """
+    da = os.getenv("DA")
+
     shellcmd = "yay -Qi"
     # This sends stderr output to a file. The initial reason for this was
     # Pip's penchant for outputing an enormous qunatity of warning messages
@@ -135,13 +147,13 @@ def yay_info(srch):
     # the code 'ai' as its second.
     if srch[-1] == "ai":
         fldr = "data_files"
-        datapth = f"{os.getcwd()}/{fldr}"
+        datapth = f"{da}{fldr}"
         flnmid = "_yay"
         # This deletes the contents of 'data_files'. This is to ensure
         # there's no contamination between requests, whilst giving time
         # enough to play with the data. Until a new request comes in.
         cmd = f"/usr/bin/trash-put {datapth}/* 2> /dev/null"
-        subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
+        subprocess.run(cmd, shell=True)
         # In this case, 'srch' will be two member tuple; the first, a
         # string with information, the second, a code to identify its
         # provenance. We only need the first.
@@ -176,12 +188,12 @@ def yay_info(srch):
     # 'srch' originating in 'required_by', will have a last entry called 'req'.
     if srch[-1] == "req":
         fldr = "required_files"
-        datapth = f"{os.getcwd()}/{fldr}"
+        datapth = f"{da}{fldr}"
         # This deletes the contents of 'required_files'. This is to ensure
         # there's no contamination between requests, whilst giving time
         # enough time to play with the data. Until a new request comes in.
         cmd = f"/usr/bin/trash-put {datapth}/* 2> /dev/null"
-        subprocess.run(cmd, cwd=f"{os.getcwd()}", shell=True)
+        subprocess.run(cmd, shell=True)
         # This makes it so we won't loop through the 'req' entry.
         for s in srch[:-1]:
             # For notess on how 'flnm' is defined, see above comments
@@ -245,15 +257,16 @@ if __name__ == "__main__":
     pip_info()
 
 
-# @snoop
+@snoop
 def srch_allinfo():
     """
     Searches 'allinfo' with fzf and, if needed,
     collects user selections.
     """
+    da = os.getenv("DA")
     fzf = FzfPrompt()
 
-    with open("allinfo.bin", "rb") as f:
+    with open(f"{da}allinfo.bin", "rb") as f:
         allinfo = pickle.load(f)
 
     sr = fzf.prompt(allinfo)
@@ -272,17 +285,19 @@ def delete_all_files():
     """
     Deletes all binary files in present directory and 'mngmnt'.
     """
+    da = os.getenv("DA")
+    mn = os.getenv("MN")
 
-    cwd_fls = os.listdir(f"{os.getcwd()}")
-    mngmnt_fls = os.listdir(f"{os.getcwd()}/mngmnt")
+    cwd_fls = os.listdir(da)
+    mngmnt_fls = os.listdir(mn)
     cwd_bins = [i for i in cwd_fls if i.endswith(".bin")]
     mngmnt_bins = [i for i in mngmnt_fls if i.endswith(".bin")]
     if cwd_bins != []:
         for b in cwd_bins:
-            os.remove(f"{os.getcwd()}/{b}")
+            os.remove(f"{da}{b}")
     if mngmnt_bins != []:
         for b in mngmnt_bins:
-            os.remove(f"{os.getcwd()}/mngmnt/{b}")
+            os.remove(f"{mn}{b}")
 
 
 if __name__ == "__main__":

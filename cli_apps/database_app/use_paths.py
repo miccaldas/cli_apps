@@ -11,19 +11,21 @@ like it to be limitless.
 """
 import os
 
-# import snoop
-# from snoop import pp
+import snoop
+from dotenv import load_dotenv
+from snoop import pp
 
 from location import dislocation, package_location, show_dirpath
 from methods import loc_decision, pip_info, req_decision, yay_info
 from required_by import choice_processing, collect_deps_info, get_lst, show
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
+load_dotenv()
 
 
 # @snoop
@@ -38,17 +40,19 @@ def required_loop():
     answer the questions or, by the program's
     will, if there's a problem with the code.
     """
+    da = os.getenv("DA")
+
     # The first call to dependencies is done when
     # there's only package files in 'data_files'.
     # After that is always in 'required_files'. We
     # needed to have a first look at the files still
     # in 'data_files'. Thatt's the reason why there's
     # a get_lst() call before the loop.
-    out = get_lst("data_files")
+    out = get_lst(f"{da}data_files")
     if out == "y":
         for i in range(10):
             show()
-            choice_processing("choice_deps.bin")
+            choice_processing(f"{da}choice_deps.bin")
             srch = collect_deps_info()
             yay_info(srch)
             pip_info(srch)
@@ -58,7 +62,7 @@ def required_loop():
             # returns 'n', if everything went correctly, it outputs 'y'.
             # This way the flow is controled when designing the loop,
             # making it easier to change when needed.
-            gl = get_lst("required_files")
+            gl = get_lst(f"{da}required_files")
             if gl != "y":
                 break
 
@@ -70,14 +74,14 @@ def required_loop():
     # the last information is in 'required_files'. So we set the
     # 'location_loop' location to it.
     if loc == "y":
-        location_loop("required_files")
+        location_loop(f"{da}required_files")
 
 
 if __name__ == "__main__":
     required_loop()
 
 
-# @snoop
+@snoop
 def location_loop(folder):
     """
     Loop for the 'location' module. Here,

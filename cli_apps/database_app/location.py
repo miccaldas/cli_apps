@@ -5,31 +5,34 @@ and gets the user there.
 import os
 import pickle
 
-# import snoop
+import snoop
+from dotenv import load_dotenv
 from rich.console import Console
 from rich.padding import Padding
+from snoop import pp
 
 from methods import input_decision, print_template
 from required_by import choice_processing
 
-# from snoop import pp
+
+def type_watch(source, value):
+    return f"type({source})", type(value)
 
 
-# def type_watch(source, value):
-#     return f"type({source})", type(value)
+snoop.install(watch_extras=[type_watch])
+load_dotenv()
 
 
-# snoop.install(watch_extras=[type_watch])
-
-
-# @snoop
+@snoop
 def package_location(folder):
     """
     Opens local locations of a chosen
     installed package.
     """
+    da = os.getenv("DA")
+
     console = Console()
-    reqs = f"{os.getcwd()}/{folder}"
+    reqs = folder
     reqfiles = os.listdir(reqs)
     locations = []
 
@@ -53,7 +56,7 @@ def package_location(folder):
     # We'll need to have a numeric version of 'locations' because, two functions ahead,
     # there'll be a need to identify location paths by their index number.
     idlocs = enumerate(locations)
-    with open("idlocs.bin", "wb") as d:
+    with open(f"{da}idlocs.bin", "wb") as d:
         pickle.dump(idlocs, d)
 
     if locations != []:
@@ -68,7 +71,7 @@ def package_location(folder):
         print("\n")
         visits = input_decision("Choose a number(s) to visit. Press Enter to leave:")
         if visits != "":
-            with open("visits.bin", "wb") as f:
+            with open(f"{da}visits.bin", "wb") as f:
                 pickle.dump(visits, f)
             print("\n\n")
             # These return statements are read in the loop management module, and if
@@ -85,15 +88,16 @@ def package_location(folder):
         return "n"
 
 
-# @snoop
+@snoop
 def dislocation():
     """
     Where we open a file or, in case it's
     a folder, just see its contents.
     """
     console = Console()
+    da = os.getenv("DA")
 
-    with open("idlocs.bin", "rb") as g:
+    with open(f"{da}idlocs.bin", "rb") as g:
         idlocs = pickle.load(g)
 
     # 'visits.bin' it's one string with several numbers inside.
@@ -104,9 +108,9 @@ def dislocation():
     # 'choice.bin' is the outpu of "choice_processing"
     # 'filelst' has to be after the choice_processing() call, ot
     # it won't have the newly created 'chocie.bin'.
-    filelst = os.listdir(os.getcwd())
+    filelst = os.listdir(da)
     if "choice.bin" in filelst:
-        with open("choice.bin", "rb") as v:
+        with open(f"{da}choice.bin", "rb") as v:
             choice = pickle.load(v)
 
     # The pickle results come as strings. We need to convert them.
@@ -133,14 +137,14 @@ def dislocation():
                 # only given when closing the statement.
                 # So, I had to turn to this, very cumbersome, method, to make sure that
                 # things printed in the desired order.
-                p = open("dirpath.txt", "a")
+                p = open(f"{da}dirpath.txt", "a")
                 p.write(f"{pth}")
                 p.close()
-                v = open("dirpath.txt", "a")
+                v = open(f"{da}dirpath.txt", "a")
                 v.write("\n")
                 v.close()
-                os.system(f"ls -l {pth} >> dirpath.txt")
-                u = open("dirpath.txt", "a")
+                os.system(f"ls -l {pth} >> {da}dirpath.txt")
+                u = open(f"{da}dirpath.txt", "a")
                 u.write("\n")
                 u.close()
         else:
@@ -148,7 +152,7 @@ def dislocation():
             raise SystemExit
 
 
-# @snoop
+@snoop
 def open_dirs_files(result):
     """
     Asks if the user wants to open any of
@@ -158,6 +162,7 @@ def open_dirs_files(result):
     fil = input_decision("Choose a file to open:")
     fllst = []
     paths = []
+    da = os.getenv("DA")
 
     if fil != "":
         # 'fil returns a string. If it has spaces in it, it's beccause
@@ -167,10 +172,10 @@ def open_dirs_files(result):
             # 'choice_processing, 'that turns strings with entries
             # separated by spaces, in lists of strings. It receives
             # a binary file and outputs another.
-            with open("fil.bin", "wb") as f:
+            with open(f"{da}fil.bin", "wb") as f:
                 pickle.dump(fil, f)
             choice_processing("fil.bin")
-            with open("choice.bin", "rb") as g:
+            with open(f"{da}choice.bin", "rb") as g:
                 fllst = pickle.load(g)
         # The id's in the presentation are structured in the following
         # way, each location path is indexed,, and the each line
@@ -217,13 +222,14 @@ def show_dirpath():
     """
     Prettifies the output in 'dirpath.txt'
     """
+    da = os.getenv("DA")
     results = []
     temp_lst = []
     console = Console()
-    filelst = os.listdir(os.getcwd())
+    filelst = os.listdir(da)
 
     if "dirpath.txt" in filelst:
-        with open("dirpath.txt", "r") as f:
+        with open(f"{da}dirpath.txt", "r") as f:
             dirs = f.readlines()
 
             # To separate each directory output for presentation
@@ -269,7 +275,7 @@ def show_dirpath():
 
             open_dirs_files(results)
 
-            os.remove("dirpath.txt")
-            os.remove("idlocs.bin")
-            os.remove("choice.bin")
-            os.remove("visits.bin")
+            os.remove(f"{da}dirpath.txt")
+            os.remove(f"{da}idlocs.bin")
+            os.remove(f"{da}choice.bin")
+            os.remove(f"{da}visits.bin")

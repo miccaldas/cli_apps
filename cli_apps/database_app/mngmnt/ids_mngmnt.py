@@ -5,6 +5,7 @@ import os
 import pickle
 
 from cli_apps.database_app.db import dbdata
+from dotenv import load_dotenv
 
 # import snoop
 # from snoop import pp
@@ -17,17 +18,21 @@ from mngmnt.sql_expression import sql_expression
 
 # snoop.install(watch_extras=[type_watch])
 
+load_dotenv()
+
 
 # @snoop
 def ids_mngmnt(ids):
     """
     Starts all id related functions.
     """
-    with open("ids.bin", "wb") as f:
+    da = os.getenv("da")
+
+    with open(f"{da}ids.bin", "wb") as f:
         pickle.dump(ids, f)
 
-    sql_expression("ids.bin", "iqry.bin")
-    get("iqry.bin", "ilst.bin")
+    sql_expression(f"{da}ids.bin", f"{da}iqry.bin")
+    get(f"{da}iqry.bin", f"{da}ilst.bin")
 
 
 if __name__ == "__main__":

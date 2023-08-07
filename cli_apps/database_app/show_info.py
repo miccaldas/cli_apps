@@ -6,6 +6,8 @@ import os
 import pickle
 import subprocess
 
+from dotenv import load_dotenv
+
 # import snoop
 from rich import print
 from rich.console import Console
@@ -19,6 +21,7 @@ from rich.padding import Padding
 
 
 # snoop.install(watch_extras=[type_watch])
+load_dotenv()
 
 
 # @snoop
@@ -29,10 +32,11 @@ def show_info(folder, title):
     their location, so we can show their content. We use
     Rich to get a better look.
     """
+    da = os.getenv("DA")
     console = Console()
 
-    cwd = os.getcwd()
-    data = f"{cwd}/{folder}"
+    cwd = os.getenv("DA")
+    data = folder
     file_names = os.listdir(data)
 
     # List to house the links that'll create based on 'file_names'.
