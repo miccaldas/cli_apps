@@ -1,0 +1,43 @@
+/usr/lib/python3.11/mycli
+lrwxrwxrwx 1 root root 51 Jun 14 02:08 /usr/lib/python3.11/mycli -> /home/mic/.local/lib/python3.11/site-packages/mycli
+
+/home/mic/.local/lib/python3.11/site-packages/litecli
+total 132
+-rw-r--r-- 1 mic mic   265 Jul 22 19:25 AUTHORS
+-rw-r--r-- 1 mic mic  1272 Jul 22 19:25 clibuffer.py
+-rw-r--r-- 1 mic mic  4776 Jul 22 19:25 clistyle.py
+-rw-r--r-- 1 mic mic  1599 Jul 22 19:25 clitoolbar.py
+-rw-r--r-- 1 mic mic   199 Jul 22 19:25 compat.py
+-rw-r--r-- 1 mic mic  4501 Jul 22 19:25 completion_refresher.py
+-rw-r--r-- 1 mic mic  1713 Jul 22 19:25 config.py
+-rw-r--r-- 1 mic mic   746 Jul 22 19:25 encodingutils.py
+-rw-r--r-- 1 mic mic    22 Jul 22 19:25 __init__.py
+-rw-r--r-- 1 mic mic  2470 Jul 22 19:25 key_bindings.py
+-rw-r--r-- 1 mic mic   281 Jul 22 19:25 lexer.py
+-rw-r--r-- 1 mic mic  4281 Jul 22 19:25 liteclirc
+-rw-r--r-- 1 mic mic 35157 Jul 22 19:25 main.py
+drwxr-xr-x 4 mic mic  4096 Jul 22 19:25 packages
+drwxr-xr-x 2 mic mic  4096 Jul 22 19:25 __pycache__
+-rw-r--r-- 1 mic mic 18321 Jul 22 19:25 sqlcompleter.py
+-rw-r--r-- 1 mic mic  7506 Jul 22 19:25 sqlexecute.py
+
+/home/mic/.local/lib/python3.11/site-packages/litecli
+total 132
+-rw-r--r-- 1 mic mic   265 Jul 22 19:25 AUTHORS
+-rw-r--r-- 1 mic mic  1272 Jul 22 19:25 clibuffer.py
+-rw-r--r-- 1 mic mic  4776 Jul 22 19:25 clistyle.py
+-rw-r--r-- 1 mic mic  1599 Jul 22 19:25 clitoolbar.py
+-rw-r--r-- 1 mic mic   199 Jul 22 19:25 compat.py
+-rw-r--r-- 1 mic mic  4501 Jul 22 19:25 completion_refresher.py
+-rw-r--r-- 1 mic mic  1713 Jul 22 19:25 config.py
+-rw-r--r-- 1 mic mic   746 Jul 22 19:25 encodingutils.py
+-rw-r--r-- 1 mic mic    22 Jul 22 19:25 __init__.py
+-rw-r--r-- 1 mic mic  2470 Jul 22 19:25 key_bindings.py
+-rw-r--r-- 1 mic mic   281 Jul 22 19:25 lexer.py
+-rw-r--r-- 1 mic mic  4281 Jul 22 19:25 liteclirc
+-rw-r--r-- 1 mic mic 35157 Jul 22 19:25 main.py
+drwxr-xr-x 4 mic mic  4096 Jul 22 19:25 packages
+drwxr-xr-x 2 mic mic  4096 Jul 22 19:25 __pycache__
+-rw-r--r-- 1 mic mic 18321 Jul 22 19:25 sqlcompleter.py
+-rw-r--r-- 1 mic mic  7506 Jul 22 19:25 sqlexecute.py
+

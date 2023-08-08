@@ -22,7 +22,7 @@ load_dotenv()
 # Envs
 
 
-# @snoop
+@snoop
 def yay_check_for_packages():
     """
     Some of these entries can be commands from
@@ -106,6 +106,42 @@ def yay_get_package_information():
 
 # if __name__ == "__main__":
 #     yay_get_package_information()
+
+
+# @snoop
+def pip_get_package_information():
+    """"""
+    with open("notfound.txt", "r") as f:
+        ppcks = f.readlines()
+    clpcks = [i.strip() for i in ppcks]
+    pcks = [i.split("/")[-1] for i in clpcks]
+
+    # cmd = "python -m pip show "
+    # for p in pcks:
+    #     os.system(f"{cmd}{p} >> pip_lst.txt")
+
+    with open("pip_lst.txt", "r") as g:
+        plst = g.readlines()
+    print(plst)
+
+    lst = []
+    temp = []
+    for p in plst:
+        if p.startswith("Required-by:"):
+            temp.append(p.strip())
+            lst.append(temp)
+            temp = []
+        else:
+            temp.append(p.strip())
+    lst.append(temp)
+    lst.pop(-1)
+
+    slct = [(i[0][6:], i[2][9:], i[3][11:]) for i in lst]
+    print(slct)
+
+
+# if __name__ == "__main__":
+#     pip_get_package_information()
 
 
 # @snoop

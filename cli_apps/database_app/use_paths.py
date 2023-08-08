@@ -11,20 +11,21 @@ like it to be limitless.
 """
 import os
 
-import snoop
+# import snoop
 from dotenv import load_dotenv
-from snoop import pp
+
+# from snoop import pp
 
 from location import dislocation, package_location, show_dirpath
 from methods import loc_decision, pip_info, req_decision, yay_info
 from required_by import choice_processing, collect_deps_info, get_lst, show
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 
@@ -52,7 +53,7 @@ def required_loop():
     if out == "y":
         for i in range(10):
             show()
-            choice_processing(f"{da}choice_deps.bin")
+            choice_processing("choice_deps.bin")
             srch = collect_deps_info()
             yay_info(srch)
             pip_info(srch)
@@ -81,7 +82,7 @@ if __name__ == "__main__":
     required_loop()
 
 
-@snoop
+# @snoop
 def location_loop(folder):
     """
     Loop for the 'location' module. Here,

@@ -39,7 +39,7 @@ def show_info(folder, title):
     data = folder
     file_names = os.listdir(data)
 
-    # List to house the links that'll create based on 'file_names'.
+    # List to house the links that it wll create, based on 'file_names'.
     lnks = []
     for name in file_names:
         lnk = f"{data}/{name}"

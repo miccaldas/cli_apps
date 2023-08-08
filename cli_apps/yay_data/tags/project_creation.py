@@ -5,7 +5,7 @@ import os
 import pickle
 import subprocess
 
-# import snoop
+import snoop
 from dotenv import load_dotenv
 from mysql.connector import Error, connect
 from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
@@ -21,7 +21,7 @@ project = os.getenv("PROJECT")
 spiders = os.getenv("SPIDERS")
 
 
-# @snoop
+@snoop
 def project_creation():
     """
     Project Creation for *Arch* packages.
@@ -29,7 +29,7 @@ def project_creation():
 
         scrapy startproject pip_project
     """
-    cmd = "/home/mic/.local/bin/scrapy startproject yay_project"
+    cmd = "/usr/bin/scrapy startproject yay_project"
     subprocess.run(cmd, cwd=tags, shell=True)
 
 
@@ -42,7 +42,9 @@ def settings_definition():
     2. RETRY_TIMES   Number of retries when there's a connection error.\n
     """
     with open(f"{project}yay_project/settings.py", "a") as d:
-        d.write("FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}\n")
+        d.write(
+            "FEEDS = {'results.csv': {'format': 'csv', 'fields': ['name', 'content'],},}\n"
+        )
         d.write("RETRY_TIMES = 1\n")
 
 
@@ -62,7 +64,9 @@ def null_entries():
         newnames = pickle.load(f)
 
     try:
-        conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
+        conn = connect(
+            host="localhost", user="mic", password="xxxx", database="cli_apps"
+        )
         cur = conn.cursor()
         query = "SELECT * FROM cli_apps WHERE t2 IS NULL"
         cur.execute(query)
@@ -235,25 +239,25 @@ def init_project():
     """
     Starts all the functions in this module.
     """
-    project_creation()
-    settings_definition()
-    null_entries()
+    # project_creation()
+    # settings_definition()
+    # null_entries()
 
-    # In the case that there's no new packages, we want the app to stop calling functions
-    # on content that's not there. So we first get newnames' and 'newestnames'. The first
-    # has the new entries, if any, the second has db entries that have no tags but we want
-    # to check them anyway.
-    # If any of these two are not empty, we proceed, if not, the process stops here.
-    yaydata = os.listdir(yay)
-    with open(f"{yay}newnames.bin", "rb") as f:
-        newnames = pickle.load(f)
-    with open(f"{tags}newestnames.bin", "rb") as d:
-        newestnames = pickle.load(d)
-    if newnames != [] or newestnames != []:
-        xorg_urls()
-        alternative_urls()
-        name_change()
-        spider()
+    # # In the case that there's no new packages, we want the app to stop calling functions
+    # # on content that's not there. So we first get newnames' and 'newestnames'. The first
+    # # has the new entries, if any, the second has db entries that have no tags but we want
+    # # to check them anyway.
+    # # If any of these two are not empty, we proceed, if not, the process stops here.
+    # yaydata = os.listdir(yay)
+    # with open(f"{yay}newnames.bin", "rb") as f:
+    #     newnames = pickle.load(f)
+    # with open(f"{tags}newestnames.bin", "rb") as d:
+    #     newestnames = pickle.load(d)
+    # if newnames != [] or newestnames != []:
+    #     xorg_urls()
+    #     alternative_urls()
+    #     name_change()
+    spider()
 
 
 if __name__ == "__main__":

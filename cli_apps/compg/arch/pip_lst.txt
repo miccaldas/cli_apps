@@ -1,0 +1,120 @@
+Name: ZConfig
+Version: 3.6.1
+Summary: Structured Configuration Library
+Home-page: https://github.com/zopefoundation/ZConfig/
+Author: Fred L. Drake, Jr.
+Author-email: fred@fdrake.net
+License: ZPL 2.1
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: 
+Required-by: zdaemon, ZEO, ZODB, zodburi
+Name: tqdm
+Version: 4.65.0
+Summary: Fast, Extensible Progress Meter
+Home-page: https://tqdm.github.io
+Author: 
+Author-email: 
+License: MPLv2.0, MIT Licences
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: 
+Required-by: huggingface-hub, moviepy, nltk, proglog, sentence-transformers, transformers, webdriver-manager
+Name: yappi
+Version: 1.4.0
+Summary: Yet Another Python Profiler
+Home-page: https://github.com/sumerc/yappi
+Author: Sümer Cip
+Author-email: sumerc@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: 
+Required-by: 
+Name: pip-search
+Version: 0.0.12
+Summary: A package to search like pip used to, via PyPi
+Home-page: https://github.com/victorgarric/pip_search
+Author: Victor Garric
+Author-email: victor.garric@gmail.com
+License: UNKNOWN
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: bs4, requests, rich
+Required-by: 
+Name: sqlite-utils
+Version: 3.30
+Summary: CLI tool and Python utility functions for manipulating SQLite databases
+Home-page: https://github.com/simonw/sqlite-utils
+Author: Simon Willison
+Author-email: 
+License: Apache License, Version 2.0
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: click, click-default-group-wheel, python-dateutil, sqlite-fts4, tabulate
+Required-by: 
+Name: pulsemixer
+Version: 1.5.1
+Summary: pulsemixer - CLI and curses mixer for PulseAudio
+Home-page: https://github.com/GeorgeFilipkin/pulsemixer
+Author: George Filipkin
+Author-email: botebotebot@gmail.com
+License: MIT
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: 
+Required-by: 
+Name: uncompyle6
+Version: 3.9.0
+Summary: Python cross-version byte-code decompiler
+Home-page: https://github.com/rocky/python-uncompyle6/
+Author: Rocky Bernstein, Hartmut Goebel, John Aycock, and others
+Author-email: rb@dustyfeet.com
+License: GPL3
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: spark-parser, xdis
+Required-by: trepan3k
+Name: trepan3k
+Version: 1.2.8
+Summary: GDB-like Python Debugger in the Trepan family
+Home-page: http://github.com/rocky/python3-trepan/
+Author: Rocky Bernstein
+Author-email: rocky@gnu.org
+License: GPL3
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: columnize, nose, pyficache, pygments, spark-parser, term-background, tracer, uncompyle6, xdis
+Required-by: 
+Name: textual
+Version: 0.30.0
+Summary: Modern Text User Interface framework
+Home-page: https://github.com/Textualize/textual
+Author: Will McGugan
+Author-email: will@textualize.io
+License: MIT
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: importlib-metadata, markdown-it-py, rich, typing-extensions
+Required-by: rich-cli, textual-dev
+Name: email-validator
+Version: 1.3.1
+Summary: A robust email address syntax and deliverability validation library.
+Home-page: https://github.com/JoshData/python-email-validator
+Author: Joshua Tauberer
+Author-email: jt@occams.info
+License: CC0 (copyright waived)
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: dnspython, idna
+Required-by: 
+Name: zdaemon
+Version: 4.4
+Summary: Daemon process control library and tools for Unix-based systems
+Home-page: https://github.com/zopefoundation/zdaemon
+Author: Zope Foundation and Contributors
+Author-email: zope-dev@zope.org
+License: ZPL 2.1
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: setuptools, ZConfig
+Required-by: ZEO
+Name: pytube
+Version: 15.0.0
+Summary: Python 3 library for downloading YouTube Videos.
+Home-page: https://github.com/pytube/pytube
+Author: Ronnie Ghose, Taylor Fox Dahlin, Nick Ficano
+Author-email: hey@pytube.io
+License: The Unlicense (Unlicense)
+Location: /home/mic/.local/lib/python3.11/site-packages
+Requires: 
+Required-by: yt-player

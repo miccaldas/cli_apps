@@ -7,7 +7,7 @@ import pickle
 import subprocess
 from datetime import datetime
 
-import snoop
+# import snoop
 from click import style
 from dotenv import load_dotenv
 from pyfzf.pyfzf import FzfPrompt
@@ -18,12 +18,12 @@ from snoop import pp
 
 from show_info import show_info
 
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
 
+# snoop.install(watch_extras=[type_watch])
 
-snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 
@@ -41,7 +41,6 @@ def input_decision(prompt, color=(160, 196, 157)):
             bold=True,
         )
     )
-    print("\n")
 
     return dec
 
@@ -55,26 +54,31 @@ def print_template(text, style="bold #AAC8A7"):
     console.print(Padding(f"[{style}][+] - {text}[/]", (0, 3, 0, 10)))
 
 
-@snoop
+# @snoop
 def checkinfo():
     """
     We'll check what 'bin' files there are,
     and make a list of their names.
     """
     da = os.getenv("DA")
-
+    console = Console()
     filelst = os.listdir(da)
+
     srch_results = ["qlst.bin", "klst.bin", "ilst.bin", "nlst.bin"]
     results = [i for i in srch_results if i in filelst]
 
-    return results
+    if results != []:
+        return results
+    else:
+        console.print(f"[bold #E48586]    methods.checkinfo() detected that no 'mngmnt' file is present in {da}.")
+        raise SystemExit
 
 
 if __name__ == "__main__":
     checkinfo()
 
 
-@snoop
+# @snoop
 def aggregate_info():
     """
     Collects and merges file contents produced by 'search'.
@@ -97,7 +101,7 @@ def aggregate_info():
                     pickle.dump(allinfo, f)
 
     if allinfo == []:
-        print_template("aggregate_info() couldn't find content on the available files.")
+        print_template("methods.aggregate_info() couldn't find content in the 'mngmnt' available files.")
         raise SystemExit
 
 
@@ -149,17 +153,20 @@ def yay_info(srch):
         fldr = "data_files"
         datapth = f"{da}{fldr}"
         flnmid = "_yay"
-        # This deletes the contents of 'data_files'. This is to ensure
+        # This deletes the contents of 'data_files'. It's done to ensure
         # there's no contamination between requests, whilst giving time
         # enough to play with the data. Until a new request comes in.
         cmd = f"/usr/bin/trash-put {datapth}/* 2> /dev/null"
         subprocess.run(cmd, shell=True)
-        # In this case, 'srch' will be two member tuple; the first, a
+        # In this case, 'srch' will be a two member tuple; the first, a
         # string with information, the second, a code to identify its
-        # provenance. We only need the first.
+        # provenance. We only need the first. 'srch' comes from 'pyfzf',
+        # which means
         for i in srch[0]:
+            # 'i' is a tuple, but 'pyfzf' passes it as string. We have to
+            # convert it to tuple. That's what eval() is for.
             selection = eval(i)
-            # To ensure we looked thouroughly through 'Paacman's database,
+            # To ensure we looked thouroughly through 'Yay's database,
             # we'll try to look for packages in two of the ways they're
             # usually written. In this case, if the 'srch' request has a
             # package that start's with 'python-':
@@ -227,7 +234,7 @@ def pip_info(srch):
     shellcmd = "pip show"
     stderr = " 2>> error_files/pip_stderr.txt"
     # If 'srch' comes from 'srch_allinfo', will need to evaluate the
-    # output, as 'fzf' presents a list as a string. To id it,
+    # output, as 'fzf' presents tuples as strings. To id it,
     # 'srch_allinfo' adds, at the end of 'srch', the string 'ai'.
     # This way we'll know we can't process it without evaluating it.
     if srch[-1] == "ai":
@@ -257,7 +264,7 @@ if __name__ == "__main__":
     pip_info()
 
 
-@snoop
+# @snoop
 def srch_allinfo():
     """
     Searches 'allinfo' with fzf and, if needed,

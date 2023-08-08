@@ -26,7 +26,7 @@ def names_mngmnt(names):
     """
     Calls all functions regarding names.
     """
-    da = os.getenv("da")
+    da = os.getenv("DA")
 
     if names:
         with open(f"{da}names.bin", "wb") as f:

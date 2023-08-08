@@ -13,9 +13,9 @@ from dotenv import load_dotenv
 from rich.console import Console
 from rich.padding import Padding
 
-from methods import pip_info, print_template, yay_info
-
 # from snoop import pp
+
+# from methods import pip_info, print_template, yay_info
 
 
 # def type_watch(source, value):
@@ -47,12 +47,11 @@ def get_lst(folder):
     if "spltlst.bin" in os.listdir(cwd):
         os.remove(f"{cwd}/spltlst.bin")
 
-    reqs = folder
-    fils = os.listdir(reqs)
+    fils = os.listdir(folder)
 
     lst = []
     for file in fils:
-        with open(f"{reqs}/{file}", "r") as f:
+        with open(f"{folder}/{file}", "r") as f:
             fil = f.readlines()
             for f in fil:
                 # Format found in files created by 'yay -Qi'
@@ -79,9 +78,7 @@ def get_lst(folder):
     # We delete the files of 'data_files' and return 'y'. This value wiçç be
     # picked up in the 'use_cases' module, and they'll break the loop.
     if cleanlst == []:
-        console.print(
-            "T[bold #E48586]          The chosen packages are required by none."
-        )
+        console.print("[bold #FFD6A5]         required_by.get_lst():[/bold #FFD6A5] [bold #E48586]If any packages were chosen, they're required by none.")
         return "n"
     else:
         # If we find dependencies, we look for empty spaces in the strings we
@@ -124,51 +121,51 @@ def show():
         with open(f"{da}spltlst.bin", "rb") as t:
             deps = pickle.load(t)
 
-        # 'numbered_deps' will collect the id'd version of 'deps' this module will create.
-        numbered_deps = []
-        console = Console()
-        console.print(
-            Padding("[bold #E9FFC2]DEPENDENCIES[/]", (3, 10, 0, 10)), justify="center"
-        )
-        for i in range(len(deps)):
-            if deps[i][0]:
-                console.print(
-                    Padding(f"[bold #AAC8A7]\n{deps[i][0][:-4]}[/]", (0, 10, 0, 10))
-                )
-            if type(deps[i][1]) == list:
-                for idx, t in enumerate(deps[i][1]):
-                    # collects a dependency id made of the index of the chosen package,
-                    # plus the index of the dependecy. This permits us to know what is
-                    # the package and dependecy name.
-                    numdp = [f"{i}{idx}", f"{t}", f"{deps[i][0][:-4]}"]
-                    numbered_deps.append(numdp)
-                    console.print(
-                        Padding(
-                            f"[bold #FFD6A5]\[{i}{idx}] - [/][bold #E9FFC2]{t}[/]",
-                            (0, 10, 0, 14),
-                        )
-                    )
-            else:
-                console.print(
-                    Padding(f"[bold #E9FFC2]\[{i}0] - {deps[i][1]}[/]", (0, 10, 0, 14))
-                )
-                numdp = [f"{i}0", f"{deps[i][1]}", f"{deps[i][0][:-4]}"]
-                numbered_deps.append(numdp)
-        print("\n")
-        choice_deps = input(
-            style(
-                "          Choose the dependecies you want to see. Press Enter to quit. ",
-                bold=True,
-                fg=(160, 196, 157),
+        if deps != []:
+            # 'numbered_deps' will collect the id'd version of 'deps' this module will create.
+            numbered_deps = []
+            console = Console()
+            console.print(
+                Padding("[bold #E9FFC2]DEPENDENCIES[/]", (3, 10, 0, 10)),
+                justify="center",
             )
-        )
-        console.print("\n")
+            for i in range(len(deps)):
+                if deps[i][0]:
+                    console.print(Padding(f"[bold #AAC8A7]\n{deps[i][0][:-4]}[/]", (0, 10, 0, 10)))
+                if type(deps[i][1]) == list:
+                    for idx, t in enumerate(deps[i][1]):
+                        # collects a dependency id made of the index of the chosen package,
+                        # plus the index of the dependecy. This permits us to know what is
+                        # the package and dependecy name.
+                        numdp = [f"{i}{idx}", f"{t}", f"{deps[i][0][:-4]}"]
+                        numbered_deps.append(numdp)
+                        console.print(
+                            Padding(
+                                f"[bold #FFD6A5]\[{i}{idx}] - [/][bold #E9FFC2]{t}[/]",
+                                (0, 10, 0, 14),
+                            )
+                        )
+                else:
+                    console.print(Padding(f"[bold #E9FFC2]\[{i}0] - {deps[i][1]}[/]", (0, 10, 0, 14)))
+                    numdp = [f"{i}0", f"{deps[i][1]}", f"{deps[i][0][:-4]}"]
+                    numbered_deps.append(numdp)
+            print("\n")
+            choice_deps = input(
+                style(
+                    "          Choose the dependencies you want to see. Press Enter to quit. ",
+                    bold=True,
+                    fg=(160, 196, 157),
+                )
+            )
+            console.print("\n")
 
-        if choice_deps != "":
-            with open(f"{da}choice_deps.bin", "wb") as g:
-                pickle.dump(choice_deps, g)
-            with open(f"{da}numdeps.bin", "wb") as f:
-                pickle.dump(numbered_deps, f)
+            if choice_deps != "":
+                with open(f"{da}choice_deps.bin", "wb") as g:
+                    pickle.dump(choice_deps, g)
+                with open(f"{da}numdeps.bin", "wb") as f:
+                    pickle.dump(numbered_deps, f)
+        else:
+            console.print("[bold #FFD6A5]         rrequired_by.show():[/bold #FFD6A5] [bold #E48586]'spltlst.bin' is an empty list.")
 
 
 # @snoop
@@ -198,13 +195,14 @@ def choice_processing(binary):
             pickle.dump(choice, g)
     else:
         console = Console()
-        console.print(f"[bold #E48586]    Couldn't find the {binary} file.")
+        console.print(f"[bold #FFD6A5]         required_by.choice_processing():[/bold #FFD6A5] [bold #E48586]Couldn't find the {binary} file.")
+        raise SystemExit
 
 
 # @snoop
 def collect_deps_info():
     """
-    Collects information on the chosen dependendecies.
+    Collects information on the chosen dependencies.
     """
     da = os.getenv("DA")
 
@@ -213,11 +211,7 @@ def collect_deps_info():
     with open(f"{da}choice.bin", "rb") as g:
         choice = pickle.load(g)
 
-    srch = [
-        (numdeps[i][1], numdeps[i][2])
-        for i in range(len(numdeps))
-        if numdeps[i][0] in choice
-    ]
+    srch = [(numdeps[i][1], numdeps[i][2]) for i in range(len(numdeps)) if numdeps[i][0] in choice]
     # This will add a code to the 'srch' list that'll allow 'yay_info'
     # and 'pip_info' to know what is the internal structure of 'srch',
     # that is very different from that that is created by 'srch_allinfo'

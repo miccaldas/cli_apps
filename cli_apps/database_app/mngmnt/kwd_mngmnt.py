@@ -4,7 +4,7 @@ Houses all functions regarding keywords.
 import os
 import pickle
 
-import snoop
+# import snoop
 from cli_apps.database_app.db import dbdata
 from cli_apps.database_app.methods import input_decision
 from dotenv import load_dotenv
@@ -16,15 +16,15 @@ from mngmnt.show_column import show_column
 from mngmnt.sql_expression import sql_expression
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
 load_dotenv()
 
 
-@snoop
+# @snoop
 def kwd_mngmnt(keywords):
     """
     Module that aggregates all operations regarding keywords.

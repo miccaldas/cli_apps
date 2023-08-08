@@ -73,19 +73,19 @@ def get_query(keywords, queries, ids, names):
         srch_allinfo()
         # Shows a prettified version of the chosen information.
         show_info(f"{da}data_files", "PACKAGES IN DATA_FILES")
-        # Two questions: do you want to see file dependencies or their location?
+        # # Two questions: do you want to see file dependencies or their location?
         re = req_decision()
         lc = loc_decision()
 
-        # Depending on the answer, you'll be sent in a loop of functions that'll expose you
-        # to the information you wanted.
+        # # Depending on the answer, you'll be sent in a loop of functions that'll expose you
+        # # to the information you wanted.
         if re == "y":
             required_loop()
         if lc == "y":
             location_loop(f"{da}data_files")
 
-    # This thing produces binary files like a motherfucker. Cleaning is in order.
-    # delete_all_files()
+    # # This thing produces binary files like a motherfucker. Cleaning is in order.
+    delete_all_files()
 
 
 if __name__ == "__main__":

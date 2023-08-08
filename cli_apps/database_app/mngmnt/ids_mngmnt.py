@@ -26,7 +26,7 @@ def ids_mngmnt(ids):
     """
     Starts all id related functions.
     """
-    da = os.getenv("da")
+    da = os.getenv("DA")
 
     with open(f"{da}ids.bin", "wb") as f:
         pickle.dump(ids, f)

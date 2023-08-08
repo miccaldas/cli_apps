@@ -6,20 +6,21 @@ the database.
 import os
 import pickle
 
-import snoop
+# import snoop
 from dotenv import load_dotenv
-from snoop import pp
+
+# from snoop import pp
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
-load_dotenv()
+# snoop.install(watch_extras=[type_watch])
+# load_dotenv()
 
 
-@snoop
+# @snoop
 def sql_expression(in_binary, out_binary):
     """
     We'll see what content there are
@@ -34,9 +35,7 @@ def sql_expression(in_binary, out_binary):
 
     collection = []
     if in_binary == f"{da}queries.bin":
-        qry = (
-            "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
-        )
+        qry = "SELECT * FROM cli_apps WHERE MATCH(name, presentation) AGAINST ('dummy') "
     if in_binary == f"{da}keywords.bin":
         qry = 'SELECT * FROM cli_apps WHERE t1 = "dummy" OR t2 = "dummy" OR t3 = "dummy" OR t4 = "dummy"'
     if in_binary == f"{da}ids.bin":

@@ -5,7 +5,7 @@ and gets the user there.
 import os
 import pickle
 
-import snoop
+# import snoop
 from dotenv import load_dotenv
 from rich.console import Console
 from rich.padding import Padding
@@ -15,15 +15,16 @@ from methods import input_decision, print_template
 from required_by import choice_processing
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
+# def type_watch(source, value):
+#     return f"type({source})", type(value)
 
 
-snoop.install(watch_extras=[type_watch])
+# snoop.install(watch_extras=[type_watch])
+
 load_dotenv()
 
 
-@snoop
+# @snoop
 def package_location(folder):
     """
     Opens local locations of a chosen
@@ -36,59 +37,63 @@ def package_location(folder):
     reqfiles = os.listdir(reqs)
     locations = []
 
-    for r in reqfiles:
-        with open(f"{reqs}/{r}", "r") as f:
-            content = f.readlines()
-            for m in range(len(content)):
-                if content[0]:
-                    # First line has the package name. This gets rid of the "Name: " prefix.
-                    nm = content[0][6:].strip()
-                if content[m].startswith("Location:"):
-                    # Same as above. Getting rid of the "Location: " prefix.
-                    loc = content[m][10:].strip()
-                    if loc:
-                        # This eliminates the identifcation suffixes, like '_yay' in 'data_files'
-                        # or the name of the package that the dependecies belong to.
-                        pref = f"{r.split('_')[0]}"
-                        # Creates a tuple with the package name and a full link to its location.
-                        locations.append((f"{pref}", f"{loc}/{nm}"))
+    if reqfiles != []:
+        for r in reqfiles:
+            with open(f"{reqs}/{r}", "r") as f:
+                content = f.readlines()
+                for m in range(len(content)):
+                    if content[0]:
+                        # First line has the package name. This gets rid of the "Name: " prefix.
+                        nm = content[0][6:].strip()
+                    if content[m].startswith("Location:"):
+                        # Same as above. Getting rid of the "Location: " prefix.
+                        loc = content[m][10:].strip()
+                        if loc:
+                            # This eliminates the identifcation suffixes, like '_yay' in 'data_files'
+                            # or the name of the package that the dependecies belong to.
+                            pref = f"{r.split('_')[0]}"
+                            # Creates a tuple with the package name and a full link to its location.
+                            locations.append((f"{pref}", f"{loc}/{nm}"))
 
-    # We'll need to have a numeric version of 'locations' because, two functions ahead,
-    # there'll be a need to identify location paths by their index number.
-    idlocs = enumerate(locations)
-    with open(f"{da}idlocs.bin", "wb") as d:
-        pickle.dump(idlocs, d)
+        # We'll need to have a numeric version of 'locations' because, two functions ahead,
+        # there'll be a need to identify location paths by their index number.
+        idlocs = enumerate(locations)
+        with open(f"{da}idlocs.bin", "wb") as d:
+            pickle.dump(idlocs, d)
 
-    if locations != []:
-        console.print(
-            Padding("[bold]CHOOSE WHERE YOU WANT TO GO:[/]", (3, 10, 2, 10)),
-            justify="center",
-        )
+        if locations != []:
+            console.print(
+                Padding("[bold]CHOOSE WHERE YOU WANT TO GO:[/]", (3, 10, 2, 10)),
+                justify="center",
+            )
 
-        for idx, pth in enumerate(locations):
-            console.print(Padding(f"\n[bold]{pth[0].upper()}[/]", (0, 10, 0, 10)))
-            console.print(Padding(f"[bold]\[{idx}][/] - [bold]{pth[1]}[/]", (0, 10, 0, 10)))
-        print("\n")
-        visits = input_decision("Choose a number(s) to visit. Press Enter to leave:")
-        if visits != "":
-            with open(f"{da}visits.bin", "wb") as f:
-                pickle.dump(visits, f)
-            print("\n\n")
-            # These return statements are read in the loop management module, and if
-            # negative, it'll break the loop.
-            return "y"
+            for idx, pth in enumerate(locations):
+                console.print(Padding(f"\n[bold]{pth[0].upper()}[/]", (0, 10, 0, 10)))
+                console.print(Padding(f"[bold]\[{idx}][/] - [bold]{pth[1]}[/]", (0, 10, 0, 10)))
+            print("\n")
+            visits = input_decision("Choose a number(s) to visit. Press Enter to leave:")
+            if visits != "":
+                with open(f"{da}visits.bin", "wb") as f:
+                    pickle.dump(visits, f)
+                print("\n\n")
+                # These return statements are read in the loop management module, and if
+                # negative, it'll break the loop.
+                return "y"
+            else:
+                return "n"
         else:
+            console.print(
+                "[bold #E48586]          location.package_location(): We couldn't find any information regarding location of these files: ",
+                *reqfiles,
+            )
+            print("\n")
             return "n"
     else:
-        console.print(
-            "[bold #E48586]          We couldn't find any information regarding Locations for these files: ",
-            *reqfiles,
-        )
-        print("\n")
-        return "n"
+        console.print(f"[bold #E48586]    location.package_location(): {folder} is empty.")
+        raise SystemExit
 
 
-@snoop
+# @snoop
 def dislocation():
     """
     Where we open a file or, in case it's
@@ -106,8 +111,8 @@ def dislocation():
     # strings.
     choice_processing("visits.bin")
     # 'choice.bin' is the outpu of "choice_processing"
-    # 'filelst' has to be after the choice_processing() call, ot
-    # it won't have the newly created 'chocie.bin'.
+    # 'filelst' has to be placed after the choice_processing() call,
+    # or it won't see the newly created 'chocie.bin'.
     filelst = os.listdir(da)
     if "choice.bin" in filelst:
         with open(f"{da}choice.bin", "rb") as v:
@@ -148,11 +153,11 @@ def dislocation():
                 u.write("\n")
                 u.close()
         else:
-            console.print(f"[bold #E48586]    CThe path {pth} does not exist.")
+            console.print(f"[bold #E48586]    location.dislocation(): The path {pth} does not exist.")
             raise SystemExit
 
 
-@snoop
+# @snoop
 def open_dirs_files(result):
     """
     Asks if the user wants to open any of
@@ -170,7 +175,7 @@ def open_dirs_files(result):
         if " " in fil:
             # In the 'required_by' module, I created a function,
             # 'choice_processing, 'that turns strings with entries
-            # separated by spaces, in lists of strings. It receives
+            # separated by spaces in lists of strings. It receives
             # a binary file and outputs another.
             with open(f"{da}fil.bin", "wb") as f:
                 pickle.dump(fil, f)

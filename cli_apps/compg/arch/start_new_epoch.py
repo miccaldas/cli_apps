@@ -4,23 +4,23 @@ Module that starts a new epoch.
 import os
 import pickle
 
-# import snoop
-from cli_apps.database_app.methods import input_decision
-from cli_apps.database_app.required_by import choice_processing
+import snoop
 from dotenv import load_dotenv
 from snoop import pp
+
+from methods import choice_processing, input_decision
 
 
 def type_watch(source, value):
     return f"type({source})", type(value)
 
 
-# snoop.install(watch_extras=[type_watch])
+snoop.install(watch_extras=[type_watch])
 
 load_dotenv()
 
 
-# @snoop
+@snoop
 def start_new_epoch():
     """
     Creates a new 'epoch.bin' file.
