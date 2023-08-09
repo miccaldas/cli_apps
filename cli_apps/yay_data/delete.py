@@ -2,45 +2,19 @@
 Deletes all transient file and folders from *yay_data*.
 """
 import os
-import subprocess
-
-import snoop
-from snoop import pp
 
 
-def type_watch(source, value):
-    return f"type({source})", type(value)
-
-
-snoop.install(watch_extras=[type_watch])
-
-
-@snoop
+# @snoop
 def delete():
     """
-    Deletes all *bin* files, keywords, lists files and the project folder.
+    Deletes all *bin* files, keywords, lists files.
     """
 
-    cwd = os.getcwd()
-    lists = f"{cwd}/lists"
-    tags = f"{cwd}/tags"
+    cwd = "/home/mic/python/cli_apps/cli_apps/yay_data/"
 
-    for c in os.listdir(cwd):
-        if c.endswith(".bin"):
-            os.remove(f"{cwd}/{c}")
-
-    for lst in os.listdir(lists):
-        os.remove(f"{lists}/{lst}")
-
-    for t in os.listdir(tags):
-        if t.endswith(".bin"):
-            os.remove(f"{tags}/{t}")
-        if t == "yay_project":
-            cmd = f"/usr/bin/trash-put {tags}/{t}"
-            subprocess.run(cmd, shell=True)
-        if t == "kws":
-            cmd1 = f"/usr/bin/trash-put {tags}/{t}/*"
-            subprocess.run(cmd1, shell=True)
+    os.system(f"/usr/bin/trash-put {cwd}/*.bin")
+    os.system(f"/usr/bin/trash-put {cwd}/lists/*")
+    os.system(f"/usr/bin/trash-put {cwd}kws/*")
 
 
 if __name__ == "__main__":

@@ -2,10 +2,6 @@
 Module where we define the tasks
 of the pip update process.
 """
-import sys
-
-# Here so __pycache__ folders aren't created.
-sys.dont_write_bytecode = True
 
 import os
 import subprocess

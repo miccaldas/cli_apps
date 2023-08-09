@@ -1,4 +1,0 @@
-glibc
-compile
-kernheaders
-rpmbuild

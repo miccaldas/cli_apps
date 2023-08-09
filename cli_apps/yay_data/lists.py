@@ -5,7 +5,7 @@ import os
 import pickle
 import re
 import subprocess
-
+from db import dbdata
 import snoop
 from mysql.connector import Error, connect
 from snoop import pp
@@ -30,7 +30,7 @@ class Lists:
         self.cwd = cwd
         self.lists = lists
 
-    @snoop
+    # @snoop
     def yay_lst(self):
         """
         Sources and stores in a file, all *Arch* installed packages::
@@ -40,7 +40,7 @@ class Lists:
         cmd = f"yay -Qi > {self.lists}/yay_lst.txt"
         subprocess.run(cmd, shell=True)
 
-    @snoop
+    # @snoop
     def db_lst(self):
         """
         Sources, cleans and stores in a file, list of names of packages in the database.\n
@@ -48,23 +48,14 @@ class Lists:
 
             SELECT name FROM cli_apps
         """
-        try:
-            conn = connect(host="localhost", user="mic", password="xxxx", database="cli_apps")
-            cur = conn.cursor()
-            query = "SELECT name FROM cli_apps"
-            cur.execute(query)
-            recs = cur.fetchall()
-        except Error as e:
-            print("Error while connecting to db", e)
-        finally:
-            if conn:
-                conn.close()
+        query = "SELECT name FROM cli_apps"
+        recs = dbdata(query, "fetch")
 
         records = [h for j in recs for h in j]
         with open(f"{self.lists}/dblst.bin", "wb") as f:
             pickle.dump(records, f)
 
-    @snoop
+    # @snoop
     def yay_names(self):
         """
         Cleans and compares the lists of *Arch* packages and
@@ -116,5 +107,9 @@ class Lists:
         yayvals = [(t[0], t[2], t[4]) for t in yayclean]
         yaylst = [(a[18:], b[18:], c[18:]) for a, b, c in yayvals]
         newnames = [i for i in yaylst if i[0] not in dblst]
-        with open("newnames.bin", "wb") as w:
-            pickle.dump(newnames, w)
+
+        if newnames != []:
+            with open("newnames.bin", "wb") as w:
+                pickle.dump(newnames, w)
+        else:
+            return "n"

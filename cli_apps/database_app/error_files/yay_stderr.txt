@@ -22,3 +22,4 @@ error: package 'litecli' was not found
 error: package 'python-litecli' was not found
 error: package 'litecli' was not found
 error: package 'python-litecli' was not found
+error: package 'slugify' was not found
