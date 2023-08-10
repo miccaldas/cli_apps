@@ -31,9 +31,9 @@ def main():
     continue the process.
     """
 
-    # db_data()
-    # pip_list()
-    ne = new_entries()
+    db_data()
+    pip_list()
+    # ne = new_entries()
     # if ne != "n":
     #     pip_show()
     #     txt_cleaner()

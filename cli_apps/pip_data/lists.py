@@ -55,7 +55,7 @@ def pip_list():
     cwd = "/home/mic/python/cli_apps/cli_apps/pip_data"
     file = f"{cwd}/lists/first_pip.txt"
 
-    os.system(f"sudo pip list > '{file}'")
+    os.system(f"sudo python -m pip list > '{file}'")
 
     with open(file, "r") as f:
         fil = f.readlines()
