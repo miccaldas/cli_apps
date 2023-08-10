@@ -42,25 +42,25 @@ def kwd_collector():
                 # We first select 'description' and 'url' from the list
                 # of packages, where the 'name' in the list is the same
                 # as the name in the file being read.
-                ndata = [(c[0], c[1], c[2], c[0], t2, t3, t4) for c in nn if c[0] == f"{file}"]
+                ndata = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "yay") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
             if len(kws) == 2:
                 t2 = kws[0].strip()
                 t3 = kws[1].strip()
                 t4 = "NA"
-                ndata = [(c[0], c[1], c[2], c[0], t2, t3, t4) for c in nn if c[0] == f"{file}"]
+                ndata = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "yay") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
             if len(kws) == 1:
                 t2 = kws[0].strip()
                 t3 = "NA"
                 t4 = "NA"
-                ndata = [(c[0], c[1], c[2], c[0], t2, t3, t4) for c in nn if c[0] == f"{file}"]
+                ndata = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "yay") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
             if kws == []:
                 t2 = "NA"
                 t3 = "NA"
                 t4 = "NA"
-                ndata = [(c[0], c[1], c[2], c[0], t2, t3, t4) for c in nn if c[0] == f"{file}"]
+                ndata = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "yay") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
     with open(f"{yay}kwdlst.bin", "wb") as f:
         pickle.dump(kwdlst, f)

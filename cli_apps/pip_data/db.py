@@ -4,7 +4,7 @@ MySQL module, to be shared by all modules.
 from mysql.connector import Error, connect
 
 
-def dbdata(query, data):
+def dbdata(query, data, answers=None):
     """
     Collects list of posts on the db.
     We'll use this function as a template,
@@ -23,7 +23,10 @@ def dbdata(query, data):
             database="cli_apps",
         )
         cur = conn.cursor()
-        cur.execute(query)
+        if answers:
+            cur.execute(query, answers)
+        else:
+            cur.execute(query)
         if data == "fetch":
             data = cur.fetchall()
         if data == "commit":

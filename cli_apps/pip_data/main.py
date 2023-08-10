@@ -2,24 +2,14 @@
 Module where we define the tasks
 of the pip update process.
 """
-
-import os
-import subprocess
-
-import click
-
-# import snoop
-from crontab import CronTab
+import snoop
 
 from cron import cron
-from db_upld import db_upload, kwd_collector
+from data_preparation import alternative_urls, len_check, list_conciliation, xorg_urls
+from db_upld import db_upload
 from delete import delete
-from extract_file_info import extract_file_info
-from initiation_scripts import db_data, initiation_scripts
-from query_builder import query_builder
-from tags.kwd_creator import csv_cleaner, kwd_creator
-from tags.project_creation import init_project
-from tags.spider_runner import spider_runner
+from kwd_preparation import kwd_collector, kwd_creator
+from lists import db_data, new_entries, pip_list, pip_show, txt_cleaner
 
 # def type_watch(source, value):
 #     return f"type({source})", type(value)
@@ -28,46 +18,35 @@ from tags.spider_runner import spider_runner
 # snoop.install(watch_extras=[type_watch])
 
 
-# @snoop
-def run():
+@snoop
+def main():
     """
-    We call the initiation script to get a
-    list of installed pip modules and separate
-    them from version names. 'query_builder'
-    iterates through the names and puts them in
-    command 'pip show'. The output is kept in
-    files. the 'extract_file_info', takes the
-    three fields we're interested in, name,
-    summary and location, and puts them in new
-    files.
-    'db_upload' will iterate through this files
-    and, as is parsing them, it will upload them.
+    We get a list of package names in the db,
+    another list of packages installed by 'pip',
+    If there's packages in pip's list not in the
+    db, new_entries() will create a list with
+    their names and return nothing. If nothing new
+    was found, it'll return 'n'.
+    If it doesn't return 'n', we know that we can
+    continue the process.
     """
 
     # db_data()
-    initiation_scripts()
-
-    # As we're using multiprocessing in 'query_builder', I can't call it from another module,
-    # as it expects a list as an argument, and that list must be given by code under the
-    # function but before setting the pool. This is a workaround.
-    cmd = "python /home/mic/python/cli_apps/cli_apps/pip_data/query_builder.py"
-    subprocess.run(cmd, shell=True)
-
-    extract_file_info()
-
-    # We check the 'results' folder to see if there's anything there.
-    # If there is, we continue.
-    cwd = os.getcwd()
-    file_res = os.listdir(f"{cwd}/results")
-
-    if file_res != []:
-        init_project()
-        spider_runner()
-        csv_cleaner()
-        kwd_creator()
-        db_upload()
-    delete()
+    # pip_list()
+    ne = new_entries()
+    # if ne != "n":
+    #     pip_show()
+    #     txt_cleaner()
+    #     alternative_urls()
+    #     xorg_urls()
+    #     len_check()
+    #     list_conciliation()
+    #     kwd_creator()
+    #     kwd_collector()
+    #     db_upload()
+    #     cron()
+    # delete()
 
 
 if __name__ == "__main__":
-    run()
+    main()
