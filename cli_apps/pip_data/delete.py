@@ -18,7 +18,7 @@ import os
 
 
 # @snoop
-def delete():
+def delete() -> None:
     """
     We'll delete all files in the *lists*, *kws*
     folders, and all binary and text files in
@@ -38,3 +38,15 @@ def delete():
 
 if __name__ == "__main__":
     delete()
+
+
+def dunst_notifier() -> None:
+    """
+    We'll use dunst for the notification.
+    """
+
+    os.system("/usr/bin/dunstify 'cli_apps pip has been updated.'")
+
+
+if __name__ == "__main__":
+    dunst_notifier()

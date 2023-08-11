@@ -974,3 +974,4 @@ DEPRECATION: Loading egg at /usr/lib/python3.11/site-packages/pandas-2.0.2-py3.1
 DEPRECATION: Loading egg at /usr/lib/python3.11/site-packages/cachetools-5.3.1-py3.11.egg is deprecated. pip 23.3 will enforce this behaviour change. A possible replacement is to use pip for package installation..
 DEPRECATION: Loading egg at /usr/lib/python3.11/site-packages/tzdata-2023.3-py3.11.egg is deprecated. pip 23.3 will enforce this behaviour change. A possible replacement is to use pip for package installation..
 WARNING: Skipping /usr/lib/python3.11/site-packages/protobuf-4.23.2-py3.11.egg/EGG-INFO due to invalid metadata entry 'name'
+WARNING: Package(s) not found: python-mypy_extensions

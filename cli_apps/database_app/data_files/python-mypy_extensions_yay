@@ -1,0 +1,22 @@
+Name            : python-mypy_extensions
+Version         : 1.0.0-3
+Description     : Experimental type system extensions for programs checked with the mypy typechecker
+Architecture    : any
+URL             : http://www.mypy-lang.org/
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : None
+Required By     : mypy  python-black
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 28.09 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Mon 10 Apr 2023 01:10:58 PM WEST
+Install Date    : Sat 06 May 2023 02:54:55 PM WEST
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+

@@ -1,0 +1,6 @@
+def type_watch(source, value): ...
+def db_upload() -> None: ...
+kwdlst: list[list[tuple[str, str, str, str, str, str, str, str]]]
+kl: list[tuple[str, str, str, str, str, str, str, str]]
+answers: list[str]
+query: str 

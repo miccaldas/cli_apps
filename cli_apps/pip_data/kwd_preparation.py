@@ -6,18 +6,19 @@ the information in a file called 'kwdlst.bin'
 """
 import os
 import pickle
+from typing import Iterable, Union
 
 import snoop
-from keybert import KeyBERT
-
-# from snoop import pp
-from thefuzz import fuzz, process
-
-# def type_watch(source, value):
-#     return "type({})".format(source), type(value)
+from keybert import KeyBERT  # type: ignore
+from snoop import pp
+from thefuzz import fuzz, process  # type: ignore
 
 
-# snoop.install(watch_extras=[type_watch])
+def type_watch(source, value):
+    return "type({})".format(source), type(value)
+
+
+snoop.install(watch_extras=[type_watch])
 
 
 # @snoop
@@ -75,59 +76,43 @@ if __name__ == "__main__":
 
 
 # @snoop
-def kwd_collector():
+def kwd_collector() -> None:
     """
     Collects the keywords to a new list.
     """
-    pip = "/home/mic/python/cli_apps/cli_apps/pip_data"
-    fldr = "/home/mic/python/cli_apps/cli_apps/pip_data/kws"
-    fllst = os.listdir(fldr)
+    pip: str = "/home/mic/python/cli_apps/cli_apps/pip_data"
+    fldr: str = "/home/mic/python/cli_apps/cli_apps/pip_data/kws"
+    fllst: list = os.listdir(fldr)
     with open(f"{pip}/newurls.bin", "rb") as y:
-        nn = pickle.load(y)
+        nn: list[list] = pickle.load(y)
 
-    kwdlst = []
+    kwdlst: list[list[tuple[str, str, str, str, str, str, str, str]]] = []
     for file in fllst:
         with open(f"{fldr}/{file}", "r") as f:
-            kws = f.readlines()
+            kws: list[str] = f.readlines()
             if len(kws) >= 3:
-                t2 = kws[0].strip()
-                t3 = kws[1].strip()
-                t4 = kws[2].strip()
-                ndata = [
-                    (c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip")
-                    for c in nn
-                    if c[0] == f"{file}"
-                ]
+                t2: str = kws[0].strip()
+                t3: str = kws[1].strip()
+                t4: str = kws[2].strip()
+                ndata: list[tuple[str, str, str, str, str, str, str, str]] = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
             if len(kws) == 2:
                 t2 = kws[0].strip()
                 t3 = kws[1].strip()
                 t4 = "NA"
-                ndata = [
-                    (c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip")
-                    for c in nn
-                    if c[0] == f"{file}"
-                ]
+                ndata = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
             if len(kws) == 1:
                 t2 = kws[0].strip()
                 t3 = "NA"
                 t4 = "NA"
-                ndata = [
-                    (c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip")
-                    for c in nn
-                    if c[0] == f"{file}"
-                ]
+                ndata = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
             if kws == []:
                 t2 = "NA"
                 t3 = "NA"
                 t4 = "NA"
-                ndata = [
-                    (c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip")
-                    for c in nn
-                    if c[0] == f"{file}"
-                ]
+                ndata = [(c[0], c[1], c[2], c[0].lower(), t2, t3, t4, "pip") for c in nn if c[0] == f"{file}"]
                 kwdlst.append(ndata)
 
     with open(f"{pip}/kwdlst.bin", "wb") as f:

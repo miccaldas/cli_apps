@@ -5,8 +5,8 @@ import snoop
 from cli_apps.yay_data.cront import crons
 from cli_apps.yay_data.db_upld import db_upload, kwd_collector
 from cli_apps.yay_data.delete import delete
-from cli_apps.yay_data.lists import Lists
 from cli_apps.yay_data.kwd_creator import kwd_creator
+from cli_apps.yay_data.lists_test import yay_lst
 
 # from snoop import pp
 
@@ -30,22 +30,16 @@ def main():
     """
     yay = "/home/mic/python/cli_apps/cli_apps/yay_data/"
 
-    # Instantiates the 'List' class in the 'lists' module.
-    lsts = Lists(
-        yay,
-        f"{yay}lists",
-    )
-    # Calls its methods.
-    lsts.yay_lst()
-    lsts.db_lst()
-    yn = lsts.yay_names()
+    yay_lst()
+    # lsts.db_lst()
+    # yn = lsts.yay_names()
 
-    if yn != "n":
-        kwd_creator()
-        kwd_collector()
-        db_upload()
-        crons()
-        delete()
+    # if yn != "n":
+    #     kwd_creator()
+    #     kwd_collector()
+    #     db_upload()
+    #     crons()
+    #     delete()
 
 
 if __name__ == "__main__":

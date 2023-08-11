@@ -1,13 +1,14 @@
 """
-Functions to detect and replace url's known to be dead or not have good information.
+Module to detect and replace url's known
+to be dead or not have good information,
+and detect and replace missing entries.
 """
 import os
-
-# import snoop
-# from snoop import pp
 import pickle
 
+import snoop
 from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
+from snoop import pp
 
 from methods import print_error
 from websrch import websrch
@@ -19,8 +20,8 @@ from websrch import websrch
 # snoop.install(watch_extras=[type_watch])
 
 
-# @snoop
-def alternative_urls():
+@snoop
+def alternative_urls() -> None:
     """
     There are some url's that don't produce scraping results,
     we look for them in *nospaces.bin* and search the web for
@@ -29,9 +30,9 @@ def alternative_urls():
     """
     pip = "/home/mic/python/cli_apps/cli_apps/pip_data/"
     with open(f"{pip}nospaces.bin", "rb") as f:
-        newurls = pickle.load(f)
+        newurls: list[list[str]] = pickle.load(f)
 
-    changers = [
+    changers: list[list[str]] = [
         u
         for u in newurls
         if u[2].startswith("https://pagure.io")
@@ -45,7 +46,6 @@ def alternative_urls():
 
     userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
 
-    nurls = []
     if changers != []:
         for u in changers:
             name = u[0]
@@ -53,7 +53,7 @@ def alternative_urls():
             # programatically. I added 'Startpage' to its list of engines, and that's what we're using.
             # It requires a userAgent value, so as not to be shunned by the engines. I put my own.
             # The function that does the work is 'websrch', in the 'b_upld' module.
-            res = websrch(name)
+            res: list[str] = websrch(name)
             if res != []:
                 # We'll delete the entries with the old url and replace them with the new one.
                 for n, c in enumerate(newurls):
@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
 
 # @snoop
-def xorg_urls():
+def xorg_urls() -> None:
     """
     Xorg_urls for Yay packages.
     All Xorg packages have as URL, a generic *Freedesktop* site
@@ -78,12 +78,12 @@ def xorg_urls():
     with url's to their *Github* pages.
     """
     pip = "/home/mic/python/cli_apps/cli_apps/pip_data/"
-    namesfile = f"{pip}alturls.bin"
+    namesfile: str = f"{pip}alturls.bin"
 
     with open(namesfile, "rb") as f:
-        newnames = pickle.load(f)
+        newnames: list[list[str]] = pickle.load(f)
 
-    newurls = []
+    newurls: list[list[str]] = []
     for entry in newnames:
         if entry[2].startswith("https://github.com/freedesktop"):
             if entry[0].startswith("xorg-"):
@@ -102,7 +102,7 @@ def xorg_urls():
                 newurl = f"https://gitlab.freedesktop.org/xorg/lib/{ent}"
             if "driver" not in entry[1] and "documentation" not in entry[1] and "lib" not in ent and "proto" not in ent:
                 newurl = f"https://gitlab.freedesktop.org/xorg/util/{ent}"
-            newurls.append((entry[0], entry[1], newurl))
+            newurls.append([entry[0], entry[1], newurl])
         else:
             newurls.append(entry)
 
@@ -115,7 +115,7 @@ if __name__ == "__main__":
 
 
 # @snoop
-def len_check():
+def len_check() -> None:
     """
     We'll check the length of the entries in 'newurls.bin'
     to see if every field is filled. If not:
@@ -129,11 +129,11 @@ def len_check():
     """
     pip = "/home/mic/python/cli_apps/cli_apps/pip_data/"
     with open(f"{pip}newurls.bin", "rb") as f:
-        ns = pickle.load(f)
+        ns: list[list[str]] = pickle.load(f)
 
     # List that gathers all entries with missing field values. If a field
-    # is missing, the program puts a '' sign on where it should've been.
-    sht = [i for i in ns if any(i[idx] == "" for idx, t in enumerate(i))]
+    # is missing, python puts a '' sign on where it should've been.
+    sht: list[list[str]] = [i for i in ns if any(i[idx] == "" for idx, t in enumerate(i))]
 
     # If there's entries on the missing fields list:
     if sht != []:
@@ -141,25 +141,28 @@ def len_check():
             # If it's the 'url' field at index '2':
             if sht[i][2] == "":
                 # call the 'websrch' function, to look for links with the package's name. Index '0'.
-                res = websrch(sht[i][0])
-                # If it's successfull, delete the the formaer entry and replace it by the found link.
+                res: list[str] = websrch(sht[i][0])
+                # If it's successfull, delete the the former entry and replace it by the found link.
                 if res != []:
                     sht[i].pop(2)
                     sht[i].append(res[0])
                 # If 'websrch' was not successful at finding a link, write some boilerplate string on
                 # the field and alert the user.
                 else:
+                    sht[i].pop(2)
                     sht[i].append("Provisional Text.")
-                    print_error(f"The 'url' field in {sht[i][0]} is empty. We tried replacing it but found nothing. We''l use provisional text until it's resolved.")
+                    print_error(
+                        f"The 'url' field in [bold #C4C1A4]{sht[i][0]}[/bold #C4C1A4] is empty. We tried replacing it but found nothing. We''l use provisional text until it's resolved."
+                    )
             # For the 'presentation' field.
             if sht[i][1] == "":
                 sht[i].pop(1)
-                sht[i].append("Provisional Text.")
-                print_error(f"The 'Presentation' field in {sht[i][0]} has no value. We'll use provisional text until it's resolved.")
+                sht[i].insert(1, "Provisional Text.")
+                print_error(f"The 'Presentation' field in [bold #C4C1A4]{sht[i][0]}[/bold #C4C1A4] has no value. We'll use provisional text until it's resolved.")
             # For the name field. This assumes a situation with more gravity. We don't try to solve it, just stop execution
             # for the user to do a manual intervention.
             if sht[i][0] == "":
-                print_error(f"There's no 'Name' value at index {i}. We'll stop execution until it's resolved.")
+                print_error(f"There's no 'Name' value at index [bold #C4C1A4]{i}[/bold #C4C1A4].  We'll stop execution until it's resolved.")
                 raise SystemExit
 
         with open("sht.bin", "wb") as g:
@@ -171,9 +174,9 @@ if __name__ == "__main__":
 
 
 # @snoop
-def list_conciliation():
+def list_conciliation() -> None:
     """
-    Updates the contetn of 'newurls.bin'
+    Updates the content of 'newurls.bin'
     with the results of 'sht.bin'
     """
     pip = "/home/mic/python/cli_apps/cli_apps/pip_data/"

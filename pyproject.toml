@@ -4,3 +4,19 @@ requires = [
     "wheel"
 ]
 build-backend = "setuptools.build_meta"
+
+[tool.pyright]
+include = [
+            "cli_apps/yay_data",
+            "cli_apps/pip_data"
+            ]
+            exclude = [
+            "cli_apps/yay_data/kws",
+            "cli_apps/yay_datalists",
+            "cli_apps/pip_data/kws",
+            "cli_apps/pip_datalists"
+            ]
+pythonPlatform = "Linux"
+analyzeUnannotatedFunctions = false
+stubPath = ["cli_apps/yay_data/out", "cli_apps/pip_data/out"]
+
