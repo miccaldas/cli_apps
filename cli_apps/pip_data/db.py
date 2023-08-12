@@ -38,7 +38,7 @@ def dbdata(query: str, data: Any, answers: Union[list, None]) -> list:
     except Error as e:
         print("Error while connecting to db", e)
     finally:
-        if conn:
+        if conn:  # type: ignore
             conn.close()
 
     return data
