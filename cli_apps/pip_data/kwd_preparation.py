@@ -4,6 +4,7 @@ Creates keywords from the 'presentation' fields
 in 'newurls.bin' and adds them to the rest of
 the information in a file called 'kwdlst.bin'
 """
+from _typeshed import StrPath
 import os
 import pickle
 from typing import Iterable, Union
@@ -22,14 +23,14 @@ snoop.install(watch_extras=[type_watch])
 
 
 # @snoop
-def kwd_creator():
+def kwd_creator() -> None:
     """
     We run KeyBERT through the 'newurls.bin' results.
     """
     pip = "/home/mic/python/cli_apps/cli_apps/pip_data/"
 
     with open(f"{pip}/newurls.bin", "rb") as f:
-        content = pickle.load(f)
+        content: list[list[str]] = pickle.load(f)
 
     for sub in content:
         name = sub[0]
@@ -41,9 +42,9 @@ def kwd_creator():
             keyphrase_ngram_range=(1, 1),
             stop_words=badwords,
         )
-        keywords = [o for o, p in keys]
+        keywords: list[str] = [o for o, p in keys]
 
-        kwds = []
+        kwds: list[str] = []
         # This is here to ensure that the keywords are not very similar.
         for y in keywords:
             # Create a list without one of the keywords.
@@ -52,7 +53,7 @@ def kwd_creator():
             if slst != []:
                 # We compare the similarity index of the keyword against
                 # all of the others.
-                value = process.extractOne(y, slst)
+                value: tuple[str, int] = process.extractOne(y, slst)
                 # If there's a resonable index of disimilarity:
                 if value[1] < 85:
                     # keep the keyword.

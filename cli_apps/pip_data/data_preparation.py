@@ -102,7 +102,7 @@ def xorg_urls() -> None:
                 newurl = f"https://gitlab.freedesktop.org/xorg/lib/{ent}"
             if "driver" not in entry[1] and "documentation" not in entry[1] and "lib" not in ent and "proto" not in ent:
                 newurl = f"https://gitlab.freedesktop.org/xorg/util/{ent}"
-            newurls.append([entry[0], entry[1], newurl])
+            newurls.append([entry[0], entry[1], newurl])  # type: ignore
         else:
             newurls.append(entry)
 
