@@ -6,9 +6,10 @@ and detect and replace missing entries.
 import os
 import pickle
 
-import snoop
+# import snoop
 from ScrapeSearchEngine.ScrapeSearchEngine import Startpage
-from snoop import pp
+
+# from snoop import pp
 
 from methods import print_error
 from websrch import websrch
@@ -20,7 +21,7 @@ from websrch import websrch
 # snoop.install(watch_extras=[type_watch])
 
 
-@snoop
+# @snoop
 def alternative_urls() -> None:
     """
     There are some url's that don't produce scraping results,
